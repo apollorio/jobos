@@ -1,0 +1,17 @@
+schema_version: 1
+policy_version: matching-v6
+method: deterministic
+weights:
+  mandatory: 3
+  desirable: 1
+  ambiguous: 1.5
+status_values: {met: 1.0, partial: 0.5, gap: 0.0}   # unknown não entra no numerador nem no denominador avaliável
+min_coverage_for_score: 0.6
+decision_thresholds:
+  good_fit: 70
+  weak_fit: 40
+ai:
+  enabled: false        # provider opcional; perfil não é enviado a serviço externo por padrão
+  provider: null
+  timeout_seconds: 60
+  budget_per_run: 0

@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jobos-local"
+version = "0.1.0"
+description = "JOBOS local: coleta de vagas, histórico, aderência por evidências e painel local"
+requires-python = ">=3.12"
+dependencies = [
+  "requests>=2.32,<3",
+  "PyYAML>=6.0,<7",
+  "python-dateutil>=2.9,<3",
+  "tzdata>=2024.1",
+  "fastapi>=0.110,<1",
+  "uvicorn>=0.29,<1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9", "httpx>=0.27,<1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+jobos = ["storage/migrations/*.sql", "geo/places.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

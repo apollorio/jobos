@@ -1,0 +1,38 @@
+# Preferências de busca (política), separadas dos fatos de carreira (master.json).
+# Nenhuma regra esconde vaga: cada uma gera um rótulo e um motivo visível no painel.
+schema_version: 1
+location:
+  preferred:              # Grande Rio
+    origin: "rio.ts RIO_CITIES + triage.py METRO_RIO; master.json mobility_and_preferences.primary_base"
+    terms: [rio de janeiro, niteroi, sao goncalo, duque de caxias, nova iguacu, mage, itaborai, marica, nilopolis,
+            sao joao de meriti, belford roxo, mesquita, queimados, japeri, seropedica, guapimirim, tangua,
+            cachoeiras de macacu, itaguai, paracambi, rio bonito, petropolis, ilha do governador, barra da tijuca,
+            botafogo, centro do rio, "rj"]
+  accepted_secondary:     # base secundária documentada
+    origin: "master.json mobility_and_preferences.secondary_base; profile.yml accept_locations"
+    terms: [vitoria, vila velha, serra, espirito santo, " es"]
+  review:                 # antes bloqueados em rio.ts/triage.py; agora visíveis para decisão humana
+    origin: "rio.ts BLOCK_CITIES / triage.py RJ_FORA_DO_RAIO, mantidos como revisão (CONFLICTS.md)"
+    terms: [macae, campos dos goytacazes, sao joao da barra, rio das ostras, cabo frio, angra dos reis, resende,
+            volta redonda, barra mansa, teresopolis, nova friburgo, tres rios, quissama, arraial do cabo]
+  remote_terms: [remoto, remote, home office, teletrabalho]
+  offshore_terms: [offshore, embarcado, embarque, on board, rotation, escala 14x14, 14/14, 28x28]
+  unknown_location: review
+  other_brazil: outside_preference
+  abroad: outside_preference
+employers:
+  excluded:
+    origin: "decisão explícita do usuário em 24/08/2026 (companies.yml); profile.yml exclusions.company_terms"
+    reason: "Dragagem: experiência real, mas fora do objetivo atual (operadoras FPSO/O&G)."
+    terms: [van oord, boskalis, deme, jan de nul, royal ihc, dredging, dragagem]
+talent_pool_terms: [banco de talentos, talent pool, cadastro reserva, talent community, programa de aprendizagem,
+                    trainee, estagio, estágio, internship, graduate programme, jovem aprendiz]
+salary:
+  floor: null             # desconhecido no perfil; nunca inventar piso
+priority:
+  company_priority_weight: {1: 10, 2: 5, 3: 0}
+  location_weight: {preferred: 15, accepted_secondary: 10, remote: 10, review: 0, unknown: 0, outside_preference: -15}
+  decision_weight: {good_fit: 30, needs_review: 15, weak_fit: 0, insufficient_data: 5, not_eligible: -30}
+  freshness_days_bonus: {7: 10, 21: 5}
+  talent_pool_penalty: -20
+  excluded_employer_penalty: -40

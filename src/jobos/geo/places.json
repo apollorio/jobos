@@ -1,0 +1,1333 @@
+{
+"anchieta": {
+"ibge": null,
+"kind": "municipio",
+"lat": -20.8052,
+"lon": -40.6425,
+"name": "Anchieta",
+"uf": "ES"
+},
+"angra dos reis": {
+"ibge": "3300100",
+"kind": "municipio",
+"lat": -22.9311,
+"lon": -44.3902,
+"name": "Angra dos Reis",
+"uf": "RJ"
+},
+"aperibe": {
+"ibge": "3300159",
+"kind": "municipio",
+"lat": -21.6525,
+"lon": -42.136,
+"name": "Aperibé",
+"uf": "RJ"
+},
+"aracaju": {
+"ibge": null,
+"kind": "municipio",
+"lat": -10.9472,
+"lon": -37.0731,
+"name": "Aracaju",
+"uf": "SE"
+},
+"aracruz": {
+"ibge": null,
+"kind": "municipio",
+"lat": -19.8204,
+"lon": -40.2733,
+"name": "Aracruz",
+"uf": "ES"
+},
+"araruama": {
+"ibge": "3300209",
+"kind": "municipio",
+"lat": -22.7552,
+"lon": -42.2928,
+"name": "Araruama",
+"uf": "RJ"
+},
+"areal": {
+"ibge": "3300225",
+"kind": "municipio",
+"lat": -22.2372,
+"lon": -43.1217,
+"name": "Areal",
+"uf": "RJ"
+},
+"armacao dos buzios": {
+"ibge": "3300233",
+"kind": "municipio",
+"lat": -22.779,
+"lon": -41.961,
+"name": "Armação dos Búzios",
+"uf": "RJ"
+},
+"arraial do cabo": {
+"ibge": "3300258",
+"kind": "municipio",
+"lat": -22.9182,
+"lon": -42.1792,
+"name": "Arraial do Cabo",
+"uf": "RJ"
+},
+"bangu": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.875,
+"lon": -43.465,
+"name": "Bangu",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"barra da tijuca": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -23.0004,
+"lon": -43.3659,
+"name": "Barra da Tijuca",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"barra do pirai": {
+"ibge": "3300308",
+"kind": "municipio",
+"lat": -22.4257,
+"lon": -43.9138,
+"name": "Barra do Piraí",
+"uf": "RJ"
+},
+"barra mansa": {
+"ibge": "3300407",
+"kind": "municipio",
+"lat": -22.5062,
+"lon": -44.1885,
+"name": "Barra Mansa",
+"uf": "RJ"
+},
+"barueri": {
+"ibge": null,
+"kind": "municipio",
+"lat": -23.5107,
+"lon": -46.8761,
+"name": "Barueri",
+"uf": "SP"
+},
+"belem": {
+"ibge": null,
+"kind": "municipio",
+"lat": -1.4558,
+"lon": -48.4902,
+"name": "Belém",
+"uf": "PA"
+},
+"belford roxo": {
+"ibge": "3300456",
+"kind": "municipio",
+"lat": -22.7301,
+"lon": -43.3765,
+"name": "Belford Roxo",
+"uf": "RJ"
+},
+"belo horizonte": {
+"ibge": null,
+"kind": "municipio",
+"lat": -19.9167,
+"lon": -43.9345,
+"name": "Belo Horizonte",
+"uf": "MG"
+},
+"benfica": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.892,
+"lon": -43.239,
+"name": "Benfica",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"bom jardim": {
+"ibge": "3300506",
+"kind": "municipio",
+"lat": -22.1993,
+"lon": -42.3732,
+"name": "Bom Jardim",
+"uf": "RJ"
+},
+"bom jesus do itabapoana": {
+"ibge": "3300605",
+"kind": "municipio",
+"lat": -21.1243,
+"lon": -41.6825,
+"name": "Bom Jesus do Itabapoana",
+"uf": "RJ"
+},
+"bonsucesso": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.866,
+"lon": -43.255,
+"name": "Bonsucesso",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"botafogo": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.9519,
+"lon": -43.1832,
+"name": "Botafogo",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"brasilia": {
+"ibge": null,
+"kind": "municipio",
+"lat": -15.7939,
+"lon": -47.8828,
+"name": "Brasília",
+"uf": "DF"
+},
+"cabo frio": {
+"ibge": "3300704",
+"kind": "municipio",
+"lat": -22.7091,
+"lon": -42.0562,
+"name": "Cabo Frio",
+"uf": "RJ"
+},
+"cachoeiras de macacu": {
+"ibge": "3300803",
+"kind": "municipio",
+"lat": -22.5164,
+"lon": -42.7282,
+"name": "Cachoeiras de Macacu",
+"uf": "RJ"
+},
+"caju": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.88,
+"lon": -43.22,
+"name": "Caju",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"camacari": {
+"ibge": null,
+"kind": "municipio",
+"lat": -12.6996,
+"lon": -38.3263,
+"name": "Camaçari",
+"uf": "BA"
+},
+"cambuci": {
+"ibge": "3300902",
+"kind": "municipio",
+"lat": -21.4974,
+"lon": -41.9151,
+"name": "Cambuci",
+"uf": "RJ"
+},
+"campinas": {
+"ibge": null,
+"kind": "municipio",
+"lat": -22.9099,
+"lon": -47.0626,
+"name": "Campinas",
+"uf": "SP"
+},
+"campo grande": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.9035,
+"lon": -43.5594,
+"name": "Campo Grande",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"campos dos goytacazes": {
+"ibge": "3301009",
+"kind": "municipio",
+"lat": -21.7481,
+"lon": -41.4041,
+"name": "Campos dos Goytacazes",
+"uf": "RJ"
+},
+"cantagalo": {
+"ibge": "3301108",
+"kind": "municipio",
+"lat": -21.8687,
+"lon": -42.3333,
+"name": "Cantagalo",
+"uf": "RJ"
+},
+"carapebus": {
+"ibge": "3300936",
+"kind": "municipio",
+"lat": -22.1968,
+"lon": -41.6503,
+"name": "Carapebus",
+"uf": "RJ"
+},
+"cardoso moreira": {
+"ibge": "3301157",
+"kind": "municipio",
+"lat": -21.5254,
+"lon": -41.501,
+"name": "Cardoso Moreira",
+"uf": "RJ"
+},
+"cariacica": {
+"ibge": null,
+"kind": "municipio",
+"lat": -20.2632,
+"lon": -40.4165,
+"name": "Cariacica",
+"uf": "ES"
+},
+"carmo": {
+"ibge": "3301207",
+"kind": "municipio",
+"lat": -21.893,
+"lon": -42.5641,
+"name": "Carmo",
+"uf": "RJ"
+},
+"casimiro de abreu": {
+"ibge": "3301306",
+"kind": "municipio",
+"lat": -22.4821,
+"lon": -42.1407,
+"name": "Casimiro de Abreu",
+"uf": "RJ"
+},
+"centro": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.9068,
+"lon": -43.1729,
+"name": "Centro",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"cidade nova": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.91,
+"lon": -43.205,
+"name": "Cidade Nova",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"comendador levy gasparian": {
+"ibge": "3300951",
+"kind": "municipio",
+"lat": -22.0446,
+"lon": -43.2587,
+"name": "Comendador Levy Gasparian",
+"uf": "RJ"
+},
+"conceicao de macabu": {
+"ibge": "3301405",
+"kind": "municipio",
+"lat": -22.1355,
+"lon": -41.8457,
+"name": "Conceição de Macabu",
+"uf": "RJ"
+},
+"copacabana": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.9711,
+"lon": -43.1822,
+"name": "Copacabana",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"cordeiro": {
+"ibge": "3301504",
+"kind": "municipio",
+"lat": -22.0558,
+"lon": -42.3457,
+"name": "Cordeiro",
+"uf": "RJ"
+},
+"curitiba": {
+"ibge": null,
+"kind": "municipio",
+"lat": -25.4284,
+"lon": -49.2733,
+"name": "Curitiba",
+"uf": "PR"
+},
+"duas barras": {
+"ibge": "3301603",
+"kind": "municipio",
+"lat": -22.0561,
+"lon": -42.498,
+"name": "Duas Barras",
+"uf": "RJ"
+},
+"duque de caxias": {
+"ibge": "3301702",
+"kind": "municipio",
+"lat": -22.6339,
+"lon": -43.2988,
+"name": "Duque de Caxias",
+"uf": "RJ"
+},
+"engenheiro paulo de frontin": {
+"ibge": "3301801",
+"kind": "municipio",
+"lat": -22.5045,
+"lon": -43.6323,
+"name": "Engenheiro Paulo de Frontin",
+"uf": "RJ"
+},
+"flamengo": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.933,
+"lon": -43.175,
+"name": "Flamengo",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"florianopolis": {
+"ibge": null,
+"kind": "municipio",
+"lat": -27.5949,
+"lon": -48.5482,
+"name": "Florianópolis",
+"uf": "SC"
+},
+"fortaleza": {
+"ibge": null,
+"kind": "municipio",
+"lat": -3.7319,
+"lon": -38.5267,
+"name": "Fortaleza",
+"uf": "CE"
+},
+"fundao": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.859,
+"lon": -43.229,
+"name": "Fundão",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"galeao": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.81,
+"lon": -43.25,
+"name": "Galeão",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"gamboa": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.897,
+"lon": -43.193,
+"name": "Gamboa",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"gloria": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.92,
+"lon": -43.176,
+"name": "Glória",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"goiania": {
+"ibge": null,
+"kind": "municipio",
+"lat": -16.6869,
+"lon": -49.2648,
+"name": "Goiânia",
+"uf": "GO"
+},
+"guapimirim": {
+"ibge": "3301850",
+"kind": "municipio",
+"lat": -22.5868,
+"lon": -42.9646,
+"name": "Guapimirim",
+"uf": "RJ"
+},
+"guaratiba": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -23.0,
+"lon": -43.59,
+"name": "Guaratiba",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"guaruja": {
+"ibge": null,
+"kind": "municipio",
+"lat": -23.9934,
+"lon": -46.2564,
+"name": "Guarujá",
+"uf": "SP"
+},
+"humaita": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.955,
+"lon": -43.199,
+"name": "Humaitá",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"iguaba grande": {
+"ibge": "3301876",
+"kind": "municipio",
+"lat": -22.8271,
+"lon": -42.2175,
+"name": "Iguaba Grande",
+"uf": "RJ"
+},
+"ilha do fundao": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.859,
+"lon": -43.229,
+"name": "Ilha do Fundão",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"ilha do governador": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.803,
+"lon": -43.208,
+"name": "Ilha do Governador",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"ipanema": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.984,
+"lon": -43.2,
+"name": "Ipanema",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"ipojuca": {
+"ibge": null,
+"kind": "municipio",
+"lat": -8.3994,
+"lon": -35.0644,
+"name": "Ipojuca",
+"uf": "PE"
+},
+"itaborai": {
+"ibge": "3301900",
+"kind": "municipio",
+"lat": -22.7499,
+"lon": -42.8529,
+"name": "Itaboraí",
+"uf": "RJ"
+},
+"itaguai": {
+"ibge": "3302007",
+"kind": "municipio",
+"lat": -22.8331,
+"lon": -43.8121,
+"name": "Itaguaí",
+"uf": "RJ"
+},
+"itajai": {
+"ibge": null,
+"kind": "municipio",
+"lat": -26.9101,
+"lon": -48.6705,
+"name": "Itajaí",
+"uf": "SC"
+},
+"italva": {
+"ibge": "3302056",
+"kind": "municipio",
+"lat": -21.4238,
+"lon": -41.6546,
+"name": "Italva",
+"uf": "RJ"
+},
+"itaocara": {
+"ibge": "3302106",
+"kind": "municipio",
+"lat": -21.7275,
+"lon": -42.0819,
+"name": "Itaocara",
+"uf": "RJ"
+},
+"itaperuna": {
+"ibge": "3302205",
+"kind": "municipio",
+"lat": -21.2254,
+"lon": -41.8893,
+"name": "Itaperuna",
+"uf": "RJ"
+},
+"itatiaia": {
+"ibge": "3302254",
+"kind": "municipio",
+"lat": -22.4405,
+"lon": -44.5864,
+"name": "Itatiaia",
+"uf": "RJ"
+},
+"jacarepagua": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.96,
+"lon": -43.36,
+"name": "Jacarepaguá",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"japeri": {
+"ibge": "3302270",
+"kind": "municipio",
+"lat": -22.6619,
+"lon": -43.6113,
+"name": "Japeri",
+"uf": "RJ"
+},
+"joinville": {
+"ibge": null,
+"kind": "municipio",
+"lat": -26.3044,
+"lon": -48.8487,
+"name": "Joinville",
+"uf": "SC"
+},
+"lagoa": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.97,
+"lon": -43.205,
+"name": "Lagoa",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"laje do muriae": {
+"ibge": "3302304",
+"kind": "municipio",
+"lat": -21.2478,
+"lon": -42.1353,
+"name": "Laje do Muriaé",
+"uf": "RJ"
+},
+"lapa": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.913,
+"lon": -43.18,
+"name": "Lapa",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"leblon": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.984,
+"lon": -43.224,
+"name": "Leblon",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"linhares": {
+"ibge": null,
+"kind": "municipio",
+"lat": -19.3946,
+"lon": -40.0643,
+"name": "Linhares",
+"uf": "ES"
+},
+"macae": {
+"ibge": "3302403",
+"kind": "municipio",
+"lat": -22.2953,
+"lon": -41.9739,
+"name": "Macaé",
+"uf": "RJ"
+},
+"macapa": {
+"ibge": null,
+"kind": "municipio",
+"lat": 0.0349,
+"lon": -51.0694,
+"name": "Macapá",
+"uf": "AP"
+},
+"maceio": {
+"ibge": null,
+"kind": "municipio",
+"lat": -9.6658,
+"lon": -35.7353,
+"name": "Maceió",
+"uf": "AL"
+},
+"macuco": {
+"ibge": "3302452",
+"kind": "municipio",
+"lat": -22.0251,
+"lon": -42.2766,
+"name": "Macuco",
+"uf": "RJ"
+},
+"madureira": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.873,
+"lon": -43.34,
+"name": "Madureira",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"mage": {
+"ibge": "3302502",
+"kind": "municipio",
+"lat": -22.6122,
+"lon": -43.1118,
+"name": "Magé",
+"uf": "RJ"
+},
+"manaus": {
+"ibge": null,
+"kind": "municipio",
+"lat": -3.119,
+"lon": -60.0217,
+"name": "Manaus",
+"uf": "AM"
+},
+"mangaratiba": {
+"ibge": "3302601",
+"kind": "municipio",
+"lat": -22.9288,
+"lon": -44.0636,
+"name": "Mangaratiba",
+"uf": "RJ"
+},
+"mare": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.859,
+"lon": -43.243,
+"name": "Maré",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"marica": {
+"ibge": "3302700",
+"kind": "municipio",
+"lat": -22.9142,
+"lon": -42.8137,
+"name": "Maricá",
+"uf": "RJ"
+},
+"meier": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.902,
+"lon": -43.28,
+"name": "Méier",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"mendes": {
+"ibge": "3302809",
+"kind": "municipio",
+"lat": -22.5218,
+"lon": -43.7392,
+"name": "Mendes",
+"uf": "RJ"
+},
+"mesquita": {
+"ibge": "3302858",
+"kind": "municipio",
+"lat": -22.7989,
+"lon": -43.4485,
+"name": "Mesquita",
+"uf": "RJ"
+},
+"miguel pereira": {
+"ibge": "3302908",
+"kind": "municipio",
+"lat": -22.5061,
+"lon": -43.4729,
+"name": "Miguel Pereira",
+"uf": "RJ"
+},
+"miracema": {
+"ibge": "3303005",
+"kind": "municipio",
+"lat": -21.395,
+"lon": -42.152,
+"name": "Miracema",
+"uf": "RJ"
+},
+"mossoro": {
+"ibge": null,
+"kind": "municipio",
+"lat": -5.1878,
+"lon": -37.3441,
+"name": "Mossoró",
+"uf": "RN"
+},
+"natal": {
+"ibge": null,
+"kind": "municipio",
+"lat": -5.7945,
+"lon": -35.211,
+"name": "Natal",
+"uf": "RN"
+},
+"natividade": {
+"ibge": "3303104",
+"kind": "municipio",
+"lat": -21.0404,
+"lon": -41.9293,
+"name": "Natividade",
+"uf": "RJ"
+},
+"nilopolis": {
+"ibge": "3303203",
+"kind": "municipio",
+"lat": -22.8199,
+"lon": -43.4255,
+"name": "Nilópolis",
+"uf": "RJ"
+},
+"niteroi": {
+"ibge": "3303302",
+"kind": "municipio",
+"lat": -22.9148,
+"lon": -43.0482,
+"name": "Niterói",
+"uf": "RJ"
+},
+"nova friburgo": {
+"ibge": "3303401",
+"kind": "municipio",
+"lat": -22.3189,
+"lon": -42.4971,
+"name": "Nova Friburgo",
+"uf": "RJ"
+},
+"nova iguacu": {
+"ibge": "3303500",
+"kind": "municipio",
+"lat": -22.6864,
+"lon": -43.5027,
+"name": "Nova Iguaçu",
+"uf": "RJ"
+},
+"paciencia": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.896,
+"lon": -43.64,
+"name": "Paciência",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"paracambi": {
+"ibge": "3303609",
+"kind": "municipio",
+"lat": -22.6162,
+"lon": -43.7202,
+"name": "Paracambi",
+"uf": "RJ"
+},
+"paraiba do sul": {
+"ibge": "3303708",
+"kind": "municipio",
+"lat": -22.1834,
+"lon": -43.3029,
+"name": "Paraíba do Sul",
+"uf": "RJ"
+},
+"paranagua": {
+"ibge": null,
+"kind": "municipio",
+"lat": -25.5161,
+"lon": -48.5225,
+"name": "Paranaguá",
+"uf": "PR"
+},
+"paraty": {
+"ibge": "3303807",
+"kind": "municipio",
+"lat": -23.1491,
+"lon": -44.7088,
+"name": "Paraty",
+"uf": "RJ"
+},
+"paty do alferes": {
+"ibge": "3303856",
+"kind": "municipio",
+"lat": -22.3669,
+"lon": -43.4023,
+"name": "Paty do Alferes",
+"uf": "RJ"
+},
+"penha": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.841,
+"lon": -43.276,
+"name": "Penha",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"petropolis": {
+"ibge": "3303906",
+"kind": "municipio",
+"lat": -22.3994,
+"lon": -43.1572,
+"name": "Petrópolis",
+"uf": "RJ"
+},
+"pinheiral": {
+"ibge": "3303955",
+"kind": "municipio",
+"lat": -22.5467,
+"lon": -43.995,
+"name": "Pinheiral",
+"uf": "RJ"
+},
+"pirai": {
+"ibge": "3304003",
+"kind": "municipio",
+"lat": -22.6341,
+"lon": -43.898,
+"name": "Piraí",
+"uf": "RJ"
+},
+"porciuncula": {
+"ibge": "3304102",
+"kind": "municipio",
+"lat": -20.9065,
+"lon": -41.9684,
+"name": "Porciúncula",
+"uf": "RJ"
+},
+"porto alegre": {
+"ibge": null,
+"kind": "municipio",
+"lat": -30.0346,
+"lon": -51.2177,
+"name": "Porto Alegre",
+"uf": "RS"
+},
+"porto maravilha": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.896,
+"lon": -43.188,
+"name": "Porto Maravilha",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"porto real": {
+"ibge": "3304110",
+"kind": "municipio",
+"lat": -22.444,
+"lon": -44.3245,
+"name": "Porto Real",
+"uf": "RJ"
+},
+"quatis": {
+"ibge": "3304128",
+"kind": "municipio",
+"lat": -22.3523,
+"lon": -44.2348,
+"name": "Quatis",
+"uf": "RJ"
+},
+"queimados": {
+"ibge": "3304144",
+"kind": "municipio",
+"lat": -22.7239,
+"lon": -43.5892,
+"name": "Queimados",
+"uf": "RJ"
+},
+"quissama": {
+"ibge": "3304151",
+"kind": "municipio",
+"lat": -22.1048,
+"lon": -41.4452,
+"name": "Quissamã",
+"uf": "RJ"
+},
+"ramos": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.848,
+"lon": -43.256,
+"name": "Ramos",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"recife": {
+"ibge": null,
+"kind": "municipio",
+"lat": -8.0476,
+"lon": -34.877,
+"name": "Recife",
+"uf": "PE"
+},
+"recreio dos bandeirantes": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -23.0157,
+"lon": -43.463,
+"name": "Recreio dos Bandeirantes",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"resende": {
+"ibge": "3304201",
+"kind": "municipio",
+"lat": -22.4412,
+"lon": -44.4841,
+"name": "Resende",
+"uf": "RJ"
+},
+"rio bonito": {
+"ibge": "3304300",
+"kind": "municipio",
+"lat": -22.7368,
+"lon": -42.5875,
+"name": "Rio Bonito",
+"uf": "RJ"
+},
+"rio claro": {
+"ibge": "3304409",
+"kind": "municipio",
+"lat": -22.7792,
+"lon": -44.0773,
+"name": "Rio Claro",
+"uf": "RJ"
+},
+"rio das flores": {
+"ibge": "3304508",
+"kind": "municipio",
+"lat": -22.1612,
+"lon": -43.5384,
+"name": "Rio das Flores",
+"uf": "RJ"
+},
+"rio das ostras": {
+"ibge": "3304524",
+"kind": "municipio",
+"lat": -22.4547,
+"lon": -41.9473,
+"name": "Rio das Ostras",
+"uf": "RJ"
+},
+"rio de janeiro": {
+"ibge": "3304557",
+"kind": "municipio",
+"lat": -22.9258,
+"lon": -43.4581,
+"name": "Rio de Janeiro",
+"uf": "RJ"
+},
+"rio grande": {
+"ibge": null,
+"kind": "municipio",
+"lat": -32.035,
+"lon": -52.0986,
+"name": "Rio Grande",
+"uf": "RS"
+},
+"salvador": {
+"ibge": null,
+"kind": "municipio",
+"lat": -12.9777,
+"lon": -38.5016,
+"name": "Salvador",
+"uf": "BA"
+},
+"santa cruz": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.9196,
+"lon": -43.6853,
+"name": "Santa Cruz",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"santa maria madalena": {
+"ibge": "3304607",
+"kind": "municipio",
+"lat": -21.9692,
+"lon": -41.9151,
+"name": "Santa Maria Madalena",
+"uf": "RJ"
+},
+"santo antonio de padua": {
+"ibge": "3304706",
+"kind": "municipio",
+"lat": -21.5552,
+"lon": -42.1913,
+"name": "Santo Antônio de Pádua",
+"uf": "RJ"
+},
+"santos": {
+"ibge": null,
+"kind": "municipio",
+"lat": -23.9608,
+"lon": -46.3336,
+"name": "Santos",
+"uf": "SP"
+},
+"sao cristovao": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.899,
+"lon": -43.224,
+"name": "São Cristóvão",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"sao fidelis": {
+"ibge": "3304805",
+"kind": "municipio",
+"lat": -21.6606,
+"lon": -41.7865,
+"name": "São Fidélis",
+"uf": "RJ"
+},
+"sao francisco de itabapoana": {
+"ibge": "3304755",
+"kind": "municipio",
+"lat": -21.4149,
+"lon": -41.1376,
+"name": "São Francisco de Itabapoana",
+"uf": "RJ"
+},
+"sao goncalo": {
+"ibge": "3304904",
+"kind": "municipio",
+"lat": -22.8262,
+"lon": -42.9931,
+"name": "São Gonçalo",
+"uf": "RJ"
+},
+"sao joao da barra": {
+"ibge": "3305000",
+"kind": "municipio",
+"lat": -21.7811,
+"lon": -41.0813,
+"name": "São João da Barra",
+"uf": "RJ"
+},
+"sao joao de meriti": {
+"ibge": "3305109",
+"kind": "municipio",
+"lat": -22.7875,
+"lon": -43.3647,
+"name": "São João de Meriti",
+"uf": "RJ"
+},
+"sao jose de uba": {
+"ibge": "3305133",
+"kind": "municipio",
+"lat": -21.3695,
+"lon": -41.9478,
+"name": "São José de Ubá",
+"uf": "RJ"
+},
+"sao jose do vale do rio preto": {
+"ibge": "3305158",
+"kind": "municipio",
+"lat": -22.1728,
+"lon": -42.9304,
+"name": "São José do Vale do Rio Preto",
+"uf": "RJ"
+},
+"sao luis": {
+"ibge": null,
+"kind": "municipio",
+"lat": -2.5307,
+"lon": -44.3068,
+"name": "São Luís",
+"uf": "MA"
+},
+"sao paulo": {
+"ibge": null,
+"kind": "municipio",
+"lat": -23.5505,
+"lon": -46.6333,
+"name": "São Paulo",
+"uf": "SP"
+},
+"sao pedro da aldeia": {
+"ibge": "3305208",
+"kind": "municipio",
+"lat": -22.7879,
+"lon": -42.1257,
+"name": "São Pedro da Aldeia",
+"uf": "RJ"
+},
+"sao sebastiao do alto": {
+"ibge": "3305307",
+"kind": "municipio",
+"lat": -21.8851,
+"lon": -42.1047,
+"name": "São Sebastião do Alto",
+"uf": "RJ"
+},
+"sapucaia": {
+"ibge": "3305406",
+"kind": "municipio",
+"lat": -22.0242,
+"lon": -42.8237,
+"name": "Sapucaia",
+"uf": "RJ"
+},
+"saquarema": {
+"ibge": "3305505",
+"kind": "municipio",
+"lat": -22.8784,
+"lon": -42.5191,
+"name": "Saquarema",
+"uf": "RJ"
+},
+"seropedica": {
+"ibge": "3305554",
+"kind": "municipio",
+"lat": -22.759,
+"lon": -43.6983,
+"name": "Seropédica",
+"uf": "RJ"
+},
+"serra": {
+"ibge": null,
+"kind": "municipio",
+"lat": -20.1211,
+"lon": -40.3074,
+"name": "Serra",
+"uf": "ES"
+},
+"silva jardim": {
+"ibge": "3305604",
+"kind": "municipio",
+"lat": -22.5674,
+"lon": -42.4147,
+"name": "Silva Jardim",
+"uf": "RJ"
+},
+"sumidouro": {
+"ibge": "3305703",
+"kind": "municipio",
+"lat": -22.1063,
+"lon": -42.662,
+"name": "Sumidouro",
+"uf": "RJ"
+},
+"tangua": {
+"ibge": "3305752",
+"kind": "municipio",
+"lat": -22.7834,
+"lon": -42.7195,
+"name": "Tanguá",
+"uf": "RJ"
+},
+"teresopolis": {
+"ibge": "3305802",
+"kind": "municipio",
+"lat": -22.3145,
+"lon": -42.8738,
+"name": "Teresópolis",
+"uf": "RJ"
+},
+"tijuca": {
+"ibge": "3304557",
+"kind": "bairro",
+"lat": -22.925,
+"lon": -43.237,
+"name": "Tijuca",
+"parent": "Rio de Janeiro",
+"uf": "RJ"
+},
+"trajano de moraes": {
+"ibge": "3305901",
+"kind": "municipio",
+"lat": -22.1295,
+"lon": -42.1563,
+"name": "Trajano de Moraes",
+"uf": "RJ"
+},
+"tres rios": {
+"ibge": "3306008",
+"kind": "municipio",
+"lat": -22.1256,
+"lon": -43.1093,
+"name": "Três Rios",
+"uf": "RJ"
+},
+"valenca": {
+"ibge": "3306107",
+"kind": "municipio",
+"lat": -22.2331,
+"lon": -43.8588,
+"name": "Valença",
+"uf": "RJ"
+},
+"varre-sai": {
+"ibge": "3306156",
+"kind": "municipio",
+"lat": -20.8883,
+"lon": -41.8275,
+"name": "Varre-Sai",
+"uf": "RJ"
+},
+"vassouras": {
+"ibge": "3306206",
+"kind": "municipio",
+"lat": -22.3573,
+"lon": -43.5692,
+"name": "Vassouras",
+"uf": "RJ"
+},
+"vila velha": {
+"ibge": null,
+"kind": "municipio",
+"lat": -20.3297,
+"lon": -40.2925,
+"name": "Vila Velha",
+"uf": "ES"
+},
+"vitoria": {
+"ibge": null,
+"kind": "municipio",
+"lat": -20.3155,
+"lon": -40.3128,
+"name": "Vitória",
+"uf": "ES"
+},
+"volta redonda": {
+"ibge": "3306305",
+"kind": "municipio",
+"lat": -22.4934,
+"lon": -44.0887,
+"name": "Volta Redonda",
+"uf": "RJ"
+}
+}

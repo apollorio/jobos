@@ -1,0 +1,140 @@
+# Cadastro único de fontes. Um leitor principal por fonte (DEC-003).
+# configuration_origin: de onde veio a configuração; verification_status: needs_current_probe até smoke test real.
+# coverage: full_board | filtered_board | incremental_query | single_posting
+schema_version: 1
+defaults:
+  enabled: true
+  ownership: discovery_only
+  verification_status: needs_current_probe
+  limits: {timeout_seconds: 25, max_attempts: 3, max_pages: 15, max_details: 25, detail_ttl_days: 7}
+
+sources:
+  # ---------------- Gupy (página própria da empresa) ----------------
+  - {source_id: prio-gupy, company_id: prio, company_name: PRIO, platform: gupy, primary_adapter: gupy_tenant, fallback_adapters: [gupy_portal_company],
+     params: {tenant: prio, portal_name: "PRIO"}, board_url: "https://prio.gupy.io/", priority: 1, configuration_origin: jobs_json+companies_yml}
+  - {source_id: modec-gupy, company_id: modec, company_name: MODEC, platform: gupy, primary_adapter: gupy_tenant, fallback_adapters: [gupy_portal_company],
+     params: {tenant: modec-br, portal_name: "MODEC"}, board_url: "https://modec-br.gupy.io/", priority: 1, configuration_origin: jobs_json+companies_yml}
+  - {source_id: norsul-gupy, company_id: norsul, company_name: Norsul, platform: gupy, primary_adapter: gupy_tenant, fallback_adapters: [gupy_portal_company],
+     params: {tenant: norsul, portal_name: "NORSUL"}, board_url: "https://norsul.gupy.io/", priority: 1, configuration_origin: jobs_json+companies_yml}
+  - {source_id: brava-gupy, company_id: brava, company_name: Brava Energia, platform: gupy, primary_adapter: gupy_tenant, fallback_adapters: [gupy_portal_company],
+     params: {tenants: [bravaenergia, bravaacelera, 3rpetroleum], portal_name: "Brava Energia"}, board_url: "https://bravaenergia.gupy.io/", priority: 1,
+     configuration_origin: jobs_json+companies_yml+auditoria_2026-10-23, fallback_adapters: [gupy_portal_company],
+     note: "Duas páginas Gupy da mesma empresa (companyId 47525): bravaenergia e bravaacelera."}
+  - {source_id: wilsonsons-gupy, company_id: wilsonsons, company_name: Wilson Sons, platform: gupy, primary_adapter: gupy_tenant, fallback_adapters: [gupy_portal_company],
+     params: {tenant: wilsonsons, portal_name: "Wilson Sons"}, board_url: "https://wilsonsons.gupy.io/", priority: 2, configuration_origin: jobs_json}
+  - {source_id: ocyan-gupy, company_id: ocyan, company_name: Ocyan, platform: gupy, primary_adapter: gupy_tenant, fallback_adapters: [gupy_portal_company],
+     params: {tenants: [ocyan, ocyan-motaengil], portal_name: "Ocyan"}, board_url: "https://ocyan.gupy.io/", priority: 1, configuration_origin: jobs_json+companies_yml}
+  - {source_id: qualidados-gupy, company_id: qualidados, company_name: Qualidados, platform: gupy, primary_adapter: gupy_tenant, fallback_adapters: [gupy_portal_company],
+     params: {tenant: qualidados, portal_name: "Qualidados"}, board_url: "https://qualidados.gupy.io/", priority: 1, configuration_origin: jobs_json+companies_yml}
+  - {source_id: oceanica-gupy, company_id: oceanica, company_name: Oceânica, platform: gupy, primary_adapter: gupy_tenant, fallback_adapters: [gupy_portal_company],
+     params: {tenant: sejaoceanica, portal_name: "Oceânica "}, board_url: "https://sejaoceanica.gupy.io/", priority: 2, configuration_origin: jobs_json+companies_yml}
+  - {source_id: vinci-gupy, company_id: vinci, company_name: VINCI Energies, platform: gupy, primary_adapter: gupy_tenant, fallback_adapters: [gupy_portal_company],
+     params: {tenants: [vinci-energies, programa-estagio-ve], portal_name: "VINCI Energies e suas marcas de atuação: Actemium, Axians e Omexom"}, board_url: "https://vinci-energies.gupy.io/", priority: 2, configuration_origin: jobs_json+companies_yml}
+  - {source_id: nexa-gupy, company_id: nexa, company_name: Nexa Tecnologia, platform: gupy, primary_adapter: gupy_tenant, fallback_adapters: [gupy_portal_company],
+     params: {tenant: nexatecnologia, portal_name: "Nexa Vagas"}, board_url: "https://nexatecnologia.gupy.io/", priority: 3, configuration_origin: jobs_json+companies_yml}
+  - {source_id: enauta-gupy, company_id: enauta, company_name: "Enauta / 3R", platform: gupy, primary_adapter: gupy_tenant, enabled: false, fallback_adapters: [gupy_portal_company],
+     params: {tenant: 3rpetroleum}, board_url: "https://3rpetroleum.gupy.io/", priority: 2, configuration_origin: jobs_json,
+     note: "DESATIVADA 23/10/2026: a página 3rpetroleum pertence à Brava (companyId 47525) e é lida por brava-gupy."}
+  - {source_id: minsait-gupy, company_id: minsait, company_name: Minsait, platform: gupy, primary_adapter: gupy_tenant, fallback_adapters: [gupy_portal_company],
+     params: {tenant: minsait, portal_name: "Minsait an Indra Company"}, board_url: "https://minsait.gupy.io/", priority: 3, configuration_origin: jobs_json+companies_yml}
+  - {source_id: vibra-gupy, company_id: vibra, company_name: Vibra Energia, platform: gupy, primary_adapter: gupy_tenant, fallback_adapters: [gupy_portal_company],
+     params: {tenant: vibraenergia, portal_name: "Vibra Energia"}, board_url: "https://vibraenergia.gupy.io/", priority: 2, configuration_origin: jobs_json+companies_yml}
+
+  # ---------------- SAP SuccessFactors (Jobs2Web) ----------------
+  - {source_id: subsea7-sf, company_id: subsea7, company_name: Subsea7, platform: successfactors_j2w, primary_adapter: j2w_search,
+     params: {base: "https://careers.subsea7.com", location: "Rio de Janeiro"}, board_url: "https://careers.subsea7.com",
+     coverage: filtered_board, priority: 1, configuration_origin: jobs_json+companies_yml}
+  - {source_id: sbm-sf, company_id: sbm, company_name: SBM Offshore, platform: successfactors_j2w, primary_adapter: j2w_search,
+     params: {base: "https://careers.sbmoffshore.com", location: "Rio de Janeiro"}, board_url: "https://careers.sbmoffshore.com",
+     coverage: filtered_board, priority: 1, configuration_origin: jobs_json+companies_yml}
+  - {source_id: yinson-sf, company_id: yinson, company_name: Yinson, platform: successfactors_j2w, primary_adapter: j2w_search,
+     params: {base: "https://careers.yinson.com", location: "Brazil"}, board_url: "https://careers.yinson.com",
+     coverage: filtered_board, priority: 1, configuration_origin: jobs_json+companies_yml}
+  - {source_id: halliburton-sf, company_id: halliburton, company_name: Halliburton, platform: successfactors_j2w, primary_adapter: j2w_search,
+     params: {base: "https://jobs.halliburton.com", location: "Rio de Janeiro"}, board_url: "https://jobs.halliburton.com",
+     coverage: filtered_board, priority: 3, configuration_origin: jobs_json}
+
+  # ---------------- Workday CXS (endpoint público observado, não API oficial) ----------------
+  - {source_id: transocean-workday, company_id: transocean, company_name: Transocean, platform: workday, primary_adapter: workday_cxs,
+     params: {tenant: deepwater, site: BrazilExternalCareerSite, dc: wd1}, board_url: "https://deepwater.wd1.myworkdayjobs.com/BrazilExternalCareerSite",
+     priority: 1, configuration_origin: jobs_json+companies_yml}
+  - {source_id: equinor-workday, company_id: equinor, company_name: Equinor, platform: workday, primary_adapter: workday_cxs,
+     params: {tenant: equinor, site: EQNR, dc: wd3, search_text: "Brazil"}, board_url: "https://equinor.wd3.myworkdayjobs.com/EQNR",
+     coverage: filtered_board, priority: 1, configuration_origin: jobs_json+companies_yml}
+  - {source_id: shell-workday, company_id: shell, company_name: Shell, platform: workday, primary_adapter: workday_cxs,
+     params: {tenant: shell, site: ShellCareers, dc: wd3, search_text: "Rio de Janeiro"}, board_url: "https://shell.wd3.myworkdayjobs.com/ShellCareers",
+     coverage: filtered_board, priority: 1, configuration_origin: jobs_json+companies_yml}
+  - {source_id: baker-workday, company_id: baker, company_name: Baker Hughes, platform: workday, primary_adapter: workday_cxs,
+     params: {tenant: bakerhughes, site: BakerHughes, dc: wd5, search_text: "Brazil"}, board_url: "https://bakerhughes.wd5.myworkdayjobs.com/BakerHughes",
+     coverage: filtered_board, priority: 2, configuration_origin: jobs_json+companies_yml}
+  - {source_id: technipfmc-workday, company_id: technipfmc, company_name: TechnipFMC, platform: workday, primary_adapter: workday_cxs,
+     params: {tenant: technipfmc, site: TechnipFMC, dc: wd1, search_text: "Brazil"}, priority: 1, configuration_origin: companies_yml,
+     verification_status: legacy_errors, note: "Legado registrou 2 erros em 2 tentativas; tenant/dc podem estar errados."}
+
+  # ---------------- SmartRecruiters ----------------
+  - {source_id: aker-smart, company_id: aker, company_name: Aker Solutions, platform: smartrecruiters, primary_adapter: smartrecruiters,
+     params: {company_id: akersolutions, country: br}, coverage: filtered_board, priority: 2, configuration_origin: jobs_json}
+  - {source_id: airswift-smart, company_id: airswift, company_name: Airswift, platform: smartrecruiters, primary_adapter: smartrecruiters,
+     params: {company_id: airswift, country: br}, coverage: filtered_board, priority: 1, configuration_origin: jobs_json}
+
+  # ---------------- Outras plataformas ----------------
+  - {source_id: oceanpact-inhire, company_id: oceanpact, company_name: OceanPact, platform: inhire, primary_adapter: inhire,
+     params: {tenant: oceanpact}, board_url: "https://oceanpact.inhire.app/vagas", priority: 1, configuration_origin: jobs_json+companies_yml,
+     limits: {max_details: 80}}
+  - {source_id: dof-workable, company_id: dof, company_name: DOF, platform: workable, primary_adapter: workable,
+     params: {account: dof, details: true}, board_url: "https://www.dof.com/vacancies", priority: 2,
+     configuration_origin: auditoria_2026-10-23, note: "dof.com/vacancies desenha a lista a partir do Workable 'dof' (90 vagas, 11 no Brasil)."}
+  - {source_id: dof-webflow, company_id: dof, company_name: DOF, platform: webflow, primary_adapter: dof_webflow, enabled: false,
+     params: {}, board_url: "https://www.dof.com/vacancies", priority: 2, configuration_origin: jobs_json+companies_yml,
+     note: "DESATIVADA 23/10/2026: lia uma lista Webflow oculta (arquivo, corte em 100 itens) que o candidato não vê."}
+  - {source_id: bram-totvs, company_id: bram, company_name: Bram Offshore, platform: totvs, primary_adapter: totvs,
+     params: {tenant: bramoffshore}, board_url: "https://atracaodetalentos.totvs.app/bramoffshore/extended", priority: 1,
+     configuration_origin: jobs_json+companies_yml}
+  - {source_id: capco-greenhouse, company_id: capco, company_name: Capco, platform: greenhouse, primary_adapter: greenhouse,
+     params: {board: capco, office_root_id: 69385}, board_url: "https://job-boards.greenhouse.io/capco", coverage: filtered_board,
+     fallback_adapters: [{adapter: greenhouse, params: {office_root_id: null, office_id: 69385}}],
+     priority: 3, configuration_origin: auditoria_2026-10-23,
+     note: "Escopo: árvore do escritório 'Brazil' (69385, inclui Rio 114971 e São Paulo 69388). Antes só 114971 (1 vaga de 125)."}
+  - {source_id: trident-workable, company_id: trident, company_name: Trident Energy, platform: workable, primary_adapter: workable,
+     params: {account: trident-energy}, board_url: "https://apply.workable.com/trident-energy/", priority: 1, configuration_origin: companies_yml}
+  - {source_id: sapura-vagas, company_id: sapura, company_name: "Sapura (Seagems)", platform: vagas_com_br, primary_adapter: vagas_com_br,
+     params: {slug: seagems}, board_url: "https://trabalheconosco.vagas.com.br/seagems/oportunidades", priority: 2, configuration_origin: companies_yml}
+
+  # ---------------- Sem leitor ainda (aparecem no painel como unconfigured) ----------------
+  - {source_id: abs-oracle, company_id: abs, company_name: ABS, platform: oracle_ce, primary_adapter: null, priority: 3,
+     configuration_origin: jobs_json, note: "Oracle Candidate Experience; leitor TS existe, ainda não portado."}
+  - {source_id: constellation-gupy, company_id: constellation, company_name: Constellation Oil Services, platform: gupy, primary_adapter: null,
+     priority: 2, configuration_origin: companies_yml, note: "Tenant Gupy não identificado."}
+  - {source_id: petrobras-concursos, company_id: petrobras, company_name: Petrobras, platform: concurso, primary_adapter: null, priority: 1,
+     board_url: "https://petrobras.com.br/quem-somos/concursos", configuration_origin: companies_yml, note: "Contrata por concurso público."}
+  - {source_id: bwoffshore, company_id: bwoffshore, company_name: BW Offshore, platform: unknown, primary_adapter: null, priority: 2,
+     board_url: "https://www.bwoffshore.com/careers/", configuration_origin: companies_yml}
+  - {source_id: altera-gupy, company_id: altera, company_name: "Altera&Ocyan", platform: gupy, primary_adapter: gupy_tenant,
+     fallback_adapters: [gupy_portal_company], params: {tenant: alteraocyan}, board_url: "https://alteraocyan.gupy.io/", priority: 2,
+     configuration_origin: auditoria_2026-10-23}
+  - {source_id: perbras-gupy, company_id: perbras, company_name: Perbras, platform: gupy, primary_adapter: gupy_tenant,
+     fallback_adapters: [gupy_portal_company], params: {tenant: perbras}, board_url: "https://perbras.gupy.io/", priority: 2,
+     configuration_origin: auditoria_2026-10-23, note: "Serviços offshore; achada na busca 'offshore' + RJ do portal Gupy."}
+  - {source_id: totalenergies, company_id: totalenergies, company_name: TotalEnergies, platform: unknown, primary_adapter: null, priority: 2,
+     board_url: "https://jobs.totalenergies.com/pt_BR/careers", configuration_origin: companies_yml}
+  - {source_id: saipem, company_id: saipem, company_name: Saipem, platform: unknown, primary_adapter: null, priority: 2, configuration_origin: companies_yml}
+  - {source_id: slb, company_id: slb, company_name: SLB, platform: unknown, primary_adapter: null, priority: 2, configuration_origin: companies_yml}
+  - {source_id: karoon, company_id: karoon, company_name: Karoon Energy, platform: unknown, primary_adapter: null, priority: 3, configuration_origin: companies_yml}
+  - {source_id: perenco, company_id: perenco, company_name: Perenco, platform: unknown, primary_adapter: null, priority: 3, configuration_origin: companies_yml}
+  - {source_id: brunel, company_id: brunel, company_name: Brunel Brasil, platform: unknown, primary_adapter: null, priority: 1,
+     board_url: "https://www.brunel.net/en/jobs", configuration_origin: companies_yml}
+  - {source_id: nesfircroft, company_id: nesfircroft, company_name: NES Fircroft, platform: unknown, primary_adapter: null, priority: 1,
+     board_url: "https://www.nesfircroft.com/jobs", configuration_origin: companies_yml}
+  - {source_id: petroplan, company_id: petroplan, company_name: Petroplan, platform: unknown, primary_adapter: null, priority: 2, configuration_origin: companies_yml}
+  - {source_id: oriongroup, company_id: oriongroup, company_name: Orion Group, platform: unknown, primary_adapter: null, priority: 3, configuration_origin: companies_yml}
+  - {source_id: michaelpage, company_id: michaelpage, company_name: Michael Page Brasil, platform: unknown, primary_adapter: null, priority: 2, configuration_origin: companies_yml}
+  - {source_id: hays, company_id: hays, company_name: Hays Brasil, platform: unknown, primary_adapter: null, priority: 3, configuration_origin: companies_yml}
+
+  # ---------------- Descoberta agregada (desativada) ----------------
+  - {source_id: gupy-portal-queries, company_id: gupy-portal, company_name: "Portal Gupy (consultas)", platform: gupy_portal,
+     primary_adapter: gupy_portal_search, enabled: false, coverage: incremental_query, priority: 3, configuration_origin: queries_yml,
+     params: {queries: ["operacoes maritimas", "superintendente offshore", "coordenador offshore", "planejamento offshore",
+       "resposta a emergencias", "gerente de operacoes", "fpso", "logistica offshore", "planejamento e controle",
+       "metodos e performance", "hsse", "sms offshore", "comissionamento", "oleo e gas", "coordenador de projetos", "gestao de projetos"],
+       state: "Rio de Janeiro"},
+     note: "Consulta por palavra-chave. Nunca autoriza encerramento. Desativada para não poluir com empresas fora da lista."}

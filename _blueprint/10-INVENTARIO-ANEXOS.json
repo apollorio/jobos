@@ -1,0 +1,1093 @@
+{
+  "schema_version": 1,
+  "inspection_date": "2026-10-22",
+  "timezone": "America/Sao_Paulo",
+  "method": "static source inspection; sqlite read-only inspection; no legacy engine execution; public primary-source lookup",
+  "local_machine_accessed": false,
+  "system_implemented": false,
+  "schedule_installed": false,
+  "external_email_sent": false,
+  "attachments": [
+    {
+      "filename": "apollo-vagas_1.zip",
+      "bytes": 145390,
+      "sha256": "6e26fbbf4976bbd3637f8789f5864a89963a497e34cdd513e6db6792f11ddd78",
+      "entries": 21,
+      "files": [
+        {
+          "path": "apollo-vagas/assets/kanban.js",
+          "bytes": 37625,
+          "sha256": "25f388663ba79257b65c7f803f9048b7b6566cdcebe1101bd50e3d8e5bfd858d"
+        },
+        {
+          "path": "apollo-vagas/assets/kanban.css",
+          "bytes": 22842,
+          "sha256": "4e32ea0b7f3ffc9a323540c7c1b719e257f295e739620b538192ab41f75bfc61"
+        },
+        {
+          "path": "apollo-vagas/apollo-vagas.php",
+          "bytes": 2796,
+          "sha256": "64c1ba3aca848e76c314d7b678fbcb43361d0171a9a10e798f72bdfd76bfca59"
+        },
+        {
+          "path": "apollo-vagas/LEIAME.md",
+          "bytes": 6918,
+          "sha256": "596786e6281dd80627a9b9436bf446977da042f7b195ccc785eebd950f291bb4"
+        },
+        {
+          "path": "apollo-vagas/dados/vagas-latest.json",
+          "bytes": 255631,
+          "sha256": "d55a65f726d171c38f544d93ad645889218b2959ecfb0634f19ccd1045fd07b3"
+        },
+        {
+          "path": "apollo-vagas/dados/ultima-exportacao.json",
+          "bytes": 163,
+          "sha256": "a0ee7c402efc71022e35d4c28c1ec8d8855efa7ea71cbf57cbcc4e754f723ea0"
+        },
+        {
+          "path": "apollo-vagas/tests/harness.php",
+          "bytes": 8863,
+          "sha256": "6d5aa4aa37afdeb334665c41b084a93a16436f38cf5c7c7b13bf49111f61cd73"
+        },
+        {
+          "path": "apollo-vagas/tests/testar.php",
+          "bytes": 11081,
+          "sha256": "5763f0e4da76ee7dc6b39f6880a3ba4f0ca4b7e11a01ae7ca4337e6f13a5c841"
+        },
+        {
+          "path": "apollo-vagas/includes/class-apollo-vagas-sync.php",
+          "bytes": 6788,
+          "sha256": "6e4584c1d113f9ee04190411773575445f8667694de7a44c113f374f31afae41"
+        },
+        {
+          "path": "apollo-vagas/includes/class-apollo-vagas-estagios.php",
+          "bytes": 4266,
+          "sha256": "df574f03752da0ef1dc96152a5a30be59dad56e58de6c74337578d5a9fb4f1af"
+        },
+        {
+          "path": "apollo-vagas/includes/class-apollo-vagas-cpt.php",
+          "bytes": 8745,
+          "sha256": "9561f334ae325db9b2a05346b047468138f6b04aeb3342138264a7149f16dedb"
+        },
+        {
+          "path": "apollo-vagas/includes/class-apollo-vagas-rest.php",
+          "bytes": 14563,
+          "sha256": "6bf96f47c66f09b87575ba802939afceed0dd9b9b35a54a02df7ace707194b45"
+        },
+        {
+          "path": "apollo-vagas/includes/class-apollo-vagas-admin.php",
+          "bytes": 8816,
+          "sha256": "c2f5d4737e4603b4b25262047b1295fee7dac6becc5856b27344fe6330555a73"
+        },
+        {
+          "path": "apollo-vagas/ferramentas/vagas-atuais.json",
+          "bytes": 174224,
+          "sha256": "22b2309bacdf842f83920a484e0698702fe50b995b67822a43d1eb162b6c1f27"
+        },
+        {
+          "path": "apollo-vagas/ferramentas/enviar_para_wordpress.py",
+          "bytes": 4473,
+          "sha256": "8c069dcd0f46df430b05f643951cc38e1a3089a3744106fffb59f45fcc924585"
+        }
+      ]
+    },
+    {
+      "filename": "Artifact.zip",
+      "bytes": 1319139,
+      "sha256": "d6683a1856750caa7e5d3a98abd5fa36ba7d4aca6ccbe23bf2894ff9b27dd5ce",
+      "entries": 54,
+      "files": [
+        {
+          "path": "jobos/requirements.txt",
+          "bytes": 63,
+          "sha256": "63f080e4b12966b77b0010a3cb6de47546c72da89a6c48ce83e52a29778369e9"
+        },
+        {
+          "path": "jobos/config/queries.yml",
+          "bytes": 2830,
+          "sha256": "594e9f8ea6bb8df71aaf677476fb418ee44c373f20f783a6ca1554b32cdcb9b9"
+        },
+        {
+          "path": "jobos/config/profile.yml",
+          "bytes": 17530,
+          "sha256": "b1c19cca388c95581a743b919059455f44aab3740d3e831a64f8ca958ec3da30"
+        },
+        {
+          "path": "jobos/config/companies.yml",
+          "bytes": 14311,
+          "sha256": "4d4faeded9805298b1265085057464b27821da583ee679977f781c726db65082"
+        },
+        {
+          "path": "jobos/.github/workflows/jobos.yml",
+          "bytes": 3696,
+          "sha256": "3d8946ac7d25eb0990df220aa26b4d1f61d4453bef036e0e45865f6108852f55"
+        },
+        {
+          "path": "jobos/README.md",
+          "bytes": 26636,
+          "sha256": "2e5533d3e08cb7a93cad8f4dd783c363e46742e3b2b8fe05a1a9618a48eef5d2"
+        },
+        {
+          "path": "jobos/.gitignore",
+          "bytes": 46,
+          "sha256": "f2778a6754a3f0c5e91fe43c7846601e4db952cf735a5db6f9116fb51606070b"
+        },
+        {
+          "path": "jobos/out/report.html",
+          "bytes": 13876,
+          "sha256": "4977dbf72c4c90ba1411e8d723013068d0606a40412919875d92c8ef954836ac"
+        },
+        {
+          "path": "jobos/out/dry.db",
+          "bytes": 40960,
+          "sha256": "297976851f9faea7baf8b2c4129563e04d90bba0d50a6dc650b5a22c190e622b"
+        },
+        {
+          "path": "jobos/tests/dry_run.py",
+          "bytes": 1956,
+          "sha256": "3966e7f7e00d790c9b225ee9c36cfa5be82e87ef86c839a9e532ce00bdd40e63"
+        },
+        {
+          "path": "jobos/tests/test_triage.py",
+          "bytes": 54331,
+          "sha256": "ac4f91080fbf673e03618275dec5831a105de1ba55f00cf80e361d582834a546"
+        },
+        {
+          "path": "jobos/tests/fixtures/jobs.json",
+          "bytes": 2554,
+          "sha256": "8ae2e11635a9dc7eb7b2e46611e04d705cc86edb47897555ec8dcf9e3352506a"
+        },
+        {
+          "path": "jobos/tests/test_score.py",
+          "bytes": 4412,
+          "sha256": "714264c43850ffe2a91e8723980ab49c7298f1adb355a412ec3439edaa85e47c"
+        },
+        {
+          "path": "jobos/.jobos/estrategias.json",
+          "bytes": 1117,
+          "sha256": "63f779cf0a36e3537fab8b5e646c9250b2df4069ab9fc903e920eb8ca39c9bec"
+        },
+        {
+          "path": "jobos/jobs.db",
+          "bytes": 5480448,
+          "sha256": "7469d396a0e9ca62c0268a304de22eefb3d967c6e6d1757240a44fda11e132e4"
+        },
+        {
+          "path": "jobos/run.py",
+          "bytes": 29721,
+          "sha256": "9b186f2242d712bcd071bd94e679db099f48e03c051a34a275d07272c74ee2be"
+        },
+        {
+          "path": "jobos/windows/rodar-ciclo.ps1",
+          "bytes": 3173,
+          "sha256": "dfc428087df724f149c7f428e6e30675a4e3b61476a19bef37bbeafa2d5cd9b6"
+        },
+        {
+          "path": "jobos/windows/agendar-12h-18h.ps1",
+          "bytes": 3428,
+          "sha256": "1ae380b8aae73b4c7261e1a76794fd6abdb2e531832b71edb8a330ed91079029"
+        },
+        {
+          "path": "jobos/windows/rodar-diario.ps1",
+          "bytes": 3420,
+          "sha256": "f0bfb5e491672131b8d0bb2565acaff03af007708f926c13d56460b03d31a063"
+        },
+        {
+          "path": "jobos/windows/agendar-13h.ps1",
+          "bytes": 3259,
+          "sha256": "f4d33c8cf647430c956ad3f41629837137af8c701975083f34ff48349559bb78"
+        },
+        {
+          "path": "jobos/jobos/autoapply.py",
+          "bytes": 9931,
+          "sha256": "081ce23f703de1f7369c92b324077af274620c1ecd936b6df49bd12d95503424"
+        },
+        {
+          "path": "jobos/jobos/sync.py",
+          "bytes": 6918,
+          "sha256": "51752859763adf03e10fee699cb166a980b47db56e0b44d87e9fdb1663103a9a"
+        },
+        {
+          "path": "jobos/jobos/resilience.py",
+          "bytes": 7304,
+          "sha256": "96292d94062ded28519f13d6508b0a86f42f85eb621d305a8044b472e2956ec0"
+        },
+        {
+          "path": "jobos/jobos/bulletin.py",
+          "bytes": 24612,
+          "sha256": "f766f907079dbfaf9825d6e607688dc5a247bbcf802ab5a244bddd0d967a48a7"
+        },
+        {
+          "path": "jobos/jobos/score.py",
+          "bytes": 15315,
+          "sha256": "557119049d8655bd46beecce5cfdafffcdcfcc429983e676cb1974d38431baa2"
+        },
+        {
+          "path": "jobos/jobos/__init__.py",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "jobos/jobos/diff.py",
+          "bytes": 6032,
+          "sha256": "f43d2bd551ed8ff38d9955bc59bade0fd27b773ebaab6085dd07be79349079a7"
+        },
+        {
+          "path": "jobos/jobos/triage.py",
+          "bytes": 33424,
+          "sha256": "4a96cf0cdfb2ff3048de46812b5094d65ca6b79dd6a0cb69d228e65b77208b6c"
+        },
+        {
+          "path": "jobos/jobos/digest.py",
+          "bytes": 4637,
+          "sha256": "a4ecd89a8791963389d913cd1e0aef95a0a8e8cc3704b0112550daf6df6cb4fd"
+        },
+        {
+          "path": "jobos/jobos/fontes.py",
+          "bytes": 18730,
+          "sha256": "748e7221a6d5f6330817945dcfcc48072c65ba63d888f34cb43bae173ded0efe"
+        },
+        {
+          "path": "jobos/jobos/sources/__init__.py",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "jobos/jobos/sources/web.py",
+          "bytes": 32097,
+          "sha256": "b740b491681ced6786e12018c2737ad7389363b84e67059b27b625774789640d"
+        },
+        {
+          "path": "jobos/jobos/sources/gupy.py",
+          "bytes": 6121,
+          "sha256": "faa6b15e140a95055d8b32efaec56fd879e8680565ade5cbb710109767c3c0b2"
+        },
+        {
+          "path": "jobos/jobos/sources/ats.py",
+          "bytes": 9566,
+          "sha256": "48943015050afa0194929c06c235a2c563ff3c21ae06fbf34345ed49de8ad378"
+        },
+        {
+          "path": "jobos/jobos/sources/adzuna.py",
+          "bytes": 2640,
+          "sha256": "7eb8a3aa31508d0577e343d7a84e3a246131231ef5dcaf6fedb34b6e77b646cb"
+        },
+        {
+          "path": "jobos/jobos/sources/totvs.py",
+          "bytes": 3582,
+          "sha256": "156c55a086b426852cd42b066cda32657ed92b0880f44a5c68f04d91da1d9636"
+        },
+        {
+          "path": "jobos/jobos/preflight.py",
+          "bytes": 5852,
+          "sha256": "bf32fb2e1d6b444f8aa121a90b22639769bc7f5cd7b1c79759f97e168141283c"
+        },
+        {
+          "path": "jobos/jobos/compat.py",
+          "bytes": 10141,
+          "sha256": "ca634824d45ec83f348dd1762208f8cf019a42e64d99bbc848bddebb5595b841"
+        },
+        {
+          "path": "jobos/jobos/wordpress.py",
+          "bytes": 7314,
+          "sha256": "d9148085cc5e54ba86295371a60012adb29684af68411fde69f8890703fdbfd7"
+        },
+        {
+          "path": "jobos/jobos/store.py",
+          "bytes": 9817,
+          "sha256": "fa157dfe37ef37d9b95ba047127f374128f43fe4fb3135646fb096f32323e60a"
+        },
+        {
+          "path": "jobos/jobos/probe.py",
+          "bytes": 3148,
+          "sha256": "edca8301ef87614063f2016f9911d6db6a7da8234e60b423760f12239773f216"
+        },
+        {
+          "path": "jobos/tools/truth_lint.py",
+          "bytes": 4723,
+          "sha256": "9ffff6d71caa79355cab39e0c9671af2a4bd886c41854ad5396f7f363517d59c"
+        }
+      ]
+    },
+    {
+      "filename": "index(6).html",
+      "bytes": 2930,
+      "sha256": "056f89dfc6da97189d158258ef8e1c6c46139cf5b31a5e01fc434fabd41207b0"
+    },
+    {
+      "filename": "jobs(1).json",
+      "bytes": 113621,
+      "sha256": "a8f1034c3604ceb50835992742cce9333704295d4f3d3913f5bbbfe827876977"
+    },
+    {
+      "filename": "manifest.webmanifest",
+      "bytes": 834,
+      "sha256": "6dd33bad35d0cbb8030f82f0863df8c72246401eeae203b48f9fe49b41548b47"
+    },
+    {
+      "filename": "manifest(1).zip",
+      "bytes": 1101378,
+      "sha256": "f66fb8299fb863d0bece23c9983199222c635fafe3ca8de0f3cad80574e7b577",
+      "entries": 42,
+      "files": [
+        {
+          "path": "manifest.webmanifest",
+          "bytes": 825,
+          "sha256": "40bb5e1612384d033dbb594b7fb85e13838991c3b5f2d59a8812cb6a401d71a9"
+        },
+        {
+          "path": "sw.js",
+          "bytes": 2948,
+          "sha256": "78b46796767f10bb894daa155fcd2444bbb46fd98e2c31ba7ef770ffa0ceef30"
+        },
+        {
+          "path": "assets/host.ts",
+          "bytes": 2667,
+          "sha256": "184c3e2c12e5e907e8af6c338cd9fd2a1c62e5f88ce33b6effb7b91cd8169362"
+        },
+        {
+          "path": "assets/img/app-builder-built-mobile.png",
+          "bytes": 60136,
+          "sha256": "47150383f5a1d4dfdaecdb9153a2baee516925f5df6afbaf4c1a04c613727611"
+        },
+        {
+          "path": "assets/img/app-builder-built.png",
+          "bytes": 71824,
+          "sha256": "d8ef739bc07d87fce3d012fc612632baf932315d8cd82d0825f66f42bad9286f"
+        },
+        {
+          "path": "assets/img/app-builder-preview-mobile.png",
+          "bytes": 60136,
+          "sha256": "47150383f5a1d4dfdaecdb9153a2baee516925f5df6afbaf4c1a04c613727611"
+        },
+        {
+          "path": "assets/img/app-builder-preview.png",
+          "bytes": 71824,
+          "sha256": "d8ef739bc07d87fce3d012fc612632baf932315d8cd82d0825f66f42bad9286f"
+        },
+        {
+          "path": "assets/img/company-screen.png",
+          "bytes": 63161,
+          "sha256": "d3e50a36a3261769e4b1e27042966dd3704b873282582567af6d425bee3d8b5b"
+        },
+        {
+          "path": "assets/img/enauta.jpg",
+          "bytes": 3065,
+          "sha256": "9ab1f922e075939804d09397c34c4501257c7df1ac1c5c97cba4b6babd8848e6"
+        },
+        {
+          "path": "assets/img/favicon.svg",
+          "bytes": 2314,
+          "sha256": "1589ef62d88b191129075e78fc7aa60a5dd826c7e4a6e96261c75bf0d36cb2bd"
+        },
+        {
+          "path": "assets/img/glass-puzzle.svg",
+          "bytes": 1811,
+          "sha256": "a677c9356c23d1e699559ddbffac97cd135c2782cd893fb34f3738f6d11bee17"
+        },
+        {
+          "path": "assets/img/glass-share.svg",
+          "bytes": 2388,
+          "sha256": "efad1b4b507a68c1f1af4aad2c93e8c24076224aa593da86677697f543d026d6"
+        },
+        {
+          "path": "assets/img/icon-180.png",
+          "bytes": 27636,
+          "sha256": "c91ff1fb82814924645a690fe275f3f24f0818e37540b0093ae360b7fb780c86"
+        },
+        {
+          "path": "assets/img/icon-192.png",
+          "bytes": 27636,
+          "sha256": "c91ff1fb82814924645a690fe275f3f24f0818e37540b0093ae360b7fb780c86"
+        },
+        {
+          "path": "assets/img/icon-512.png",
+          "bytes": 27636,
+          "sha256": "c91ff1fb82814924645a690fe275f3f24f0818e37540b0093ae360b7fb780c86"
+        },
+        {
+          "path": "assets/img/job.png",
+          "bytes": 27636,
+          "sha256": "c91ff1fb82814924645a690fe275f3f24f0818e37540b0093ae360b7fb780c86"
+        },
+        {
+          "path": "assets/img/logo-grok.svg",
+          "bytes": 1059,
+          "sha256": "0654e3e59cce69856f38525cbfe4ab3a9ef52d4b64c8532dd0bc1a3f34fcb5b1"
+        },
+        {
+          "path": "assets/img/muted-prio.png",
+          "bytes": 77923,
+          "sha256": "ccc3bc0dbca1d7f7a74169b04865d8c81c42ef789c5f0d748a71397594c9e0bb"
+        },
+        {
+          "path": "assets/img/nexa.jpg",
+          "bytes": 2383,
+          "sha256": "19f81578a7c9e58fd65a6962884a47f8ab7de9e4a3554dffc5ae60c81d6c6e24"
+        },
+        {
+          "path": "assets/img/ob-ipad.png",
+          "bytes": 101843,
+          "sha256": "4c9b09a4660c662b394597d551a04124293b0e37a7a7c72271dd2948c4499a14"
+        },
+        {
+          "path": "assets/img/ob-phone.png",
+          "bytes": 103612,
+          "sha256": "80e0a5ede614d9b920c67d7cb79c80a79134687b1fc9f560384e896a88e302db"
+        },
+        {
+          "path": "assets/img/og.jpg",
+          "bytes": 43066,
+          "sha256": "637adffd093d79df7a3d75bd0b1fd0057fbc5ff84c6e2f0f46f199898fb184a3"
+        },
+        {
+          "path": "assets/img/page-modec.png",
+          "bytes": 60278,
+          "sha256": "98d6136bc309264e702061f6589295f8b5d735bb1f4e8003b87be7916c83a877"
+        },
+        {
+          "path": "assets/img/page-next.png",
+          "bytes": 60278,
+          "sha256": "98d6136bc309264e702061f6589295f8b5d735bb1f4e8003b87be7916c83a877"
+        },
+        {
+          "path": "assets/img/page-prio.png",
+          "bytes": 65497,
+          "sha256": "faed23311273da05becf8c44462192d24419acef91d5e2e2de73db8f474cebb2"
+        },
+        {
+          "path": "assets/img/plus.svg",
+          "bytes": 2401,
+          "sha256": "c2c94be46aa2c3c2fda95d7c6f2fc6d0b656d1f5847828d5d95b5a81a6f4f20d"
+        },
+        {
+          "path": "assets/img/prio.png",
+          "bytes": 63091,
+          "sha256": "2892f4289fe1f2b3862b4941a8a8c889374d186850b69563777a83cd53138726"
+        },
+        {
+          "path": "assets/img/swipe-prio.png",
+          "bytes": 75464,
+          "sha256": "2bfa3374533b20e0f45ea90afda6c9bed8886542982b60e07298af42a66e8083"
+        },
+        {
+          "path": "assets/inbox-swiipe-row.js",
+          "bytes": 30211,
+          "sha256": "5dfa760c3b02e2b43310e106b49c2e250872ec0ccc78b5c20170a727b60c5585"
+        },
+        {
+          "path": "assets/jobos.css",
+          "bytes": 14660,
+          "sha256": "78c2cd30f945b988b6dd63e1ab84bc02951078e8fd312e39ebec5ccda7fc7ee4"
+        },
+        {
+          "path": "assets/jobos.js",
+          "bytes": 42891,
+          "sha256": "457547f2c5943b5a334bbeec5a55a2f233f4d1768d5b47ef104ba9d41fce7557"
+        },
+        {
+          "path": "assets/jobs-data.js",
+          "bytes": 84496,
+          "sha256": "37c3daf28f3eb93e8562b16c21b6d7e2f8fa53b3050076cc1413b29a6511c080"
+        },
+        {
+          "path": "assets/jobs-types.ts",
+          "bytes": 310,
+          "sha256": "7dd459fe95cc170a1dca1a3b8de3f0d15e4468e190e94dfaedae7d28dfd2b77f"
+        },
+        {
+          "path": "assets/load-jobs.ts",
+          "bytes": 21847,
+          "sha256": "c8ae6d2146826f5738a8fef5616bfb0995f539ac5354af878419c6a3d528fdee"
+        },
+        {
+          "path": "assets/merge-jobs.ts",
+          "bytes": 5910,
+          "sha256": "a032ccc7dcc674e12efbd34b88061130593f5f398a76e264ad071ab5b7338dd2"
+        },
+        {
+          "path": "assets/offer-page.ts",
+          "bytes": 5569,
+          "sha256": "f5e830043346d4fa5e01e851cf672a52e0c90a2b860345b1e905fcb92d7c56f9"
+        },
+        {
+          "path": "assets/rio.ts",
+          "bytes": 2895,
+          "sha256": "8e8c7b35a5146f6f41938dc2a41510bb5b7dc5a7cd348d4129149133f2f302dd"
+        },
+        {
+          "path": "assets/update-jobs.ts",
+          "bytes": 366,
+          "sha256": "104578cca6c47514fef92db243aec0844b7a7bb2e99eef5fe05d29b5822267fc"
+        },
+        {
+          "path": "index.html",
+          "bytes": 2684,
+          "sha256": "c658919b74d92bed45a114fcc85766a4aac945c0d729b19acfa5092a98155fde"
+        },
+        {
+          "path": "jobs.json",
+          "bytes": 113621,
+          "sha256": "a8f1034c3604ceb50835992742cce9333704295d4f3d3913f5bbbfe827876977"
+        }
+      ]
+    },
+    {
+      "filename": "rvalle.com.br-rafael(1).json",
+      "bytes": 222830,
+      "sha256": "baccac260f06a17861bd58af1f052c06c01d423bbbcc24e67b1892fd1d0ad10e"
+    },
+    {
+      "filename": "sw.js",
+      "bytes": 4151,
+      "sha256": "a7b040223c6af69fb673021c4c3b24317cbdd8f0d608bdcef9706895522092b1"
+    },
+    {
+      "filename": "web-vagas(1).zip",
+      "bytes": 1229536,
+      "sha256": "6240e41f93d57a58d3e44a56cfd01e55bbe8727dab58c04f3e2bce3f8c48b462",
+      "entries": 58,
+      "files": [
+        {
+          "path": "jobs.json",
+          "bytes": 113621,
+          "sha256": "a8f1034c3604ceb50835992742cce9333704295d4f3d3913f5bbbfe827876977"
+        },
+        {
+          "path": "manifest.webmanifest",
+          "bytes": 834,
+          "sha256": "6dd33bad35d0cbb8030f82f0863df8c72246401eeae203b48f9fe49b41548b47"
+        },
+        {
+          "path": "sw.js",
+          "bytes": 4151,
+          "sha256": "a7b040223c6af69fb673021c4c3b24317cbdd8f0d608bdcef9706895522092b1"
+        },
+        {
+          "path": "assets/cache-logos.ts",
+          "bytes": 1885,
+          "sha256": "7f576bf59a2d896d6cac7d1f838463a4a24917f0760c33b0141315941305acbe"
+        },
+        {
+          "path": "assets/forms-google.js",
+          "bytes": 11666,
+          "sha256": "dec0c0ea5d7703088ee7f8451c89a1349bce0d5a6c4415eb06cb4b87e0cd7a1a"
+        },
+        {
+          "path": "assets/forms-google.ts",
+          "bytes": 11948,
+          "sha256": "bb0c13b994af40a352235b87c2a3bb268f748286fc509d52793d651faec9e089"
+        },
+        {
+          "path": "assets/host.ts",
+          "bytes": 6253,
+          "sha256": "2ad5a0ab1f3566b02abc6f5e139e8add67eadc2563944a9dda1c69d30c16e2eb"
+        },
+        {
+          "path": "assets/img/app-builder-built-mobile.png",
+          "bytes": 60136,
+          "sha256": "47150383f5a1d4dfdaecdb9153a2baee516925f5df6afbaf4c1a04c613727611"
+        },
+        {
+          "path": "assets/img/app-builder-built.png",
+          "bytes": 71824,
+          "sha256": "d8ef739bc07d87fce3d012fc612632baf932315d8cd82d0825f66f42bad9286f"
+        },
+        {
+          "path": "assets/img/app-builder-preview-mobile.png",
+          "bytes": 60136,
+          "sha256": "47150383f5a1d4dfdaecdb9153a2baee516925f5df6afbaf4c1a04c613727611"
+        },
+        {
+          "path": "assets/img/app-builder-preview.png",
+          "bytes": 71824,
+          "sha256": "d8ef739bc07d87fce3d012fc612632baf932315d8cd82d0825f66f42bad9286f"
+        },
+        {
+          "path": "assets/img/company-screen.png",
+          "bytes": 63161,
+          "sha256": "d3e50a36a3261769e4b1e27042966dd3704b873282582567af6d425bee3d8b5b"
+        },
+        {
+          "path": "assets/img/enauta.jpg",
+          "bytes": 3065,
+          "sha256": "9ab1f922e075939804d09397c34c4501257c7df1ac1c5c97cba4b6babd8848e6"
+        },
+        {
+          "path": "assets/img/favicon.svg",
+          "bytes": 2314,
+          "sha256": "1589ef62d88b191129075e78fc7aa60a5dd826c7e4a6e96261c75bf0d36cb2bd"
+        },
+        {
+          "path": "assets/img/glass-puzzle.svg",
+          "bytes": 1811,
+          "sha256": "a677c9356c23d1e699559ddbffac97cd135c2782cd893fb34f3738f6d11bee17"
+        },
+        {
+          "path": "assets/img/glass-share.svg",
+          "bytes": 2388,
+          "sha256": "efad1b4b507a68c1f1af4aad2c93e8c24076224aa593da86677697f543d026d6"
+        },
+        {
+          "path": "assets/img/icon-180.png",
+          "bytes": 9937,
+          "sha256": "ab1f55a477aeb4b855bd0019c88ddca33c36df155ca01fbdef86140b4bbccbea"
+        },
+        {
+          "path": "assets/img/icon-192.png",
+          "bytes": 10711,
+          "sha256": "056e9b36baa838fd3213f7c184032920776bfc855cebf7419704103c79a03a93"
+        },
+        {
+          "path": "assets/img/icon-512.png",
+          "bytes": 27636,
+          "sha256": "c91ff1fb82814924645a690fe275f3f24f0818e37540b0093ae360b7fb780c86"
+        },
+        {
+          "path": "assets/img/icon-maskable-512.png",
+          "bytes": 24492,
+          "sha256": "a9bdd277f45d0341aade9a3256a7aa2fcd5db9f2652136c176222fd11679135d"
+        },
+        {
+          "path": "assets/img/job.png",
+          "bytes": 27636,
+          "sha256": "c91ff1fb82814924645a690fe275f3f24f0818e37540b0093ae360b7fb780c86"
+        },
+        {
+          "path": "assets/img/logo-grok.svg",
+          "bytes": 1059,
+          "sha256": "0654e3e59cce69856f38525cbfe4ab3a9ef52d4b64c8532dd0bc1a3f34fcb5b1"
+        },
+        {
+          "path": "assets/img/muted-prio.png",
+          "bytes": 77923,
+          "sha256": "ccc3bc0dbca1d7f7a74169b04865d8c81c42ef789c5f0d748a71397594c9e0bb"
+        },
+        {
+          "path": "assets/img/nexa.jpg",
+          "bytes": 2383,
+          "sha256": "19f81578a7c9e58fd65a6962884a47f8ab7de9e4a3554dffc5ae60c81d6c6e24"
+        },
+        {
+          "path": "assets/img/ob-ipad.png",
+          "bytes": 101843,
+          "sha256": "4c9b09a4660c662b394597d551a04124293b0e37a7a7c72271dd2948c4499a14"
+        },
+        {
+          "path": "assets/img/ob-phone.png",
+          "bytes": 103612,
+          "sha256": "80e0a5ede614d9b920c67d7cb79c80a79134687b1fc9f560384e896a88e302db"
+        },
+        {
+          "path": "assets/img/og.jpg",
+          "bytes": 43066,
+          "sha256": "637adffd093d79df7a3d75bd0b1fd0057fbc5ff84c6e2f0f46f199898fb184a3"
+        },
+        {
+          "path": "assets/img/page-modec.png",
+          "bytes": 60278,
+          "sha256": "98d6136bc309264e702061f6589295f8b5d735bb1f4e8003b87be7916c83a877"
+        },
+        {
+          "path": "assets/img/page-next.png",
+          "bytes": 60278,
+          "sha256": "98d6136bc309264e702061f6589295f8b5d735bb1f4e8003b87be7916c83a877"
+        },
+        {
+          "path": "assets/img/page-prio.png",
+          "bytes": 65497,
+          "sha256": "faed23311273da05becf8c44462192d24419acef91d5e2e2de73db8f474cebb2"
+        },
+        {
+          "path": "assets/img/plus.svg",
+          "bytes": 2401,
+          "sha256": "c2c94be46aa2c3c2fda95d7c6f2fc6d0b656d1f5847828d5d95b5a81a6f4f20d"
+        },
+        {
+          "path": "assets/img/prio.png",
+          "bytes": 63091,
+          "sha256": "2892f4289fe1f2b3862b4941a8a8c889374d186850b69563777a83cd53138726"
+        },
+        {
+          "path": "assets/img/swipe-prio.png",
+          "bytes": 75464,
+          "sha256": "2bfa3374533b20e0f45ea90afda6c9bed8886542982b60e07298af42a66e8083"
+        },
+        {
+          "path": "assets/inbox-swiipe-row.js",
+          "bytes": 30211,
+          "sha256": "5dfa760c3b02e2b43310e106b49c2e250872ec0ccc78b5c20170a727b60c5585"
+        },
+        {
+          "path": "assets/jobos.css",
+          "bytes": 22791,
+          "sha256": "40636472f3153e7a9941e07718b40cb409fffe33e39279e4a351080794503f9d"
+        },
+        {
+          "path": "assets/jobos.js",
+          "bytes": 62214,
+          "sha256": "c34b948d6c0c12def1013d019b83fa97d68679282160fd89d9f7eb37d24ac411"
+        },
+        {
+          "path": "assets/jobs-data.js",
+          "bytes": 84496,
+          "sha256": "37c3daf28f3eb93e8562b16c21b6d7e2f8fa53b3050076cc1413b29a6511c080"
+        },
+        {
+          "path": "assets/jobs-types.ts",
+          "bytes": 401,
+          "sha256": "4a13ccb39c379d1853de066472c4c5c585453a7bc8bfc33bdedefb74b2e57a2c"
+        },
+        {
+          "path": "assets/load-jobs.ts",
+          "bytes": 22300,
+          "sha256": "48abb124e429dee0b6e74deee1361043dcb9daad7f8ef1d6a7d56b1341532936"
+        },
+        {
+          "path": "assets/merge-jobs.ts",
+          "bytes": 9578,
+          "sha256": "07a0ec3072449732739e617ca6cbe59a04305d205d389086245df87f62f07fcb"
+        },
+        {
+          "path": "assets/offer-page.ts",
+          "bytes": 7041,
+          "sha256": "d1cbedeb2df75cc52e5de4e63cabed53558aac1645d0aa0886eaf082bcdf9398"
+        },
+        {
+          "path": "assets/rio.ts",
+          "bytes": 3659,
+          "sha256": "970956f6b9b9b631e2abfdfa182a94b6e29eb0cbd11234066141318beb9e4700"
+        },
+        {
+          "path": "assets/update-jobs.ts",
+          "bytes": 482,
+          "sha256": "5f53d41acef37c95fceaf75fb93d43fee0a783cc7ae49c8be93d50fdf940956b"
+        },
+        {
+          "path": "design system/app-market.js",
+          "bytes": 26483,
+          "sha256": "45d09109b79d2d951eef8ceee3506f605f2f9c94e0df1485100334cbb4de2bfc"
+        },
+        {
+          "path": "design system/dashboard.apollorio.css",
+          "bytes": 170977,
+          "sha256": "ae3e432cedc9de6b1af4ab54584ae9fd084993b838a10af4278ae19ebf82a7dc"
+        },
+        {
+          "path": "design system/index.html",
+          "bytes": 79548,
+          "sha256": "02b85900fe223d8f9861a5b65ec7d56a2f974dc5e1a87181dd28e31c27ddd7dc"
+        },
+        {
+          "path": "design system/lib/inbox-swiipe-row.js",
+          "bytes": 29043,
+          "sha256": "dca0fde838615caa073732f0773c1757ca5fa60e94b9315d386ec400bd8873c9"
+        },
+        {
+          "path": "design system/lib/list-reveal.js",
+          "bytes": 17274,
+          "sha256": "0f6dbcaead8803e6e4e1fe21d47655b979200cc4f132b161d07877054fe0baf2"
+        },
+        {
+          "path": "design system/lib/scroll-expand.js",
+          "bytes": 18028,
+          "sha256": "c1f94d6b4148b1135bd5358162fe287d538681a573d67adec5351202925b7ffd"
+        },
+        {
+          "path": "design system/lib/tree-menu-links.js",
+          "bytes": 20968,
+          "sha256": "631c1ef87b0918725eddd61b576549af5b8fa55eb791a0c106bbd0c071d85e4e"
+        },
+        {
+          "path": "design system/script.theme.js",
+          "bytes": 47344,
+          "sha256": "ea14b0e81df91b191e42399e2c8774c9dcadf83f0ceb8021a746174efde47e78"
+        },
+        {
+          "path": "design system/showcase.extras.js",
+          "bytes": 29449,
+          "sha256": "d07705cda584c1c29e9d3f9cb845967d64fd25a03c94b49ebef8c07d603508b0"
+        },
+        {
+          "path": "design system/simulated.data.js",
+          "bytes": 8514,
+          "sha256": "c6579da1a09097fefc09694282d156eafdda6e6d31ed21002bf09192c21c1efe"
+        },
+        {
+          "path": "index.html",
+          "bytes": 2930,
+          "sha256": "056f89dfc6da97189d158258ef8e1c6c46139cf5b31a5e01fc434fabd41207b0"
+        }
+      ]
+    }
+  ],
+  "observed_metrics": {
+    "web_company_count": 28,
+    "web_job_count": 252,
+    "web_source_kinds": {
+      "gupy": 13,
+      "sf": 4,
+      "workday": 4,
+      "smart": 2,
+      "inhire": 1,
+      "oracle": 1,
+      "dof": 1,
+      "bram": 1,
+      "greenhouse": 1
+    },
+    "profile_top_level_modules": [
+      "meta",
+      "identity",
+      "career_summary",
+      "domain_tree",
+      "experience_nodes",
+      "project_portfolio_tree",
+      "vessel_asset_tree",
+      "software_systems_tree",
+      "methodologies_processes_tree",
+      "oil_gas_tree",
+      "maintenance_repairs_tree",
+      "project_management_tree",
+      "quality_hseq_tree",
+      "standards_and_regulatory_coverage",
+      "education_tree",
+      "certification_training_tree",
+      "publication_tree",
+      "volunteer_leadership_tree",
+      "stakeholder_client_tree",
+      "interview_story_bank",
+      "positioning_layer",
+      "role_fit_tree",
+      "truth_boundaries",
+      "metrics_register",
+      "mobility_and_preferences",
+      "source_registry",
+      "indexes",
+      "evidence_catalog",
+      "known_unknowns_and_conflicts",
+      "career_reentry",
+      "creative_event_background"
+    ],
+    "legacy_sqlite": {
+      "jobs": 1118,
+      "events": 2295,
+      "runs": 251,
+      "application_states": [
+        {
+          "status": "applied",
+          "provenance": null,
+          "count": 15
+        },
+        {
+          "status": "applied",
+          "provenance": "auto_sugerida",
+          "count": 13
+        },
+        {
+          "status": "new",
+          "provenance": null,
+          "count": 1090
+        }
+      ],
+      "integrity_check": "ok"
+    }
+  },
+  "company_snapshot": [
+    {
+      "id": "prio",
+      "name": "PRIO",
+      "kind": "gupy",
+      "board_url": "https://prio.gupy.io/",
+      "saved_jobs": 11
+    },
+    {
+      "id": "modec",
+      "name": "MODEC",
+      "kind": "gupy",
+      "board_url": "https://modec-br.gupy.io/",
+      "saved_jobs": 3
+    },
+    {
+      "id": "norsul",
+      "name": "Norsul",
+      "kind": "gupy",
+      "board_url": "https://norsul.gupy.io/",
+      "saved_jobs": 4
+    },
+    {
+      "id": "brava",
+      "name": "Brava Energia",
+      "kind": "gupy",
+      "board_url": "https://bravaenergia.gupy.io/",
+      "saved_jobs": 28
+    },
+    {
+      "id": "wilsonsons",
+      "name": "Wilson Sons",
+      "kind": "gupy",
+      "board_url": "https://wilsonsons.gupy.io/",
+      "saved_jobs": 11
+    },
+    {
+      "id": "ocyan",
+      "name": "Ocyan",
+      "kind": "gupy",
+      "board_url": "https://ocyan.gupy.io/",
+      "saved_jobs": 5
+    },
+    {
+      "id": "qualidados",
+      "name": "Qualidados",
+      "kind": "gupy",
+      "board_url": "https://qualidados.gupy.io/",
+      "saved_jobs": 8
+    },
+    {
+      "id": "oceanica",
+      "name": "Oceanica",
+      "kind": "gupy",
+      "board_url": "https://sejaoceanica.gupy.io/",
+      "saved_jobs": 11
+    },
+    {
+      "id": "vinci",
+      "name": "VINCI Energies",
+      "kind": "gupy",
+      "board_url": "https://vinci-energies.gupy.io/",
+      "saved_jobs": 1
+    },
+    {
+      "id": "nexa",
+      "name": "Nexa Tecnologia",
+      "kind": "gupy",
+      "board_url": "https://nexatecnologia.gupy.io/",
+      "saved_jobs": 1
+    },
+    {
+      "id": "enauta",
+      "name": "Enauta / 3R",
+      "kind": "gupy",
+      "board_url": "https://3rpetroleum.gupy.io/",
+      "saved_jobs": 0
+    },
+    {
+      "id": "minsait",
+      "name": "Minsait",
+      "kind": "gupy",
+      "board_url": "https://minsait.gupy.io/",
+      "saved_jobs": 3
+    },
+    {
+      "id": "vibra",
+      "name": "Vibra Energia",
+      "kind": "gupy",
+      "board_url": "https://vibraenergia.gupy.io/",
+      "saved_jobs": 32
+    },
+    {
+      "id": "subsea7",
+      "name": "Subsea7",
+      "kind": "sf",
+      "board_url": "https://careers.subsea7.com/search/?locationsearch=Rio%20de%20Janeiro&startrow=0",
+      "saved_jobs": 8
+    },
+    {
+      "id": "sbm",
+      "name": "SBM Offshore",
+      "kind": "sf",
+      "board_url": "https://careers.sbmoffshore.com/search/?locationsearch=Rio%20de%20Janeiro&startrow=0",
+      "saved_jobs": 8
+    },
+    {
+      "id": "yinson",
+      "name": "Yinson",
+      "kind": "sf",
+      "board_url": "https://careers.yinson.com/search/?locationsearch=Rio%20de%20Janeiro&startrow=0",
+      "saved_jobs": 6
+    },
+    {
+      "id": "halliburton",
+      "name": "Halliburton",
+      "kind": "sf",
+      "board_url": "https://jobs.halliburton.com/search/?locationsearch=Rio%20de%20Janeiro&startrow=0",
+      "saved_jobs": 11
+    },
+    {
+      "id": "transocean",
+      "name": "Transocean",
+      "kind": "workday",
+      "board_url": "https://deepwater.wd1.myworkdayjobs.com/BrazilExternalCareerSite?q=Rio%20de%20Janeiro",
+      "saved_jobs": 0
+    },
+    {
+      "id": "equinor",
+      "name": "Equinor",
+      "kind": "workday",
+      "board_url": "https://equinor.wd3.myworkdayjobs.com/EQNR?q=Rio%20de%20Janeiro",
+      "saved_jobs": 0
+    },
+    {
+      "id": "shell",
+      "name": "Shell",
+      "kind": "workday",
+      "board_url": "https://shell.wd3.myworkdayjobs.com/ShellCareers?q=Rio%20de%20Janeiro",
+      "saved_jobs": 1
+    },
+    {
+      "id": "baker",
+      "name": "Baker Hughes",
+      "kind": "workday",
+      "board_url": "https://bakerhughes.wd5.myworkdayjobs.com/BakerHughes?q=Rio%20de%20Janeiro",
+      "saved_jobs": 7
+    },
+    {
+      "id": "aker",
+      "name": "Aker Solutions",
+      "kind": "smart",
+      "board_url": "https://jobs.smartrecruiters.com/AkerSolutions",
+      "saved_jobs": 0
+    },
+    {
+      "id": "airswift",
+      "name": "Airswift",
+      "kind": "smart",
+      "board_url": "https://jobs.smartrecruiters.com/Airswift",
+      "saved_jobs": 0
+    },
+    {
+      "id": "oceanpact",
+      "name": "OceanPact",
+      "kind": "inhire",
+      "board_url": "https://oceanpact.inhire.app/vagas",
+      "saved_jobs": 54
+    },
+    {
+      "id": "abs",
+      "name": "ABS",
+      "kind": "oracle",
+      "board_url": "https://hbbq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/jobs",
+      "saved_jobs": 0
+    },
+    {
+      "id": "dof",
+      "name": "DOF",
+      "kind": "dof",
+      "board_url": "https://www.dof.com/vacancies",
+      "saved_jobs": 20
+    },
+    {
+      "id": "bram",
+      "name": "Bram Offshore",
+      "kind": "bram",
+      "board_url": "https://atracaodetalentos.totvs.app/bramoffshore/extended",
+      "saved_jobs": 18
+    },
+    {
+      "id": "capco",
+      "name": "Capco",
+      "kind": "greenhouse",
+      "board_url": "https://job-boards.greenhouse.io/capco?offices%5B%5D=114971",
+      "saved_jobs": 1
+    }
+  ]
+}

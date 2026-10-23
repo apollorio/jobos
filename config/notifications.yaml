@@ -1,0 +1,17 @@
+schema_version: 1
+# Envio externo desligado na instalação inicial. O ciclo só gera preview (texto, HTML, .eml) e item na outbox.
+enabled: false
+channel: email
+# Destinatário NÃO é adivinhado. Preencha recipient e a referência do segredo para habilitar.
+recipient: null
+smtp:
+  host: null            # ex.: smtp.gmail.com
+  port: 465
+  tls: ssl              # ssl | starttls
+  username_env: JOBOS_SMTP_USER
+  password_env: JOBOS_SMTP_PASSWORD   # valor fica no ambiente/cofre do Windows, nunca neste arquivo
+policy:
+  send_when_nothing_new: false        # sem novidades e sem falhas novas: não enfileira
+  max_items: 10
+  retry_backoff_minutes: [5, 30, 120]
+  max_attempts: 4

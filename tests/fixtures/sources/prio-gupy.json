@@ -1,0 +1,13 @@
+{"_note": "FIXTURE sintética de teste. Nunca entra no banco real (exige --dry-run).",
+ "status": "complete",
+ "jobs": [
+  {"platform": "gupy", "tenant": "", "external_id": "12452789", "url": "https://prio.gupy.io/jobs/12452789",
+   "title": "[FIXTURE] Coordenador(a) de Planejamento Offshore", "location": "Rio de Janeiro, Rio de Janeiro",
+   "workplace": "onsite", "published_raw": "2026-09-10T12:15:14.343Z", "published_source": "gupy:publishedDate",
+   "description_status": "full",
+   "description": "Responsabilidades:\n- Planejar campanhas offshore e interface base-embarcação\n\nRequisitos:\n- Graduação em Engenharia\n- Experiência em operações marítimas offshore\n- Inglês fluente\n- MS Project\n\nDiferenciais:\n- CBSP válido\n- Primavera P6"},
+  {"platform": "gupy", "tenant": "", "external_id": "99000001", "url": "https://prio.gupy.io/jobs/99000001",
+   "title": "[FIXTURE] Engenheiro(a) Mecânico(a) de Manutenção", "location": "Macaé, Rio de Janeiro",
+   "description_status": "full",
+   "description": "Requisitos obrigatórios:\n- Graduação em Engenharia Mecânica\n- 5 anos de experiência em gestão de manutenção\n- CBSP obrigatório\n\nBenefícios:\n- Plano de saúde"}
+ ]}

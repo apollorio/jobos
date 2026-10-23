@@ -1,0 +1,26 @@
+schema_version: 1
+timezone: America/Sao_Paulo
+server:
+  host: 127.0.0.1
+  port: 8776            # 8765 Correios; 8766 WhatsApp Hub (http.server). DEC-011.
+  allowed_hosts: ["127.0.0.1", "localhost"]
+schedule:
+  task_name: "JOBOS Local Engine"
+  times: ["08:00", "12:00", "14:00", "18:00"]
+  execution_limit_minutes: 50
+cycle:
+  max_parallel_sources: 4
+  final_retry_delay_seconds: 30   # uma única retentativa das fontes que falharam; depois desiste
+  lease_minutes: 60
+  probe_per_source: 15             # confirmação individual de anúncios antigos fora da listagem
+  probe_per_cycle: 120
+exports:
+  portal_files: true   # regrava __VAGAS/jobs.json e assets/jobs-data.js (só dados públicos) ao fim do ciclo (DEC-017)
+retention:
+  raw_days: 30
+  logs_days: 60
+  preview_days: 30
+legacy:
+  sqlite: "../Artifact/jobs.db"          # relativo a _system
+  portal_json: "../jobs.json"
+  profile_json: "../rvalle.com.br-rafael.json"
