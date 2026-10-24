@@ -816,12 +816,46 @@
    * Fontes
    * ====================================================================== */
   let fontesFilter = 'all';
-  const isFail = (s) => s.last_status === 'failed' || s.last_status === 'blocked' || s.last_status === 'partial';
+  let fontesSort = 'health';
+
+  // Saúde da fonte (derivada no servidor: jobos/status.py::derive_health). O texto do chip diz o nível; cor e símbolo só reforçam.
+  const SRC_HEALTH = {
+    failure: ['Falha', '✗', 'bad'],
+    attention: ['Atenção', '!', 'warn'],
+    never_run: ['Nunca rodou', '?', 'mute'],
+    no_reader: ['Sem leitor', '○', 'mute'],
+    ok: ['Ok', '✓', 'ok'],
+  };
+  const HEALTH_ORDER = ['failure', 'attention', 'never_run', 'no_reader', 'ok'];  // falhas primeiro
+  const healthOf = (s) => (has(SRC_HEALTH, s.health) ? s.health : 'attention');
+  const healthRank = (s) => HEALTH_ORDER.indexOf(healthOf(s));
+  const byCompany = (a, b) => String(a.company_name || '').localeCompare(String(b.company_name || ''), 'pt-BR');
+  const SORTS = {
+    health: ['Saúde (falhas primeiro)', (a, b) => healthRank(a) - healthRank(b) || num(b.failure_streak) - num(a.failure_streak) || byCompany(a, b)],
+    company: ['Empresa (A–Z)', byCompany],
+    recent: ['Última coleta (mais recente)', (a, b) => String(b.last_run_at || '').localeCompare(String(a.last_run_at || '')) || byCompany(a, b)],
+  };
+
+  function scopeCell(s) {
+    const ev = s.scope_evidence;
+    const kids = [];
+    if (!ev) {
+      kids.push(el('span', { class: 'muted', text: 'sem leitura' }));
+    } else {
+      const pages = ev.pages_expected ? ev.pages_received + ' de ' + ev.pages_expected + ' página(s)' : ev.pages_received + ' página(s)';
+      kids.push(el('span', { text: ev.ok ? 'Completa, escopo comprovado' : 'Sem prova de escopo completo' }));
+      kids.push(el('span', { class: 'cell-sub', text: text(COVERAGE_KIND, ev.coverage_kind || s.coverage) + '; ' + pages }));
+    }
+    kids.push(el('span', { class: 'cell-sub', text: 'Verificação: ' + text(VERIFICATION, s.verification_status) }));
+    return el('div', null, ...kids);
+  }
 
   function sourceRow(s) {
     const runnable = !!s.adapter && s.enabled !== false;
-    const err = s.last_error ? String(s.last_error) : '';
+    const full = s.last_error ? String(s.last_error) : '';
+    const err = s.last_error_short || truncate(full, 160);
     const warnings = Array.isArray(s.last_warnings) ? s.last_warnings : [];
+    const streak = num(s.failure_streak);
 
     const btn = el('button', { type: 'button', class: 'btn btn-sm', 'aria-label': 'Coletar ' + s.company_name }, 'Coletar');
     btn.addEventListener('click', async () => {
@@ -832,76 +866,81 @@
 
     return [
       [el('span', { class: 'cell-title', text: s.company_name }), el('span', { class: 'cell-sub mono', text: s.source_id })],
-      s.platform,
-      s.adapter ? code(s.adapter) : el('span', { class: 'muted', text: 'sem leitor' }),
+      el('div', null, badge(SRC_HEALTH, healthOf(s)), s.health_reason ? el('span', { class: 'cell-sub', text: s.health_reason }) : null),
+      el('div', null, el('span', { text: s.platform }),
+        s.adapter ? el('span', { class: 'cell-sub' }, code(s.adapter)) : el('span', { class: 'cell-sub muted', text: 'sem leitor' }),
+        s.enabled === false ? tagBadge('desativada', '○', 'mute') : null),
       el('div', null,
         badge(SRC_STATUS, s.last_status),
-        s.enabled === false ? [' ', tagBadge('desativada', '○', 'mute')] : null,
-        s.last_finished_at ? el('span', { class: 'cell-sub', text: 'em ' + fmtDate(s.last_finished_at) }) : null),
-      isEmpty(s.last_count) ? 'n/d' : String(s.last_count),
+        s.last_run_at ? el('span', { class: 'cell-sub', text: 'em ' + fmtDate(s.last_run_at) }) : null),
       s.last_success_at ? fmtDate(s.last_success_at) : 'nunca',
+      isEmpty(s.last_success_count) ? 'n/d' : String(s.last_success_count),
+      String(streak),
+      scopeCell(s),
       el('div', null,
-        err ? el('span', { title: err, text: truncate(err, 80) }) : el('span', { class: 'muted', text: 'nenhum' }),
-        err && err.length > 80 ? el('details', null, el('summary', { text: 'texto completo' }), el('p', { class: 'small', text: err })) : null,
+        err ? el('span', { title: full || err, text: err }) : el('span', { class: 'muted', text: 'nenhum' }),
+        full && full.length > err.length ? el('details', null, el('summary', { text: 'texto completo' }), el('p', { class: 'small', text: full })) : null,
         err && s.last_error_at ? el('span', { class: 'cell-sub', text: 'em ' + fmtDate(s.last_error_at) }) : null,
         warnings.length ? el('details', null, el('summary', { text: warnings.length + ' aviso(s) na última coleta' }),
           list(warnings.map((w) => (typeof w === 'string' ? w : JSON.stringify(w))))) : null),
       yesNo(s.absence_applied),
       String(num(s.active_jobs)),
-      text(COVERAGE_KIND, s.coverage),
-      text(VERIFICATION, s.verification_status),
       s.note ? s.note : el('span', { class: 'muted', text: 'sem observação' }),
       runnable ? btn : el('span', { class: 'muted', text: s.adapter ? 'desativada' : 'sem leitor' }),
     ];
   }
 
   const SOURCE_COLS = [
-    { label: 'Empresa' }, { label: 'Plataforma' }, { label: 'Leitor' }, { label: 'Última coleta' },
-    { label: 'Itens', num: true }, { label: 'Último sucesso' }, { label: 'Último erro' },
-    { label: 'Ausência aplicada' }, { label: 'Vagas ativas', num: true }, { label: 'Cobertura' },
-    { label: 'Verificação' }, { label: 'Observação' }, { label: 'Ação' },
+    { label: 'Empresa' }, { label: 'Saúde' }, { label: 'Plataforma e leitor' }, { label: 'Última coleta' },
+    { label: 'Última leitura completa' }, { label: 'Vagas na leitura completa', num: true }, { label: 'Falhas seguidas', num: true },
+    { label: 'Escopo da leitura' }, { label: 'Último erro' }, { label: 'Ausência aplicada' },
+    { label: 'Vagas ativas', num: true }, { label: 'Observação' }, { label: 'Ação' },
   ];
 
   function sourcesNodes(list) {
-    const filters = [
-      ['all', 'Todas', () => true],
-      ['fail', 'Com falha', isFail],
-      ['noreader', 'Sem leitor', (s) => !s.adapter],
-      ['ok', 'Ok', (s) => s.last_status === 'complete'],
-    ];
+    const count = (k) => list.filter((s) => healthOf(s) === k).length;
+    const filters = [['all', 'Todas', () => true]].concat(HEALTH_ORDER.map((k) => [k, SRC_HEALTH[k][0], (s) => healthOf(s) === k]));
     const holder = el('div');
-    const chips = el('div', { class: 'chips', role: 'group', 'aria-label': 'Filtrar fontes' });
+    const chips = el('div', { class: 'chips', role: 'group', 'aria-label': 'Filtrar fontes por saúde' });
     const buttons = filters.map(([key, label, fn]) => {
       const b = el('button', { type: 'button', class: 'chip' }, label + ' (' + list.filter(fn).length + ')');
       b.addEventListener('click', () => { fontesFilter = key; draw(); });
       chips.appendChild(b);
       return b;
     });
+    const sortSel = select('fontes-sort', Object.keys(SORTS).map((k) => [k, SORTS[k][0]]), fontesSort, (v) => { fontesSort = v; draw(); });
 
     function draw() {
       const def = filters.find((f) => f[0] === fontesFilter) || filters[0];
       buttons.forEach((b, i) => b.setAttribute('aria-pressed', String(filters[i][0] === def[0])));
-      const rows = list.filter(def[2]);
+      const cmp = (SORTS[fontesSort] || SORTS.health)[1];
+      const rows = list.filter(def[2]).sort(cmp);
       if (!rows.length) {
         holder.replaceChildren(emptyBox('Nenhuma fonte neste filtro.'));
       } else {
         holder.replaceChildren(
           el('p', { class: 'small muted', text: rows.length + ' de ' + list.length + ' fonte(s).' }),
-          makeTable(SOURCE_COLS, rows.map(sourceRow), 'Fontes de vagas'));
+          makeTable(SOURCE_COLS, rows.map(sourceRow), 'Matriz de saúde das fontes de vagas'));
       }
       announce(rows.length + ' fonte(s) no filtro ' + def[1] + '.');
     }
     draw();
 
+    const sum = el('ul', { class: 'health-summary', 'aria-label': 'Resumo por nível de saúde' },
+      HEALTH_ORDER.map((k) => el('li', null, badge(SRC_HEALTH, k), el('span', { class: 'health-count', text: String(count(k)) }))));
+
     return [
-      callout('info', 'i', el('p', { text: 'Com falha inclui fontes que falharam, foram bloqueadas ou coletaram só em parte. Fonte parcial não prova ausência de vagas, por isso "Ausência aplicada" costuma estar como não.' })),
+      el('p', { class: 'small', text: list.length + ' fonte(s) cadastrada(s): ' + HEALTH_ORDER.map((k) => count(k) + ' ' + SRC_HEALTH[k][0].toLowerCase()).join(', ') + '.' }),
+      sum,
+      callout('info', 'i', el('p', { text: 'Falha não encerra vagas: fonte que falhou, foi bloqueada ou leu só em parte nunca fecha anúncios. Só leitura completa no mesmo escopo, duas vezes e com intervalo, pode indicar ausência. Zero vagas só é "ok" quando a leitura foi completa e com escopo comprovado.' })),
+      el('div', { class: 'field fontes-sort' }, el('label', { for: 'fontes-sort', text: 'Ordenar por' }), sortSel),
       chips, holder,
     ];
   }
 
   function renderFontes(root, arg, ctx) {
     const body = el('div', { class: 'stack' });
-    root.append(viewHead('Fontes', 'Resultado da última coleta de cada empresa cadastrada.'), body);
+    root.append(viewHead('Fontes', 'Saúde e resultado da última coleta de cada empresa cadastrada.'), body);
     load();
     function load() { fill(ctx, body, apiGet('/api/sources'), (d) => sourcesNodes(d.sources || []), load); }
   }

@@ -65,6 +65,7 @@ Contexto: 8765 ocupada pelo servidor do rastreador de Correios (outro projeto).
 Decisão: `config/app.yaml` usa 8766; `start-dashboard.ps1` verifica a porta e não encerra processo alheio.
 
 Atualização em 23/10/2026: a 8766 passou a responder o WhatsApp Hub (`python -m http.server`, loopback, PID 19408, interpretador do Inkscape). Esse processo não foi encerrado. O painel do JOBOS passou para a porta 8776 em `config/app.yaml`. A regra de não encerrar processo alheio permanece.
+Substituída em parte pela DEC-020 (porta).
 
 ## DEC-012: Tarefas legadas
 
@@ -116,3 +117,14 @@ Decisão: depois da coleta, até 15 por fonte e 120 por ciclo são checados um a
 
 Estado: aceito
 Decisão: "Auto aplicado" = marcado pelo sistema antigo sem ação comprovada (13; não conta como enviada). "Aplicado" = envio afirmado pelo usuário, incluindo as 15 marcações manuais originais do sistema antigo, confirmadas pelo usuário em 22/10/2026 (`application confirm-legacy-manual --apply`, origem `user_asserted`, data original 24/08/2026). "Aplicado ✓ comprovado" = prova da plataforma.
+
+## DEC-020: Porta 8776 para o painel
+
+Estado: aceito; substitui a porta da DEC-011 (8766). A DEC-011 segue como histórico.
+Contexto observado: a DEC-011 escolheu 8766 porque 8765 estava ocupada pelo rastreador de Correios. Em 23/10/2026 a 8766 passou a responder o WhatsApp Hub (`python -m http.server`, loopback, PID 19408, interpretador do Inkscape). Verificado em 24/10/2026 na worktree: `config/app.yaml` linha 5 traz `port: 8776` com o comentário "8766 WhatsApp Hub"; `scripts/windows/start-dashboard.ps1` usa 8776 como padrão (linhas 7, 21 e 122); `JOBOS.cmd` chama `scripts\windows\start-dashboard.ps1` sem porta própria; `src/jobos/cli.py` tem 8776 como padrão; `scripts/windows/install-schedule.ps1`, `show-status.ps1` e `remove-schedule.ps1` usam 8776. O `start-dashboard.ps1` fica em `scripts/windows/`, não na raiz. Em 24/10/2026, `jobos doctor` reportou `porta_painel: 127.0.0.1:8776 livre`.
+Decisão: o painel e a API do JOBOS usam `127.0.0.1:8776` (`server.port` em `config/app.yaml`). A 8766 fica com o WhatsApp Hub, e nenhum processo alheio é encerrado. `start-dashboard.ps1` continua verificando a porta e não encerra processo de outro projeto.
+Motivo: a 8766 está ocupada por processo de outro projeto; trocar a porta do painel é reversível e não afeta o WhatsApp Hub. A 8776 estava livre.
+Alternativas descartadas: encerrar o WhatsApp Hub na 8766 (processo alheio, viola a regra da DEC-011); usar a 8765 (ocupada pelo Correios); porta aleatória (quebra a URL fixa `http://127.0.0.1:8776/painel/` do atalho e do README).
+Consequência: README, `docs/PROGRESS.md` e os scripts apontam para 8776. A origem do navegador muda com a porta, e o `localStorage` é por origem, então marcações feitas em `127.0.0.1:8766` não aparecem em `127.0.0.1:8776` (ver exportação manual em PROGRESS, Bloqueios). Menções a 8766 em `docs/PROGRESS.md` (linha do P3) e em `docs/AUDIT.md` e `docs/CONFLICTS.md` são registros históricos e não foram alterados.
+Validação: `grep` de 8776 em `config/app.yaml`, `scripts/windows/start-dashboard.ps1`, `src/jobos/cli.py` e `README.md` (24/10/2026); `jobos doctor` com `porta_painel 127.0.0.1:8776 livre` (24/10/2026); na verificação de 23/10 registrada em PROGRESS (Verificações), `/api/health` respondeu 200 `jobos-local` na 8776.
+Reversão: trocar `server.port` em `config/app.yaml` e os padrões 8776 de `cli.py` e dos `scripts/windows/*.ps1` de volta. Só faz sentido com a 8766 livre, ou seja, depois que o WhatsApp Hub for encerrado pelo dono do processo.

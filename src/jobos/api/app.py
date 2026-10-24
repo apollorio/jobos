@@ -23,7 +23,7 @@ from jobos.matching.profile import active_profile
 from jobos.domain.states import LISTING_LABELS, PREP_LABELS, TransitionError
 from jobos.paths import get_paths
 from jobos.settings import load_registry, load_settings
-from jobos.status import build_status, source_health
+from jobos.status import build_status, health_summary, source_health
 from jobos.storage.db import connect, open_db
 from jobos.timeutil import fmt_brt, utcnow
 
@@ -126,7 +126,8 @@ def create_app(*, port: int, worker: bool = True, paths=None) -> FastAPI:
 
     @app.get("/api/sources")
     def sources(con=Depends(db)):
-        return {"sources": source_health(con, registry)}
+        items = source_health(con, registry)
+        return {"sources": items, "health_summary": health_summary(items)}
 
     @app.get("/api/jobs")
     def jobs(con=Depends(db), q: str | None = Query(None, max_length=120),

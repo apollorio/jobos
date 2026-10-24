@@ -5,6 +5,7 @@ Códigos: 0 concluído, 2 parcial, 3 falha impeditiva, 4 sobreposição, 5 confi
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import json
 import logging
 import os
@@ -16,6 +17,8 @@ from pathlib import Path
 from jobos import __version__
 
 EXIT_OK, EXIT_PARTIAL, EXIT_FAILED, EXIT_OVERLAP, EXIT_CONFIG = 0, 2, 3, 4, 5
+
+log = logging.getLogger("jobos.cli")
 
 
 class StrictParser(argparse.ArgumentParser):
@@ -57,6 +60,12 @@ def _parser() -> StrictParser:
     ga = sa.add_mutually_exclusive_group(required=True)
     ga.add_argument("--job")
     ga.add_argument("--pending", action="store_true", help="vagas sem análise para a versão atual")
+
+    scv = sub.add_parser("cv", help="kit de CV por vaga (local, sem IA, não marca envio)", allow_abbrev=False)
+    scvsub = scv.add_subparsers(dest="cvcmd", required=True, parser_class=StrictParser)
+    scvb = scvsub.add_parser("build", help="gera ou reaproveita o pacote da versão atual da vaga", allow_abbrev=False)
+    scvb.add_argument("--job", required=True, help="id da vaga ou prefixo de 8+")
+    scvb.add_argument("--headline", default=None, help="id do headline quando o preparo indica empate")
 
     ss = sub.add_parser("serve", help="API e painel local", allow_abbrev=False)
     ss.add_argument("--host", default=None)
@@ -125,14 +134,23 @@ def _emit(args, payload, text: str | None = None) -> None:
 
 
 def _setup_logging(paths) -> None:
+    """Log diário do engine (logger "jobos" e filhos). Um único FileHandler por arquivo-alvo: trocar de dia ou de
+    raiz substitui o anterior, sem empilhar handlers nem duplicar linhas."""
     paths.logs.mkdir(parents=True, exist_ok=True)
     from jobos.timeutil import brt_date
-    handler = logging.FileHandler(paths.logs / f"jobos-{brt_date().isoformat()}.log", encoding="utf-8")
-    handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(name)s %(message)s"))
+    target = os.path.abspath(paths.logs / f"jobos-{brt_date().isoformat()}.log")  # FileHandler guarda o mesmo abspath
     root = logging.getLogger("jobos")
     root.setLevel(logging.INFO)
-    if not any(isinstance(h, logging.FileHandler) for h in root.handlers):
-        root.addHandler(handler)
+    for h in list(root.handlers):
+        if isinstance(h, logging.FileHandler):
+            if h.baseFilename == target:
+                return
+            root.removeHandler(h)
+            h.close()
+    handler = logging.FileHandler(target, encoding="utf-8")
+    handler.setLevel(logging.INFO)
+    handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(name)s %(message)s"))
+    root.addHandler(handler)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -158,10 +176,17 @@ def _dispatch(args) -> int:
     _setup_logging(paths)
     try:
         handler = HANDLERS[args.cmd]
-        return handler(args)
+        log.info("comando %s iniciado (pid=%s)", args.cmd, os.getpid())
+        code = handler(args)
+        log.info("comando %s encerrado: código=%s", args.cmd, code)
+        return code
     except ConfigError as e:
+        log.error("configuração inválida: %s", e)
         print(f"configuração inválida: {e}", file=sys.stderr)
         return EXIT_CONFIG
+    except Exception:
+        log.exception("comando %s falhou", args.cmd)
+        raise
 
 
 # --------------------------------------------------------------------------- comandos
@@ -183,6 +208,8 @@ def cmd_doctor(args) -> int:
         add("tzdata", True, f"agora em Brasília: {utcnow().astimezone(BRT).strftime('%d/%m/%Y %H:%M')}")
     except Exception as e:  # noqa: BLE001
         add("tzdata", False, str(e))
+    ok_fuso, detalhe_fuso = _fuso_windows()
+    add("fuso_windows", ok_fuso, detalhe_fuso, "warning")  # só diagnóstico: nunca falha o doctor
     ctx = open_context()
     try:
         p = ctx.paths
@@ -233,6 +260,24 @@ def cmd_doctor(args) -> int:
             mark = {"ok": "OK  ", "warning": "AVISO", "error": "ERRO", "blocked": "BLOQ"}[c["level"]]
             print(f"[{mark}] {c['check']}: {c['detail']}")
     return EXIT_OK if not failed else EXIT_FAILED
+
+
+def _fmt_utc(td: dt.timedelta) -> str:
+    minutos = int(td.total_seconds()) // 60
+    h, m = divmod(abs(minutos), 60)
+    return f"UTC{'+' if minutos >= 0 else '-'}{h:02d}:{m:02d}"
+
+
+def _fuso_windows(os_offset: dt.timedelta | None = None) -> tuple[bool, str]:
+    """Compara o deslocamento UTC do SO agora com o de America/Sao_Paulo. Só diagnostica; nunca altera o fuso do PC."""
+    from jobos.timeutil import BRT
+    agora = dt.datetime.now().astimezone()
+    local = os_offset if os_offset is not None else agora.utcoffset()
+    brasilia = agora.astimezone(BRT).utcoffset()
+    detalhe = f"SO {_fmt_utc(local)} | America/Sao_Paulo {_fmt_utc(brasilia)}"
+    if local == brasilia:
+        return True, detalhe
+    return False, f"{detalhe}: fuso do Windows difere de Brasília; horários do Agendador podem ficar deslocados"
 
 
 def _port_free(host: str, port: int) -> bool:
@@ -337,6 +382,11 @@ def cmd_cycle(args) -> int:
 
 
 def _print_cycle(args, res) -> None:
+    log.info("ciclo run_id=%s modo=%s gatilho=%s status=%s código=%s", res.run_id, res.mode, res.trigger, res.status,
+             res.exit_code)
+    for s in res.sources:
+        log.info("fonte %s status=%s vagas=%s novas=%s alteradas=%s ausentes=%s encerradas=%s erro=%s", s["source_id"],
+                 s["status"], s["jobs"], s["new"], s["changed"], s["missing"], s["closed"], s.get("error") or "-")
     if args.json:
         _emit(args, res.as_dict())
         return
@@ -378,6 +428,32 @@ def cmd_analyze(args) -> int:
     finally:
         ctx.close()
     _emit(args, out)
+    return EXIT_OK
+
+
+def cmd_cv(args) -> int:
+    """`cv build`: pacote em data/artifacts/<vaga>/<hash12>/. Gerar CV nunca significa candidatura enviada."""
+    from jobos.applications.service import resolve_job_id
+    from jobos.context import open_context
+    from jobos.matching.cv_packet import PacketError, build_packet
+    ctx = open_context()
+    try:
+        try:
+            res = build_packet(ctx, resolve_job_id(ctx.con, args.job), headline_id=args.headline)
+        except (PacketError, LookupError, ValueError) as e:
+            print(f"erro: {e}", file=sys.stderr)
+            return EXIT_FAILED
+    finally:
+        ctx.close()
+    payload = {"job_id": res.job_id, "input_hash": res.input_hash, "directory": str(res.directory),
+               "reused": res.reused, "kept": res.kept, "dropped": res.dropped, "registered": res.registered,
+               "artifact_ids": res.artifact_ids, "warnings": res.warnings, "files": res.files}
+    _emit(args, payload, "\n".join([
+        f"pacote {'reaproveitado' if res.reused else 'gerado'}: {res.directory}",
+        f"linhas mantidas={res.kept} descartadas={res.dropped} registrado={'sim' if res.registered else 'não'}",
+        *(f"aviso: {w}" for w in res.warnings),
+        "abra cv.html no navegador e salve como PDF; isto não marca a candidatura como enviada.",
+    ]))
     return EXIT_OK
 
 
@@ -519,7 +595,7 @@ def cmd_source(args) -> int:
 
 HANDLERS = {
     "doctor": cmd_doctor, "import-legacy": cmd_import_legacy, "status": cmd_status, "backup": cmd_backup,
-    "cycle": cmd_cycle, "collect": cmd_collect, "analyze": cmd_analyze, "serve": cmd_serve, "work": cmd_work,
+    "cycle": cmd_cycle, "collect": cmd_collect, "analyze": cmd_analyze, "cv": cmd_cv, "serve": cmd_serve, "work": cmd_work,
     "notifications": cmd_notifications, "application": cmd_application,
     "import-browser-export": cmd_import_browser_export, "export-portal": cmd_export_portal, "source": cmd_source,
 }

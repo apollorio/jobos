@@ -29,6 +29,72 @@ def next_and_previous_slot(settings: Settings, now: dt.datetime | None = None) -
     return nxt, prev
 
 
+HEALTH_LABELS = {"ok": "ok", "attention": "atenção", "failure": "falha", "no_reader": "sem leitor",
+                 "never_run": "nunca rodou"}
+HEALTH_ORDER = ("failure", "attention", "never_run", "no_reader", "ok")  # falhas primeiro
+READ_STATUSES = ("complete", "partial", "failed", "blocked")  # unconfigured/skipped não são leitura da fonte
+ERROR_SHORT = 160
+
+
+def _short(text: str | None, n: int = ERROR_SHORT) -> str | None:
+    t = " ".join(str(text or "").split())
+    return (t if len(t) <= n else t[: n - 1].rstrip() + "…") if t else None
+
+
+def _scope_evidence(run) -> dict | None:
+    """Evidência de completude/escopo da leitura. `ok` = completa, com escopo declarado e todas as páginas esperadas."""
+    if run is None:
+        return None
+    expected, received = run["pages_expected"], run["pages_received"] or 0
+    pages_ok = received >= 1 and (expected is None or received >= expected)
+    ok = bool(run["complete"]) and run["status"] == "complete" and bool(run["scope_id"]) and bool(run["coverage_kind"]) and pages_ok
+    return {"ok": ok, "status": run["status"], "complete": bool(run["complete"]), "coverage_kind": run["coverage_kind"],
+            "scope_id": run["scope_id"], "pages_expected": expected, "pages_received": received,
+            "raw_count": run["raw_count"], "can_infer_absence": bool(run["can_infer_absence"])}
+
+
+def derive_health(*, configured: bool, has_reader: bool, reads: list) -> dict:
+    """Saúde de uma fonte a partir das leituras (mais recente primeiro). Pura: sem I/O.
+
+    falha = última leitura failed/blocked; atenção = parcial, ou completa sem vagas e sem evidência de escopo;
+    ok = completa (com vagas, ou zero vagas COM evidência de escopo). Falha nunca encerra vaga: isto só informa.
+    """
+    streak = 0
+    for r in reads:
+        if r["status"] in ("failed", "blocked"):
+            streak += 1
+        else:
+            break
+    last = reads[0] if reads else None
+    evidence = _scope_evidence(last)
+    if not configured:
+        level, reason = "no_reader", ("desativada na configuração" if has_reader else "sem leitor configurado")
+    elif last is None:
+        level, reason = "never_run", "nenhuma leitura registrada"
+    elif last["status"] in ("failed", "blocked"):
+        level = "failure"
+        reason = ("bloqueada" if last["status"] == "blocked" else "falhou") + (f" {streak}x seguidas" if streak > 1 else "")
+    elif last["status"] == "partial":
+        level, reason = "attention", "leitura parcial (não prova ausência de vagas)"
+    elif (last["normalized_count"] or 0) == 0 and not evidence["ok"]:
+        level, reason = "attention", "zero vagas sem evidência de escopo completo"
+    else:
+        level, reason = "ok", ("leitura completa com escopo (zero vagas)" if (last["normalized_count"] or 0) == 0
+                               else "leitura completa")
+    return {"health": level, "health_label": HEALTH_LABELS[level], "health_reason": reason,
+            "failure_streak": streak, "scope_evidence": evidence}
+
+
+def health_summary(sources: list[dict]) -> dict:
+    """Contagem por nível de saúde (todas as chaves sempre presentes) + ordem de exibição."""
+    counts = {k: 0 for k in HEALTH_ORDER}
+    for x in sources:
+        counts[x["health"]] = counts.get(x["health"], 0) + 1
+    return {"counts": counts, "labels": HEALTH_LABELS, "order": list(HEALTH_ORDER), "total": len(sources),
+            "note": "Falha ou leitura parcial nunca encerra vagas: só leitura completa no mesmo escopo, 2 vezes, "
+                    "com intervalo mínimo, pode indicar ausência."}
+
+
 def source_health(con: sqlite3.Connection, registry: Registry) -> list[dict]:
     out = []
     for s in registry.sources:
@@ -41,7 +107,17 @@ def source_health(con: sqlite3.Connection, registry: Registry) -> list[dict]:
                                (s.source_id,)).fetchone()
         active = con.execute("""SELECT COUNT(DISTINCT p.job_id) FROM source_postings p JOIN job_records j ON j.job_id=p.job_id
                                 WHERE p.source_id=? AND j.listing_state='active' AND j.is_fixture=0""", (s.source_id,)).fetchone()[0]
+        reads = con.execute(f"""SELECT status, complete, coverage_kind, scope_id, pages_expected, pages_received, raw_count,
+                                       normalized_count, can_infer_absence, finished_at, started_at FROM source_runs
+                                WHERE source_id=? AND status IN ({','.join('?' * len(READ_STATUSES))})
+                                ORDER BY COALESCE(finished_at, started_at) DESC, started_at DESC LIMIT 100""",
+                            (s.source_id, *READ_STATUSES)).fetchall()
+        health = derive_health(configured=bool(s.adapter and s.enabled), has_reader=bool(s.adapter), reads=reads)
         out.append({
+            **health,
+            "configured": bool(s.adapter and s.enabled),
+            "last_run_at": (last["finished_at"] or last["started_at"]) if last else None,
+            "last_error_short": _short(f"{last_err['error_code']}: {last_err['error_message']}" if last_err else None),
             "source_id": s.source_id, "company_id": s.company_id, "company_name": s.company_name, "platform": s.platform,
             "adapter": s.adapter, "enabled": s.enabled, "coverage": s.coverage, "priority": s.priority,
             "board_url": s.board_url, "verification_status": s.verification_status, "note": s.note,

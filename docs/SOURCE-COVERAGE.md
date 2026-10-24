@@ -25,7 +25,7 @@ Cadastro canônico gerado em `config/sources.yaml` a partir de `jobs.json` (28 e
 | equinor-workday | Equinor | Workday CXS | equinor/wd3/EQNR | workday | workday | workday_cxs | filtered_board (searchText "Brazil") |
 | shell-workday | Shell | Workday CXS | shell/wd3/ShellCareers | workday | workday | workday_cxs | filtered_board (searchText "Rio de Janeiro") |
 | baker-workday | Baker Hughes | Workday CXS | bakerhughes/wd5/BakerHughes | workday | workday | workday_cxs | filtered_board (searchText "Brazil") |
-| technipfmc-workday | TechnipFMC | Workday CXS | technipfmc/wd1/TechnipFMC (não verificado; legado com erro) | workday | não | workday_cxs | filtered_board (searchText "Brazil") |
+| technipfmc-workday | TechnipFMC | SuccessFactors Jobs2Web | careers.technipfmc.com, busca "Brazil" (24/10/2026: 8 vagas, dry-run complete; antes Workday CXS com HTTP 422) | successfactors_j2w | não | j2w_search | filtered_board (location "Brazil") |
 | aker-smart | Aker Solutions | SmartRecruiters | akersolutions | genérico | smart | smartrecruiters | filtered_board (country=br) |
 | airswift-smart | Airswift | SmartRecruiters | airswift | genérico | smart | smartrecruiters | filtered_board (country=br) |
 | oceanpact-inhire | OceanPact | inHire | tenant oceanpact | inhire | inhire | inhire | full_board |
@@ -55,7 +55,7 @@ Leitura pública sem login, limites padrão (timeout 25 s, 3 tentativas, até 15
 | subsea7-sf / sbm-sf / yinson-sf / halliburton-sf | complete | 21 / 8 / 4 / 31 | paginação J2W até o fim; detalhes lidos |
 | transocean / baker / shell (Workday) | complete | 2 / 26 / 1 | baker atingiu limite de 25 detalhes (restante no próximo ciclo) |
 | equinor-workday | complete | 0 | busca "Brazil" vazia (snapshot de 08/10 também 0) |
-| technipfmc-workday | **failed** | 0 | HTTP 422: site/tenant do YAML legado inválido (legado também falhava) |
+| technipfmc-workday | **failed** (até 24/10) | 0 | HTTP 422: tenant Workday inexistente. Migrado em 24/10/2026 para `j2w_search` (careers.technipfmc.com), mesmo `source_id` |
 | aker-smart / airswift-smart | complete | 0 / 0 | filtro country=br vazio |
 | oceanpact-inhire | complete | 72 | |
 | dof-webflow | complete | 100 | quadro global; 4 avisos de detalhe sem bloco rich-text |

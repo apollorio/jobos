@@ -680,6 +680,32 @@ main {
   font-weight: 600;
 }
 
+/* ---------- resumo de saúde das fontes ---------- */
+.health-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2) var(--s-3);
+  margin: 0 0 var(--s-3);
+  padding: 0;
+  list-style: none;
+}
+
+.health-summary li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+.health-count {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+.fontes-sort {
+  max-width: 22rem;
+  margin-bottom: var(--s-3);
+}
+
 /* ---------- filtros e chips ---------- */
 .chips {
   display: flex;

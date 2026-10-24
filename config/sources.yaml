@@ -67,9 +67,12 @@ sources:
   - {source_id: baker-workday, company_id: baker, company_name: Baker Hughes, platform: workday, primary_adapter: workday_cxs,
      params: {tenant: bakerhughes, site: BakerHughes, dc: wd5, search_text: "Brazil"}, board_url: "https://bakerhughes.wd5.myworkdayjobs.com/BakerHughes",
      coverage: filtered_board, priority: 2, configuration_origin: jobs_json+companies_yml}
-  - {source_id: technipfmc-workday, company_id: technipfmc, company_name: TechnipFMC, platform: workday, primary_adapter: workday_cxs,
-     params: {tenant: technipfmc, site: TechnipFMC, dc: wd1, search_text: "Brazil"}, priority: 1, configuration_origin: companies_yml,
-     verification_status: legacy_errors, note: "Legado registrou 2 erros em 2 tentativas; tenant/dc podem estar errados."}
+  # 24/10/2026: tenant Workday inexistente (CXS technipfmc/TechnipFMC/wd1 responde HTTP 422). O site de carreiras real e
+  # SuccessFactors Jobs2Web (careers.technipfmc.com; busca "Brazil" = 8 vagas, dry-run complete). source_id mantido p/ historico.
+  - {source_id: technipfmc-workday, company_id: technipfmc, company_name: TechnipFMC, platform: successfactors_j2w, primary_adapter: j2w_search,
+     params: {base: "https://careers.technipfmc.com", location: "Brazil"}, board_url: "https://careers.technipfmc.com",
+     coverage: filtered_board, priority: 1, configuration_origin: companies_yml,
+     note: "Antes workday_cxs (HTTP 422); migrado para j2w_search em 24/10/2026."}
 
   # ---------------- SmartRecruiters ----------------
   - {source_id: aker-smart, company_id: aker, company_name: Aker Solutions, platform: smartrecruiters, primary_adapter: smartrecruiters,

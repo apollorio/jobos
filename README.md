@@ -30,6 +30,7 @@ $Py = '.\.venv\Scripts\python.exe'
 & $Py -m jobos cycle --mode manual         # ciclo real (coleta, análise, outbox em preview)
 & $Py -m jobos collect --source prio-gupy [--dry-run]
 & $Py -m jobos analyze --pending | --job <job_id>
+& $Py -m jobos cv build --job <id ou prefixo de 8+> [--headline <id>]  # kit de CV local em data/artifacts; não marca envio
 & $Py -m jobos serve [--port 8776] [--no-worker]
 & $Py -m jobos backup [--label nome]       # snapshot consistente + verificação de restauração
 & $Py -m jobos notifications preview|list|retry [--dry-run]
@@ -65,4 +66,4 @@ Cole em `marcas.json` e rode `import-browser-export --file marcas.json` (relató
 
 ## Limites atuais
 
-Ver `docs/PROGRESS.md` (testado, bloqueado, próxima etapa). Resumo: SMTP desligado (preview em `data/outbox-preview`); CV Builder (P6) bloqueado por falta do código no disco; Oracle CE (ABS) sem leitor; análise é determinística por regras.
+Ver `docs/PROGRESS.md` (testado, bloqueado, próxima etapa). Resumo: SMTP desligado (preview em `data/outbox-preview`); CV Builder (P6) ausente: o kit local `cv build` (HTML para salvar como PDF) cobre o caminho principal; Oracle CE (ABS) sem leitor; análise é determinística por regras.
