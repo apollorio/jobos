@@ -1,6 +1,6 @@
 # Progresso real do JOBOS
 
-Atualizado em: 24/10/2026
+Atualizado em: 27/10/2026
 Ambiente: Windows 11 nativo; Python 3.12.10 em `_system\.venv` (lock em `requirements.lock`); Node 24 para `node --check` do painel e para compilar `web/painel/src/preparo.ts` com o esbuild 0.25.10 de `__core.js`
 Raiz confirmada: `D:\dev\_dev web\_rvalle-site\__VAGAS\_system`
 Fase atual: P0 a P5 implementados e verificados; ondas W0/W1 do `docs/EXECUTION-PLAN-2026-10-23.md` concluídas (24/10); kit de CV local (P3.1-R) substitui o bloqueio do CV Builder para o caminho principal; P4-R+ não iniciados
@@ -12,7 +12,7 @@ Fase atual: P0 a P5 implementados e verificados; ondas W0/W1 do `docs/EXECUTION-
 - [x] P1: pacote `src/jobos`, CLI estrita, migração v1, importação idempotente (SQLite legado + `jobs.json`), perfil versionado, 28 candidaturas legadas em revisão
 - [x] P2: 11 adapters (`SourceBatch` com status/completude/escopo), persistência com versões, ausência protegida (2 leituras completas + 6 h + mesmo escopo + guarda de queda anômala), baseline sem alerta, relações de possível republicação
 - [x] P3: API FastAPI em 127.0.0.1:8766 (Host/Origin/X-JOBOS, allowlist estática), fila `work_items` com lease e worker, portal antigo servido sem edição com `jobs.json`/`jobs-data.js` gerados do SQLite, painel operacional `/painel/` (8 seções)
-- [x] P4: análise determinística por requisito (atendido/parcial/lacuna/desconhecido) com JSON Pointer, cobertura, nota só com cobertura ≥ 60%, função pelo `role_fit_tree`, preferências visíveis, prioridade separada; política `matching-v6`
+- [x] P4: análise determinística por requisito (atendido/parcial/lacuna/desconhecido) com JSON Pointer, cobertura, nota só com cobertura ≥ 60%, função pelo `role_fit_tree`, preferências visíveis, prioridade separada; política `matching-v7` desde 27/10 (W2a: HTML e instruções do anúncio não viram requisito, DEC-021)
 - [x] Execução real pelo Agendador do Windows verificada (código 2 = parcial pela TechnipFMC)
 - [x] P5: outbox persistente (rascunho/preview .txt/.html/.eml), transporte SMTP separado e desligado, estados accepted/unknown/failed_transient, scripts Windows, tarefa `JOBOS Local Engine` registrada (08/12/14/18 h)
 - [x] Aplicativo local: `JOBOS.cmd` sobe o servidor se precisar e abre `/painel/` em janela de aplicativo (Edge ou Chrome `--app`). Se `/api/health` já responder `jobos-local`, só abre a janela. O manifesto fica em `/painel/manifest.webmanifest`, com `scope` e `start_url` em `/painel/`. Duplo clique no `index.html` do disco não é o aplicativo. `preparo.ts` continua fora da allowlist.
@@ -30,6 +30,8 @@ Fase atual: P0 a P5 implementados e verificados; ondas W0/W1 do `docs/EXECUTION-
 | `pytest -p no:cacheprovider tests` | **141 passed** (37 s) em 23/10 | suíte atual, com `tests/test_prepare.py` e o campo `support` no detalhe | sem rede |
 | `pytest -p no:cacheprovider tests` | **322 passed** (exit 0), medição de 23-24/10 | suíte atual | não repetida na W0 |
 | W1 (24/10, worktree `w0-w1`): `pytest -p no:cacheprovider tests` | **387 passed, 1 xfailed** (exit 0) | +T25, T38, T42, T43, saídas 4/5, `fuso_windows`, log diário (W1a); matriz de saúde das fontes (W1b, 14 testes); kit de CV T28/T29/T47 + `cv build` (W1c, 19 testes) | xfail estrito: extrator de requisitos aceita HTML/instruções após "Requisitos:" (W2) |
+| W2a (27/10, worktree `w2a-requirements-sanitize`): `pytest -p no:cacheprovider tests` | **389 passed, 0 xfail** (exit 0) | T42 sem xfail: anúncio com `<script>`, `<img onerror>` e instrução ao avaliador tem os mesmos requisitos, decisão, nota e cobertura do anúncio limpo; `test_html_and_agent_instructions_are_not_requirements`; `matching-v7` (DEC-021) | consulta somente leitura no banco real: 0 de 3.701 descrições com HTML ou instrução |
+| W2a: `cycle --dry-run --fixtures` | exit 2 (parcial esperado), banco temporário, `policy_version` `matching-v7`; mesmos estados de fonte e decisões (good_fit 1, insufficient_data 2) que o `main` em `matching-v6` | dry run isolado após a mudança de política | a worktree não tem `data/`, então o banco temporário começa vazio (novas em vez de alteradas) |
 | W1: `node --check web/painel/painel.js`; `cycle --dry-run --fixtures`; `doctor` | exit 0; exit 2 (parcial esperado, banco temporário); `fuso_windows` OK (UTC-03:00 = Brasília) | painel compila; dry run isolado | |
 | W1: painel `/painel/#fontes` servido da worktree com cópia do backup pre-w1 (porta 8793) | matriz renderiza 49 fontes: 1 falha, 18 sem leitor, 30 ok; filtros e ordenação | UI da saúde das fontes com dados reais | cópia anterior à correção TechnipFMC |
 | W1b: `collect --source technipfmc-workday --dry-run` | complete, 8 vagas | nova configuração `j2w_search` | `max_details: 0` no teste; detalhe por vaga não exercitado |
@@ -74,7 +76,7 @@ Backups: `data/backups/p0-…`, `…-pre-import` não necessário (banco vazio),
 
 ## Próxima ação exata
 
-1. Onda W2 do `docs/EXECUTION-PLAN-2026-10-23.md`: corrigir o extrator de `matching/requirements.py` (T42 em xfail estrito) e rotular 30–50 vagas para a calibração P2-R.
+1. Onda W2 do `docs/EXECUTION-PLAN-2026-10-23.md`: o extrator já foi corrigido em `matching-v7` (27/10, DEC-021). Falta rotular 30–50 vagas para a calibração P2-R. O primeiro ciclo real depois do merge reanalisa todas as vagas em v7.
 2. Revisar no painel as 13 candidaturas legadas restantes (Candidaturas → "Procedência legada a revisar").
 3. Conferir no painel (Fontes) que a TechnipFMC passa a "ok" após o primeiro ciclo real com `j2w_search`.
 

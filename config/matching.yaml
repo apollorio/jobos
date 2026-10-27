@@ -1,5 +1,5 @@
 schema_version: 1
-policy_version: matching-v6
+policy_version: matching-v7
 method: deterministic
 weights:
   mandatory: 3

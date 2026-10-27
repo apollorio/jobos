@@ -40,6 +40,35 @@ REQUIREMENT_CUES = ["experiencia", "experience", "conhecimento", "knowledge", "f
                     "anos", "years", "curso", "superior completo", "tecnico", "pacote office", "excel", "sap",
                     "disponibilidade para", "availability to"]
 
+# Anúncio é dado, não instrução (T42): HTML ativo e texto dirigido a um avaliador/agente não viram requisito.
+RE_ACTIVE_BLOCK = re.compile(r"<\s*(script|style|iframe|object|embed|noscript|template)\b.*?(<\s*/\s*\1\s*>|\Z)",
+                             re.I | re.S)
+RE_BLOCK_TAG = re.compile(r"<\s*/?\s*(br|p|div|li|ul|ol|tr|h[1-6])\b[^<>]*>", re.I)
+RE_TAG = re.compile(r"<\s*/?\s*[a-z!][^<>]*>", re.I)
+INSTRUCTION_PATTERNS = [re.compile(p) for p in (
+    r"\b(ignore|disregard|forget)\b.{0,40}\b(instructions?|prompts?|rules?)\b",
+    r"\b(ignore|desconsidere|esqueca)\b.{0,40}\b(instrucoes|instrucao|regras|prompt)\b",
+    r"\byou are (an? |the )?(ai|assistant|evaluator|reviewer|recruiter|language model|llm|agent)\b",
+    r"\bvoce e (o|a|um|uma) (avaliador|avaliadora|assistente|ia|agente|modelo|recrutador)\b",
+    r"\b(system|developer) prompt\b", r"\bprompt do sistema\b",
+    r"\b(good_fit|needs_review|fit_score|interview_prob)\b",
+    r"\b(marque|classifique|avalie|considere) (esta|essa|a) vaga\b",
+    r"\b(mark|rate|classify|score) this (job|position|role|candidate|vacancy)\b",
+    r"\b(recomende|recommend)\b.{0,30}\b(enviar|candidatura|apply|application)\b",
+)]
+
+
+def _strip_html(text: str) -> str:
+    """Remove script/style com conteúdo e demais tags; quebra de bloco vira quebra de linha."""
+    text = RE_ACTIVE_BLOCK.sub("\n", text)
+    text = RE_BLOCK_TAG.sub("\n", text)
+    return RE_TAG.sub("", text)
+
+
+def _is_instruction(line: str) -> bool:
+    t = fold(line)
+    return any(p.search(t) for p in INSTRUCTION_PATTERNS)
+
 
 @dataclass
 class Requirement:
@@ -96,7 +125,11 @@ def extract(description: str) -> tuple[list[Requirement], dict]:
         meta["method"] = "none"
         return [], meta
     description = html.unescape(description).replace("\xa0", " ")  # legado guardava &nbsp;/&amp;
-    lines = description.splitlines()
+    stripped = _strip_html(description)
+    meta["html_removed"] = stripped != description
+    lines = [ln for ln in stripped.splitlines() if not _is_instruction(ln)]
+    meta["instruction_lines_dropped"] = len(stripped.splitlines()) - len(lines)
+    description = "\n".join(lines)
     current = None
     sections: dict[str, list[str]] = {}
     for line in lines:
