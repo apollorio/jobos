@@ -4,7 +4,9 @@ Nada roda no import do módulo; GET nunca dispara coleta (POST enfileira; o work
 """
 from __future__ import annotations
 
+import base64
 import datetime as dt
+import hashlib
 import json
 import re
 import sqlite3
@@ -29,9 +31,41 @@ from jobos.timeutil import fmt_brt, utcnow
 
 REFRESH_COOLDOWN_MIN = 60
 ASSET_EXT = {".js", ".css", ".png", ".svg", ".jpg", ".jpeg", ".webp", ".gif", ".ico", ".woff", ".woff2"}
-PANEL_EXT = {".html", ".js", ".css", ".svg", ".png", ".geojson", ".woff2", ".webmanifest"}
+PANEL_EXT = {".html", ".js", ".css", ".svg", ".png", ".geojson", ".woff2", ".ttf", ".webmanifest"}
 MUTATING = {"POST", "PUT", "PATCH", "DELETE"}
 SAFE_SEGMENT = re.compile(r"^[A-Za-z0-9._-]+$")
+
+
+def detail_keyword_summary(con, packets: list[dict], root: Path) -> dict | None:
+    val = next((p for p in packets if p.get("kind") == "cv_validation"), None)
+    if not val:
+        return None
+    row = con.execute("SELECT rel_path FROM artifacts WHERE artifact_id=?", (val["artifact_id"],)).fetchone()
+    if not row or not row["rel_path"]:
+        return None
+    return keyword_summary(root / row["rel_path"], root)
+
+
+def keyword_summary(path: Path, root: Path) -> dict | None:
+    """Contagens do relatório de termos. Não devolve a lista (o arquivo é a fonte) e não altera o CV."""
+    try:
+        target = path.resolve()
+        base = root.resolve()
+    except OSError:
+        return None
+    if not target.is_relative_to(base) or not target.is_file():
+        return None
+    try:
+        data = json.loads(target.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    kc = data.get("keyword_coverage") if isinstance(data, dict) else None
+    if not isinstance(kc, dict):
+        return None
+    return {"present_count": len(kc.get("present") or []),
+            "available_not_chosen_count": len(kc.get("available_not_chosen") or []),
+            "absent_from_profile_count": len(kc.get("absent_from_profile") or []),
+            "note": kc.get("note") or "Relatório apenas. Nenhum termo do anúncio foi inserido no currículo."}
 
 
 class UTF8JSONResponse(JSONResponse):
@@ -43,10 +77,12 @@ class EventIn(BaseModel):
     target: str | None = Field(default=None, max_length=40)
     reason: str | None = Field(default=None, max_length=2000)
     date: str | None = Field(default=None, pattern=r"^\d{4}-\d{2}-\d{2}$")
+    artifact_sha256: str | None = Field(default=None, pattern=r"^[0-9a-fA-F]{64}$")
+    confirmation: str | None = Field(default=None, max_length=500)
 
 
 class WorkIn(BaseModel):
-    kind: str = Field(pattern="^(cycle|collect_source|analyze_job)$")
+    kind: str = Field(pattern="^(cycle|collect_source|analyze_job|cv_build)$")
     target: str | None = Field(default=None, max_length=80)
 
 
@@ -102,7 +138,12 @@ def create_app(*, port: int, worker: bool = True, paths=None) -> FastAPI:
         resp.headers["X-Content-Type-Options"] = "nosniff"
         resp.headers["X-Frame-Options"] = "DENY"
         resp.headers["Referrer-Policy"] = "no-referrer"
-        if request.url.path.startswith(("/painel", "/api")):
+        path = request.url.path
+        download = path.startswith("/api/artifacts/") and path.endswith("/download")
+        if download:
+            if "content-security-policy" not in resp.headers:
+                resp.headers["Content-Security-Policy"] = "default-src 'none'; script-src 'none'; style-src 'none'"
+        elif path.startswith(("/painel", "/api")):
             resp.headers["Content-Security-Policy"] = ("default-src 'self'; img-src 'self' data: https:; "
                                                        "style-src 'self'; script-src 'self'; frame-ancestors 'none'; "
                                                        "base-uri 'none'; form-action 'self'")
@@ -128,6 +169,20 @@ def create_app(*, port: int, worker: bool = True, paths=None) -> FastAPI:
     def sources(con=Depends(db)):
         items = source_health(con, registry)
         return {"sources": items, "health_summary": health_summary(items)}
+
+    @app.get("/api/connections")
+    def connections():
+        from jobos.applications.connections import connection_catalog
+        return {"connections": connection_catalog(registry), "automatic_submission": False,
+                "note": "Coleta e CV automáticos. Envio automático ainda não implementado neste motor."}
+
+    @app.post("/api/connections/{source_id}/open")
+    def connection_open(source_id: str):
+        from jobos.applications.connections import open_login
+        try:
+            return open_login(registry, source_id)
+        except (ValueError, OSError) as exc:
+            raise HTTPException(400, str(exc)) from exc
 
     @app.get("/api/jobs")
     def jobs(con=Depends(db), q: str | None = Query(None, max_length=120),
@@ -220,12 +275,30 @@ def create_app(*, port: int, worker: bool = True, paths=None) -> FastAPI:
         rec["published_brt"] = fmt_brt(rec["published_at"], rec["published_date_precision"])
         analysis = json.loads(an["result_json"]) if an else None
         official = next((p["url"] for p in postings if p.get("url")), None)
+        payload_row = con.execute("SELECT payload_json FROM job_versions WHERE version_id=?",
+                                  (j["current_version_id"],)).fetchone()
+        raw = json.loads(payload_row["payload_json"] or "{}") if payload_row and payload_row["payload_json"] else {}
+        if not isinstance(raw, dict):
+            raw = {}
+        options = raw.get("apply_options") if isinstance(raw.get("apply_options"), list) else []
+        packets = [dict(r) for r in con.execute(
+            """SELECT artifact_id, kind, sha256, created_at, application_id FROM artifacts
+               WHERE job_id=? AND kind IN ('cv_html','cv_data','cv_validation','cv_answers','cv_coverage')
+               ORDER BY created_at DESC LIMIT 20""", (job_id,))]
         return {"job": rec, "versions": versions, "postings": postings, "events": events,
                 "analysis": analysis, "support": build_support(active_profile(con), analysis, official),
                 "analysis_history": history,
                 "application": ({**dict(app_row), "prep_label": PREP_LABELS.get(app_row["prep_state"])} if app_row else None),
                 "application_events": app_events, "legacy_refs": legacy, "relations": relations,
-                "note": "Texto do anúncio é dado externo; exibido como texto."}
+                "apply": {"quick_apply": raw.get("quickApply", "unknown"),
+                          "apply_mode": raw.get("apply_mode", "unknown"),
+                          "apply_url": safe_http_url(raw.get("apply_url")) if isinstance(raw.get("apply_url"), str) else None,
+                          "apply_options": [o for o in options if isinstance(o, str)][:8],
+                          "whatsapp": raw.get("whatsapp") if isinstance(raw.get("whatsapp"), bool) else None},
+                "cv_packets": packets,
+                "keyword_coverage": detail_keyword_summary(con, packets, paths.artifacts),
+                "duplicate_warning": appsvc.duplicate_submitted_warning(con, job_id),
+                "note": "Texto do anúncio é dado externo; exibido como texto. Gerar currículo não envia a candidatura."}
 
     @app.get("/api/map")
     def map_view(con=Depends(db), talent_pool: bool = False,
@@ -286,14 +359,24 @@ def create_app(*, port: int, worker: bool = True, paths=None) -> FastAPI:
 
     @app.get("/api/artifacts/{artifact_id}/download")
     def artifact_download(artifact_id: str, con=Depends(db)):
-        r = con.execute("SELECT rel_path FROM artifacts WHERE artifact_id=?", (artifact_id,)).fetchone()
+        r = con.execute("SELECT rel_path, kind FROM artifacts WHERE artifact_id=?", (artifact_id,)).fetchone()
         if not r:
             raise HTTPException(404, "artefato não encontrado")
         root = paths.artifacts.resolve()
         target = (root / r["rel_path"]).resolve()
         if not target.is_relative_to(root) or not target.is_file():
             raise HTTPException(404, "artefato indisponível")
-        return FileResponse(target)
+        if r["kind"] != "cv_html":
+            return FileResponse(target)
+        text = target.read_text(encoding="utf-8")
+        match = re.search(r"<style>(.*?)</style>", text, re.S)
+        style_body = match.group(1) if match else ""
+        token = base64.b64encode(hashlib.sha256(style_body.encode("utf-8")).digest()).decode("ascii")
+        csp = (f"default-src 'none'; script-src 'none'; style-src 'sha256-{token}'; "
+               "img-src data:; base-uri 'none'; frame-ancestors 'none'")
+        return Response(text, media_type="text/html; charset=utf-8",
+                        headers={"Content-Security-Policy": csp, "Cache-Control": "no-store",
+                                 "X-Content-Type-Options": "nosniff"})
 
     @app.get("/api/book")
     def book():
@@ -325,7 +408,9 @@ def create_app(*, port: int, worker: bool = True, paths=None) -> FastAPI:
             if body.action == "confirm":
                 if not body.date:
                     raise HTTPException(422, "data obrigatória (AAAA-MM-DD)")
-                return appsvc.confirm_manual(con, job_id, body.date, body.reason)
+                return appsvc.confirm_manual(con, job_id, body.date, body.reason,
+                                              artifact_sha256=(body.artifact_sha256 or "").lower() or None,
+                                              confirmation=body.confirmation)
             if body.action == "transition":
                 return appsvc.transition(con, job_id, body.target or "", origin="user_asserted", reason=body.reason)
             if body.action == "stage":
@@ -333,6 +418,27 @@ def create_app(*, port: int, worker: bool = True, paths=None) -> FastAPI:
             return appsvc.add_note(con, job_id, body.reason or "")
         except (TransitionError, appsvc.NotFound, ValueError) as e:
             raise HTTPException(409, str(e)) from e
+
+    @app.post("/api/jobs/{job_id}/cv")
+    def post_cv(job_id: str):
+        """Gera o kit local. Não muda o estado da candidatura e não envia nada."""
+        from jobos.context import open_context
+        from jobos.matching.cv_packet import PacketError, build_packet
+        ctx = open_context(paths=paths)
+        try:
+            jid = appsvc.resolve_job_id(ctx.con, job_id)
+            res = build_packet(ctx, jid)
+            rows = [dict(r) for r in ctx.con.execute(
+                "SELECT artifact_id, kind, sha256 FROM artifacts WHERE artifact_id IN ({})".format(
+                    ",".join("?" * len(res.artifact_ids))), res.artifact_ids)] if res.artifact_ids else []
+        except (PacketError, LookupError, ValueError) as e:
+            raise HTTPException(409, str(e)) from e
+        finally:
+            ctx.close()
+        coverage = keyword_summary(res.directory / "validation.json", res.directory)
+        return {"job_id": res.job_id, "reused": res.reused, "artifact_ids": res.artifact_ids, "artifacts": rows,
+                "warnings": res.warnings, "keyword_coverage": coverage, "sends_application": False,
+                "note": "Currículo gerado. Isto não marca a candidatura como enviada."}
 
     @app.post("/api/refresh")
     def portal_refresh(con=Depends(db)):

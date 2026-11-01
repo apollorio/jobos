@@ -10,6 +10,9 @@ schedule:
   execution_limit_minutes: 50
 cycle:
   max_parallel_sources: 4
+  max_minutes: 45                  # para de despachar fontes novas; o Agendador mata o processo aos 50 min
+  min_interval_seconds: 2          # pausa entre o início de cada pedido HTTP do ciclo (um único IP)
+  between_waves_seconds: 30        # pausa entre a varredura dos quadros e a sonda em massa
   final_retry_delay_seconds: 30   # uma única retentativa das fontes que falharam; depois desiste
   lease_minutes: 60
   probe_per_source: 15             # confirmação individual de anúncios antigos fora da listagem

@@ -5,17 +5,18 @@ Códigos: 0 concluído, 2 parcial, 3 falha impeditiva, 4 pulado por sobreposiç�
 from __future__ import annotations
 
 import dataclasses
+import datetime as dt
 import json
 import logging
 import os
 import time
 import traceback
 import uuid
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from dataclasses import dataclass, field
 
 from jobos.collectors.base import CollectContext, SourceBatch, new_batch
-from jobos.collectors.http import HttpClient
+from jobos.collectors.http import HttpClient, configure_pace
 from jobos.collectors.registry import fixture_adapter, get_adapter, unconfigured
 from jobos.context import Context
 from jobos.lock import CycleLock, LockBusy
@@ -23,7 +24,7 @@ from jobos.persistence import apply_batch
 from jobos.settings import SourceConfig
 from jobos.storage import repo
 from jobos.storage.db import tx
-from jobos.timeutil import iso
+from jobos.timeutil import iso, utcnow
 
 EXIT_OK, EXIT_PARTIAL, EXIT_FAILED, EXIT_OVERLAP, EXIT_CONFIG = 0, 2, 3, 4, 5
 
@@ -143,6 +144,42 @@ def run_cycle(ctx: Context, *, trigger: str, fixtures: bool = False, only_source
         lock.release()
 
 
+def _dispatch_sources(ctx, sources, run_id, *, fixtures, knowns, workers, deadline):
+    """Despacha fontes em paralelo e para de iniciar novas quando `cycle.max_minutes` estoura.
+
+    Fontes já em execução terminam. As que não começaram viram status `deadline` (ciclo parcial, saída 2).
+    """
+    pending = list(sources)
+    inflight = []
+    batches = []
+    skipped = []
+    pool_workers = max(1, workers)
+
+    def past() -> bool:
+        return deadline is not None and utcnow() >= deadline
+
+    with ThreadPoolExecutor(max_workers=pool_workers) as pool:
+        while pending or inflight:
+            while pending and len(inflight) < pool_workers and not past():
+                source = pending.pop(0)
+                inflight.append((source, pool.submit(
+                    collect_chain, ctx, source, run_id, fixtures=fixtures, known=knowns[source.source_id])))
+            if pending and past():
+                skipped.extend(pending)
+                pending.clear()
+            if not inflight:
+                break
+            done, _rest = wait([fut for _, fut in inflight], return_when=FIRST_COMPLETED)
+            still = []
+            for source, fut in inflight:
+                if fut in done:
+                    batches.append((source, fut.result()))
+                else:
+                    still.append((source, fut))
+            inflight = still
+    return batches, skipped
+
+
 def _run_locked(ctx, run_id, mode, trigger, fixtures, only_sources, analyze, notify) -> CycleResult:
     con = ctx.con
     if not ctx.dry_run:
@@ -158,15 +195,19 @@ def _run_locked(ctx, run_id, mode, trigger, fixtures, only_sources, analyze, not
         sources = [s for s in sources if s.enabled]
     try:
         knowns = {s.source_id: _known_map(con, s.source_id) for s in sources}
-        workers = int((ctx.settings.app.get("cycle") or {}).get("max_parallel_sources", 4))
-        with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
-            futures = [(s, pool.submit(collect_chain, ctx, s, run_id, fixtures=fixtures, known=knowns[s.source_id]))
-                       for s in sources]
-            batches = [(s, f.result()) for s, f in futures]
+        cycle_cfg = ctx.settings.app.get("cycle") or {}
+        pace = 0.0 if fixtures else float(cycle_cfg.get("min_interval_seconds") or 0)
+        configure_pace(pace, time.sleep)
+        result.stages["pace"] = {"min_interval_seconds": pace}
+        workers = int(cycle_cfg.get("max_parallel_sources", 4))
+        max_minutes = float(cycle_cfg.get("max_minutes") or 0)
+        deadline = utcnow() + dt.timedelta(minutes=max_minutes) if max_minutes > 0 else None
+        batches, skipped = _dispatch_sources(ctx, sources, run_id, fixtures=fixtures, knowns=knowns,
+                                             workers=workers, deadline=deadline)
         # Última chance: fontes que falharam ganham UMA nova rodada após 30 s; se falhar de novo, desiste (sem loop).
         retry_idx = [i for i, (s, b) in enumerate(batches) if _needs_final_retry(b)]
-        if retry_idx and not fixtures:
-            delay = float((ctx.settings.app.get("cycle") or {}).get("final_retry_delay_seconds", 30))
+        if retry_idx and not fixtures and not (deadline and utcnow() >= deadline):
+            delay = float(cycle_cfg.get("final_retry_delay_seconds", 30))
             result.stages["final_retry"] = {"sources": [batches[i][0].source_id for i in retry_idx], "delay_s": delay}
             time.sleep(delay)
             with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
@@ -178,6 +219,8 @@ def _run_locked(ctx, run_id, mode, trigger, fixtures, only_sources, analyze, not
                     better = second if _rank(second) > _rank(first) else first
                     better.warnings.insert(0, f"retentativa final após {delay:.0f}s: {first.status} → {second.status}")
                     batches[i] = (s, better)
+        elif retry_idx and deadline and utcnow() >= deadline:
+            result.stages["final_retry"] = "skipped_deadline"
         totals = {"new": 0, "changed": 0, "missing": 0, "closed": 0, "reappeared": 0}
         for s, batch in batches:
             outcome = apply_batch(con, batch, s, ctx.settings, is_fixture=fixtures)
@@ -190,9 +233,20 @@ def _run_locked(ctx, run_id, mode, trigger, fixtures, only_sources, analyze, not
                                    "absence": "aplicada" if outcome["absence_applied"] else outcome["absence_note"],
                                    "error": batch.error_message, "warnings": len(batch.warnings),
                                    "details": batch.details_fetched})
+        if skipped:
+            result.stages["deadline"] = {"max_minutes": max_minutes,
+                                         "skipped": [s.source_id for s in skipped]}
+            for s in skipped:
+                result.sources.append({"source_id": s.source_id, "status": "deadline", "jobs": 0, "new": 0,
+                                       "changed": 0, "missing": 0, "closed": 0, "baseline": False, "absence": None,
+                                       "error": "prazo do ciclo esgotado antes do despacho", "warnings": 0, "details": 0})
         result.counts = totals
         result.stages["collect"] = "complete"
         if not fixtures:
+            gap = float(cycle_cfg.get("between_waves_seconds") or 0)
+            if gap > 0 and _probe_wave_pending(batches):
+                result.stages["between_waves"] = {"delay_s": gap}
+                time.sleep(gap)
             result.stages["probe"] = _probe_stage(ctx, [(s, b) for s, b in batches], run_id)
     except Exception as e:  # noqa: BLE001
         result.stages["collect"] = f"failed: {type(e).__name__}: {e}"
@@ -213,6 +267,12 @@ def _run_locked(ctx, run_id, mode, trigger, fixtures, only_sources, analyze, not
     if bad or stage_fail:
         return _finish(ctx, result, "partial", EXIT_PARTIAL, None)
     return _finish(ctx, result, "complete", EXIT_OK, None)
+
+
+def _probe_wave_pending(batches) -> bool:
+    """True when the board sweep will be followed by individual probes."""
+    from jobos.collectors.registry import ADAPTERS
+    return any(batch.status in ("complete", "partial") and source.adapter in ADAPTERS for source, batch in batches)
 
 
 def _probe_stage(ctx: Context, batches, run_id: str) -> dict:

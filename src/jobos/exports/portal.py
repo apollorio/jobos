@@ -9,10 +9,12 @@ import json
 
 from jobos.timeutil import iso
 
-PLATFORM_LABEL = {"gupy": "Gupy", "successfactors_j2w": "SuccessFactors", "workday": "Workday",
-                  "smartrecruiters": "SmartRecruiters"}
-KIND = {"gupy": "gupy", "successfactors_j2w": "sf", "workday": "workday", "smartrecruiters": "smart", "inhire": "inhire",
-        "webflow": "dof", "totvs": "bram", "greenhouse": "greenhouse", "oracle_ce": "oracle"}
+PLATFORM_LABEL = {"gupy": "Gupy", "successfactors_j2w": "SuccessFactors", "successfactors": "SuccessFactors",
+                  "workday": "Workday", "smartrecruiters": "SmartRecruiters", "hubspot": "HubSpot",
+                  "sage_frecruit": "Sage fRecruit", "oracle_ce": "Oracle"}
+KIND = {"gupy": "gupy", "successfactors_j2w": "sf", "successfactors": "sf", "workday": "workday",
+        "smartrecruiters": "smart", "inhire": "inhire", "webflow": "dof", "totvs": "bram", "greenhouse": "greenhouse",
+        "oracle_ce": "oracle", "hubspot": "hubspot", "sage_frecruit": "sage"}
 OPEN_STATES = ("active", "missing_unconfirmed")
 
 
@@ -66,7 +68,8 @@ def build_book(ctx) -> dict:
             "lastError": (last["error_message"] or "") if last else "",
             "fetchedAt": last["finished_at"] if last else "", "jobs": jobs})
     return {"updatedAt": updated or iso(), "checkedAt": checked or "",
-            "platforms": ["Gupy", "SuccessFactors", "Workday", "SmartRecruiters", "Outras"],
+            "platforms": ["Gupy", "SuccessFactors", "Workday", "SmartRecruiters", "HubSpot", "Sage fRecruit",
+                          "Oracle", "Outras"],
             "companies": companies, "generatedBy": "jobos-local (projeção do SQLite; não editar)"}
 
 

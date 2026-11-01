@@ -318,10 +318,12 @@ def test_local_secundario_no_escopo_vem_primeiro():
 
 
 def test_known_com_descricao_nao_reabre_detalhe():
+    # TTL é 7 dias contra o relógio real. Uma data fixa de 22/10 expira e o coletor reabre o detalhe de propósito.
+    from jobos.timeutil import iso
     sig = {}
 
     def known(ext, url):
-        return {"listing_signature": sig.get(ext), "detail_fetched_at": "2026-10-22T10:00:00+00:00",
+        return {"listing_signature": sig.get(ext), "detail_fetched_at": iso(),
                 "has_description": True}
     first = oracle_ce.collect(make_ctx(happy_http()))
     sig.update({o.external_id: o.listing_signature for o in first.jobs})

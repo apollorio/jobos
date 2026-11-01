@@ -18,7 +18,7 @@ sources:
      params: {tenant: norsul, portal_name: "NORSUL"}, board_url: "https://norsul.gupy.io/", priority: 1, configuration_origin: jobs_json+companies_yml}
   - {source_id: brava-gupy, company_id: brava, company_name: Brava Energia, platform: gupy, primary_adapter: gupy_tenant, fallback_adapters: [gupy_portal_company],
      params: {tenants: [bravaenergia, bravaacelera, 3rpetroleum], portal_name: "Brava Energia"}, board_url: "https://bravaenergia.gupy.io/", priority: 1,
-     configuration_origin: jobs_json+companies_yml+auditoria_2026-10-23, fallback_adapters: [gupy_portal_company],
+     configuration_origin: jobs_json+companies_yml+auditoria_2026-10-23,
      note: "Duas páginas Gupy da mesma empresa (companyId 47525): bravaenergia e bravaacelera."}
   - {source_id: wilsonsons-gupy, company_id: wilsonsons, company_name: Wilson Sons, platform: gupy, primary_adapter: gupy_tenant, fallback_adapters: [gupy_portal_company],
      params: {tenant: wilsonsons, portal_name: "Wilson Sons"}, board_url: "https://wilsonsons.gupy.io/", priority: 2, configuration_origin: jobs_json}
@@ -75,10 +75,15 @@ sources:
      note: "Antes workday_cxs (HTTP 422); migrado para j2w_search em 24/10/2026."}
 
   # ---------------- SmartRecruiters ----------------
-  - {source_id: aker-smart, company_id: aker, company_name: Aker Solutions, platform: smartrecruiters, primary_adapter: smartrecruiters,
-     params: {company_id: akersolutions, country: br}, coverage: filtered_board, priority: 2, configuration_origin: jobs_json}
-  - {source_id: airswift-smart, company_id: airswift, company_name: Airswift, platform: smartrecruiters, primary_adapter: smartrecruiters,
-     params: {company_id: airswift, country: br}, coverage: filtered_board, priority: 1, configuration_origin: jobs_json}
+  - {source_id: aker-smart, company_id: aker, company_name: Aker Solutions, platform: successfactors, primary_adapter: aker_site_json,
+     params: {list_url: "https://www.akersolutions.com/careers/job-search/", sf_company: akersoluti},
+     board_url: "https://www.akersolutions.com/careers/job-search/", coverage: full_board, priority: 2,
+     configuration_origin: jobs_json,
+     note: "30/10/2026: leitor aker_site_json (JSON público do site). O SmartRecruiters antigo lia outro quadro. Vagas já gravadas continuam ativas até uma pessoa encerrá-las (DEC-007, DEC-023)."}
+  - {source_id: airswift-smart, company_id: airswift, company_name: Airswift, platform: hubspot, primary_adapter: airswift_hubspot,
+     params: {location: Brazil}, board_url: "https://www.airswift.com/jobs", coverage: filtered_board, priority: 1,
+     configuration_origin: jobs_json,
+     note: "30/10/2026: leitor airswift_hubspot, localidade Brazil. O SmartRecruiters antigo lia outro quadro. Vagas já gravadas continuam ativas (DEC-007, DEC-023)."}
 
   # ---------------- Outras plataformas ----------------
   - {source_id: oceanpact-inhire, company_id: oceanpact, company_name: OceanPact, platform: inhire, primary_adapter: inhire,
@@ -98,14 +103,20 @@ sources:
      fallback_adapters: [{adapter: greenhouse, params: {office_root_id: null, office_id: 69385}}],
      priority: 3, configuration_origin: auditoria_2026-10-23,
      note: "Escopo: árvore do escritório 'Brazil' (69385, inclui Rio 114971 e São Paulo 69388). Antes só 114971 (1 vaga de 125)."}
-  - {source_id: trident-workable, company_id: trident, company_name: Trident Energy, platform: workable, primary_adapter: workable,
-     params: {account: trident-energy}, board_url: "https://apply.workable.com/trident-energy/", priority: 1, configuration_origin: companies_yml}
+  - {source_id: trident-workable, company_id: trident, company_name: Trident Energy, platform: sage_frecruit, primary_adapter: sage_frecruit,
+     params: {base: "https://tridentenergy-hr.my.salesforce-sites.com", site_path: /recruit, country: Brazil},
+     board_url: "https://tridentenergy-hr.my.salesforce-sites.com/recruit/fRecruit__ApplyJobList",
+     coverage: filtered_board, priority: 1, configuration_origin: companies_yml,
+     note: "30/10/2026: a conta Workable trident-energy está vazia. Leitor sage_frecruit, país Brazil. Vagas do Workable já gravadas continuam ativas (DEC-007, DEC-023)."}
   - {source_id: sapura-vagas, company_id: sapura, company_name: "Sapura (Seagems)", platform: vagas_com_br, primary_adapter: vagas_com_br,
      params: {slug: seagems}, board_url: "https://trabalheconosco.vagas.com.br/seagems/oportunidades", priority: 2, configuration_origin: companies_yml}
 
   # ---------------- Sem leitor ainda (aparecem no painel como unconfigured) ----------------
-  - {source_id: abs-oracle, company_id: abs, company_name: ABS, platform: oracle_ce, primary_adapter: null, priority: 3,
-     configuration_origin: jobs_json, note: "Oracle Candidate Experience; leitor TS existe, ainda não portado."}
+  - {source_id: abs-oracle, company_id: abs, company_name: ABS, platform: oracle_ce, primary_adapter: oracle_ce, priority: 3,
+     params: {base: "https://hbbq.fa.us2.oraclecloud.com", site: CX_1, location_term: Brazil},
+     board_url: "https://hbbq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/jobs",
+     coverage: filtered_board, configuration_origin: jobs_json,
+     note: "30/10/2026: leitor oracle_ce registrado, escopo Brazil (DEC-023). Sem coleta ao vivo nesta entrega."}
   - {source_id: constellation-gupy, company_id: constellation, company_name: Constellation Oil Services, platform: gupy, primary_adapter: null,
      priority: 2, configuration_origin: companies_yml, note: "Tenant Gupy não identificado."}
   - {source_id: petrobras-concursos, company_id: petrobras, company_name: Petrobras, platform: concurso, primary_adapter: null, priority: 1,

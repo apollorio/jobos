@@ -9,6 +9,7 @@ import re
 from dataclasses import dataclass
 
 from jobos.domain.identity import fold
+from jobos.matching.families import EXACT_ALIASES, concepts
 
 MAX_REQUIREMENTS = 60
 
@@ -155,6 +156,27 @@ def extract(description: str) -> tuple[list[Requirement], dict]:
             t = fold(item)
             if any(c in t for c in REQUIREMENT_CUES) and len(item) < 300:
                 reqs.append(Requirement(item, _cue_importance(item, "ambiguous"), "description:sem_secao"))
+    for item in _split_items("\n".join(sections.get("responsibilities", []))):
+        reqs.append(Requirement(item, _cue_importance(item, "responsibility"), "description:responsibilities"))
+    # Uma lista de ferramentas não pode ser aprovada só porque seu primeiro item é conhecido.
+    atomic = []
+    for req in reqs:
+        pieces = re.split(r",\s*|\s+(?:e|and)\s+", req.text)
+        tool_keys = {"ms_project", "excel", "power_bi", "primavera_p6", "primavera_risk_analysis", "sap_ps"}
+        if len(pieces) > 1 and all(concepts(p) & tool_keys for p in pieces):
+            atomic.extend(Requirement(p, req.importance, req.source) for p in pieces)
+        else:
+            atomic.append(req)
+    seen = {}
+    rank = {"mandatory": 3, "responsibility": 2, "ambiguous": 1, "desirable": 0}
+    for req in atomic:
+        key = fold(req.text).strip(" .:-")
+        exact = EXACT_ALIASES.get(key)
+        if exact:
+            key = "concept:" + exact
+        if key not in seen or rank[req.importance] > rank[seen[key].importance]:
+            seen[key] = req
+    reqs = list(seen.values())
     if len(reqs) > MAX_REQUIREMENTS:
         meta["truncated_requirements"] = len(reqs) - MAX_REQUIREMENTS
         reqs = reqs[:MAX_REQUIREMENTS]

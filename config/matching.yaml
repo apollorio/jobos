@@ -1,11 +1,12 @@
 schema_version: 1
-policy_version: matching-v7
+policy_version: matching-v8-family-audit
 method: deterministic
 weights:
-  mandatory: 3
-  desirable: 1
-  ambiguous: 1.5
-status_values: {met: 1.0, partial: 0.5, gap: 0.0}   # unknown não entra no numerador nem no denominador avaliável
+  mandatory: 1.0
+  desirable: 0.45
+  responsibility: 0.65
+  ambiguous: 0.65
+status_values: {met: 1.0, partial: 0.5, gap: 0.0}   # unknown vale zero no total; cobertura separada
 min_coverage_for_score: 0.6
 decision_thresholds:
   good_fit: 70

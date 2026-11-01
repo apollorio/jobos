@@ -11,7 +11,7 @@ from jobos.storage.db import tx
 from jobos.timeutil import iso, utcnow
 
 log = logging.getLogger("jobos.worker")
-KINDS = ("cycle", "collect_source", "analyze_job")
+KINDS = ("cycle", "collect_source", "analyze_job", "cv_build")
 
 
 class WorkError(ValueError):
@@ -28,6 +28,9 @@ def enqueue(con, kind: str, target: str | None, origin: str, registry=None) -> d
     if kind == "analyze_job":
         if not target or not con.execute("SELECT 1 FROM job_records WHERE job_id=?", (target,)).fetchone():
             raise WorkError("analyze_job exige job_id existente")
+    if kind == "cv_build":
+        if not target or not con.execute("SELECT 1 FROM job_records WHERE job_id=?", (target,)).fetchone():
+            raise WorkError("cv_build exige job_id existente")
     if kind == "cycle":
         target = None
     dedupe = f"{kind}:{target or '*'}"
@@ -73,6 +76,11 @@ def process_queue_once(ctx, owner: str) -> dict:
         elif item["kind"] == "collect_source":
             res = run_cycle(ctx, trigger="api", only_sources=[item["target"]], notify=False)
             result, ok = {"run_id": res.run_id, "status": res.status, "exit_code": res.exit_code}, True
+        elif item["kind"] == "cv_build":
+            from jobos.matching.cv_packet import build_packet
+            res = build_packet(ctx, item["target"])
+            result, ok = {"job_id": res.job_id, "artifact_ids": res.artifact_ids, "reused": res.reused,
+                          "sends_application": False}, True
         else:
             result, ok = analyze_job(ctx, item["target"], force=True), True
         status, err = ("done" if ok else "failed"), None

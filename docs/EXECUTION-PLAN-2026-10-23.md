@@ -1,5 +1,13 @@
 # Plano de execução — JOBOS (23/10/2026)
 
+## Emenda 30/10/2026
+
+W2a entregou a sanitização dos requisitos (`matching-v7`, DEC-021). A calibração com rótulos não aconteceu. Ela fica como W2a-2 / `matching-v8` e depende de 30–50 vagas rotuladas pelo Rafael.
+
+W4 (automação de navegador e envio) não começa. A DEC-022 não foi aceita. O caminho em uso é semi-automático: o JOBOS monta o currículo com ponteiros do perfil, a pessoa envia no próprio navegador e registra o comprovante. Gerar o currículo não envia a candidatura.
+
+A tabela da seção 1 permanece como medição de 23/10. Não foi reescrita.
+
 Fontes lidas: `CLAUDE.md`, `README.md`, `docs/*` (PROGRESS, DECISIONS, CONFLICTS), `_blueprint/00…09`,
 `JOBOS-ROADMAP-COMPLETO (1).md` (P0–P9) e `JOBOS-OPEN-SOURCE-AI-AUTOAPPLY-ROADMAP-2026-10-23.md` (P0-R…P7-R, mais novo).
 Regra de precedência adotada: o roadmap de 23/10 (as-built) prevalece sobre o completo onde divergem

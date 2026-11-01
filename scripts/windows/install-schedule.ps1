@@ -4,7 +4,9 @@
     Registra (ou atualiza) a tarefa agendada "JOBOS Local Engine" com 4 gatilhos diários.
 
 .DESCRIPTION
-    Cria UMA tarefa (TaskPath \) com um gatilho diário por horário (padrão do app.yaml: 08:00, 12:00, 14:00, 18:00).
+    Cria UMA tarefa (TaskPath \) com um gatilho diário por horário (padrão do app.yaml: 08:00, 12:00, 14:00, 18:00),
+    mais AtLogOn do usuário atual, retorno da suspensão (System, Power-Troubleshooter, EventID 1) e
+    desbloqueio da sessão (Security, EventID 4801). WakeToRun permanece desligado.
     Ação: powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "<Raiz>\scripts\windows\run-cycle.ps1" -Mode scheduler
     com diretório de trabalho = raiz do engine.
 
@@ -150,6 +152,23 @@ function Export-TaskBackup {
     return $file
 }
 
+function New-JobosEventTrigger {
+    param([string]$Query)
+    # -WhatIf do script não pode impedir a montagem em memória; o registro continua atrás de ShouldProcess.
+    $saved = $WhatIfPreference
+    $WhatIfPreference = $false
+    try {
+        $class = Get-CimClass -ClassName MSFT_TaskEventTrigger -Namespace 'Root/Microsoft/Windows/TaskScheduler'
+        $trigger = New-CimInstance -CimClass $class -ClientOnly
+        $trigger.Enabled = $true
+        $trigger.Subscription = $Query
+        return $trigger
+    }
+    finally {
+        $WhatIfPreference = $saved
+    }
+}
+
 function Show-TaskSummary {
     param([string]$Name)
     $task = Get-ScheduledTask -TaskName $Name -TaskPath '\' -ErrorAction Stop
@@ -160,9 +179,13 @@ function Show-TaskSummary {
     Write-Host ('Estado          : {0}' -f $task.State)
     $hours = @()
     foreach ($t in @($task.Triggers)) {
+        $kind = ''
+        try { $kind = [string]$t.CimClass.CimClassName } catch { $kind = '' }
+        if ($kind -eq 'MSFT_TaskEventTrigger') { $hours += 'evento'; continue }
+        if ($kind -eq 'MSFT_TaskLogonTrigger') { $hours += 'logon'; continue }
         try { $hours += ([datetime]::Parse([string]$t.StartBoundary, $script:Inv)).ToString('HH:mm', $script:Inv) } catch { $hours += '?' }
     }
-    Write-Host ('Gatilhos diários: {0}' -f ($hours -join ', '))
+    Write-Host ('Gatilhos        : {0}' -f ($hours -join ', '))
     Write-Host ('Próxima execução: {0}' -f $(if ($info.NextRunTime -and $info.NextRunTime.Year -gt 2000) { $info.NextRunTime.ToString('yyyy-MM-dd HH:mm:ss', $script:Inv) } else { '(nenhuma)' }))
     Write-Host ('Última execução : {0}' -f $(if ($info.LastRunTime -and $info.LastRunTime.Year -gt 2000) { $info.LastRunTime.ToString('yyyy-MM-dd HH:mm:ss', $script:Inv) } else { 'nunca executou' }))
     Write-Host ('Último resultado: {0}' -f $info.LastTaskResult)
@@ -234,6 +257,10 @@ function Invoke-Main {
         Write-Host ('Conta             : {0} (LogonType Interactive, RunLevel Limited)' -f $user)
         Write-Host '                    A tarefa roda SOMENTE enquanto este usuário estiver conectado (logado).'
         Write-Host ('Configurações     : StartWhenAvailable, MultipleInstances IgnoreNew, limite {0} min, roda na bateria' -f $limit)
+        Write-Host 'WakeToRun         : desligado'
+        Write-Host ('Gatilho extra     : AtLogOn de {0}' -f $user)
+        Write-Host 'Gatilho extra     : System / Microsoft-Windows-Power-Troubleshooter / EventID 1 (retorno da suspensão)'
+        Write-Host 'Gatilho extra     : Security / EventID 4801 (desbloqueio da sessão)'
 
         # fuso horário: apenas avisa
         $tz = Get-TimeZone
@@ -278,12 +305,35 @@ function Invoke-Main {
             $at = [datetime]::ParseExact($hhmm, 'H:mm', $script:Inv)
             $triggers += New-ScheduledTaskTrigger -Daily -At $at
         }
+        $triggers += New-ScheduledTaskTrigger -AtLogOn -User $user
+        $resumeQuery = '<QueryList><Query Id="0" Path="System"><Select Path="System">*[System[Provider[@Name="Microsoft-Windows-Power-Troubleshooter"] and (EventID=1)]]</Select></Query></QueryList>'
+        $unlockQuery = '<QueryList><Query Id="0" Path="Security"><Select Path="Security">*[System[(EventID=4801)]]</Select></Query></QueryList>'
+        $withEvents = $true
+        try {
+            $triggers += New-JobosEventTrigger -Query $resumeQuery
+            $triggers += New-JobosEventTrigger -Query $unlockQuery
+        }
+        catch {
+            $withEvents = $false
+            Write-Warning ("Gatilho de evento não foi montado: {0}" -f $_.Exception.Message)
+        }
         $action = New-ScheduledTaskAction -Execute $psExe -Argument $argString -WorkingDirectory $engineRoot
         $settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -MultipleInstances IgnoreNew `
             -ExecutionTimeLimit (New-TimeSpan -Minutes $limit) -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries
+        try { $settings.WakeToRun = $false } catch { }
         $principal = New-ScheduledTaskPrincipal -UserId $user -LogonType Interactive -RunLevel Limited
-        $definition = New-ScheduledTask -Action $action -Trigger $triggers -Settings $settings -Principal $principal `
-            -Description 'JOBOS local: coleta de vagas em ciclos diários (gerenciada por scripts\windows\install-schedule.ps1).'
+        $taskDescription = 'JOBOS local: coleta de vagas em ciclos diários (gerenciada por scripts\windows\install-schedule.ps1).'
+        try {
+            $definition = New-ScheduledTask -Action $action -Trigger $triggers -Settings $settings -Principal $principal `
+                -Description $taskDescription
+        }
+        catch {
+            if (-not $withEvents) { throw }
+            Write-Warning ("New-ScheduledTask recusou o gatilho de evento ({0}). A definição fica com os horários diários e o AtLogOn." -f $_.Exception.Message)
+            $daily = @($triggers | Where-Object { $_.CimClass.CimClassName -ne 'MSFT_TaskEventTrigger' })
+            $definition = New-ScheduledTask -Action $action -Trigger $daily -Settings $settings -Principal $principal `
+                -Description $taskDescription
+        }
 
         # ----------------------------------------------------------- aplica
         $changed = $false
@@ -327,6 +377,8 @@ function Invoke-Main {
         Write-Host '  - A tarefa só executa com o usuário conectado (LogonType Interactive).'
         Write-Host '  - PC desligado (ou em suspensão/hibernação) não executa tarefas; WakeToRun NÃO está habilitado.'
         Write-Host '  - StartWhenAvailable: uma execução perdida roda quando o PC voltar e o usuário estiver conectado.'
+        Write-Host '  - AtLogOn, retorno da suspensão e desbloqueio da sessão também disparam o ciclo. run-cycle.ps1 pula se o último ciclo completo tem menos de 90 min.'
+        Write-Host '  - O gatilho 4801 lê o log Security. Se a conta não puder assinar esse log, o desbloqueio não dispara; os outros gatilhos seguem.'
         Write-Host '  - Nenhuma outra tarefa do Agendador foi tocada.'
         $script:ExitCode = 0
     }

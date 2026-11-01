@@ -66,6 +66,8 @@ def _parser() -> StrictParser:
     scvb = scvsub.add_parser("build", help="gera ou reaproveita o pacote da versão atual da vaga", allow_abbrev=False)
     scvb.add_argument("--job", required=True, help="id da vaga ou prefixo de 8+")
     scvb.add_argument("--headline", default=None, help="id do headline quando o preparo indica empate")
+    scvsub.add_parser("gupy-sheet", help="folha somente leitura para preencher o perfil da Gupy uma vez",
+                      allow_abbrev=False)
 
     ss = sub.add_parser("serve", help="API e painel local", allow_abbrev=False)
     ss.add_argument("--host", default=None)
@@ -90,6 +92,8 @@ def _parser() -> StrictParser:
     sac.add_argument("--job", required=True)
     sac.add_argument("--date", required=True, help="AAAA-MM-DD")
     sac.add_argument("--note")
+    sac.add_argument("--artifact-sha256", default=None, help="SHA-256 do cv.html usado nesta candidatura")
+    sac.add_argument("--confirmation", default=None, help="código ou texto da tela de confirmação; só o hash é gravado")
     sas = sasub.add_parser("set-state", allow_abbrev=False)
     sas.add_argument("--job", required=True)
     sas.add_argument("--state", required=True)
@@ -115,6 +119,10 @@ def _parser() -> StrictParser:
 
     se = sub.add_parser("export-portal", help="gera jobs.json compatível em data/exports (não público)", allow_abbrev=False)
     se.add_argument("--out", type=Path)
+
+    sso = sub.add_parser("sources", help="cobertura das fontes (somente leitura)", allow_abbrev=False)
+    sso.add_argument("--markdown", action="store_true", help="tabela Markdown gerada da saúde ao vivo")
+    sso.add_argument("--out", type=Path, help="grava o Markdown neste arquivo")
     # `--json` aceito antes ou depois do subcomando (`jobos status --json`)
     stack = list(sub.choices.values())
     while stack:
@@ -239,7 +247,19 @@ def cmd_doctor(args) -> int:
         add("bind_loopback", host in ("127.0.0.1", "localhost"), host)
         add("porta_painel", _port_free(host, port), f"{host}:{port} {'livre' if _port_free(host, port) else 'ocupada'}",
             "warning")
-        add("cv_builder", False, "bloqueado: código/esquema do CV Builder não encontrado no workspace (P6)", "blocked")
+        from jobos.matching.cv_render import css_path
+        from jobos.status import freshness
+        css_ok = css_path().is_file()
+        add("cv_kit", css_ok, "kit local: jobos cv build gera HTML para salvar como PDF no Edge"
+            if css_ok else "cv-print.css ausente")
+        add("cv_builder", False, "opcional: o CV Builder P6 não está no workspace; o caminho principal é o cv_kit",
+            "warning")
+        fresh = freshness(ctx.con, ctx.settings)
+        horas = "nunca" if fresh["hours_since_complete"] is None else f"{fresh['hours_since_complete']} h"
+        add("frescor", fresh["missed_slots"] <= 1,
+            f"último ciclo completo há {horas}; horários perdidos: {fresh['missed_slots']}"
+            + (f" ({', '.join(fresh['missed_slot_times'][:4])})" if fresh["missed_slot_times"] else ""),
+            "warning")
         lock_owner = None
         from jobos.lock import CycleLock, LockBusy
         lk = CycleLock(p.lock_file)
@@ -339,6 +359,11 @@ def cmd_status(args) -> int:
         f"legado a revisar: {a['legacy_needs_review']}",
         f"Último ciclo: {last['run_id'] + ' ' + last['status'] + ' em ' + last['started_brt'] if last else 'nunca'}",
         f"Próximo horário agendado (Brasília): {r['next_scheduled_brt']} | atrasado: {'sim' if r['late'] else 'não'}",
+        f"Frescor: último ciclo completo há {st['freshness']['hours_since_complete'] if st['freshness']['hours_since_complete'] is not None else 'nunca'} h"
+        f" | horários perdidos: {st['freshness']['missed_slots']}",
+        f"Pendências: boa aderência sem envio {st['pendencias']['good_fit_without_application_count']}"
+        f" | CV em revisão {st['pendencias']['cv_awaiting_review']}"
+        f" | legado {st['pendencias']['legacy_to_review']}",
         f"Fontes: {st['sources']['by_last_status']}",
         f"Outbox: {st['outbox']['by_status']} | envio habilitado: {st['outbox']['sending_enabled']}",
         f"Perfil ativo: {(st['profile']['active_profile_id'] or 'nenhum')[:16]}",
@@ -433,11 +458,23 @@ def cmd_analyze(args) -> int:
 
 def cmd_cv(args) -> int:
     """`cv build`: pacote em data/artifacts/<vaga>/<hash12>/. Gerar CV nunca significa candidatura enviada."""
-    from jobos.applications.service import resolve_job_id
     from jobos.context import open_context
-    from jobos.matching.cv_packet import PacketError, build_packet
+    from jobos.matching.cv_packet import PacketError, build_gupy_sheet, build_packet, load_preapproved
+    from jobos.matching.profile import active_profile
     ctx = open_context()
     try:
+        if args.cvcmd == "gupy-sheet":
+            profile = active_profile(ctx.con)
+            if profile is None:
+                print("erro: nenhum perfil válido ativo", file=sys.stderr)
+                return EXIT_FAILED
+            preapproved, pre_warn = load_preapproved(ctx.paths.config / "profile" / "answers_preapproved.json")
+            sheet = build_gupy_sheet(profile, preapproved)
+            if pre_warn:
+                print(f"aviso: {pre_warn}", file=sys.stderr)
+            _emit(args, sheet, "Folha do perfil Gupy (não envia candidatura; telefone e CPF ficam no seu cofre).")
+            return EXIT_OK
+        from jobos.applications.service import resolve_job_id
         try:
             res = build_packet(ctx, resolve_job_id(ctx.con, args.job), headline_id=args.headline)
         except (PacketError, LookupError, ValueError) as e:
@@ -535,7 +572,8 @@ def cmd_application(args) -> int:
             from jobos.timeutil import brt_date
             out = service.confirm_legacy_manual_marks(ctx.con, apply=args.apply, confirmed_on=brt_date().isoformat())
         elif args.acmd == "confirm":
-            out = service.confirm_manual(ctx.con, args.job, args.date, args.note)
+            out = service.confirm_manual(ctx.con, args.job, args.date, args.note,
+                                         artifact_sha256=args.artifact_sha256, confirmation=args.confirmation)
         elif args.acmd == "set-state":
             out = service.transition(ctx.con, args.job, args.state, origin="user_asserted", reason=args.reason)
         else:
@@ -577,6 +615,27 @@ def cmd_export_portal(args) -> int:
     return EXIT_OK
 
 
+def cmd_sources(args) -> int:
+    from jobos.context import open_context
+    from jobos.status import source_health, sources_markdown
+    ctx = open_context()
+    try:
+        items = source_health(ctx.con, ctx.registry)
+    finally:
+        ctx.close()
+    if args.markdown or args.out:
+        text = sources_markdown(items)
+        if args.out:
+            args.out.parent.mkdir(parents=True, exist_ok=True)
+            args.out.write_text(text, encoding="utf-8")
+            print(f"escrito: {args.out}")
+        else:
+            print(text, end="" if text.endswith("\n") else "\n")
+        return EXIT_OK
+    _emit(args, {"sources": items})
+    return EXIT_OK
+
+
 def cmd_source(args) -> int:
     from jobos.context import open_context
     from jobos.persistence import retire_source
@@ -598,4 +657,5 @@ HANDLERS = {
     "cycle": cmd_cycle, "collect": cmd_collect, "analyze": cmd_analyze, "cv": cmd_cv, "serve": cmd_serve, "work": cmd_work,
     "notifications": cmd_notifications, "application": cmd_application,
     "import-browser-export": cmd_import_browser_export, "export-portal": cmd_export_portal, "source": cmd_source,
+    "sources": cmd_sources,
 }

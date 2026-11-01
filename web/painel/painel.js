@@ -125,13 +125,14 @@
   const DESC_STATUS = { full: 'completa', partial: 'parcial', missing: 'ausente', truncated: 'truncada' };
   const WORKPLACE = { onsite: 'presencial', hybrid: 'híbrido', remote: 'remoto', unknown: 'regime não informado' };
   const CONFIDENCE = { high: 'alta', medium: 'média', low: 'baixa' };
-  const IMPORTANCE = { mandatory: 'obrigatório', desirable: 'desejável', ambiguous: 'ambíguo' };
+  const IMPORTANCE = { mandatory: 'obrigatório', desirable: 'desejável', responsibility: 'responsabilidade', ambiguous: 'ambíguo' };
   const CATEGORY = {
     education: 'Formação', certification: 'Certificação', registration: 'Registro profissional', language: 'Idioma',
     license: 'Habilitação', software: 'Software', experience_years: 'Anos de experiência', domain: 'Domínio',
     truth_boundary: 'Limite de verdade do perfil', student_status: 'Estudante', other: 'Outro',
   };
   const ROLE_FIT = {
+    internship: 'Estágio: fora do nível profissional',
     natural: 'Função alinhada', off_profile: 'Função fora do perfil', off_profile_licensed: 'Profissão regulamentada',
     tier_x: 'Função eliminatória', level_below: 'Nível abaixo do perfil', unknown: 'Função não classificada',
   };
@@ -297,6 +298,11 @@
     const href = safeUrl(url);
     if (!href) return null;
     return el('a', { href, target: '_blank', rel: 'noopener noreferrer' }, label || 'Abrir página oficial', el('span', { class: 'sr-only', text: ' (abre em nova aba)' }));
+  }
+
+  function applyHref(data) {
+    const apply = (data && data.apply) || {};
+    return safeUrl(apply.apply_url) || (data.postings || []).map((p) => safeUrl(p.url)).find(Boolean) || null;
   }
 
   function badge(map, key, o) {
@@ -681,6 +687,14 @@
       out.push(callout('warn', '!', el('p', null, el('strong', { text: 'Atrasado. ' }),
         'O ciclo agendado mais recente não aparece como concluído. Verifique se o PC estava ligado e use Atualizar agora se precisar.')));
     }
+    const fresh = st.freshness || {};
+    if (fresh.banner || num(fresh.missed_slots) > 1) {
+      const times = Array.isArray(fresh.missed_slot_times) ? fresh.missed_slot_times.slice(0, 4) : [];
+      out.push(callout('bad', '!', el('p', null, el('strong', { text: 'Horários perdidos. ' }),
+        'O computador não cobriu ' + num(fresh.missed_slots) + ' horário(s) do agendador'
+        + (times.length ? ' (' + times.join(', ') + ')' : '') +
+        '. Isso acontece quando ele dorme. WakeToRun continua desligado.')));
+    }
 
     const cards = [];
 
@@ -735,6 +749,21 @@
       el('h4', { text: 'Preparação' }), prepRows.length ? kv(prepRows, 'kv-tight') : el('p', { class: 'muted', text: 'Nenhuma candidatura registrada.' }),
       el('h4', { text: 'Estágio seletivo' }), stageRows.length ? kv(stageRows, 'kv-tight') : el('p', { class: 'muted', text: 'Nenhum estágio registrado.' })));
     cards.push(cApps);
+
+    const pend = st.pendencias || {};
+    const pendItems = Array.isArray(pend.good_fit_without_application) ? pend.good_fit_without_application : [];
+    cards.push(card('Pendências',
+      kv([
+        ['Boa aderência sem envio', String(num(pend.good_fit_without_application_count))],
+        ['CV aguardando a sua revisão', String(num(pend.cv_awaiting_review))],
+        ['Legado a revisar', String(num(pend.legacy_to_review))],
+      ], 'kv-tight'),
+      el('p', { class: 'small muted', text: 'Gerar o currículo não envia a candidatura. Você envia no site oficial e confirma aqui.' }),
+      pendItems.length
+        ? el('ul', { class: 'list-bare' }, pendItems.map((j) => el('li', null,
+          el('a', { href: '#vaga/' + enc(j.job_id) }, (j.company_name || 'Empresa') + ' — ' + (j.title || '(sem título)')))))
+        : el('p', { class: 'muted', text: 'Nenhuma vaga de boa aderência sem envio nesta lista.' }),
+      num(pend.legacy_to_review) > 0 ? el('p', { class: 'small' }, el('a', { href: '#candidaturas' }, 'Revisar o legado')) : null));
 
     // Vagas
     const byListing = jobs.by_listing_state || {};
@@ -804,8 +833,12 @@
     }, 'Atualizar agora');
     const reloadBtn = el('button', { type: 'button', class: 'btn', on: { click: load } }, 'Recarregar dados');
     root.append(
-      viewHead('Visão geral', 'Situação do sistema neste momento.', el('div', { class: 'tags' }, cycleBtn, reloadBtn)),
-      callout('info', 'i', el('p', { text: 'Atualizar agora enfileira um ciclo de coleta. Ele roda em segundo plano no servidor local e pode levar vários minutos; o painel acompanha o andamento a cada 3 s, em qualquer seção.' })),
+      viewHead('Visão geral', 'Seu espaço para avaliar vagas e acompanhar candidaturas.', el('div', { class: 'tags' }, cycleBtn, reloadBtn)),
+      el('nav', { class: 'apollo-workflow', 'aria-label': 'Ações principais' },
+        ...[['01', 'Avaliar vagas', 'Compare os requisitos com a sua experiência.', '#vagas'],
+          ['02', 'Entrar nas plataformas', 'Abra a conta da empresa pelo Edge.', '#logins'],
+          ['03', 'Acompanhar envios', 'Consulte candidaturas e etapas de seleção.', '#candidaturas']].map(([n, title, help, href]) =>
+          el('a', { href }, el('span', { class: 'apollo-step', text: n }), el('span', { class: 'apollo-action', text: title }), el('span', { text: help })))),
       body);
     syncActionButtons();
     load();
@@ -938,6 +971,28 @@
     ];
   }
 
+  function renderLogins(root, arg, ctx) {
+    const body = el('div', { class: 'stack' });
+    root.append(viewHead('Logins e candidaturas', 'Entre nas plataformas pelo Edge e acompanhe o que o JOBOS consegue executar.'),
+      callout('info', 'i', el('p', { text: '1. Abra o portal no Edge. 2. Entre na sua conta (Candidato / Entrar / Sign in). 3. Volte a Vagas, confira a compatibilidade e gere o CV. 4. Envie na plataforma e registre a confirmação em Candidaturas.' })),
+      callout('warn', '!', el('p', { text: 'Envio automático: não implementado neste motor. Sessão do Edge: não verificada pelo JOBOS. Abrir o portal não comprova login nem candidatura. SuccessFactors pode exigir uma conta por empresa; entrar na SBM não confirma acesso às demais.' })), body);
+    fill(ctx, body, apiGet('/api/connections'), (data) => (data.connections || []).map((item) => {
+      const message = el('p', { class: 'small', role: 'status' });
+      const button = el('button', { class: 'btn', type: 'button', text: 'Entrar pelo Edge — ' + item.company });
+      button.addEventListener('click', async () => {
+        button.disabled = true;
+        try {
+          await apiPost('/api/connections/' + enc(item.source_id) + '/open', {});
+          message.textContent = 'Portal aberto. Faça o login na janela do Edge; a sessão não é verificada automaticamente.';
+        } catch (err) { message.textContent = err.message; }
+        finally { button.disabled = false; }
+      });
+      return el('section', { class: 'section' }, el('h3', { text: item.company }),
+        el('p', { text: item.platform + ' · sessão não verificada · envio pela plataforma' }),
+        el('div', { class: 'actions' }, button, extLink(item.url, 'Abrir portal no navegador')), message);
+    }), () => { root.replaceChildren(); renderLogins(root, arg, ctx); });
+  }
+
   function renderFontes(root, arg, ctx) {
     const body = el('div', { class: 'stack' });
     root.append(viewHead('Fontes', 'Saúde e resultado da última coleta de cada empresa cadastrada.'), body);
@@ -958,12 +1013,22 @@
     const published = (j.published_brt || 'desconhecida') + (j.published_date_precision === 'relative_estimate' ? ' (estimada)' : '');
     const link = extLink(j.url, 'Anúncio oficial');
     const flags = Array.isArray(j.flags) ? j.flags : [];
-    const score = analyzed
-      ? el('div', { class: 'job-score' },
-        el('span', { class: 'small muted', text: 'Nota' }),
-        isEmpty(j.fit_score) ? el('b', { class: 'score-none', text: 'sem nota' }) : el('b', { text: fmtNum(j.fit_score) }),
-        el('span', { class: 'small muted', text: 'cobertura ' + fmtPct(j.coverage) }))
-      : el('div', { class: 'job-score' }, el('b', { class: 'score-none', text: 'sem análise' }));
+    const score = el('details', { class: 'score-audit' });
+    const auditBody = el('div', { class: 'score-audit-body' });
+    score.append(el('summary', { text: 'Compatibilidade: ' + (isEmpty(j.fit_score) ? 'sem nota' : fmtNum(j.fit_score) + '%') + ' · ver critérios' }), auditBody);
+    let loaded = false;
+    score.addEventListener('toggle', async () => {
+      if (!score.open || loaded) return;
+      loaded = true;
+      auditBody.replaceChildren(el('p', { text: 'Carregando critérios e evidências…' }));
+      try {
+        const detail = await apiGet('/api/jobs/' + enc(j.job_id));
+        auditBody.replaceChildren(analysisSection(detail));
+      } catch (err) {
+        loaded = false;
+        auditBody.replaceChildren(el('p', { text: 'Não foi possível carregar: ' + err.message + '. Feche e abra para tentar novamente.' }));
+      }
+    });
 
     const titleLink = el('a', { class: 'job-title', href: '#vaga/' + enc(j.job_id) }, j.title || '(sem título)');
     titleLink.addEventListener('click', () => { jobsScroll = window.scrollY; });
@@ -971,7 +1036,8 @@
     return el('li', { class: 'job' },
       el('div', { class: 'job-top' },
         el('div', { class: 'job-main' }, el('div', { class: 'job-co', text: j.company_name }), titleLink),
-        score),
+        el('span', { class: 'small muted', text: 'cobertura ' + fmtPct(j.coverage) })),
+      score,
       el('div', { class: 'tags' },
         analyzed ? badge(DECISION, j.decision) : tagBadge('Sem análise', '?', 'mute'),
         badge(LISTING, j.listing_state),
@@ -1150,6 +1216,9 @@
     const events = data.application_events || [];
     const section = el('section', { class: 'section', 'aria-labelledby': 'sec-app' }, el('h3', { id: 'sec-app', text: 'Candidatura' }));
 
+    if (data.duplicate_warning) {
+      section.appendChild(callout('warn', '!', el('p', { text: data.duplicate_warning + ' O registro não é bloqueado.' })));
+    }
     if (cur === 'legacy_needs_review') section.appendChild(callout('warn', '!', el('p', { text: LEGACY_EXPLAIN })));
     if (!app) {
       section.appendChild(el('p', { class: 'muted', text: 'Esta vaga ainda não tem registro de candidatura. A primeira ação registrada cria o registro a partir do estado Descoberta.' }));
@@ -1200,18 +1269,34 @@
     // 1) Confirmar envio manual
     const dateIn = el('input', { type: 'date', id: 'act-date', value: todayLocal(), max: todayLocal() });
     const confNote = el('textarea', { id: 'act-conf-note', rows: '2', maxlength: '2000' });
+    const packets = Array.isArray(data.cv_packets) ? data.cv_packets : [];
+    const htmlArt = packets.find((p) => p.kind === 'cv_html');
+    const shaIn = el('input', { type: 'text', id: 'act-sha', maxlength: '64', autocomplete: 'off', spellcheck: 'false',
+      value: htmlArt && htmlArt.sha256 ? String(htmlArt.sha256) : '' });
+    const proofIn = el('textarea', { id: 'act-proof', rows: '2', maxlength: '500' });
     const confirmForm = makeAction({
-      title: 'Confirmar envio manual',
-      intro: 'Registre que VOCÊ enviou esta candidatura. Fica gravado como declaração sua, sem prova da plataforma.',
-      fields: [field('act-date', 'Data do envio', dateIn), field('act-conf-note', 'Observação (opcional)', confNote)],
+      title: 'Registrar envio',
+      intro: 'Use depois de enviar no site oficial. O registro fica como declaração sua, sem prova da plataforma.',
+      fields: [
+        field('act-date', 'Data do envio', dateIn),
+        field('act-conf-note', 'Observação (opcional)', confNote),
+        field('act-sha', 'SHA-256 do currículo usado (opcional)', shaIn, '64 caracteres hexadecimais do cv.html que você anexou. O painel liga esse arquivo a este envio.'),
+        field('act-proof', 'Texto de confirmação da plataforma (opcional)', proofIn, 'Código ou frase que o site mostrou depois do envio. O painel grava só o hash desse texto.'),
+      ],
       note: !submitted && !(PREP_TRANSITIONS[cur] || []).includes('submitted_manual')
         ? 'Pelas regras atuais, o estado ' + first(PREP, cur) + ' não permite confirmar envio; o servidor deve recusar. Mude o estado antes.' : null,
-      submitText: 'Confirmar envio manual',
+      submitText: 'Registrar envio',
       disabled: submitted,
       build: () => {
         if (!dateIn.value) return 'Informe a data do envio.';
         const body = { action: 'confirm', date: dateIn.value };
         if (confNote.value.trim()) body.reason = confNote.value.trim();
+        const sha = shaIn.value.trim().toLowerCase();
+        if (sha) {
+          if (!/^[0-9a-f]{64}$/.test(sha)) return 'O SHA do currículo precisa ter 64 caracteres hexadecimais.';
+          body.artifact_sha256 = sha;
+        }
+        if (proofIn.value.trim()) body.confirmation = proofIn.value.trim();
         return body;
       },
       confirmText: (p) => 'Confirmar que você enviou esta candidatura em ' + fmtDate(p.date) + '? Será registrado como declaração sua, não como prova da plataforma.',
@@ -1287,7 +1372,7 @@
   }
 
   function analysisSection(data) {
-    const section = el('section', { class: 'section', 'aria-labelledby': 'sec-an' }, el('h3', { id: 'sec-an', text: 'Análise de aderência' }));
+    const section = el('section', { class: 'section', 'aria-label': 'Análise de aderência' }, el('h3', { text: 'Análise de aderência' }));
     const an = data.analysis;
     if (!an) {
       section.appendChild(el('p', { class: 'muted', text: 'Sem análise para a versão atual desta vaga.' }));
@@ -1307,6 +1392,15 @@
       an.extraction ? ['Extração de requisitos', (an.extraction.method || 'n/d') + ', ' + reqs.length + ' requisito(s)'] : null,
     ]));
     section.appendChild(el('p', { class: 'footnote', text: SCORE_NOTE }));
+    const audit = an.score_audit;
+    if (audit) section.appendChild(kv([
+      ['Fórmula', audit.formula], ['Pontos obtidos / peso total', fmtNum(audit.earned_points) + ' / ' + fmtNum(audit.total_weight)],
+      ['Antes dos bloqueios', isEmpty(audit.before_gates) ? 'sem nota' : fmtNum(audit.before_gates) + '%'],
+      ['Teto aplicado', isEmpty(audit.cap) ? 'nenhum' : fmtNum(audit.cap) + '%'],
+      ['Motivo da decisão', audit.gate_reason],
+      ['Família principal / secundária', an.family ? (an.family.primary || 'fora das famílias') + ' / ' + (an.family.secondary || 'nenhuma') : 'não classificada'],
+      ['Regra de evidência', 'Atendido = 1; parcial = 0,5; lacuna/desconhecido = 0. Domínio relacionado não comprova experiência integral.'],
+    ]));
 
     // Preferências
     section.appendChild(el('h4', { text: 'Preferências' }));
@@ -1336,12 +1430,13 @@
     } else {
       section.appendChild(makeTable([
         { label: 'Requisito' }, { label: 'Importância' }, { label: 'Categoria' }, { label: 'Status' },
-        { label: 'Explicação' }, { label: 'Evidências' },
+        { label: 'Peso × valor = pontos' }, { label: 'Explicação' }, { label: 'Evidências' },
       ], reqs.map((r) => [
         el('span', { text: r.text || '' }),
         text(IMPORTANCE, r.importance),
         text(CATEGORY, r.category),
         badge(REQ_STATUS, r.status),
+        isEmpty(r.weight) ? 'n/d' : r.weight + ' × ' + r.value + ' = ' + (r.weight * r.value).toFixed(3),
         r.explanation || 'n/d',
         Array.isArray(r.evidence_refs) && r.evidence_refs.length
           ? el('ul', { class: 'list-bare' }, r.evidence_refs.map((e) => el('li', null,
@@ -1492,6 +1587,65 @@
     return sec;
   }
 
+  const CV_KIND = { cv_html: 'Currículo (HTML)', cv_data: 'Dados do currículo', cv_validation: 'Validação de fatos', cv_answers: 'Respostas', cv_coverage: 'Auditoria ATS: requisito → evidência → trecho do CV' };
+
+  function applyBadges(apply) {
+    const a = apply || {};
+    const out = [];
+    if (a.quick_apply === true) out.push(tagBadge('Gupy: candidatura rápida', '○', 'info'));
+    else if (a.quick_apply === false) out.push(tagBadge('Gupy: formulário completo', '○', 'mute'));
+    if (a.apply_mode && a.apply_mode !== 'unknown') out.push(tagBadge('Candidatura: ' + a.apply_mode, '○', 'info'));
+    if (a.whatsapp === true) out.push(tagBadge('WhatsApp no anúncio', '!', 'warn'));
+    (Array.isArray(a.apply_options) ? a.apply_options : []).forEach((opt) => {
+      if (opt && opt !== 'unknown' && opt !== 'apply_now') out.push(tagBadge(String(opt), '○', 'mute'));
+    });
+    return out;
+  }
+
+  function cvSection(data, onGenerate) {
+    const packets = Array.isArray(data.cv_packets) ? data.cv_packets : [];
+    const section = el('section', { class: 'section', 'aria-labelledby': 'sec-cv' },
+      el('h3', { id: 'sec-cv', text: 'Currículo' }));
+    section.appendChild(callout('info', 'i', el('p', { text: 'Revise o currículo. Candidatar abre o formulário oficial no seu navegador. Quem envia é você. Depois use Registrar envio.' })));
+    const kc = data.keyword_coverage;
+    if (kc) {
+      section.appendChild(el('p', { text: 'Termos do anúncio já no currículo: ' + num(kc.present_count) +
+        '. No perfil e não escolhidos: ' + num(kc.available_not_chosen_count) +
+        '. Ausentes do perfil: ' + num(kc.absent_from_profile_count) + '. ' + (kc.note || 'Nada foi inserido.') }));
+    }
+    if (packets.length) {
+      section.appendChild(el('ul', { class: 'list-bare' }, packets.map((p) => el('li', null,
+        el('a', { href: '/api/artifacts/' + enc(p.artifact_id) + '/download', target: '_blank', rel: 'noopener noreferrer' },
+          CV_KIND[p.kind] || p.kind),
+        el('span', { class: 'small muted', text: ' · ' + String(p.sha256 || '').slice(0, 12) })))));
+    } else {
+      section.appendChild(el('p', { class: 'muted', text: 'Nenhum currículo gerado para esta vaga.' }));
+    }
+    const msg = el('p', { class: 'form-msg', role: 'status', hidden: true });
+    const href = applyHref(data);
+    const applyBtn = href
+      ? el('a', { class: 'btn btn-primary', href, target: '_blank', rel: 'noopener noreferrer' }, 'Candidatar',
+        el('span', { class: 'sr-only', text: ' (abre o formulário oficial em nova aba)' }))
+      : el('span', { class: 'muted', text: 'Esta vaga não tem link de candidatura.' });
+    const btn = el('button', { type: 'button', class: 'btn' }, 'Gerar currículo');
+    btn.addEventListener('click', async () => {
+      msg.hidden = true;
+      btn.disabled = true;
+      btn.textContent = 'Gerando...';
+      try {
+        await onGenerate();
+      } catch (err) {
+        msg.className = 'form-msg form-msg-bad';
+        msg.textContent = err && err.message ? err.message : 'Não foi possível gerar o currículo.';
+        msg.hidden = false;
+        btn.disabled = false;
+        btn.textContent = 'Gerar currículo';
+      }
+    });
+    section.appendChild(el('div', { class: 'actions' }, applyBtn, btn, msg));
+    return section;
+  }
+
   function renderVaga(root, jobId, ctx) {
     if (!jobId) { location.hash = '#vagas'; return; }
     const backHash = lastListHash || '#vagas';
@@ -1514,13 +1668,18 @@
       title.textContent = job.title || '(sem título)';
       document.title = 'Painel JOBOS | ' + (job.title || 'Vaga');
       const official = (data.postings || []).map((p) => extLink(p.url, 'Abrir página oficial')).find(Boolean);
+      const apply = data.apply || {};
+      const applyLink = extLink(apply.apply_url, 'Abrir candidatura');
 
+      while (head.children.length > 2) head.removeChild(head.lastChild);
       head.appendChild(el('p', { class: 'muted', text: [job.company_name, job.location, job.workplace ? text(WORKPLACE, job.workplace) : null].filter(Boolean).join(' · ') }));
       head.appendChild(el('div', { class: 'tags' },
         listingBadge(job.listing_state),
         job.talent_pool ? tagBadge('Banco de talentos', '○', 'mute') : null,
         job.is_fixture ? tagBadge('Dado de teste (fixture)', '!', 'warn') : null,
-        official || null));
+        ...applyBadges(apply),
+        official || null,
+        applyLink || null));
 
       const hooks = {
         reload: async (flash) => {
@@ -1536,8 +1695,25 @@
       };
       let appSlot = applicationSection(data, null, hooks);
 
-      return [appSlot, supportSection(data), analysisSection(data), datesSection(job), postingsSection(data.postings || []),
-        descriptionSection(data), versionsSection(data), jobEventsSection(data.events || []), legacySection(data)].filter(Boolean);
+      async function generateCv() {
+        const res = await apiPost('/api/jobs/' + enc(job.job_id) + '/cv', {});
+        const html = (Array.isArray(res.artifacts) ? res.artifacts : []).find((a) => a.kind === 'cv_html');
+        if (html) {
+          const a = el('a', { href: '/api/artifacts/' + enc(html.artifact_id) + '/download', target: '_blank', rel: 'noopener noreferrer' });
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+        }
+        const kc = res.keyword_coverage;
+        announce('Currículo gerado. A candidatura não foi enviada.' + (kc
+          ? ' Termos já no currículo: ' + num(kc.present_count) + '. No perfil e não escolhidos: ' + num(kc.available_not_chosen_count) + '. Ausentes do perfil: ' + num(kc.absent_from_profile_count) + '.'
+          : ''));
+        load();
+      }
+
+      return [cvSection(data, generateCv), appSlot, supportSection(data), analysisSection(data), datesSection(job),
+        postingsSection(data.postings || []), descriptionSection(data), versionsSection(data),
+        jobEventsSection(data.events || []), legacySection(data)].filter(Boolean);
     }
   }
 
@@ -1795,6 +1971,7 @@
    * Roteamento por hash
    * ====================================================================== */
   const VIEWS = {
+    logins: ['Logins e candidaturas', renderLogins],
     visao: ['Visão geral', renderVisao],
     fontes: ['Fontes', renderFontes],
     vagas: ['Vagas', renderVagas],

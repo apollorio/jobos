@@ -23,7 +23,7 @@ SOFTWARE_ALIASES = {
     "sw_power_bi": ["power bi", "powerbi"],
     "sw_excel": ["excel", "pacote office", "ms office", "microsoft office", "office 365"],
     "sw_powerpoint": ["powerpoint", "power point"],
-    "sw_sap_rt": ["sap"],
+    "sw_sap_rt": ["sap rt"],
     "sw_sql": ["sql"],
     "sw_python": ["python"],
     "sw_typescript": ["typescript"],
@@ -67,6 +67,7 @@ class EvidenceIndex:
     corporate_years: float = 0.0
     management_years: float = 0.0
     boundaries: list[tuple[str, str]] = field(default_factory=list)      # (texto fold, pointer)
+    concepts: dict[str, list[EvidenceItem]] = field(default_factory=dict)
 
     def check(self) -> list[str]:
         """Pointers que não resolvem (deveria ser vazio)."""
@@ -101,6 +102,20 @@ def _parse_period(period) -> tuple[dt.date, dt.date] | None:
 def build_index(profile: Profile) -> EvidenceIndex:
     d = profile.data
     idx = EvidenceIndex(profile)
+    from jobos.matching.families import profiles, concepts
+    # Só campos afirmativos de experiências profissionais. Nunca varrer truth_boundaries/avoid como provas.
+    roots = dict.fromkeys(key for f in profiles().values() for key in f["preferred_evidence"])
+    for key in roots:
+        base = "/experience_nodes/" + key.replace(".", "/")
+        if not profile.resolves(base):
+            continue
+        value = profile.pointer(base)
+        for i, fact in enumerate(value if isinstance(value, list) else []):
+            if not isinstance(fact, str):
+                continue
+            for canonical in concepts(fact):
+                idx.concepts.setdefault(canonical, []).append(EvidenceItem(
+                    f"{base}/{i}", fact, "met", "same_skill_professional; priority=90", "professional_fact"))
     for group, items in (d.get("software_systems_tree") or {}).items():
         if group == "rules" or not isinstance(items, dict):
             continue

@@ -136,6 +136,70 @@ def source_health(con: sqlite3.Connection, registry: Registry) -> list[dict]:
     return out
 
 
+def freshness(con: sqlite3.Connection, settings: Settings, now: dt.datetime | None = None) -> dict:
+    """Horas desde o último ciclo completo e horários do agendador sem nenhuma execução.
+
+    Um horário conta como coberto se houve ciclo normal complete ou partial começando
+    até 20 min antes dele e menos de 3 h depois. O banner fica vermelho com mais de um horário perdido.
+    """
+    now_utc = now or utcnow()
+    if now_utc.tzinfo is None:
+        now_utc = now_utc.replace(tzinfo=dt.timezone.utc)
+    now_brt = now_utc.astimezone(BRT)
+    last = con.execute("""SELECT finished_at FROM runs WHERE mode='normal' AND status='complete'
+                          ORDER BY finished_at DESC LIMIT 1""").fetchone()
+    last_at = parse_instant(last["finished_at"]) if last and last["finished_at"] else None
+    hours = None if last_at is None else round((now_utc - last_at).total_seconds() / 3600, 1)
+    slots = schedule_slots(settings)
+    missed: list[str] = []
+    if slots:
+        window_start = last_at.astimezone(BRT) if last_at else now_brt - dt.timedelta(days=7)
+        window_start = max(window_start, now_brt - dt.timedelta(days=7))
+        rows = con.execute("""SELECT started_at FROM runs WHERE mode='normal' AND status IN ('complete','partial')
+                              AND started_at >= ?""",
+                           ((window_start - dt.timedelta(hours=1)).astimezone(dt.timezone.utc).isoformat(),)).fetchall()
+        starts = [t for t in (parse_instant(r["started_at"]) for r in rows) if t]
+        day = window_start.date()
+        while day <= now_brt.date():
+            for slot_time in slots:
+                slot = dt.datetime.combine(day, slot_time, tzinfo=BRT)
+                if slot <= window_start or now_brt - slot < dt.timedelta(minutes=45):
+                    continue
+                covered = any(slot - dt.timedelta(minutes=20) <= s.astimezone(BRT) < slot + dt.timedelta(hours=3)
+                              for s in starts)
+                if not covered:
+                    missed.append(slot.strftime("%Y-%m-%d %H:%M"))
+            day += dt.timedelta(days=1)
+    return {"hours_since_complete": hours, "last_complete_at": last_at.isoformat() if last_at else None,
+            "missed_slots": len(missed), "missed_slot_times": missed[:12], "banner": len(missed) > 1}
+
+
+def sources_markdown(items: list[dict]) -> str:
+    """Tabela de cobertura gerada da saúde ao vivo. Substitui a tabela escrita à mão."""
+    lines = [
+        "# Cobertura das fontes",
+        "",
+        "Gerado por `jobos sources --markdown` a partir de `status.source_health`. Não edite à mão.",
+        "Falha ou leitura parcial nunca encerra vaga.",
+        "",
+        "| source_id | empresa | plataforma | leitor | ligado | saúde | última leitura | ativas |",
+        "|---|---|---|---|---|---|---|---|",
+    ]
+    for s in items:
+        lines.append("| {source_id} | {company_name} | {platform} | {adapter} | {enabled} | {health} | {last} | {active_jobs} |".format(
+            source_id=s.get("source_id") or "",
+            company_name=(s.get("company_name") or "").replace("|", "/"),
+            platform=s.get("platform") or "",
+            adapter=s.get("adapter") or "—",
+            enabled="sim" if s.get("enabled") else "não",
+            health=s.get("health") or "",
+            last=(s.get("last_finished_at") or s.get("last_status") or "—"),
+            active_jobs=s.get("active_jobs", 0),
+        ))
+    lines.append("")
+    return "\n".join(lines)
+
+
 def build_status(con: sqlite3.Connection, settings: Settings, registry: Registry) -> dict:
     def count(sql, *a):
         return con.execute(sql, a).fetchone()[0]
@@ -165,6 +229,8 @@ def build_status(con: sqlite3.Connection, settings: Settings, registry: Registry
     changed_24h = count("""SELECT COUNT(*) FROM job_events WHERE kind='job.changed' AND alertable=1
                            AND occurred_at >= ?""", (utcnow() - dt.timedelta(hours=24)).isoformat())
     notif = settings.notifications
+    from jobos.applications.service import pendencias
+    fresh = freshness(con, settings)
     return {
         "generated_at": utcnow().isoformat(timespec="seconds"),
         "database": str(settings.paths.db),
@@ -190,6 +256,8 @@ def build_status(con: sqlite3.Connection, settings: Settings, registry: Registry
             "SELECT import_id, kind, sha256, status, finished_at FROM imports ORDER BY started_at")],
         "relations_suggested": count("SELECT COUNT(*) FROM job_relations WHERE status='suggested'"),
         "ai": {"enabled": bool((settings.matching.get("ai") or {}).get("enabled"))},
+        "freshness": fresh,
+        "pendencias": pendencias(con),
     }
 
 

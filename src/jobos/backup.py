@@ -23,11 +23,18 @@ def make_backup(ctx: Context, dest_root: Path | None = None, label: str = "manua
     cfg_dir = dest / "config"
     shutil.copytree(ctx.paths.config, cfg_dir)
     files = {str(p.relative_to(dest)).replace("\\", "/"): sha256_file(p) for p in cfg_dir.rglob("*") if p.is_file()}
+    artifact_files: dict[str, str] = {}
+    art = ctx.paths.artifacts
+    if art.is_dir():
+        dest_art = dest / "artifacts"
+        shutil.copytree(art, dest_art)
+        artifact_files = {str(p.relative_to(dest)).replace("\\", "/"): sha256_file(p)
+                          for p in dest_art.rglob("*") if p.is_file()}
     live_counts = table_counts(ctx.con, KEY_TABLES)
     verify = verify_restore(dest / "jobos.sqlite3", live_counts)
     manifest = {"created_at": iso(), "label": label, "database": snap, "config_files": files,
-                "live_counts": live_counts, "restore_check": verify,
-                "note": "artefatos referenciados (data/artifacts) devem ser copiados junto quando existirem"}
+                "artifact_files": artifact_files, "live_counts": live_counts, "restore_check": verify,
+                "note": "data/artifacts vai junto, com SHA-256 por arquivo"}
     (dest / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
     return {"path": str(dest), **manifest}
 

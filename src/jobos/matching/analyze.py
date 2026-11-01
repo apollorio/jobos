@@ -106,6 +106,8 @@ def _prefix(t: str, terms) -> bool:
 
 def role_fit(title: str) -> dict:
     t = fold(title)
+    if re.search(r"\b(?:estagio|estagiari[oa]s?|internship|intern|interns|aprendiz|apprentice)\b", t):
+        return {"label": "internship", "reason": "estágio/aprendizagem fora do nível profissional do perfil; excluído da seleção automática"}
     if _prefix(t, ROLE_LICENSED):
         return {"label": "off_profile_licensed", "reason": "profissão regulamentada fora da formação do perfil"}
     if _prefix(t, ROLE_TIER_X):
@@ -148,8 +150,8 @@ def evaluate(req: Requirement, idx: EvidenceIndex) -> Evaluated:
                              f"Lacuna: {why}.")
     # 2) formação (só com pista de grau; "engenharia de software" sozinha não é formação)
     if _has(t, ["cursando", "estudante", "enrolled", "currently studying", "matriculado", "formatura prevista"]):
-        return Evaluated(req, "student_status", "unknown", [],
-                         "Vaga para estudante/estágio; perfil tem graduação concluída. Revisar se faz sentido.")
+        return Evaluated(req, "student_status", "gap", [],
+                         "Matrícula atual exigida não comprovada; graduação concluída não comprova vínculo de estudante.")
     if _has(t, ["graduacao", "graduado", "graduada", "formacao", "formado", "formada", "bacharel", "bacharelado",
                 "bachelor", "bachelor's", "degree", "ensino superior", "nivel superior", "superior completo",
                 "curso superior", "curso tecnico", "formacao tecnica", "tecnico em", "tecnologo", "graduate in",
@@ -186,18 +188,6 @@ def evaluate(req: Requirement, idx: EvidenceIndex) -> Evaluated:
                                                        "label": "CNH B"}], f"Perfil registra CNH B; vaga pede {cat.group(1).upper()}.")
         return Evaluated(req, "license", "met", [{"pointer": "/mobility_and_preferences/drivers_license", "label": "CNH B"}],
                          "CNH B registrada.")
-    # 6) software
-    found = []
-    for alias, sid in idx.software_terms:
-        if len(alias) >= 2 and _has(t, [alias]) and sid not in [f[0] for f in found]:
-            found.append((sid, idx.software[sid]))
-    if found:
-        statuses = [f[1].status for f in found]
-        order = {"gap": 0, "unknown": 1, "partial": 2, "met": 3}
-        any_of = _has(t, ["ou", "or"]) or "/" in req.text
-        status = max(statuses, key=order.get) if any_of else min(statuses, key=order.get)
-        expl = "; ".join(f"{f[1].label}: {f[1].qualifier or 'uso profissional comprovado'}" for f in found)
-        return Evaluated(req, "software", status, [_ev(f[1]) for f in found], expl)
     # 7) anos de experiência
     m = re.search(r"(\d{1,2})\s*\+?\s*(?:anos|years|ano|year)", t)
     if m and _has(t, ["experiencia", "experience", "atuacao", "vivencia"]):
@@ -217,17 +207,46 @@ def evaluate(req: Requirement, idx: EvidenceIndex) -> Evaluated:
             return Evaluated(req, "experience_years", "gap", [{"pointer": ptr, "label": "experiência corporativa"}],
                              f"Pede {need} anos; experiência corporativa documentada ≈ {have:.1f} anos.")
         if domains and any(d in HIGH_DOMAINS for d in domains):
-            return Evaluated(req, "experience_years", "met",
+            return Evaluated(req, "experience_years", "partial",
                              [{"pointer": f"/domain_tree/{d}", "label": d} for d in domains],
-                             f"{have:.1f} anos de experiência corporativa nos domínios {', '.join(domains)}.")
+                             f"{have:.1f} anos corporativos totais; tempo específico no domínio solicitado não comprovado automaticamente.")
         return Evaluated(req, "experience_years", "partial", [{"pointer": ptr, "label": "experiência corporativa"}],
                          f"Tempo atendido ({have:.1f} anos), mas o domínio exigido não foi verificado automaticamente.")
+    # 6) software
+    if _has(t, ["sap ps", "sap modulo ps", "sap module ps", "primavera risk analysis"]):
+        return Evaluated(req, "software", "unknown", [],
+                         "Ferramenta específica não comprovada; SAP RT não equivale a SAP PS, P6 não equivale a Risk Analysis.")
+    found = []
+    for alias, sid in idx.software_terms:
+        if len(alias) >= 2 and _has(t, [alias]) and sid not in [f[0] for f in found]:
+            found.append((sid, idx.software[sid]))
+    if found:
+        statuses = [f[1].status for f in found]
+        order = {"gap": 0, "unknown": 1, "partial": 2, "met": 3}
+        any_of = _has(t, ["ou", "or"]) or "/" in req.text
+        status = max(statuses, key=order.get) if any_of else min(statuses, key=order.get)
+        expl = "; ".join(f"{f[1].label}: {f[1].qualifier or 'uso profissional comprovado'}" for f in found)
+        return Evaluated(req, "software", status, [_ev(f[1]) for f in found], expl)
     # 8) domínio
+    from jobos.matching.families import concepts, ALIASES
+    canonical = concepts(req.text)
+    matched = {c: idx.concepts[c][0] for c in canonical if c in idx.concepts}
+    if matched:
+        residue = t
+        for c in canonical:
+            for alias in sorted(ALIASES[c], key=len, reverse=True):
+                residue = re.sub(r"(?<![a-z0-9])" + re.escape(fold(alias)) + r"(?![a-z0-9])", " ", residue)
+        residue = re.sub(r"\b(experiencia|experience|conhecimento|knowledge|em|in|with|com|e|and|de|do|da|the|required|obrigatorio)\b", " ", residue)
+        atomic = not re.search(r"[a-z0-9]", residue)
+        complete = len(matched) == len(canonical) and atomic
+        return Evaluated(req, "professional_fact", "met" if complete else "partial",
+                         [_ev(item) for item in matched.values()],
+                         "Fatos profissionais encontrados: " + "; ".join(item.label for item in matched.values()) +
+                         ("." if complete else ". Escopo restante não comprovado automaticamente."))
     domains = [k for k, terms in DOMAIN_TERMS.items() if _has(t, terms)]
     if domains and idx.profile.resolves(f"/domain_tree/{domains[0]}"):
         high = [d for d in domains if d in HIGH_DOMAINS]
-        status = "met" if high and _has(t, ["experiencia", "experience", "vivencia", "atuacao", "conhecimento",
-                                             "knowledge", "background"]) else "partial"
+        status = "partial"  # afinidade de domínio não comprova o escopo integral de uma frase
         return Evaluated(req, "domain", status, [{"pointer": f"/domain_tree/{d}", "label": d} for d in domains],
                          f"Domínio relacionado no perfil: {', '.join(domains)}." +
                          ("" if status == "met" else " Verificar o escopo exato do requisito."))
@@ -281,8 +300,12 @@ def score(evals: list[Evaluated], cfg: dict) -> dict:
             points += weight * float(vals[e.status])
     coverage = round(evaluable / total, 3) if total else 0.0
     raw = (points / evaluable * 100) if evaluable else None
-    fit = round(raw, 1) if raw is not None and coverage >= float(cfg.get("min_coverage_for_score", 0.6)) else None
-    return {"coverage": coverage, "fit_score": fit, "known_items_score": round(raw, 1) if raw is not None else None}
+    fit = round(points / total * 100, 1) if total and coverage >= float(cfg.get("min_coverage_for_score", 0.6)) else None
+    return {"coverage": coverage, "fit_score": fit, "known_items_score": round(raw, 1) if raw is not None else None,
+            "audit": {"total_weight": total, "evaluated_weight": evaluable, "earned_points": points,
+                      "weights": w, "status_values": {**vals, "unknown": 0.0},
+                      "formula": "100 × soma(peso × valor) / soma de TODOS os pesos; desconhecido vale zero",
+                      "minimum_coverage": float(cfg.get("min_coverage_for_score", 0.6))}}
 
 
 def analyze_version(con: sqlite3.Connection, job: sqlite3.Row, version: sqlite3.Row, profile, idx: EvidenceIndex,
@@ -294,7 +317,7 @@ def analyze_version(con: sqlite3.Connection, job: sqlite3.Row, version: sqlite3.
     evals = [evaluate(r, idx) for r in reqs]
     sc = score(evals, cfg)
     hard_gap = [e for e in evals if e.req.importance == "mandatory" and e.status == "gap"
-                and e.category in ("education", "truth_boundary", "license", "certification")]
+                and e.category in ("education", "truth_boundary", "license", "certification", "student_status")]
     th = cfg.get("decision_thresholds") or {}
     if len(description) < MIN_DESCRIPTION:
         decision, why = "insufficient_data", "Descrição ausente ou curta; análise parcial."
@@ -311,12 +334,25 @@ def analyze_version(con: sqlite3.Connection, job: sqlite3.Row, version: sqlite3.
     else:
         decision, why = "needs_review", "Aderência intermediária."
     role = role_fit(job["title"] or "")
+    uncapped_score = sc["fit_score"]
+    if role["label"] == "internship":
+        decision, why = "not_eligible", role["reason"]
+        sc["fit_score"] = 0.0
     if role["label"] == "off_profile_licensed":
         decision, why = "not_eligible", f"Função: {role['reason']}."
     elif role["label"] == "off_profile" and decision in ("good_fit", "needs_review", "insufficient_data"):
         decision, why = "weak_fit", f"Função: {role['reason']} (requisitos genéricos não compensam)."
     elif role["label"] in ("tier_x", "level_below") and decision == "good_fit":
         decision, why = "needs_review", f"Função: {role['reason']}."
+    cap = {"not_eligible": 0, "weak_fit": 39}.get(decision)
+    if role["label"] in ("tier_x", "level_below"):
+        cap = min(cap if cap is not None else 59, 59)
+    if cap is not None and sc["fit_score"] is not None:
+        sc["fit_score"] = min(sc["fit_score"], cap)
+    if decision == "good_fit" and any(e.req.importance == "mandatory" and e.status != "met" for e in evals):
+        decision, why = "needs_review", "Há requisito obrigatório parcial, desconhecido ou não atendido; revisão necessária."
+    from jobos.matching.families import classify
+    family = classify(job["title"] or "", [r.text for r in reqs])
     confidence = "high" if sc["coverage"] >= 0.8 and len(reqs) >= 5 else "medium" if sc["coverage"] >= 0.6 else "low"
     prefs = evaluate_preferences(job, version, settings.preferences)
     prefs["role_fit"] = role
@@ -331,8 +367,14 @@ def analyze_version(con: sqlite3.Connection, job: sqlite3.Row, version: sqlite3.
         "policy_version": cfg.get("policy_version", "matching-v1"), "method": "deterministic",
         "decision": decision, "decision_reason": why, "fit_score": sc["fit_score"], "coverage": sc["coverage"],
         "known_items_score": sc["known_items_score"], "confidence": confidence, "extraction": meta,
+        "family": family, "eligibility": {"eligible": decision != "not_eligible", "requires_review": decision != "good_fit",
+                                          "hard_gaps": [e.req.text for e in hard_gap]},
+        "score_audit": {**sc["audit"], "before_gates": uncapped_score, "cap": cap,
+                        "gate_reason": why, "final_score": sc["fit_score"]},
         "requirements": [{"requirement_id": f"req-{i + 1}", "text": e.req.text, "importance": e.req.importance,
                           "category": e.category, "requirement_source": e.req.source, "status": e.status,
+                          "weight": float((cfg.get("weights") or {}).get(e.req.importance, 1)),
+                          "value": float((cfg.get("status_values") or {}).get(e.status, 0)),
                           "evidence_refs": e.evidence, "explanation": e.explanation} for i, e in enumerate(evals)],
         "strengths": [e.req.text for e in evals if e.status == "met"][:8],
         "gaps": [e.req.text for e in evals if e.status == "gap"][:8],

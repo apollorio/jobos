@@ -32,6 +32,13 @@ SECTIONS = (("description", "Descrição da vaga"), ("responsibilities", "Respon
             ("prerequisites", "Requisitos e qualificações"), ("relevantExperiences", "Informações adicionais"))
 
 
+def quick_apply_value(node: dict | None) -> bool | str:
+    """`quickApply` do JSON da Gupy. Ausente ou de outro tipo vira `unknown` (não vira False)."""
+    if isinstance(node, dict) and isinstance(node.get("quickApply"), bool):
+        return node["quickApply"]
+    return "unknown"
+
+
 def _workplace(stub: dict) -> str | None:
     wt = ((stub.get("workplace") or {}).get("workplaceType") or stub.get("workplaceType") or "").lower()
     if stub.get("isRemoteWork") or wt == "remote":
@@ -169,7 +176,7 @@ def collect_tenant(ctx: CollectContext) -> SourceBatch:
                 department=stub.get("department") or None, talent_pool=stub.get("type") in TALENT_TYPES,
                 listing_signature=signature(stub.get("title"), location, stub.get("department"), stub.get("type")),
                 raw={"tenant": tenant, "type": stub.get("type"), "careerPageId": cp.get("id"),
-                     "companyId": cp.get("companyId")})
+                     "companyId": cp.get("companyId"), "quickApply": quick_apply_value(stub)})
             tenant_obs.append(obs)
         # Enriquecimento em lote: uma chamada ao portal cobre descrição e data de todas as vagas do tenant
         portal_by_id: dict[str, dict] = {}
@@ -181,6 +188,8 @@ def collect_tenant(ctx: CollectContext) -> SourceBatch:
                 batch.warnings.append(f"{tenant}: portal indisponível para enriquecimento ({str(e)[:80]}); usando páginas")
         for obs in tenant_obs:
             row = portal_by_id.get(obs.external_id)
+            if row and isinstance(row.get("quickApply"), bool):
+                obs.raw["quickApply"] = row["quickApply"]
             if row and row.get("publishedDate"):
                 obs.published_raw, obs.published_source = row["publishedDate"], "gupy_portal:publishedDate"
             if not wants_detail(ctx, obs, ttl):

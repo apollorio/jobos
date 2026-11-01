@@ -11,6 +11,7 @@ pertence ao cliente HTTP/execução, não ao adapter).
 from __future__ import annotations
 
 import re
+from urllib.parse import urlsplit
 
 from jobos.collectors.base import (Blocked, CollectContext, FormatChanged, JobObservation, SourceBatch, SourceFailure,
                                    fail, new_batch, signature, wants_detail)
@@ -22,6 +23,27 @@ BASE = "https://atracaodetalentos.totvs.app"
 ITEM_RE = re.compile(r'<div(?=[\s>])[^>]*class="(?:[^"]*\s)?index__job-opportunities__grid__item(?:\s[^"]*)?"[^>]*>', re.I)
 NO_OPENINGS_RE = re.compile(
     r"nenhuma vaga|n[aã]o h[aá] vagas|n[aã]o possui vagas|sem vagas abertas|no open positions|no job openings|no vacancies", re.I)
+APPLY_HOSTS = {"atracaodetalentos.totvs.app"}
+HREF_RE = re.compile(r'<a\b[^>]*\bhref="([^"]+)"[^>]*>', re.I)
+SIMPLE_RE = re.compile(r"candidatura simplificada", re.I)
+WA_RE = re.compile(r"wa\.me/|api\.whatsapp\.com|whatsapp\.com/send", re.I)
+
+
+def detect_apply(html: str) -> dict:
+    """Modo de candidatura lido dos links do HTML, antes de virar texto. Fora da allowlist não vira apply_url."""
+    html = html or ""
+    mode, apply_url = "unknown", None
+    for href in HREF_RE.findall(html):
+        if "job-opportunity-application/" not in href:
+            continue
+        url = href if href.startswith("http") else f"{BASE}{href if href.startswith('/') else '/' + href}"
+        host = (urlsplit(url).hostname or "").lower()
+        if host in APPLY_HOSTS:
+            mode, apply_url = "central_candidato", url.split("#", 1)[0]
+            break
+    if mode == "unknown" and SIMPLE_RE.search(html):
+        mode = "simplified"
+    return {"apply_mode": mode, "apply_url": apply_url, "whatsapp": bool(WA_RE.search(html))}
 
 
 def _attr(tag: str, name: str) -> str:
@@ -88,6 +110,7 @@ def _details(ctx: CollectContext, batch: SourceBatch) -> None:
         except (FormatChanged, Blocked, SourceFailure) as e:
             batch.warnings.append(f"detalhe {obs.external_id}: {getattr(e, 'code', 'erro')}: {str(e)[:120]}")
             continue
+        obs.raw.update(detect_apply(html))
         text, status, orig, note = bounded(html_to_text(html))
         obs.description, obs.description_status = text, status
         obs.original_length, obs.truncation_note = orig, note

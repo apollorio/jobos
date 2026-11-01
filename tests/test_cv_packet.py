@@ -78,7 +78,10 @@ def test_two_jobs_get_honestly_different_pointered_cv(ctx, jobs, tmp_path):
     assert "BOSIET" in certs_b and "reciclagem pendente" in certs_b
     assert not any("BOSIET" in ln["text"] for ln in da["credentials"]["certifications"])
     html_a = _read(a, "cv.html").decode("utf-8")
-    assert "Planner Offshore" in html_a and "Gerado localmente pelo JOBOS" in html_a
+    assert "Planner Offshore" in html_a
+    assert "Gerado localmente pelo JOBOS" not in html_a
+    assert "Pacote local para:" not in html_a
+    assert "não significa candidatura enviada" not in html_a
 
 
 def test_requirement_text_and_numbers_never_leak_into_cv(ctx, jobs, tmp_path):
@@ -137,7 +140,7 @@ def test_t29_in_development_skills_keep_qualifier_and_are_not_professional(ctx, 
     html = _read(r, "cv.html").decode("utf-8")
     sect = html.index("Em desenvolvimento e projetos independentes")
     assert "Oracle Primavera P6 (em desenvolvimento)" in html[sect:]
-    assert "Primavera" not in html[html.index("<h2>Competências</h2>"):sect]
+    assert "Primavera" not in html[html.index("<h2>Ferramentas</h2>"):sect]
 
 
 def test_t29_guard_rejects_personal_project_in_professional_section_and_unqualified_mentions(ctx):
@@ -226,15 +229,15 @@ def test_master_json_and_application_state_unchanged(ctx, jobs, tmp_path):
 def test_artifacts_table_registration_is_idempotent(ctx, jobs, tmp_path):
     out = tmp_path / "out"
     r = build_packet(ctx, jobs["planner"], out_root=out)
-    assert r.registered and len(r.artifact_ids) == 5
+    assert r.registered and len(r.artifact_ids) == 6
     rows = ctx.con.execute("SELECT * FROM artifacts WHERE job_id=?", (jobs["planner"],)).fetchall()
-    assert {x["kind"] for x in rows} == {"cv_html", "cv_data", "cv_answers", "cv_validation", "cv_manifest"}
+    assert {x["kind"] for x in rows} == {"cv_html", "cv_data", "cv_answers", "cv_validation", "cv_manifest", "cv_coverage"}
     for x in rows:
         assert x["application_id"] is None
         assert hashlib.sha256((out / x["rel_path"]).read_bytes()).hexdigest() == x["sha256"]
         assert ".." not in x["rel_path"] and not x["rel_path"].startswith("/")
     build_packet(ctx, jobs["planner"], out_root=out)
-    assert ctx.con.execute("SELECT COUNT(*) FROM artifacts").fetchone()[0] == 5
+    assert ctx.con.execute("SELECT COUNT(*) FROM artifacts").fetchone()[0] == 6
 
 
 def test_default_output_goes_to_data_artifacts(ctx, jobs):
@@ -268,7 +271,10 @@ def test_render_is_self_contained_and_escapes_all_fields():
     for raw in ("<b>N</b>", "<img", "<script>", "R<", "C>", "<co>", "</title><script>"):
         assert raw not in html
     assert "&lt;b&gt;N&lt;/b&gt;" in html and "https://a.b/?q=&quot;1&quot;&amp;r=&lt;2&gt;" in html
-    assert "Gerado localmente pelo JOBOS — salve como PDF pelo navegador" in html
+    assert "Gerado localmente pelo JOBOS" not in html
+    assert "Pacote local para:" not in html
+    assert "não significa candidatura enviada" not in html
+    assert "salve como PDF" not in html
     assert "<style>" in html and "@page" in html and "<script" not in html and "<a " not in html
     assert html.count("<h1>") == 1 and "<h2>" in html
 

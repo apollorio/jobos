@@ -137,3 +137,23 @@ Decisão: antes de separar seções, `extract()` remove `script`/`style`/`iframe
 Consequência: no próximo ciclo real, todas as vagas são reanalisadas em `matching-v7`, e as análises v6 ficam como histórico. Como o banco real não tem HTML nem instrução nas descrições, os requisitos extraídos não devem mudar. Uma linha legítima que use esses termos (por exemplo "recomende… candidatura") também é descartada; essa perda é aceita.
 Validação: `test_t42_injected_ad_does_not_change_analysis_beyond_matching` sem xfail; `test_html_and_agent_instructions_are_not_requirements`. O controle `test_t42_injected_instruction_cannot_force_decision` passou a usar um anúncio fora do perfil, porque o anúncio limpo do fixture já é `good_fit` com nota 100 pelos próprios requisitos.
 Reversão: voltar `requirements.py` e `policy_version: matching-v6`. As análises v6 continuam no banco.
+
+## DEC-023: Quatro fontes passam a usar o leitor que de fato publica a vaga
+
+Estado: aceito para o registro do leitor. Não autoriza coleta em massa nesta entrega e não aceita a DEC-022.
+Contexto: `aker_site_json`, `airswift_hubspot`, `sage_frecruit` e `oracle_ce` já existiam e tinham teste offline, mas não estavam em `collectors/registry.py`. Aker e Airswift liam SmartRecruiters, Trident lia um Workable vazio e ABS aparecia sem leitor. O painel mostrava "ok" ou "sem leitor" sem olhar o quadro em que a pessoa se candidata.
+Decisão: estes `source_id` permanecem e passam a apontar para o leitor real.
+
+| source_id | leitor | plataforma | params |
+|---|---|---|---|
+| aker-smart | aker_site_json | successfactors | list_url do site, sf_company akersoluti |
+| airswift-smart | airswift_hubspot | hubspot | location Brazil |
+| trident-workable | sage_frecruit | sage_frecruit | base do Salesforce Sites, site_path /recruit, country Brazil |
+| abs-oracle | oracle_ce | oracle_ce | base https, site CX_1, location_term Brazil |
+
+O `scope_id` muda porque plataforma, leitor e params entram no hash (DEC-007). Vagas já gravadas no quadro antigo continuam ativas até uma pessoa encerrá-las. Ausência no quadro novo não fecha o quadro antigo. Esta decisão não substitui a DEC-003 para as outras fontes: cada fonte segue com um leitor principal.
+Motivo: o próximo ciclo real precisa ler o anúncio certo. Registrar o leitor não envia candidatura.
+Alternativas descartadas: apagar as vagas antigas no ato do registro; criar source_id novos e esconder os antigos; coletar ao vivo nesta entrega.
+Consequência: o próximo ciclo agendado chama esses quatro sites. `cycle.max_minutes` 45 limita o despacho. Falha de leitura aparece como falha, em vez de um "ok" do quadro errado.
+Validação: `get_adapter` resolve os quatro nomes sem rede; a suíte usa `--fixtures` e não chama esses sites.
+Reversão: devolver `primary_adapter` e `params` anteriores em `config/sources.yaml` e tirar as quatro chaves de `ADAPTERS`. As vagas novas, se o ciclo já tiver rodado, ficam ativas até revisão humana.

@@ -1,0 +1,27 @@
+ENG_PLANNING:
+  headline: ENGENHEIRO DE PLANEJAMENTO & CONTROLE DE PROJETOS
+  title_terms: [planejamento, planning, planner, project controls]
+  domains: [planning_data_performance, project_management_project_controls, commercial_contract_management]
+  core_concepts: [schedule, baseline, critical_path, wbs, physical_progress, physical_financial_progress, plan_vs_actual, forecast, lookahead, s_curve, kpi, deviation, risk, action_followup, cost, measurement, reporting]
+  tools_core: [ms_project, excel, power_bi]
+  tools_conditional: [primavera_p6, primavera_risk_analysis, sap_ps, epm]
+  preferred_evidence: [exp_vanoord.planning_controls, exp_vanoord.performance_kpis, exp_vanoord.commercial_contractual, exp_vanoord.documentation]
+  forbidden_upgrades: {primavera_p6: professional_expert, primavera_risk_analysis: any_experience, sap_ps: any_experience}
+ENG_OPERATIONS:
+  headline: ENGENHEIRO DE OPERAÇÕES MARÍTIMAS & OFFSHORE
+  title_terms: [operacoes, operations, vessel superintendent, nautical, nauticas]
+  domains: [naval_marine_offshore, logistics_materials_suppliers, hseq_emergency_response]
+  core_concepts: [offshore_operations, marine_operations, vessel_shore, operational_readiness, resource_coordination, mobilization, logistics, materials, suppliers, simops, hseq, procedures, inspections, incident_response, corrective_actions, kpi, downtime, client_interface, vessel_master_interface]
+  tools_core: [excel]
+  tools_conditional: [pms, cmms, class, flag, dry_dock, crewing, tanker_offloading, dp, bwts, sire]
+  preferred_evidence: [exp_vanoord.marine_operations, exp_vanoord.vessel_shore, exp_vanoord.hseq, exp_vanoord.erc.real_response, exp_vanoord.inspections.activities, exp_ctank_analyst.operations]
+  forbidden_upgrades: {pms: ownership, cmms: ownership, class: ownership, flag: ownership, tanker_offloading: any_experience}
+ENG_PROJECT:
+  headline: ENGENHEIRO DE PROJETOS | PROJECT MANAGEMENT
+  title_terms: [projetos, project engineer, project manager, project coordinator, package]
+  domains: [project_management_project_controls, commercial_contract_management, planning_data_performance]
+  core_concepts: [scope, schedule, cost, risk, stakeholders, engineering_deliverables, multidisciplinary_interfaces, suppliers, subcontractors, change_management, claims, measurement, reporting, project_lifecycle, closeout]
+  tools_core: [ms_project, excel]
+  tools_conditional: [epci, feed, topside, subsea, commissioning, sap_ps, procurement]
+  preferred_evidence: [exp_vanoord.formal_job_scope, exp_vanoord.planning_controls, exp_vanoord.commercial_contractual, exp_vanoord.documentation]
+  forbidden_upgrades: {feed: manager, epci: lead, commissioning: ownership}

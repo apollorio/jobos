@@ -28,14 +28,15 @@ from jobos.matching.analyze import BOUNDARY_TERMS, _has
 from jobos.matching.evidence import SOFTWARE_ALIASES, build_index
 from jobos.matching.prepare import _active_domains, build_support
 from jobos.matching.profile import Profile, active_profile
+from jobos.matching.families import profiles as family_profiles, config_hash as family_config_hash, concepts
 from jobos.storage.db import tx
 from jobos.timeutil import iso
 
-PACKET_CODE_VERSION = "cv-packet-1"
+PACKET_CODE_VERSION = "cv-packet-3-family"
 SCHEMA_VERSION = 1
-FILES = ("cv_data.json", "answers.json", "validation.json", "cv.html")
+FILES = ("cv_data.json", "answers.json", "validation.json", "coverage_manifest.json", "cv.html")
 KINDS = {"cv_data.json": "cv_data", "answers.json": "cv_answers", "validation.json": "cv_validation",
-         "cv.html": "cv_html", "manifest.json": "cv_manifest"}
+         "cv.html": "cv_html", "manifest.json": "cv_manifest", "coverage_manifest.json": "cv_coverage"}
 STATUS_LABEL = {"met": "atendido", "partial": "parcial"}
 VALID_STATUS = ("atendido", "parcial")
 SEP = " ¦ "  # separador de campos ao achatar evidência; não é letra nem dígito
@@ -115,6 +116,24 @@ SUMMARY_TOPICS = {
 STOPWORDS = {"experiencia", "conhecimento", "conhecimentos", "desejavel", "obrigatorio", "vivencia", "superior", "ensino",
              "necessario", "requisitos", "diferencial", "preferencial", "sólida", "solida", "atuacao", "area", "areas",
              "desejado", "minimo", "minima", "other", "experience", "knowledge", "required", "years"}
+
+# Palavras de função, depois do fold (sem acento). Servem só para escolher PT ou EN. Não entram no currículo.
+_PT_STOP = {"para", "com", "uma", "nao", "vaga", "requisitos", "conhecimento", "experiencia", "atuacao", "anos",
+            "formacao", "desejavel", "obrigatorio", "diferencial", "area"}
+_EN_STOP = {"the", "and", "with", "for", "experience", "requirements", "knowledge", "years", "role", "must", "will",
+            "required", "skills"}
+PREAPPROVED_KEYS = {"phone", "cpf", "salary_expectation", "employment_regime", "diversity"}
+
+
+def _job_language(analysis: dict) -> str:
+    """PT se os requisitos têm mais palavras de função em português do que em inglês. Sem tradução."""
+    texts = []
+    for req in analysis.get("requirements") or []:
+        if isinstance(req, dict) and isinstance(req.get("text"), str):
+            texts.append(req["text"])
+    words = set(re.findall(r"[a-z]{2,}", fold(" ".join(texts))))
+    pt, en = len(words & _PT_STOP), len(words & _EN_STOP)
+    return "pt" if pt > en and pt >= 2 else "en"
 
 
 # ---------------------------------------------------------------------------------------------------------------
@@ -300,7 +319,11 @@ def _prepare_state(profile: Profile, support: dict, analysis: dict) -> _State:
             ptr = ref.get("pointer") if isinstance(ref, dict) else None
             if isinstance(ptr, str) and ptr:
                 ev.setdefault(ptr, []).append((str(r.get("requirement_id") or ""), STATUS_LABEL[r["status"]]))
-    return _State(profile, support, analysis, reqs, list(support.get("domains") or []), dstat, tokens, ev)
+    active = list(support.get("domains") or [])
+    family = family_profiles().get((analysis.get("family") or {}).get("primary"), {})
+    if family:
+        active = list(dict.fromkeys(family["domains"] + active))
+    return _State(profile, support, analysis, reqs, active, dstat, tokens, ev)
 
 
 # ---------------------------------------------------------------------------------------------------------------
@@ -322,7 +345,7 @@ def _compose_identity(st: _State) -> dict:
     return ident
 
 
-def _compose_headline(st: _State, headline_id: str | None) -> tuple[dict | None, list[dict], str]:
+def _compose_headline(st: _State, headline_id: str | None, language: str) -> tuple[dict | None, list[dict], str]:
     chosen = st.support.get("headline")
     candidates = list(st.support.get("headline_candidates") or [])
     note = st.support.get("headline_rule") or ""
@@ -336,14 +359,18 @@ def _compose_headline(st: _State, headline_id: str | None) -> tuple[dict | None,
         return None, candidates, note
     templates = (st.profile.data.get("positioning_layer") or {}).get("headline_templates") or []
     for i, tpl in enumerate(templates):
-        if isinstance(tpl, dict) and tpl.get("id") == chosen.get("id") and _str(tpl.get("headline_en")):
-            ptr = f"/positioning_layer/headline_templates/{i}/headline_en"
-            return (st.line("headline", tpl["headline_en"], ptr, _domain_status(st.domain_status, chosen.get("domains") or []),
-                            domains=[d for d in chosen.get("domains") or [] if d in st.active]), candidates, note)
+        if not isinstance(tpl, dict) or tpl.get("id") != chosen.get("id"):
+            continue
+        field = "headline_pt" if language == "pt" and _str(tpl.get("headline_pt")) else "headline_en"
+        if not _str(tpl.get(field)):
+            continue
+        ptr = f"/positioning_layer/headline_templates/{i}/{field}"
+        return (st.line("headline", tpl[field], ptr, _domain_status(st.domain_status, chosen.get("domains") or []),
+                        domains=[d for d in chosen.get("domains") or [] if d in st.active]), candidates, note)
     return None, candidates, note
 
 
-def _compose_summary(st: _State) -> list[dict]:
+def _compose_summary(st: _State, language: str) -> list[dict]:
     p, out = st.profile, []
     one = _str(_get(p, "/career_summary/canonical_one_liner"))
     if one:
@@ -351,7 +378,7 @@ def _compose_summary(st: _State) -> list[dict]:
     bank = (p.data.get("positioning_layer") or {}).get("safe_wording_bank") or []
     ranked = []
     for i, item in enumerate(bank):
-        if not isinstance(item, dict) or not _str(item.get("use")):
+        if not isinstance(item, dict) or not (_str(item.get("use")) or _str(item.get("use_pt"))):
             continue
         doms = SUMMARY_TOPICS.get(item.get("topic"))
         hit = [d for d in (doms or ()) if d in st.active]
@@ -359,7 +386,10 @@ def _compose_summary(st: _State) -> list[dict]:
             ranked.append((-len(hit), i, item, hit))
     ranked.sort(key=lambda r: (r[0], r[1]))
     for _, i, item, hit in ranked[:SUMMARY_MAX]:
-        out.append(st.line("summary", item["use"], f"/positioning_layer/safe_wording_bank/{i}/use",
+        field = "use_pt" if language == "pt" and _str(item.get("use_pt")) else "use"
+        if not _str(item.get(field)):
+            continue
+        out.append(st.line("summary", item[field], f"/positioning_layer/safe_wording_bank/{i}/{field}",
                            _domain_status(st.domain_status, hit), domains=hit))
     return out
 
@@ -385,7 +415,7 @@ def _role(st: _State, nid: str, node: dict) -> dict | None:
     return None
 
 
-def _items(st: _State, node: dict, nid: str, path: str, cap: int) -> tuple[list[str], list[str]]:
+def _items(st: _State, node: dict, nid: str, path: str, cap: int, stable: bool = False) -> tuple[list[str], list[str]]:
     cur = node
     for part in path.split("."):
         cur = cur.get(part) if isinstance(cur, dict) else None
@@ -393,7 +423,7 @@ def _items(st: _State, node: dict, nid: str, path: str, cap: int) -> tuple[list[
         return [], []
     base = f"/experience_nodes/{nid}/" + path.replace(".", "/")
     rows = [(s, f"{base}/{i}") for i, s in enumerate(cur) if _str(s)]
-    scored = [(sum(1 for t in st.tokens if t in fold(s)), -i, s, ptr) for i, (s, ptr) in enumerate(rows)]
+    scored = [(0 if stable else sum(1 for t in st.tokens if t in fold(s)), -i, s, ptr) for i, (s, ptr) in enumerate(rows)]
     scored.sort(key=lambda r: (-r[0], -r[1]))
     pick, total = [], 0
     for _, _, s, ptr in scored:
@@ -406,6 +436,8 @@ def _items(st: _State, node: dict, nid: str, path: str, cap: int) -> tuple[list[
 
 def _compose_experience(st: _State) -> list[dict]:
     entries = []
+    family = family_profiles().get((st.analysis.get("family") or {}).get("primary"), {})
+    preferred = family.get("preferred_evidence", [])
     exp = st.profile.data.get("experience_nodes") or {}
     for nid, scope, max_bullets, specs in EXPERIENCE_PLAN:
         node = exp.get(nid)
@@ -427,9 +459,22 @@ def _compose_experience(st: _State) -> list[dict]:
                 scored.append((-score, order, path, label, cap, hit))
         scored.sort()
         chosen = scored[:max_bullets] or [(0, 0, specs[0][0], specs[0][1], specs[0][3], [])]
+        stable_paths = set()
+        if family:
+            base_rows = []
+            for key in preferred:
+                if not key.startswith(nid + "."):
+                    continue
+                path = key[len(nid) + 1:]
+                for order, (p, label, domains, cap) in enumerate(specs):
+                    if p == path and _get(st.profile, f"/experience_nodes/{nid}/" + path.replace(".", "/")):
+                        base_rows.append((0, order, p, label, cap, list(domains)))
+            base_rows = base_rows[:max(1, round(max_bullets * 0.7))]
+            stable_paths = {r[2] for r in base_rows}
+            chosen = (base_rows + [r for r in scored if r[2] not in stable_paths])[:max_bullets] or chosen
         bullets = []
         for _, _, path, label, cap, hit in chosen:
-            texts, ptrs = _items(st, node, nid, path, cap)
+            texts, ptrs = _items(st, node, nid, path, cap, stable=path in stable_paths)
             if not texts:
                 continue
             base = f"/experience_nodes/{nid}/" + path.replace(".", "/")
@@ -437,7 +482,8 @@ def _compose_experience(st: _State) -> list[dict]:
             req_ids = sorted({rid for ptr, rows in st.ev_pointers.items() if ptr == base or ptr.startswith(base + "/")
                               for rid, _ in rows if rid})
             bullets.append(st.line("bullet", f"{label}: " + "; ".join(texts), base, status, item_pointers=ptrs,
-                                   domains=hit, requirement_ids=req_ids))
+                                   domains=hit, requirement_ids=req_ids,
+                                   selection="family_base" if path in stable_paths else "vacancy_delta"))
         entries.append({"id": nid, "scope": scope, "role": role, "company": company, "period": period,
                         "bullets": bullets})
     return entries
@@ -463,6 +509,10 @@ def _skill_line(st: _State, ptr: str, req_ids: list[str]) -> dict | None:
 def _compose_skills(st: _State) -> dict:
     p = st.profile
     cand: dict[str, list[str]] = {}
+    core = family_profiles().get((st.analysis.get("family") or {}).get("primary"), {}).get("tools_core", [])
+    for item in build_index(p).software.values():
+        if concepts(item.label) & set(core) and item.status == "met":
+            cand[item.pointer] = []
     for ptr, rows in st.ev_pointers.items():
         if ptr.startswith("/software_systems_tree/") and p.resolves(ptr):
             cand.setdefault(ptr, []).extend(rid for rid, _ in rows if rid)
@@ -554,15 +604,24 @@ def _compose_credentials(st: _State) -> dict:
 def compose_cv_data(profile: Profile, analysis: dict, support: dict, *, headline_id: str | None = None) -> tuple[dict, list[dict]]:
     """Seleciona linhas do perfil para a vaga. Retorna (cv_data sem validar, descartes da composição)."""
     st = _prepare_state(profile, support, analysis)
-    headline, candidates, note = _compose_headline(st, headline_id)
+    language = _job_language(analysis)
+    headline, candidates, note = _compose_headline(st, headline_id, language)
+    note_lang = ("Vaga em português: usadas as linhas headline_pt e use_pt do perfil quando existem. "
+                 "Sem texto em português no perfil, permanece o texto original. Nada foi traduzido."
+                 if language == "pt" else
+                 "Vaga em inglês: textos originais do perfil. Nada foi traduzido.")
     cv = {
         "schema_version": SCHEMA_VERSION, "kind": "cv_data", "method": "deterministic", "uses_ai": False,
         "sends_application": False, "changes_application_state": False,
-        "language_note": "Textos copiados do perfil como estão (sem tradução ou reescrita).",
+        "language": language,
+        "language_note": note_lang,
         "active_domains": st.active,
+        "family": st.analysis.get("family") or {},
+        "selection_policy": {"family_ratio": 0.7, "vacancy_ratio": 0.3,
+                             "scope": "experience bullet slots; rounded; available evidence only"},
         "identity": _compose_identity(st),
         "headline": headline, "headline_candidates": candidates, "headline_note": note,
-        "summary": _compose_summary(st),
+        "summary": _compose_summary(st, language),
         "experience": _compose_experience(st),
         "skills": _compose_skills(st),
         "credentials": _compose_credentials(st),
@@ -743,6 +802,31 @@ def iter_lines(cv: dict):
         yield from lst
 
 
+def keyword_coverage(st: _State, cv: dict) -> dict:
+    """Termos do anúncio que já estão no CV, que existem no perfil e não foram escolhidos, ou que o perfil não tem.
+
+    Não insere nada no currículo. Termos só em truth_boundaries contam como ausentes (não alegar).
+    """
+    chosen = set()
+    for line in iter_lines(cv):
+        if isinstance(line, dict):
+            chosen.update(re.findall(r"[a-z0-9]{5,}", fold(line.get("text") or "")))
+    claimable_keys = ("identity", "career_summary", "experience_nodes", "positioning_layer",
+                      "software_systems_tree", "education_tree", "certification_training_tree")
+    blob = fold(" ".join(json.dumps(st.profile.data.get(k) or {}, ensure_ascii=False) for k in claimable_keys))
+    profile_words = set(re.findall(r"[a-z0-9]{5,}", blob))
+    present, available, absent = [], [], []
+    for tok in sorted(st.tokens):
+        if tok in chosen:
+            present.append(tok)
+        elif tok in profile_words:
+            available.append(tok)
+        else:
+            absent.append(tok)
+    return {"present": present, "available_not_chosen": available, "absent_from_profile": absent,
+            "note": "Relatório apenas. Nenhum termo do anúncio foi inserido no currículo."}
+
+
 # ---------------------------------------------------------------------------------------------------------------
 # Respostas curtas (answers.json): só o que o perfil afirma diretamente
 # ---------------------------------------------------------------------------------------------------------------
@@ -765,11 +849,73 @@ ANSWER_SPECS = (
     ("salary_expectation", "Pretensão salarial", "/mobility_and_preferences/salary_expectation"),
     ("employment_regime", "Regime de contratação (CLT/PJ)", "/mobility_and_preferences/employment_regime_clt_pj"),
 )
-OMITTED_ALWAYS = (("work_authorization", "Autorização de trabalho"),)
+OMITTED_ALWAYS = (
+    ("work_authorization", "Autorização de trabalho"),
+    ("phone", "Telefone"),
+    ("cpf", "CPF"),
+    ("diversity", "Diversidade"),
+)
 HEDGES = ("historical", "historic", "not specifically", "prioritizes", "unknown", "to validate")
 
 
-def build_answers(profile: Profile) -> dict:
+def requirement_coverage(cv: dict, analysis: dict) -> dict:
+    """Couverture exige à la fois vocabulaire canonique ET preuve effectivement sélectionnée."""
+    lines = list(iter_lines(cv))
+    rows = []
+    for req in analysis.get("requirements", []):
+        wanted = concepts(req.get("text", ""))
+        refs = [e["pointer"] for e in req.get("evidence_refs", []) if e.get("pointer")]
+        locations = []
+        for line in lines:
+            pointers = line.get("item_pointers") or [line.get("pointer", "")]
+            linked = any(p == ref or p.startswith(ref + "/") for p in pointers for ref in refs)
+            canonical_match = wanted and wanted <= concepts(line.get("text", ""))
+            direct = req.get("requirement_id") in line.get("requirement_ids", [])
+            if req.get("status") in ("met", "partial") and linked and (canonical_match or (not wanted and direct)):
+                locations.append({"line_id": line["id"], "section": line["kind"], "pointer": line["pointer"]})
+        rows.append({"requirement_id": req.get("requirement_id"), "canonical": sorted(wanted),
+                     "original": req.get("text"), "importance": req.get("importance"),
+                     "status": req.get("status"), "evidence": refs, "cv_locations": locations})
+    mandatory = [r for r in rows if r["importance"] == "mandatory"]
+    supported = sum(r["status"] == "met" and bool(r["cv_locations"]) for r in mandatory)
+    return {"schema_version": 1, "family": analysis.get("family"), "requirements": rows,
+            "eligibility": analysis.get("eligibility"),
+            "coverage": {"mandatory_supported": supported, "mandatory_total": len(mandatory),
+                         "percentage": round(100 * supported / len(mandatory), 1) if mandatory else None},
+            "note": "Cobertura conservadora: evidência selecionada e conceito no CV; parcial não conta como integral."}
+
+
+def build_family_bases(profile: Profile, root: Path) -> dict:
+    version = _sha((profile.profile_id + family_config_hash() + PACKET_CODE_VERSION + cv_render.renderer_id()).encode())[:16]
+    directory = root / "family-bases" / version
+    directory.mkdir(parents=True, exist_ok=True)
+    result = {}
+    for name, cfg in family_profiles().items():
+        target = directory / f"CV-BASE-{name.replace('_', '-')}.json"
+        analysis = {"family": {"primary": name, "secondary": None}, "requirements": []}
+        support = build_support(profile, analysis)
+        support["domains"] = cfg["domains"]
+        cv, drops = compose_cv_data(profile, analysis, support)
+        cv, report = validate_cv_data(cv, profile, drops)
+        cv["profile_id"] = profile.profile_id
+        data = _dump(cv)
+        if target.exists():
+            if target.read_bytes() != data:
+                raise PacketError("CV-base imutável diverge das entradas; atualizar versão do gerador")
+        else:
+            # Escrita atômica; concorrentes com as mesmas entradas produzem os mesmos bytes.
+            temporary = target.with_suffix(f".{uuid.uuid4().hex}.tmp")
+            temporary.write_bytes(data)
+            os.replace(temporary, target)
+        result[name] = {"path": str(target.relative_to(root)), "sha256": _sha(data)}
+    return result
+
+
+def _omitted(key: str, question: str, pointer: str | None, reason: str) -> dict:
+    return {"key": key, "question": question, "pointer": pointer, "reason": reason, "status": "MANUAL_REQUIRED"}
+
+
+def build_answers(profile: Profile, preapproved: dict | None = None) -> dict:
     items, omitted = [], []
     for key, question, ptr in ANSWER_SPECS:
         node = _get(profile, ptr)
@@ -778,24 +924,88 @@ def build_answers(profile: Profile) -> dict:
         elif isinstance(node, str) and node and "UNKNOWN_NOT_DOCUMENTED" not in node:
             answer, pointers = node, [ptr]
         else:
-            omitted.append({"key": key, "question": question, "pointer": ptr, "reason": "não documentado no perfil"})
+            omitted.append(_omitted(key, question, ptr, "não documentado no perfil"))
             continue
         items.append({"key": key, "question": question, "answer": answer, "pointer": ptr, "item_pointers": pointers,
                       "needs_review": any(h in answer.lower() for h in HEDGES)})
-    omitted += [{"key": k, "question": q, "pointer": None, "reason": "não documentado no perfil"} for k, q in OMITTED_ALWAYS]
+    omitted += [_omitted(k, q, None, "não documentado no perfil") for k, q in OMITTED_ALWAYS]
+    approved = (preapproved or {}).get("items") if isinstance(preapproved, dict) else None
+    if isinstance(approved, dict):
+        still = []
+        for row in omitted:
+            node = approved.get(row["key"])
+            if row["key"] not in PREAPPROVED_KEYS or not isinstance(node, dict):
+                still.append(row)
+                continue
+            answer = node.get("answer")
+            if not isinstance(answer, str) or not answer.strip() or not node.get("approval") or not node.get("updated_at"):
+                still.append(_omitted(row["key"], row["question"], row["pointer"],
+                                      "resposta sensível sem approval e updated_at em answers_preapproved.json"))
+                continue
+            items.append({"key": row["key"], "question": row["question"], "answer": answer.strip(),
+                          "pointer": None, "item_pointers": [], "needs_review": False,
+                          "approval": node["approval"], "updated_at": node["updated_at"],
+                          "source": "config/profile/answers_preapproved.json"})
+        omitted = still
     kept = []
     for it in items:  # mesma regra T28: número da resposta precisa estar na evidência apontada
+        if it.get("source") == "config/profile/answers_preapproved.json":
+            kept.append(it)  # o arquivo aprovado é a autoridade; telefone e CPF não estão no perfil
+            continue
         ev = SEP.join(evidence_text(profile.pointer(p)) for p in it["item_pointers"])
         bad = unsupported_numbers(it["answer"], ev)
         if bad:
-            omitted.append({"key": it["key"], "question": it["question"], "pointer": it["pointer"],
-                            "reason": f"T28: número(s) {bad} sem evidência"})
+            omitted.append(_omitted(it["key"], it["question"], it["pointer"],
+                                    f"T28: número(s) {bad} sem evidência"))
         else:
             kept.append(it)
     return {"schema_version": SCHEMA_VERSION, "kind": "cv_answers", "method": "deterministic", "uses_ai": False,
             "note": "Respostas copiadas do perfil, sem reescrita. Itens com needs_review=true têm ressalva no próprio perfil; "
-                    "confira antes de usar. Itens ausentes não constam no perfil: não invente.",
+                    "confira antes de usar. Itens omitted estão em MANUAL_REQUIRED: não invente. "
+                    "Telefone, CPF e diversidade só entram se você gravou approval e updated_at em "
+                    "config/profile/answers_preapproved.json (arquivo gitignored).",
             "items": kept, "omitted": omitted}
+
+
+def load_preapproved(path: Path) -> tuple[dict | None, str | None]:
+    """Lê o arquivo gitignored de respostas sensíveis. Ausente é normal; ilegível vira aviso."""
+    if not path.is_file():
+        return None, None
+    try:
+        loaded = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None, "answers_preapproved.json ilegível; respostas sensíveis ficam MANUAL_REQUIRED"
+    if not isinstance(loaded, dict):
+        return None, "answers_preapproved.json ilegível; respostas sensíveis ficam MANUAL_REQUIRED"
+    return loaded, None
+
+
+def build_gupy_sheet(profile: Profile, preapproved: dict | None = None) -> dict:
+    """Folha para preencher o perfil da Gupy uma vez. Não envia candidatura e não pede senha."""
+    bank = []
+    for i, item in enumerate((profile.data.get("positioning_layer") or {}).get("safe_wording_bank") or []):
+        if not isinstance(item, dict):
+            continue
+        field = "use_pt" if _str(item.get("use_pt")) else "use"
+        if not _str(item.get(field)):
+            continue
+        bank.append({"topic": item.get("topic"), "text": item[field],
+                     "pointer": f"/positioning_layer/safe_wording_bank/{i}/{field}"})
+    do_not = []
+    boundaries = profile.data.get("truth_boundaries") or {}
+    if isinstance(boundaries, dict):
+        for key, val in boundaries.items():
+            if isinstance(val, list):
+                for i, text in enumerate(val):
+                    if isinstance(text, str) and text.strip():
+                        do_not.append({"text": text, "pointer": f"/truth_boundaries/{key}/{i}"})
+            elif isinstance(val, str) and val.strip():
+                do_not.append({"text": val, "pointer": f"/truth_boundaries/{key}"})
+    return {"schema_version": SCHEMA_VERSION, "kind": "gupy_profile_sheet", "uses_ai": False,
+            "sends_application": False,
+            "note": "Preencha o perfil da Gupy uma vez com estes textos. Telefone, CPF e senha ficam no Bitwarden. "
+                    "JOBOS não lê o cofre e não envia a candidatura.",
+            "answers": build_answers(profile, preapproved), "wording": bank, "do_not_claim": do_not}
 
 
 # ---------------------------------------------------------------------------------------------------------------
@@ -826,7 +1036,8 @@ def _sha(data: bytes) -> str:
 
 def compute_input_hash(version_hash: str, profile_sha: str, policy_version: str, headline_id: str | None = None) -> str:
     payload = {"job_version_hash": version_hash, "profile_sha": profile_sha, "policy_version": policy_version,
-               "packet_code_version": PACKET_CODE_VERSION, "renderer": cv_render.renderer_id()}
+               "packet_code_version": PACKET_CODE_VERSION, "renderer": cv_render.renderer_id(),
+               "family_config_hash": family_config_hash()}
     if headline_id:
         payload["headline_id"] = headline_id
     return _sha(json.dumps(payload, sort_keys=True).encode("utf-8"))
@@ -901,6 +1112,7 @@ def build_packet(ctx, job_id: str, *, out_root: Path | None = None, headline_id:
     support = build_support(profile, analysis, None)
     if not support.get("available"):
         raise PacketError(f"preparo indisponível: {support.get('reason')}")
+    bases = build_family_bases(profile, root)
 
     if final.exists():  # T47: mesmas entradas => mesma pasta, nenhum byte reescrito
         manifest = _verify_existing(final, input_hash)
@@ -927,10 +1139,19 @@ def build_packet(ctx, job_id: str, *, out_root: Path | None = None, headline_id:
         "headline": {"chosen": (cv["headline"] or {}).get("text"), "note": cv.get("headline_note"),
                      "candidates": cv.get("headline_candidates")},
         "not_claimed": support.get("do_not_claim") or [], "unknowns": support.get("unknowns") or [],
+        "keyword_coverage": keyword_coverage(_prepare_state(profile, support, analysis), cv),
     })
-    answers = build_answers(profile)
+    preapproved, pre_warn = load_preapproved(ctx.paths.config / "profile" / "answers_preapproved.json")
+    if pre_warn:
+        warnings.append(pre_warn)
+    answers = build_answers(profile, preapproved)
     html_bytes = cv_render.render_html(cv).encode("utf-8")
-    blobs = {"cv_data.json": _dump(cv), "answers.json": _dump(answers), "validation.json": _dump(report), "cv.html": html_bytes}
+    coverage = requirement_coverage(cv, analysis)
+    primary = (analysis.get("family") or {}).get("primary")
+    coverage.update({"job_id": job_id, "profile_id": profile.profile_id, "family_base": bases.get(primary),
+                     "family_config_hash": family_config_hash()})
+    blobs = {"cv_data.json": _dump(cv), "answers.json": _dump(answers), "validation.json": _dump(report),
+             "coverage_manifest.json": _dump(coverage), "cv.html": html_bytes}
     manifest = {
         "schema_version": SCHEMA_VERSION, "kind": "cv_packet", "job_id": job_id,
         "job_version_id": version["version_id"], "job_version_hash": version["content_hash"],

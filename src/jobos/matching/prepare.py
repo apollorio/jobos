@@ -27,6 +27,18 @@ def build_support(profile: Profile | None, analysis: dict | None, official_url: 
     reqs = [r for r in (analysis.get("requirements") or []) if isinstance(r, dict)]
     domains = _active_domains(reqs)
     headline, candidates, rule = _headlines(profile, domains)
+    family_id = (analysis.get("family") or {}).get("primary")
+    if family_id:
+        from jobos.matching.families import profiles
+        domains = list(dict.fromkeys(profiles()[family_id]["domains"] + domains))
+        target = {"ENG_PLANNING": "h_planner_project_controls", "ENG_OPERATIONS": "h_marine_ops_superintendent",
+                  "ENG_PROJECT": "h_project_management_pmp"}[family_id]
+        template = next((t for t in profile.data.get("positioning_layer", {}).get("headline_templates", [])
+                         if t.get("id") == target and t.get("headline_en")), None)
+        if template:
+            headline = {"id": target, "headline_en": template["headline_en"], "domains": template.get("domains", [])}
+            candidates = [headline] + [c for c in candidates if c.get("id") != target]
+            rule = "Família profissional seleciona um headline já autorizado no perfil."
     return {
         **base,
         "available": True,

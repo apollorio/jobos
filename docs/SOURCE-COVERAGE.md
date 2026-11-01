@@ -1,65 +1,59 @@
-# Cobertura de fontes (P0)
+# Cobertura das fontes
 
-Cadastro canônico gerado em `config/sources.yaml` a partir de `jobs.json` (28 empresas) e `Artifact/config/companies.yml` (extras). Leitor principal único por fonte. "Python legado" = função em `Artifact/jobos/sources`; "TS" = `assets/load-jobs.ts`. Smoke test real fica registrado em `docs/PROGRESS.md`; esta tabela não prova funcionamento atual.
+Gerado por `jobos sources --markdown` a partir de `status.source_health`. Não edite à mão.
+Falha ou leitura parcial nunca encerra vaga.
 
-| source_id | Empresa | Plataforma | Config (snapshot) | Python legado | TS | Adapter escolhido | Escopo |
+As colunas históricas do P0 (config snapshot, Python legado, TS) ficam no histórico do git.
+Medição de 30/10/2026: o "ok" de aker-smart, airswift-smart e trident-workable é a leitura de 29/10 do leitor anterior. O próximo ciclo real usa aker_site_json, airswift_hubspot, sage_frecruit e oracle_ce (DEC-023) e ainda não coletou esses quadros. ABS aparece como never_run nesse leitor.
+
+| source_id | empresa | plataforma | leitor | ligado | saúde | última leitura | ativas |
 |---|---|---|---|---|---|---|---|
-| prio-gupy | PRIO | Gupy | prio.gupy.io | list_tenant | gupy | gupy_tenant | full_board |
-| modec-gupy | MODEC | Gupy | modec-br.gupy.io | list_tenant | gupy | gupy_tenant | full_board |
-| norsul-gupy | Norsul | Gupy | norsul.gupy.io | list_tenant | gupy | gupy_tenant | full_board |
-| brava-gupy | Brava Energia | Gupy | bravaenergia.gupy.io | list_tenant | gupy | gupy_tenant | full_board |
-| wilsonsons-gupy | Wilson Sons | Gupy | wilsonsons.gupy.io | sem entrada | gupy | gupy_tenant | full_board |
-| ocyan-gupy | Ocyan | Gupy | ocyan.gupy.io | só portal agregado | gupy | gupy_tenant | full_board |
-| qualidados-gupy | Qualidados | Gupy | qualidados.gupy.io | só portal agregado | gupy | gupy_tenant | full_board |
-| oceanica-gupy | Oceânica | Gupy | sejaoceanica.gupy.io | só portal agregado | gupy | gupy_tenant | full_board |
-| vinci-gupy | VINCI Energies | Gupy | vinci-energies.gupy.io | só portal agregado | gupy | gupy_tenant | full_board |
-| nexa-gupy | Nexa Tecnologia | Gupy | nexatecnologia.gupy.io | só portal agregado | gupy | gupy_tenant | full_board |
-| enauta-gupy | Enauta / 3R (Brava) | Gupy | 3rpetroleum.gupy.io | sem leitor | gupy | gupy_tenant | full_board |
-| minsait-gupy | Minsait | Gupy | minsait.gupy.io | só portal agregado | gupy | gupy_tenant | full_board |
-| vibra-gupy | Vibra Energia | Gupy | vibraenergia.gupy.io | só portal agregado | gupy | gupy_tenant | full_board |
-| subsea7-sf | Subsea7 | SuccessFactors J2W | careers.subsea7.com | j2w busca/sitemap | sf | j2w_search | filtered_board (Rio de Janeiro) |
-| sbm-sf | SBM Offshore | SuccessFactors J2W | careers.sbmoffshore.com | j2w | sf | j2w_search | filtered_board |
-| yinson-sf | Yinson | SuccessFactors J2W | careers.yinson.com | j2w | sf | j2w_search | filtered_board |
-| halliburton-sf | Halliburton | SuccessFactors J2W | jobs.halliburton.com | sem leitor | sf | j2w_search | filtered_board |
-| transocean-workday | Transocean | Workday CXS | deepwater/wd1/BrazilExternalCareerSite | workday | workday | workday_cxs | full_board |
-| equinor-workday | Equinor | Workday CXS | equinor/wd3/EQNR | workday | workday | workday_cxs | filtered_board (searchText "Brazil") |
-| shell-workday | Shell | Workday CXS | shell/wd3/ShellCareers | workday | workday | workday_cxs | filtered_board (searchText "Rio de Janeiro") |
-| baker-workday | Baker Hughes | Workday CXS | bakerhughes/wd5/BakerHughes | workday | workday | workday_cxs | filtered_board (searchText "Brazil") |
-| technipfmc-workday | TechnipFMC | SuccessFactors Jobs2Web | careers.technipfmc.com, busca "Brazil" (24/10/2026: 8 vagas, dry-run complete; antes Workday CXS com HTTP 422) | successfactors_j2w | não | j2w_search | filtered_board (location "Brazil") |
-| aker-smart | Aker Solutions | SmartRecruiters | akersolutions | genérico | smart | smartrecruiters | filtered_board (country=br) |
-| airswift-smart | Airswift | SmartRecruiters | airswift | genérico | smart | smartrecruiters | filtered_board (country=br) |
-| oceanpact-inhire | OceanPact | inHire | tenant oceanpact | inhire | inhire | inhire | full_board |
-| abs-oracle | ABS | Oracle CE | hbbq.fa.us2 / CX_1 | não | oracle | sem adapter (unconfigured) | |
-| dof-webflow | DOF | Webflow | dof.com/vacancies | webflow_dof | dof | dof_webflow | full_board |
-| bram-totvs | Bram Offshore | TOTVS | bramoffshore | totvs | bram | totvs | full_board |
-| capco-greenhouse | Capco | Greenhouse | board capco, escritório 114971 | greenhouse (quadro global) | greenhouse (escritório) | greenhouse | filtered_board (office 114971) |
-| trident-workable | Trident Energy | Workable | trident-energy | workable | não | workable | full_board |
-| sapura-vagas | Sapura (Seagems) | vagas.com.br | seagems | vagas_com_br | não | vagas_com_br | full_board |
-| constellation-gupy | Constellation | Gupy | tenant desconhecido | portal | não | sem adapter (unconfigured) | |
-| petrobras-concursos | Petrobras | Concurso público | edital | special | não | sem adapter (unconfigured) | |
-
-Empresas listadas no YAML legado sem leitor e sem configuração verificável (BW Offshore, Altera, TotalEnergies, Saipem, SLB, Karoon, Perenco, Brunel, NES Fircroft, Petroplan, Orion, Michael Page, Hays) entram no cadastro como `unconfigured`, para aparecerem no painel sem fingir coleta.
-
-Fonte agregada `gupy-portal-queries` (16 consultas do `queries.yml`) entra desativada: é `incremental_query`, nunca autoriza encerramento, e gerou ruído de empresas fora da lista (por exemplo, colchões, estágio). Adzuna fica fora (exige credencial própria).
-
-Empresas excluídas por decisão do usuário em 24/08/2026 (dragagem: Boskalis, DEME, Royal IHC, Jan De Nul, Van Oord) continuam fora do cadastro; a exclusão fica visível em `config/preferences.yaml`.
-
-## Smoke test real (22/10/2026 ~20:36 Brasília, `cycle --dry-run --no-notify`, banco temporário)
-
-Leitura pública sem login, limites padrão (timeout 25 s, 3 tentativas, até 15 páginas e 25 detalhes por fonte). Prova somente aquele fluxo naquele momento.
-
-| Fonte | Status | Vagas | Observação |
-|---|---|---:|---|
-| prio, modec, norsul, brava, wilsonsons, ocyan, qualidados, oceanica, vinci, nexa, minsait, vibra (Gupy) | complete | 8/8/5/25/54/15/37/40/54/2/19/45 | listagem OK; detalhe pelo portal antigo deu 404 em todas, corrigido para a página da vaga (`__NEXT_DATA__.job`) |
-| enauta-gupy | complete | 0 | tenant 3R vazio (fusão com Brava) |
-| subsea7-sf / sbm-sf / yinson-sf / halliburton-sf | complete | 21 / 8 / 4 / 31 | paginação J2W até o fim; detalhes lidos |
-| transocean / baker / shell (Workday) | complete | 2 / 26 / 1 | baker atingiu limite de 25 detalhes (restante no próximo ciclo) |
-| equinor-workday | complete | 0 | busca "Brazil" vazia (snapshot de 08/10 também 0) |
-| technipfmc-workday | **failed** (até 24/10) | 0 | HTTP 422: tenant Workday inexistente. Migrado em 24/10/2026 para `j2w_search` (careers.technipfmc.com), mesmo `source_id` |
-| aker-smart / airswift-smart | complete | 0 / 0 | filtro country=br vazio |
-| oceanpact-inhire | complete | 72 | |
-| dof-webflow | complete | 100 | quadro global; 4 avisos de detalhe sem bloco rich-text |
-| bram-totvs | complete | 31 | |
-| capco-greenhouse | complete | 1 | escritório 114971 (Rio) |
-| trident-workable / sapura-vagas | complete | 0 / 0 | contas existentes sem vagas (igual ao legado) |
-| 16 fontes sem leitor | unconfigured | | aparecem no painel como "sem leitor" |
+| prio-gupy | PRIO | gupy | gupy_tenant | sim | ok | 2026-10-29T17:00:18+00:00 | 9 |
+| modec-gupy | MODEC | gupy | gupy_tenant | sim | ok | 2026-10-29T17:00:18+00:00 | 8 |
+| norsul-gupy | Norsul | gupy | gupy_tenant | sim | ok | 2026-10-29T17:00:18+00:00 | 7 |
+| brava-gupy | Brava Energia | gupy | gupy_tenant | sim | ok | 2026-10-29T17:00:22+00:00 | 30 |
+| wilsonsons-gupy | Wilson Sons | gupy | gupy_tenant | sim | ok | 2026-10-29T17:00:21+00:00 | 51 |
+| ocyan-gupy | Ocyan | gupy | gupy_tenant | sim | ok | 2026-10-29T17:00:23+00:00 | 17 |
+| qualidados-gupy | Qualidados | gupy | gupy_tenant | sim | ok | 2026-10-29T17:00:21+00:00 | 40 |
+| oceanica-gupy | Oceânica | gupy | gupy_tenant | sim | ok | 2026-10-29T17:00:26+00:00 | 43 |
+| vinci-gupy | VINCI Energies | gupy | gupy_tenant | sim | ok | 2026-10-29T17:00:28+00:00 | 66 |
+| nexa-gupy | Nexa Tecnologia | gupy | gupy_tenant | sim | ok | 2026-10-29T17:00:26+00:00 | 4 |
+| enauta-gupy | Enauta / 3R | gupy | gupy_tenant | não | no_reader | 2026-10-22T23:52:13+00:00 | 0 |
+| minsait-gupy | Minsait | gupy | gupy_tenant | sim | ok | 2026-10-29T17:00:31+00:00 | 2 |
+| vibra-gupy | Vibra Energia | gupy | gupy_tenant | sim | ok | 2026-10-29T17:00:29+00:00 | 50 |
+| subsea7-sf | Subsea7 | successfactors_j2w | j2w_search | sim | ok | 2026-10-29T17:00:37+00:00 | 25 |
+| sbm-sf | SBM Offshore | successfactors_j2w | j2w_search | sim | ok | 2026-10-29T17:00:31+00:00 | 12 |
+| yinson-sf | Yinson | successfactors_j2w | j2w_search | sim | ok | 2026-10-29T17:00:34+00:00 | 4 |
+| halliburton-sf | Halliburton | successfactors_j2w | j2w_search | sim | ok | 2026-10-29T17:00:38+00:00 | 30 |
+| transocean-workday | Transocean | workday | workday_cxs | sim | ok | 2026-10-29T17:00:32+00:00 | 1 |
+| equinor-workday | Equinor | workday | workday_cxs | sim | ok | 2026-10-29T17:00:34+00:00 | 0 |
+| shell-workday | Shell | workday | workday_cxs | sim | ok | 2026-10-29T17:00:36+00:00 | 0 |
+| baker-workday | Baker Hughes | workday | workday_cxs | sim | ok | 2026-10-29T17:00:37+00:00 | 24 |
+| technipfmc-workday | TechnipFMC | successfactors_j2w | j2w_search | sim | ok | 2026-10-29T17:00:40+00:00 | 6 |
+| aker-smart | Aker Solutions | successfactors | aker_site_json | sim | ok | 2026-10-29T17:00:39+00:00 | 0 |
+| airswift-smart | Airswift | hubspot | airswift_hubspot | sim | ok | 2026-10-29T17:00:39+00:00 | 0 |
+| oceanpact-inhire | OceanPact | inhire | inhire | sim | ok | 2026-10-29T17:00:39+00:00 | 66 |
+| dof-workable | DOF | workable | workable | sim | ok | 2026-10-29T17:00:41+00:00 | 96 |
+| dof-webflow | DOF | webflow | dof_webflow | não | no_reader | 2026-10-22T23:52:32+00:00 | 0 |
+| bram-totvs | Bram Offshore | totvs | totvs | sim | ok | 2026-10-29T17:00:41+00:00 | 29 |
+| capco-greenhouse | Capco | greenhouse | greenhouse | sim | ok | 2026-10-29T17:00:43+00:00 | 129 |
+| trident-workable | Trident Energy | sage_frecruit | sage_frecruit | sim | ok | 2026-10-29T17:00:41+00:00 | 0 |
+| sapura-vagas | Sapura (Seagems) | vagas_com_br | vagas_com_br | sim | ok | 2026-10-29T17:00:42+00:00 | 0 |
+| abs-oracle | ABS | oracle_ce | oracle_ce | sim | never_run | 2026-10-29T17:00:41+00:00 | 0 |
+| constellation-gupy | Constellation Oil Services | gupy | — | sim | no_reader | 2026-10-29T17:00:41+00:00 | 0 |
+| petrobras-concursos | Petrobras | concurso | — | sim | no_reader | 2026-10-29T17:00:41+00:00 | 0 |
+| bwoffshore | BW Offshore | unknown | — | sim | no_reader | 2026-10-29T17:00:41+00:00 | 0 |
+| altera-gupy | Altera&Ocyan | gupy | gupy_tenant | sim | ok | 2026-10-29T17:00:44+00:00 | 2 |
+| perbras-gupy | Perbras | gupy | gupy_tenant | sim | ok | 2026-10-29T17:00:45+00:00 | 16 |
+| totalenergies | TotalEnergies | unknown | — | sim | no_reader | 2026-10-29T17:00:42+00:00 | 0 |
+| saipem | Saipem | unknown | — | sim | no_reader | 2026-10-29T17:00:42+00:00 | 0 |
+| slb | SLB | unknown | — | sim | no_reader | 2026-10-29T17:00:42+00:00 | 0 |
+| karoon | Karoon Energy | unknown | — | sim | no_reader | 2026-10-29T17:00:42+00:00 | 0 |
+| perenco | Perenco | unknown | — | sim | no_reader | 2026-10-29T17:00:42+00:00 | 0 |
+| brunel | Brunel Brasil | unknown | — | sim | no_reader | 2026-10-29T17:00:42+00:00 | 0 |
+| nesfircroft | NES Fircroft | unknown | — | sim | no_reader | 2026-10-29T17:00:42+00:00 | 0 |
+| petroplan | Petroplan | unknown | — | sim | no_reader | 2026-10-29T17:00:42+00:00 | 0 |
+| oriongroup | Orion Group | unknown | — | sim | no_reader | 2026-10-29T17:00:42+00:00 | 0 |
+| michaelpage | Michael Page Brasil | unknown | — | sim | no_reader | 2026-10-29T17:00:42+00:00 | 0 |
+| hays | Hays Brasil | unknown | — | sim | no_reader | 2026-10-29T17:00:42+00:00 | 0 |
+| gupy-portal-queries | Portal Gupy (consultas) | gupy_portal | gupy_portal_search | não | no_reader | never_run | 0 |

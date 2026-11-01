@@ -6,6 +6,7 @@ Conteúdo inesperado é validado pelo adapter (FormatChanged).
 from __future__ import annotations
 
 import random
+import threading
 import time
 
 import requests
@@ -16,6 +17,33 @@ from jobos.collectors.base import Blocked, FormatChanged, SourceFailure
 UA = (f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
       f"Chrome/128.0 Safari/537.36 jobos-local/{__version__}")
 TRANSIENT = {408, 425, 429, 500, 502, 503, 504}
+_PACE_LOCK = threading.Lock()
+_PACE_INTERVAL = 0.0
+_PACE_SLEEP = time.sleep
+_PACE_NEXT = 0.0
+
+
+def configure_pace(interval: float, sleep=time.sleep) -> None:
+    """Gap between HTTP starts in this process. Zero turns the gap off (tests and fixtures)."""
+    global _PACE_INTERVAL, _PACE_SLEEP, _PACE_NEXT
+    with _PACE_LOCK:
+        _PACE_INTERVAL = max(0.0, float(interval))
+        _PACE_SLEEP = sleep
+        _PACE_NEXT = 0.0
+
+
+def pace_wait() -> None:
+    """Hold the next request until the shared gap has elapsed. Shared by every client in the process."""
+    global _PACE_NEXT
+    with _PACE_LOCK:
+        if _PACE_INTERVAL <= 0:
+            return
+        now = time.monotonic()
+        delay = _PACE_NEXT - now
+        if delay > 0:
+            _PACE_SLEEP(delay)
+            now = time.monotonic()
+        _PACE_NEXT = now + _PACE_INTERVAL
 
 
 class HttpClient:
@@ -34,6 +62,7 @@ class HttpClient:
         last_exc: Exception | None = None
         for attempt in range(1, self.max_attempts + 1):
             try:
+                pace_wait()
                 self.requests_made += 1
                 r = self.session.request(method, url, timeout=self.timeout, **kw)
             except (requests.ConnectionError, requests.Timeout) as e:

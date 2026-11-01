@@ -12,6 +12,11 @@
     Códigos de saída (propagados do app): 0 ok, 2 parcial, 3 falha, 4 pulado por sobreposição,
     5 configuração necessária (por exemplo, .venv ausente).
 
+    No modo scheduler, sem -DryRun, um ciclo completo com menos de 90 min é pulado (código 0).
+    90 min cabe entre os horários de 12:00 e 14:00. Uma repetição por logon ou retorno da suspensão não dispara outra varredura em cima da que acabou de rodar.
+    Manual e dry-run sempre seguem. O processo do Python é encerrado no execution_limit_minutes
+    do app.yaml (padrão 50); o próprio ciclo para de despachar fontes aos 45 min.
+
 .PARAMETER Root
     Raiz do engine (padrão: dois níveis acima deste script). Precisa conter pyproject.toml e src\jobos.
 
@@ -119,6 +124,76 @@ function Write-Log {
     Write-Host $line
 }
 
+function Get-ExecutionLimitMinutes {
+    param([string]$EngineRoot)
+    $limit = 50
+    $yaml = Join-Path $EngineRoot 'config\app.yaml'
+    if (Test-Path -LiteralPath $yaml -PathType Leaf) {
+        foreach ($line in @(Get-Content -LiteralPath $yaml -Encoding UTF8)) {
+            if ($line -match '^\s+execution_limit_minutes:\s*(\d{1,4})\b') { $limit = [int]$Matches[1] }
+        }
+    }
+    if ($limit -lt 1) { $limit = 50 }
+    return $limit
+}
+
+function Test-SchedulerShouldSkip {
+    # $true = último ciclo completo tem menos de 90 min. Falha da sonda não pula.
+    param([string]$EngineRoot, [string]$Python)
+    $db = Join-Path $EngineRoot 'data\jobos.sqlite3'
+    $probe = Join-Path ([System.IO.Path]::GetTempPath()) ('jobos-fresh-{0}.py' -f [guid]::NewGuid().ToString('N'))
+    $py = @'
+import sqlite3, sys
+from datetime import datetime, timezone
+from pathlib import Path
+db = Path(sys.argv[1])
+if not db.is_file():
+    print("none")
+    raise SystemExit(0)
+con = sqlite3.connect("file:" + db.as_posix() + "?mode=ro", uri=True)
+try:
+    row = con.execute("SELECT finished_at FROM runs WHERE mode='normal' AND status='complete' ORDER BY finished_at DESC LIMIT 1").fetchone()
+finally:
+    con.close()
+if not row or not row[0]:
+    print("none")
+    raise SystemExit(0)
+raw = str(row[0]).replace("Z", "+00:00")
+try:
+    t = datetime.fromisoformat(raw)
+except ValueError:
+    print("bad")
+    raise SystemExit(0)
+if t.tzinfo is None:
+    t = t.replace(tzinfo=timezone.utc)
+age = (datetime.now(timezone.utc) - t.astimezone(timezone.utc)).total_seconds()
+print(str(int(age)))
+'@
+    try {
+        [System.IO.File]::WriteAllText($probe, $py, $script:Utf8Bom)
+        $out = & $Python $probe $db 2>&1
+        $text = ((@($out) | ForEach-Object { "$_" }) -join ' ').Trim()
+        if ($text -match '^\d+$') {
+            $age = [int]$Matches[0]
+            if ($age -ge 0 -and $age -lt (90 * 60)) {
+                Write-Log ("[PULADO] ultimo ciclo completo ha {0}s (< 90 min). Modo scheduler nao repete." -f $age)
+                return $true
+            }
+            Write-Log ("[FRESCO] ultimo ciclo completo ha {0}s; segue." -f $age)
+        }
+        else {
+            Write-Log ("[AVISO] sonda de frescor inconclusiva ({0}); o ciclo segue." -f $text)
+        }
+    }
+    catch {
+        Write-Log ('[AVISO] sonda de frescor falhou (' + $_.Exception.Message + '); o ciclo segue.')
+    }
+    finally {
+        if ($probe -and (Test-Path -LiteralPath $probe)) { Remove-Item -LiteralPath $probe -Force -ErrorAction SilentlyContinue }
+    }
+    return $false
+}
+
 # --------------------------------------------------------------------------- principal
 
 function Invoke-Main {
@@ -144,6 +219,14 @@ function Invoke-Main {
             return
         }
 
+        if ($Mode -eq 'scheduler' -and -not $DryRun) {
+            if (Test-SchedulerShouldSkip -EngineRoot $engineRoot -Python $py) {
+                $script:ExitCode = 0
+                return
+            }
+        }
+        $limitMin = Get-ExecutionLimitMinutes -EngineRoot $engineRoot
+
         $saved = Set-EngineEnv -EngineRoot $engineRoot
 
         $cycleArgs = @('-m', 'jobos', 'cycle', '--mode', $Mode)
@@ -155,16 +238,24 @@ function Invoke-Main {
         $tmpOut = Join-Path $tmpDir ('jobos-cycle-{0}.out' -f [guid]::NewGuid().ToString('N'))
         $tmpErr = Join-Path $tmpDir ('jobos-cycle-{0}.err' -f [guid]::NewGuid().ToString('N'))
 
-        Write-Log ('[INICIO] modo={0} dry_run={1} no_notify={2} usuario={3}' -f $Mode, [bool]$DryRun, [bool]$NoNotify, $env:USERNAME)
+        Write-Log ('[INICIO] modo={0} dry_run={1} no_notify={2} usuario={3} limite_min={4}' -f $Mode, [bool]$DryRun, [bool]$NoNotify, $env:USERNAME, $limitMin)
         Write-Log ('[CMD] "{0}" {1} (cwd={2})' -f $py, ($quoted -join ' '), $engineRoot)
 
         $sw = [System.Diagnostics.Stopwatch]::StartNew()
         $code = $null
         try {
             $proc = Start-Process -FilePath $py -ArgumentList $quoted -WorkingDirectory $engineRoot `
-                -NoNewWindow -Wait -PassThru -RedirectStandardOutput $tmpOut -RedirectStandardError $tmpErr
-            $proc.WaitForExit()
-            $code = $proc.ExitCode
+                -NoNewWindow -PassThru -RedirectStandardOutput $tmpOut -RedirectStandardError $tmpErr
+            $finished = $proc.WaitForExit([int]($limitMin * 60 * 1000))
+            if (-not $finished) {
+                Write-Log ("[PRAZO] o ciclo passou de {0} min. Encerrando o processo antes do limite do Agendador." -f $limitMin)
+                try { & "$env:SystemRoot\System32\taskkill.exe" /PID $proc.Id /T /F | Out-Null } catch { }
+                try { if (-not $proc.HasExited) { Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue } } catch { }
+                $code = 2
+            }
+            else {
+                $code = $proc.ExitCode
+            }
         }
         catch {
             Write-Log ('[ERRO] falha ao iniciar o Python do app: ' + $_.Exception.Message)

@@ -1,0 +1,203 @@
+/* :root literal de https://cdn.apollo.rio.br/v1.0.1/core.js?approved | SHA-256 fa49b9f28c6ca741d3f4ffa085d08aaba113c08468b6ff641373496a0a1105e5 */
+:root{color-scheme:light;block-size:100%;inline-size:100%;
+
+ /* --- ENGINE --- */
+ --rgb-theme:249,248,248;
+ --rgb-diff:10,10,10;
+
+ /* --- SAFE AREAS --- */
+ --safe-top:env(safe-area-inset-top,0px);
+ --safe-bottom:env(safe-area-inset-bottom,0px);
+ --safe-left:env(safe-area-inset-left,0px);
+ --safe-right:env(safe-area-inset-right,0px);
+ 
+/* --- FAMILIES - every stack ends on a generic --- */
+ --ff-main: "Geist", system-ui, "Helvetica Neue", sans-serif;
+ --ff-heading: "Bricolage Grotesque", system-ui, sans-serif;
+ --ff-serif: "Instrument Serif", serif;
+ --ff-em: var(--ff-serif); 
+ --ff-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+ --ff-fat: "Boldonse",system-ui,sans-serif;
+ 
+ /* --- TYPE SCALE ---
+    USER-PREFERENCE BRIDGE · --fs-r raw value · --fs-u the multiply factor · 1 = no preference.
+    STANDARD · --fs-h2 heading · --fs-p subtitle · --fs-p4 paragraph.
+    The rest of the ladder serves .h1–.h6 and legacy classes. */
+ --fs-u:var(--fs-r,1);
+ --fs-h1:calc(var(--fs-u) * clamp(2rem,1.167rem + 3.65vi,4.5rem));
+ --fs-h2:calc(var(--fs-u) * clamp(1.625rem,1.0rem + 2.73vi,3.5rem));      /* ◆ heading   */
+ --fs-h3:calc(var(--fs-u) * clamp(1.375rem,.917rem + 1.82vi,2.75rem));
+ --fs-h4:calc(var(--fs-u) * clamp(1.25rem,.916rem + 1.46vi,2.25rem));
+ --fs-h5:calc(var(--fs-u) * clamp(1.125rem,.875rem + 1.09vi,1.875rem));
+ --fs-h6:calc(var(--fs-u) * clamp(1rem,.833rem + .73vi,1.5rem));
+ --fs-p:calc(var(--fs-u) * clamp(.9375rem,.875rem + .27vi,1.125rem));     /* ◆ subtitle  */
+ --fs-p1:var(--fs-p);
+ --fs-p2:calc(var(--fs-u) * clamp(.8125rem,.75rem + .27vi,1rem));
+ --fs-p3:calc(var(--fs-u) * clamp(.6875rem,.625rem + .27vi,.875rem));
+ --fs-p4:calc(var(--fs-u) * clamp(.5625rem,.5rem + .27vi,.75rem));        /* ◆ paragraph */
+ --fs-p5:calc(var(--fs-u) * clamp(.4375rem,.375rem + .27vi,.625rem));
+ --fs-p6:calc(var(--fs-u) * clamp(.3125rem,.25rem + .27vi,.5rem));
+ /* Legacy fixed sizes - kept for the classes built on them. Outside the standard (audit Y1). */
+ --fs-base:calc(11px * var(--fs-u));
+ --fs-list:calc(11.5px * var(--fs-u));
+ --fs-list-meta:calc(9.5px * var(--fs-u));
+ --fs-tag:var(--fs-list);
+ --fs-qlt:calc(var(--fs-list) * 0.65);
+
+ /* --- NEUTRAL SCALE - ink alpha over canvas, follows the engine ---
+    --white-1 is the opaque canvas. Then .02 steps: white 2→20 · gray 1→20 · black 10→1 · black. */
+ --white-1:rgba(var(--rgb-theme),1);
+ --white-2:rgba(var(--rgb-diff),.02);--white-3:rgba(var(--rgb-diff),.04);--white-4:rgba(var(--rgb-diff),.06);--white-5:rgba(var(--rgb-diff),.08);--white-6:rgba(var(--rgb-diff),.10);
+ --white-7:rgba(var(--rgb-diff),.12);--white-8:rgba(var(--rgb-diff),.14);--white-9:rgba(var(--rgb-diff),.16);--white-10:rgba(var(--rgb-diff),.18);--white-11:rgba(var(--rgb-diff),.20);
+ --white-12:rgba(var(--rgb-diff),.22);--white-13:rgba(var(--rgb-diff),.24);--white-14:rgba(var(--rgb-diff),.26);--white-15:rgba(var(--rgb-diff),.28);--white-16:rgba(var(--rgb-diff),.30);
+ --white-17:rgba(var(--rgb-diff),.32);--white-18:rgba(var(--rgb-diff),.34);--white-19:rgba(var(--rgb-diff),.36);--white-20:rgba(var(--rgb-diff),.38);
+ --gray-1:rgba(var(--rgb-diff),.40);--gray-2:rgba(var(--rgb-diff),.42);--gray-3:rgba(var(--rgb-diff),.44);--gray-4:rgba(var(--rgb-diff),.46);--gray-5:rgba(var(--rgb-diff),.48);
+ --gray-6:rgba(var(--rgb-diff),.50);--gray-7:rgba(var(--rgb-diff),.52);--gray-8:rgba(var(--rgb-diff),.54);--gray-9:rgba(var(--rgb-diff),.56);--gray-10:rgba(var(--rgb-diff),.58);
+ --gray-11:rgba(var(--rgb-diff),.60);--gray-12:rgba(var(--rgb-diff),.62);--gray-13:rgba(var(--rgb-diff),.64);--gray-14:rgba(var(--rgb-diff),.66);--gray-15:rgba(var(--rgb-diff),.68);
+ --gray-16:rgba(var(--rgb-diff),.70);--gray-17:rgba(var(--rgb-diff),.72);--gray-18:rgba(var(--rgb-diff),.74);--gray-19:rgba(var(--rgb-diff),.76);--gray-20:rgba(var(--rgb-diff),.78);
+ --black-10:rgba(var(--rgb-diff),.80);--black-9:rgba(var(--rgb-diff),.82);--black-8:rgba(var(--rgb-diff),.84);--black-7:rgba(var(--rgb-diff),.86);--black-6:rgba(var(--rgb-diff),.88);
+ --black-5:rgba(var(--rgb-diff),.90);--black-4:rgba(var(--rgb-diff),.92);--black-3:rgba(var(--rgb-diff),.94);--black-2:rgba(var(--rgb-diff),.96);--black-1:rgba(var(--rgb-diff),.98);
+ --black:rgba(var(--rgb-diff),1);
+
+ /* --- LEGACY HEX RAMPS - verbatim; html.dark-mode mirrors them 50 ↔ 950 --- */
+ --black-50:#F4F4F4;--black-100:#EBEBEB;--black-200:#D2D2D2;--black-300:#AFAFAF;--black-400:#6E6E6E;--black-500:#050505;--black-600:#040404;--black-700:#030303;--black-800:#020202;--black-900:#010101;--black-950:#000000;
+ --onyx-50:#F5F5F5;--onyx-100:#ECECEC;--onyx-200:#D4D4D4;--onyx-300:#B4B3B4;--onyx-400:#777677;--onyx-500:#151415;--onyx-600:#121112;--onyx-700:#0F0E0F;--onyx-800:#0A0A0A;--onyx-900:#060606;--onyx-950:#030303;
+ --white-50:#F9F8F8;--white-100:#F9F8F8;--white-200:#F9F8F8;--white-300:#F9F8F8;--white-400:#F9F8F8;--white-500:#F9F8F8;--white-600:#E0E0E0;--white-700:#B7B7B7;--white-800:#848484;--white-900:#515151;--white-950:#2D2D2D;
+ --bright-snow-50:#FEFEFE;--bright-snow-100:#FEFEFE;--bright-snow-200:#FEFEFE;--bright-snow-300:#FDFDFD;--bright-snow-400:#FCFCFC;--bright-snow-500:#FAFAFA;--bright-snow-600:#DCDCDC;--bright-snow-700:#B4B4B4;--bright-snow-800:#828282;--bright-snow-900:#4F4F4F;--bright-snow-950:#2D2D2D;
+ --platinum-50:#FEFEFE;--platinum-100:#FDFDFD;--platinum-200:#FCFCFC;--platinum-300:#FAFAFA;--platinum-400:#F6F6F6;--platinum-500:#F0F0F0;--platinum-600:#D3D3D3;--platinum-700:#ACACAC;--platinum-800:#7C7C7C;--platinum-900:#4C4C4C;--platinum-950:#2B2B2B;
+
+ /* --- PRIMARY · ACCENT - one literal, one perfume ---
+    --rgb-accent reads --rgb-primary; a runtime picker may still rewrite --rgb-accent alone.
+    Hover / active are neutral by contract - the accent never marks a state. */ 
+ --rgb-primary: 243,143,30;
+ --primary:rgba(var(--rgb-primary),1);
+ --primary-bg:rgba(var(--rgb-primary),.02);
+ --primary-hover:var(--txt-hover);
+ --primary-active:var(--black-2);
+ --primary-h:var(--primary-hover);
+ --rgb-accent:var(--rgb-primary);
+ --accent:rgba(var(--rgb-accent),1);
+ --accent-sunset-red:#FF2D55;--accent-sunset-gold:#FFCC00;
+ --primary-gradient:linear-gradient(to bottom right,rgba(var(--rgb-primary),.15),var(--primary));
+ --primary-shadow: none;
+ 
+ /*     EMBER - the perfume ramp. Does not flip with the theme     */
+--orange-50:  #FDF9F3;
+--orange-100: #FCF1E6;
+--orange-200: #FAE1CC;
+--orange-300: #F7CBA6;
+--orange-400: #F4AC6B;
+--orange-500: #F38F1E;
+--orange-600: #DF7C00;
+--orange-700: #B96400;
+--orange-800: #954E00;
+--orange-900: #7C3F00;
+--orange-950: #421F00;
+
+ /* --- SURFACES --- */
+ --bg:rgba(var(--rgb-theme),1);
+ --surface:var(--white-2);
+ --surface-hover:var(--white-4);
+ --card:var(--white-3);
+ --card-hover:var(--white-5);
+ --glass:var(--white-3);
+ --surface-1:var(--white-2);--surface-2:var(--white-2);--surface-3:var(--white-3);--surface-4:var(--white-4);--surface-5:var(--white-5);
+
+ /* --- TEXT - hierarchy is contrast ---
+    title · primary · selected · done · emphasis  → --txt-heading
+    paragraph · subtitle lede                     → --txt-color
+    hover lift                                    → --txt-hover
+    link in running text · hover                  → --txt-link · --txt-link-hover
+    meta · kicker · idle icon · placeholder       → --muted (fainter: --muted-txt) */
+ --txt-color:rgba(var(--rgb-diff),.67);
+ --txt-heading:var(--black-10);                                           /* .80 */
+ --txt-hover:var(--black-6);                                              /* .88 */
+ --txt-color-hover:var(--txt-hover);
+ --txt-color-heading:var(--txt-heading);
+ /* TRACE - links call attention by hue, not by mass.
+    Rest: the link's own context colour (currentColor = inherited text), lifted toward the ink,
+    carrying a dose of Ember. Hover: Ember pulled into the ink - deeper, stronger contrast.
+    WHY TWO DOSES: Ember sits at OKLCH L≈.70. On graphite the text is L≈.69, so Ember adds hue
+    and nothing else. On the light canvas the text is L≈.46, so Ember drags the link LIGHTER,
+    erasing its lift and fading its hue into grey - one dose cannot serve both themes.
+    Light gets a stronger lift and trace; html.dark-mode keeps the lighter dose.
+    Measured through the real selectors (text: light 6.6:1 · dark 6.9:1):
+      light  rest 7.8:1 · chroma .075      hover 9.4:1  · deeper Ember
+      dark   rest 8.0:1 · chroma .051      hover 10.7:1 · paler Ember
+    Use on 'color', where currentColor is the inherited text colour. Follows any runtime --rgb-accent. */
+ --link-trace:0;
+ --link-lift:38%;
+ --link-trace-hover:.55;
+ --txt-link:oklch(from var(--accent) var(--link-lift) calc(c * var(--link-trace)) h);
+ --txt-link-hover:oklch(from var(--accent) var(--link-lift) calc(c * var(--link-trace-hover)) h);
+ 
+ /* Perfume sheen. Resolves on :root with the fallbacks below; local --ts-* overrides
+    act only through the .shine rule, which rebuilds the gradient on its own element.
+    usage · class="shine shine--perfume" data-shine data-speed="2.8" data-delay="3.4" data-perfume */
+ --txt-color-heading-perfurm:linear-gradient(var(--ts-spread,155deg),var(--ts-color,var(--accent)) 0%,var(--ts-color,var(--accent)) 35%,var(--ts-shine,var(--orange-200)) 50%,var(--ts-color,var(--accent)) 65%,var(--ts-color,var(--accent)) 100%);
+ --muted:var(--gray-1);                                                   /* .40 */
+ --muted-txt:rgba(var(--rgb-diff),.35);
+ --muted-bg:rgba(var(--rgb-diff),.125);
+
+ /* --- BORDERS - values only. The DS draws hairlines with box-shadow, never border. --- */
+ --border:var(--white-3);
+ --border-hover:var(--white-5);
+ --border-strong:var(--white-10);
+
+ /* --- ALERTS --- */
+ --alert-icon:#FF6B6B;
+ --alert-red:var(--alert-icon);
+ --alert-success:#2BA84A;
+ --alert-warning:#FFB020;
+ --alert-card:color-mix(in srgb,var(--alert-icon) 12%,var(--bg));
+ --info-blue:#0066CC;
+
+ /* --- SPACE --- */
+ --s-1:4px;--s-2:8px;--s-3:16px;--s-4:24px;--s-5:32px;--s-6:48px;--s-7:64px;
+
+ /* --- RADIUS --- */
+ --r-xs:10px;--r-sm:15px;--r:20px;--r-lg:30px;--r-pill:999px;--rad-down:14px;
+ --radius:var(--r);
+
+ /* --- EASING --- */
+ --ease:cubic-bezier(.16,1,.3,1);
+ --ease-smooth:cubic-bezier(.25,1,.5,1);
+ --ease-snappy:cubic-bezier(.2,.9,.3,1);
+ --t-ui:.25s var(--ease);
+
+ /* --- SCROLLBAR - always dark ink, never flips with theme --- */
+ --sb-ink-rgb:10,10,10;
+ --sb-track:rgba(var(--sb-ink-rgb),.08);
+ --sb-track-hover:rgba(var(--sb-ink-rgb),.14);
+ --sb-thumb:rgba(var(--sb-ink-rgb),.28);
+ --sb-thumb-hover:rgba(var(--sb-ink-rgb),.42);
+ --sb-thumb-active:rgba(var(--sb-ink-rgb),.55);
+
+ /* --- Z-INDEX --- */
+ --z-scrollbar:2;
+ --z-base:1;--z-sticky:20;--z-ui:100;--z-pop:200;
+ --z-sheet:9090;--z-fab:9100;--z-nav:9900;--z-modal:9950;
+
+ /* --- SHADOWS --- */
+ --shadow-1:0 4px 12px rgba(var(--rgb-diff),.04);
+ --shadow-2:0 45px 150px rgba(var(--rgb-diff),.06);
+ --shadow:var(--shadow-glass);
+ --shadow-focus:0 0 0 13px var(--white-6);
+ --img-border:inset 0 1px 0 rgba(var(--rgb-theme),.6),inset 0 0 0 1px var(--white-5);
+ --img-frame:rgba(var(--rgb-diff),.05) 0px 0px 0px 1px;
+
+ /* --- GLASS - live again; snapped to the DS glass surfaces --- */
+ --glass-blur:blur(40px) saturate(1.4);
+ --glass-bg:linear-gradient(13deg,var(--white-5) 0%,var(--white-3) 57%,var(--white-4) 85%,var(--white-5) 100%);
+ --glass-shadow:inset 0 0 0 1px var(--white-9);
+ --glass-border:1px solid var(--white-3);
+
+ /* --- ALIASES --- */
+ --white:var(--white-1);
+ --ease-out:var(--ease);--ease-default:var(--ease);--ease-spring:var(--ease-snappy);--transition-ui:var(--t-ui);
+ --font-main:var(--ff-main);--font-heading:var(--ff-heading);--font-fun:var(--ff-fun);
+ --txt-muted:var(--muted-txt);--bg-muted:var(--muted-bg);
+ --primary-color:var(--accent);--p:var(--primary);
+ --space-4:var(--s-4);
+ --shadow-glass:var(--glass-shadow);
+}

@@ -4,14 +4,15 @@ Todo texto vem de `cv_data` (linhas do perfil) e passa por html.escape. URLs apa
 """
 from __future__ import annotations
 
+import base64
 import hashlib
 import html
 from pathlib import Path
 
 from jobos.paths import resolve_root
 
-RENDER_VERSION = "render-1"
-FOOTER = "Gerado localmente pelo JOBOS — salve como PDF pelo navegador"
+RENDER_VERSION = "render-3"
+FORBIDDEN_SECTIONS = {"Competências-Chave", "Competências Principais", "Core Competencies"}
 FALLBACK_CSS = ("@page{size:A4;margin:14mm}body{font-family:Arial,Helvetica,sans-serif;font-size:10pt;color:#000;"
                 "background:#fff}h1{font-size:18pt}h2{font-size:11pt;border-bottom:1px solid #000}"
                 "li{margin:0 0 1mm}.no-print{display:none}@media screen{.no-print{display:block}}")
@@ -26,6 +27,11 @@ def css_text() -> str:
         return css_path().read_text(encoding="utf-8")
     except OSError:
         return FALLBACK_CSS
+
+
+def style_source_hash(css_body: str) -> str:
+    """Token CSP do conteúdo exato do elemento style (sha256 em base64, sem o prefixo)."""
+    return base64.b64encode(hashlib.sha256(css_body.encode("utf-8")).digest()).decode("ascii")
 
 
 def renderer_id() -> str:
@@ -48,6 +54,8 @@ def _li(line, cls: str = "") -> str:
 
 
 def _section(title: str, body: str) -> str:
+    if title in FORBIDDEN_SECTIONS:
+        raise ValueError("Seção artificial de competências proibida")
     return f"<section>\n<h2>{_e(title)}</h2>\n{body}\n</section>" if body else ""
 
 
@@ -63,9 +71,6 @@ def render_html(cv_data: dict) -> str:
     contact = [_txt(x) for x in [ident.get("location")] + list(ident.get("contacts") or []) if x]
     title_bits = [b for b in (name, "Currículo", job.get("company"), job.get("title")) if b]
     parts = []
-    parts.append(f'<aside class="packet-meta no-print"><strong>Pacote local para:</strong> {_e(job.get("title"))}'
-                 f' — {_e(job.get("company"))}. Rascunho gerado a partir do perfil; não significa candidatura enviada.'
-                 f' Imprima ou salve como PDF pelo navegador.</aside>')
     head = [f"<h1>{_e(name)}</h1>"]
     if cv_data.get("headline"):
         head.append(f'<p class="headline">{_e(_txt(cv_data["headline"]))}</p>')
@@ -92,7 +97,7 @@ def render_html(cv_data: dict) -> str:
     sk = _ul(skills.get("professional"))
     if skills.get("independent"):
         sk += ('\n<h3>Em desenvolvimento e projetos independentes</h3>\n' + _ul(skills.get("independent")))
-    parts.append(_section("Competências", sk))
+    parts.append(_section("Ferramentas", sk))
     cred = cv_data.get("credentials") or {}
     parts.append(_section("Formação", _ul(cred.get("education"))))
     parts.append(_section("Certificações e treinamentos", _ul(cred.get("certifications"))))
@@ -100,12 +105,15 @@ def render_html(cv_data: dict) -> str:
     parts.append(_section("Idiomas e registros", langreg))
     body = "\n".join(p for p in parts if p)
     css = css_text().replace("</", "<\\/")
+    style_body = f"\n{css}\n"
+    token = style_source_hash(style_body)
     return (
         "<!doctype html>\n"
         '<html lang="pt-BR">\n<head>\n<meta charset="utf-8">\n'
         '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
         '<meta name="robots" content="noindex,nofollow">\n'
-        '<meta http-equiv="Content-Security-Policy" content="default-src \'none\'; style-src \'unsafe-inline\'; img-src data:">\n'
-        f"<title>{_e(' - '.join(title_bits))}</title>\n<style>\n{css}\n</style>\n</head>\n<body>\n"
-        f'<main class="cv">\n{body}\n<footer class="cv-footer">{_e(FOOTER)}</footer>\n</main>\n</body>\n</html>\n'
+        f'<meta http-equiv="Content-Security-Policy" content="default-src \'none\'; script-src \'none\'; '
+        f'style-src \'sha256-{token}\'; img-src data:">\n'
+        f"<title>{_e(' - '.join(title_bits))}</title>\n<style>{style_body}</style>\n</head>\n<body>\n"
+        f'<main class="cv">\n{body}\n</main>\n</body>\n</html>\n'
     )

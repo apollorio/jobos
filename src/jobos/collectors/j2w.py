@@ -207,6 +207,38 @@ def _itemprop_description(html: str) -> str | None:
     return None
 
 
+_APPLY_ANCHOR = re.compile(r"<a\b([^>]*)>(.*?)</a>", re.I | re.S)
+
+
+def detect_apply(html: str, page_url: str) -> dict:
+    """Opções de candidatura no HTML do Jobs2Web. LinkedIn e Indeed são só rótulos; a URL gravada fica no mesmo host."""
+    host = (urlsplit(page_url or "").hostname or "").lower()
+    options: list[str] = []
+    apply_url = None
+    for attrs, inner in _APPLY_ANCHOR.findall(html or ""):
+        href_m = HREF_RE.search(attrs) or re.search(r"href\s*=\s*'([^']+)'", attrs, re.I)
+        href = htmllib.unescape(href_m.group(1)) if href_m else ""
+        label = clean(re.sub(r"<[^>]+>", " ", inner))
+        low = f"{label} {href}".lower()
+        if "linkedin.com" in low or "linkedin" in low:
+            kind = "linkedin"
+        elif "indeed.com" in low or "indeed" in low:
+            kind = "indeed"
+        elif re.search(r"\b(apply now|apply|candidatar-se|candidate-se|inscreva-se)\b", low):
+            kind = "apply_now"
+        else:
+            continue
+        if kind not in options:
+            options.append(kind)
+        if kind == "apply_now" and href and apply_url is None:
+            absolute = urljoin(page_url, href)
+            target = (urlsplit(absolute).hostname or "").lower()
+            if target and (target == host or target.endswith("." + host) or host.endswith("." + target)):
+                apply_url = absolute.split("#", 1)[0]
+    return {"apply_mode": "apply_now" if apply_url else "unknown", "apply_url": apply_url,
+            "apply_options": options or ["unknown"]}
+
+
 def _date_posted(html: str) -> str | None:
     tm = DATE_TAG_RE.search(html or "")
     if not tm:
@@ -235,6 +267,7 @@ def _details(ctx: CollectContext, batch: SourceBatch) -> None:
         except (FormatChanged, Blocked, SourceFailure) as e:
             batch.warnings.append(f"detalhe {obs.external_id}: {getattr(e, 'code', 'erro')}: {str(e)[:120]}")
             continue
+        obs.raw.update(detect_apply(html, obs.url))
         body = _itemprop_description(html)
         if body is None:
             batch.warnings.append(f"detalhe {obs.external_id}: itemprop=description ausente ou sem fechamento")
