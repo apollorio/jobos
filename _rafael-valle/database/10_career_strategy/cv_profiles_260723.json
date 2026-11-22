@@ -1,0 +1,221 @@
+{
+  "_part": {
+    "id": "10_career_strategy/cv_profiles_260723",
+    "title": "5 perfis de CV (management/planning/operations/hsse/innovation)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_260723"
+    ]
+  },
+  "data": {
+    "note": {
+      "pt": "Texto de resumo, competências e argumento de venda para cada uma das 5 versões de CV disponíveis na ferramenta digital. Todo texto em PT está em primeira pessoa.",
+      "en": "Summary, skills and selling-pitch copy for each of the 5 CV versions available in the digital tool. All PT text is first person."
+    },
+    "management": {
+      "label": {
+        "pt": "Gestão de Projetos",
+        "en": "Project Management"
+      },
+      "subtitle": {
+        "pt": "ENGENHEIRO DE GESTÃO DE PROJETOS",
+        "en": "PROJECT MANAGEMENT ENGINEER"
+      },
+      "tagline": {
+        "pt": "Escopo · Prazo · Custo & Qualidade · Stakeholders · Risco · PMBOK",
+        "en": "Scope · Schedule · Cost & Quality · Stakeholders · Risk · PMBOK"
+      },
+      "summary": {
+        "pt": [
+          "Sou Engenheiro de Gestão de Projetos, Engenheiro Civil (CREA), com MBA em Gestão de Projetos (PMBOK) e mais de 4 anos em projetos marítimos/EPC e de O&G.",
+          "Controlo escopo, prazo, custo e qualidade; produzo KPIs, análise de desvios, forecast e reporte gerencial a clientes e diretoria internacional.",
+          "Faço gestão de stakeholders, mudanças e riscos; controle contratual e claims; melhoria contínua de processos.",
+          "Tenho conhecimento de ferramentas de planejamento (MS Project) e desenvolvimento web autônomo (HTML/CSS/JS, Python) para ferramentas de dados e dashboards."
+        ],
+        "en": [
+          "I am a Project Management Engineer, Civil Engineer (CREA), with an MBA in Project Management (PMBOK) and 4+ years in marine/EPC and O&G projects.",
+          "I control scope, schedule, cost and quality; I produce KPIs, deviation analysis, forecasting and management reporting to clients and international directors.",
+          "I manage stakeholders, change and risk; contractual control and claims; continuous process improvement.",
+          "I have working knowledge of planning tools (MS Project) plus autonomous web development (HTML/CSS/JS, Python) for data tools and dashboards."
+        ]
+      },
+      "skills": {
+        "pt": "Gestão de Projetos (PMBOK) · Escopo/Prazo/Custo/Qualidade · Controle de Projetos · KPIs & Dashboards · Análise de Desvios · Forecast · Gestão de Riscos & Mudanças · Stakeholders · Controle Contratual & Claims · Análise de Dados (Excel/Power BI) · MS Project (conhecimento)",
+        "en": "Project Management (PMBOK) · Scope/Time/Cost/Quality · Project Controls · KPIs & Dashboards · Deviation Analysis · Forecasting · Risk & Change Management · Stakeholder Management · Contract Control & Claims · Data Analysis (Excel/Power BI) · MS Project (knowledge)"
+      },
+      "why_i_fit": {
+        "pt": "Combino formação formal em gestão (MBA PMBOK, USP/ESALQ) com mais de 3 anos aplicando escopo, prazo, custo e qualidade em um projeto real de grande porte para uma multinacional holandesa, reportando diretamente à diretoria internacional. Já geri mudanças, claims e controle contratual em ambiente de alta exigência regulatória, e trago ainda uma vantagem rara no mercado: autoria de um livro técnico do setor com mais de 3.000 exemplares vendidos, prova concreta da minha capacidade de comunicação estruturada — essencial para reporte gerencial e gestão de stakeholders.",
+        "en": "I combine formal management training (PMBOK MBA, USP/ESALQ) with 3+ years applying scope, schedule, cost and quality on a real large-scale project for a Dutch multinational, reporting directly to international management. I have managed change, claims and contract control in a highly regulated environment, and I bring a rare market edge: authorship of an industry technical book with 3,000+ copies sold — concrete proof of my structured communication skills, essential for management reporting and stakeholder management."
+      },
+      "advantages": {
+        "pt": "<strong>Gestão de Projetos</strong><ul><li>Destaco PMBOK, escopo/prazo/custo/qualidade, stakeholders, risco & mudança e claims.</li><li>Experiência real reportando à diretoria internacional de uma multinacional (Van Oord).</li><li>Diferencial de comunicação: autor de livro técnico com 3.000+ exemplares vendidos.</li></ul>",
+        "en": "<strong>Project Management</strong><ul><li>I lead with PMBOK, scope/time/cost/quality, stakeholders, risk & change, claims.</li><li>Real experience reporting to the international management of a multinational (Van Oord).</li><li>Communication edge: author of a technical book with 3,000+ copies sold.</li></ul>"
+      },
+      "experience_variant": "planning"
+    },
+    "planning": {
+      "label": {
+        "pt": "Planejamento & Controle",
+        "en": "Planning & Scheduling"
+      },
+      "subtitle": {
+        "pt": "ENGENHEIRO DE PLANEJAMENTO & CONTROLE",
+        "en": "PLANNING & SCHEDULING ENGINEER"
+      },
+      "tagline": {
+        "pt": "Cronogramas · Caminho Crítico · Avanço & KPIs · Análise de Atrasos/Riscos · EPC",
+        "en": "Scheduling · Critical Path · Progress & KPIs · Delay & Risk Analysis · EPC"
+      },
+      "summary": {
+        "pt": [
+          "Sou Engenheiro de Planejamento & Controle de Projetos, Engenheiro Civil (CREA), com MBA em Gestão de Projetos (PMBOK) e mais de 4 anos em projetos marítimos/EPC e de O&G.",
+          "Desenvolvo cronogramas baseline, análise de caminho crítico e de atrasos, acompanhamento de avanço físico, dashboards de KPIs e forecasts para clientes internacionais e diretoria.",
+          "Faço planejamento de recursos, controle de custos e prazos, gestão de mudanças, claims contratuais e melhoria contínua de procedimentos de planejamento.",
+          "Tenho conhecimento de ferramentas de planejamento (MS Project) e desenvolvimento web full-stack autônomo (HTML/CSS/JS, Python) para criar ferramentas de dados e dashboards."
+        ],
+        "en": [
+          "I am a Planning & Project Controls Engineer, Civil Engineer (CREA), with an MBA in Project Management (PMBOK) and 4+ years in complex marine/EPC and O&G projects.",
+          "I build baseline schedules, critical-path and delay analysis, physical progress tracking, KPI dashboards and rolling forecasts for international clients and management.",
+          "I handle resource planning, cost & deadline control, change management, contractual claims and continuous improvement of planning procedures.",
+          "I have knowledge of planning tools (MS Project) plus autonomous full-stack web development (HTML/CSS/JS, Python) to build custom data tools and dashboards."
+        ]
+      },
+      "skills": {
+        "pt": "Planejamento, Monitoramento & Controle · Cronogramas Baseline · Caminho Crítico (CPM) · Análise de Atrasos & Riscos · Avanço Físico · Planejamento de Recursos · Custos & Prazos · KPIs & Dashboards · Forecast · Gestão de Mudanças & Claims · Análise de Dados (Excel, Power BI) · MS Project (conhecimento) · PMBOK",
+        "en": "Project Planning, Monitoring & Control · Baseline Schedules · Critical Path (CPM) · Delay & Risk Analysis · Physical Progress Tracking · Resource Planning · Cost & Deadline Control · KPIs & Dashboards · Forecasting · Change Management & Claims · Data Analysis (Excel, Power BI) · MS Project (knowledge) · PMBOK"
+      },
+      "why_i_fit": {
+        "pt": "Espelho diretamente o que o mercado offshore/EPC busca hoje: domínio prático de cronogramas baseline, caminho crítico e forecast em ciclos de 15 dias, testado em projeto real de dragagem de grande escala. Emiti Avisos aos Navegantes, planejei SIMOPS e apoiei obtenção de Isenção de Praticagem — evidências concretas de que entendo tanto o cronograma quanto a operação física por trás dele. Alinho-me ao plano de investimentos 2025–2029 da Petrobras (~US$ 111 bi em CAPEX) e à demanda crescente por Engenheiros de Planejamento com histórico offshore comprovado.",
+        "en": "I directly mirror what the offshore/EPC market seeks today: hands-on mastery of baseline schedules, critical path and 15-day rolling forecasts, tested on a real large-scale dredging project. I issued Notices to Mariners, planned SIMOPS and supported Pilotage Exemption approval — concrete evidence that I understand both the schedule and the physical operation behind it. I align with Petrobras' 2025–2029 investment plan (~US$111B CAPEX) and the growing demand for Planning Engineers with proven offshore track records."
+      },
+      "advantages": {
+        "pt": "<strong>Planejamento & Controle</strong><ul><li>Espelho o anúncio: <b>baseline, caminho crítico, análise de atrasos e riscos, avanço físico, dashboards</b>.</li><li>Ferramentas apresentadas como <b>conhecimento</b> (MS Project), coerente com \"conhecimento de ferramentas de planejamento\".</li><li>Mantenho CREA, MBA/PMBOK, inglês avançado e disponibilidade imediata no Rio.</li></ul>",
+        "en": "<strong>Planning & Scheduling</strong><ul><li>I mirror the posting: <b>baseline, critical path, delay & risk analysis, physical progress, dashboards</b>.</li><li>Tools shown as <b>knowledge</b> (MS Project), matching \"knowledge of planning tools\".</li><li>I keep CREA, MBA/PMBOK, advanced English and Rio availability.</li></ul>"
+      },
+      "experience_variant": "planning"
+    },
+    "operations": {
+      "label": {
+        "pt": "Operações (O&G/Marítimo)",
+        "en": "Operations (O&G/Maritime)"
+      },
+      "subtitle": {
+        "pt": "ENGENHEIRO DE OPERAÇÕES · O&G / ENERGIA / MARÍTIMO",
+        "en": "OPERATIONS ENGINEER · O&G / ENERGY / MARITIME"
+      },
+      "tagline": {
+        "pt": "Operações Marítimas · Planejamento · Performance & KPIs · Resposta a Emergências",
+        "en": "Marine Operations · Planning · Performance & KPIs · Emergency Response"
+      },
+      "summary": {
+        "pt": [
+          "Sou Engenheiro de Operações (O&G / Energia / Marítimo), Engenheiro Civil (CREA), com mais de 4 anos em frotas marítimas, dragagem e apoio offshore.",
+          "Faço planejamento operacional e controle de performance/KPIs (produção, disponibilidade, consumo), relatórios diários (DPR) e logística de frota.",
+          "Sou Coordenador de Emergências (ERT), com 5+ Medevacs reais; atuo em QHSE, investigação de incidentes e conformidade NORMAM-12/IMO/SOLAS.",
+          "Desenvolvo web full-stack de forma autônoma (HTML/CSS/JS, Python) para criar ferramentas de dados e dashboards de KPIs."
+        ],
+        "en": [
+          "I am an Operations Engineer (O&G / Energy / Maritime), Civil Engineer (CREA), with 4+ years across marine fleets, dredging and offshore support.",
+          "I handle operational planning and performance/KPI control (production, availability, fuel consumption), daily progress reporting (DPR) and fleet logistics.",
+          "I am an Emergency Response Coordinator (ERT), with 5+ real Medevacs; I work on QHSE, incident investigation and NORMAM-12/IMO/SOLAS compliance.",
+          "I develop full-stack web autonomously (HTML/CSS/JS, Python) to build custom data tools and KPI dashboards."
+        ]
+      },
+      "skills": {
+        "pt": "Operações Offshore & Marítimas · Planejamento Operacional · Performance & KPIs · DPR/RDO · Logística de Frota & Shorebase · SIMOPS · Resposta a Emergências (ERT/Medevac) · QHSE · NORMAM-12/IMO/SOLAS/MARPOL · Drake/SAP RT · Excel/Power BI · Web/Python",
+        "en": "Offshore & Marine Operations · Operational Planning · Performance & KPIs · DPR/RDO · Fleet & Shorebase Logistics · SIMOPS · Emergency Response (ERT/Medevac) · QHSE · NORMAM-12/IMO/SOLAS/MARPOL · Drake/SAP RT · Excel/Power BI · Web/Python"
+      },
+      "why_i_fit": {
+        "pt": "Sou a combinação pouco comum de Engenheiro de Operações com bagagem real de emergência: coordenei mais de 5 Medevacs reais como parte do ERT, geri a logística completa de frota (atracação, bunkering, crew change, SIMOPS) e sustentei conformidade NORMAM-12/IMO/SOLAS/MARPOL em operações contínuas por mais de 3 anos. Domino nativamente os sistemas Drake/SAP RT da Petrobras — o que reduz a curva de adaptação em qualquer operador ou prestador de serviço que atenda a companhia. Isso me torna um candidato de baixo risco e alta prontidão operacional imediata.",
+        "en": "I am the uncommon combination of an Operations Engineer with real emergency-response background: I coordinated 5+ real Medevacs as part of the ERT, managed complete fleet logistics (berthing, bunkering, crew change, SIMOPS) and sustained NORMAM-12/IMO/SOLAS/MARPOL compliance across 3+ years of continuous operations. I natively master Petrobras' Drake/SAP RT systems — which shortens the ramp-up curve at any operator or service provider serving the company. That makes me a low-risk, high-readiness candidate for immediate operational deployment."
+      },
+      "advantages": {
+        "pt": "<strong>Operações (O&G / Marítimo)</strong><ul><li>Destaco operações marítimas, planejamento & KPIs, ERT/Medevac, NORMAM-12 e logística de frota.</li><li>Domínio nativo dos sistemas Drake/SAP RT da Petrobras.</li><li>Alinhado ao ciclo de investimentos 2025–2029 da Petrobras e às operadoras/prestadoras parceiras.</li></ul>",
+        "en": "<strong>Operations (O&G / Maritime)</strong><ul><li>I lead with marine operations, planning & KPIs, ERT/Medevac, NORMAM-12 and logistics.</li><li>Native command of Petrobras' Drake/SAP RT systems.</li><li>Aligned with Petrobras' 2025–2029 investment cycle and its partner operators/contractors.</li></ul>"
+      },
+      "experience_variant": "general"
+    },
+    "hsse": {
+      "label": {
+        "pt": "HSSE",
+        "en": "HSSE"
+      },
+      "subtitle": {
+        "pt": "COORDENADOR HSSE & RESPOSTA A EMERGÊNCIAS",
+        "en": "HSSE COORDINATOR & EMERGENCY RESPONSE"
+      },
+      "tagline": {
+        "pt": "Segurança Operacional · ERT/Medevac · Conformidade · Investigação de Incidentes",
+        "en": "Operational Safety · ERT/Medevac · Compliance · Incident Investigation"
+      },
+      "summary": {
+        "pt": [
+          "Sou Coordenador HSSE & Resposta a Emergências, Engenheiro Civil (CREA), com pós-graduação em Engenharia de Segurança do Trabalho.",
+          "Fui Coordenador de Emergências (ERT), com 5+ Medevacs reais; realizo investigação de incidentes e análise de risco.",
+          "Garanto conformidade com NORMAM-12/IMO/SOLAS/MARPOL e NR-33/34/35/17/30; conduzo procedimentos e auditorias QHSE.",
+          "Tenho mais de 4 anos em operações marítimas, com comunicação multicultural e inglês avançado."
+        ],
+        "en": [
+          "I am an HSSE Coordinator & Emergency Response specialist, Civil Engineer (CREA), with a postgraduate degree in Occupational Safety Engineering.",
+          "I served as Emergency Response Coordinator (ERT), with 5+ real Medevacs; I perform incident investigation and risk analysis.",
+          "I ensure NORMAM-12/IMO/SOLAS/MARPOL and NR-33/34/35/17/30 compliance; I conduct QHSE procedures and audits.",
+          "I have 4+ years in marine operations, with multicultural communication and advanced English."
+        ]
+      },
+      "skills": {
+        "pt": "Resposta a Emergências (ERT/Medevac) · Análise de Risco · Investigação de Incidentes · NORMAM-12 · IMO/SOLAS/MARPOL · NR-33/34/35/17/30 · SIMOPS · QHSE · Comunicação Multicultural",
+        "en": "Emergency Response (ERT/Medevac) · Risk Analysis · Incident Investigation · NORMAM-12 · IMO/SOLAS/MARPOL · NR-33/34/35/17/30 · SIMOPS · QHSE · Multicultural Communication"
+      },
+      "why_i_fit": {
+        "pt": "Tenho formação formal em segurança (pós-graduação em Engenharia de Segurança do Trabalho) somada a experiência real e recente como Coordenador de Emergências — não é um treinamento teórico, é histórico comprovado de mais de 5 Medevacs reais coordenados a bordo, com acompanhamento clínico e follow-up de lesões. Sustentei conformidade regulatória multi-normativa (NORMAM-12, IMO/SOLAS/MARPOL e o conjunto de NRs 17/30/33/34/35) em operação contínua por mais de 3 anos, incluindo investigação de incidentes junto à equipe de QHSE. Essa combinação de formação + prática real é o que diferencia um coordenador HSSE de verdade de um administrativo de segurança.",
+        "en": "I combine formal safety training (postgraduate in Occupational Safety Engineering) with real, recent Emergency Coordinator experience — not theoretical training, but a proven track record of 5+ real Medevacs coordinated onboard, including clinical follow-up on injuries. I sustained multi-standard regulatory compliance (NORMAM-12, IMO/SOLAS/MARPOL and the NR 17/30/33/34/35 set) across 3+ years of continuous operations, including incident investigation with the QHSE team. That combination of training plus real practice is what sets apart a genuine HSSE coordinator from a safety administrator."
+      },
+      "advantages": {
+        "pt": "<strong>HSSE</strong><ul><li>Destaco ERT/Medevac, investigação de incidentes, análise de risco, NRs e QHSE.</li><li>5+ Medevacs reais coordenados, com acompanhamento clínico e follow-up.</li><li>Pós-graduação formal em Engenharia de Segurança do Trabalho.</li></ul>",
+        "en": "<strong>HSSE</strong><ul><li>I lead with ERT/Medevac, incident investigation, risk analysis, NRs, QHSE.</li><li>5+ real Medevacs coordinated, with clinical follow-up.</li><li>Formal postgraduate degree in Occupational Safety Engineering.</li></ul>"
+      },
+      "experience_variant": "general"
+    },
+    "innovation": {
+      "label": {
+        "pt": "Inovação / Digital",
+        "en": "Innovation / Digital"
+      },
+      "subtitle": {
+        "pt": "ENGENHEIRO DE INOVAÇÃO & PROCESSOS DIGITAIS",
+        "en": "INNOVATION & DIGITAL PROCESS ENGINEER"
+      },
+      "tagline": {
+        "pt": "Desenvolvimento Web · Análise de Dados · Automação de Processos · ISO 9000",
+        "en": "Web Development · Data Analysis · Process Automation · ISO 9000"
+      },
+      "summary": {
+        "pt": [
+          "Sou Engenheiro de Inovação & Processos Digitais, Engenheiro Civil (CREA), com mais de 4 anos unindo operações e dados.",
+          "Desenvolvo web full-stack de forma autônoma (HTML/CSS/JS, Python); crio ferramentas de dados, dashboards de KPIs e automação de fluxos.",
+          "Realizo mapeamento de processos e apoio à certificação ISO 9000; concebi e liderei funcionalmente um aplicativo de integração operacional.",
+          "Faço análise de dados (Excel Avançado, Power BI); domino Drake/SAP RT; tenho base sólida em controle de projetos."
+        ],
+        "en": [
+          "I am an Innovation & Digital Process Engineer, Civil Engineer (CREA), with 4+ years bridging operations and data.",
+          "I develop full-stack web autonomously (HTML/CSS/JS, Python); I build custom data tools, KPI dashboards and workflow automation.",
+          "I perform process mapping and support ISO 9000 certification; I conceived and functionally led an operational-integration app.",
+          "I perform data analysis (Advanced Excel, Power BI); I master Drake/SAP RT; I have a strong project-controls foundation."
+        ]
+      },
+      "skills": {
+        "pt": "Desenvolvimento Web (HTML/CSS/JS, Python) · Análise de Dados · Automação de Processos · ISO 9000 · Mapeamento de Processos · Excel Avançado / Power BI · JSON · Drake/SAP RT · Controle de Projetos",
+        "en": "Web Development (HTML/CSS/JS, Python) · Data Analysis · Process Automation · ISO 9000 · Process Mapping · Advanced Excel / Power BI · JSON · Drake/SAP RT · Project Controls"
+      },
+      "why_i_fit": {
+        "pt": "Sou um engenheiro operacional que aprendeu a programar por necessidade real, não por hobby: concebi e liderei funcionalmente um aplicativo interno de integração operacional (almoxarifado, RH, financeiro, notas fiscais e documentação), reduzindo processos a dois cliques. Mapeei processos internos e apoiei a implementação da ISO 9000 com auditor terceirizado. Hoje aplico essa mesma mentalidade estruturando eu mesmo minhas próprias ferramentas web (este CV digital incluso) em HTML/CSS/JavaScript e Python — uma prova viva de que consigo traduzir necessidade operacional em solução digital funcional, sem depender de terceiros.",
+        "en": "I am an operations engineer who learned to code out of real necessity, not as a hobby: I conceived and functionally led an internal operational-integration app (warehouse, HR, finance, invoicing and documentation), cutting processes down to two clicks. I mapped internal processes and supported ISO 9000 implementation with a third-party auditor. Today I apply that same mindset by structuring my own web tools (this digital CV included) in HTML/CSS/JavaScript and Python — living proof that I can translate operational need into working digital solutions without depending on third parties."
+      },
+      "advantages": {
+        "pt": "<strong>Inovação / Digital</strong><ul><li>Destaco desenvolvimento web, análise de dados, automação de processos e ISO 9000.</li><li>Concebi e liderei funcionalmente um app real de integração operacional.</li><li>Construo minhas próprias ferramentas web de ponta a ponta (este CV é uma delas).</li></ul>",
+        "en": "<strong>Innovation / Digital</strong><ul><li>I lead with web development, data analysis, automation, ISO 9000.</li><li>I conceived and functionally led a real operational-integration app.</li><li>I build my own web tools end-to-end (this CV is one of them).</li></ul>"
+      },
+      "experience_variant": "general"
+    }
+  }
+}

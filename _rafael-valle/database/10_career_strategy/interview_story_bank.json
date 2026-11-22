@@ -1,0 +1,55 @@
+{
+  "_part": {
+    "id": "10_career_strategy/interview_story_bank",
+    "title": "Banco de histórias para entrevista",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_tree_v1_2026_10_20"
+    ]
+  },
+  "data": {
+    "stories": {
+      "fleet_planning": "Na Van Oord eu planejava a operação de frota de TSHD, WID e rebocadores em vários portos. A saída era plano semanal, alocação de embarcação e KPI de performance contra o realizado.",
+      "deviation_control": "Controle era desvio: o que estava no plano, o que atrasou e o reporte para gestão. Não era feeling; era número de ciclo, disponibilidade, downtime e frente parada.",
+      "hseq": "HSE operacional: compliance IMO/SOLAS/NORMAM e coordenação de ERT/Medevac. O entregável era o protocolo executado, o registro e a ação, não uma frase genérica sobre segurança.",
+      "erc_drill": "Como ERC eu rodava drill com vítima simulada, media resposta da lancha/embarcação, ambulância e hospital e fechava o relatório com resultado, falhas e melhoria.",
+      "ctank": "Na C-Tank eu sustentava campanhas de manutenção/limpeza em FPSO/OSV com RDO/DPR e Drake/SAP RT, garantindo documentação, qualificação, POB, logística e prontidão.",
+      "tools": "Excel e MS Project eram meios para controle e decisão. Primavera P6 está em desenvolvimento e não deve ser vendido como experiência prática.",
+      "project_deviation": "Quando o avanço se afastava do planejado, eu validava produção, disponibilidade, paradas, consumo e survey/batimetria antes de mudar o cronograma. Se necessário solicitava novo survey/calibração, alinhava causa e ação e atualizava o look-ahead.",
+      "iso_process": "Na C-Tank mapeei processos e formalizei procedimentos/document control para preparação ISO. Na Van Oord usei a mesma lógica para reporting, KPIs, desvios e aprendizado entre projetos.",
+      "project_deviation_long": "Sim. Na Van Oord, em projetos marítimos, isso acontecia principalmente quando o avanço real começava a se afastar da produção prevista. Eu acompanhava diariamente produção, disponibilidade da embarcação, paradas, consumo e dados de survey/batimetria. Quando aparecia um desvio relevante, primeiro eu buscava entender a causa, em vez de simplesmente alterar o cronograma. Já tivemos situacoes em que foi necessário solicitar novos levantamentos de survey e verificar calibração e qualidade dos dados para confirmar se o desvio era realmente de produção ou de medição. A partir disso, eu alinhava com embarcação, equipe de survey, fornecedores e cliente as ações necessárias e atualizava a programação de curto prazo, trabalhando também com um lookahead de aproximadamente 15 dias. O objetivo era atacar a restrição na origem e recuperar o planejamento sem comprometer segurança ou qualidade. Essa experiência me ensinou que controle de projeto não é só comparar planejado e realizado: é identificar rapidamente por que o desvio aconteceu, validar os dados e transformar isso em uma ação executável.",
+      "iso_process_long": "Na C-Tank, tive uma experiência muito prática com padronização quando participei da preparação da empresa para a ISO 9001. Ajudei a mapear processos e a criar procedimentos que ainda não estavam formalizados, inclusive critérios de controle, armazenamento e descarte de documentos. Eu precisava entender como a operação realmente funcionava, transformar isso em um processo claro e documentado e deixá-lo consistente para a auditoria. Na Van Oord, levei essa lógica para diferentes projetos, trabalhando com estruturas padronizadas de planejamento, relatórios, indicadores, controle de produção e acompanhamento de desvios. Como eu passava por projetos em diferentes portos, isso também me deu uma visão de portfolio: entender o que poderia ser replicado entre projetos e o que precisava ser adaptado à realidade de cada operação. Para mim, melhoria contínua vem muito disso: criar um padrao que permita comparar e controlar, aprender com a execução e incorporar esse aprendizado no projeto seguinte.",
+      "_story_meta": {
+        "project_deviation_long": {
+          "supports": [
+            "PRIO Quality",
+            "Planner/Project Controls",
+            "Subsea7"
+          ],
+          "domain_tags": [
+            "project_management_project_controls",
+            "planning_data_performance"
+          ]
+        },
+        "iso_process_long": {
+          "supports": [
+            "Quality / Management Systems roles"
+          ],
+          "domain_tags": [
+            "quality_management_systems"
+          ]
+        }
+      }
+    },
+    "master_tree_v1": {
+      "fleet_planning": "Na Van Oord eu planejava a operação de frota de TSHD, WID e rebocadores em vários portos. A saída era plano semanal, alocação de embarcação e KPI de performance contra o realizado.",
+      "deviation_control": "Controle era desvio: o que estava no plano, o que atrasou e o reporte para gestão. Não era feeling; era número de ciclo, disponibilidade, downtime e frente parada.",
+      "hseq": "HSE operacional: compliance IMO/SOLAS/NORMAM e coordenação de ERT/Medevac quando a frente parava. O entregável era o protocolo executado e o registro.",
+      "ctank": "Na C-Tank eu sustentava campanhas de manutenção de FPSO/OSV com RDO/DPR e Drake/SAP RT em ambientes Shell, Transocean, Helix e Petrobras. O produto era execução acompanhada, diário fechado e logística no prazo.",
+      "tools": "Excel avançado e MS Project entram como meio para consolidar controle e decisão. Primavera não deve ser vendido como experiência prática.",
+      "project_deviation": "Quando produção real se afastava do previsto, eu acompanhava produção, disponibilidade, paradas, consumo e survey/batimetria. Antes de mexer no cronograma, buscava causa, validava medição/calibração, alinhava ações com embarcação, survey, fornecedores e cliente e atualizava o look-ahead.",
+      "process_improvement": "Na C-Tank participei da preparação para ISO 9001, mapeando processos, criando procedimentos e critérios de controle documental. Na Van Oord levei essa lógica para planejamento, reporting, KPIs e melhoria entre projetos."
+    }
+  }
+}

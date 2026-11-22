@@ -1,0 +1,42 @@
+{
+  "_part": {
+    "id": "09_domains/research_and_academic",
+    "title": "Domínio: Pesquisa / Formação Academica",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "label_pt": "Pesquisa / Formação Academica",
+    "priority": 13,
+    "summary": "Estágios internacionais NTUA (Atenas) e BAM (Berlim), engenharia civil, naval/offshore, segurança do trabalho, MBA.",
+    "highlights_master_tree": [],
+    "source_paths": [
+      "experience_nodes.exp_international_research",
+      "education_tree"
+    ],
+    "refs": {
+      "experiences": [
+        "exp_international_research"
+      ],
+      "projects": [],
+      "vessels": [],
+      "software": [],
+      "certifications": [],
+      "education": [
+        "edu_civil",
+        "edu_ports",
+        "edu_mba_pm",
+        "edu_naval",
+        "edu_safety"
+      ],
+      "stories": [],
+      "boundary_groups": [],
+      "volunteer": []
+    },
+    "fit_estimates": [],
+    "hard_gaps_or_boundaries": [],
+    "id": "research_and_academic"
+  }
+}

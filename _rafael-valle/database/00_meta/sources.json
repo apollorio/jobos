@@ -1,0 +1,295 @@
+{
+  "_part": {
+    "id": "00_meta/sources",
+    "title": "Registro de fontes (34 arquivos + fontes complementares)",
+    "updated": "2026-11-19",
+    "sources": [
+      "all"
+    ]
+  },
+  "data": {
+    "input_list_count": 34,
+    "unique_files_by_hash": 31,
+    "duplicate_groups": [
+      [
+        "RAFAEL_MASTER_PROFILE_OFFSHORE_2026-10-07.json",
+        "RAFAEL_MASTER_PROFILE_OFFSHORE_2026-10-07(1).json"
+      ],
+      [
+        "RAFAEL_PERINI_VALLE_MASTER_CAREER_DATABASE_FINAL_100PCT_2026-10-21.json",
+        "rvalle.com.br-rafael.json",
+        "master.json"
+      ]
+    ],
+    "files": [
+      {
+        "file": "RAFAEL_MASTER_PROFILE_OFFSHORE_2026-10-07.json",
+        "source_id": "src_offshore_profile_2026_10_07",
+        "bytes": 3536,
+        "sha256": "29495136b312bf4cd2ea5d7503250e42f8f2f14f4c6b717b69ebe708a358b612",
+        "contribution": "Fatos Van Oord/C-Tank confirmados em 2026-10-07, limites para CVs."
+      },
+      {
+        "file": "RAFAEL_PERINI_VALLE_CAREER_KNOWLEDGE_GRAPH_v3_FINAL_2026-10-20.json",
+        "source_id": "src_kg_v3_2026_10_20",
+        "bytes": 177449,
+        "sha256": "61b89459874a28c676c48c95ee3c4eec25d2e6aa1a34a1461f8e133e5d245c35",
+        "contribution": "Grafo v3: validation_queue, mobilidade (subset do master final)."
+      },
+      {
+        "file": "RAFAEL_PERINI_VALLE_MASTER_CAREER_DATABASE_FINAL_100PCT_2026-10-21.json",
+        "source_id": "src_master_final_2026_10_21",
+        "bytes": 222830,
+        "sha256": "baccac260f06a17861bd58af1f052c06c01d423bbbcc24e67b1892fd1d0ad10e",
+        "contribution": "CANÔNICO: base principal de todos os nós."
+      },
+      {
+        "file": "RAFAEL_PERINI_VALLE_MASTER_CAREER_TREE_2026-10-20.json",
+        "source_id": "src_master_tree_v1_2026_10_20",
+        "bytes": 25673,
+        "sha256": "b698a03941ec9ebc5e3373976a4198c853b8d10a628defce0bb3fe00fd70afaa",
+        "contribution": "Timeline, ERC, inspeções, independent projects, interview bank, do-not-claim."
+      },
+      {
+        "file": "rafael-perini-valle-career-database.json",
+        "source_id": "src_career_db_v3_2026_03_10",
+        "bytes": 23529,
+        "sha256": "3aa7abce5aa49cf8955b46f3dcc64ff8386e34e6d7d156cbfac992d0348ffa8e",
+        "contribution": "Career DB v3.0 (CV Builder Pro): responsabilidades, inovações de processo, cv_customization_guide."
+      },
+      {
+        "file": "registry.json",
+        "source_id": "src_sos_registry",
+        "bytes": 56189,
+        "sha256": "65c11e8aa62492af01bbf0b8e7caa1a75da8230e1c0c42c566604b088dc7456f",
+        "contribution": "Registry SSOT do SOS Apollo (motor de políticas determinístico) - evidência técnica de projeto."
+      },
+      {
+        "file": "rvalle.com.br-rafael.json",
+        "source_id": "src_master_final_2026_10_21",
+        "bytes": 222830,
+        "sha256": "baccac260f06a17861bd58af1f052c06c01d423bbbcc24e67b1892fd1d0ad10e",
+        "contribution": "Duplicata byte-a-byte do master final."
+      },
+      {
+        "file": "ultima-exportacao.json",
+        "source_id": "src_jobos_export_2026_08_26",
+        "bytes": 163,
+        "sha256": "a0ee7c402efc71022e35d4c28c1ec8d8855efa7ea71cbf57cbcc4e754f723ea0",
+        "contribution": "Totais da última exportação jobOS."
+      },
+      {
+        "file": "vagas-latest.json",
+        "source_id": "src_jobos_vagas_2026_08_26",
+        "bytes": 255631,
+        "sha256": "d55a65f726d171c38f544d93ad645889218b2959ecfb0634f19ccd1045fd07b3",
+        "contribution": "65 vagas rastreadas pelo jobOS (28 aplicadas) - histórico de candidaturas e dados de teste."
+      },
+      {
+        "file": "2-RAFAEL_PERINI_VALLE_ULTRA_CAREER_KNOWLEDGE_GRAPH_2026-10-20.json",
+        "source_id": "src_ultra_v2_2026_10_20",
+        "bytes": 63413,
+        "sha256": "ce657460ae5f58c9da15dfc534439800d4e0e16acce9c87534d89f2542829033",
+        "contribution": "Grafo ultra v2 (subset do master final)."
+      },
+      {
+        "file": "10-INVENTARIO-ANEXOS.json",
+        "source_id": "src_attachments_inventory_2026_10_22",
+        "bytes": 35820,
+        "sha256": "0c138822cc2c5022b89c0d8ef70bb26c7eeacd9ecd3eb83d91b4020de5c8f68a",
+        "contribution": "Inventário de anexos: jobOS, apollo-vagas, web-vagas, boards de 28 empresas, métricas sqlite."
+      },
+      {
+        "file": "260723_rafael-valle.json",
+        "source_id": "src_master_260723",
+        "bytes": 72541,
+        "sha256": "98a0fd7a4628b0c0cea35e847ccc62c84feab12e8760addadb8a3982e2fd871c",
+        "contribution": "Master histórico 2026-07-23: bullets PT/EN 1a pessoa, contatos, endorsements, cv_profiles, market alignment."
+      },
+      {
+        "file": "Artifact__.jobos__estrategias.json",
+        "source_id": "src_jobos_strategies",
+        "bytes": 1178,
+        "sha256": "b7ca2a7fd8f0a699465d456de95b6d6a844c897408cfd5429be0781151b85e69",
+        "contribution": "Estratégia de coleta por empresa (jobOS)."
+      },
+      {
+        "file": "jobs.json",
+        "source_id": "src_jobos_fixture_jobs",
+        "bytes": 2554,
+        "sha256": "8ae2e11635a9dc7eb7b2e46611e04d705cc86edb47897555ec8dcf9e3352506a",
+        "contribution": "Fixture de 5 vagas de teste (jobOS)."
+      },
+      {
+        "file": "master.json",
+        "source_id": "src_master_final_2026_10_21",
+        "bytes": 222830,
+        "sha256": "baccac260f06a17861bd58af1f052c06c01d423bbbcc24e67b1892fd1d0ad10e",
+        "contribution": "Duplicata byte-a-byte do master final."
+      },
+      {
+        "file": "RAFAEL_MASTER_PROFILE_OFFSHORE_2026-10-07(1).json",
+        "source_id": "src_offshore_profile_2026_10_07",
+        "bytes": 3536,
+        "sha256": "29495136b312bf4cd2ea5d7503250e42f8f2f14f4c6b717b69ebe708a358b612",
+        "contribution": "Duplicata byte-a-byte do perfil offshore 2026-10-07."
+      },
+      {
+        "file": "CV_ANALISTA-DE-LOGISTICA_PT_2026-09-19.json",
+        "source_id": "src_cv_analista_logistica_pt",
+        "bytes": 6755,
+        "sha256": "adc8b91ab1839e8ed5762d812db538d520b7e2374c72a3d5efc4c73b29f35d39",
+        "contribution": "CV adaptado (pt) para vaga genérica - Analista de Logística; copiado sem perdas em 12_cv_variants/analista-logistica_pt.json"
+      },
+      {
+        "file": "CV_CAPCO_CONFORMIDADE-II_PT_FINAL_TRUTHFUL_2026-11-13.json",
+        "source_id": "src_cv_capco_conformidade_ii_pt_truthful",
+        "bytes": 9496,
+        "sha256": "519b9e2d3a4ee598e2b8bf94eae6a8851dd09f565b6f24ef4c8602b58bbf9d17",
+        "contribution": "CV adaptado (pt) para Capco - Consultor Especialista em Conformidade II; copiado sem perdas em 12_cv_variants/capco_conformidade-ii_pt_truthful.json"
+      },
+      {
+        "file": "CV_CAPCO_CONSULTOR-ESPECIALISTA-CONFORMIDADE-II_PT_FINAL_2026-11-13.json",
+        "source_id": "src_cv_capco_consultor_conformidade_ii_pt",
+        "bytes": 9720,
+        "sha256": "853d9eb7221d787239855894006e9f439f814baf505d85e6585761df00f679b0",
+        "contribution": "CV adaptado (pt) para Capco - Consultor Especialista em Conformidade II; copiado sem perdas em 12_cv_variants/capco_consultor-conformidade-ii_pt.json"
+      },
+      {
+        "file": "CV_CAPCO_ENGENHEIRO-PLANEJAMENTO_4479571515_PT_FINAL.json",
+        "source_id": "src_cv_capco_engenheiro_planejamento_pt",
+        "bytes": 6291,
+        "sha256": "df6c023dc3039e53ba6dc775b42f54be3d2b68f3e65cd1e6fb10bd4b00d286e0",
+        "contribution": "CV adaptado (pt) para Capco - Engenheiro de Planejamento; copiado sem perdas em 12_cv_variants/capco_engenheiro-planejamento_pt.json"
+      },
+      {
+        "file": "CV_DELOITTE_ANALISTA-NEGOCIOS-BUSINESS-AGILITY_4487559536_PT_FINAL.json",
+        "source_id": "src_cv_deloitte_business_agility_pt",
+        "bytes": 6222,
+        "sha256": "cd0adf56bdac8e143279a967f94225318744ae72e8a1af7e3d096f11eb69fee3",
+        "contribution": "CV adaptado (pt) para Deloitte - Analista de Negócios - Business Agility; copiado sem perdas em 12_cv_variants/deloitte_business-agility_pt.json"
+      },
+      {
+        "file": "CV_ENGENHEIRO-DE-GEST-O-DE-PROJETOS_PT_2026-10-06.json",
+        "source_id": "src_cv_engenheiro_gestao_projetos_pt",
+        "bytes": 6859,
+        "sha256": "af273c7cd7a73d568e61a39744b87b71892bf04a5d1860bb0bd9014c893ebcfb",
+        "contribution": "CV adaptado (pt) para vaga genérica - Engenheiro de Gestão de Projetos; copiado sem perdas em 12_cv_variants/engenheiro-gestao-projetos_pt.json"
+      },
+      {
+        "file": "CV_ENGENHEIRO-DE-INOVA-O-PROCESSOS-DIGITAIS_PT_2026-09-18.json",
+        "source_id": "src_cv_engenheiro_inovacao_processos_digitais_pt",
+        "bytes": 6291,
+        "sha256": "f07c71a31e4baa93ed3d2ebae78a667d1e087642601bb3bb86e6db6aab2e4ce5",
+        "contribution": "CV adaptado (pt) para vaga genérica - Engenheiro de Inovação & Processos Digitais; copiado sem perdas em 12_cv_variants/engenheiro-inovacao-processos-digitais_pt.json"
+      },
+      {
+        "file": "CV_ENGENHEIRO-DE-SUPRIMENTOS-PROJETOS_PT_2026-09-18.json",
+        "source_id": "src_cv_engenheiro_suprimentos_projetos_pt",
+        "bytes": 6186,
+        "sha256": "8f041090e106369fc76b79a1acb1ab9bb1ba1f40c0c922f82723f7bd6f76a770",
+        "contribution": "CV adaptado (pt) para vaga genérica - Engenheiro de Suprimentos & Projetos; copiado sem perdas em 12_cv_variants/engenheiro-suprimentos-projetos_pt.json"
+      },
+      {
+        "file": "CV_LINKEDIN-4458314279_PT_2026-09-19.json",
+        "source_id": "src_cv_linkedin_4458314279_operacoes_projetos_pt",
+        "bytes": 6435,
+        "sha256": "b8d6bf009001043c9c199d4d29213e11c2ad31bbf3673f3477d7bd1c8d89990b",
+        "contribution": "CV adaptado (pt) para vaga genérica - Engenheiro de Operações & Projetos; copiado sem perdas em 12_cv_variants/linkedin-4458314279_operacoes-projetos_pt.json"
+      },
+      {
+        "file": "CV_MODERN-WORKPLACE-SPECIALIST_SBM-OFFSHORE_EN_FINAL_2026-11-13.json",
+        "source_id": "src_cv_sbm_modern_workplace_en",
+        "bytes": 9612,
+        "sha256": "a7597c16b9df1814c036ebe0b946a5071583f7a79c144df24646060387707031",
+        "contribution": "CV adaptado (en) para SBM Offshore - Modern Workplace Specialist; copiado sem perdas em 12_cv_variants/sbm_modern-workplace_en.json"
+      },
+      {
+        "file": "CV_OFFSHORE-PROJECTS-OPERATIONS-ENGINEER_SHELL-FACILITIES-ENGINEER_EN_2026-09-19.json",
+        "source_id": "src_cv_shell_offshore_projects_operations_en",
+        "bytes": 7091,
+        "sha256": "8e79d289367276cff53ca3273320e8e4c6f29b41a6f0726b1ae95de63b1cbea1",
+        "contribution": "CV adaptado (en) para Shell - Offshore Projects & Operations Engineer (Facilities Engineer); copiado sem perdas em 12_cv_variants/shell_offshore-projects-operations_en.json"
+      },
+      {
+        "file": "CV_PROJECT-SUBCONTRACTS-ENGINEER_SBM-OFFSHORE_EN_2026-09-30.json",
+        "source_id": "src_cv_sbm_project_subcontracts_en",
+        "bytes": 8584,
+        "sha256": "ad8ca413230f1f9fa60a603c71eb5ab0defaeb86973044fb7acdce92ebe33cac",
+        "contribution": "CV adaptado (en) para SBM Offshore - Project Subcontracts Engineer; copiado sem perdas em 12_cv_variants/sbm_project-subcontracts_en.json"
+      },
+      {
+        "file": "CV_SBM_MODERN-WORKPLACE-SPECIALIST_24160_EN_COMPACT-SUMMARY.json",
+        "source_id": "src_cv_sbm_modern_workplace_24160_en_compact",
+        "bytes": 9850,
+        "sha256": "6321662be656314c8aed0ef91418ac41041d9db196dc5b6720c171f862a7db67",
+        "contribution": "CV adaptado (en) para SBM Offshore - Modern Workplace Specialist; copiado sem perdas em 12_cv_variants/sbm_modern-workplace_24160_en_compact.json"
+      },
+      {
+        "file": "CV_SBM_PLANNING-ENGINEER_4485107397_EN_FINAL.json",
+        "source_id": "src_cv_sbm_planning_engineer_4485107397_en",
+        "bytes": 6354,
+        "sha256": "c67a8b1204d886f9418aaf7dfde9b7ec9d712f61444b1795d5237376d56e325c",
+        "contribution": "CV adaptado (en) para SBM Offshore - Planning Engineer; copiado sem perdas em 12_cv_variants/sbm_planning-engineer_4485107397_en.json"
+      },
+      {
+        "file": "CV_SBM_PLANNING_ENGINEER_24277_EN_FINAL_2P_2026-11-01.json",
+        "source_id": "src_cv_sbm_planning_engineer_24277_en_2p",
+        "bytes": 8051,
+        "sha256": "51ccbf2c6a701737645647a093ca8d4ffc35643e1840f110e20cf32a1bbd7c45",
+        "contribution": "CV adaptado (en) para SBM Offshore - Planning Engineer; copiado sem perdas em 12_cv_variants/sbm_planning-engineer_24277_en_2p.json"
+      },
+      {
+        "file": "CV_SENIOR-OPERATIONS-ENGINEER_SBM-OFFSHORE_EN_FINAL_2026-09-30.json",
+        "source_id": "src_cv_sbm_senior_operations_engineer_en",
+        "bytes": 8924,
+        "sha256": "20aede31cc7f239bfba7c89b5159e09c2343cd50afb0a080dd7a3bb3cca90b77",
+        "contribution": "CV adaptado (en) para SBM Offshore - Senior Operations Engineer (shorebase); copiado sem perdas em 12_cv_variants/sbm_senior-operations-engineer_en.json"
+      },
+      {
+        "file": "CV_SUBSEA7_DEPUTY-VESSEL-SUPERINTENDENT_PT_FINAL_ENXUTO_2026-10-07.json",
+        "source_id": "src_cv_subsea7_deputy_vessel_superintendent_pt",
+        "bytes": 8617,
+        "sha256": "3867f4f3232ebbb69fc3300254a424c5f10a78810595287c68e19365530122ee",
+        "contribution": "CV adaptado (pt) para Subsea7 - Deputy Vessel Superintendent; copiado sem perdas em 12_cv_variants/subsea7_deputy-vessel-superintendent_pt.json"
+      },
+      {
+        "file": "CV_TECHNICAL-ENGINEERING-MANAGER_SUBSEA_WOOD_EN_2026-09-30.json",
+        "source_id": "src_cv_wood_technical_engineering_manager_subsea_en",
+        "bytes": 9558,
+        "sha256": "09e50938b44dd9c2de27659d44b826c87d970a0c0ea7cee55b11eb77e3c50f2e",
+        "contribution": "CV adaptado (en) para Wood - Technical Engineering Manager (Subsea); copiado sem perdas em 12_cv_variants/wood_technical-engineering-manager-subsea_en.json"
+      }
+    ],
+    "complementary_sources": [
+      {
+        "source_id": "src_jobos_profile_yml",
+        "file": "..\\__VAGAS\\Artifact\\config\\profile.yml",
+        "contribution": "Preferências do jobOS (geografia, exclusões, gates de credenciais, aliases de skills). Lido em 2026-11-19 para calibrar o matcher."
+      },
+      {
+        "source_id": "src_chat_2026_11_19",
+        "file": null,
+        "contribution": "Declaração do Rafael no chat (2026-11-19): conhece Cursor vs Windsurf, todos os modelos, Ollama, Continue + Cline etc."
+      },
+      {
+        "source_id": "src_workstation_scan_2026_11_19",
+        "file": null,
+        "contribution": "Observação somente-leitura da estação de trabalho (PATH, extensões VS Code/Cursor, dotfolders de ferramentas de IA, pastas D:\\dev). Nenhum segredo lido."
+      },
+      {
+        "source_id": "src_chat_2026_11_19_audit",
+        "file": null,
+        "contribution": "Texto publico de livro.rvalle.com.br/autor/ colado pelo Rafael + declaracoes: estagio Macrolub, Dismantle liderado sozinho (2026-11-19)."
+      }
+    ],
+    "canonical_priority": [
+      "formal/documented evidence",
+      "user-confirmed factual corrections/additions",
+      "current canonical wording",
+      "historical master files",
+      "inference only when explicitly labeled; never as a factual CV claim"
+    ],
+    "rule": "Originais permanecem intocados em ____json/. Este banco é a nova fonte única de verdade; edite as partes, não os originais."
+  }
+}

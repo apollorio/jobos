@@ -1,0 +1,114 @@
+{
+  "name": "RAFAEL PERINI VALLE",
+  "subtitle": "PROJECT MANAGEMENT & PROJECT CONTROLS | BUSINESS ANALYSIS",
+  "tagline": "Governança de Projetos · Cronogramas · Custos · Processos · KPIs · MS Project · Power BI",
+  "contact": {
+    "location": "Rio de Janeiro – RJ, Brasil",
+    "email": "rafapevalle@gmail.com",
+    "phone": "+55 (21) 97955-4496",
+    "linkedin": "https://www.linkedin.com/in/rpvalle",
+    "linkedinLabel": "linkedin.com/in/rpvalle"
+  },
+  "target_job": {
+    "company": "Deloitte",
+    "title": "Analista de Negócios Jr — Business Agility — Rio de Janeiro",
+    "job_id": "4487559536",
+    "application_link": "https://www.linkedin.com/jobs/view/4487559536/"
+  },
+  "sections": [
+    {
+      "title": "Resumo Profissional",
+      "type": "bullets",
+      "bullets": [
+        "Engenheiro com mais de 3 anos de experiência em gestão e controle de projetos, atuando com cronogramas, indicadores, custos, riscos, forecasts, processos, fornecedores e governança operacional em ambiente multinacional.",
+        "MBA em Gestão de Projetos (PMBOK), Excel avançado, MS Project e Power BI; experiência em padronização de procedimentos, reporting, análise de desvios e coordenação de stakeholders."
+      ]
+    },
+    {
+      "title": "Competências-Chave",
+      "type": "text",
+      "content": "Project Management · PMBOK · Governança de Projetos · Project Controls · Cronogramas · MS Project · Custos & Forecast · KPI & Performance · Power BI · Excel Avançado · Gestão de Riscos · Processos & Procedimentos · Planos de Ação · Stakeholder Management · Fornecedores · Melhoria Contínua · Métodos Tradicionais · Práticas Ágeis em Projetos Digitais"
+    },
+    {
+      "title": "Experiência Profissional",
+      "type": "entries",
+      "lead": {
+        "title": "Superintendente 1 — Projetos & Operações Marítimas | Van Oord (Jul 2021–Nov 2024)",
+        "body": "Atuou por mais de 3 anos no acompanhamento e controle de projetos, integrando planejamento, cronogramas de curto prazo, custos, medições, forecasts, KPIs, riscos, fornecedores, documentação e comunicação executiva entre campo e gestão."
+      },
+      "entries": [
+        {
+          "role": "Superintendente 1 — Projetos & Operações Marítimas",
+          "company": "Van Oord",
+          "location": "Rio de Janeiro / costa brasileira",
+          "period": "Jul 2021 – Nov 2024",
+          "bullets": [
+            "Apoiou governança e execução de projetos por meio de planejamento, 15-day look-ahead, acompanhamento de indicadores, riscos, ações e prioridades.",
+            "Produziu relatórios, forecasts e análises de custos/performance, acompanhando medições, desvios, mudanças e ações de recuperação.",
+            "Estruturou procedimentos, rotinas de reporting, handovers e controles para melhorar consistência e rastreabilidade entre projetos.",
+            "Coordenou stakeholders internos e externos, fornecedores, clientes, terminais e equipes internacionais.",
+            "Utilizou MS Project e ferramentas de planejamento/controle para organização e acompanhamento das atividades."
+          ]
+        },
+        {
+          "role": "Analista de Operações — Processos & Controles",
+          "company": "C-Tank",
+          "location": "Niterói – RJ, Brasil",
+          "period": "Out 2020 – Jun 2021",
+          "bullets": [
+            "Mapeou processos, criou procedimentos e controles documentais na preparação para ISO 9001.",
+            "Elaborou relatórios e indicadores e coordenou informações, recursos, fornecedores e prontidão operacional para campanhas FPSO/OSV.",
+            "Concebeu fluxo funcional integrando diferentes áreas de negócio e informações operacionais."
+          ]
+        },
+        {
+          "role": "Desenvolvimento Profissional & Projetos Independentes",
+          "company": "Independent / apollo::rio",
+          "location": "Rio de Janeiro – RJ, Brasil",
+          "period": "Nov 2024 – Atual",
+          "bullets": [
+            "Gerencia roadmap, backlog, riscos, dependências e entregas iterativas de produto digital, aplicando práticas ágeis de forma prática.",
+            "Aperfeiçoamento em Power BI, SQL/Python, automação e análise estruturada de dados."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Formação",
+      "type": "lines",
+      "lines": [
+        "Pós-graduação: Engenharia de Segurança do Trabalho, Cruzeiro do Sul (2024–2025)",
+        "Pós-graduação: Engenharia de Construção Naval & Offshore, UCP (2022–2023)",
+        "MBA: Gestão de Projetos (PMBOK), USP / ESALQ (2019–2020)",
+        "Graduação: Engenharia Civil, UNIVIX / Multivix (2013–2018)",
+        "Técnico: Portos, IFES (2018–2019)"
+      ]
+    },
+    {
+      "title": "Ferramentas & Métodos",
+      "type": "bullets",
+      "bullets": [
+        "Project Management: PMBOK, MS Project, planejamento, cronogramas, riscos, dependências, stakeholders e planos de ação.",
+        "Project Controls: forecasts, custos, medições, KPIs, análise de desvios, reporting e acompanhamento de performance.",
+        "Analytics: Excel avançado, Power BI, consolidação de dados e dashboards.",
+        "Processos: mapeamento, procedimentos, padronização, controle documental e melhoria contínua.",
+        "Agilidade: práticas iterativas, backlog e roadmap aplicados ao desenvolvimento de produto digital."
+      ]
+    },
+    {
+      "title": "Publicação",
+      "type": "text",
+      "content": "Autor de \"Inglês Técnico Portuário e Offshore\" (ISBN 978-65-00-04579-6, 2020; 3.000+ exemplares), demonstrando capacidade de pesquisa, estruturação de informação e comunicação técnica."
+    },
+    {
+      "title": "Informações Adicionais",
+      "type": "bullets",
+      "bullets": [
+        "Português nativo e inglês fluente; experiência com equipes multinacionais, clientes, fornecedores e gestão internacional.",
+        "CREA ativo; baseado no Rio de Janeiro.",
+        "Passaportes brasileiro e italiano válidos até 2027; CNH categoria B.",
+        "Disponibilidade para atuação no Rio de Janeiro."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "_part": {
+    "id": "03_education/publication",
+    "title": "Publicação: livro técnico",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723",
+      "src_career_db_v3_2026_03_10",
+      "src_master_tree_v1_2026_10_20"
+    ]
+  },
+  "data": {
+    "book": {
+      "title": "Inglês Técnico Portuário e Offshore — Guia prático para o profissional do setor",
+      "isbn": "978-65-00-04579-6",
+      "published": "10/09/2020",
+      "copies_sold": "3.000+",
+      "origin": "Vivência como instrutor nos navios-sonda NS-43 e NS-51",
+      "scope": "Comunicação sem ambiguidades em ambientes portuários/offshore e jargão naval",
+      "adoption_source_claim": "Arquivo histórico registra adoção em escolas técnicas, programas de qualificação e treinamentos corporativos portuários.",
+      "evidence": "D",
+      "year": 2020,
+      "author": "Rafael Perini Valle",
+      "short_title": "Inglês Técnico Portuário e Offshore",
+      "domain_tags": [
+        "training_communication_leadership",
+        "naval_marine_offshore"
+      ],
+      "historical_260723": {
+        "type": {
+          "pt": "Livro técnico",
+          "en": "Technical book"
+        },
+        "title": "Inglês Técnico Portuário e Offshore — Guia prático para o profissional do setor",
+        "author": "Rafael Perini Valle",
+        "isbn": "978-65-00-04579-6",
+        "published": "10 de Setembro de 2020",
+        "url": "https://livro.rvalle.com.br/",
+        "copies_sold": "3.000+",
+        "impact_years": "2020–2025",
+        "adoption": {
+          "pt": "Adotado como material de ementa disciplinar em cursos de escolas técnicas, programas de qualificação e treinamentos corporativos de empresas portuárias; usado tanto para certificações quanto para ambientação de novos tripulantes.",
+          "en": "Adopted as coursework material in technical school courses, qualification programs and corporate training at port companies; used both for certifications and for onboarding new crew members."
+        },
+        "origin": {
+          "pt": "Extraído da minha vivência como instrutor nos navios-sonda NS-43 e NS-51.",
+          "en": "Drawn from my experience as an instructor on drillships NS-43 and NS-51."
+        },
+        "scope": {
+          "pt": "Comunicação livre de ambiguidades em ambientes portuários e offshore; jargão naval aplicável.",
+          "en": "Unambiguous communication in port and offshore environments; applicable naval jargon."
+        },
+        "linkedin_articles": [
+          "Emergências & Treinamentos",
+          "Profissões / Funções Offshore em Inglês"
+        ],
+        "positioning_statement": {
+          "pt": "Conectando você, segurança e o setor global. Be global. Connect with the world. Become the future you want!",
+          "en": "Connecting you, safety and the global industry. Be global. Connect with the world. Become the future you want!"
+        }
+      },
+      "career_db_v3": {
+        "type": "Livro técnico",
+        "title": "Inglês Técnico Portuário e Offshore — Guia prático para o profissional do setor",
+        "author": "Rafael Perini Valle",
+        "isbn": "978-65-00-04579-6",
+        "published": "10 de Setembro de 2020",
+        "url": "https://livro.rvalle.com.br/",
+        "copies_sold": "3.000+",
+        "impact_years": "2020–2025",
+        "adoption": "Adotado em escolas técnicas navais e treinamentos corporativos",
+        "origin": "Extraído da vivência como instrutor nos navios-sonda NS-43 e NS-51",
+        "scope": "Comunicação livre de ambiguidades em ambientes portuários e offshore; jargão naval aplicável",
+        "linkedin_articles": [
+          "Emergências & Treinamentos",
+          "Profissões / Funções Offshore em Inglês"
+        ]
+      }
+    },
+    "title_en_used_on_cvs": "Technical English for Ports & Offshore",
+    "metrics_refs": [
+      "publication_book.copies",
+      "publication_book.adopting_institutions"
+    ]
+  }
+}

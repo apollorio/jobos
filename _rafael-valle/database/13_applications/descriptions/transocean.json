@@ -1,0 +1,20 @@
+{
+  "_part": {
+    "id": "13_applications/descriptions/transocean",
+    "title": "Descrições de vagas: Transocean",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_jobos_vagas_2026_08_26"
+    ]
+  },
+  "data": {
+    "company": "Transocean",
+    "vacancies": [
+      {
+        "job_id": "d1dfc6ee8ec8bb18",
+        "titulo": "Subsea Lead / Well Control Equipment Lead",
+        "descricao": ""
+      }
+    ]
+  }
+}

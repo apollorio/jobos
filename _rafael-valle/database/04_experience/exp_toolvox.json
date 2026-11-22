@@ -1,0 +1,179 @@
+{
+  "_part": {
+    "id": "04_experience/exp_toolvox",
+    "title": "Experiência: Toolvox",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723",
+      "src_career_db_v3_2026_03_10",
+      "src_master_tree_v1_2026_10_20"
+    ]
+  },
+  "data": {
+    "company": "Toolvox",
+    "role": "Instrutor de Idiomas Offshore / Ponte de Comunicação Técnica",
+    "period": "Dez 2018 - Mai 2020",
+    "duration": "1 ano e 6 meses",
+    "environment": "Navios-sonda de perfuração/intervenção em águas ultraprofundas no pré-sal",
+    "vessels": [
+      "vessel_amaralina_star",
+      "vessel_siem_helix_1"
+    ],
+    "activities": [
+      "treinamentos técnicos de inglês",
+      "reuniões e rotina HSE",
+      "tradução técnica de SOPs",
+      "toolbox talks",
+      "rádio",
+      "ordens de passadiço",
+      "alertas de emergência",
+      "mediação multicultural",
+      "mitigação de risco por falha de comunicação"
+    ],
+    "crew_context": [
+      "noruegueses",
+      "americanos",
+      "filipinos",
+      "brasileiros"
+    ],
+    "evidence": "D",
+    "role_variants": [
+      "Instrutor de Inglês Técnico Offshore",
+      "Instrutor de Idiomas Offshore / Ponte de Comunicação Técnica"
+    ],
+    "details_master_tree": [
+      "Treinamento de equipes multinacionais em inglês técnico marítimo/offshore",
+      "Tradução/interpretação de SOPs",
+      "Toolbox talks",
+      "Comunicações de rádio, ponte e emergência",
+      "Suporte à comunicação operacional entre brasileiros e estrangeiros",
+      "Vivência embarcada anterior à carreira formal de operações"
+    ],
+    "domain_tags": [
+      "training_communication_leadership",
+      "naval_marine_offshore",
+      "oil_gas_offshore",
+      "hseq_emergency_response"
+    ],
+    "metrics_ref": "metrics_register (scope: exp_toolvox)",
+    "source_refs": [
+      "src_master_260723",
+      "src_master_career_tree_v1"
+    ],
+    "canonical_role": "Instrutor de Inglês Técnico Offshore / Ponte de Comunicação Técnica",
+    "id": "exp_toolvox",
+    "period_iso": {
+      "start": "2018-12",
+      "end": "2020-05"
+    },
+    "narrative_260723_first_person_pt_en": {
+      "order": 5,
+      "role": {
+        "pt": "Instrutor de Idiomas Offshore / Ponte de Comunicação Técnica",
+        "en": "Offshore Language Instructor / Technical Communication Bridge"
+      },
+      "company": "Toolvox",
+      "location": {
+        "pt": "Offshore, Brasil",
+        "en": "Offshore, Brazil"
+      },
+      "period": "Dez 2018 – Mai 2020",
+      "duration": "1 ano e 6 meses",
+      "environment": {
+        "pt": "Navios-sonda de perfuração e intervenção em águas ultraprofundas (pré-sal)",
+        "en": "Drilling and intervention drillships in ultra-deep waters (pre-salt)"
+      },
+      "vessels": [
+        {
+          "name": "Amaralina Star",
+          "code": "NS-43",
+          "type": "Navio-sonda"
+        },
+        {
+          "name": "Siem Helix 1",
+          "code": "NS-51",
+          "type": "Navio-sonda de intervenção"
+        }
+      ],
+      "operators_related": [
+        "Constellation",
+        "Olygas",
+        "Cien / Helix"
+      ],
+      "bullets": {
+        "pt": [
+          "Fui responsável pelos treinamentos técnicos de inglês focados em comunicação operacional, reuniões e rotina de HSE em ambiente multinacional.",
+          "Traduzi tecnicamente SOPs (Standard Operating Procedures) e apoiei briefings de segurança (toolbox talks).",
+          "Atuei na facilitação da comunicação via rádio, ordens de passadiço e alertas de emergência.",
+          "Fiz a mediação cultural e fortaleci a ponte de comunicação entre tripulações estrangeiras (noruegueses, americanos e filipinos) e brasileiras.",
+          "Atuei como elemento de segurança, mitigando riscos de acidentes por falha de comunicação — base do meu inglês avançado em uso diário."
+        ],
+        "en": [
+          "Responsible for technical English training focused on operational communication, meetings and HSE routine in a multinational environment.",
+          "Technically translated SOPs (Standard Operating Procedures) and supported safety briefings (toolbox talks).",
+          "Facilitated radio communication, bridge orders and emergency alerts.",
+          "Provided cultural mediation and strengthened the communication bridge between foreign crews (Norwegian, American and Filipino) and Brazilian crews.",
+          "Acted as a safety element, mitigating accident risk from communication failure — the foundation of my advanced English in daily use."
+        ]
+      },
+      "strategic_impact": {
+        "pt": "Meu papel garantia a compreensão integral de diretrizes de segurança entre equipes multinacionais, mitigando o risco de acidentes fatais ou catástrofes ambientais.",
+        "en": "My role ensured full understanding of safety guidelines among multinational teams, mitigating the risk of fatal accidents or environmental catastrophes."
+      }
+    },
+    "narrative_career_db_v3": {
+      "order": 5,
+      "role": "Instrutor de Idiomas Offshore / Ponte de Comunicação Técnica",
+      "company": "Toolvox",
+      "location": "Offshore, Brasil",
+      "period": "Dez 2018 – Mai 2020",
+      "duration": "1 ano e 6 meses",
+      "environment": "Navios-sonda de perfuração e intervenção em águas ultraprofundas (pré-sal)",
+      "vessels": [
+        {
+          "name": "Amaralina Star",
+          "code": "NS-43",
+          "type": "Navio-sonda"
+        },
+        {
+          "name": "Siem Helix 1",
+          "code": "NS-51",
+          "type": "Navio-sonda de intervenção"
+        }
+      ],
+      "operators_related": [
+        "Constellation",
+        "Olygas",
+        "Cien / Helix"
+      ],
+      "responsibilities": [
+        "Responsável por treinamentos técnicos de inglês focados em comunicação operacional, reuniões e rotina de HSE em ambiente multinacional.",
+        "Responsável pela tradução técnica de SOPs (Standard Operating Procedures) e pelo apoio a briefings de segurança (toolbox talks).",
+        "Atuação na facilitação de comunicação via rádio, ordens de passadiço e alertas de emergência.",
+        "Responsável pela mediação cultural e pelo fortalecimento da ponte de comunicação entre tripulações estrangeiras (noruegueses, americanos e filipinos) e brasileiras.",
+        "Atuação como elemento de segurança — mitigação de riscos de acidentes por falha de comunicação."
+      ],
+      "strategic_impact": "Garantir compreensão integral de diretrizes de segurança entre equipes multinacionais, mitigando risco de acidentes fatais ou catástrofes ambientais."
+    },
+    "master_tree_v1_timeline": {
+      "organization": "Toolvox",
+      "role": "Instrutor de Inglês Técnico Offshore",
+      "period": "Dez 2018 - Mai 2020",
+      "environment": [
+        "navios-sonda de águas ultraprofundas",
+        "pré-sal",
+        "NS-43",
+        "NS-51"
+      ],
+      "details": [
+        "Treinamento de equipes multinacionais em inglês técnico marítimo/offshore",
+        "Tradução/interpretação de SOPs",
+        "Toolbox talks",
+        "Comunicações de rádio, ponte e emergência",
+        "Suporte à comunicação operacional entre brasileiros e estrangeiros",
+        "Vivência embarcada anterior à carreira formal de operações"
+      ]
+    }
+  }
+}

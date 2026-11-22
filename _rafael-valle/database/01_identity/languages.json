@@ -1,0 +1,64 @@
+{
+  "_part": {
+    "id": "01_identity/languages",
+    "title": "Idiomas",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723",
+      "src_jobos_profile_yml"
+    ]
+  },
+  "data": {
+    "portuguese": {
+      "level": "nativo",
+      "evidence": "D",
+      "en": "Native"
+    },
+    "english": {
+      "level": "fluente / avançado",
+      "contexts": [
+        "uso diário com equipes multinacionais offshore",
+        "comunicação com comandantes e equipes estrangeiras",
+        "treinamento técnico",
+        "SOPs, toolbox talks, rádio, passadiço e emergências",
+        "interface com clientes/fornecedores internacionais"
+      ],
+      "formal_training": [
+        "English for Business — NED Training Centre, Irlanda — Set/2015",
+        "General English — EC English Language Centres, Inglaterra — Ago/2014",
+        "Cambridge Exam — Jul/2016 (registro histórico indicava validade até Jul/2025)"
+      ],
+      "evidence": "D",
+      "context_bilingual": {
+        "pt": "Uso diário com equipes multinacionais em ambiente offshore; apto a avaliação/teste de proficiência.",
+        "en": "Daily use with multinational teams in offshore environments; open to proficiency assessment/testing."
+      },
+      "certifications_detail": [
+        {
+          "name": "English for Business (EfB)",
+          "institution": "NED Training Centre, Irlanda",
+          "date": "Setembro 2015"
+        },
+        {
+          "name": "General English",
+          "institution": "EC English Language Centres, Inglaterra",
+          "date": "Agosto 2014"
+        },
+        {
+          "name": "Cambridge Exam",
+          "institution": "Cambridge University Press",
+          "date": "Julho 2016",
+          "valid_until": "Julho 2025"
+        }
+      ],
+      "certificate_status_note": "Cambridge (Jul/2016) tinha validade declarada até Jul/2025 (vencida). EfB 2015 e General English 2014 sem validade declarada. Fluência comprovada por 1,5 ano como instrutor offshore + livro técnico.",
+      "open_to_testing": true
+    },
+    "italian": {
+      "level": "UNKNOWN_NOT_DOCUMENTED",
+      "note": "Confirmar se existe nível em italiano/outros (possui passaporte italiano) - ver validation_queue."
+    },
+    "other_languages": "UNKNOWN_NOT_DOCUMENTED"
+  }
+}

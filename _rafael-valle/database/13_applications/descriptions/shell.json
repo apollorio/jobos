@@ -1,0 +1,20 @@
+{
+  "_part": {
+    "id": "13_applications/descriptions/shell",
+    "title": "Descrições de vagas: Shell",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_jobos_vagas_2026_08_26"
+    ]
+  },
+  "data": {
+    "company": "Shell",
+    "vacancies": [
+      {
+        "job_id": "49d639cd8010ea97",
+        "titulo": "Staff Wells Engineer",
+        "descricao": "R208527"
+      }
+    ]
+  }
+}

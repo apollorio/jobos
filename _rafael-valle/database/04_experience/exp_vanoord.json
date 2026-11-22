@@ -1,0 +1,701 @@
+{
+  "_part": {
+    "id": "04_experience/exp_vanoord",
+    "title": "Experiência: Van Oord",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723",
+      "src_career_db_v3_2026_03_10",
+      "src_master_tree_v1_2026_10_20",
+      "src_offshore_profile_2026_10_07"
+    ]
+  },
+  "data": {
+    "company": "Van Oord",
+    "formal_role": "Superintendent 1 / Superintendente",
+    "cv_role_variants_allowed": [
+      "Superintendente de Operações Marítimas",
+      "Marine Operations Superintendent",
+      "Superintendente — Operações Marítimas & Vessel-Shore Interface",
+      "Superintendente — Planejamento Operacional & Performance"
+    ],
+    "business_area": "Projetos",
+    "company_context": "Infraestrutura marítima e dragagem",
+    "period": {
+      "start": "2021-07-12",
+      "end": "2024-11-01",
+      "display": "Jul 2021 - Nov 2024"
+    },
+    "duration": "3 anos e 5 meses",
+    "work_mode": "Onshore/on-site em múltiplos portos da costa brasileira, com interface constante com embarcações",
+    "direct_interfaces": [
+      "comandantes / Masters",
+      "equipes de bordo",
+      "QHSE",
+      "cliente",
+      "project management",
+      "Ship Management Department",
+      "diretoria internacional / matriz europeia",
+      "terminais",
+      "agentes marítimos",
+      "pilotos",
+      "fornecedores",
+      "prestadores locais",
+      "survey teams",
+      "equipes de mergulho"
+    ],
+    "formal_job_scope": [
+      "acompanhar e controlar andamento da execução dos projetos",
+      "cost projection / planning",
+      "contratação e gestão de fornecedores",
+      "liderança de equipes",
+      "monitoramento de produção e equipamentos",
+      "carga e passageiros",
+      "berthing/unberthing",
+      "documentação técnica",
+      "batimetria e produção",
+      "suprimentos/serviços para embarcações",
+      "purchase/service requests",
+      "logística"
+    ],
+    "marine_operations": [
+      "TSHD",
+      "WID",
+      "rebocadores",
+      "lanchas rápidas / voadeiras",
+      "embarcações de apoio",
+      "operações de dragagem",
+      "mobilização/desmobilização",
+      "atracação/desatracação",
+      "bunkering",
+      "crew change",
+      "waste handling",
+      "transportes de pessoas/materiais",
+      "port calls",
+      "SIMOPS dragagem + mergulho",
+      "Notice to Mariners",
+      "suporte à Pilotage Exemption",
+      "interface com navios de projeto",
+      "crew changes",
+      "waste management",
+      "transporte de pessoas e materiais",
+      "pilotos, agentes marítimos, terminais e fornecedores",
+      "prontidão operacional",
+      "SIMOPS"
+    ],
+    "vessel_shore": [
+      "ponto focal operacional base ↔ embarcação",
+      "contato diário com comandantes",
+      "alinhamento de prontidão",
+      "necessidades de materiais/serviços",
+      "restrições operacionais",
+      "coordenação com terminais/agentes",
+      "comunicação de desvios e ações",
+      "Interface base ↔ embarcação",
+      "Coordenação entre equipes de bordo, projeto, QHSE, cliente e escritório",
+      "Interface com terminais e agentes marítimos",
+      "Interface com fornecedores e prestadores locais",
+      "Comunicação de desvios, prioridades e necessidades operacionais"
+    ],
+    "planning_controls": [
+      "plano semanal",
+      "alocação de embarcação",
+      "janelas críticas",
+      "cronogramas físico-financeiros",
+      "critical path",
+      "look-ahead ~15 dias",
+      "forecast",
+      "planejado x realizado",
+      "progress tracking",
+      "recovery actions",
+      "medições",
+      "closeout / fechamento",
+      "Plano semanal de operação de frota",
+      "Alocação de embarcações",
+      "Planejado versus realizado",
+      "Planejamento de curto prazo",
+      "Look-ahead de aproximadamente 15 dias",
+      "MS Project",
+      "PCP",
+      "S-curves",
+      "Relatórios diários, semanais e mensais",
+      "Controle de marcos e avanço",
+      "Análise de desvios",
+      "Planos de recuperação",
+      "Fechamento e medição"
+    ],
+    "performance_kpis": [
+      "produção / volumes dragados",
+      "ciclo",
+      "disponibilidade",
+      "uptime/downtime",
+      "paradas não programadas",
+      "consumo / fuel burn",
+      "avanço físico",
+      "frente parada",
+      "Produção",
+      "Downtime",
+      "Consumo de combustível",
+      "Performance planejada versus realizada"
+    ],
+    "survey_and_data_validation": [
+      "batimetria",
+      "survey profiles",
+      "validação de dados de produção",
+      "solicitação de novos levantamentos quando necessário",
+      "checagem de calibração/qualidade de dados",
+      "distinção entre desvio real de produção e desvio de medição",
+      "Uso de survey/batimetria para validar execução e produção",
+      "Verificação de calibração e qualidade dos dados antes de concluir que um desvio era de produção",
+      "Uso de dados validados para decisões de programação e recuperação"
+    ],
+    "hseq": [
+      "procedimentos",
+      "análises de risco",
+      "LMRA",
+      "Toolbox Talks",
+      "incident investigation",
+      "corrective actions",
+      "non-conformities / conditions",
+      "IMO",
+      "ISM Code",
+      "SOLAS",
+      "MARPOL",
+      "NORMAM-12",
+      "QHSE operacional",
+      "Investigação de incidentes e ocorrências",
+      "Ações corretivas",
+      "Controle de condições inseguras",
+      "Inspeções de projeto e meios de apoio"
+    ],
+    "erc": {
+      "title": "Emergency Response Coordinator (ERC) / Emergency Coordinator",
+      "evidence": "U + supporting emergency-response history D",
+      "drills": [
+        "coordenava simulados de resposta",
+        "tripulante normalmente usado como vítima simulada",
+        "media resposta lancha/embarcação",
+        "media resposta ambulância",
+        "media resposta hospital/cadeia de atendimento",
+        "fechava report final",
+        "classificava resultado positivo/negativo",
+        "registrava atrasos/falhas",
+        "propunha pontos de melhoria"
+      ],
+      "real_response": [
+        "mais de 5 Medevacs reais",
+        "interface com comandante/QHSE/equipe de resposta/gestão"
+      ]
+    },
+    "inspections": {
+      "assets": [
+        "escritório onshore",
+        "veículos do projeto",
+        "lancha rápida",
+        "voadeira",
+        "rebocador",
+        "embarcações de apoio",
+        "navios"
+      ],
+      "activities": [
+        "controle de relatórios",
+        "inspeções",
+        "registro de irregularidades",
+        "follow-up de pendências",
+        "verificação de prontidão e segurança",
+        "Controle de relatórios e inspeções do projeto",
+        "Identificação de irregularidades e pendências",
+        "Acompanhamento da tratativa",
+        "Verificação de prontidão e condições de segurança"
+      ],
+      "example": "meio/rebocador de apoio sem maca adequada para eventual remoção médica",
+      "evidence": "U",
+      "observation": "Navios normalmente apresentavam documentação e evidências com maior rapidez porque a tripulação já sabia quais itens seriam solicitados."
+    },
+    "maintenance_repairs_readiness": [
+      "monitoramento de disponibilidade de meios/equipamentos",
+      "downtime",
+      "tratamento de pendências",
+      "coordenação de serviços/reparos que afetavam a continuidade",
+      "interface com fornecedores de serviços navais",
+      "materiais/suprimentos para prontidão",
+      "Acompanhamento de prontidão de embarcações e equipamentos",
+      "Tratamento de indisponibilidades e pendências operacionais",
+      "Coordenação de serviços e fornecedores necessários à continuidade da operação",
+      "Monitoramento de downtime e impacto no plano",
+      "Acompanhamento de reparos/necessidades operacionais na medida em que afetavam execução e disponibilidade",
+      "Não era owner do PMS integral do navio"
+    ],
+    "commercial_contractual": [
+      "custos",
+      "medições",
+      "claims",
+      "change / scope changes",
+      "off-hire impacts",
+      "negociação operacional de diesel",
+      "supplier/service status",
+      "purchase/service requests",
+      "Contratação/coordenação operacional de fornecedores",
+      "Mudanças de escopo",
+      "Negociação e acompanhamento de serviços",
+      "Negociação de diesel em contexto operacional",
+      "Off-hire e impactos de disponibilidade",
+      "Requisições de compra e serviço",
+      "Controle de materiais e suprimentos"
+    ],
+    "documentation": [
+      "DPRs",
+      "relatórios semanais",
+      "relatórios mensais",
+      "MoM",
+      "action plans",
+      "handover",
+      "logfiles",
+      "S-curves",
+      "15-day programming",
+      "relatórios de produção",
+      "relatórios de inspeção",
+      "relatórios de drills",
+      "Relatórios diários",
+      "Handovers",
+      "Procedimentos operacionais",
+      "15-day look-ahead",
+      "Relatórios de simulados de emergência"
+    ],
+    "key_documented_evidence": [
+      "Plough Installation Plan 35.4264 — BFT como originator",
+      "Porto Sudeste Monthly Report 35.4449 — BFT como VO Origin",
+      "Exporting plough logfile procedure",
+      "S-curves / weekly reports / 15-day look-ahead",
+      "signed timesheets and operational e-mails"
+    ],
+    "evidence": "DP",
+    "formal_job_objective": "Acompanhar e controlar o andamento da execução dos projetos em suas diversas áreas.",
+    "tenure": {
+      "contract_start": "2021-07-12",
+      "contract_end": "2024-11-01",
+      "exact_from_contract_dates": {
+        "years": 3,
+        "months": 3,
+        "days": 20,
+        "total_days": 1208
+      },
+      "calendar_month_span_inclusive": {
+        "from": "2021-07",
+        "to": "2024-11",
+        "months": 41,
+        "as_years_months": "3 anos e 5 meses"
+      },
+      "canonical_wording_used_in_files": "3 anos e 5 meses",
+      "validation_flag": "As datas do contrato dão 3y 3m 20d; '3 anos e 5 meses' corresponde ao intervalo de meses-calendário Jul/2021-Nov/2024 contado de forma inclusiva (41 meses). Se o recrutador calcular pelas datas, verá ~3y3m.",
+      "recommended_wording_pt": "3+ anos como Superintendente na Van Oord (Jul/2021 - Nov/2024)",
+      "recommended_wording_en": "3+ years as Superintendent at Van Oord (Jul 2021 - Nov 2024)",
+      "wording_rule": "Se usar '3y5m', mostrar sempre as datas (Jul 2021 - Nov 2024) ao lado.",
+      "canonical_display": "Jul 2021 - Nov 2024 | 3+ anos",
+      "canonical_exact_contract_elapsed": "3 anos, 3 meses e 20 dias entre 12/07/2021 e 01/11/2024",
+      "calendar_months_inclusive": "41 meses-calendário tocados (Jul/2021 a Nov/2024), equivalente a 3 anos e 5 meses quando contado por meses inclusivos",
+      "cv_rule": "Preferir '3+ anos' ou apenas as datas. Nunca usar '5+ anos de gerência similar'."
+    },
+    "domain_tags": [
+      "naval_marine_offshore",
+      "project_management_project_controls",
+      "planning_data_performance",
+      "hseq_emergency_response",
+      "maintenance_repairs_asset_readiness",
+      "logistics_materials_suppliers",
+      "commercial_contract_management",
+      "quality_management_systems"
+    ],
+    "project_refs": [
+      "vo_354264",
+      "vo_354261",
+      "vo_354012_2021",
+      "vo_354269",
+      "vo_354222_2022",
+      "vo_354285",
+      "vo_353190",
+      "vo_354222_2023",
+      "vo_354306",
+      "vo_354012_2023",
+      "vo_354449",
+      "vo_354222_2024",
+      "vo_354458"
+    ],
+    "software_refs": [
+      "sw_ms_project"
+    ],
+    "software_refs_to_validate": [
+      "sw_excel",
+      "sw_power_bi",
+      "sw_powerpoint"
+    ],
+    "metrics_ref": "metrics_register (scope: exp_vanoord)",
+    "source_refs": [
+      "src_master_260723",
+      "src_marine_cv",
+      "src_user_confirmed_erc",
+      "src_pmp_dossier",
+      "src_master_career_tree_v1"
+    ],
+    "id": "exp_vanoord",
+    "period_iso": {
+      "start": "2021-07-12",
+      "end": "2024-11-01"
+    },
+    "narrative_260723_first_person_pt_en": {
+      "order": 1,
+      "role": {
+        "pt": "Superintendente de Operações Marítimas (Planejamento Operacional & Controle de Performance)",
+        "en": "Marine Operations Superintendent (Operational Planning & Performance Control)"
+      },
+      "company": "Van Oord",
+      "company_type": {
+        "pt": "Multinacional holandesa — infraestrutura marítima e dragagem",
+        "en": "Dutch multinational — marine infrastructure and dredging"
+      },
+      "location": {
+        "pt": "Onshore, Brasil (múltiplos portos da costa brasileira)",
+        "en": "Onshore, Brazil (multiple ports along the Brazilian coast)"
+      },
+      "period": "Jul 2021 – Nov 2024",
+      "duration": "3 anos e 5 meses",
+      "environment": {
+        "pt": "Projetos de dragagem — TSHD, WID, rebocadores",
+        "en": "Dredging projects — TSHD, WID, tugboats"
+      },
+      "direct_report_to": {
+        "pt": "Diretoria internacional (matriz europeia)",
+        "en": "International management (European headquarters)"
+      },
+      "bullets": {
+        "pt": [
+          "Coordenei e prestei suporte técnico às operações de embarcações (TSHD, WID e rebocadores), garantindo alinhamento de escopo, prazo, segurança e restrições operacionais em múltiplos portos do Brasil.",
+          "Elaborei e acompanhei planos operacionais e janelas críticas (atracação, recebimento de carga, embarque de pessoal, mobilizações), mantendo interface contínua entre embarcações, terminais, fornecedores e cliente.",
+          "Controlei progresso e performance por meio de indicadores (produção, disponibilidade, paradas e consumo); analisei desvios e apoiei ações de recuperação, com reportes semanais/mensais e forecast.",
+          "Geri o fluxo de informações e registros do projeto: relatórios técnicos, MoM, planos de ação, status de suprimentos/serviços e rastreabilidade de eventos relevantes (não conformidades, mudanças e evidências para claims).",
+          "Atuei ativamente junto à equipe de QHSE na elaboração/revisão de procedimentos, análises de risco, investigações de incidentes e acompanhamento de ações corretivas, assegurando aderência aos padrões IMO/SOLAS/MARPOL/NORMAM.",
+          "Consolidei cronogramas físico-financeiros, caminho crítico e análise de desvios para reporte ao cliente e à gestão interna, usando MS Project e PCP.",
+          "Coordenei a logística da frota: janelas de atracação, suprimentos, bunkering, resíduos, crew change e serviços de apoio, em interface com agentes marítimos, terminais e fornecedores.",
+          "Mantive bancos de dados operacionais (DPRs, batimetrias, volumes dragados, paradas, não conformidades).",
+          "Emiti Avisos aos Navegantes (Notice to Mariners) para operações de dragagem e mergulho.",
+          "Planejei SIMOPS (Operações Simultâneas) com navios de dragagem e equipes de mergulho.",
+          "Dei suporte técnico e burocrático para obtenção de Isenção de Praticagem (Pilotage Exemption)."
+        ],
+        "en": [
+          "Coordinated and provided technical support to vessel operations (TSHD, WID and tugboats), ensuring alignment of scope, schedule, safety and operational constraints across multiple Brazilian ports.",
+          "Developed and tracked operational plans and critical windows (berthing, cargo receiving, personnel embarkation, mobilizations), maintaining continuous interface between vessels, terminals, suppliers and client.",
+          "Controlled progress and performance through KPIs (production, availability, downtime and consumption); analyzed deviations and supported recovery actions, with weekly/monthly reporting and forecasting.",
+          "Managed project information flow and records: technical reports, MoM, action plans, supply/service status and traceability of relevant events (non-conformities, changes and claim evidence).",
+          "Worked actively with the QHSE team on procedure elaboration/review, risk analysis, incident investigation and corrective-action follow-up, ensuring adherence to IMO/SOLAS/MARPOL/NORMAM standards.",
+          "Consolidated physical-financial schedules, critical path and deviation analysis for client and internal management reporting, using MS Project and PCP.",
+          "Coordinated fleet logistics: berthing windows, supplies, bunkering, waste, crew change and support services, interfacing with shipping agents, terminals and suppliers.",
+          "Maintained operational databases (DPRs, bathymetry, dredged volumes, downtime, non-conformities).",
+          "Issued Notices to Mariners for dredging and diving operations.",
+          "Planned SIMOPS (Simultaneous Operations) with dredging vessels and diving teams.",
+          "Provided technical/bureaucratic support to obtain Pilotage Exemption."
+        ]
+      },
+      "emergency_response": {
+        "role": {
+          "pt": "Coordenador de Emergência / Emergency Response Team (ERT)",
+          "en": "Emergency Coordinator / Emergency Response Team (ERT)"
+        },
+        "bullets": {
+          "pt": [
+            "Fui designado Coordenador de Emergência para os projetos.",
+            "Atuei como membro ativo do Emergency Response Team (ERT).",
+            "Coordenei mais de 5 operações reais de Medevac.",
+            "Acompanhei clinicamente e fiz o follow-up de lesões a bordo."
+          ],
+          "en": [
+            "Designated Emergency Coordinator for the projects.",
+            "Active member of the Emergency Response Team (ERT).",
+            "Coordinated 5+ real Medevac operations.",
+            "Provided clinical follow-up on onboard injuries."
+          ]
+        }
+      },
+      "kpi_management": {
+        "indicators": [
+          "Produção (volumes dragados/batimetria)",
+          "Disponibilidade (uptime vs downtime)",
+          "Consumo (taxa de queima de combustível)",
+          "Paradas não programadas"
+        ],
+        "reporting_cycle": {
+          "pt": "Diário, semanal e mensal + forecast em ciclos de 15 dias",
+          "en": "Daily, weekly and monthly + 15-day rolling forecast"
+        },
+        "audience": {
+          "pt": "Cliente, diretoria internacional, Ship Management Department",
+          "en": "Client, international management, Ship Management Department"
+        }
+      },
+      "logistics_network": {
+        "pt": "Tenho conhecimento extenso de fornecedores ao longo de toda a costa brasileira (terminais portuários, agências marítimas, fornecedores de serviços navais e bunkering), com relacionamento estabelecido em múltiplos portos e terminais.",
+        "en": "I have extensive knowledge of suppliers along the entire Brazilian coast (port terminals, shipping agencies, naval service and bunkering suppliers), with established relationships across multiple ports and terminals."
+      },
+      "regulatory_compliance": [
+        "NORMAM-12",
+        "IMO/ISM Code",
+        "SOLAS",
+        "MARPOL"
+      ],
+      "key_achievement": {
+        "pt": "Fui responsável pela investigação de incidentes a bordo em conjunto com a equipe de QHSE e pela estruturação de uma solução corporativa inovadora para melhoria de processos logísticos, aprovada explicitamente pela diretoria global pelo impacto financeiro e organizacional.",
+        "en": "I was responsible for onboard incident investigation together with the QHSE team and for structuring an innovative corporate solution for logistics process improvement, explicitly approved by global management for its financial and organizational impact."
+      },
+      "tools": [
+        "MS Project",
+        "Excel avançado (dashboards/KPIs)",
+        "PowerPoint (reportes gerenciais)"
+      ]
+    },
+    "narrative_career_db_v3": {
+      "order": 1,
+      "role": "Superintendente de Operações Marítimas (Planejamento Operacional & Controle de Performance)",
+      "company": "Van Oord",
+      "company_type": "Multinacional holandesa — infraestrutura marítima e dragagem",
+      "location": "Onshore, Brasil (múltiplos portos costa brasileira)",
+      "period": "Jul 2021 – Nov 2024",
+      "duration": "3 anos e 5 meses",
+      "environment": "Projetos de dragagem — TSHD, WID, rebocadores",
+      "direct_report_to": "Diretoria internacional (matriz europeia)",
+      "responsibilities": [
+        "Coordenação e suporte técnico a operações de embarcações (TSHD, WID e rebocadores), garantindo alinhamento de escopo, prazo, segurança e restrições operacionais em múltiplos portos do Brasil.",
+        "Elaboração e acompanhamento de planos operacionais e janelas críticas (atracação, recebimento de carga, embarque de pessoal, mobilizações), com interface contínua entre embarcações, terminais, fornecedores e cliente.",
+        "Controle de progresso e performance por meio de indicadores (produção, disponibilidade, paradas e consumo), análise de desvios e suporte a ações de recuperação, com reportes semanais/mensais e forecast.",
+        "Gestão do fluxo de informações e registros do projeto: relatórios técnicos, MoM, planos de ação, status de suprimentos/serviços e rastreabilidade de eventos relevantes (não conformidades, mudanças e evidências para claims).",
+        "Atuação ativa em conjunto com a equipe de QHSE na elaboração/revisão de procedimentos, análises de risco, investigações de incidentes e acompanhamento de ações corretivas, assegurando aderência a padrões IMO/SOLAS/MARPOL/NORMAM.",
+        "Consolidação de cronogramas físico-financeiros, caminho crítico e análise de desvios para reporte ao cliente e gestão interna usando MS Project e PCP.",
+        "Coordenação de logística da frota: janelas de atracação, suprimentos, bunkering, resíduos, crew change e serviços de apoio, em interface com agentes marítimos, terminais e fornecedores.",
+        "Manutenção de bancos de dados operacionais (DPRs, batimetrias, volumes dragados, paradas, não conformidades).",
+        "Emissão de Aviso aos Navegantes (Notice to Mariners) para operações de dragagem e mergulho.",
+        "Planejamento de SIMOPS (Operações Simultâneas) com navios de dragagem e equipes de mergulho.",
+        "Suporte técnico/burocrático para obtenção de Isenção de Praticagem (Pilotage Exemption)."
+      ],
+      "emergency_response": {
+        "role": "Emergency Coordinator / Emergency Response Team (ERT)",
+        "details": [
+          "Coordenador de Emergência designado para os projetos.",
+          "Membro ativo do Emergency Response Team (ERT).",
+          "Coordenação de mais de 5 operações reais de Medevac.",
+          "Acompanhamento médico e follow-up de lesões a bordo."
+        ]
+      },
+      "kpi_management": {
+        "indicators": [
+          "Produção (volumes dragados/batimetria)",
+          "Disponibilidade (uptime vs downtime)",
+          "Consumo (taxa de queima combustível)",
+          "Paradas não programadas"
+        ],
+        "reporting_cycle": "Diário, semanal e mensal + forecast em ciclos de 15 dias",
+        "audience": "Cliente, diretoria internacional, Ship Management Department"
+      },
+      "logistics_network": {
+        "description": "Conhecimento extenso de fornecedores ao longo de toda a costa brasileira",
+        "scope": [
+          "Terminais portuários",
+          "Agências marítimas",
+          "Fornecedores de serviços navais",
+          "Fornecedores de bunkering"
+        ],
+        "relationships": "Relacionamento estabelecido com múltiplos portos e terminais brasileiros"
+      },
+      "regulatory_compliance": [
+        "NORMAM-12",
+        "IMO/ISM Code",
+        "SOLAS",
+        "MARPOL"
+      ],
+      "key_achievement": "Responsável pela investigação de incidentes a bordo em conjunto com QHSE e pela estruturação de solução corporativa inovadora para melhoria de processos logísticos, com aprovação explícita da diretoria global pelo impacto financeiro e organizacional.",
+      "tools": [
+        "MS Project",
+        "Excel avançado (dashboards/KPIs)",
+        "PowerPoint (reportes gerenciais)"
+      ]
+    },
+    "master_tree_v1_timeline": {
+      "organization": "Van Oord",
+      "formal_role": "Superintendent 1 / Superintendente",
+      "business_area": "Projetos",
+      "contract_start": "2021-07-12",
+      "contract_end": "2024-11-01",
+      "duration": "3 anos e 5 meses",
+      "formal_job_objective": "Acompanhar e controlar o andamento da execução dos projetos em suas diversas áreas.",
+      "marine_operations": [
+        "TSHD",
+        "WID",
+        "rebocadores",
+        "lanchas rápidas / voadeiras",
+        "embarcações de apoio",
+        "interface com navios de projeto",
+        "mobilização/desmobilização",
+        "port calls",
+        "atracação/desatracação",
+        "bunkering",
+        "crew changes",
+        "waste management",
+        "transporte de pessoas e materiais",
+        "pilotos, agentes marítimos, terminais e fornecedores",
+        "prontidão operacional",
+        "SIMOPS"
+      ],
+      "vessel_shore_interface": [
+        "Contato diário com comandantes",
+        "Interface base ↔ embarcação",
+        "Coordenação entre equipes de bordo, projeto, QHSE, cliente e escritório",
+        "Interface com terminais e agentes marítimos",
+        "Interface com fornecedores e prestadores locais",
+        "Comunicação de desvios, prioridades e necessidades operacionais"
+      ],
+      "planning_and_project_controls": [
+        "Plano semanal de operação de frota",
+        "Alocação de embarcações",
+        "Planejado versus realizado",
+        "Planejamento de curto prazo",
+        "Look-ahead de aproximadamente 15 dias",
+        "Forecast",
+        "MS Project",
+        "PCP",
+        "S-curves",
+        "Relatórios diários, semanais e mensais",
+        "Controle de marcos e avanço",
+        "Análise de desvios",
+        "Planos de recuperação",
+        "Fechamento e medição"
+      ],
+      "operational_kpis": [
+        "Produção",
+        "Ciclo",
+        "Disponibilidade",
+        "Downtime",
+        "Consumo de combustível",
+        "Frente parada",
+        "Avanço físico",
+        "Performance planejada versus realizada"
+      ],
+      "survey_bathymetry": [
+        "Uso de survey/batimetria para validar execução e produção",
+        "Solicitação de novos levantamentos quando necessário",
+        "Verificação de calibração e qualidade dos dados antes de concluir que um desvio era de produção",
+        "Uso de dados validados para decisões de programação e recuperação"
+      ],
+      "hseq_and_regulatory": [
+        "QHSE operacional",
+        "LMRA",
+        "Toolbox Talks",
+        "Investigação de incidentes e ocorrências",
+        "Ações corretivas",
+        "NORMAM-12",
+        "IMO",
+        "ISM Code",
+        "SOLAS",
+        "MARPOL",
+        "Controle de condições inseguras",
+        "Inspeções de projeto e meios de apoio"
+      ],
+      "erc_emergency_response": {
+        "function": "Emergency Response Coordinator (ERC)",
+        "drills": [
+          "Coordenava simulados de resposta a emergência",
+          "Normalmente utilizava um tripulante como vítima simulada",
+          "Media tempo de resposta de lancha/embarcação",
+          "Media tempo de resposta de ambulância",
+          "Media tempo de resposta do hospital / cadeia de atendimento",
+          "Avaliava se o resultado era positivo ou negativo",
+          "Emitia relatório final do simulado",
+          "Registrava falhas e atrasos",
+          "Definia pontos de melhoria"
+        ],
+        "real_events": [
+          "Participação/coordenação em mais de 5 Medevacs reais",
+          "Interface com comandante, QHSE, embarcação, equipes de resposta e gestão"
+        ]
+      },
+      "inspection_control": {
+        "assets": [
+          "escritório onshore",
+          "veículos de projeto",
+          "lancha rápida / voadeira",
+          "rebocadores",
+          "embarcações de apoio",
+          "navios"
+        ],
+        "activities": [
+          "Controle de relatórios e inspeções do projeto",
+          "Identificação de irregularidades e pendências",
+          "Acompanhamento da tratativa",
+          "Verificação de prontidão e condições de segurança"
+        ],
+        "example": "Foi identificada embarcação/rebocador de apoio sem maca adequada para eventual remoção médica.",
+        "observation": "Navios normalmente apresentavam documentação e evidências com maior rapidez porque a tripulação já sabia quais itens seriam solicitados."
+      },
+      "maintenance_repairs_readiness": [
+        "Acompanhamento de prontidão de embarcações e equipamentos",
+        "Tratamento de indisponibilidades e pendências operacionais",
+        "Coordenação de serviços e fornecedores necessários à continuidade da operação",
+        "Monitoramento de downtime e impacto no plano",
+        "Acompanhamento de reparos/necessidades operacionais na medida em que afetavam execução e disponibilidade",
+        "Não era owner do PMS integral do navio"
+      ],
+      "commercial_and_supplier_management": [
+        "Contratação/coordenação operacional de fornecedores",
+        "Medições",
+        "Claims",
+        "Custos",
+        "Mudanças de escopo",
+        "Negociação e acompanhamento de serviços",
+        "Negociação de diesel em contexto operacional",
+        "Off-hire e impactos de disponibilidade",
+        "Requisições de compra e serviço",
+        "Controle de materiais e suprimentos"
+      ],
+      "technical_documentation": [
+        "Relatórios diários",
+        "Relatórios semanais",
+        "Relatórios mensais",
+        "Handovers",
+        "Procedimentos operacionais",
+        "Logfiles",
+        "15-day look-ahead",
+        "S-curves",
+        "Relatórios de produção",
+        "Relatórios de inspeção",
+        "Relatórios de simulados de emergência"
+      ]
+    },
+    "confirmed_2026_10_07": {
+      "role": "Superintendente",
+      "additional_function": "Emergency Response Coordinator (ERC)",
+      "emergency_drills": [
+        "Coordenava simulados de resposta a emergência.",
+        "Media tempos de resposta de ambulância, hospital e lancha/embarcação até o atendimento.",
+        "Em geral utilizava um tripulante como vítima simulada.",
+        "Emitia relatório final classificando o resultado e registrando pontos de melhoria quando havia atraso em algum elo da resposta."
+      ],
+      "inspection_control": [
+        "Controlava relatórios e inspeções do projeto.",
+        "Escopo incluía escritório e veículos onshore, lanchas rápidas/voadeiras, rebocadores, embarcações de apoio e navios.",
+        "Identificava irregularidades e pendências e acompanhava sua tratativa.",
+        "Exemplo confirmado: rebocador/meio de apoio sem maca adequada para eventual remoção médica."
+      ],
+      "operational_control_examples": [
+        "Planejamento semanal de frota TSHD, WID e rebocadores em vários portos.",
+        "Alocação de embarcações e comparação de performance planejada versus realizada.",
+        "Controle por dados de ciclo, disponibilidade, downtime e frente parada, não por percepção subjetiva.",
+        "HSE operacional com IMO, SOLAS e NORMAM; coordenação de ERT/Medevac e registro formal das respostas."
+      ]
+    },
+    "pmp_evidence": {
+      "verified_daily_records": 586,
+      "original_x_marks": 566,
+      "signed_timesheet_days_added": 20,
+      "calendar_months_with_direct_evidence": 32,
+      "rule": "não inventar datas ou sobreposição para atingir meses",
+      "mba_education": "400h oferece base forte para requisito educacional; manter certificado/histórico"
+    }
+  }
+}

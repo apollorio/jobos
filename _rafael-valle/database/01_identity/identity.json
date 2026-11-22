@@ -1,0 +1,75 @@
+{
+  "_part": {
+    "id": "01_identity/identity",
+    "title": "Identidade e documentos",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723",
+      "src_career_db_v3_2026_03_10",
+      "src_jobos_profile_yml"
+    ]
+  },
+  "data": {
+    "full_name": "Rafael Perini Valle",
+    "professional_display": "Rafael Valle",
+    "professional_name_used_on_cv": "Rafael Valle",
+    "stage_name_creative": "Valle",
+    "origin": "Espírito Santo, Brasil",
+    "nationalities": [
+      "Brasileira",
+      "Italiana"
+    ],
+    "base": {
+      "primary": "Rio de Janeiro - RJ, Brasil",
+      "primary_detail": {
+        "pt": "Copacabana, Rio de Janeiro – RJ, Brasil",
+        "en": "Copacabana, Rio de Janeiro – RJ, Brazil"
+      },
+      "secondary": "Vitória - ES, Brasil",
+      "secondary_detail": {
+        "pt": "Vitória, ES (disponibilidade para mobilidade)",
+        "en": "Vitória, ES (available for relocation)"
+      }
+    },
+    "documents": {
+      "passports": {
+        "brazilian": {
+          "status": "possui",
+          "validity_source": "arquivo histórico indica validade até 2027",
+          "evidence": "D"
+        },
+        "italian": {
+          "status": "possui",
+          "validity_source": "arquivo histórico indica validade até 2027",
+          "evidence": "D"
+        }
+      },
+      "passports_cv_wording": "Brazilian and Italian passports valid through 2027",
+      "eu_work_eligibility": {
+        "value": true,
+        "basis": "Cidadania/passaporte italiano",
+        "evidence": "D",
+        "source": "src_jobos_profile_yml"
+      },
+      "driver_license": {
+        "value": "CNH B",
+        "evidence": "D"
+      },
+      "crea": {
+        "status": "ativo",
+        "evidence": "U",
+        "confirmed": "2026-11-19",
+        "note": "Confirmado pelo Rafael. O registro 'held:false' do jobOS (Ago/2026) está desatualizado."
+      },
+      "covid_vaccination": {
+        "value": "Completa (incluindo reforços)",
+        "detail": {
+          "pt": "Vacinação completa contra COVID-19 (incluindo reforços); disponibilidade imediata, incluindo viagens para visitar outros sites/embarcações.",
+          "en": "Fully vaccinated against COVID-19 (including boosters); immediate availability, including travel to visit other sites/vessels."
+        },
+        "evidence": "D"
+      }
+    }
+  }
+}

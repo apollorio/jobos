@@ -1,0 +1,49 @@
+{
+  "_part": {
+    "id": "02_profile/endorsements",
+    "title": "Recomendações recebidas (LinkedIn)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_260723",
+      "src_career_db_v3_2026_03_10"
+    ]
+  },
+  "data": {
+    "endorsements": [
+      {
+        "from": "Iara Cecutte Parmagnani",
+        "context": {
+          "pt": "Comissionamento de projetos de dragagem",
+          "en": "Dredging project commissioning"
+        },
+        "highlights": {
+          "pt": "Problem-solving, proatividade, espírito colaborativo",
+          "en": "Problem-solving, proactivity, collaborative spirit"
+        }
+      },
+      {
+        "from": "Claudia Sousa",
+        "context": {
+          "pt": "Gestora",
+          "en": "Manager"
+        },
+        "highlights": {
+          "pt": "Colaborador indispensável, empático, eficiente sob pressão contratual, liderança carismática",
+          "en": "Indispensable team member, empathetic, efficient under contractual pressure, charismatic leadership"
+        }
+      }
+    ],
+    "career_db_version": [
+      {
+        "from": "Iara Cecutte Parmagnani",
+        "context": "Comissionamento de projetos de dragagem",
+        "highlights": "Problem-solving, proatividade, espírito colaborativo"
+      },
+      {
+        "from": "Claudia Sousa",
+        "context": "Gestora",
+        "highlights": "Colaborador indispensável, empático, eficiente sob pressão contratual, liderança carismática"
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "_part": {
+    "id": "07_ai/ai_models_landscape",
+    "title": "Panorama de modelos de IA (famílias, uso típico, onde rodam)",
+    "updated": "2026-11-19",
+    "sources": ["src_chat_2026_11_19"],
+    "notes": "Conhecimento declarado pelo Rafael ('conheço todos os modelos'). Registro de famílias, não de versões exatas; nomes de versão mudam a cada poucos meses."
+  },
+  "data": {
+    "knowledge_as_of": "2026-11",
+    "evidence": "C",
+    "frontier_closed": [
+      {"family": "Claude (Anthropic)", "tiers": "Haiku (rápido/barato) - Sonnet (equilíbrio, carro-chefe de código) - Opus (máxima capacidade)", "current_generation_seen": "Claude 5 (Opus 5.5, Sonnet 5.5, Haiku 5.5, Fable 5.2)", "typical_use": "Agentes de código (Claude Code, Cursor, Cline), escrita longa, tool use"},
+      {"family": "GPT / o-series / Codex (OpenAI)", "typical_use": "ChatGPT, Codex CLI, raciocínio (modelos o-series/thinking), multimodal"},
+      {"family": "Gemini (Google)", "tiers": "Flash (rápido) - Pro (capacidade)", "typical_use": "Contexto muito longo, multimodal, Gemini CLI"},
+      {"family": "Grok (xAI)", "typical_use": "Chat, raciocínio, acesso a dados em tempo real do X"}
+    ],
+    "open_weight": [
+      {"family": "Llama (Meta)", "runs_local": true},
+      {"family": "Qwen / Qwen-Coder (Alibaba)", "runs_local": true, "note": "forte em código para tamanho pequeno/médio"},
+      {"family": "DeepSeek (V-series chat, R1 raciocínio, Coder)", "runs_local": "destilados", "note": "extensão DeepSeek observada no VS Code"},
+      {"family": "Mistral / Mixtral / Codestral / Devstral", "runs_local": true},
+      {"family": "Gemma (Google)", "runs_local": true},
+      {"family": "Phi (Microsoft)", "runs_local": true, "note": "modelos pequenos"},
+      {"family": "gpt-oss (OpenAI open-weight)", "runs_local": true},
+      {"family": "Kimi (Moonshot), GLM (Zhipu), MiniMax", "runs_local": "parcial"}
+    ],
+    "embeddings_rerank": ["text-embedding (OpenAI)", "Voyage / Cohere rerank"],
+    "core_concepts": ["tokens e janela de contexto", "temperatura / sampling", "modelos de raciocínio (thinking) vs modelos rápidos", "tool use / function calling", "MCP (Model Context Protocol)", "RAG e embeddings", "quantização (GGUF, Q4/Q5/Q8) e VRAM", "prompt caching e custo por token", "agentes, subagentes e orquestração", "arquivos de regras (CLAUDE.md, AGENTS.md, .cursor/rules, .clinerules, .windsurfrules, config.yaml do Continue)", "alucinação e guardrails (truth_lint)", "avaliação (evals) e testes determinísticos"],
+    "selection_heuristic": {
+      "code_agent_multistep": "Modelo de fronteira (Claude Sonnet/Opus, GPT de raciocínio, Gemini Pro)",
+      "autocomplete": "Modelo pequeno e rápido (local via Ollama ou tier rápido na nuvem)",
+      "sensitive_data": "Modelo local (Ollama) ou política de não retenção",
+      "long_documents": "Modelos com contexto longo (Gemini, Claude)",
+      "cheap_bulk": "Haiku / Flash / mini / open-weight local"
+    }
+  }
+}

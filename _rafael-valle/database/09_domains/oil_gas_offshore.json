@@ -1,0 +1,88 @@
+{
+  "_part": {
+    "id": "09_domains/oil_gas_offshore",
+    "title": "Domínio: Oil & Gas Offshore",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "label_pt": "Oil & Gas Offshore",
+    "priority": 5,
+    "summary": "Suporte a FPSO/OSV, navios-sonda do pré-sal, ambiente Petrobras (Drake, SAP RT, POB, PHTD), clientes Shell/Transocean/Helix.",
+    "highlights_master_tree": {
+      "experience": [
+        "FPSO/OSV support",
+        "Campanhas de manutenção e limpeza offshore",
+        "Petrobras",
+        "Shell",
+        "Transocean",
+        "Helix",
+        "Drake",
+        "SAP RT",
+        "POB",
+        "Helicopter logistics",
+        "Navios-sonda de águas ultraprofundas no pré-sal"
+      ]
+    },
+    "source_paths": [
+      "oil_gas_tree",
+      "experience_nodes.exp_ctank_analyst",
+      "experience_nodes.exp_ctank_assistant",
+      "experience_nodes.exp_toolvox"
+    ],
+    "refs": {
+      "experiences": [
+        "exp_ctank_analyst",
+        "exp_ctank_assistant",
+        "exp_toolvox"
+      ],
+      "projects": [],
+      "vessels": [
+        "type_fpso",
+        "type_osv",
+        "type_drillship",
+        "vessel_amaralina_star",
+        "vessel_siem_helix_1"
+      ],
+      "software": [
+        "sw_drake",
+        "sw_sap_rt",
+        "sw_maritime_credentialing_generic"
+      ],
+      "certifications": [
+        "cbsp",
+        "bosiet",
+        "huet",
+        "thuet",
+        "nr34"
+      ],
+      "education": [],
+      "stories": [
+        "ctank"
+      ],
+      "boundary_groups": [
+        "fpso_production_and_commissioning",
+        "tanker_marine_assurance"
+      ],
+      "volunteer": []
+    },
+    "fit_estimates": [
+      {
+        "item": "FPSO/OSV exposure",
+        "est_pct": "70",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      },
+      {
+        "item": "EPCI / ambiente offshore",
+        "est_pct": "70",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      }
+    ],
+    "hard_gaps_or_boundaries": [
+      "não operador de produção FPSO"
+    ],
+    "id": "oil_gas_offshore"
+  }
+}

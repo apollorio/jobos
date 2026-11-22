@@ -1,0 +1,149 @@
+{
+  "_part": {
+    "id": "04_experience/exp_international_research",
+    "title": "Experiência: Estagiário de Engenharia / Pesquisa Internacional",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723",
+      "src_career_db_v3_2026_03_10",
+      "src_master_tree_v1_2026_10_20"
+    ]
+  },
+  "data": {
+    "role": "Estagiário de Engenharia / Pesquisa Internacional",
+    "entries": [
+      {
+        "institution": "NTUA — National Technical University of Athens",
+        "period": "Mai-Jul 2015",
+        "project": "MATCH — Material choice for seismic resistance structures",
+        "activities": [
+          "fadiga sísmica",
+          "modelagem preditiva",
+          "comportamento do aço sob estresse cíclico",
+          "uso de software avançado não nomeado na fonte"
+        ]
+      },
+      {
+        "institution": "BAM — Bundesanstalt für Materialforschung und Prüfung",
+        "period": "Jan-Mar 2018",
+        "project": "Pesquisa em cimento bio-baseado",
+        "activities": [
+          "experimentos small/large scale",
+          "mapeamento rigoroso de dados",
+          "sistemas de análise"
+        ]
+      }
+    ],
+    "evidence": "D",
+    "transferable_skills_master_tree": [
+      "Experiência internacional em engenharia",
+      "Coleta e organização estruturada de dados",
+      "Análise técnica e documentação",
+      "Colaboração multidisciplinar"
+    ],
+    "locations": [
+      "Atenas, Grécia",
+      "Berlim, Alemanha"
+    ],
+    "domain_tags": [
+      "research_and_academic",
+      "planning_data_performance"
+    ],
+    "source_refs": [
+      "src_master_260723",
+      "src_master_career_tree_v1"
+    ],
+    "id": "exp_international_research",
+    "period_iso": {
+      "start": "2015-05",
+      "end": "2018-03"
+    },
+    "narrative_260723_first_person_pt_en": {
+      "order": 6,
+      "role": {
+        "pt": "Estagiário de Engenharia (Pesquisa Internacional)",
+        "en": "Engineering Intern (International Research)"
+      },
+      "company": "NTUA (Atenas, Grécia) & BAM (Berlim, Alemanha)",
+      "period": "2015 & 2018",
+      "entries": [
+        {
+          "institution": "National Technical University of Athens (NTUA)",
+          "location": {
+            "pt": "Atenas, Grécia",
+            "en": "Athens, Greece"
+          },
+          "period": "Mai–Jul 2015",
+          "project": "MATCH — Material choice for seismic resistance structures",
+          "bullets": {
+            "pt": [
+              "Avaliei materiais sob fadiga sísmica no projeto MATCH, utilizando softwares avançados e modelagem preditiva do comportamento do aço sob estresse cíclico."
+            ],
+            "en": [
+              "Evaluated materials under seismic fatigue for the MATCH project, using advanced software and predictive modeling of steel behavior under cyclic stress."
+            ]
+          }
+        },
+        {
+          "institution": "Bundesanstalt für Materialforschung und Prüfung (BAM)",
+          "location": {
+            "pt": "Berlim, Alemanha",
+            "en": "Berlin, Germany"
+          },
+          "period": "Jan–Mar 2018",
+          "project": {
+            "pt": "Pesquisa em cimento bio-baseado",
+            "en": "Bio-based cement research"
+          },
+          "bullets": {
+            "pt": [
+              "Conduzi experimentos sobre cimento bio-baseado (concreto em pequena e larga escala), com mapeamento rigoroso de dados e sistemas de análise."
+            ],
+            "en": [
+              "Conducted experiments on bio-based cement (small- and large-scale concrete), with rigorous data mapping and analysis systems."
+            ]
+          }
+        }
+      ]
+    },
+    "narrative_career_db_v3": {
+      "order": 6,
+      "role": "Estagiário de Engenharia (Pesquisa Internacional)",
+      "company": "NTUA (Atenas, Grécia) & BAM (Berlim, Alemanha)",
+      "period": "2015 & 2018",
+      "details": [
+        {
+          "institution": "National Technical University of Athens (NTUA)",
+          "location": "Atenas, Grécia",
+          "period": "Mai–Jul 2015",
+          "project": "MATCH — Material choice for seismic resistance structures",
+          "focus": "Avaliação de materiais sob fadiga sísmica, softwares avançados e modelagem preditiva de comportamento de aço sob estresse cíclico."
+        },
+        {
+          "institution": "Bundesanstalt für Materialforschung und Prüfung (BAM)",
+          "location": "Berlim, Alemanha",
+          "period": "Jan–Mar 2018",
+          "project": "Pesquisa em cimento bio-baseado",
+          "focus": "Experimentos de comportamento de concreto (pequena a larga escala), mapeamento rigoroso de dados e sistemas de análise."
+        }
+      ]
+    },
+    "master_tree_v1_timeline": {
+      "organization": "NTUA / BAM",
+      "role": "Estágios / pesquisa em engenharia",
+      "period": "2015 e 2018",
+      "locations": [
+        "Atenas, Grécia",
+        "Berlim, Alemanha"
+      ],
+      "details": [
+        "Experiência internacional em engenharia",
+        "Coleta e organização estruturada de dados",
+        "Análise técnica e documentação",
+        "Colaboração multidisciplinar"
+      ]
+    },
+    "employment_type": "internship/research (não conta como experiência profissional para anos exigidos)"
+  }
+}

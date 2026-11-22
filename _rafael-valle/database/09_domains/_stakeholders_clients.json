@@ -1,0 +1,39 @@
+{
+  "_part": {
+    "id": "09_domains/_stakeholders_clients",
+    "title": "Stakeholders e clientes",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "companies_clients": [
+      "Van Oord",
+      "C-Tank",
+      "Shell",
+      "Transocean",
+      "Helix",
+      "Petrobras environment",
+      "Toolvox",
+      "Constellation-related drillship environment",
+      "Olygas / Cien / Helix context from source file"
+    ],
+    "stakeholder_types": [
+      "client",
+      "international management",
+      "vessel Master",
+      "shipboard crew",
+      "QHSE",
+      "Ship Management",
+      "terminal",
+      "shipping agent",
+      "pilot",
+      "supplier",
+      "service provider",
+      "survey team",
+      "diving team",
+      "regulatory / port interfaces"
+    ]
+  }
+}

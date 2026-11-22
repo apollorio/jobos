@@ -1,0 +1,100 @@
+{
+  "_part": {
+    "id": "06_skills/vessels_assets",
+    "title": "Embarcações e ativos",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "vessel_types": [
+      {
+        "id": "type_tshd",
+        "name": "TSHD",
+        "context": "Van Oord",
+        "evidence": "D",
+        "used_in": [
+          "exp_vanoord"
+        ]
+      },
+      {
+        "id": "type_wid",
+        "name": "WID",
+        "context": "Van Oord",
+        "evidence": "D",
+        "used_in": [
+          "exp_vanoord"
+        ]
+      },
+      {
+        "id": "type_tug",
+        "name": "Rebocador / Tugboat",
+        "context": "Van Oord",
+        "evidence": "D",
+        "used_in": [
+          "exp_vanoord"
+        ]
+      },
+      {
+        "id": "type_fast_boat",
+        "name": "Lancha rápida / voadeira",
+        "context": "Van Oord support craft",
+        "evidence": "U",
+        "used_in": [
+          "exp_vanoord"
+        ]
+      },
+      {
+        "id": "type_osv",
+        "name": "OSV",
+        "context": "C-Tank",
+        "evidence": "D",
+        "used_in": [
+          "exp_ctank_analyst"
+        ]
+      },
+      {
+        "id": "type_fpso",
+        "name": "FPSO",
+        "context": "C-Tank support/maintenance campaigns, não produção",
+        "evidence": "D",
+        "used_in": [
+          "exp_ctank_analyst"
+        ]
+      },
+      {
+        "id": "type_drillship",
+        "name": "Drillship / Navio-sonda",
+        "context": "Toolvox",
+        "evidence": "D",
+        "used_in": [
+          "exp_toolvox"
+        ]
+      }
+    ],
+    "named_vessels": {
+      "vessel_amaralina_star": {
+        "name": "Amaralina Star",
+        "code": "NS-43",
+        "type": "Navio-sonda",
+        "context": "Toolvox / offshore technical English",
+        "important": "STAR aqui é parte do nome da embarcação, não software.",
+        "evidence": "D",
+        "used_in": [
+          "exp_toolvox"
+        ]
+      },
+      "vessel_siem_helix_1": {
+        "name": "Siem Helix 1",
+        "code": "NS-51",
+        "type": "Navio-sonda de intervenção",
+        "context": "Toolvox / offshore technical English",
+        "evidence": "D",
+        "used_in": [
+          "exp_toolvox"
+        ]
+      }
+    }
+  }
+}

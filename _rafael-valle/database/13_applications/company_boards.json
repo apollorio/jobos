@@ -1,0 +1,273 @@
+{
+  "_part": {
+    "id": "13_applications/company_boards",
+    "title": "Empresas monitoradas e estratégia de coleta",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_attachments_inventory_2026_10_22",
+      "src_jobos_strategies"
+    ]
+  },
+  "data": {
+    "boards": [
+      {
+        "id": "prio",
+        "name": "PRIO",
+        "kind": "gupy",
+        "board_url": "https://prio.gupy.io/",
+        "saved_jobs": 11
+      },
+      {
+        "id": "modec",
+        "name": "MODEC",
+        "kind": "gupy",
+        "board_url": "https://modec-br.gupy.io/",
+        "saved_jobs": 3
+      },
+      {
+        "id": "norsul",
+        "name": "Norsul",
+        "kind": "gupy",
+        "board_url": "https://norsul.gupy.io/",
+        "saved_jobs": 4
+      },
+      {
+        "id": "brava",
+        "name": "Brava Energia",
+        "kind": "gupy",
+        "board_url": "https://bravaenergia.gupy.io/",
+        "saved_jobs": 28
+      },
+      {
+        "id": "wilsonsons",
+        "name": "Wilson Sons",
+        "kind": "gupy",
+        "board_url": "https://wilsonsons.gupy.io/",
+        "saved_jobs": 11
+      },
+      {
+        "id": "ocyan",
+        "name": "Ocyan",
+        "kind": "gupy",
+        "board_url": "https://ocyan.gupy.io/",
+        "saved_jobs": 5
+      },
+      {
+        "id": "qualidados",
+        "name": "Qualidados",
+        "kind": "gupy",
+        "board_url": "https://qualidados.gupy.io/",
+        "saved_jobs": 8
+      },
+      {
+        "id": "oceanica",
+        "name": "Oceanica",
+        "kind": "gupy",
+        "board_url": "https://sejaoceanica.gupy.io/",
+        "saved_jobs": 11
+      },
+      {
+        "id": "vinci",
+        "name": "VINCI Energies",
+        "kind": "gupy",
+        "board_url": "https://vinci-energies.gupy.io/",
+        "saved_jobs": 1
+      },
+      {
+        "id": "nexa",
+        "name": "Nexa Tecnologia",
+        "kind": "gupy",
+        "board_url": "https://nexatecnologia.gupy.io/",
+        "saved_jobs": 1
+      },
+      {
+        "id": "enauta",
+        "name": "Enauta / 3R",
+        "kind": "gupy",
+        "board_url": "https://3rpetroleum.gupy.io/",
+        "saved_jobs": 0
+      },
+      {
+        "id": "minsait",
+        "name": "Minsait",
+        "kind": "gupy",
+        "board_url": "https://minsait.gupy.io/",
+        "saved_jobs": 3
+      },
+      {
+        "id": "vibra",
+        "name": "Vibra Energia",
+        "kind": "gupy",
+        "board_url": "https://vibraenergia.gupy.io/",
+        "saved_jobs": 32
+      },
+      {
+        "id": "subsea7",
+        "name": "Subsea7",
+        "kind": "sf",
+        "board_url": "https://careers.subsea7.com/search/?locationsearch=Rio%20de%20Janeiro&startrow=0",
+        "saved_jobs": 8
+      },
+      {
+        "id": "sbm",
+        "name": "SBM Offshore",
+        "kind": "sf",
+        "board_url": "https://careers.sbmoffshore.com/search/?locationsearch=Rio%20de%20Janeiro&startrow=0",
+        "saved_jobs": 8
+      },
+      {
+        "id": "yinson",
+        "name": "Yinson",
+        "kind": "sf",
+        "board_url": "https://careers.yinson.com/search/?locationsearch=Rio%20de%20Janeiro&startrow=0",
+        "saved_jobs": 6
+      },
+      {
+        "id": "halliburton",
+        "name": "Halliburton",
+        "kind": "sf",
+        "board_url": "https://jobs.halliburton.com/search/?locationsearch=Rio%20de%20Janeiro&startrow=0",
+        "saved_jobs": 11
+      },
+      {
+        "id": "transocean",
+        "name": "Transocean",
+        "kind": "workday",
+        "board_url": "https://deepwater.wd1.myworkdayjobs.com/BrazilExternalCareerSite?q=Rio%20de%20Janeiro",
+        "saved_jobs": 0
+      },
+      {
+        "id": "equinor",
+        "name": "Equinor",
+        "kind": "workday",
+        "board_url": "https://equinor.wd3.myworkdayjobs.com/EQNR?q=Rio%20de%20Janeiro",
+        "saved_jobs": 0
+      },
+      {
+        "id": "shell",
+        "name": "Shell",
+        "kind": "workday",
+        "board_url": "https://shell.wd3.myworkdayjobs.com/ShellCareers?q=Rio%20de%20Janeiro",
+        "saved_jobs": 1
+      },
+      {
+        "id": "baker",
+        "name": "Baker Hughes",
+        "kind": "workday",
+        "board_url": "https://bakerhughes.wd5.myworkdayjobs.com/BakerHughes?q=Rio%20de%20Janeiro",
+        "saved_jobs": 7
+      },
+      {
+        "id": "aker",
+        "name": "Aker Solutions",
+        "kind": "smart",
+        "board_url": "https://jobs.smartrecruiters.com/AkerSolutions",
+        "saved_jobs": 0
+      },
+      {
+        "id": "airswift",
+        "name": "Airswift",
+        "kind": "smart",
+        "board_url": "https://jobs.smartrecruiters.com/Airswift",
+        "saved_jobs": 0
+      },
+      {
+        "id": "oceanpact",
+        "name": "OceanPact",
+        "kind": "inhire",
+        "board_url": "https://oceanpact.inhire.app/vagas",
+        "saved_jobs": 54
+      },
+      {
+        "id": "abs",
+        "name": "ABS",
+        "kind": "oracle",
+        "board_url": "https://hbbq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/jobs",
+        "saved_jobs": 0
+      },
+      {
+        "id": "dof",
+        "name": "DOF",
+        "kind": "dof",
+        "board_url": "https://www.dof.com/vacancies",
+        "saved_jobs": 20
+      },
+      {
+        "id": "bram",
+        "name": "Bram Offshore",
+        "kind": "bram",
+        "board_url": "https://atracaodetalentos.totvs.app/bramoffshore/extended",
+        "saved_jobs": 18
+      },
+      {
+        "id": "capco",
+        "name": "Capco",
+        "kind": "greenhouse",
+        "board_url": "https://job-boards.greenhouse.io/capco?offices%5B%5D=114971",
+        "saved_jobs": 1
+      }
+    ],
+    "collection_strategies": {
+      "Equinor": {
+        "estrategia": "workday padrao",
+        "estado": "online"
+      },
+      "Norsul": {
+        "estrategia": "gupy completa",
+        "estado": "online"
+      },
+      "Subsea7": {
+        "estrategia": "j2w sitemap",
+        "estado": "online"
+      },
+      "PRIO": {
+        "estrategia": "gupy completa",
+        "estado": "online"
+      },
+      "MODEC": {
+        "estrategia": "gupy completa",
+        "estado": "online"
+      },
+      "DOF": {
+        "estrategia": "web:webflow_dof",
+        "estado": "online"
+      },
+      "SBM Offshore": {
+        "estrategia": "j2w busca",
+        "estado": "online"
+      },
+      "Trident Energy": {
+        "estrategia": "web:workable",
+        "estado": "vazia"
+      },
+      "Transocean": {
+        "estrategia": "workday dc configurado",
+        "estado": "online"
+      },
+      "Sapura": {
+        "estrategia": "web:vagas_com_br",
+        "estado": "vazia"
+      },
+      "OceanPact": {
+        "estrategia": "inhire com tenant",
+        "estado": "online"
+      },
+      "Yinson": {
+        "estrategia": "j2w sitemap",
+        "estado": "online"
+      },
+      "Brava Energia": {
+        "estrategia": "gupy completa",
+        "estado": "online"
+      },
+      "Bram Offshore": {
+        "estrategia": "totvs extended",
+        "estado": "online"
+      },
+      "Capco": {
+        "estrategia": "greenhouse com descricao",
+        "estado": "online"
+      }
+    }
+  }
+}

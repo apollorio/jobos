@@ -1,0 +1,787 @@
+{
+  "schema": {
+    "name": "Rafael Perini Valle Career Master Tree",
+    "version": "2026-10-20.1",
+    "language": "pt-BR",
+    "purpose": [
+      "Fonte-mestra para gerar CVs específicos por vaga sem inventar experiência.",
+      "Base estruturada para análise de fit, entrevistas, LinkedIn, Gupy, cartas e PMP.",
+      "Separar experiência real por domínio: naval/marítimo, manutenção, projetos, O&G, HSEQ, qualidade, logística, dados, tecnologia e projetos independentes.",
+      "Registrar também limites explícitos do que NÃO deve ser alegado."
+    ]
+  },
+  "identity": {
+    "full_name": "Rafael Perini Valle",
+    "professional_name": "Rafael Valle",
+    "location": "Rio de Janeiro - RJ, Brasil",
+    "origin": "Espírito Santo, Brasil",
+    "nationalities_passports": [
+      "Brasil",
+      "Itália"
+    ],
+    "drivers_license": "CNH categoria B",
+    "crea": "Ativo",
+    "languages": {
+      "portuguese": "Nativo",
+      "english": "Fluente/avançado com uso profissional em operações offshore, equipes multiculturais, gestão internacional, treinamento e documentação técnica"
+    }
+  },
+  "professional_positioning": {
+    "core_identity": [
+      "Marine / Offshore Operations Engineer",
+      "Marine Operations Superintendent",
+      "Vessel-Shore Operations",
+      "Project Execution & Project Controls",
+      "Operational HSEQ / Emergency Response",
+      "Offshore Planning & Readiness"
+    ],
+    "secondary_identity": [
+      "Project Management",
+      "Operational Quality / Management Systems",
+      "Logistics / Suppliers / Materials",
+      "Data / KPI / Reporting",
+      "Process Improvement",
+      "Independent Digital Product Development"
+    ]
+  },
+  "career_timeline": [
+    {
+      "organization": "NTUA / BAM",
+      "role": "Estágios / pesquisa em engenharia",
+      "period": "2015 e 2018",
+      "locations": [
+        "Atenas, Grécia",
+        "Berlim, Alemanha"
+      ],
+      "details": [
+        "Experiência internacional em engenharia",
+        "Coleta e organização estruturada de dados",
+        "Análise técnica e documentação",
+        "Colaboração multidisciplinar"
+      ]
+    },
+    {
+      "organization": "Toolvox",
+      "role": "Instrutor de Inglês Técnico Offshore",
+      "period": "Dez 2018 - Mai 2020",
+      "environment": [
+        "navios-sonda de águas ultraprofundas",
+        "pré-sal",
+        "NS-43",
+        "NS-51"
+      ],
+      "details": [
+        "Treinamento de equipes multinacionais em inglês técnico marítimo/offshore",
+        "Tradução/interpretação de SOPs",
+        "Toolbox talks",
+        "Comunicações de rádio, ponte e emergência",
+        "Suporte à comunicação operacional entre brasileiros e estrangeiros",
+        "Vivência embarcada anterior à carreira formal de operações"
+      ]
+    },
+    {
+      "organization": "C-Tank",
+      "role": "Assistente de Operações Sênior",
+      "period": "Jul 2020 - Out 2020",
+      "details": [
+        "Suporte a operações portuárias e offshore",
+        "Mobilização de pessoas e materiais",
+        "Requisições de transporte",
+        "Documentação operacional",
+        "Credenciamento Petrobras DRAKE",
+        "Controle de prontidão operacional"
+      ]
+    },
+    {
+      "organization": "C-Tank",
+      "role": "Analista de Operações",
+      "period": "Out 2020 - Jun 2021",
+      "details": [
+        "Planejamento e acompanhamento de campanhas offshore de manutenção e limpeza",
+        "Suporte a FPSOs, OSVs e embarcações de apoio",
+        "Coordenação de equipes, materiais, documentação, fornecedores e logística",
+        "Acompanhamento por DPR/RDO",
+        "Petrobras Drake / SAP RT",
+        "POB, logística de helicóptero e programação de embarque",
+        "Interface com Shell, Transocean, Helix e ambiente Petrobras",
+        "Acompanhamento de custos, medições, entregáveis e prontidão",
+        "Participação direta na preparação da empresa para ISO 9001",
+        "Mapeamento e formalização de processos",
+        "Elaboração de procedimentos",
+        "Regras de controle, armazenamento e descarte documental",
+        "Padronização e rastreabilidade para preparação de auditoria"
+      ]
+    },
+    {
+      "organization": "Van Oord",
+      "formal_role": "Superintendent 1 / Superintendente",
+      "business_area": "Projetos",
+      "contract_start": "2021-07-12",
+      "contract_end": "2024-11-01",
+      "duration": "3 anos e 5 meses",
+      "formal_job_objective": "Acompanhar e controlar o andamento da execução dos projetos em suas diversas áreas.",
+      "marine_operations": [
+        "TSHD",
+        "WID",
+        "rebocadores",
+        "lanchas rápidas / voadeiras",
+        "embarcações de apoio",
+        "interface com navios de projeto",
+        "mobilização/desmobilização",
+        "port calls",
+        "atracação/desatracação",
+        "bunkering",
+        "crew changes",
+        "waste management",
+        "transporte de pessoas e materiais",
+        "pilotos, agentes marítimos, terminais e fornecedores",
+        "prontidão operacional",
+        "SIMOPS"
+      ],
+      "vessel_shore_interface": [
+        "Contato diário com comandantes",
+        "Interface base ↔ embarcação",
+        "Coordenação entre equipes de bordo, projeto, QHSE, cliente e escritório",
+        "Interface com terminais e agentes marítimos",
+        "Interface com fornecedores e prestadores locais",
+        "Comunicação de desvios, prioridades e necessidades operacionais"
+      ],
+      "planning_and_project_controls": [
+        "Plano semanal de operação de frota",
+        "Alocação de embarcações",
+        "Planejado versus realizado",
+        "Planejamento de curto prazo",
+        "Look-ahead de aproximadamente 15 dias",
+        "Forecast",
+        "MS Project",
+        "PCP",
+        "S-curves",
+        "Relatórios diários, semanais e mensais",
+        "Controle de marcos e avanço",
+        "Análise de desvios",
+        "Planos de recuperação",
+        "Fechamento e medição"
+      ],
+      "operational_kpis": [
+        "Produção",
+        "Ciclo",
+        "Disponibilidade",
+        "Downtime",
+        "Consumo de combustível",
+        "Frente parada",
+        "Avanço físico",
+        "Performance planejada versus realizada"
+      ],
+      "survey_bathymetry": [
+        "Uso de survey/batimetria para validar execução e produção",
+        "Solicitação de novos levantamentos quando necessário",
+        "Verificação de calibração e qualidade dos dados antes de concluir que um desvio era de produção",
+        "Uso de dados validados para decisões de programação e recuperação"
+      ],
+      "hseq_and_regulatory": [
+        "QHSE operacional",
+        "LMRA",
+        "Toolbox Talks",
+        "Investigação de incidentes e ocorrências",
+        "Ações corretivas",
+        "NORMAM-12",
+        "IMO",
+        "ISM Code",
+        "SOLAS",
+        "MARPOL",
+        "Controle de condições inseguras",
+        "Inspeções de projeto e meios de apoio"
+      ],
+      "erc_emergency_response": {
+        "function": "Emergency Response Coordinator (ERC)",
+        "drills": [
+          "Coordenava simulados de resposta a emergência",
+          "Normalmente utilizava um tripulante como vítima simulada",
+          "Media tempo de resposta de lancha/embarcação",
+          "Media tempo de resposta de ambulância",
+          "Media tempo de resposta do hospital / cadeia de atendimento",
+          "Avaliava se o resultado era positivo ou negativo",
+          "Emitia relatório final do simulado",
+          "Registrava falhas e atrasos",
+          "Definia pontos de melhoria"
+        ],
+        "real_events": [
+          "Participação/coordenação em mais de 5 Medevacs reais",
+          "Interface com comandante, QHSE, embarcação, equipes de resposta e gestão"
+        ]
+      },
+      "inspection_control": {
+        "assets": [
+          "escritório onshore",
+          "veículos de projeto",
+          "lancha rápida / voadeira",
+          "rebocadores",
+          "embarcações de apoio",
+          "navios"
+        ],
+        "activities": [
+          "Controle de relatórios e inspeções do projeto",
+          "Identificação de irregularidades e pendências",
+          "Acompanhamento da tratativa",
+          "Verificação de prontidão e condições de segurança"
+        ],
+        "example": "Foi identificada embarcação/rebocador de apoio sem maca adequada para eventual remoção médica.",
+        "observation": "Navios normalmente apresentavam documentação e evidências com maior rapidez porque a tripulação já sabia quais itens seriam solicitados."
+      },
+      "maintenance_repairs_readiness": [
+        "Acompanhamento de prontidão de embarcações e equipamentos",
+        "Tratamento de indisponibilidades e pendências operacionais",
+        "Coordenação de serviços e fornecedores necessários à continuidade da operação",
+        "Monitoramento de downtime e impacto no plano",
+        "Acompanhamento de reparos/necessidades operacionais na medida em que afetavam execução e disponibilidade",
+        "Não era owner do PMS integral do navio"
+      ],
+      "commercial_and_supplier_management": [
+        "Contratação/coordenação operacional de fornecedores",
+        "Medições",
+        "Claims",
+        "Custos",
+        "Mudanças de escopo",
+        "Negociação e acompanhamento de serviços",
+        "Negociação de diesel em contexto operacional",
+        "Off-hire e impactos de disponibilidade",
+        "Requisições de compra e serviço",
+        "Controle de materiais e suprimentos"
+      ],
+      "technical_documentation": [
+        "Relatórios diários",
+        "Relatórios semanais",
+        "Relatórios mensais",
+        "Handovers",
+        "Procedimentos operacionais",
+        "Logfiles",
+        "15-day look-ahead",
+        "S-curves",
+        "Relatórios de produção",
+        "Relatórios de inspeção",
+        "Relatórios de simulados de emergência"
+      ]
+    },
+    {
+      "organization": "Desenvolvimento Profissional & Projetos Independentes",
+      "period": "Nov 2024 - Presente",
+      "details": [
+        "Engenharia de Segurança do Trabalho",
+        "Análise de dados",
+        "Dashboards",
+        "Automação",
+        "SQL e Python em desenvolvimento",
+        "Documentação e estruturação de processos",
+        "Desenvolvimento web e produto digital",
+        "Projetos Apollo::rio e Dismantle"
+      ]
+    }
+  ],
+  "domain_tree": {
+    "naval_marine_offshore": {
+      "vessels": [
+        "TSHD",
+        "WID",
+        "rebocadores",
+        "lanchas rápidas / voadeiras",
+        "embarcações de apoio",
+        "OSVs",
+        "FPSOs em campanhas de suporte/manutenção",
+        "navios-sonda NS-43 e NS-51"
+      ],
+      "activities": [
+        "vessel-shore interface",
+        "contato com comandantes",
+        "port calls",
+        "berthing/unberthing",
+        "bunkering",
+        "crew changes",
+        "mobilização/desmobilização",
+        "transporte de pessoas e materiais",
+        "waste management",
+        "agentes marítimos",
+        "terminais",
+        "pilotos",
+        "prontidão operacional",
+        "SIMOPS",
+        "inspeções de meios de apoio"
+      ],
+      "frameworks": [
+        "IMO",
+        "ISM Code",
+        "SOLAS",
+        "MARPOL",
+        "NORMAM / NORMAM-12"
+      ]
+    },
+    "maintenance_repairs_asset_readiness": {
+      "ctank": [
+        "Campanhas offshore de manutenção e limpeza em FPSO/OSV",
+        "Planejamento de equipes, materiais e serviços",
+        "Readiness de pessoal, documentação e recursos",
+        "DPR/RDO",
+        "Mobilização e suporte logístico",
+        "Petrobras Drake / SAP RT"
+      ],
+      "van_oord": [
+        "Acompanhamento de disponibilidade de embarcações/equipamentos",
+        "Downtime",
+        "Pendências de meios de apoio",
+        "Coordenação de reparos/serviços quando afetavam a operação",
+        "Inspeções de embarcações de apoio",
+        "Materiais e serviços necessários à prontidão"
+      ]
+    },
+    "project_management_project_controls": {
+      "education": [
+        "MBA Gestão de Projetos USP/ESALQ, 400h, PMI/PMBOK"
+      ],
+      "experience": [
+        "Escopo",
+        "Prazo",
+        "Custo",
+        "Riscos",
+        "Fornecedores",
+        "Stakeholders",
+        "Produção",
+        "KPIs",
+        "Mudanças e claims",
+        "Look-ahead",
+        "Relatórios",
+        "Medição",
+        "Closeout"
+      ],
+      "pmp_evidence": {
+        "verified_daily_records": 586,
+        "original_timesheet_X_marks": 566,
+        "additional_signed_days": 20,
+        "calendar_months_explicit_evidence": 32
+      }
+    },
+    "oil_gas_offshore": {
+      "experience": [
+        "FPSO/OSV support",
+        "Campanhas de manutenção e limpeza offshore",
+        "Petrobras",
+        "Shell",
+        "Transocean",
+        "Helix",
+        "Drake",
+        "SAP RT",
+        "POB",
+        "Helicopter logistics",
+        "Navios-sonda de águas ultraprofundas no pré-sal"
+      ]
+    },
+    "hseq_emergency_response": {
+      "experience": [
+        "Emergency Response Coordinator (ERC)",
+        "ERT",
+        "Mais de 5 Medevacs reais",
+        "Simulados de emergência",
+        "Medição de tempo de resposta ambulância/hospital/lancha",
+        "Relatório pós-drill",
+        "Inspeções de escritório, veículos, lanchas, rebocadores, apoio e navios",
+        "Incident investigation",
+        "Corrective actions",
+        "LMRA",
+        "Toolbox Talks",
+        "SIMOPS",
+        "IMO / ISM / SOLAS / MARPOL / NORMAM"
+      ]
+    },
+    "quality_management_systems": {
+      "ctank": [
+        "Preparação para ISO 9001",
+        "Mapeamento de processos",
+        "Formalização de processos",
+        "Elaboração de procedimentos",
+        "Controle documental",
+        "Armazenamento e descarte documental",
+        "Padronização",
+        "Rastreabilidade",
+        "Preparação de evidências para auditoria"
+      ],
+      "van_oord": [
+        "Padronização de planejamento",
+        "Reporting",
+        "KPIs",
+        "Controle de produção",
+        "Acompanhamento de desvios",
+        "Aprendizado entre projetos"
+      ]
+    },
+    "logistics_materials_suppliers": {
+      "experience": [
+        "crew changes",
+        "POB",
+        "helicopter logistics",
+        "transporte de passageiros",
+        "transporte de materiais",
+        "bunkering",
+        "waste",
+        "port calls",
+        "mobilização/desmobilização",
+        "fornecedores",
+        "agentes marítimos",
+        "terminais",
+        "prestadores locais",
+        "suprimentos para embarcações",
+        "requisições de compra/serviço",
+        "medições",
+        "custos",
+        "claims",
+        "off-hire",
+        "mudança de escopo"
+      ]
+    },
+    "planning_data_performance": {
+      "planning": [
+        "plano semanal",
+        "look-ahead 15 dias",
+        "forecast",
+        "MS Project",
+        "PCP",
+        "S-curves"
+      ],
+      "performance": [
+        "produção",
+        "cycle time",
+        "disponibilidade",
+        "downtime",
+        "fuel consumption",
+        "avanço físico",
+        "frente parada",
+        "plan vs actual"
+      ],
+      "reporting": [
+        "daily",
+        "weekly",
+        "monthly",
+        "DPR/RDO",
+        "handover",
+        "client reporting",
+        "management reporting"
+      ],
+      "data_validation": [
+        "survey",
+        "bathymetry",
+        "calibration checks"
+      ]
+    },
+    "training_communication_leadership": {
+      "experience": [
+        "Instrutor de inglês técnico marítimo/offshore",
+        "Treinamento de equipes multinacionais",
+        "SOP translation",
+        "Toolbox / bridge / radio / emergency communication",
+        "Liderança operacional",
+        "Coordenação de equipes e terceiros",
+        "Comunicação com comandantes",
+        "Alinhamentos com clientes e gestão"
+      ]
+    },
+    "digital_data_technology": {
+      "strong_tools": [
+        "Excel Avançado",
+        "Power BI",
+        "MS Project",
+        "PCP",
+        "Petrobras Drake",
+        "SAP RT"
+      ],
+      "complementary": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "JSON",
+        "PHP",
+        "SQL",
+        "WordPress",
+        "GitHub",
+        "automação",
+        "dashboards"
+      ]
+    }
+  },
+  "van_oord_project_portfolio": [
+    {
+      "code": "35.4264",
+      "project": "Ternium",
+      "period": "14 Jul - 07 Sep 2021"
+    },
+    {
+      "code": "35.4261",
+      "project": "Porto Sudeste",
+      "period": "09 Oct - 20 Nov 2021"
+    },
+    {
+      "code": "35.4012",
+      "project": "Itajaí",
+      "period": "2021"
+    },
+    {
+      "code": "35.4269",
+      "project": "Porto Vitória / CODESA",
+      "period": "22 Dec 2021 - 11 Feb 2022"
+    },
+    {
+      "code": "35.4222",
+      "project": "Porto do Açu",
+      "period": "2022 / 2023 / 2024"
+    },
+    {
+      "code": "35.4285",
+      "project": "Vale TIG",
+      "period": "2022"
+    },
+    {
+      "code": "35.3190",
+      "project": "Suape",
+      "period": "2022-2023"
+    },
+    {
+      "code": "35.4306",
+      "project": "SPA / Santos",
+      "period": "2023"
+    },
+    {
+      "code": "35.4012",
+      "project": "Itajaí SPI",
+      "period": "2023"
+    },
+    {
+      "code": "35.4449",
+      "project": "Porto Sudeste PSB",
+      "period": "19 Sep - 17 Nov 2023"
+    },
+    {
+      "code": "35.4458",
+      "project": "Rio Grande",
+      "period": "2024"
+    }
+  ],
+  "education": [
+    {
+      "credential": "Bacharelado em Engenharia Civil",
+      "institution": "UNIVIX / Multivix",
+      "period": "2013-2018",
+      "status": "Concluído"
+    },
+    {
+      "credential": "Técnico em Portos",
+      "institution": "IFES",
+      "period": "2018-2019",
+      "status": "Concluído"
+    },
+    {
+      "credential": "MBA em Gestão de Projetos",
+      "institution": "USP / ESALQ",
+      "period": "2019-2020",
+      "workload": "400 horas",
+      "framework": "PMI / PMBOK"
+    },
+    {
+      "credential": "Pós-graduação em Engenharia de Construção Naval e Offshore",
+      "institution": "UCP",
+      "period": "2022-2023",
+      "status": "Concluído"
+    },
+    {
+      "credential": "Pós-graduação em Engenharia de Segurança do Trabalho",
+      "institution": "Universidade Cruzeiro do Sul",
+      "period": "2024-2025",
+      "status": "Concluído conforme histórico consolidado; usar certificado para datas exatas"
+    }
+  ],
+  "training_certifications": {
+    "offshore": [
+      {
+        "name": "CBSP",
+        "status": "Realizado; reciclagem pendente"
+      },
+      {
+        "name": "BOSIET",
+        "status": "Realizado; reciclagem pendente"
+      },
+      {
+        "name": "HUET / T-HUET",
+        "status": "Realizado; reciclagem pendente"
+      }
+    ],
+    "safety": [
+      "NR-30",
+      "NR-33",
+      "NR-34",
+      "NR-35"
+    ],
+    "technical": [
+      "General Dredging Course",
+      "PCP",
+      "MS Project"
+    ]
+  },
+  "publication": {
+    "title": "Inglês Técnico Portuário e Offshore",
+    "author": "Rafael Perini Valle",
+    "isbn": "978-65-00-04579-6",
+    "year": 2020,
+    "copies": "3.000+ exemplares"
+  },
+  "independent_projects": {
+    "dismantle": {
+      "role": [
+        "Criador",
+        "Produtor",
+        "Gestor",
+        "Investidor",
+        "Branding/graphics",
+        "Planejamento e execução"
+      ],
+      "concept_start": "2024-10-24",
+      "inpi_action": "2024-10-29",
+      "event_date": "2025-04-12",
+      "venue": "Cais Imperatriz, Rio de Janeiro",
+      "project_management_elements": [
+        "iniciação",
+        "conceito",
+        "branding",
+        "planejamento",
+        "orçamento",
+        "contratação",
+        "coordenação de artistas/equipe/fornecedores",
+        "produção",
+        "execução",
+        "controle financeiro",
+        "encerramento"
+      ],
+      "documented_results": {
+        "shotgun_tickets_sold": 165,
+        "shotgun_invitations": 250,
+        "registered_participants_total": 415,
+        "door_entries_hoppin": 31,
+        "onsite_sales_brl": 21667,
+        "bar_items": 1294,
+        "transactions": 755,
+        "bar_sales_brl": 19652
+      }
+    },
+    "apollo_rio": {
+      "role": [
+        "Founder / product owner independente",
+        "Product architecture",
+        "UX/UI direction",
+        "WordPress architecture",
+        "Development / automation"
+      ],
+      "type": "Plataforma digital/hub de eventos e cultura do Rio",
+      "technical_scope": [
+        "WordPress",
+        "PHP",
+        "HTML/CSS/JavaScript",
+        "TypeScript",
+        "custom plugins",
+        "MU-plugins",
+        "REST/data flows",
+        "PWA",
+        "Web Push",
+        "Service Worker",
+        "GitHub repositories",
+        "registry as SSOT",
+        "AI-assisted development governance",
+        "design system / core.js",
+        "data structures",
+        "front-end product design"
+      ]
+    },
+    "sos_apollo": {
+      "type": "Projeto social / ferramenta offline-first de redução de danos",
+      "technical_characteristics": [
+        "PWA offline-first",
+        "deterministic local policy engine",
+        "event → state → hard safety rules → risk/band → policy → skill/card",
+        "sem generative AI no runtime crítico",
+        "privacy-first",
+        "sem login",
+        "emergency access",
+        "auditable/testable logic"
+      ]
+    }
+  },
+  "interview_evidence_bank": {
+    "fleet_planning": "Na Van Oord eu planejava a operação de frota de TSHD, WID e rebocadores em vários portos. A saída era plano semanal, alocação de embarcação e KPI de performance contra o realizado.",
+    "deviation_control": "Controle era desvio: o que estava no plano, o que atrasou e o reporte para gestão. Não era feeling; era número de ciclo, disponibilidade, downtime e frente parada.",
+    "hseq": "HSE operacional: compliance IMO/SOLAS/NORMAM e coordenação de ERT/Medevac quando a frente parava. O entregável era o protocolo executado e o registro.",
+    "ctank": "Na C-Tank eu sustentava campanhas de manutenção de FPSO/OSV com RDO/DPR e Drake/SAP RT em ambientes Shell, Transocean, Helix e Petrobras. O produto era execução acompanhada, diário fechado e logística no prazo.",
+    "tools": "Excel avançado e MS Project entram como meio para consolidar controle e decisão. Primavera não deve ser vendido como experiência prática.",
+    "project_deviation": "Quando produção real se afastava do previsto, eu acompanhava produção, disponibilidade, paradas, consumo e survey/batimetria. Antes de mexer no cronograma, buscava causa, validava medição/calibração, alinhava ações com embarcação, survey, fornecedores e cliente e atualizava o look-ahead.",
+    "process_improvement": "Na C-Tank participei da preparação para ISO 9001, mapeando processos, criando procedimentos e critérios de controle documental. Na Van Oord levei essa lógica para planejamento, reporting, KPIs e melhoria entre projetos."
+  },
+  "truth_boundaries_do_not_claim": {
+    "nautical_licenses": [
+      "Bacharelado em Ciências Náuticas",
+      "Master Mariner",
+      "CCL/CCB/Comandante",
+      "STCW Management Level",
+      "watchkeeping officer sea time",
+      "Barge Supervisor STCW/IMO A.891(21)"
+    ],
+    "tanker_marine_assurance": [
+      "COW",
+      "inerting",
+      "purging/venting",
+      "tanker offloading ownership",
+      "ballast management ownership",
+      "BWTS ownership",
+      "ISGOTT expert",
+      "OCIMF/SIRE ownership",
+      "ASOG ownership"
+    ],
+    "vessel_technical_management": [
+      "Class/statutory certificate owner",
+      "Flag-state compliance owner",
+      "dry-dock manager",
+      "full preventive maintenance system owner",
+      "fleet CMMS owner",
+      "AMOS expertise"
+    ],
+    "engineering_design": [
+      "FEA specialist",
+      "Ansys specialist",
+      "Orcaflex",
+      "Mathcad",
+      "SolidWorks specialist",
+      "HYSYS/process simulation",
+      "subsea controls engineering",
+      "pre-FEED/FEED manager",
+      "Subsea Engineering Manager"
+    ],
+    "quality": [
+      "ISO auditor",
+      "Lead Auditor",
+      "7 years in Quality",
+      "Synergi",
+      "Subsea7 BMS"
+    ],
+    "planning": [
+      "Primavera P6 as hands-on professional experience"
+    ],
+    "management_tenure": {
+      "do_not_claim": "5 years in similar management",
+      "correct_wording": "3 anos e 5 meses como Superintendente na Van Oord, mais vivência offshore anterior."
+    }
+  },
+  "career_story": {
+    "one_sentence": "Engenheiro com 3 anos e 5 meses como Superintendente na Van Oord, experiência offshore anterior em FPSO/OSV e navios-sonda, forte interface base–embarcação, planejamento de operações, HSEQ/ERC, fornecedores, KPIs, custos e execução de projetos.",
+    "differentiators": [
+      "Operação marítima real + project controls + HSEQ/ERC + comunicação técnica",
+      "Experiência tanto em campo/embarcação quanto em reporting, custos e gestão",
+      "Inglês fluente e experiência multicultural",
+      "Autor de livro técnico marítimo/offshore",
+      "Capacidade de transformar operação em processo, dado, procedimento e melhoria",
+      "Tecnologia e automação como complemento à engenharia"
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "_part": {
+    "id": "06_skills/software/office_data_bi",
+    "title": "Software/sistemas: office_data_bi",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723"
+    ]
+  },
+  "data": {
+    "nodes": {
+      "sw_excel": {
+        "name": "Microsoft Excel",
+        "type": "Spreadsheet / data analysis",
+        "status": "strong/proven",
+        "level": "Avançado",
+        "use_cases": [
+          "dashboards",
+          "KPIs",
+          "scorecards",
+          "BI",
+          "consolidação de dados",
+          "controles operacionais",
+          "reporting"
+        ],
+        "evidence": "D",
+        "used_in": [
+          "exp_vanoord",
+          "exp_ctank_analyst",
+          "independent projects"
+        ],
+        "used_in_to_validate": [
+          "exp_vanoord",
+          "exp_ctank_analyst"
+        ],
+        "domain_tags": [
+          "planning_data_performance",
+          "quality_management_systems"
+        ],
+        "cv_default": true
+      },
+      "sw_power_bi": {
+        "name": "Microsoft Power BI",
+        "type": "Business Intelligence / dashboards",
+        "status": "used/proven",
+        "use_cases": [
+          "dashboards",
+          "KPI visualization",
+          "análise/consolidação de dados"
+        ],
+        "evidence": "DP",
+        "used_in": [
+          "career data/BI work and CV evidence; exact employer-specific use is not uniquely documented"
+        ],
+        "used_in_to_validate": [
+          "exp_professional_development",
+          "exp_vanoord"
+        ],
+        "domain_tags": [
+          "planning_data_performance",
+          "quality_management_systems"
+        ],
+        "cv_default": true
+      },
+      "sw_powerpoint": {
+        "name": "Microsoft PowerPoint",
+        "type": "Presentation / management reporting",
+        "status": "strong/proven",
+        "level": "Avançado",
+        "use_cases": [
+          "reportes gerenciais",
+          "apresentações corporativas"
+        ],
+        "evidence": "D",
+        "used_in": [
+          "exp_vanoord — management/client reporting"
+        ],
+        "used_in_to_validate": [
+          "exp_vanoord"
+        ],
+        "domain_tags": [
+          "planning_data_performance",
+          "quality_management_systems"
+        ],
+        "cv_default": true
+      }
+    }
+  }
+}

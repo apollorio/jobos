@@ -1,0 +1,33 @@
+{
+  "_part": {
+    "id": "08_dev_environment/workstation_toolchain",
+    "title": "Ambiente de desenvolvimento observado (toolchain da estação)",
+    "updated": "2026-11-19",
+    "sources": ["src_workstation_scan_2026_11_19"],
+    "notes": "Leitura somente de PATH, nomes de extensões e nomes de pastas. Nenhum arquivo de credencial foi lido. 'Instalado' prova exposição, não proficiência."
+  },
+  "data": {
+    "os": "Windows 11 (com WSL disponível)",
+    "runtimes_languages": [
+      {"name": "Python 3.12", "evidence": "O", "used_in": ["proj_jobos", "scripts de auditoria em D:\\dev"]},
+      {"name": "Node.js 24", "evidence": "O", "used_in": ["web-vagas (TypeScript)", "SOS Apollo (npm run registry:check)"]},
+      {"name": "PHP 8.3", "evidence": "O", "used_in": ["proj_apollo (plugins WordPress)", "apollo-vagas"]},
+      {"name": "Go", "evidence": "O", "note": "instalado; uso não documentado"},
+      {"name": "Java (pack de extensões VS Code)", "evidence": "O", "note": "uso não documentado"},
+      {"name": "PowerShell", "evidence": "O", "used_in": ["jobOS windows/rodar-ciclo.ps1, agendar-*.ps1"]}
+    ],
+    "editors_ai": ["VS Code", "Cursor", "Claude Code", "Codex", "Cline", "Continue", "Ollama", "Grok", "DeepSeek chat"],
+    "vcs_ci": ["Git", "GitHub CLI", "GitHub Desktop", "GitHub Actions"],
+    "wordpress_php_tooling": ["LocalWP (backup 'aprio to a localwp', extensões LocalWP shells/assistant)", "Intelephense", "PHPStan", "PHPUnit", "PHP CS Fixer", "PHP_CodeSniffer (phpsab)", "Xdebug", "Composer", "WordPress hooks/toolbox/debug-mode", "Elementor / Elementor Pro (lotes de sync em D:\\dev)"],
+    "python_tooling": ["Pylance/Pyright", "Black", "Ruff", "debugpy", "requests", "PyYAML", "python-dateutil", "rapidfuzz", "sqlite3"],
+    "web_tooling": ["ESLint", "Prettier", "Tailwind CSS IntelliSense", "Live Server", "Edge DevTools", "TypeScript (next)"],
+    "infra_networking": ["Cloudflare (cloudflared)", "ngrok", "Fly.io CLI", "rclone", "FTP-simple", "Remote-SSH", "Dev Containers / containers extension", "MySQL client extension"],
+    "media_design": ["FFmpeg 8.x", "Inkscape"],
+    "project_folders_observed": {
+      "sites": ["_apollo.rio.br", "_cv.rvalle.com.br", "_dev.rvalle.com.br", "_livro.rvalle.com.br", "_rafael.rvalle.com.br", "_dev web/_rvalle-site (+ rvalle-site2, v1, cursor, img, __VAGAS, __NORMA, ____json)"],
+      "apollo_plugin_sync_batches": ["a_core", "a_events", "a_login", "a_templates", "apll_mu-plugin", "apollo-events-push", "apollo-login-push", "apolloDJ_INTERFACE", "apollorio_plugins", "___CORE", "___EVENTOS", "___HUB__", "___MAPS__", "___SEO__", "___SOCIAL", "___STATISTICS__", "___TEMPLATES", "___JOURNAL-NEWS__", "___COAUTHOR__", "___event__importer____", "___ELEMENTOR", "___ELEMENTOR-PRO", "S O S", "APRIO CHAT -plugins"],
+      "other": ["_library apollo", "Design System-handoff (apollo.rio).zip", "graphs", "_screen", "_cos", "scripts Python de auditoria de login/SSH/lock do próprio servidor (_tmp_*.py)"]
+    },
+    "claim_rule": "Listar como 'toolchain usado em projetos próprios'. Não transformar instalação em anos de experiência profissional."
+  }
+}

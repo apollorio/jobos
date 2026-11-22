@@ -1,0 +1,177 @@
+{
+  "_part": {
+    "id": "11_truth/truth_boundaries",
+    "title": "Limites de verdade - o que NÃO alegar",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_tree_v1_2026_10_20",
+      "src_offshore_profile_2026_10_07",
+      "src_jobos_profile_yml"
+    ]
+  },
+  "data": {
+    "boundaries": {
+      "nautical_credentials": [
+        "não possui Bacharelado em Ciências Náuticas",
+        "não possui Master Mariner",
+        "não possui CCL/CCB/Comandante",
+        "não possui STCW Management Level",
+        "não possui officer/watchkeeping sea time comprovado",
+        "não possui Barge Supervisor STCW/IMO A.891(21)"
+      ],
+      "tanker_marine_assurance": [
+        "não alegar COW",
+        "não alegar inerting/purging/venting",
+        "não alegar tanker offloading ownership",
+        "não alegar ballast management ownership",
+        "não alegar BWTS ownership",
+        "não alegar ISGOTT expert",
+        "não alegar OCIMF/SIRE ownership",
+        "não alegar ASOG ownership"
+      ],
+      "vessel_technical_management": [
+        "não alegar Class/statutory certificate ownership",
+        "não alegar Flag-state compliance ownership",
+        "não alegar dry-dock manager",
+        "não alegar full PMS ownership",
+        "não alegar fleet CMMS ownership",
+        "não alegar AMOS expertise"
+      ],
+      "engineering_design": [
+        "não alegar FEA specialist",
+        "não alegar Ansys/Orcaflex/Mathcad/SolidWorks expertise",
+        "não alegar HYSYS/process simulation",
+        "não alegar subsea controls engineering",
+        "não alegar pre-FEED/FEED Manager"
+      ],
+      "quality": [
+        "não alegar ISO auditor",
+        "não alegar Lead Auditor",
+        "não alegar 7 anos em Quality",
+        "não alegar Synergi",
+        "não alegar Subsea7 BMS"
+      ],
+      "planning": [
+        "não vender Primavera P6 como experiência profissional"
+      ],
+      "management_tenure": {
+        "wrong": "5+ anos em gerência similar",
+        "correct": "3 anos e 5 meses como Superintendente na Van Oord, mais vivência offshore anterior",
+        "precision_note": "Datas do contrato = 3y3m20d; '3 anos e 5 meses' = span de meses-calendário inclusivo. Ver experience_nodes.exp_vanoord.tenure."
+      },
+      "regulatory_and_management_systems": [
+        "não alegar domínio direto de SGSO/SGIP/SGSS/ANP sem atuação direta",
+        "não alegar ISO 14001/45001 como experiência formal",
+        "não alegar auditoria interna formal nem Auditor Lider",
+        "não alegar Cost of Loss / governança de portfolio de qualidade como experiência"
+      ],
+      "fpso_production_and_commissioning": [
+        "não alegar operação de produção de FPSO",
+        "não alegar commissioning, plant shutdown/turnaround leadership",
+        "não alegar Operations Manager coverage",
+        "não alegar process engineering"
+      ],
+      "supplier_and_local_content_wording": [
+        "não alegar 'local content management'",
+        "usar: coordenacao de fornecedores locais, agentes marítimos, terminais e prestadores de servico em varios portos"
+      ],
+      "digital_skills_positioning": [
+        "SQL = em desenvolvimento (não experiência corporativa)",
+        "Python/TypeScript = projetos pessoais/desenvolvimento",
+        "não posicionar como senior software engineer",
+        "Primavera P6 = em desenvolvimento (não vender como experiência prática)",
+        "BPORT: não descrever funcionalidade ate validar"
+      ],
+      "dismantle_figures": [
+        "usar apenas numeros documentados (165 Shotgun + 250 convites = 415 registrados; 31 entradas Hoppin)",
+        "não extrapolar público total"
+      ],
+      "master_rule": "Absence of a skill/license/system from proven nodes is not permission to infer it. Any mandatory requirement that conflicts with these boundaries must be treated as a real gap.",
+      "management_tenure_canonical": {
+        "claim": "3+ years as Superintendent at Van Oord (Jul 2021 - Nov 2024), plus prior offshore exposure.",
+        "never_claim": "5+ years in a similar management role"
+      },
+      "fps_oil_tanker_canonical": {
+        "has": [
+          "FPSO/OSV support and maintenance-campaign exposure",
+          "offshore logistics/readiness",
+          "drillship environment"
+        ],
+        "does_not_have": [
+          "FPSO production operator ownership",
+          "Master Mariner / Chief Mate credentials",
+          "COW/inerting/ballast/BWTS ownership",
+          "OCIMF/SIRE/ASOG ownership",
+          "Class/Flag/PMS/CMMS ownership"
+        ]
+      }
+    },
+    "master_tree_v1_do_not_claim": {
+      "nautical_licenses": [
+        "Bacharelado em Ciências Náuticas",
+        "Master Mariner",
+        "CCL/CCB/Comandante",
+        "STCW Management Level",
+        "watchkeeping officer sea time",
+        "Barge Supervisor STCW/IMO A.891(21)"
+      ],
+      "tanker_marine_assurance": [
+        "COW",
+        "inerting",
+        "purging/venting",
+        "tanker offloading ownership",
+        "ballast management ownership",
+        "BWTS ownership",
+        "ISGOTT expert",
+        "OCIMF/SIRE ownership",
+        "ASOG ownership"
+      ],
+      "vessel_technical_management": [
+        "Class/statutory certificate owner",
+        "Flag-state compliance owner",
+        "dry-dock manager",
+        "full preventive maintenance system owner",
+        "fleet CMMS owner",
+        "AMOS expertise"
+      ],
+      "engineering_design": [
+        "FEA specialist",
+        "Ansys specialist",
+        "Orcaflex",
+        "Mathcad",
+        "SolidWorks specialist",
+        "HYSYS/process simulation",
+        "subsea controls engineering",
+        "pre-FEED/FEED manager",
+        "Subsea Engineering Manager"
+      ],
+      "quality": [
+        "ISO auditor",
+        "Lead Auditor",
+        "7 years in Quality",
+        "Synergi",
+        "Subsea7 BMS"
+      ],
+      "planning": [
+        "Primavera P6 as hands-on professional experience"
+      ],
+      "management_tenure": {
+        "do_not_claim": "5 years in similar management",
+        "correct_wording": "3 anos e 5 meses como Superintendente na Van Oord, mais vivência offshore anterior."
+      }
+    },
+    "offshore_profile_2026_10_07": [
+      "Não afirmar ownership de certificação estatutária de navios sem evidência específica.",
+      "Não afirmar responsabilidade integral pelo sistema de manutenção preventiva da embarcação sem evidência específica.",
+      "Não afirmar 5 anos em cargo gerencial similar; há mais de 3 anos formais como Superintendente na Van Oord.",
+      "Não afirmar experiência prática em Primavera P6.",
+      "Não transformar preparação ISO 9001 em experiência como auditor ISO."
+    ],
+    "jobos_profile_rules": [
+      "Projetos independentes/voluntários são reais e datados, mas NÃO são emprego remunerado.",
+      "Sem pretensão salarial documentada: nunca inventar."
+    ],
+    "golden_rule": "Absence of a skill/license/system from proven nodes is not permission to infer it. Any mandatory requirement that conflicts with these boundaries must be treated as a real gap."
+  }
+}

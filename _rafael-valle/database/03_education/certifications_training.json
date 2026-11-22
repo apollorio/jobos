@@ -1,0 +1,389 @@
+{
+  "_part": {
+    "id": "03_education/certifications_training",
+    "title": "Certificações e treinamentos (13 nós + idiomas)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723",
+      "src_career_db_v3_2026_03_10",
+      "src_master_tree_v1_2026_10_20",
+      "src_jobos_profile_yml"
+    ]
+  },
+  "data": {
+    "nodes": {
+      "cbsp": {
+        "name": "CBSP",
+        "provider": "West Group Industrial Training",
+        "historical_period": "Jan 2019 - Jan 2024",
+        "current_safe_wording": "realizado; reciclagem pendente",
+        "evidence": "D"
+      },
+      "bosiet": {
+        "name": "BOSIET",
+        "historical_valid_until": "2023",
+        "scope": [
+          "firefighting",
+          "maritime first aid",
+          "survival protocols"
+        ],
+        "current_safe_wording": "realizado; reciclagem pendente",
+        "evidence": "D"
+      },
+      "huet": {
+        "name": "HUET",
+        "provider": "RelyOn Nutec",
+        "historical_valid_until": "2022",
+        "current_safe_wording": "realizado; reciclagem pendente",
+        "evidence": "D"
+      },
+      "thuet": {
+        "name": "T-HUET com CA-EBS",
+        "provider": "RelyOn Nutec",
+        "historical_valid_until": "2022",
+        "scope": "escape de aeronave submersa com sistema de respiração",
+        "current_safe_wording": "realizado; reciclagem pendente",
+        "evidence": "D"
+      },
+      "general_dredging": {
+        "name": "General Dredging Course",
+        "scope": "complexidades geotécnicas e equipamentos de dragagem oceânica",
+        "evidence": "D"
+      },
+      "nr17": {
+        "name": "NR-17",
+        "scope": "Ergonomia",
+        "historical_validity": "2024",
+        "evidence": "D"
+      },
+      "nr30": {
+        "name": "NR-30",
+        "scope": "Segurança e Saúde no Trabalho Aquaviário",
+        "status": "realizada",
+        "evidence": "D"
+      },
+      "nr33": {
+        "name": "NR-33",
+        "scope": "Espaços Confinados",
+        "provider": "C-Tank",
+        "hours": 40,
+        "historical_validity": "2024",
+        "evidence": "D"
+      },
+      "nr34": {
+        "name": "NR-34",
+        "scope": "Construção, Reparação e Desmonte Naval",
+        "provider": "C-Tank",
+        "evidence": "D"
+      },
+      "nr35": {
+        "name": "NR-35",
+        "scope": "Trabalho em Altura",
+        "historical_validity": "2024",
+        "evidence": "D"
+      },
+      "ms_project_course": {
+        "name": "MS Project",
+        "provider": "Udemy",
+        "date": "Abr/2019",
+        "evidence": "D"
+      },
+      "pcp_course": {
+        "name": "Planejamento e Controle da Produção",
+        "provider": "West Group",
+        "date": "Abr/2019",
+        "evidence": "D"
+      },
+      "webdesigner": {
+        "name": "WebDesigner",
+        "provider": "Microlins Franchising",
+        "date": "Fev/2011",
+        "evidence": "D"
+      }
+    },
+    "historical_260723": {
+      "offshore_survival_and_safety": [
+        {
+          "name": "CBSP (Curso Básico de Segurança de Plataforma / Salvatagem)",
+          "provider": "West Group Industrial Training",
+          "period": "Jan 2019 – Jan 2024"
+        },
+        {
+          "name": "BOSIET (Basic Offshore Safety Induction and Emergency Training)",
+          "valid_until": "2023",
+          "scope": {
+            "pt": "Combate a incêndios, primeiros socorros marítimos, protocolos de sobrevivência",
+            "en": "Firefighting, maritime first aid, survival protocols"
+          }
+        },
+        {
+          "name": "HUET (Helicopter Underwater Escape Training)",
+          "provider": "RelyOn Nutec",
+          "valid_until": "2022"
+        },
+        {
+          "name": "T-HUET (Tropical HUET) com CA-EBS",
+          "provider": "RelyOn Nutec",
+          "valid_until": "2022",
+          "scope": {
+            "pt": "Escape de aeronave submersa com sistema de respiração de ar comprimido",
+            "en": "Submerged aircraft escape with compressed-air breathing system"
+          }
+        },
+        {
+          "name": "General Dredging Course",
+          "scope": {
+            "pt": "Complexidades geotécnicas e equipamentos pesados de dragagem oceânica",
+            "en": "Geotechnical complexities and heavy offshore dredging equipment"
+          }
+        }
+      ],
+      "regulatory_nrs": [
+        {
+          "name": "NR-17 (Ergonomia)",
+          "valid_until": "2024"
+        },
+        {
+          "name": "NR-30 (Segurança e Saúde no Trabalho Aquaviário)",
+          "status": {
+            "pt": "Realizada",
+            "en": "Completed"
+          }
+        },
+        {
+          "name": "NR-33 (Espaços Confinados)",
+          "provider": "C-Tank",
+          "hours": 40,
+          "valid_until": "2024"
+        },
+        {
+          "name": "NR-34 (Construção, Reparação e Desmonte Naval)",
+          "provider": "C-Tank"
+        },
+        {
+          "name": "NR-35 (Trabalho em Altura)",
+          "valid_until": "2024"
+        }
+      ],
+      "recycling_note": {
+        "pt": "A maioria das NRs necessita apenas de reciclagem rápida (quick refresh) para revalidação.",
+        "en": "Most NRs only require a quick refresh course for revalidation."
+      },
+      "tools_and_software": [
+        {
+          "name": "MS Project",
+          "provider": "Udemy",
+          "date": "Abril 2019",
+          "level": {
+            "pt": "Avançado",
+            "en": "Advanced"
+          }
+        },
+        {
+          "name": "Primavera P6",
+          "level": {
+            "pt": "Em desenvolvimento",
+            "en": "Currently developing"
+          }
+        },
+        {
+          "name": "Excel Avançado",
+          "level": {
+            "pt": "Avançado — dashboards, KPIs, scorecards, BI",
+            "en": "Advanced — dashboards, KPIs, scorecards, BI"
+          }
+        },
+        {
+          "name": "PowerPoint",
+          "level": {
+            "pt": "Avançado — reportes gerenciais e apresentações corporativas",
+            "en": "Advanced — management reporting and corporate presentations"
+          }
+        },
+        {
+          "name": "Planejamento e Controle da Produção (PCP)",
+          "provider": "West Group",
+          "date": "Abril 2019"
+        }
+      ],
+      "systems_petrobras": [
+        {
+          "name": "Drake (Sapiensia/Petrobras)",
+          "scope": {
+            "pt": "Matriz de qualificação, compliance, agendamento aéreo, timesheets, provisionamento logístico, POB",
+            "en": "Qualification matrix, compliance, air scheduling, timesheets, logistics provisioning, POB"
+          }
+        },
+        {
+          "name": "SAP RT (Petrobras)",
+          "scope": {
+            "pt": "Gestão de transportes de pessoal (PHTD), logística offshore",
+            "en": "Personnel transport management (PHTD), offshore logistics"
+          }
+        }
+      ],
+      "other": [
+        {
+          "name": "WebDesigner",
+          "provider": "Microlins Franchising",
+          "date": "Fev 2011"
+        }
+      ]
+    },
+    "career_db_v3": {
+      "offshore_survival_and_safety": [
+        {
+          "name": "CBSP (Curso Básico de Segurança de Plataforma / Salvatagem)",
+          "provider": "West Group Industrial Training",
+          "period": "Jan 2019 – Jan 2024"
+        },
+        {
+          "name": "BOSIET (Basic Offshore Safety Induction and Emergency Training)",
+          "valid_until": "2023",
+          "scope": "Combate a incêndios, primeiros socorros marítimos, protocolos de sobrevivência"
+        },
+        {
+          "name": "HUET (Helicopter Underwater Escape Training)",
+          "provider": "RelyOn Nutec",
+          "valid_until": "2022"
+        },
+        {
+          "name": "T-HUET (Tropical HUET) com CA-EBS",
+          "provider": "RelyOn Nutec",
+          "valid_until": "2022",
+          "scope": "Escape de aeronave submersa com sistema de respiração de ar comprimido"
+        },
+        {
+          "name": "General Dredging Course",
+          "scope": "Complexidades geotécnicas e equipamentos pesados de dragagem oceânica"
+        }
+      ],
+      "regulatory_nrs": [
+        {
+          "name": "NR-17 (Ergonomia)",
+          "valid_until": "2024"
+        },
+        {
+          "name": "NR-30 (Segurança e Saúde no Trabalho Aquaviário)",
+          "status": "Realizada"
+        },
+        {
+          "name": "NR-33 (Espaços Confinados)",
+          "provider": "C-Tank",
+          "hours": 40,
+          "valid_until": "2024"
+        },
+        {
+          "name": "NR-34 (Construção, Reparação e Desmonte Naval)",
+          "provider": "C-Tank"
+        },
+        {
+          "name": "NR-35 (Trabalho em Altura)",
+          "valid_until": "2024"
+        }
+      ],
+      "recycling_note": "Maioria das NRs necessita apenas reciclagem rápida (quick refresh) para revalidação.",
+      "tools_and_software": [
+        {
+          "name": "MS Project",
+          "provider": "Udemy",
+          "date": "Abril 2019",
+          "level": "Avançado"
+        },
+        {
+          "name": "Primavera P6",
+          "level": "Em desenvolvimento"
+        },
+        {
+          "name": "Excel Avançado",
+          "level": "Avançado — dashboards, KPIs, scorecards, BI"
+        },
+        {
+          "name": "PowerPoint",
+          "level": "Avançado — reportes gerenciais e apresentações corporativas"
+        },
+        {
+          "name": "Planejamento e Controle da Produção (PCP)",
+          "provider": "West Group",
+          "date": "Abril 2019"
+        }
+      ],
+      "systems_petrobras": [
+        {
+          "name": "Drake (Sapiensia/Petrobras)",
+          "scope": "Matriz de qualificação, compliance, agendamento aéreo, timesheets, provisionamento logístico, POB"
+        },
+        {
+          "name": "SAP RT (Petrobras)",
+          "scope": "Gestão de transportes pessoal PHTD, logística offshore"
+        }
+      ],
+      "other": [
+        {
+          "name": "WebDesigner",
+          "provider": "Microlins Franchising",
+          "date": "Fev 2011"
+        }
+      ]
+    },
+    "master_tree_v1": {
+      "offshore": [
+        {
+          "name": "CBSP",
+          "status": "Realizado; reciclagem pendente"
+        },
+        {
+          "name": "BOSIET",
+          "status": "Realizado; reciclagem pendente"
+        },
+        {
+          "name": "HUET / T-HUET",
+          "status": "Realizado; reciclagem pendente"
+        }
+      ],
+      "safety": [
+        "NR-30",
+        "NR-33",
+        "NR-34",
+        "NR-35"
+      ],
+      "technical": [
+        "General Dredging Course",
+        "PCP",
+        "MS Project"
+      ]
+    },
+    "current_validity_summary": {
+      "expired_or_renewal_pending": [
+        "cbsp (último válido Jan/2024)",
+        "bosiet (2023)",
+        "huet (2022)",
+        "thuet (2022)",
+        "nr17 (2024)",
+        "nr33 (2024)",
+        "nr35 (2024)"
+      ],
+      "no_expiry_stated": [
+        "nr30",
+        "nr34",
+        "general_dredging",
+        "ms_project_course",
+        "pcp_course",
+        "webdesigner"
+      ],
+      "rule": "Dizer 'realizado; reciclagem pendente'. Vagas que exigem CBSP/BOSIET/HUET/NR válidos = gap RENOVÁVEL (não eliminatório de perfil, mas exige reciclagem antes do embarque).",
+      "recycling_note": {
+        "pt": "A maioria das NRs necessita apenas de reciclagem rápida (quick refresh) para revalidação.",
+        "en": "Most NRs only require a quick refresh course for revalidation."
+      }
+    },
+    "not_held": [
+      "PMP (aplicação em preparação; 586 dias verificados)",
+      "STCW (qualquer nível)",
+      "GWO",
+      "Lead Auditor ISO",
+      "Primavera P6 certificação"
+    ]
+  }
+}

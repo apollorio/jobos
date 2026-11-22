@@ -1,0 +1,149 @@
+{
+  "name": "RAFAEL PERINI VALLE",
+  "subtitle": "OFFSHORE ENGINEERING & PROJECT DELIVERY LEAD",
+  "tagline": "Multidisciplinary Coordination · Scope & Change Control · HSSEA · Technical Assurance · Stakeholder Management",
+  "contact": {
+    "location": "Rio de Janeiro – RJ, Brazil",
+    "email": "rafapevalle@gmail.com",
+    "phone": "+55 (21) 97955-4496",
+    "linkedin": "https://www.linkedin.com/in/rpvalle",
+    "linkedinLabel": "linkedin.com/in/rpvalle"
+  },
+  "sections": [
+    {
+      "title": "Professional Summary",
+      "type": "bullets",
+      "bullets": [
+        "Offshore engineering and project-delivery professional with 4+ years coordinating multidisciplinary execution, technical interfaces, contractors, suppliers, clients and international management in O&G and marine projects.",
+        "3y5m as Marine Operations Superintendent with responsibility for project execution, planning, technical documentation, team coordination, scope interfaces, deviations, corrective actions, measurements, costs and client reporting across multiple Brazilian projects.",
+        "Strong project-governance and HSSEA background: risk assessment, procedures, incident investigation, emergency response, quality/process controls, change/deviation management, performance reporting and continuous improvement.",
+        "Civil Engineer (active CREA) with postgraduate qualifications in Naval & Offshore Construction Engineering and Occupational Safety Engineering, plus an MBA in Project Management; fluent Portuguese and English."
+      ]
+    },
+    {
+      "title": "Core Expertise",
+      "type": "text",
+      "content": "Engineering Project Delivery · Multidisciplinary Team Coordination · Technical Interfaces · Scope Management · Change / Deviation Control · Technical Documentation · Project Controls · Schedule & Forecasting · Cost & Measurement Control · Contractor / Supplier Management · HSSEA / QHSE · Quality Management Systems · Risk Assessment · Corrective Actions · Stakeholder Management · Client Reporting · Operational Procedures · Offshore / Marine Execution"
+    },
+    {
+      "title": "Professional Experience",
+      "type": "entries",
+      "lead": {
+        "title": "Professional Development & Independent Projects (Nov 2024–Present)",
+        "body": "Career-development period focused on project controls, data, dashboards and automation while completing postgraduate studies in Occupational Safety Engineering. Continued leading independent projects involving scope definition, supplier coordination, contracts, schedules, budgets and delivery. Immediately available for full-time return."
+      },
+      "entries": [
+        {
+          "role": "Marine Operations Superintendent (Engineering Interfaces & Project Delivery)",
+          "company": "Van Oord",
+          "location": "Rio de Janeiro / Brazilian coast",
+          "period": "Jul 2021 – Nov 2024",
+          "bullets": [
+            "Led day-to-day project execution and multidisciplinary interfaces across multiple Brazilian projects, coordinating vessel teams, survey, QHSE, terminals, suppliers, contractors, clients and international project management.",
+            "Managed execution scope, operational and technical interfaces, schedules, critical activities and 15-day forecasts; identified deviations and drove corrective/recovery actions to maintain safe and efficient delivery.",
+            "Originated and maintained technical and project-control documentation, including procedures, monthly/weekly reports, S-curves, look-ahead planning and execution records used for client and management reporting.",
+            "Supported change, claims, measurements and cost-control processes by validating physical progress and execution evidence through production, survey/bathymetry, availability and performance data.",
+            "Promoted HSSEA/QHSE performance through risk assessments, procedures, toolbox/LMRA practices, emergency response, incident investigation and root-cause/corrective-action follow-up under NORMAM/IMO/ISM/SOLAS/MARPOL requirements."
+          ]
+        },
+        {
+          "role": "Operations Analyst (Offshore Project Controls & Contractor Coordination)",
+          "company": "C-Tank",
+          "location": "Niterói – RJ, Brazil",
+          "period": "Oct 2020 – Jun 2021",
+          "bullets": [
+            "Planned and monitored offshore maintenance and cleaning campaigns supporting OSVs and FPSOs, coordinating scope, crews, materials, deadlines, readiness and daily execution follow-up.",
+            "Coordinated contractor and client interfaces for Shell, Transocean and Helix, supporting deliverables, mobilisation, measurement validation, costs and contract-control records.",
+            "Prepared DPR/RDO reporting and consolidated operational data; used Petrobras Drake/SAP RT for personnel, compliance and logistics controls.",
+            "Mapped processes and helped develop procedures and document-control rules for ISO 9000 implementation, strengthening quality management, traceability and standardisation."
+          ]
+        },
+        {
+          "role": "Senior Operations Assistant",
+          "company": "C-Tank",
+          "location": "Niterói – RJ, Brazil",
+          "period": "Jul 2020 – Oct 2020",
+          "bullets": [
+            "Supported contractor mobilisation, documentation, transport/service requests, logistics controls and Petrobras DRAKE credentialing for Tier-1 offshore clients."
+          ]
+        },
+        {
+          "role": "Offshore Technical-English Instructor / Technical Communication Support",
+          "company": "Toolvox",
+          "location": "Pre-salt drillships (NS-43, NS-51)",
+          "period": "Dec 2018 – May 2020",
+          "bullets": [
+            "Spent 18 months onboard ultra-deepwater pre-salt drillships supporting technical, safety and operational communication, SOP translation and integration across multinational offshore teams."
+          ]
+        },
+        {
+          "role": "Engineering Research Intern (International)",
+          "company": "NTUA (Athens) & BAM (Berlin)",
+          "location": "",
+          "period": "2015 & 2018",
+          "bullets": [
+            "Performed international engineering research involving testing, technical analysis, structured data collection, reporting and multidisciplinary collaboration."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Education",
+      "type": "lines",
+      "lines": [
+        "Postgraduate: Naval & Offshore Construction Engineering, UCP (2022–2023)",
+        "Postgraduate: Occupational Safety Engineering, Cruzeiro do Sul (2024–2025)",
+        "MBA: Project Management (PMBOK), USP / ESALQ (2019–2020)",
+        "BSc: Civil Engineering, UNIVIX / Multivix (2013–2018)",
+        "Technical Degree: Ports, IFES (2018–2019)"
+      ]
+    },
+    {
+      "title": "Certifications & Training",
+      "type": "bullets",
+      "bullets": [
+        "MBA in Project Management (PMBOK), USP/ESALQ · Production Planning & Control (PCP), West Group.",
+        "MS Project training · Advanced Excel dashboards · Power BI.",
+        "Offshore safety training background: CBSP, BOSIET, HUET/T-HUET · NR-33/34/35/17/30 · General Dredging Course."
+      ]
+    },
+    {
+      "title": "Tools & Systems",
+      "type": "bullets",
+      "bullets": [
+        "Project Delivery & Controls: MS Project, PCP, S-curves, look-ahead planning, forecasting, progress / deviation tracking",
+        "Technical & Management Reporting: monthly/weekly reporting, KPIs, dashboards, DPR/RDO, client reporting",
+        "Data & BI: Advanced Excel, Power BI, structured data analysis",
+        "Petrobras Systems: Drake / SAP RT",
+        "Management Systems: PMBOK, process mapping, ISO 9000 implementation support",
+        "Digital / Data Development: SQL, Python, JSON and workflow automation (active development)"
+      ]
+    },
+    {
+      "title": "Selected Leadership & Delivery Highlights",
+      "type": "bullets",
+      "bullets": [
+        "Coordinated multidisciplinary project interfaces across vessels, engineering/survey, QHSE, contractors, suppliers, terminals and clients in dynamic execution environments.",
+        "Worked directly with international management and multicultural offshore teams, balancing schedule, safety, technical constraints and client requirements.",
+        "Originator of project procedures and management reports, with responsibility for execution records, performance data and technical/operational alignment.",
+        "Managed operational problems requiring rapid decision-making, additional surveys, equipment/data validation and recovery planning to protect project performance."
+      ]
+    },
+    {
+      "title": "Publication",
+      "type": "text",
+      "content": "Author of \"Technical English for Ports & Offshore\" (ISBN 978-65-00-04579-6, 2020; 3,000+ copies sold)."
+    },
+    {
+      "title": "Additional Information",
+      "type": "bullets",
+      "bullets": [
+        "Active CREA registration.",
+        "Fluent Portuguese and English; extensive interaction with international project management and multinational offshore teams.",
+        "Strong Brazilian offshore/O&G context with supplier, contractor, client and Petrobras-system exposure.",
+        "Based in Rio de Janeiro; immediately available for hybrid work, travel, site and offshore assignments.",
+        "Brazilian and Italian passports valid through 2027; Category B driver's license."
+      ]
+    }
+  ]
+}

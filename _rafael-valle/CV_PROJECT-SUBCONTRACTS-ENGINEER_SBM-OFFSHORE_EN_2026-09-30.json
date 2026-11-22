@@ -1,0 +1,139 @@
+{
+  "name": "RAFAEL PERINI VALLE",
+  "subtitle": "PROJECT SUBCONTRACTS / CONTRACTS ENGINEER",
+  "tagline": "Subcontracts · Contractors & Vendors · Claims · Cost & Measurement Control · Offshore Projects",
+  "contact": {
+    "location": "Rio de Janeiro – RJ, Brazil",
+    "email": "rafapevalle@gmail.com",
+    "phone": "+55 (21) 97955-4496",
+    "linkedin": "https://www.linkedin.com/in/rpvalle",
+    "linkedinLabel": "linkedin.com/in/rpvalle"
+  },
+  "sections": [
+    {
+      "title": "Professional Summary",
+      "type": "bullets",
+      "bullets": [
+        "Contracts- and subcontract-focused engineer with 4+ years supporting offshore/marine projects through contractor, supplier and service-provider interfaces in Brazil.",
+        "Hands-on experience with scope and service interfaces, supplier follow-up, measurements, cost control, claims, project orders and contract deliverables across multi-stakeholder projects.",
+        "3y5m as Marine Operations Superintendent, coordinating third parties, validating execution progress, monitoring deviations and supporting corrective actions, commercial records and project reporting.",
+        "MBA in Project Management with strong offshore/O&G exposure, Petrobras Drake/SAP RT experience, Advanced Excel/Power BI and fluent Portuguese/English for international contractor and client interfaces."
+      ]
+    },
+    {
+      "title": "Core Expertise",
+      "type": "text",
+      "content": "Subcontract Administration · Contractor & Vendor Management · Contract Deliverables · Scope Interfaces · Claims & Change Control · Measurements & Cost Control · Supplier Follow-up · Project Orders / PO-LPO Interfaces · Progress Validation · Commercial & Technical Documentation · Contractual Correspondence · Risk & Deviation Follow-up · Offshore Procurement Support · Contract Close-out Support · Stakeholder Coordination · Reporting & KPIs"
+    },
+    {
+      "title": "Professional Experience",
+      "type": "entries",
+      "lead": {
+        "title": "Professional Development & Independent Projects (Nov 2024–Present)",
+        "body": "Career-development period focused on project controls, data handling, dashboards, SQL/Python and automation, while completing postgraduate studies in Occupational Safety Engineering. Also managed contracts, suppliers, scope, payments and delivery interfaces in independent projects. Immediately available for full-time return."
+      },
+      "entries": [
+        {
+          "role": "Marine Operations Superintendent (Subcontracts, Cost & Project Interfaces)",
+          "company": "Van Oord",
+          "location": "Rio de Janeiro / Brazilian coast",
+          "period": "Jul 2021 – Nov 2024",
+          "bullets": [
+            "Managed day-to-day interfaces with contractors, local suppliers, maritime agents, terminals and service providers across multiple projects, ensuring alignment between contracted scope, operational requirements and execution priorities.",
+            "Controlled service and scope interfaces, measurements, project costs, claims and supporting records, following execution status and escalating deviations requiring corrective or commercial action.",
+            "Validated physical progress and operational evidence through production, survey/bathymetry and performance data, supporting measurement discussions, client reporting and project-control records.",
+            "Coordinated procurement and service needs including materials, bunkering, waste handling, crew-change support and third-party services, with follow-up on availability, readiness, delivery and documentation.",
+            "Maintained structured project reporting, 15-day forecasts, change/deviation follow-up and stakeholder alignment with clients, suppliers, project management and international leadership."
+          ]
+        },
+        {
+          "role": "Operations Analyst (Contract Control & Offshore Project Support)",
+          "company": "C-Tank",
+          "location": "Niterói – RJ, Brazil",
+          "period": "Oct 2020 – Jun 2021",
+          "bullets": [
+            "Supported contract administration for offshore maintenance and cleaning campaigns involving OSVs and FPSO support, tracking deliverables, personnel/material readiness, measurements and costs.",
+            "Coordinated contractor and supplier interfaces for Shell, Transocean and Helix, following mobilisation requirements, service execution, documentation and operational compliance.",
+            "Supported measurement validation, cost tracking, DPR/RDO records and contractual deliverable control, using Petrobras Drake/SAP RT for personnel and logistics compliance.",
+            "Mapped internal processes and helped prepare procedures and document-control rules for ISO 9000 implementation, improving traceability and standardisation of operational records."
+          ]
+        },
+        {
+          "role": "Senior Operations Assistant (Procurement & Contractor Support)",
+          "company": "C-Tank",
+          "location": "Niterói – RJ, Brazil",
+          "period": "Jul 2020 – Oct 2020",
+          "bullets": [
+            "Supported contractor mobilisation, transport and service requests, documentation, supplier/operations follow-up and Petrobras DRAKE credentialing for Tier-1 clients."
+          ]
+        },
+        {
+          "role": "Offshore Technical-English Instructor / Communication Bridge",
+          "company": "Toolvox",
+          "location": "Pre-salt drillships (NS-43, NS-51)",
+          "period": "Dec 2018 – May 2020",
+          "bullets": [
+            "Spent 18 months onboard ultra-deepwater pre-salt drillships, translating SOPs and supporting clear technical and contractual communication across multinational offshore teams."
+          ]
+        },
+        {
+          "role": "Engineering Research Intern (International)",
+          "company": "NTUA (Athens) & BAM (Berlin)",
+          "location": "",
+          "period": "2015 & 2018",
+          "bullets": [
+            "International engineering research involving technical documentation, structured data analysis and multidisciplinary coordination."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Education",
+      "type": "lines",
+      "lines": [
+        "MBA: Project Management (PMBOK), USP / ESALQ (2019–2020)",
+        "Postgraduate: Naval & Offshore Construction Engineering, UCP (2022–2023)",
+        "Postgraduate: Occupational Safety Engineering, Cruzeiro do Sul (2024–2025)",
+        "BSc: Civil Engineering, UNIVIX / Multivix (2013–2018)",
+        "Technical Degree: Ports, IFES (2018–2019)"
+      ]
+    },
+    {
+      "title": "Certifications & Training",
+      "type": "bullets",
+      "bullets": [
+        "MBA in Project Management (PMBOK), USP/ESALQ · Production Planning & Control (PCP), West Group.",
+        "MS Project training · Advanced Excel dashboards · Power BI.",
+        "Offshore safety training background: CBSP, BOSIET, HUET/T-HUET · NR-33/34/35/17/30 · General Dredging Course."
+      ]
+    },
+    {
+      "title": "Tools & Systems",
+      "type": "bullets",
+      "bullets": [
+        "Contract / Project Control: measurements, costs, claims, change/deviation follow-up, project orders and deliverable tracking",
+        "Planning & Reporting: MS Project, PCP, 15-day forecasting, DPR/RDO, management reporting",
+        "Data & BI: Advanced Excel, Power BI, dashboards, data consolidation",
+        "Petrobras Systems: Drake / SAP RT",
+        "Data & Automation: SQL, Python, JSON and workflow automation (active development)",
+        "Management Systems: PMBOK, process mapping, ISO 9000 implementation support"
+      ]
+    },
+    {
+      "title": "Publication",
+      "type": "text",
+      "content": "Author of \"Technical English for Ports & Offshore\" (ISBN 978-65-00-04579-6, 2020; 3,000+ copies sold)."
+    },
+    {
+      "title": "Additional Information",
+      "type": "bullets",
+      "bullets": [
+        "Active CREA registration; MBA in Project Management with engineering specialization in Naval & Offshore Construction.",
+        "Fluent Portuguese and English; experienced in international client, contractor and supplier interfaces.",
+        "Brazilian O&G/offshore environment exposure with Petrobras systems and direct coordination of local suppliers and service providers.",
+        "Based in Rio de Janeiro; immediately available for project, site and offshore assignments.",
+        "Brazilian and Italian passports valid through 2027; Category B driver's license."
+      ]
+    }
+  ]
+}

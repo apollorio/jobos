@@ -1,0 +1,272 @@
+{
+  "_part": {
+    "id": "11_truth/evidence_catalog",
+    "title": "Catálogo de evidências documentais",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "van_oord_formal": [
+      {
+        "name": "210612 RAFAEL VALLE - Contrato de Trabalho Van Oord.pdf",
+        "facts": [
+          "contract start 12/07/2021",
+          "termination 01/11/2024",
+          "formal role Superintendent 1",
+          "business area PROJETOS",
+          "work across different locations / project rotations"
+        ],
+        "evidence": "D"
+      },
+      {
+        "name": "OS - RAFAEL PERINI VALLE.pdf",
+        "facts": [
+          "Superintendent 1",
+          "Departamento Projetos",
+          "objective: acompanhar e controlar andamento da execução dos projetos",
+          "planning/cost/supplier/team/production/equipment/logistics/documentation responsibilities"
+        ],
+        "evidence": "D"
+      },
+      {
+        "name": "35.4264-VOSOM-G-PR-0015 - Plough Installation Plan",
+        "facts": [
+          "BFT = Rafael",
+          "BFT appears as Originator",
+          "superintendent responsible for operation/TBT/LMRA"
+        ],
+        "evidence": "D"
+      },
+      {
+        "name": "35.4449-VOSOM-MR-2310 Relatório Mensal Outubro 2023",
+        "facts": [
+          "BFT appears in VO Origem on first issuance",
+          "equipment/team/activities/physical progress/measurement/waste/QHSE structure"
+        ],
+        "evidence": "D"
+      },
+      {
+        "name": "Exporting plough logfile.docx",
+        "facts": [
+          "step-by-step vessel logfile process"
+        ],
+        "evidence": "D"
+      }
+    ],
+    "van_oord_email_evidence": {
+      "Ternium_35.4264": [
+        {
+          "id": "17b0d88369922658",
+          "date": "2021-08-03",
+          "topic": "supplier onboarding / EPI store Itaguaí"
+        },
+        {
+          "id": "17b15dda5784121a",
+          "date": "2021-08-05",
+          "topic": "dump-box / disposal-area proposal to client"
+        },
+        {
+          "id": "17b3ef9d6e83b79e",
+          "date": "2021-08-13",
+          "topic": "buoy movements / captain communication"
+        },
+        {
+          "id": "17b82ca18970bbde",
+          "date": "2021-08-26",
+          "topic": "survey/bathymetry update / optional bunker"
+        }
+      ],
+      "Porto_Vitoria_35.4269": [
+        {
+          "id": "17dfba7fb86780c7",
+          "date": "2021-12-27",
+          "topic": "BM1 mobilisation measurement"
+        },
+        {
+          "id": "17e26ba6ffbe1b27",
+          "date": "2022-01-04",
+          "topic": "stores / garbage logistics"
+        },
+        {
+          "id": "17e4e68a4cee5782",
+          "date": "2022-01-12",
+          "topic": "waste / INEA"
+        },
+        {
+          "id": "17e979c57de645b5",
+          "date": "2022-01",
+          "topic": "site/vessel photos"
+        },
+        {
+          "id": "17e9755662a81bee",
+          "date": "2022-01",
+          "topic": "site/vessel photos"
+        },
+        {
+          "id": "17ee3a5ece7d6b28",
+          "date": "2022-02-11",
+          "topic": "project flight"
+        }
+      ],
+      "Acu_35.4222": [
+        {
+          "id": "186ec4a3d784e9ff",
+          "date": "2023-03-16",
+          "topic": "buoy movement plan"
+        },
+        {
+          "id": "18e0a7b6aa54fd7f",
+          "date": "2024-03-04",
+          "topic": "consolidated Terminal 01 manoeuvre planning meeting"
+        },
+        {
+          "id": "19003ba83ac4de75",
+          "date": "2024",
+          "topic": "signed May-Jun 2024 timesheet"
+        },
+        {
+          "id": "190035a079afbab9",
+          "date": "2024",
+          "topic": "May-Jun + Apr-May timesheets"
+        },
+        {
+          "id": "190806be1f7471eb",
+          "date": "2024-07",
+          "topic": "Açu/Lelystad certificates"
+        }
+      ],
+      "Itajai_35.4012": [
+        {
+          "id": "18a3c1ddbf2f16fd",
+          "date": "2023-08-07",
+          "topic": "handover; Operations Manual Rev1; supplier contacts"
+        }
+      ],
+      "Porto_Sudeste_35.4449": [
+        {
+          "id": "18b53fdd73a0f129",
+          "date": "2023-10-21",
+          "topic": "survey profiles"
+        },
+        {
+          "id": "18b1f3a0868c2ec7",
+          "date": "2023-10-11",
+          "topic": "bathymetry fuel station"
+        },
+        {
+          "id": "18ae7456decc4fd2",
+          "date": "2023-09-30",
+          "topic": "MEDEVAC drill HAM316 report"
+        },
+        {
+          "id": "18ae74868975ea56",
+          "date": "2023-09-30",
+          "topic": "forwarded MEDEVAC drill report"
+        }
+      ],
+      "Rio_Grande_35.4458": [
+        {
+          "id": "191582c59f5a25f8",
+          "date": "2024-08-15",
+          "topic": "survey boat GALERA DO MAR inspection / QHSE attachment"
+        },
+        {
+          "id": "1918fbbc00a2cce7",
+          "date": "2024-08-26",
+          "topic": "project flight 20/09"
+        },
+        {
+          "id": "191ccba545505611",
+          "date": "2024-09-07",
+          "topic": "vessel arrival instructions"
+        },
+        {
+          "id": "192fe026aee8f3b5",
+          "date": "2024-11-05",
+          "topic": "final Sep-Oct timesheet"
+        }
+      ]
+    },
+    "signed_timesheets": [
+      {
+        "name": "5 Timesheet Projetos - Valle 24apr-may.pdf",
+        "facts": [
+          "Açu Port X Apr 16-28 = 13 days",
+          "Rio Office = 10 days",
+          "signed Rafael + PM",
+          "returned 5 days early from leave"
+        ],
+        "evidence": "D"
+      },
+      {
+        "name": "6 Timesheet Projetos - Valle 24may-jun (002).pdf",
+        "facts": [
+          "Rio Office = 19 days",
+          "Açu = 0",
+          "supporting Technical Accounts Clerk replacement",
+          "Utrecht shipyard repairs support"
+        ],
+        "evidence": "D"
+      },
+      {
+        "name": "0. Timesheet Projetos - Valle set-oct 2024 (ultima TS).pdf",
+        "facts": [
+          "Rio Grande 35.4458 X Sep 16-22 = 7 days",
+          "signed employee + PM 05/11/2024",
+          "termination 01/11/2024"
+        ],
+        "evidence": "D"
+      }
+    ],
+    "pmp_mapping": {
+      "literal_X_original": 566,
+      "signed_timesheet_days_added": 20,
+      "verified_daily_records_total": 586,
+      "calendar_months_direct_evidence": 32,
+      "rule": "Never convert sheet stated totals into invented dates when literal X evidence is absent."
+    },
+    "dismantle": [
+      {
+        "name": "D#1 - Planejamento Geral.pdf",
+        "facts": [
+          "concept/name documented 24/10/2024",
+          "planning/line-up/timetable",
+          "event 12/04/2025"
+        ]
+      },
+      {
+        "name": "Registro nominal INPI - Dismantle.pdf",
+        "facts": [
+          "Rafael as applicant",
+          "class 41 event/DJ/entertainment"
+        ]
+      },
+      {
+        "name": "signed artist/supplier contracts",
+        "facts": [
+          "Rafael as contracting party",
+          "scope/payment/obligations"
+        ]
+      },
+      {
+        "name": "Shotgun invoice",
+        "facts": [
+          "165 sold tickets",
+          "250 invitations",
+          "415 registered participants",
+          "R$8,225.98 online ticket revenue"
+        ]
+      },
+      {
+        "name": "Hoppin report",
+        "facts": [
+          "31 door entries",
+          "R$21,667 on-site sales",
+          "1,294 bar items"
+        ]
+      }
+    ]
+  }
+}

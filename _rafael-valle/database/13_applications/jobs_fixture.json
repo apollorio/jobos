@@ -1,0 +1,89 @@
+{
+  "_part": {
+    "id": "13_applications/jobs_fixture",
+    "title": "Fixture de teste (5 vagas)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_jobos_fixture_jobs"
+    ]
+  },
+  "data": {
+    "jobs": [
+      {
+        "source": "gupy",
+        "source_id": "gupy:1",
+        "company": "Qualidados",
+        "title": "Pessoa Analista de Planejamento Offshore",
+        "url": "https://qualidados.gupy.io/job/1",
+        "location": "Macaé, Rio de Janeiro",
+        "city": "Macaé",
+        "state": "Rio de Janeiro",
+        "country": "Brasil",
+        "remote_status": "onsite",
+        "date_posted": "2026-08-19",
+        "salary": null,
+        "description": "Atuar com planejamento e controle de cronograma em projetos offshore de óleo e gás. Requisitos: experiência mínima de 5 anos em planejamento, domínio de Primavera P6 e MS Project, controle de custos e curva S. Desejável inglês avançado. Necessário CBSP válido."
+      },
+      {
+        "source": "gupy",
+        "source_id": "gupy:2",
+        "company": "Brava Energia",
+        "title": "Coordenador de Projetos",
+        "url": "https://bravaenergia.gupy.io/job/2",
+        "location": "Rio de Janeiro, Rio de Janeiro",
+        "city": "Rio de Janeiro",
+        "state": "Rio de Janeiro",
+        "country": "Brasil",
+        "remote_status": "hybrid",
+        "date_posted": "2026-08-20",
+        "salary": null,
+        "description": "Coordenar portfólio de projetos de E&P. Requisitos: formação em Engenharia, 8 anos de experiência em gerenciamento de projetos, gestão de contratos e suprimentos, análise de riscos. Inglês avançado. R$ 22.000,00"
+      },
+      {
+        "source": "gupy",
+        "source_id": "gupy:3",
+        "company": "Instituto Infnet",
+        "title": "Trainee em Processos e Projetos Acadêmicos",
+        "url": "https://x.gupy.io/job/3",
+        "location": "Rio de Janeiro, Rio de Janeiro",
+        "city": "Rio de Janeiro",
+        "state": "Rio de Janeiro",
+        "country": "Brasil",
+        "remote_status": "hybrid",
+        "date_posted": "2026-08-19",
+        "salary": null,
+        "description": "Programa de trainee para recém-formados. Bolsa auxílio R$ 2.500,00."
+      },
+      {
+        "source": "greenhouse",
+        "source_id": "greenhouse:x:9",
+        "company": "Startup SP",
+        "title": "Gerente de Projetos de Software",
+        "url": "https://example.com/9",
+        "location": "São Paulo, SP",
+        "city": "São Paulo",
+        "state": "São Paulo",
+        "country": "Brasil",
+        "remote_status": "onsite",
+        "date_posted": "2026-07-01",
+        "salary": null,
+        "description": "Gerente de projetos ágeis, Scrum, Python, SQL. 4 anos de experiência."
+      },
+      {
+        "source": "gupy",
+        "source_id": "gupy:5",
+        "company": "Ocyan",
+        "title": "Engenheiro de Projetos Sênior",
+        "url": "https://ocyan.gupy.io/job/5",
+        "location": "Rio de Janeiro, Rio de Janeiro",
+        "city": "Rio de Janeiro",
+        "state": "Rio de Janeiro",
+        "country": "Brasil",
+        "remote_status": "onsite",
+        "date_posted": "2026-08-20",
+        "salary": null,
+        "description": "Engenharia de projetos para unidades de perfuração. Necessário registro ativo no CREA. Gestão de projetos, comissionamento, gestão de contratos, SMS. 6 anos de experiência. Inglês técnico."
+      }
+    ]
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "_part": {
+    "id": "10_career_strategy/preferences",
+    "title": "Preferências e restrições de busca (usadas pelo matcher)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_kg_v3_2026_10_20",
+      "src_jobos_profile_yml",
+      "src_jobos_vagas_2026_08_26",
+      "src_attachments_inventory_2026_10_22"
+    ],
+    "notes": "Preferências são do Rafael (jobOS profile.yml + master). O matcher as aplica como filtros de preferência, separados dos gaps de qualificação."
+  },
+  "data": {
+    "mobility_master": {
+      "primary_base": "Rio de Janeiro - RJ (Copacabana)",
+      "secondary_base": "Vitória - ES",
+      "availability": "imediata",
+      "notice_period": "imediato (sem vínculo empregatício atual)",
+      "travel_willingness": "sim - viagens a sites/embarcações",
+      "offshore_rotation_willingness": "aberto historicamente; posicionamento atual prioriza onshore/shore-based, embarque ocasional ok",
+      "target_work_mode": "onshore/shore-based (preferido); híbrido ok; embarcado só se validado",
+      "relocation": true
+    },
+    "geography": {
+      "location_scores": {
+        "rio de janeiro": 100,
+        "niteroi": 95,
+        "vitoria": 90,
+        "vila velha": 85,
+        "serra": 85,
+        "espirito santo": 80,
+        "macae": 75,
+        "duque de caxias": 85,
+        "sao goncalo": 85,
+        "itaborai": 75,
+        "angra dos reis": 65,
+        "campos dos goytacazes": 60,
+        "sao joao da barra": 55,
+        "sao paulo": 25
+      },
+      "remote_score": 95,
+      "hybrid_bonus": 0,
+      "eu_eligible": true,
+      "eu_countries": [
+        "netherlands",
+        "nederland",
+        "holland",
+        "belgium",
+        "belgie",
+        "belgique",
+        "luxembourg",
+        "italy",
+        "italia",
+        "portugal",
+        "spain",
+        "espana",
+        "germany",
+        "deutschland",
+        "france",
+        "ireland"
+      ],
+      "eu_score": 70,
+      "unknown_location_score": 60,
+      "min_location_score_for_compatible": 55,
+      "jobos_history": "Vagas em São João da Barra e Macaé foram recusadas em Ago/2026 como 'fora do raio do Rio' quando onsite."
+    },
+    "exclusions": {
+      "company_terms": [
+        "boskalis",
+        "royal boskalis",
+        "deme",
+        "jan de nul",
+        "royal ihc",
+        "van oord",
+        "umi-san",
+        "umi san",
+        "unisan",
+        "uni-san"
+      ],
+      "industry_terms_in_title": [
+        "dragagem",
+        "dredging",
+        "trailing suction hopper"
+      ],
+      "title_terms": [
+        "jovem aprendiz",
+        "vendedor",
+        "call center",
+        "telemarketing",
+        "motorista particular",
+        "auxiliar de limpeza",
+        "estagio de vendas"
+      ],
+      "reason": "Pivot de carreira declarado: sair de dragagem para FPSO/O&G/offshore. Exclusão rígida (não fallback)."
+    },
+    "dream_companies": [
+      "SBM Offshore",
+      "MODEC",
+      "PRIO"
+    ],
+    "priority_companies": [
+      "SBM Offshore",
+      "MODEC",
+      "PRIO",
+      "Petrobras",
+      "Subsea7",
+      "Yinson",
+      "TotalEnergies",
+      "Shell",
+      "Equinor",
+      "Brava Energia",
+      "OceanPact",
+      "DOF",
+      "Bram Offshore",
+      "Transocean",
+      "Saipem",
+      "TechnipFMC",
+      "Ocyan",
+      "Norsul",
+      "Capco",
+      "Wilson Sons",
+      "Oceanica",
+      "Vibra Energia",
+      "Halliburton",
+      "Baker Hughes",
+      "Aker Solutions"
+    ],
+    "seniority": {
+      "level_1_to_7": 5,
+      "floor": 2,
+      "overqualified_above_entry": true,
+      "entry_level_terms": [
+        "estagio",
+        "estagiario",
+        "trainee",
+        "jovem aprendiz",
+        "junior",
+        "jr",
+        "assistente",
+        "auxiliar",
+        "nivel de entrada",
+        "entry level",
+        "graduate program",
+        "aprendiz"
+      ],
+      "too_senior_terms": [
+        "diretor",
+        "director",
+        "vice president",
+        "vp ",
+        "head of",
+        "c-level",
+        "gerente geral",
+        "general manager",
+        "country manager"
+      ]
+    },
+    "freshness": {
+      "max_posting_age_days": 15,
+      "rule": "Vagas com mais de 15 dias = recusa no jobOS; no matcher vira aviso (não afeta compatibilidade)."
+    },
+    "compensation": {
+      "currency": "BRL",
+      "period": "month",
+      "target_brl_month": 10000,
+      "floor_brl_month": null,
+      "evidence": "U",
+      "confirmed": "2026-11-19",
+      "note": "Pretensão informada pelo Rafael: R$ 10.000/mês. Piso não informado. Matcher só gera aviso quando a vaga divulga salário abaixo disso."
+    },
+    "contract_types_ok": [
+      "CLT",
+      "PJ (a avaliar)",
+      "temporário/projeto (a avaliar)"
+    ]
+  }
+}

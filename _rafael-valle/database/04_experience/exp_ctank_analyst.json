@@ -1,0 +1,268 @@
+{
+  "_part": {
+    "id": "04_experience/exp_ctank_analyst",
+    "title": "Experiência: C-Tank",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723",
+      "src_career_db_v3_2026_03_10",
+      "src_master_tree_v1_2026_10_20",
+      "src_offshore_profile_2026_10_07"
+    ]
+  },
+  "data": {
+    "company": "C-Tank",
+    "role": "Analista de Operações",
+    "period": "Out 2020 - Jun 2021",
+    "environment": [
+      "manutenção e limpeza offshore",
+      "FPSOs",
+      "OSVs",
+      "embarcações offshore"
+    ],
+    "operations": [
+      "planejamento/supervisão de campanhas",
+      "definição de equipes",
+      "materiais especializados",
+      "EPIs/EPCs",
+      "mobilização",
+      "transporte terrestre/marítimo",
+      "acesso a bordo",
+      "prontidão",
+      "resíduos",
+      "fornecedores/armadores",
+      "interface em inglês"
+    ],
+    "reporting": [
+      "RDO",
+      "DPR",
+      "avanço físico",
+      "produtividade",
+      "desvios HSE"
+    ],
+    "contract_controls": [
+      "evidências",
+      "entregáveis",
+      "indicadores",
+      "validação de medições",
+      "custos",
+      "comparativos de propostas"
+    ],
+    "systems": [
+      "sw_drake",
+      "sw_sap_rt"
+    ],
+    "petrobras_processes": [
+      "formulários/documentos técnicos",
+      "certificados de tripulantes",
+      "matriz de qualificação/compliance",
+      "agendamento aéreo/logístico PHTD",
+      "POB"
+    ],
+    "clients": [
+      "Shell",
+      "Transocean",
+      "Helix",
+      "ambiente Petrobras"
+    ],
+    "quality_process_improvement": [
+      "mapeamento integral de processos internos",
+      "preparação para ISO 9000/9001 com auditor/consultor terceirizado",
+      "criação de processos documentais",
+      "controle de armazenamento/descarte documental",
+      "rastreabilidade",
+      "sistema de acesso documental para tripulantes",
+      "arquitetura funcional de app interno integrando almoxarifado, RH, financeiro, NF e documentação",
+      "controle de insumos de testes de COVID"
+    ],
+    "evidence": "D",
+    "details_master_tree": [
+      "Planejamento e acompanhamento de campanhas offshore de manutenção e limpeza",
+      "Suporte a FPSOs, OSVs e embarcações de apoio",
+      "Coordenação de equipes, materiais, documentação, fornecedores e logística",
+      "Acompanhamento por DPR/RDO",
+      "Petrobras Drake / SAP RT",
+      "POB, logística de helicóptero e programação de embarque",
+      "Interface com Shell, Transocean, Helix e ambiente Petrobras",
+      "Acompanhamento de custos, medições, entregáveis e prontidão",
+      "Participação direta na preparação da empresa para ISO 9001",
+      "Mapeamento e formalização de processos",
+      "Elaboração de procedimentos",
+      "Regras de controle, armazenamento e descarte documental",
+      "Padronização e rastreabilidade para preparação de auditoria"
+    ],
+    "domain_tags": [
+      "oil_gas_offshore",
+      "maintenance_repairs_asset_readiness",
+      "logistics_materials_suppliers",
+      "quality_management_systems",
+      "project_management_project_controls",
+      "commercial_contract_management"
+    ],
+    "software_refs": [
+      "sw_drake",
+      "sw_sap_rt"
+    ],
+    "software_refs_to_validate": [
+      "sw_excel"
+    ],
+    "metrics_ref": "metrics_register (scope: exp_ctank_analyst)",
+    "source_refs": [
+      "src_master_260723",
+      "src_career_db",
+      "src_marine_cv",
+      "src_master_career_tree_v1"
+    ],
+    "id": "exp_ctank_analyst",
+    "period_iso": {
+      "start": "2020-10",
+      "end": "2021-06"
+    },
+    "narrative_260723_first_person_pt_en": {
+      "order": 2,
+      "role": {
+        "pt": "Analista de Operações Pleno (Planejamento & Acompanhamento Offshore)",
+        "en": "Operations Analyst (Offshore Planning & Monitoring)"
+      },
+      "company": "C-Tank",
+      "location": {
+        "pt": "Niterói, Brasil",
+        "en": "Niterói, Brazil"
+      },
+      "period": "Out 2020 – Jun 2021",
+      "duration": "9 meses",
+      "environment": {
+        "pt": "Manutenção e limpeza de embarcações offshore, OSVs e FPSOs",
+        "en": "Maintenance and cleaning of offshore vessels, OSVs and FPSOs"
+      },
+      "bullets": {
+        "pt": [
+          "Planejei e supervisionei operações de manutenção e limpeza de embarcações offshore e apoio a FPSOs, da definição de equipes e materiais ao acompanhamento técnico da execução.",
+          "Coordenei a mobilização de pessoal e materiais; controlei prazos e prontidão (materiais, resíduos, transporte e acessos), com interface com clientes e fornecedores internacionais.",
+          "Elaborei Relatórios Diários de Operação (RDO/DPR), consolidando avanço físico, produtividade e desvios de HSE.",
+          "Apoiei o controle contratual: organizei evidências, controlei entregáveis, acompanhei indicadores e dei suporte à validação de medições e custos.",
+          "Coordenei a logística end-to-end: equipes, materiais especializados, EPIs/EPCs, transporte terrestre/marítimo e acesso a bordo.",
+          "Fiz interface com fornecedores e armadores internacionais, em inglês.",
+          "Geri contratos offshore e comparativos de propostas."
+        ],
+        "en": [
+          "Planned and supervised maintenance and cleaning operations of offshore vessels and FPSO support, from team/material definition to technical execution follow-up.",
+          "Coordinated personnel and material mobilization; controlled deadlines and readiness (materials, waste, transport and access), interfacing with international clients and suppliers.",
+          "Prepared Daily Progress Reports (DPR/RDO), consolidating physical progress, productivity and HSE deviations.",
+          "Supported contract control: organized evidence, controlled deliverables, tracked indicators and supported measurement/cost validation.",
+          "Coordinated end-to-end logistics: teams, specialized materials, PPE/collective protection equipment, land/sea transport and onboard access.",
+          "Interfaced with international suppliers and shipowners, in English.",
+          "Managed offshore contracts and proposal comparisons."
+        ]
+      },
+      "detail": {
+        "pt": [
+          "Mapeei integralmente os processos internos da empresa.",
+          "Atuei na implementação da certificação ISO 9000 com auditor/consultor terceirizado.",
+          "Criei processos de documentação internos.",
+          "Geri e implementei o controle de insumos de testes de COVID.",
+          "Desenvolvi um sistema de acesso documental para tripulantes, com acesso em dois cliques via RH.",
+          "Concebi o projeto de um aplicativo interno de integração operacional, liderando a arquitetura de processo e a condução funcional da iniciativa (sem atuação em codificação), integrando almoxarifado, RH, financeiro, emissão de notas fiscais e documentação operacional — resultando em acesso a workflows operacionais em dois cliques.",
+          "Geri de forma autônoma e completa os sistemas Drake e RT/SAP RT da Petrobras: preenchi formulários e documentos técnicos, anexei e verifiquei certificados válidos de tripulantes, mantive a matriz de qualificação de compliance, realizei agendamento aéreo e logístico (PHTD) e mantive atualizada a documentação POB (Persons On Board)."
+        ],
+        "en": [
+          "Fully mapped the company's internal processes.",
+          "Supported ISO 9000 certification implementation with a third-party auditor/consultant.",
+          "Created internal documentation processes.",
+          "Managed and implemented COVID testing supply control.",
+          "Developed a crew document-access system with two-click access via HR.",
+          "Conceived an internal operational-integration app project, leading process architecture and functional direction of the initiative (no coding involvement), integrating warehouse, HR, finance, invoicing and operational documentation — resulting in two-click access to operational workflows.",
+          "Fully and autonomously managed Petrobras' Drake and RT/SAP RT systems: filled out technical forms and documents, attached and verified valid crew certificates, maintained the compliance qualification matrix, handled air/logistics scheduling (PHTD), and kept POB (Persons On Board) documentation up to date."
+        ]
+      },
+      "clients_served": [
+        "SHELL",
+        "TRANSOCEAN",
+        "HELIX"
+      ]
+    },
+    "narrative_career_db_v3": {
+      "order": 2,
+      "role": "Analista de Operações Pleno (Planejamento & Acompanhamento Offshore)",
+      "company": "C-Tank",
+      "location": "Niterói, Brasil",
+      "period": "Out 2020 – Jun 2021",
+      "duration": "9 meses",
+      "environment": "Manutenção e limpeza de embarcações offshore, OSVs e FPSOs",
+      "responsibilities": [
+        "Planejamento e supervisão de operações de manutenção e limpeza de embarcações offshore e apoio a FPSOs, desde a definição de equipes e materiais até o acompanhamento técnico da execução.",
+        "Coordenação de mobilização de pessoal e materiais, controle de prazos e prontidão (materiais, resíduos, transporte e acessos), com interface com clientes e fornecedores internacionais.",
+        "Elaboração de Relatórios Diários de Operação (RDO/DPR), consolidação de avanço físico, produtividade e desvios de HSE.",
+        "Suporte ao controle contratual: organização de evidências, controle de entregáveis, acompanhamento de indicadores e suporte à validação de medições e custos.",
+        "Coordenação logística end-to-end: equipes, materiais especializados, EPIs/EPCs, transporte terrestre/marítimo, acesso a bordo.",
+        "Interface com fornecedores e armadores internacionais (em inglês).",
+        "Gestão de contratos offshore e comparativos de propostas."
+      ],
+      "process_innovations": [
+        "Responsável pelo mapeamento completo dos processos internos da empresa.",
+        "Atuação na implementação da certificação ISO 9000 com auditor/consultor terceirizado.",
+        "Responsável pela criação de processos de documentação internos.",
+        "Gestão e implementação de controle de insumos de testes de COVID.",
+        "Responsável pelo desenvolvimento de sistema de acesso documental para tripulantes (2 cliques do RH)."
+      ],
+      "digital_transformation": {
+        "project": "Aplicativo interno de integração operacional",
+        "role_in_project": "Responsável pela concepção do projeto, arquitetura de processo e liderança funcional da iniciativa (sem atuação em codificação)",
+        "integrated_areas": [
+          "Almoxarifado",
+          "RH",
+          "Financeiro",
+          "Emissão de Notas Fiscais",
+          "Documentação operacional"
+        ],
+        "result": "Integração de workflows operacionais com acesso em dois cliques"
+      },
+      "compliance_systems": {
+        "platforms": [
+          "Drake (Petrobras)",
+          "RT / SAP RT (Petrobras)"
+        ],
+        "responsibilities_drake_rt": [
+          "Gestão autônoma e completa dos sistemas Drake e RT da Petrobras.",
+          "Preenchimento de formulários e documentos técnicos.",
+          "Anexação e verificação de certificados válidos para tripulantes.",
+          "Matriz de qualificação de compliance.",
+          "Agendamento aéreo e logístico (PHTD).",
+          "Manutenção de documentação atualizada e vinculada (POB — Persons On Board)."
+        ]
+      },
+      "clients_served": [
+        "SHELL",
+        "TRANSOCEAN",
+        "HELIX"
+      ]
+    },
+    "master_tree_v1_timeline": {
+      "organization": "C-Tank",
+      "role": "Analista de Operações",
+      "period": "Out 2020 - Jun 2021",
+      "details": [
+        "Planejamento e acompanhamento de campanhas offshore de manutenção e limpeza",
+        "Suporte a FPSOs, OSVs e embarcações de apoio",
+        "Coordenação de equipes, materiais, documentação, fornecedores e logística",
+        "Acompanhamento por DPR/RDO",
+        "Petrobras Drake / SAP RT",
+        "POB, logística de helicóptero e programação de embarque",
+        "Interface com Shell, Transocean, Helix e ambiente Petrobras",
+        "Acompanhamento de custos, medições, entregáveis e prontidão",
+        "Participação direta na preparação da empresa para ISO 9001",
+        "Mapeamento e formalização de processos",
+        "Elaboração de procedimentos",
+        "Regras de controle, armazenamento e descarte documental",
+        "Padronização e rastreabilidade para preparação de auditoria"
+      ]
+    },
+    "confirmed_2026_10_07": [
+      "Suporte a campanhas de manutenção/limpeza em FPSO e OSV.",
+      "DPR/RDO e Petrobras Drake/SAP RT.",
+      "Interfaces com Shell, Transocean, Helix e ambiente Petrobras.",
+      "Mapeamento de processos, procedimentos e controle documental para preparação ISO 9001."
+    ]
+  }
+}

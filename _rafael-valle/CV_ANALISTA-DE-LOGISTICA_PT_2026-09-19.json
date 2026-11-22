@@ -1,0 +1,137 @@
+{
+  "name": "RAFAEL PERINI VALLE",
+  "subtitle": "ANALISTA DE LOGÍSTICA",
+  "tagline": "Logística Offshore · Materiais & Mobilização · Fornecedores · Transporte · Dados & KPIs",
+  "contact": {
+    "location": "Rio de Janeiro – RJ, Brasil",
+    "email": "rafapevalle@gmail.com",
+    "phone": "+55 (21) 97955-4496",
+    "linkedin": "https://www.linkedin.com/in/rpvalle",
+    "linkedinLabel": "linkedin.com/in/rpvalle"
+  },
+  "sections": [
+    {
+      "title": "Resumo Profissional",
+      "type": "bullets",
+      "bullets": [
+        "Analista de Logística · Engenheiro Civil (CREA) · 4+ anos em operações marítimas, offshore, portuárias e O&G.",
+        "Coordenação logística end-to-end de equipes, materiais, mobilizações, transporte terrestre/marítimo, acessos e prontidão operacional.",
+        "Interface com fornecedores, armadores, agentes marítimos, terminais e clientes; acompanhamento de prazos, custos, medições e serviços.",
+        "Excel Avançado, Power BI e Drake/SAP RT (Petrobras); inglês avançado e experiência com equipes e fornecedores internacionais."
+      ]
+    },
+    {
+      "title": "Competências Principais",
+      "type": "text",
+      "content": "Logística Offshore & Portuária · Materiais & Mobilização · Transporte Terrestre/Marítimo · Fornecedores & Armadores · Prontidão Operacional · Crew Change & Bunkering · Custos & Medições · KPIs & Dashboards · Excel / Power BI · Drake/SAP RT"
+    },
+    {
+      "title": "Experiência Profissional",
+      "type": "entries",
+      "lead": {
+        "title": "Pausa de Carreira (2024–Presente)",
+        "body": "Período de apoio familiar, mantendo-me ativo com projetos web/software e iniciativas sociais. Atualmente com disponibilidade imediata para retorno integral."
+      },
+      "entries": [
+        {
+          "role": "Superintendente de Operações Marítimas (Logística & Planejamento)",
+          "company": "Van Oord",
+          "location": "Rio de Janeiro / costa brasileira",
+          "period": "Jul 2021 – Nov 2024",
+          "bullets": [
+            "Coordenei logística de frota em múltiplos portos: atracação, suprimentos, bunkering, resíduos, crew change e serviços de apoio.",
+            "Gerenciei interfaces com fornecedores, agentes marítimos, terminais, embarcações e cliente em operações de alta criticidade.",
+            "Planejei janelas operacionais, mobilizações e prontidão de recursos, acompanhando restrições, desvios e ações corretivas.",
+            "Controlei custos, medições, claims e status de suprimentos/serviços, com forecast e reporte para cliente e diretoria.",
+            "Consolidei KPIs de produção, disponibilidade, paradas e consumo em dashboards e relatórios gerenciais."
+          ]
+        },
+        {
+          "role": "Analista de Operações Pleno (Logística Offshore)",
+          "company": "C-Tank",
+          "location": "Niterói – RJ",
+          "period": "Out 2020 – Jun 2021",
+          "bullets": [
+            "Coordenei mobilização de equipes e materiais para campanhas em OSVs/FPSOs, com controle de prazos e prontidão.",
+            "Atuei em logística end-to-end: materiais especializados, EPIs/EPCs, transporte terrestre/marítimo, acessos e embarque.",
+            "Mantive interface com fornecedores e armadores internacionais; apoiei contratos, medições, custos e comparativos de propostas.",
+            "Utilizei Drake/SAP RT (Petrobras) para compliance, documentação, POB e agendamento logístico/PHTD."
+          ]
+        },
+        {
+          "role": "Assistente de Operações Sênior (Logística)",
+          "company": "C-Tank",
+          "location": "Niterói – RJ",
+          "period": "Jul 2020 – Out 2020",
+          "bullets": [
+            "Suporte a operações e logística: mobilizações, requisições de transporte, notas fiscais, agendamentos e DRAKE para clientes Tier-1."
+          ]
+        },
+        {
+          "role": "Instrutor de Inglês Técnico Offshore",
+          "company": "Toolvox",
+          "location": "Offshore (NS-43, NS-51)",
+          "period": "Dez 2018 – Mai 2020",
+          "bullets": [
+            "Atuei 18 meses embarcado, com comunicação técnica em inglês entre equipes multinacionais e rotina operacional offshore."
+          ]
+        },
+        {
+          "role": "Estagiário de Engenharia (Pesquisa Internacional)",
+          "company": "NTUA (Athens) & BAM (Berlin)",
+          "location": "",
+          "period": "2015 & 2018",
+          "bullets": [
+            "Pesquisa internacional em engenharia com coleta rigorosa, análise de dados e trabalho em ambientes multiculturais."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Formação Acadêmica",
+      "type": "lines",
+      "lines": [
+        "Pós-graduação: Engenharia de Segurança do Trabalho, Cruzeiro do Sul (2024–2025)",
+        "Pós-graduação: Engenharia de Construção Naval e Offshore, UCP (2022–2023)",
+        "MBA: Gestão de Projetos (PMBOK), USP / ESALQ (2019–2020)",
+        "Graduação: Engenharia Civil, UNIVIX / Multivix (2013–2018)",
+        "Técnico: Portos, IFES (2018–2019)"
+      ]
+    },
+    {
+      "title": "Certificações & Formação",
+      "type": "bullets",
+      "bullets": [
+        "MBA em Gestão de Projetos (PMBOK), USP/ESALQ · Técnico em Portos, IFES.",
+        "Planejamento e Controle da Produção (PCP) · MS Project · Dashboards em Excel Avançado e Power BI.",
+        "Segurança offshore: CBSP, BOSIET, HUET/T-HUET · NR-33/34/35/17/30."
+      ]
+    },
+    {
+      "title": "Ferramentas & Sistemas",
+      "type": "bullets",
+      "bullets": [
+        "Logística & Controle: Excel Avançado, Power BI, MS Project",
+        "Petrobras: Drake / SAP RT · POB · PHTD · documentação e compliance",
+        "Dados & KPIs: dashboards, consolidação de dados, DPR/RDO e forecast",
+        "Desenvolvimento: HTML, CSS, JavaScript, Python, JSON (autônomo)",
+        "Metodologia: PMBOK, PCP, mapeamento de processos / ISO 9000"
+      ]
+    },
+    {
+      "title": "Publicação",
+      "type": "text",
+      "content": "Autor de \"Inglês Técnico Portuário e Offshore\" (ISBN 978-65-00-04579-6, 2020, com 3.000+ exemplares vendidos)."
+    },
+    {
+      "title": "Informações Adicionais",
+      "type": "bullets",
+      "bullets": [
+        "CREA ativo.",
+        "Inglês avançado; experiência diária com equipes e fornecedores internacionais.",
+        "CNH categoria B, passaportes brasileiro e italiano (2027); disponibilidade imediata para viagens.",
+        "Baseado no Rio de Janeiro; mobilidade e disponibilidade para atuação em sites, bases e operações offshore."
+      ]
+    }
+  ]
+}

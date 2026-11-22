@@ -1,0 +1,52 @@
+{
+  "_part": {
+    "id": "06_skills/software/design_graphics",
+    "title": "Software de design grafico",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_chat_2026_11_19_audit"
+    ]
+  },
+  "data": {
+    "nodes": {
+      "sw_photoshop": {
+        "name": "Adobe Photoshop",
+        "type": "Editor de imagens",
+        "status": "used/proven",
+        "level": "nao documentado",
+        "contexts": [
+          "Estagio de marketing na Macrolub (pecas de campanha/promo)",
+          "Branding/arte do Dismantle"
+        ],
+        "evidence": "U",
+        "used_in": [
+          "exp_macrolub_internship",
+          "proj_dismantle"
+        ],
+        "domain_tags": [
+          "marketing_design_graphics"
+        ],
+        "cv_default": false,
+        "claim_rule": "Dizer 'used in marketing internship and independent projects'; nao alegar nivel avancado/atual sem confirmacao."
+      },
+      "sw_coreldraw": {
+        "name": "CorelDRAW",
+        "type": "Design vetorial",
+        "status": "used/proven",
+        "level": "nao documentado",
+        "contexts": [
+          "Estagio de marketing na Macrolub (pecas graficas da empresa)"
+        ],
+        "evidence": "U",
+        "used_in": [
+          "exp_macrolub_internship"
+        ],
+        "domain_tags": [
+          "marketing_design_graphics"
+        ],
+        "cv_default": false,
+        "claim_rule": "Idem Photoshop."
+      }
+    }
+  }
+}

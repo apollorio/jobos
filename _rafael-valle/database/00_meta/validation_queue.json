@@ -1,0 +1,117 @@
+{
+  "_part": {
+    "id": "00_meta/validation_queue",
+    "title": "Fila de validação (pendências a confirmar)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_kg_v3_2026_10_20",
+      "src_master_final_2026_10_21",
+      "src_jobos_profile_yml",
+      "src_workstation_scan_2026_11_19"
+    ]
+  },
+  "data": {
+    "items": [
+      {
+        "id": "vq_tenure",
+        "item": "Tenure Van Oord: contrato = 3y3m20d vs '3y5m' (span inclusivo)",
+        "action": "Decidir wording único; recomendado '3+ anos (Jul 2021 - Nov 2024)'"
+      },
+      {
+        "id": "vq_safety_dates",
+        "item": "Datas exatas da Pós em Segurança do Trabalho (conflito master vs Gupy)",
+        "action": "Conferir certificado"
+      },
+      {
+        "id": "vq_bport",
+        "item": "BPORT: uso especifico",
+        "action": "Descrever uso ou remover"
+      },
+      {
+        "id": "vq_star",
+        "item": "Software 'STAR' (separado de Amaralina Star)?",
+        "action": "Confirmar nome/funcao ou descartar"
+      },
+      {
+        "id": "vq_languages",
+        "item": "Outros idiomas (italiano etc.)",
+        "action": "Informar nível"
+      },
+      {
+        "id": "vq_offshore_renewals",
+        "item": "Validades CBSP/BOSIET/HUET/T-HUET e NR-17/33/35",
+        "action": "Informar datas/plano de reciclagem"
+      },
+      {
+        "id": "vq_passports",
+        "item": "Validade passaportes (2027 historico)",
+        "action": "Confirmar"
+      },
+      {
+        "id": "vq_cambridge",
+        "item": "Cambridge 2016 (validade historica Jul/2025)",
+        "action": "Confirmar status"
+      },
+      {
+        "id": "vq_toolvox_title",
+        "item": "Título do cargo Toolvox",
+        "action": "Escolher variante canônica"
+      },
+      {
+        "id": "vq_excel_ppt_powerbi",
+        "item": "Contexto de uso de Excel/PowerPoint/Power BI por empregador",
+        "action": "Confirmar used_in"
+      },
+      {
+        "id": "vq_project_details",
+        "item": "Detalhes por projeto Van Oord (cliente, escopo, embarcações, papel)",
+        "action": "Preencher details_to_fill"
+      },
+      {
+        "id": "vq_metrics",
+        "item": "Numeros em metrics_register (TO_FILL)",
+        "action": "Preencher"
+      },
+      {
+        "id": "vq_pmp_references",
+        "item": "1-2 pessoas da Van Oord para confirmar atuação (PMP)",
+        "action": "Definir"
+      },
+      {
+        "id": "vq_dismantle_attendance",
+        "item": "Público total real da Dismantle",
+        "action": "Documentar ou manter apenas 415 registrados"
+      },
+      {
+        "id": "vq_mobility",
+        "item": "mobility_and_preferences nulos",
+        "action": "Preencher"
+      },
+      {
+        "id": "vq_digital_levels",
+        "item": "Nível real de Python/SQL/TypeScript/Power BI",
+        "action": "Autoavaliar (1-5) e evidência"
+      },
+      {
+        "id": "vq_profdev_start",
+        "item": "Início do período de desenvolvimento profissional: Nov 2024 (master final) vs Jan 2025 (260723 / career DB)",
+        "action": "Usar Nov 2024 (fim do contrato Van Oord 01/11/2024)"
+      }
+    ],
+    "known_unknowns_ref": "11_truth/known_unknowns.json",
+    "resolved_2026_11_19": [
+      {
+        "id": "vq_crea_status",
+        "resolution": "CREA ATIVO - confirmado pelo Rafael em 2026-11-19 (evidência U)."
+      },
+      {
+        "id": "vq_salary",
+        "resolution": "Pretensão salarial = R$ 10.000/mês (confirmado pelo Rafael em 2026-11-19)."
+      },
+      {
+        "id": "vq_ollama_models",
+        "resolution": "Regra do Rafael: NÃO registrar modelos do Ollama neste banco. Outros modelos podem ser citados."
+      }
+    ]
+  }
+}

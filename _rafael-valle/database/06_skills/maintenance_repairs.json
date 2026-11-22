@@ -1,0 +1,36 @@
+{
+  "_part": {
+    "id": "06_skills/maintenance_repairs",
+    "title": "Manutenção / reparos / prontidão",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "corporate_experience": {
+      "C-Tank": [
+        "campanhas de manutenção e limpeza em FPSO/OSV",
+        "planejamento de equipes e materiais",
+        "readiness",
+        "monitoramento da execução",
+        "fornecedores",
+        "custos/medições"
+      ],
+      "Van Oord": [
+        "monitoramento de disponibilidade",
+        "downtime",
+        "pendências de embarcações/meios de apoio",
+        "serviços/reparos necessários para continuidade",
+        "inspeções",
+        "materiais e suprimentos"
+      ]
+    },
+    "boundaries": [
+      "não owner integral de PMS",
+      "não CMMS primary user",
+      "não dry dock manager",
+      "não Class/statutory certification owner"
+    ]
+  }
+}

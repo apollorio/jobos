@@ -1,0 +1,40 @@
+{
+  "_part": {
+    "id": "07_ai/ai_tools_comparison",
+    "title": "Comparativos: Cursor vs Windsurf, Cline vs Continue, agentes CLI, local vs nuvem",
+    "updated": "2026-11-19",
+    "sources": ["src_chat_2026_11_19", "src_workstation_scan_2026_11_19"],
+    "notes": "Conhecimento declarado (C). Útil para entrevistas de vagas digitais/Modern Workplace/inovação. Recursos mudam rápido; conferir antes de citar detalhes de versão."
+  },
+  "data": {
+    "cursor_vs_windsurf": {
+      "common": ["Ambos são forks do VS Code (extensões e atalhos compatíveis)", "Ambos têm agente multi-arquivo, autocomplete preditivo, rules de projeto e suporte a MCP", "Ambos permitem escolher entre modelos de vários fornecedores"],
+      "cursor_strengths": ["Tab de próxima edição muito rápido", "Controle fino de contexto com @-mentions e rules em .cursor/rules", "Ecossistema grande e ciclo de releases acelerado", "Background agents e revisão de PR"],
+      "windsurf_strengths": ["Cascade com noção de 'flow' (acompanha ações do usuário em tempo real)", "Memories persistentes geradas automaticamente", "Previews/deploy integrados para apps web"],
+      "decision_heuristic": "Cursor quando se quer controle explícito de contexto e velocidade de edição; Windsurf quando se quer um agente mais autônomo com memória de sessão. Para WordPress/PHP (Apollo) o fator decisivo é o suporte de extensões (Intelephense, Xdebug) - ambos herdam do VS Code.",
+      "rafael_choice": "Cursor instalado e usado; Windsurf conhecido/avaliado."
+    },
+    "cline_vs_continue": {
+      "cline": "Agente autônomo (Plan/Act) que lê, edita arquivos e roda terminal com aprovação passo a passo; ideal para tarefas multi-etapa e MCP.",
+      "continue": "Assistente modular (chat, autocomplete, edit, agent) configurado por config.yaml; forte em autocomplete e em plugar modelos locais (Ollama) por papel.",
+      "together": "Combinação comum: Continue para autocomplete/chat com modelo local barato; Cline para tarefas agentic com modelo de fronteira via API.",
+      "rafael_setup": "Ambos instalados no VS Code e no Cursor."
+    },
+    "cli_agents": {
+      "claude_code": "Agente da Anthropic: CLAUDE.md, plan mode, subagents, hooks, skills, MCP, permissões granulares.",
+      "codex_cli": "Agente da OpenAI: AGENTS.md, config.toml com modelo/sandbox/política de aprovação.",
+      "grok_cli": "CLI da xAI para modelos Grok.",
+      "pattern": "Arquivo de regras na raiz do repo + registry/SSOT + linter de verdade = governança de desenvolvimento assistido por IA (prática aplicada no Apollo e no jobOS)."
+    },
+    "local_vs_cloud": {
+      "local_ollama": {"pros": ["Privacidade (código/dados não saem da máquina)", "Custo zero por token", "Funciona offline"], "cons": ["Qualidade inferior aos modelos de fronteira em tarefas complexas", "Limitado por VRAM/RAM (modelos 7B-32B quantizados)", "Janela de contexto menor na prática"]},
+      "cloud_frontier": {"pros": ["Melhor raciocínio e tool use", "Contextos longos", "Agentes mais confiáveis"], "cons": ["Custo por token", "Dados enviados ao fornecedor", "Dependência de rede/limites de uso"]},
+      "rule_of_thumb": "Local para autocomplete, rascunhos e dados sensíveis; nuvem para refatorações grandes, arquitetura e agentes multi-etapa."
+    },
+    "deterministic_vs_generative": {
+      "principle": "Em runtime crítico de segurança (SOS Apollo) não usar IA generativa: motor de políticas determinístico, auditável e testável (event > state > hard safety rules > risk/band > policy > skill/card).",
+      "evidence": "P",
+      "ref": "05_projects/proj_sos_apollo.json"
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "name": "RAFAEL PERINI VALLE",
+  "subtitle": "ENGENHEIRO DE SUPRIMENTOS & PROJETOS",
+  "tagline": "Suprimentos · Fornecedores · O&G · Power BI · Planejamento & Controle",
+  "contact": {
+    "location": "Rio de Janeiro – RJ, Brasil",
+    "email": "rafapevalle@gmail.com",
+    "phone": "+55 (21) 97955-4496",
+    "linkedin": "https://www.linkedin.com/in/rpvalle",
+    "linkedinLabel": "linkedin.com/in/rpvalle"
+  },
+  "sections": [
+    {
+      "title": "Resumo Profissional",
+      "type": "bullets",
+      "bullets": [
+        "Engenheiro de Suprimentos & Projetos · Engenheiro Civil (CREA) · 4+ anos em operações e projetos de O&G.",
+        "Interface com fornecedores, suprimentos, logística, medições e controle contratual em operações marítimas/offshore.",
+        "Análise e consolidação de dados; dashboards de KPIs em Excel Avançado/Power BI e reportes gerenciais.",
+        "Drake/SAP RT (Petrobras); planejamento de materiais e serviços; HTML/CSS/JS, Python e automação."
+      ]
+    },
+    {
+      "title": "Competências Principais",
+      "type": "text",
+      "content": "Suprimentos & Fornecedores · Materiais & Serviços · Logística Offshore · Controle Contratual · Medições & Custos · Análise de Dados · Excel / Power BI · KPIs & Dashboards · Drake/SAP RT · O&G"
+    },
+    {
+      "title": "Experiência Profissional",
+      "type": "entries",
+      "lead": {
+        "title": "Pausa de Carreira (2024–Presente)",
+        "body": "Período dedicado ao apoio à minha família, mantendo-me profissionalmente ativo: desenvolvi projetos web e de software (HTML, PHP, JavaScript, Python) e atuei em projetos sociais e comunitários no Rio de Janeiro. Agora totalmente disponível para retornar ao trabalho em tempo integral."
+      },
+      "entries": [
+        {
+          "role": "Superintendente de Operações Marítimas (Planejamento & Performance)",
+          "company": "Van Oord",
+          "location": "Rio de Janeiro / costa brasileira",
+          "period": "Jul 2021 – Nov 2024",
+          "bullets": [
+            "Fornecedores, terminais e agentes marítimos em múltiplos portos da costa brasileira.",
+            "Suprimentos e serviços: peças, bunkering, resíduos, crew change e apoio à frota.",
+            "Custos, medições, claims e status de suprimentos/serviços; forecast e ações.",
+            "KPIs de produção, disponibilidade e consumo; dashboards para cliente e diretoria.",
+            "Planejamento operacional, cronogramas e logística de frota; riscos e interfaces técnicas."
+          ]
+        },
+        {
+          "role": "Analista de Operações (Planejamento Offshore)",
+          "company": "C-Tank",
+          "location": "Niterói – RJ",
+          "period": "Oct 2020 – Jun 2021",
+          "bullets": [
+            "Planejei equipes, materiais e prontidão para campanhas de manutenção/limpeza em OSVs e FPSOs.",
+            "Controle contratual: entregáveis, medições, custos e interface com fornecedores/clientes.",
+            "Drake/SAP RT (Petrobras), DPR/RDO, análise de dados e mapeamento de processos/ISO 9000."
+          ]
+        },
+        {
+          "role": "Assistente de Operações Sênior",
+          "company": "C-Tank",
+          "location": "Niterói – RJ",
+          "period": "Jul 2020 – Oct 2020",
+          "bullets": [
+            "Logística e suprimentos: requisições de transporte, notas fiscais, mobilizações e DRAKE para clientes Tier-1."
+          ]
+        },
+        {
+          "role": "Instrutor de Inglês Técnico Offshore",
+          "company": "Toolvox",
+          "location": "Offshore (NS-43, NS-51)",
+          "period": "Dec 2018 – May 2020",
+          "bullets": [
+            "Treinamento de inglês técnico, tradução de SOPs e ponte de comunicação entre equipes multinacionais."
+          ]
+        },
+        {
+          "role": "Estagiário de Engenharia (Pesquisa Internacional)",
+          "company": "NTUA (Athens) & BAM (Berlin)",
+          "location": "",
+          "period": "2015 & 2018",
+          "bullets": [
+            "NTUA: fadiga sísmica (projeto MATCH). BAM: cimento bio-baseado, com coleta e análise rigorosa de dados."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Formação Acadêmica",
+      "type": "lines",
+      "lines": [
+        "Pós-graduação: Engenharia de Segurança do Trabalho, Cruzeiro do Sul (2024–2025)",
+        "Pós-graduação: Engenharia de Construção Naval e Offshore, UCP (2022–2023)",
+        "MBA: Gestão de Projetos (PMBOK), USP / ESALQ (2019–2020)",
+        "Graduação: Engenharia Civil, UNIVIX / Multivix (2013–2018)",
+        "Técnico: Portos, IFES (2018–2019)"
+      ]
+    },
+    {
+      "title": "Certificações & Formação",
+      "type": "bullets",
+      "bullets": [
+        "MBA em Gestão de Projetos (PMBOK), USP/ESALQ · Planejamento e Controle da Produção (PCP), West Group.",
+        "Curso de MS Project (Udemy, 2019) · Dashboards em Excel Avançado e Power BI.",
+        "Segurança offshore: CBSP, BOSIET, HUET/T-HUET (RelyOn Nutec) · NR-33/34/35/17/30 · General Dredging Course."
+      ]
+    },
+    {
+      "title": "Ferramentas & Sistemas",
+      "type": "bullets",
+      "bullets": [
+        "Suprimentos & Controle: Excel, Power BI, MS Project",
+        "Dados & BI: dashboards, KPIs e consolidação de dados",
+        "Desenvolvimento: HTML, CSS, JavaScript, Python, JSON (autônomo)",
+        "Sistemas Petrobras: Drake / SAP RT",
+        "Metodologia: PMBOK, PCP"
+      ]
+    },
+    {
+      "title": "Publicação",
+      "type": "text",
+      "content": "Autor de \"Inglês Técnico Portuário e Offshore\" (ISBN 978-65-00-04579-6, 2020, com 3.000+ exemplares vendidos)."
+    },
+    {
+      "title": "Informações Adicionais",
+      "type": "bullets",
+      "bullets": [
+        "CREA ativo.",
+        "Inglês avançado; autor do guia técnico de inglês para o setor offshore e portuário.",
+        "CNH categoria B, com passaportes brasileiro e italiano (2027).",
+        "Baseado no Rio, disponibilidade imediata; projetos de código e automação em rvalle.com.br."
+      ]
+    }
+  ]
+}

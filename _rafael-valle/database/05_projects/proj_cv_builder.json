@@ -1,0 +1,45 @@
+{
+  "_part": {
+    "id": "05_projects/proj_cv_builder",
+    "title": "CV Builder Pro - gerador de CVs por vaga",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723",
+      "src_jobos_profile_yml"
+    ]
+  },
+  "data": {
+    "name": "CV Builder Pro",
+    "type": "Ferramenta web autoral",
+    "features": [
+      "job-tailored CV generation",
+      "A4 pagination",
+      "multiple profiles",
+      "PDF/JSON export"
+    ],
+    "evidence": "D/P",
+    "domain_tags": [
+      "digital_data_technology",
+      "independent_projects_entrepreneurship"
+    ],
+    "source_refs": [
+      "src_independent_projects"
+    ],
+    "historical_260723": {
+      "name": "CV Builder Pro",
+      "type": {
+        "pt": "Ferramenta web autoral",
+        "en": "Self-authored web tool"
+      },
+      "description": {
+        "pt": "Estruturei uma plataforma web para geração e personalização de CVs por vaga, com paginação automática em A4, múltiplos perfis profissionais e exportação em PDF/JSON — o próprio CV digital que acompanha este arquivo.",
+        "en": "I structured a web platform for generating and tailoring CVs per job posting, with automatic A4 pagination, multiple professional profiles and PDF/JSON export — the very digital CV that accompanies this file."
+      }
+    },
+    "public_url": "https://cv.rvalle.com.br/v2/",
+    "note_jobos": [
+      "Gera 5 variantes (management/planning/operations/hsse/innovation) a partir de JSON SSOT; reutilizado pelo jobOS."
+    ]
+  }
+}

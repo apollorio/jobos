@@ -1,0 +1,24 @@
+{
+  "_part": {
+    "id": "05_projects/proj_jobos",
+    "title": "jobOS + apollo-vagas + web-vagas - sistema pessoal de busca de vagas",
+    "updated": "2026-11-19",
+    "sources": ["src_attachments_inventory_2026_10_22", "src_jobos_vagas_2026_08_26", "src_jobos_export_2026_08_26", "src_jobos_strategies", "src_jobos_profile_yml", "src_jobos_fixture_jobs"],
+    "notes": "Projeto não listado nos masters de carreira; documentado pelo inventário de anexos e pelo código em __VAGAS/. Evidência P (projeto pessoal) + D (arquivos)."
+  },
+  "data": {
+    "id": "proj_jobos",
+    "type": "Ferramenta autoral de automação (Python + WordPress + PWA)",
+    "evidence": ["P", "D"],
+    "goal": "Project / Planning / Operations Engineer em FPSO e operadoras de O&G no Rio de Janeiro; SBM Offshore, MODEC e PRIO como empresas-alvo explícitas.",
+    "pipeline": "DISCOVER > DEDUPE > SCORE > DECIDE > DIGEST > (aplicação manual) > TRACK > LEARN",
+    "components": {
+      "jobos_python": {"files": ["run.py", "jobos/score.py", "jobos/triage.py", "jobos/fontes.py", "jobos/compat.py", "jobos/store.py", "jobos/sync.py", "jobos/wordpress.py", "jobos/autoapply.py", "jobos/digest.py", "jobos/bulletin.py", "jobos/diff.py", "jobos/preflight.py", "jobos/probe.py", "jobos/resilience.py", "jobos/sources/{gupy,ats,totvs,adzuna,web}.py", "tools/truth_lint.py", "tests/test_triage.py", "tests/test_score.py", "tests/dry_run.py"], "config": ["config/profile.yml (camada de verdade)", "config/companies.yml", "config/queries.yml"], "storage": "SQLite (jobs.db)", "ci": "GitHub Actions: discovery 6x/dia, priority_alert a cada 2h (watchlist), digest diário 07:00 BRT, weekly segunda 08:30 BRT", "windows": ["rodar-ciclo.ps1", "rodar-diario.ps1", "agendar-12h-18h.ps1", "agendar-13h.ps1"], "deps": ["requests", "PyYAML", "python-dateutil", "rapidfuzz"]},
+      "apollo_vagas_wp_plugin": {"files": ["apollo-vagas.php", "includes/class-apollo-vagas-{cpt,rest,admin,sync,estagios}.php", "assets/kanban.js", "assets/kanban.css", "tests/harness.php", "tests/testar.php", "ferramentas/enviar_para_wordpress.py"], "function": "Kanban de candidaturas no WordPress (CPT + REST), sincronizado com o jobOS."},
+      "web_vagas_pwa": {"files": ["index.html", "manifest.webmanifest", "sw.js", "assets/*.ts (load-jobs, merge-jobs, offer-page, host, rio, forms-google, cache-logos)", "assets/jobos.js", "assets/inbox-swiipe-row.js", "design system/ (dashboard.apollorio.css, script.theme.js, app-market.js, list-reveal.js, scroll-expand.js, tree-menu-links.js)"], "function": "PWA de triagem de vagas com swipe, páginas por oferta e integração Google Forms."}
+    },
+    "observed_scale": {"companies_monitored": 28, "web_jobs_seen": 252, "legacy_sqlite_jobs": 1118, "events": 2295, "runs": 251, "last_export": {"vagas": 65, "candidaturas": 28, "recomendadas": 25, "limitrofes": 30}},
+    "key_design_rules": ["Empregadores de dragagem (Van Oord, Boskalis, DEME, Jan De Nul, Royal IHC) e agências que os atendem = exclusão rígida (pivot de carreira declarado pelo Rafael)", "Certificados offshore vencidos bloqueiam vagas embarcadas que os exigem", "Sem pretensão salarial documentada, salary_match neutro (70)", "truth_lint obrigatório antes de enviar CV/carta gerados"],
+    "successor": "Este banco (database/) + tools/match.mjs substituem o score.py como avaliação de compatibilidade consciente de verdade."
+  }
+}

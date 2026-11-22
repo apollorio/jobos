@@ -1,0 +1,139 @@
+{
+  "name": "RAFAEL PERINI VALLE",
+  "subtitle": "ENGENHEIRO | CONFORMIDADE, RISCOS, PROCESSOS & DATA ANALYTICS",
+  "tagline": "Análise de Riscos · Suporte a Auditorias · Planos de Ação · Processos · Power BI · Melhoria Contínua",
+  "contact": {
+    "location": "Rio de Janeiro – RJ, Brasil",
+    "email": "rafapevalle@gmail.com",
+    "phone": "+55 (21) 97955-4496",
+    "linkedin": "https://www.linkedin.com/in/rpvalle",
+    "linkedinLabel": "linkedin.com/in/rpvalle"
+  },
+  "sections": [
+    {
+      "title": "Resumo Profissional",
+      "type": "bullets",
+      "bullets": [
+        "Engenheiro com experiência em análise de riscos, processos, conformidade operacional, investigação de desvios, planos de ação, consolidação de dados e elaboração de relatórios para suporte à gestão em ambientes offshore e de projetos.",
+        "Experiência prática em preparação para ISO 9001, mapeamento e formalização de processos, procedimentos, controle documental e organização de evidências para avaliação externa; MBA em Gestão de Projetos, Power BI, Excel avançado e inglês fluente."
+      ]
+    },
+    {
+      "title": "Competências-Chave",
+      "type": "text",
+      "content": "Análise de Riscos · Conformidade & Controles · Processos & Procedimentos · Suporte a Auditorias · Planos de Ação · Desvios & Ocorrências · Investigação de Incidentes · Análise de Causa · Melhoria Contínua · Controle Documental · ISO 9001 · Análise Estruturada de Dados · Power BI · Indicadores & Dashboards · Relatórios Gerenciais · Governança, Risco & Controle · Gestão de Projetos · PMBOK · Stakeholder Management · Fornecedores & Contratadas · Comunicação Escrita"
+    },
+    {
+      "title": "Experiência Profissional",
+      "type": "entries",
+      "lead": {
+        "title": "Desenvolvimento Profissional & Projetos Independentes — Dados, Automação e Processos (Nov 2024–Atual)",
+        "body": "Aperfeiçoamento contínuo em análise e estruturação de dados, Power BI, SQL/Python e automação, combinado ao desenvolvimento do apollo::rio, plataforma digital independente. Atuação prática em desenho de processos, fluxos, regras de negócio, documentação, estruturação de dados, controle de acessos, integrações via APIs, avaliação de riscos/dependências e melhoria iterativa."
+      },
+      "entries": [
+        {
+          "role": "Superintendente 1 — Projetos & Operações Marítimas",
+          "company": "Van Oord",
+          "location": "Rio de Janeiro / costa brasileira",
+          "period": "Jul 2021 – Nov 2024",
+          "bullets": [
+            "Acompanhou e controlou a execução de projetos, consolidando informações operacionais, riscos, desvios, custos, produtividade e ações para suporte à gestão e aos clientes.",
+            "Elaborou e revisou relatórios diários, semanais e mensais, KPIs, forecasts e análises de performance, transformando dados de campo em informações estruturadas para tomada de decisão.",
+            "Participou de investigações de incidentes e ocorrências, análise de causas, definição e acompanhamento de ações corretivas e lições aprendidas em interface com QHSE e equipes operacionais.",
+            "Atuou na aplicação e revisão de procedimentos operacionais e requisitos de segurança, acompanhando pendências, registros, evidências e implementação de ações.",
+            "Coordenou interfaces com clientes, fornecedores, contratadas, terminais e equipes internacionais, acompanhando escopo, prazos, qualidade de entrega, riscos, medições e demandas de projeto."
+          ]
+        },
+        {
+          "role": "Analista de Operações — Processos, Conformidade & Dados",
+          "company": "C-Tank",
+          "location": "Niterói – RJ, Brasil",
+          "period": "Out 2020 – Jun 2021",
+          "bullets": [
+            "Participou diretamente da preparação da empresa para implantação da ISO 9001, realizando mapeamento e formalização de processos, elaboração de procedimentos, padronização e controle documental.",
+            "Estruturou registros e evidências para suporte à avaliação externa, fortalecendo rastreabilidade, consistência documental e aderência aos processos definidos.",
+            "Concebeu a arquitetura funcional de uma solução interna para integrar informações de Almoxarifado, RH, Financeiro, faturamento e documentação operacional, reduzindo fragmentação e facilitando controles.",
+            "Geriu dados e fluxos operacionais no Petrobras Drake / SAP RT, incluindo documentação, matrizes de qualificação, prontidão de pessoal, logística e requisitos para operações offshore.",
+            "Elaborou DPR/RDO, consolidou indicadores, acompanhou desvios e entregáveis e coordenou equipes, materiais, fornecedores e prontidão operacional em campanhas FPSO/OSV."
+          ]
+        },
+        {
+          "role": "Assistente de Operações Sênior",
+          "company": "C-Tank",
+          "location": "Niterói – RJ, Brasil",
+          "period": "Jul 2020 – Out 2020",
+          "bullets": [
+            "Apoiou controles operacionais, documentação, mobilização, logística e qualificação de pessoal para clientes offshore, com atualização e verificação de registros em sistemas Petrobras."
+          ]
+        },
+        {
+          "role": "Instrutor de Inglês Técnico Offshore / Comunicação",
+          "company": "Toolvox",
+          "location": "Navios-sonda do pré-sal (NS-43, NS-51)",
+          "period": "Dez 2018 – Mai 2020",
+          "bullets": [
+            "Ministrou treinamentos para equipes offshore multinacionais, traduziu SOPs e estruturou materiais técnicos para comunicação operacional, segurança e emergência.",
+            "Desenvolveu forte capacidade de comunicação escrita, organização de conhecimento, orientação de equipes e atuação colaborativa em ambientes multidisciplinares."
+          ]
+        },
+        {
+          "role": "Estagiário de Pesquisa em Engenharia (Internacional)",
+          "company": "NTUA (Atenas) & BAM (Berlim)",
+          "location": "",
+          "period": "2015 & 2018",
+          "bullets": [
+            "Atuação em pesquisa de engenharia com coleta estruturada de dados, análise técnica, suporte a ensaios e colaboração multidisciplinar internacional."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Dados, Tecnologia & Processos",
+      "type": "bullets",
+      "bullets": [
+        "Analytics & Visualização: Power BI, Excel avançado, indicadores, dashboards, consolidação de dados, análise de performance e reporting gerencial.",
+        "Dados & Automação: SQL e Python em desenvolvimento; JSON, APIs, estruturação de dados e automação de fluxos aplicadas a projetos digitais independentes.",
+        "Processos & Conformidade: mapeamento de processos, procedimentos, controle documental, preparação ISO 9001, análise de riscos, desvios, ações corretivas e melhoria contínua.",
+        "Projetos: PMBOK, MS Project, planejamento, priorização, gestão de riscos/dependências, stakeholders, fornecedores e acompanhamento de planos de ação.",
+        "Microsoft: Excel avançado, PowerPoint, MS Project e Power BI."
+      ]
+    },
+    {
+      "title": "Formação",
+      "type": "lines",
+      "lines": [
+        "Pós-graduação: Engenharia de Segurança do Trabalho, Cruzeiro do Sul (2024–2025)",
+        "Pós-graduação: Engenharia de Construção Naval & Offshore, UCP (2022–2023)",
+        "MBA: Gestão de Projetos (PMBOK), USP / ESALQ (2019–2020)",
+        "Graduação: Engenharia Civil, UNIVIX / Multivix (2013–2018)",
+        "Técnico: Portos, IFES (2018–2019)"
+      ]
+    },
+    {
+      "title": "Ferramentas & Métodos",
+      "type": "bullets",
+      "bullets": [
+        "Conformidade: suporte a auditorias e avaliações externas, preparação ISO 9001, procedimentos, registros, evidências, análise de desvios e acompanhamento de ações.",
+        "Analytics: Power BI, Excel avançado, KPI tracking, consolidação e visualização de dados, relatórios e análise de performance.",
+        "Gestão de Projetos: PMBOK, MS Project, planejamento, gestão de riscos, stakeholders, dependências e planos de ação.",
+        "Governança, Risco & Controle: análise de riscos, padronização de processos, controle documental, rastreabilidade e melhoria contínua.",
+        "Tecnologia: Petrobras Drake / SAP RT, SQL e Python em desenvolvimento, JSON, APIs e automação."
+      ]
+    },
+    {
+      "title": "Publicação",
+      "type": "text",
+      "content": "Autor de \"Inglês Técnico Portuário e Offshore\" (ISBN 978-65-00-04579-6, 2020; 3.000+ exemplares), demonstrando capacidade de pesquisa, estruturação de informação, comunicação técnica e produção de conteúdo."
+    },
+    {
+      "title": "Informações Adicionais",
+      "type": "bullets",
+      "bullets": [
+        "Português nativo e inglês fluente; experiência com equipes multinacionais, clientes, fornecedores e gestão internacional.",
+        "Perfil analítico, organizado e orientado a resultados, com atuação em resolução de problemas, melhoria de processos e comunicação entre áreas.",
+        "CREA ativo; baseado no Rio de Janeiro e disponível para modelo híbrido.",
+        "Passaportes brasileiro e italiano válidos até 2027; CNH categoria B."
+      ]
+    }
+  ]
+}

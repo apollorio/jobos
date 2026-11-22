@@ -1,0 +1,94 @@
+{
+  "_part": {
+    "id": "02_profile/safe_wording",
+    "title": "Banco de redação segura + blocos de carta",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_offshore_profile_2026_10_07",
+      "src_master_260723"
+    ]
+  },
+  "data": {
+    "safe_wording_bank": [
+      {
+        "topic": "ISO / management systems",
+        "use": "Supported management-system readiness, process mapping, procedure development, document control and audit preparation.",
+        "avoid": "conducted ISO audits; ISO auditor; Quality Engineer for 5 years"
+      },
+      {
+        "topic": "Gap period",
+        "use": "Professional Development & Independent Projects (SQL, Python, dashboards, structured data, automation, web development).",
+        "avoid": "career break (passive framing)"
+      },
+      {
+        "topic": "Suppliers",
+        "use": "Coordinating local suppliers, maritime agents, terminals and service providers across multiple Brazilian ports.",
+        "avoid": "local content management"
+      },
+      {
+        "topic": "Maintenance / readiness",
+        "use": "Monitored readiness, availability and downtime and coordinated repairs/services affecting operations.",
+        "avoid": "PMS owner; CMMS owner; dry-dock manager; AMOS expertise"
+      },
+      {
+        "topic": "Planning tools",
+        "use": "MS Project and advanced Excel as tools for control and decision; Primavera P6 in development.",
+        "avoid": "Primavera P6 hands-on professional experience"
+      },
+      {
+        "topic": "Regulatory",
+        "use": "Operational compliance with IMO/ISM/SOLAS/MARPOL/NORMAM-12.",
+        "avoid": "SGSO/SGIP/SGSS/ANP domain without direct role"
+      },
+      {
+        "topic": "Tenure",
+        "use": "3+ years as Superintendent at Van Oord (Jul 2021 - Nov 2024), plus prior offshore exposure.",
+        "avoid": "5+ years in similar management"
+      },
+      {
+        "topic": "Emergency response",
+        "use": "Emergency Response Coordinator: ran drills with simulated victim, measured boat/ambulance/hospital response, issued post-drill report; 5+ real Medevacs.",
+        "avoid": "unlisted medical qualifications"
+      },
+      {
+        "topic": "Education framing",
+        "use": "Civil Engineering + Naval & Offshore Construction Engineering + Occupational Safety Engineering + MBA Project Management.",
+        "avoid": "opening the CV with 'Civil Engineer'"
+      },
+      {
+        "topic": "Digital skills",
+        "use": "SQL in active development; Python/TypeScript/PHP/WordPress used in independent projects (Apollo::rio).",
+        "avoid": "senior software engineer"
+      },
+      {
+        "topic": "Dismantle",
+        "use": "Created, produced and managed an independent cultural event (initiation to closeout): 415 registered participants (165 Shotgun tickets + 250 invitations).",
+        "avoid": "unsourced attendance numbers"
+      }
+    ],
+    "cover_letter_blocks": {
+      "sbm_senior_operations_engineer_en": [
+        "I bring 3+ years coordinating daily shorebase and marine operations across Brazil, integrating vessels, terminals, contractors, suppliers and clients.",
+        "My background includes hands-on HSSE leadership, emergency response and 5+ real MEDEVAC cases, as well as operational troubleshooting and corrective actions.",
+        "I have managed local suppliers and service providers while monitoring readiness, KPIs, downtime, costs and operational performance.",
+        "I also bring Petrobras-environment experience through Drake/SAP RT, FPSO/OSV support and offshore logistics, and I am immediately available in Rio de Janeiro."
+      ]
+    },
+    "tools_positioning": {
+      "strong": [
+        "Excel Avançado",
+        "MS Project",
+        "Power BI",
+        "Drake",
+        "SAP RT"
+      ],
+      "do_not_sell_as_experience": [
+        "Primavera P6"
+      ],
+      "note": "Ferramentas devem aparecer como meios de controle e decisão, não como o produto principal da experiência."
+    },
+    "first_person_rule": "Todos os textos narrativos de CV (bullets de experiência, resumos, identidade) estão em PORTUGUÊS na PRIMEIRA PESSOA, conforme instrução obrigatória do usuário. Verbos como 'Coordenei', 'Desenvolvi e controlei', 'Monitorei', 'Acompanhei', 'Apoiei', 'Planejei', 'Mapeei', 'Estruturei', 'Concebi', 'Contribuí' substituem qualquer forma neutra/terceira pessoa. Versões em inglês (en) acompanham no estilo padrão de CV internacional (particípio passado com sujeito implícito 'I').",
+    "integrity_statement": "Nenhuma empresa, cargo, certificação, métrica, ferramenta ou conquista foi inventada. Todo o conteúdo abaixo deriva das fontes listadas acima; reformulações limitam-se a: (1) conversão de voz para primeira pessoa, (2) tradução PT↔EN, (3) organização estrutural em JSON."
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "_part": {
+    "id": "09_domains/logistics_materials_suppliers",
+    "title": "Domínio: Logística / Materiais / Fornecedores",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "label_pt": "Logística / Materiais / Fornecedores",
+    "priority": 8,
+    "summary": "Crew change, POB, helicoptero, bunkering, waste, port calls, mobilizacao, agentes, terminais, requisicoes de compra/servico, medições e custos.",
+    "highlights_master_tree": {
+      "experience": [
+        "crew changes",
+        "POB",
+        "helicopter logistics",
+        "transporte de passageiros",
+        "transporte de materiais",
+        "bunkering",
+        "waste",
+        "port calls",
+        "mobilização/desmobilização",
+        "fornecedores",
+        "agentes marítimos",
+        "terminais",
+        "prestadores locais",
+        "suprimentos para embarcações",
+        "requisições de compra/serviço",
+        "medições",
+        "custos",
+        "claims",
+        "off-hire",
+        "mudança de escopo"
+      ]
+    },
+    "source_paths": [
+      "experience_nodes.exp_vanoord.commercial_contractual",
+      "experience_nodes.exp_vanoord.marine_operations",
+      "experience_nodes.exp_ctank_analyst.petrobras_processes"
+    ],
+    "refs": {
+      "experiences": [
+        "exp_vanoord",
+        "exp_ctank_analyst",
+        "exp_ctank_assistant"
+      ],
+      "projects": [
+        "vo_354264",
+        "vo_354261",
+        "vo_354012_2021",
+        "vo_354269",
+        "vo_354222_2022",
+        "vo_354285",
+        "vo_353190",
+        "vo_354222_2023",
+        "vo_354306",
+        "vo_354012_2023",
+        "vo_354449",
+        "vo_354222_2024",
+        "vo_354458"
+      ],
+      "vessels": [],
+      "software": [
+        "sw_drake",
+        "sw_sap_rt",
+        "sw_maritime_credentialing_generic",
+        "sw_bport"
+      ],
+      "certifications": [],
+      "education": [],
+      "stories": [
+        "ctank"
+      ],
+      "boundary_groups": [
+        "supplier_and_local_content_wording"
+      ],
+      "volunteer": []
+    },
+    "fit_estimates": [],
+    "hard_gaps_or_boundaries": [],
+    "id": "logistics_materials_suppliers"
+  }
+}

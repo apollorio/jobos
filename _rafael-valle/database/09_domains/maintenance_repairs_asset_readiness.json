@@ -1,0 +1,84 @@
+{
+  "_part": {
+    "id": "09_domains/maintenance_repairs_asset_readiness",
+    "title": "Domínio: Manutenção / Reparos / Prontidão de ativos",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "label_pt": "Manutenção / Reparos / Prontidão de ativos",
+    "priority": 2,
+    "summary": "Campanhas de manutenção/limpeza offshore (C-Tank) e prontidão/disponibilidade/downtime de meios (Van Oord); sem ownership de PMS/CMMS/classe.",
+    "highlights_master_tree": {
+      "ctank": [
+        "Campanhas offshore de manutenção e limpeza em FPSO/OSV",
+        "Planejamento de equipes, materiais e serviços",
+        "Readiness de pessoal, documentação e recursos",
+        "DPR/RDO",
+        "Mobilização e suporte logístico",
+        "Petrobras Drake / SAP RT"
+      ],
+      "van_oord": [
+        "Acompanhamento de disponibilidade de embarcações/equipamentos",
+        "Downtime",
+        "Pendências de meios de apoio",
+        "Coordenação de reparos/serviços quando afetavam a operação",
+        "Inspeções de embarcações de apoio",
+        "Materiais e serviços necessários à prontidão"
+      ]
+    },
+    "source_paths": [
+      "maintenance_repairs_tree",
+      "experience_nodes.exp_vanoord.maintenance_repairs_readiness",
+      "experience_nodes.exp_ctank_analyst.operations"
+    ],
+    "refs": {
+      "experiences": [
+        "exp_vanoord",
+        "exp_ctank_analyst"
+      ],
+      "projects": [],
+      "vessels": [
+        "type_fpso",
+        "type_osv",
+        "type_tug",
+        "type_tshd",
+        "type_wid"
+      ],
+      "software": [],
+      "certifications": [
+        "nr33",
+        "nr34",
+        "nr35"
+      ],
+      "education": [
+        "edu_naval"
+      ],
+      "stories": [],
+      "boundary_groups": [
+        "vessel_technical_management"
+      ],
+      "volunteer": []
+    },
+    "fit_estimates": [
+      {
+        "item": "CMMS / marine reliability",
+        "est_pct": "20-25",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      },
+      {
+        "item": "Class/SIRE/ISGOTT/statutory",
+        "est_pct": "20",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      }
+    ],
+    "hard_gaps_or_boundaries": [
+      "não owner integral de PMS",
+      "não Class/statutory owner",
+      "não dry-dock manager"
+    ],
+    "id": "maintenance_repairs_asset_readiness"
+  }
+}

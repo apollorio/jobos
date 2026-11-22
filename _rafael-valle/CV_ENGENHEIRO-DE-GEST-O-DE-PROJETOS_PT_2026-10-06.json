@@ -1,0 +1,135 @@
+{
+  "name": "RAFAEL PERINI VALLE",
+  "subtitle": "ENGENHEIRO DE GESTÃO DE PROJETOS",
+  "tagline": "Escopo · Prazo · Custo & Qualidade · Stakeholders · Risco · PMBOK",
+  "contact": {
+    "location": "Rio de Janeiro – RJ, Brasil",
+    "email": "rafapevalle@gmail.com",
+    "phone": "+55 (21) 97955-4496",
+    "linkedin": "https://www.linkedin.com/in/rpvalle",
+    "linkedinLabel": "linkedin.com/in/rpvalle"
+  },
+  "sections": [
+    {
+      "title": "Resumo Profissional",
+      "type": "bullets",
+      "bullets": [
+        "Engenheiro de Gestão de Projetos · Engenheiro Civil (CREA) · MBA em Gestão de Projetos (PMBOK) · 4+ anos em projetos marítimos/EPC e de O&G.",
+        "Controle de escopo, prazo, custo e qualidade; KPIs, análise de desvios, forecast e reporte gerencial a clientes e diretoria.",
+        "Gestão de stakeholders, mudanças e riscos; controle contratual e claims; melhoria contínua de processos.",
+        "Conhecimento de ferramentas de planejamento (MS Project) e desenvolvimento web autônomo (HTML/CSS/JS, Python) para ferramentas de dados e dashboards."
+      ]
+    },
+    {
+      "title": "Competências Principais",
+      "type": "text",
+      "content": "Gestão de Projetos (PMBOK) · Escopo/Prazo/Custo/Qualidade · Controle de Projetos · KPIs & Dashboards · Análise de Desvios · Forecast · Gestão de Riscos & Mudanças · Stakeholders · Controle Contratual & Claims · Análise de Dados (Excel/Power BI) · MS Project (conhecimento)"
+    },
+    {
+      "title": "Experiência Profissional",
+      "type": "entries",
+      "lead": {
+        "title": "Pausa de Carreira (2024–Presente)",
+        "body": "Período dedicado ao apoio à minha família, mantendo-me profissionalmente ativo: desenvolvi projetos web e de software (HTML, PHP, JavaScript, Python) e atuei em projetos sociais e comunitários no Rio de Janeiro. Agora totalmente disponível para retornar ao trabalho em tempo integral."
+      },
+      "entries": [
+        {
+          "role": "Superintendente de Operações Marítimas (Planejamento & Controle)",
+          "company": "Van Oord",
+          "location": "Rio de Janeiro / costa brasileira",
+          "period": "Jul 2021 – Nov 2024",
+          "bullets": [
+            "Desenvolvi e controlei cronogramas de projeto (baseline, sequenciamento, caminho crítico, durações-chave e marcos) alinhados à estratégia de execução, com PCP / MS Project.",
+            "Monitorei o status do projeto para identificar atrasos; executei análise de desvios, planos de ação corretivos e forecast em ciclos de 15 dias.",
+            "Acompanhei avanço físico e KPIs (produção/batimetria, disponibilidade, consumo); construí dashboards e relatórios diários/semanais/mensais.",
+            "Apoiei aprovação de baseline, avanço declarado e marcos junto ao cliente; gestão de mudanças, claims, medições e controle de custos/prazos."
+          ]
+        },
+        {
+          "role": "Analista de Operações Pleno (Planejamento & Controle Offshore)",
+          "company": "C-Tank",
+          "location": "Niterói – RJ",
+          "period": "Oct 2020 – Jun 2021",
+          "bullets": [
+            "Planejei campanhas de manutenção e limpeza offshore (OSVs/FPSOs): equipes, materiais, prazos e prontidão, com relatórios diários (DPR/RDO) e KPIs.",
+            "Apoiei o controle contratual: entregáveis, indicadores, validação de medições e custos; compliance Petrobras (Drake/SAP RT) e agendamento PHTD.",
+            "Mapeei processos internos e apoiei a implementação ISO 9000; estruturei sistemas de dados e relatórios."
+          ]
+        },
+        {
+          "role": "Assistente de Operações Sênior",
+          "company": "C-Tank",
+          "location": "Niterói – RJ",
+          "period": "Jul 2020 – Oct 2020",
+          "bullets": [
+            "Suporte a operações e logística; credenciamento DRAKE para clientes Tier-1 (Shell, Transocean, Helix); agendamento, requisições de transporte e protocolos de prontidão."
+          ]
+        },
+        {
+          "role": "Instrutor de Inglês Técnico Offshore / Ponte de Comunicação",
+          "company": "Toolvox",
+          "location": "Offshore (NS-43, NS-51)",
+          "period": "Dec 2018 – May 2020",
+          "bullets": [
+            "Treinamento de inglês técnico e tradução de SOPs em navios-sonda; ponte de comunicação entre equipes multinacionais — base do meu inglês avançado em uso diário."
+          ]
+        },
+        {
+          "role": "Estagiário de Engenharia (Pesquisa Internacional)",
+          "company": "NTUA (Athens) & BAM (Berlin)",
+          "location": "",
+          "period": "2015 & 2018",
+          "bullets": [
+            "NTUA (Grécia): projeto MATCH, fadiga sísmica. BAM (Alemanha): cimento bio-baseado, com coleta rigorosa e análise de dados."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Formação Acadêmica",
+      "type": "lines",
+      "lines": [
+        "Pós-graduação: Engenharia de Segurança do Trabalho, Cruzeiro do Sul (2024–2025)",
+        "Pós-graduação: Engenharia de Construção Naval e Offshore, UCP (2022–2023)",
+        "MBA: Gestão de Projetos (PMBOK), USP / ESALQ (2019–2020)",
+        "Graduação: Engenharia Civil, UNIVIX / Multivix (2013–2018)",
+        "Técnico: Portos, IFES (2018–2019)"
+      ]
+    },
+    {
+      "title": "Certificações & Formação",
+      "type": "bullets",
+      "bullets": [
+        "MBA em Gestão de Projetos (PMBOK), USP/ESALQ · Planejamento e Controle da Produção (PCP), West Group.",
+        "Curso de MS Project (Udemy, 2019) · Dashboards em Excel Avançado e Power BI.",
+        "Segurança offshore: CBSP, BOSIET, HUET/T-HUET (RelyOn Nutec) · NR-33/34/35/17/30 · General Dredging Course."
+      ]
+    },
+    {
+      "title": "Ferramentas & Sistemas",
+      "type": "bullets",
+      "bullets": [
+        "Planejamento & Controle: MS Project (conhecimento)",
+        "Dados & BI: Excel Avançado (dashboards, KPIs), Power BI",
+        "Desenvolvimento: HTML, CSS, JavaScript, Python (full-stack, autônomo)",
+        "Sistemas: Drake / SAP RT (Petrobras)",
+        "Metodologia: PMBOK, PCP"
+      ]
+    },
+    {
+      "title": "Publicação",
+      "type": "text",
+      "content": "Autor de \"Inglês Técnico Portuário e Offshore\" (ISBN 978-65-00-04579-6, 2020, com 3.000+ exemplares vendidos)."
+    },
+    {
+      "title": "Informações Adicionais",
+      "type": "bullets",
+      "bullets": [
+        "CREA ativo.",
+        "Inglês avançado; autor do guia técnico de inglês para o setor offshore e portuário.",
+        "CNH categoria B, com passaportes brasileiro e italiano (2027).",
+        "Baseado no Rio de Janeiro, disponibilidade imediata, incluindo viagens para visitar outros sites."
+      ]
+    }
+  ]
+}

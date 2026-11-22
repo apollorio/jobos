@@ -1,0 +1,40 @@
+{
+  "_part": {
+    "id": "04_experience/exp_macrolub_internship",
+    "title": "Estagio de Marketing - Macrolub (Aracruz-ES)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_chat_2026_11_19_audit"
+    ]
+  },
+  "data": {
+    "id": "exp_macrolub_internship",
+    "company": "Macrolub",
+    "company_context": "Distribuidora nacional de combustiveis/lubrificantes para postos de combustivel (descrito pelo Rafael como 'national seller to oil gas station')",
+    "location": "Aracruz - ES, Brasil",
+    "role": "Estagiario de Marketing",
+    "role_en": "Marketing Intern",
+    "period": {
+      "display": "UNKNOWN_NOT_DOCUMENTED",
+      "note": "Datas nao informadas (provavelmente durante a graduacao em Eng. Civil 2013-2018, Aracruz/ES); confirmar antes de usar datas."
+    },
+    "activities": [
+      "Preparacao de pecas graficas de toda a empresa",
+      "Criacao de materiais de campanhas e promocoes (promo)",
+      "Uso de Adobe Photoshop e CorelDRAW"
+    ],
+    "tools": [
+      "sw_photoshop",
+      "sw_coreldraw"
+    ],
+    "employment_type": "internship (nao conta como experiencia profissional para anos exigidos)",
+    "domain_tags": [
+      "marketing_design_graphics",
+      "oil_gas_downstream_retail"
+    ],
+    "evidence": "U",
+    "source": "src_chat_2026_11_19_audit",
+    "cv_rule": "Citar como 'Marketing Intern - Macrolub (fuel & lubricants distributor)'; so em CV de marketing/design/comunicacao/inovacao. Nao inventar metricas de campanhas.",
+    "link_to_other": "Coerente com branding/graficos do Dismantle e UX/UI do Apollo::rio."
+  }
+}

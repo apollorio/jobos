@@ -1,0 +1,383 @@
+{
+  "_part": {
+    "id": "05_projects/proj_sos_apollo",
+    "title": "SOS Apollo - runtime de redução de danos offline-first",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_tree_v1_2026_10_20",
+      "src_sos_registry"
+    ]
+  },
+  "data": {
+    "name": "SOS Apollo",
+    "type": "Projeto social de redução de danos",
+    "architecture": [
+      "offline-first PWA",
+      "local deterministic policy engine",
+      "hard safety rules",
+      "privacy-first",
+      "sem login",
+      "sem generative AI no runtime crítico",
+      "emergency access"
+    ],
+    "professional_signal": [
+      "risk logic",
+      "safety-first product design",
+      "architecture",
+      "documentation",
+      "ethical development"
+    ],
+    "evidence": "P",
+    "technical_characteristics_master_tree": [
+      "PWA offline-first",
+      "deterministic local policy engine",
+      "event → state → hard safety rules → risk/band → policy → skill/card",
+      "sem generative AI no runtime crítico",
+      "privacy-first",
+      "sem login",
+      "emergency access",
+      "auditable/testable logic"
+    ],
+    "fields_to_fill": {
+      "release_status": "UNKNOWN_NOT_DOCUMENTED",
+      "testers_or_users": "UNKNOWN_NOT_DOCUMENTED",
+      "test_suite_size": "UNKNOWN_NOT_DOCUMENTED",
+      "repo_url": "UNKNOWN_NOT_DOCUMENTED"
+    },
+    "domain_tags": [
+      "digital_data_technology",
+      "independent_projects_entrepreneurship",
+      "hseq_emergency_response"
+    ],
+    "source_refs": [
+      "src_independent_projects"
+    ],
+    "master_tree_v1": {
+      "type": "Projeto social / ferramenta offline-first de redução de danos",
+      "technical_characteristics": [
+        "PWA offline-first",
+        "deterministic local policy engine",
+        "event → state → hard safety rules → risk/band → policy → skill/card",
+        "sem generative AI no runtime crítico",
+        "privacy-first",
+        "sem login",
+        "emergency access",
+        "auditable/testable logic"
+      ]
+    },
+    "registry_ssot_summary": {
+      "meta": {
+        "app": "sos.apollo.rio.br",
+        "name": "SOS Apollo — Harm Control Runtime",
+        "registryVersion": "0.1.0",
+        "engineContract": 1,
+        "defaultLocale": "pt-BR",
+        "region": "BR",
+        "status": "draft",
+        "notes": "Single source of truth. Every ID used anywhere in code, locale or tests must be declared here. Changing this file requires: npm run registry:check (codegen + lint) and clinical review for any rule/card touching P0 or P1."
+      },
+      "conventions": {
+        "idPatterns": {
+          "signal": "^[a-z][a-zA-Z]+$",
+          "hardRule": "^HR-\\d{3}$",
+          "bandRule": "^BR-P[0-3]-\\d{2}$",
+          "policyRule": "^P[1-3]-\\d{3}$",
+          "question": "^Q_[A-Z_]+$",
+          "card": "^CARD_[A-Z0-9_]+$",
+          "skill": "^[a-z]+(_[a-z]+)*$",
+          "strategy": "^[a-z]+(_[a-z0-9]+)*$",
+          "commitment": "^[A-Z]+(_[A-Z]+)*$",
+          "textTrigger": "^TT-\\d{3}$",
+          "invalidation": "^INVAL-\\d{3}$",
+          "invariant": "^INV-\\d{3}$",
+          "law": "^L\\d{2}$",
+          "chip": "^CHIP_[A-Z_]+$"
+        },
+        "rules": [
+          "IDs are append-only. Never reuse a retired ID; mark it deprecated instead.",
+          "Numeric suffixes leave gaps of 10 in policy tables so rules can be inserted without renumbering.",
+          "Predicates are data (JSON DSL), never code. The explanation log is generated from the same predicate tree, so logic and 'why' can never drift apart.",
+          "Every card copy lives in registry/locales/<locale>.json and carries a review status."
+        ]
+      },
+      "laws": [
+        {
+          "id": "L01",
+          "text": "Event is fact. The app only records what it actually observed (a tap is a tap, not a completed call)."
+        },
+        {
+          "id": "L02",
+          "text": "State is temporary. Explicit event beats TTL; TTL beats stale data."
+        },
+        {
+          "id": "L03",
+          "text": "Escalate fast, de-escalate slow. Time never lowers severity; only explicit events do."
+        },
+        {
+          "id": "L04",
+          "text": "Hard rules beat everything. One P0 has exactly one commander (first matching rule wins)."
+        },
+        {
+          "id": "L05",
+          "text": "P0 does not optimize, it executes. Nothing is asked before the emergency action."
+        },
+        {
+          "id": "L06",
+          "text": "Silence raises uncertainty; it never invents a symptom. Background is not silence."
+        },
+        {
+          "id": "L07",
+          "text": "One foreground action, N background effects. The higher the criticality, the smaller the interface."
+        },
+        {
+          "id": "L08",
+          "text": "Ask only what can change what happens next (value of information)."
+        },
+        {
+          "id": "L09",
+          "text": "'Não consigo' invalidates the strategy, never the person."
+        },
+        {
+          "id": "L10",
+          "text": "Actor defines perspective, never identity. No login, no names, no phone numbers stored."
+        },
+        {
+          "id": "L11",
+          "text": "Emergency access does not depend on JavaScript staying alive. The app fails to the shell."
+        },
+        {
+          "id": "L12",
+          "text": "The real world beats the app. Nothing (captcha, network, onboarding) ever gates help."
+        }
+      ],
+      "storage": {
+        "engine": "indexeddb",
+        "pii": "none",
+        "retentionHours": 12,
+        "logMaxEntries": 500,
+        "neverStore": [
+          "names",
+          "phone_numbers",
+          "location",
+          "free_text"
+        ],
+        "doc": "Free text is matched locally and discarded; only the trigger id is logged."
+      },
+      "shield": {
+        "v1": {
+          "entryGate": "none",
+          "reason": "v1 has no server endpoint that can be abused: all handoffs are native links (tel:, sms:, wa.me). A captcha before help would break L12.",
+          "edge": [
+            "static hosting behind a CDN (absorbs volumetric attacks)",
+            "CSP: default-src 'self'; connect-src 'self' (no third-party endpoint exists to exfiltrate to)",
+            "no third-party scripts, no analytics, no fonts from CDNs",
+            "immutable hashed assets + Subresource Integrity"
+          ],
+          "humanSteps": "Grounding micro-games (breath_pacer) are calming interactions, never gates."
+        },
+        "v2": {
+          "serverEffects": [
+            "relay_sms_to_preconsented_contact",
+            "welfare_check_on_silence"
+          ],
+          "gate": "turnstile_invisible + proof_of_work + per-IP/per-device rate limits + country allowlist for SMS",
+          "neverGate": [
+            "P0",
+            "P1",
+            "emergency_shell",
+            "tel_links"
+          ],
+          "doc": "Only server effects that cost money or reach third parties are gated, and only outside P0/P1."
+        }
+      },
+      "counts": {
+        "conventions": 2,
+        "laws": 12,
+        "regions": 1,
+        "bands": 4,
+        "sources": 4,
+        "signals": 14,
+        "facts": 7,
+        "invalidation": 4,
+        "events": 18,
+        "questions": 10,
+        "textTriggers": 5,
+        "hardRules": 9,
+        "risk": 3,
+        "bandRules": 8,
+        "hysteresis": 2,
+        "requirements": 4,
+        "engagement": 4,
+        "silence": 7,
+        "commitments": 4,
+        "skills": 7,
+        "policies": 3,
+        "cards": 35,
+        "chips": 1,
+        "handoffTemplates": 1,
+        "invariants": 18,
+        "storage": 6,
+        "shield": 2
+      },
+      "hard_rules_ids": [
+        "HR-001",
+        "HR-002",
+        "HR-003",
+        "HR-004",
+        "HR-005",
+        "HR-006",
+        "HR-007",
+        "HR-008",
+        "HR-009"
+      ],
+      "invariants": [
+        {
+          "id": "INV-001",
+          "text": "band = P0 ⇒ skill = emergency_escalation (one commander).",
+          "enforcedBy": [
+            "runtime",
+            "exhaustive"
+          ]
+        },
+        {
+          "id": "INV-002",
+          "text": "Every decision yields exactly one foreground card.",
+          "enforcedBy": [
+            "types",
+            "runtime"
+          ]
+        },
+        {
+          "id": "INV-003",
+          "text": "The emergency affordance (tel:192) exists on every screen, outside the engine loop.",
+          "enforcedBy": [
+            "shell",
+            "e2e"
+          ]
+        },
+        {
+          "id": "INV-004",
+          "text": "companion = arrived ⇒ company ≠ alone.",
+          "enforcedBy": [
+            "runtime",
+            "property"
+          ]
+        },
+        {
+          "id": "INV-005",
+          "text": "A blocked strategy ('Não consigo') is never selected while blocked.",
+          "enforcedBy": [
+            "runtime",
+            "exhaustive"
+          ]
+        },
+        {
+          "id": "INV-006",
+          "text": "physicallyUnsafe = yes ⇒ no strategy that requires movement or a safe location.",
+          "enforcedBy": [
+            "runtime",
+            "exhaustive"
+          ]
+        },
+        {
+          "id": "INV-007",
+          "text": "Latched critical values never expire by TTL; only CORRECTION or HELP_ON_SCENE leave P0.",
+          "enforcedBy": [
+            "property",
+            "scenario"
+          ]
+        },
+        {
+          "id": "INV-008",
+          "text": "Card actions/answers/characters respect the engagement budget of the band.",
+          "enforcedBy": [
+            "lint",
+            "runtime"
+          ]
+        },
+        {
+          "id": "INV-009",
+          "text": "No question is asked more than maxAsks, nor re-asked inside its cooldown after 'Não sei'.",
+          "enforcedBy": [
+            "runtime",
+            "property"
+          ]
+        },
+        {
+          "id": "INV-010",
+          "text": "decide() is total: every reachable abstract state yields a valid decision.",
+          "enforcedBy": [
+            "exhaustive",
+            "lint"
+          ]
+        },
+        {
+          "id": "INV-011",
+          "text": "decide() is deterministic: same state + same time ⇒ same decision.",
+          "enforcedBy": [
+            "property"
+          ]
+        },
+        {
+          "id": "INV-012",
+          "text": "substanceClass only ever comes from an explicit user answer.",
+          "enforcedBy": [
+            "runtime",
+            "lint"
+          ]
+        },
+        {
+          "id": "INV-013",
+          "text": "Silence is only counted while the page was visible for the whole window.",
+          "enforcedBy": [
+            "scenario",
+            "property"
+          ]
+        },
+        {
+          "id": "INV-014",
+          "text": "Education content only in bands where engagement.education = true.",
+          "enforcedBy": [
+            "lint"
+          ]
+        },
+        {
+          "id": "INV-015",
+          "text": "A stale card tap is rejected — except an emergency handoff, which is always honored.",
+          "enforcedBy": [
+            "scenario"
+          ]
+        },
+        {
+          "id": "INV-016",
+          "text": "src/core imports nothing from runtime/ui and performs no I/O (no fetch, no Date.now, no DOM).",
+          "enforcedBy": [
+            "architecture-test",
+            "csp"
+          ]
+        },
+        {
+          "id": "INV-017",
+          "text": "P0 never asks a question before showing the emergency action.",
+          "enforcedBy": [
+            "exhaustive"
+          ]
+        },
+        {
+          "id": "INV-018",
+          "text": "Every band's policy table ends in an always-eligible rule (totality by construction).",
+          "enforcedBy": [
+            "lint"
+          ]
+        }
+      ],
+      "registry_file": "____json/registry.json (original, 56 KB, mantido intacto)"
+    },
+    "metrics_refs": [
+      "proj_sos.release_status",
+      "proj_sos.testers_or_users",
+      "proj_sos.test_suite_size"
+    ]
+  }
+}

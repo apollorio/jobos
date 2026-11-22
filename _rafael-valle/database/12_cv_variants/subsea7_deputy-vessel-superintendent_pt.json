@@ -1,0 +1,149 @@
+{
+  "_part": {
+    "id": "12_cv_variants/subsea7_deputy-vessel-superintendent_pt",
+    "title": "CV: Subsea7 - Deputy Vessel Superintendent (pt)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_cv_subsea7_deputy_vessel_superintendent_pt"
+    ]
+  },
+  "data": {
+    "target": {
+      "company": "Subsea7",
+      "role": "Deputy Vessel Superintendent",
+      "job_ref": null,
+      "language": "pt",
+      "date": "2026-10-07",
+      "archetype": "vessel_superintendent_marine_ops",
+      "status": "final_preferred"
+    },
+    "cv": {
+      "name": "RAFAEL PERINI VALLE",
+      "subtitle": "SUPERINTENDENTE DE OPERAÇÕES MARÍTIMAS | VESSEL–SHORE INTERFACE",
+      "tagline": "Operações de Embarcações · HSEQ · Emergency Response (ERC) · Prontidão Operacional · Custos & Materiais",
+      "contact": {
+        "location": "Rio de Janeiro – RJ, Brasil",
+        "email": "rafapevalle@gmail.com",
+        "phone": "+55 (21) 97955-4496",
+        "linkedin": "https://www.linkedin.com/in/rpvalle",
+        "linkedinLabel": "linkedin.com/in/rpvalle"
+      },
+      "sections": [
+        {
+          "title": "Resumo Profissional",
+          "type": "bullets",
+          "bullets": [
+            "Engenheiro Civil com CREA ativo, MBA em Gestão de Projetos e formação complementar em Engenharia de Segurança do Trabalho e Construção Naval e Offshore.",
+            "3 anos e 5 meses como Superintendente na Van Oord, mais vivência offshore anterior, atuando na interface base–embarcação com comandantes, equipes onshore/offshore, clientes, terminais, agentes marítimos, fornecedores e QHSE.",
+            "Experiência com prontidão operacional de embarcações e meios de apoio, inspeções, tratamento de pendências, planejamento de recursos, materiais e serviços, além de acompanhamento de custos, medições e performance operacional.",
+            "Atuei também como Emergency Response Coordinator (ERC), coordenando simulados de resposta, medindo tempos de ambulância, hospital e lancha até a embarcação, emitindo relatório pós-exercício e acompanhando pontos de melhoria.",
+            "Inglês fluente e experiência profissional sob requisitos IMO, ISM Code, SOLAS, MARPOL e NORMAM, com forte atuação em HSEQ, incidentes, Medevac e documentação operacional."
+          ]
+        },
+        {
+          "title": "Experiência Profissional",
+          "type": "entries",
+          "entries": [
+            {
+              "role": "Superintendente | Operações Marítimas & Vessel–Shore Interface",
+              "company": "Van Oord",
+              "location": "Rio de Janeiro / costa brasileira",
+              "period": "Jul 2021 – Nov 2024",
+              "bullets": [
+                "Atuei como ponto focal operacional entre base e embarcações, mantendo interface diária com comandantes, equipes de bordo, clientes, QHSE, terminais, agentes marítimos, fornecedores e escritório para assegurar prontidão e continuidade das operações.",
+                "Coordenei necessidades operacionais de TSHD, WID, rebocadores e embarcações de apoio, incluindo atracação/desatracação, bunkering, crew changes, transporte de pessoas e materiais, resíduos, suprimentos e serviços de apoio.",
+                "Como Emergency Response Coordinator (ERC), coordenei simulados com tripulante como vítima, medindo tempos de resposta de lancha/embarcação, ambulância e hospital; fechei cada exercício com relatório de desempenho, falhas observadas e ações de melhoria.",
+                "Participei da coordenação de mais de cinco Medevacs reais e do tratamento de ocorrências operacionais em interface com comandante, QHSE, equipes de resposta e gestão do projeto.",
+                "Controlei relatórios e inspeções do projeto envolvendo escritório e veículos onshore, lanchas rápidas/voadeiras, rebocadores, embarcações de apoio e navios, identificando irregularidades e acompanhando pendências de segurança e prontidão até sua tratativa.",
+                "Acompanhei materiais, serviços, fornecedores, custos, medições, claims e impactos operacionais, mantendo visibilidade para a gestão sobre necessidades, desvios e continuidade da operação.",
+                "Mantive procedimentos, registros, handovers e relatórios operacionais atualizados, com foco em HSEQ, rastreabilidade e conformidade com requisitos aplicáveis, incluindo IMO, ISM Code, SOLAS, MARPOL e NORMAM."
+              ]
+            },
+            {
+              "role": "Analista de Operações | Offshore, FPSO/OSV & Readiness",
+              "company": "C-Tank",
+              "location": "Niterói – RJ",
+              "period": "Out 2020 – Jun 2021",
+              "bullets": [
+                "Planejei e acompanhei campanhas offshore de manutenção e limpeza em FPSOs e OSVs, coordenando equipes, materiais, fornecedores, documentação, prazos e prontidão operacional.",
+                "Acompanhei a execução por meio de DPR/RDO, controles operacionais e indicadores, tratando pendências de pessoal, materiais, logística e acesso para manter o serviço dentro do planejamento.",
+                "Utilizei Petrobras Drake e SAP RT em processos de mobilização, qualificação e logística offshore, incluindo suporte a POB, documentação, transporte e programação de embarque.",
+                "Atuei na interface com clientes e contratadas como Shell, Transocean e Helix, apoiando entregáveis, medições, custos, serviços, fornecedores e requisitos de execução.",
+                "Participei diretamente da preparação da empresa para ISO 9001, mapeando processos, elaborando procedimentos e estruturando práticas de controle documental e rastreabilidade."
+              ]
+            },
+            {
+              "role": "Assistente de Operações Sênior",
+              "company": "C-Tank",
+              "location": "Niterói – RJ",
+              "period": "Jul 2020 – Out 2020",
+              "bullets": [
+                "Suporte às operações portuárias e offshore, com mobilização de pessoas e materiais, requisições de transporte, documentação, credenciamento Petrobras DRAKE e controle de prontidão operacional."
+              ]
+            },
+            {
+              "role": "Instrutor de Inglês Técnico Offshore",
+              "company": "Toolvox",
+              "location": "Offshore — navios-sonda de águas ultraprofundas no pré-sal",
+              "period": "Dez 2018 – Mai 2020",
+              "bullets": [
+                "Atuei embarcado em navios-sonda, treinando equipes multinacionais em inglês técnico marítimo/offshore e apoiando tradução e interpretação de SOPs, toolbox talks, procedimentos e comunicações operacionais e de emergência.",
+                "Desenvolvi forte capacidade de comunicação técnica entre equipes brasileiras e estrangeiras em ambiente offshore de alta criticidade."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Desenvolvimento Profissional Atual",
+          "type": "text",
+          "content": "Nov 2024–Presente · Desenvolvimento profissional e projetos independentes com foco em Engenharia de Segurança do Trabalho, análise de dados, dashboards, automação, documentação e estruturação de processos. Disponibilidade imediata para retorno integral às áreas de Vessel Management, Operações Marítimas e Projetos Offshore."
+        },
+        {
+          "title": "Formação Acadêmica",
+          "type": "lines",
+          "lines": [
+            "Pós-graduação: Engenharia de Segurança do Trabalho — Universidade Cruzeiro do Sul",
+            "Pós-graduação: Engenharia de Construção Naval e Offshore — UCP",
+            "MBA: Gestão de Projetos (PMBOK) — USP / ESALQ",
+            "Graduação: Engenharia Civil — UNIVIX / Multivix",
+            "Técnico: Portos — IFES"
+          ]
+        },
+        {
+          "title": "Certificações & Formação Complementar",
+          "type": "bullets",
+          "bullets": [
+            "CBSP, BOSIET e HUET/T-HUET realizados; reciclagem pendente.",
+            "General Dredging Course · Planejamento e Controle da Produção (PCP) · MS Project.",
+            "NR-30, NR-33, NR-34, NR-35 e demais treinamentos de segurança realizados ao longo da atuação marítima/offshore."
+          ]
+        },
+        {
+          "title": "Ferramentas & Sistemas",
+          "type": "bullets",
+          "bullets": [
+            "Excel Avançado, Power BI e MS Project.",
+            "Petrobras Drake / SAP RT.",
+            "Controle operacional de materiais, serviços, fornecedores, custos, medições, registros e relatórios.",
+            "HSEQ & Emergência: ERC, simulados de resposta, Medevac, inspeções, incidentes, ações corretivas e requisitos IMO / ISM / SOLAS / MARPOL / NORMAM."
+          ]
+        },
+        {
+          "title": "Publicação",
+          "type": "text",
+          "content": "Autor de “Inglês Técnico Portuário e Offshore” (ISBN 978-65-00-04579-6), com mais de 3.000 exemplares vendidos."
+        },
+        {
+          "title": "Informações Adicionais",
+          "type": "bullets",
+          "bullets": [
+            "CREA ativo.",
+            "Português nativo e inglês fluente, utilizado profissionalmente em operações offshore e equipes multiculturais.",
+            "Baseado no Rio de Janeiro, com disponibilidade imediata para atuação em escritório, viagens, visitas técnicas e embarques esporádicos.",
+            "CNH categoria B · Passaportes brasileiro e italiano."
+          ]
+        }
+      ]
+    }
+  }
+}

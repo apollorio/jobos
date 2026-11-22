@@ -1,0 +1,38 @@
+{
+  "_part": {
+    "id": "06_skills/oil_gas",
+    "title": "Óleo & Gás offshore",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "direct_offshore_exposure": [
+      "FPSO support/maintenance campaigns",
+      "OSV support",
+      "ultra-deepwater drillships",
+      "Petrobras operational/logistics environment"
+    ],
+    "clients_contractors_exposure": [
+      "Shell",
+      "Transocean",
+      "Helix",
+      "Petrobras environment"
+    ],
+    "strengths": [
+      "mobilization/readiness",
+      "materials/logistics",
+      "DPR/RDO",
+      "Petrobras systems",
+      "POB",
+      "PHTD",
+      "offshore safety communication"
+    ],
+    "boundaries": [
+      "não operador de produção FPSO",
+      "não owner de COW/inerting/ballast/BWTS/offloading",
+      "não Master Mariner"
+    ]
+  }
+}

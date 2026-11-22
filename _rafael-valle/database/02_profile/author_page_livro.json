@@ -1,0 +1,52 @@
+{
+  "_part": {
+    "id": "02_profile/author_page_livro",
+    "title": "Pagina do autor - livro.rvalle.com.br/autor/ (texto publico)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_chat_2026_11_19_audit"
+    ]
+  },
+  "data": {
+    "url": "https://livro.rvalle.com.br/autor/",
+    "evidence": "D (site proprio do Rafael; texto de marketing, nao auditado por terceiros)",
+    "book": {
+      "title": "Ingles Tecnico Portuario e Offshore - Guia pratico para o profissional do setor",
+      "isbn": "978-65-00-04579-6",
+      "author": "Rafael Perini Valle",
+      "claims": [
+        "Primeiro livro brasileiro sobre ingles tecnico portuario e offshore",
+        "Mais de 3 mil profissionais ja utilizaram o livro em bordo, cais e operacoes offshore",
+        "Faz parte da ementa disciplinar de cursos de escolas tecnicas, programas de qualificacao e treinamentos corporativos de empresas portuarias",
+        "Usado para certificacoes e ambientacao de novos tripulantes",
+        "Facilita comunicacao entre equipes internacionais, aumentando seguranca e eficiencia operacional"
+      ],
+      "shipping": "Correios; ate 10 dias uteis (Grande Rio ~3, Sudeste ~5, demais 7-10)",
+      "copyright": "(c) 2020-2025 Todos os direitos reservados - Autoria de Rafael Valle"
+    },
+    "author_tagline": "Engenheiro Civil | Tecnico Portos & Operacoes Maritimas | MBA Gestao de Projetos | Pos-grad. Engenharia de Seguranca do Trabalho | Pos-grad. Engenharia Naval e Offshore | Autor do livro 'Ingles Tecnico Portuario & Offshore', 2020",
+    "narrative": [
+      "Alia excelencia tecnica a vivencia pratica no setor maritimo",
+      "Do trabalho embarcado a pos-graduacao em Engenharia e Projetos",
+      "Lideranca em solucoes educacionais no setor portuario (afirmacao do site)",
+      "Constroi produtos e experiencias que traduzem complexidade em clareza"
+    ],
+    "personal_projects_listed": [
+      "Livro tecnico",
+      "Apollo::rio - rede colaborativa de cultura e eventos que une DJs, produtores e espacos, com foco em apoio mutuo, inovacao e leveza",
+      "Dismantle.art"
+    ],
+    "contacts_public": {
+      "emails": [
+        "rafael@rvalle.com.br",
+        "livro@rvalle.com.br"
+      ],
+      "city": "Rio de Janeiro, RJ, Brasil",
+      "linkedin": "https://www.linkedin.com/in/rpvalle"
+    },
+    "inconsistencies_noted": [
+      "A pagina repete o texto do livro na descricao do Dismantle.art (placeholder); descricao real em 05_projects/proj_dismantle.json",
+      "'3 mil profissionais' (site) vs '3.000+ exemplares vendidos' (CVs): usar '3.000+ exemplares' como numero verificavel"
+    ]
+  }
+}

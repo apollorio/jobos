@@ -1,0 +1,49 @@
+{
+  "_part": {
+    "id": "06_skills/project_management",
+    "title": "Gestão de projetos",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "formal_education": {
+      "degree": "MBA Gestão de Projetos",
+      "institution": "USP/ESALQ",
+      "workload": "400h",
+      "framework": "PMI/PMBOK",
+      "coverage": [
+        "concepção",
+        "planejamento",
+        "execução",
+        "controle",
+        "encerramento",
+        "portfolio control",
+        "feasibility",
+        "physical-financial schedules"
+      ]
+    },
+    "professional_application": [
+      "Van Oord projects",
+      "supplier coordination",
+      "costs",
+      "claims",
+      "schedule",
+      "risk",
+      "stakeholder interfaces",
+      "execution",
+      "reporting",
+      "measurement",
+      "closeout"
+    ],
+    "pmp_evidence": {
+      "verified_daily_records": 586,
+      "original_x_marks": 566,
+      "signed_timesheet_days_added": 20,
+      "calendar_months_with_direct_evidence": 32,
+      "rule": "não inventar datas ou sobreposição para atingir meses",
+      "mba_education": "400h oferece base forte para requisito educacional; manter certificado/histórico"
+    }
+  }
+}

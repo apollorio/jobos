@@ -1,0 +1,242 @@
+{
+  "_part": {
+    "id": "06_skills/software/additional_atomic_tools",
+    "title": "Software/sistemas: additional_atomic_tools",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723"
+    ]
+  },
+  "data": {
+    "nodes": {
+      "sw_websocket": {
+        "name": "WebSocket",
+        "type": "Real-time web communication",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio chat/open-session architecture"
+        ],
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ],
+        "evidence": "P",
+        "cv_default": false
+      },
+      "sw_sse": {
+        "name": "Server-Sent Events (SSE)",
+        "type": "Real-time server-to-client web communication",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio chat/open-session architecture"
+        ],
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ],
+        "evidence": "P",
+        "cv_default": false
+      },
+      "sw_vapid": {
+        "name": "VAPID / Web Push authentication",
+        "type": "Web Push application-server authentication",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio PWA / background notifications"
+        ],
+        "used_in": [
+          "proj_apollo",
+          "proj_sos"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ],
+        "evidence": "P",
+        "cv_default": false
+      },
+      "sw_localstorage": {
+        "name": "Web Storage / localStorage",
+        "type": "Browser storage API",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio preferences/dark-mode state"
+        ],
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ],
+        "evidence": "P",
+        "cv_default": false
+      },
+      "sw_remix_icons": {
+        "name": "Remix Icon",
+        "type": "Icon library",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio front-end"
+        ],
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ],
+        "evidence": "P",
+        "cv_default": false
+      },
+      "sw_gsap_scrolltrigger": {
+        "name": "GSAP ScrollTrigger",
+        "type": "GSAP plugin",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio animation system"
+        ],
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ],
+        "evidence": "P",
+        "cv_default": false
+      },
+      "sw_gsap_observer": {
+        "name": "GSAP Observer",
+        "type": "GSAP plugin",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio interaction system"
+        ],
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ],
+        "evidence": "P",
+        "cv_default": false
+      },
+      "sw_gsap_flip": {
+        "name": "GSAP Flip",
+        "type": "GSAP plugin",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio animation system"
+        ],
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ],
+        "evidence": "P",
+        "cv_default": false
+      },
+      "sw_gsap_splittext": {
+        "name": "GSAP SplitText",
+        "type": "GSAP plugin",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio typography animation"
+        ],
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ],
+        "evidence": "P",
+        "cv_default": false
+      },
+      "sw_gsap_motionpath": {
+        "name": "GSAP MotionPathPlugin",
+        "type": "GSAP plugin",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio animation system"
+        ],
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ],
+        "evidence": "P",
+        "cv_default": false
+      },
+      "sw_gsap_morphsvg": {
+        "name": "GSAP MorphSVGPlugin",
+        "type": "GSAP plugin",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio animation system"
+        ],
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ],
+        "evidence": "P",
+        "cv_default": false
+      },
+      "sw_gsap_textplugin": {
+        "name": "GSAP TextPlugin",
+        "type": "GSAP plugin",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio typography/text animation"
+        ],
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ],
+        "evidence": "P",
+        "cv_default": false
+      },
+      "sw_shotgun": {
+        "name": "Shotgun",
+        "type": "Event ticketing platform",
+        "status": "used/proven independent-project",
+        "contexts": [
+          "DISMANTLE #1 ticketing / invitations / event records"
+        ],
+        "used_in": [
+          "proj_dismantle"
+        ],
+        "domain_tags": [
+          "independent_projects",
+          "event_operations"
+        ],
+        "evidence": "D",
+        "cv_default": false
+      },
+      "sw_hoppin": {
+        "name": "Hoppin",
+        "type": "On-site event access / POS reporting platform",
+        "status": "used/proven independent-project",
+        "contexts": [
+          "DISMANTLE #1 door entries / on-site sales / bar reporting"
+        ],
+        "used_in": [
+          "proj_dismantle"
+        ],
+        "domain_tags": [
+          "independent_projects",
+          "event_operations"
+        ],
+        "evidence": "D",
+        "cv_default": false
+      }
+    }
+  }
+}

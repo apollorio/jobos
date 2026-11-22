@@ -1,0 +1,221 @@
+{
+  "_part": {
+    "id": "04_experience/cv_bullet_bank",
+    "title": "Banco de bullets validados para CV (PT/EN)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_260723"
+    ]
+  },
+  "data": {
+    "cv_ready_experience": {
+      "note": {
+        "pt": "Bancos de bullets já validados e aprovados nesta sessão para uso direto no CV (2 páginas). 'planning' é usado pelos perfis Planejamento/Controle e Gestão de Projetos; 'general' é usado pelos perfis Operações, HSSE e Inovação/Digital.",
+        "en": "Bullet banks already validated and approved in this session for direct 2-page CV use. 'planning' feeds the Planning/Controls and Project Management profiles; 'general' feeds Operations, HSSE and Innovation/Digital profiles."
+      },
+      "planning": [
+        {
+          "role": {
+            "pt": "Superintendente de Operações Marítimas (Planejamento & Controle)",
+            "en": "Marine Operations Superintendent (Planning & Project Controls)"
+          },
+          "company": "Van Oord",
+          "location": {
+            "pt": "Rio de Janeiro / costa brasileira",
+            "en": "Rio de Janeiro / Brazilian coast"
+          },
+          "period": "Jul 2021 – Nov 2024",
+          "bullets": {
+            "pt": [
+              "Desenvolvi e controlei cronogramas de projeto (baseline, sequenciamento, caminho crítico, durações-chave e marcos) alinhados à estratégia de execução, com PCP / MS Project.",
+              "Monitorei o status do projeto para identificar atrasos; executei análise de desvios, planos de ação corretivos e forecast em ciclos de 15 dias.",
+              "Acompanhei avanço físico e KPIs (produção/batimetria, disponibilidade, consumo); construí dashboards e relatórios diários/semanais/mensais.",
+              "Apoiei aprovação de baseline, avanço declarado e marcos junto ao cliente; gestão de mudanças, claims, medições e controle de custos/prazos."
+            ],
+            "en": [
+              "Developed and controlled project schedules (baseline, sequencing, critical path, key durations and milestones) aligned with the execution strategy, using PCP / MS Project.",
+              "Monitored project status to identify delays; ran deviation analysis, corrective action plans and 15-day rolling forecasts.",
+              "Tracked physical progress and KPIs (production/bathymetry, availability, consumption); built dashboards and daily/weekly/monthly reports.",
+              "Supported baseline approval, declared progress and milestones with the client; change management, claims, measurements and cost/deadline control."
+            ]
+          }
+        },
+        {
+          "role": {
+            "pt": "Analista de Operações Pleno (Planejamento & Controle Offshore)",
+            "en": "Operations Analyst (Offshore Planning & Control)"
+          },
+          "company": "C-Tank",
+          "location": "Niterói – RJ",
+          "period": "Oct 2020 – Jun 2021",
+          "bullets": {
+            "pt": [
+              "Planejei campanhas de manutenção e limpeza offshore (OSVs/FPSOs): equipes, materiais, prazos e prontidão, com relatórios diários (DPR/RDO) e KPIs.",
+              "Apoiei o controle contratual: entregáveis, indicadores, validação de medições e custos; compliance Petrobras (Drake/SAP RT) e agendamento PHTD.",
+              "Mapeei processos internos e apoiei a implementação ISO 9000; estruturei sistemas de dados e relatórios."
+            ],
+            "en": [
+              "Planned offshore maintenance and cleaning campaigns (OSVs/FPSOs): teams, materials, deadlines and readiness, with daily reporting (DPR/RDO) and KPIs.",
+              "Supported contract control: deliverables, indicators, measurement validation and cost tracking; Petrobras compliance (Drake/SAP RT) and PHTD scheduling.",
+              "Mapped internal processes and supported ISO 9000 implementation; structured data and reporting systems."
+            ]
+          }
+        },
+        {
+          "role": {
+            "pt": "Assistente de Operações Sênior",
+            "en": "Senior Operations Assistant"
+          },
+          "company": "C-Tank",
+          "location": "Niterói – RJ",
+          "period": "Jul 2020 – Oct 2020",
+          "bullets": {
+            "pt": [
+              "Suporte a operações e logística; credenciamento DRAKE para clientes Tier-1 (Shell, Transocean, Helix); agendamento, requisições de transporte e protocolos de prontidão."
+            ],
+            "en": [
+              "Operations & logistics support; DRAKE credentialing for Tier-1 clients (Shell, Transocean, Helix); scheduling, transport requests and readiness protocols."
+            ]
+          }
+        },
+        {
+          "role": {
+            "pt": "Instrutor de Inglês Técnico Offshore / Ponte de Comunicação",
+            "en": "Offshore Technical-English Instructor / Communication Bridge"
+          },
+          "company": "Toolvox",
+          "location": "Offshore (NS-43, NS-51)",
+          "period": "Dec 2018 – May 2020",
+          "bullets": {
+            "pt": [
+              "Treinamento de inglês técnico e tradução de SOPs em navios-sonda; ponte de comunicação entre equipes multinacionais — base do meu inglês avançado em uso diário."
+            ],
+            "en": [
+              "Technical-English training and SOP translation on drillships; communication bridge across multinational crews; the foundation of my advanced English in daily use."
+            ]
+          }
+        },
+        {
+          "role": {
+            "pt": "Estagiário de Engenharia (Pesquisa Internacional)",
+            "en": "Engineering Intern (International Research)"
+          },
+          "company": "NTUA (Athens) & BAM (Berlin)",
+          "location": "",
+          "period": "2015 & 2018",
+          "bullets": {
+            "pt": [
+              "NTUA (Grécia): projeto MATCH, fadiga sísmica. BAM (Alemanha): cimento bio-baseado, com coleta rigorosa e análise de dados."
+            ],
+            "en": [
+              "NTUA (Greece): MATCH project, seismic fatigue. BAM (Germany): bio-based cement, with rigorous data collection and analysis."
+            ]
+          }
+        }
+      ],
+      "general": [
+        {
+          "role": {
+            "pt": "Superintendente de Operações Marítimas (Planejamento & Performance)",
+            "en": "Marine Operations Superintendent (Planning & Performance)"
+          },
+          "company": "Van Oord",
+          "location": {
+            "pt": "Rio de Janeiro / costa brasileira",
+            "en": "Rio de Janeiro / Brazilian coast"
+          },
+          "period": "Jul 2021 – Nov 2024",
+          "bullets": {
+            "pt": [
+              "Coordenação técnica de embarcações TSHD, WID e rebocadores em múltiplos portos brasileiros.",
+              "Planejamento operacional, caminho crítico, análise de desvios e forecast (PCP / MS Project).",
+              "KPIs: produção (batimetria), disponibilidade e consumo. Dashboards e relatórios (DPR).",
+              "Coordenador de Emergências (ERT): 5+ Medevacs reais; investigação de incidentes (QHSE).",
+              "Logística de frota: atracação, bunkering, crew change, SIMOPS. NORMAM-12/IMO/SOLAS/MARPOL."
+            ],
+            "en": [
+              "Technical coordination of TSHD, WID and tug vessels across multiple Brazilian ports.",
+              "Operational planning, critical path, deviation analysis and forecasting (PCP / MS Project).",
+              "KPIs: production (bathymetry), availability, fuel consumption. Dashboards and DPR reporting.",
+              "Emergency Response Coordinator (ERT): 5+ real Medevacs; incident investigation (QHSE).",
+              "Fleet logistics: berthing, bunkering, crew change, SIMOPS. NORMAM-12/IMO/SOLAS/MARPOL."
+            ]
+          }
+        },
+        {
+          "role": {
+            "pt": "Analista de Operações (Planejamento Offshore)",
+            "en": "Operations Analyst (Offshore Planning)"
+          },
+          "company": "C-Tank",
+          "location": "Niterói – RJ",
+          "period": "Oct 2020 – Jun 2021",
+          "bullets": {
+            "pt": [
+              "Planejamento de manutenção/limpeza em navios offshore e FPSOs; DPR/RDO e controle contratual.",
+              "Drake/SAP RT (Petrobras) para compliance e agendamento PHTD; mapeamento de processos e ISO 9000.",
+              "Concepção de plataforma digital integrando almoxarifado, RH, financeiro e documentação."
+            ],
+            "en": [
+              "Planning of maintenance/cleaning on offshore vessels and FPSOs; DPR/RDO and contract control.",
+              "Drake/SAP RT (Petrobras) for compliance and PHTD scheduling; process mapping and ISO 9000.",
+              "Concept of a digital platform linking warehouse, HR, finance and documentation."
+            ]
+          }
+        },
+        {
+          "role": {
+            "pt": "Assistente de Operações Sênior",
+            "en": "Senior Operations Assistant"
+          },
+          "company": "C-Tank",
+          "location": "Niterói – RJ",
+          "period": "Jul 2020 – Oct 2020",
+          "bullets": {
+            "pt": [
+              "Suporte a operações portuárias; credenciamento DRAKE para Shell, Transocean, Helix; agendamento logístico e notas fiscais."
+            ],
+            "en": [
+              "Port operations support; DRAKE credentialing for Shell, Transocean, Helix; logistics scheduling and invoicing."
+            ]
+          }
+        },
+        {
+          "role": {
+            "pt": "Instrutor de Inglês Técnico Offshore",
+            "en": "Offshore Technical-English Instructor"
+          },
+          "company": "Toolvox",
+          "location": "Offshore (NS-43, NS-51)",
+          "period": "Dec 2018 – May 2020",
+          "bullets": {
+            "pt": [
+              "Treinamento de inglês técnico, tradução de SOPs e ponte de comunicação entre equipes multinacionais."
+            ],
+            "en": [
+              "Technical-English training, SOP translation and communication bridge across multinational crews."
+            ]
+          }
+        },
+        {
+          "role": {
+            "pt": "Estagiário de Engenharia (Pesquisa Internacional)",
+            "en": "Engineering Intern (International Research)"
+          },
+          "company": "NTUA (Athens) & BAM (Berlin)",
+          "location": "",
+          "period": "2015 & 2018",
+          "bullets": {
+            "pt": [
+              "NTUA: fadiga sísmica (projeto MATCH). BAM: cimento bio-baseado, com coleta e análise rigorosa de dados."
+            ],
+            "en": [
+              "NTUA: seismic fatigue (MATCH project). BAM: bio-based cement, with rigorous data collection and analysis."
+            ]
+          }
+        }
+      ]
+    },
+    "note": "'planning' alimenta perfis Planejamento/Controle e Gestão de Projetos; 'general' alimenta Operações, HSSE e Inovação/Digital."
+  }
+}

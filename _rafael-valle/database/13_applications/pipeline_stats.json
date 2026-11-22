@@ -1,0 +1,104 @@
+{
+  "_part": {
+    "id": "13_applications/pipeline_stats",
+    "title": "Estatísticas do pipeline de vagas",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_jobos_export_2026_08_26",
+      "src_attachments_inventory_2026_10_22"
+    ]
+  },
+  "data": {
+    "last_export": {
+      "hash": "027d460801b0cb76",
+      "gerado_em": "2026-08-26T13:21:40",
+      "totais": {
+        "vagas": 65,
+        "candidaturas": 28,
+        "recomendadas": 25,
+        "limitrofes": 30
+      }
+    },
+    "inventory_observed_metrics": {
+      "web_company_count": 28,
+      "web_job_count": 252,
+      "web_source_kinds": {
+        "gupy": 13,
+        "sf": 4,
+        "workday": 4,
+        "smart": 2,
+        "inhire": 1,
+        "oracle": 1,
+        "dof": 1,
+        "bram": 1,
+        "greenhouse": 1
+      },
+      "profile_top_level_modules": [
+        "meta",
+        "identity",
+        "career_summary",
+        "domain_tree",
+        "experience_nodes",
+        "project_portfolio_tree",
+        "vessel_asset_tree",
+        "software_systems_tree",
+        "methodologies_processes_tree",
+        "oil_gas_tree",
+        "maintenance_repairs_tree",
+        "project_management_tree",
+        "quality_hseq_tree",
+        "standards_and_regulatory_coverage",
+        "education_tree",
+        "certification_training_tree",
+        "publication_tree",
+        "volunteer_leadership_tree",
+        "stakeholder_client_tree",
+        "interview_story_bank",
+        "positioning_layer",
+        "role_fit_tree",
+        "truth_boundaries",
+        "metrics_register",
+        "mobility_and_preferences",
+        "source_registry",
+        "indexes",
+        "evidence_catalog",
+        "known_unknowns_and_conflicts",
+        "career_reentry",
+        "creative_event_background"
+      ],
+      "legacy_sqlite": {
+        "jobs": 1118,
+        "events": 2295,
+        "runs": 251,
+        "application_states": [
+          {
+            "status": "applied",
+            "provenance": null,
+            "count": 15
+          },
+          {
+            "status": "applied",
+            "provenance": "auto_sugerida",
+            "count": 13
+          },
+          {
+            "status": "new",
+            "provenance": null,
+            "count": 1090
+          }
+        ],
+        "integrity_check": "ok"
+      }
+    },
+    "inventory_flags": {
+      "schema_version": 1,
+      "inspection_date": "2026-10-22",
+      "timezone": "America/Sao_Paulo",
+      "method": "static source inspection; sqlite read-only inspection; no legacy engine execution; public primary-source lookup",
+      "local_machine_accessed": false,
+      "system_implemented": false,
+      "schedule_installed": false,
+      "external_email_sent": false
+    }
+  }
+}

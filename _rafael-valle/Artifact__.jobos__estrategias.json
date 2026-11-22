@@ -1,0 +1,62 @@
+{
+ "Equinor": {
+  "estrategia": "workday padrao",
+  "estado": "online"
+ },
+ "Norsul": {
+  "estrategia": "gupy completa",
+  "estado": "online"
+ },
+ "Subsea7": {
+  "estrategia": "j2w sitemap",
+  "estado": "online"
+ },
+ "PRIO": {
+  "estrategia": "gupy completa",
+  "estado": "online"
+ },
+ "MODEC": {
+  "estrategia": "gupy completa",
+  "estado": "online"
+ },
+ "DOF": {
+  "estrategia": "web:webflow_dof",
+  "estado": "online"
+ },
+ "SBM Offshore": {
+  "estrategia": "j2w busca",
+  "estado": "online"
+ },
+ "Trident Energy": {
+  "estrategia": "web:workable",
+  "estado": "vazia"
+ },
+ "Transocean": {
+  "estrategia": "workday dc configurado",
+  "estado": "online"
+ },
+ "Sapura": {
+  "estrategia": "web:vagas_com_br",
+  "estado": "vazia"
+ },
+ "OceanPact": {
+  "estrategia": "inhire com tenant",
+  "estado": "online"
+ },
+ "Yinson": {
+  "estrategia": "j2w sitemap",
+  "estado": "online"
+ },
+ "Brava Energia": {
+  "estrategia": "gupy completa",
+  "estado": "online"
+ },
+ "Bram Offshore": {
+  "estrategia": "totvs extended",
+  "estado": "online"
+ },
+ "Capco": {
+  "estrategia": "greenhouse com descricao",
+  "estado": "online"
+ }
+}

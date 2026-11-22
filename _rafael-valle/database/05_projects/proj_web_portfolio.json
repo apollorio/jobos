@@ -1,0 +1,23 @@
+{
+  "_part": {
+    "id": "05_projects/proj_web_portfolio",
+    "title": "Portfólio web pessoal (rvalle.com.br e subdomínios)",
+    "updated": "2026-11-19",
+    "sources": ["src_master_final_2026_10_21", "src_master_260723", "src_workstation_scan_2026_11_19"],
+    "notes": "Sites próprios. Evidência O = pastas/arquivos observados."
+  },
+  "data": {
+    "id": "proj_rvalle_sites",
+    "evidence": ["D", "O"],
+    "sites": [
+      {"url": "https://rvalle.com.br", "role": "site pessoal/profissional", "local_folder": "D:\\dev\\_dev web\\_rvalle-site", "observed": ["index.html (múltiplas iterações, ~150-190 KB)", "variantes claude.html / chatgpt.html / chatgpt-obfs.html (iterações assistidas por IA e ofuscação)", "card-swap.js, scroll-expand.js, cursor.js", "rvalle-site2, v1, bak, img, LEIA-ME.txt, rvalle-site.zip"]},
+      {"url": "https://cv.rvalle.com.br/v2/", "role": "CV Builder Pro / CV digital", "local_folder": "D:\\dev\\_cv.rvalle.com.br", "ref": "proj_cv_builder"},
+      {"url": "https://livro.rvalle.com.br/", "role": "site do livro + página do autor (/rafael/)", "local_folder": "D:\\dev\\_livro.rvalle.com.br"},
+      {"url": "rafael.rvalle.com.br", "role": "página pessoal; contém 'jobos mapping offers'", "local_folder": "D:\\dev\\_rafael.rvalle.com.br"},
+      {"url": "dev.rvalle.com.br", "role": "ambiente de desenvolvimento/staging", "local_folder": "D:\\dev\\_dev.rvalle.com.br"},
+      {"url": "https://apollo.rio.br/", "role": "Apollo::rio", "local_folder": "D:\\dev\\_apollo.rio.br", "ref": "proj_apollo"},
+      {"url": "sos.apollo.rio.br", "role": "SOS Apollo", "ref": "proj_sos"},
+      {"url": "https://dismantle.com.br/", "role": "DISMANTLE", "ref": "proj_dismantle"}
+    ]
+  }
+}

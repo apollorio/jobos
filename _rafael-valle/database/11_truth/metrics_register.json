@@ -1,0 +1,583 @@
+{
+  "_part": {
+    "id": "11_truth/metrics_register",
+    "title": "Registro de métricas (67; documentadas x não documentadas)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "documented": [
+      {
+        "id": "exp_vanoord.project_phases",
+        "scope": "exp_vanoord",
+        "label": "Fases de projeto",
+        "unit": "count",
+        "value": 13,
+        "status": "DOCUMENTED",
+        "evidence": "D",
+        "note": "derivado da lista de projetos"
+      },
+      {
+        "id": "exp_vanoord.project_codes",
+        "scope": "exp_vanoord",
+        "label": "Códigos de projeto distintos",
+        "unit": "count",
+        "value": 10,
+        "status": "DOCUMENTED",
+        "evidence": "D",
+        "note": "derivado"
+      },
+      {
+        "id": "exp_vanoord.sites",
+        "scope": "exp_vanoord",
+        "label": "Portos/sites distintos",
+        "unit": "count",
+        "value": 9,
+        "status": "DOCUMENTED",
+        "evidence": "D",
+        "note": "derivado"
+      },
+      {
+        "id": "exp_vanoord.real_medevacs",
+        "scope": "exp_vanoord",
+        "label": "Medevacs reais",
+        "unit": "count",
+        "value": "5+",
+        "status": "DOCUMENTED",
+        "evidence": "U",
+        "note": "UNKNOWN_NOT_DOCUMENTED"
+      },
+      {
+        "id": "exp_vanoord.pmp_daily_records",
+        "scope": "exp_vanoord",
+        "label": "Dias verificados (dossie PMP)",
+        "unit": "days",
+        "value": 586,
+        "status": "DOCUMENTED",
+        "evidence": "D",
+        "note": "566 do XLSX original + 20 de timesheets assinados; 32 meses-calendário com evidência direta"
+      },
+      {
+        "id": "exp_toolvox.vessels",
+        "scope": "exp_toolvox",
+        "label": "Navios-sonda atendidos",
+        "unit": "count",
+        "value": 2,
+        "status": "DOCUMENTED",
+        "evidence": "D",
+        "note": "NS-43 Amaralina Star e NS-51 Siem Helix 1"
+      },
+      {
+        "id": "publication_book.copies",
+        "scope": "publication_book",
+        "label": "Exemplares",
+        "unit": "count",
+        "value": "3000+",
+        "status": "DOCUMENTED",
+        "evidence": "D",
+        "note": "UNKNOWN_NOT_DOCUMENTED"
+      },
+      {
+        "id": "proj_dismantle.shotgun_sold",
+        "scope": "proj_dismantle",
+        "label": "shotgun sold",
+        "unit": "count",
+        "value": 165,
+        "status": "DOCUMENTED",
+        "evidence": "DP",
+        "note": "UNKNOWN_NOT_DOCUMENTED"
+      },
+      {
+        "id": "proj_dismantle.shotgun_invitations",
+        "scope": "proj_dismantle",
+        "label": "shotgun invitations",
+        "unit": "count",
+        "value": 250,
+        "status": "DOCUMENTED",
+        "evidence": "DP",
+        "note": "UNKNOWN_NOT_DOCUMENTED"
+      },
+      {
+        "id": "proj_dismantle.registered_total",
+        "scope": "proj_dismantle",
+        "label": "registered total",
+        "unit": "count",
+        "value": 415,
+        "status": "DOCUMENTED",
+        "evidence": "DP",
+        "note": "UNKNOWN_NOT_DOCUMENTED"
+      },
+      {
+        "id": "proj_dismantle.door_entries_hoppin",
+        "scope": "proj_dismantle",
+        "label": "door entries hoppin",
+        "unit": "count",
+        "value": 31,
+        "status": "DOCUMENTED",
+        "evidence": "DP",
+        "note": "UNKNOWN_NOT_DOCUMENTED"
+      },
+      {
+        "id": "proj_dismantle.onsite_sales_brl",
+        "scope": "proj_dismantle",
+        "label": "onsite sales brl",
+        "unit": "BRL",
+        "value": 21667,
+        "status": "DOCUMENTED",
+        "evidence": "DP",
+        "note": "UNKNOWN_NOT_DOCUMENTED"
+      },
+      {
+        "id": "proj_dismantle.bar_sales_brl",
+        "scope": "proj_dismantle",
+        "label": "bar sales brl",
+        "unit": "BRL",
+        "value": 19652,
+        "status": "DOCUMENTED",
+        "evidence": "DP",
+        "note": "UNKNOWN_NOT_DOCUMENTED"
+      },
+      {
+        "id": "proj_dismantle.bar_items",
+        "scope": "proj_dismantle",
+        "label": "bar items",
+        "unit": "count",
+        "value": 1294,
+        "status": "DOCUMENTED",
+        "evidence": "DP",
+        "note": "UNKNOWN_NOT_DOCUMENTED"
+      },
+      {
+        "id": "proj_dismantle.transactions",
+        "scope": "proj_dismantle",
+        "label": "transactions",
+        "unit": "count",
+        "value": 755,
+        "status": "DOCUMENTED",
+        "evidence": "DP",
+        "note": "UNKNOWN_NOT_DOCUMENTED"
+      }
+    ],
+    "not_documented": [
+      {
+        "id": "exp_vanoord.team_direct",
+        "scope": "exp_vanoord",
+        "label": "Pessoas lideradas diretamente",
+        "unit": "people",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_vanoord.team_coordinated",
+        "scope": "exp_vanoord",
+        "label": "Pessoas/equipes coordenadas (total)",
+        "unit": "people",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_vanoord.vessels_max_concurrent",
+        "scope": "exp_vanoord",
+        "label": "Max. embarcações apoiadas simultaneamente",
+        "unit": "vessels",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_vanoord.vessels_by_type",
+        "scope": "exp_vanoord",
+        "label": "Embarcações por tipo (TSHD/WID/rebocador/lancha)",
+        "unit": "count by type",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_vanoord.budget_supported",
+        "scope": "exp_vanoord",
+        "label": "Valor de contratos/orçamentos acompanhados",
+        "unit": "BRL/EUR",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_vanoord.cost_projection_accuracy",
+        "scope": "exp_vanoord",
+        "label": "Precisão de cost projection",
+        "unit": "%",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_vanoord.suppliers_managed",
+        "scope": "exp_vanoord",
+        "label": "Fornecedores gerenciados",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_vanoord.claims_handled",
+        "scope": "exp_vanoord",
+        "label": "Claims tratados (qtd/valor)",
+        "unit": "count/BRL",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_vanoord.diesel_negotiation",
+        "scope": "exp_vanoord",
+        "label": "Negociação de diesel (volume/economia)",
+        "unit": "m3 / BRL",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_vanoord.production_volume",
+        "scope": "exp_vanoord",
+        "label": "Volume dragado/produzido total",
+        "unit": "m3",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_vanoord.plan_vs_actual",
+        "scope": "exp_vanoord",
+        "label": "Desempenho planejado x realizado (media/melhor)",
+        "unit": "%",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_vanoord.availability",
+        "scope": "exp_vanoord",
+        "label": "Disponibilidade media de frota",
+        "unit": "%",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_vanoord.downtime_reduction",
+        "scope": "exp_vanoord",
+        "label": "Redução de downtime (qualquer caso)",
+        "unit": "%/hours",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_vanoord.fuel_savings",
+        "scope": "exp_vanoord",
+        "label": "Economia de combustivel (qualquer caso)",
+        "unit": "%",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_vanoord.drills_conducted",
+        "scope": "exp_vanoord",
+        "label": "Simulados de emergência conduzidos",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_vanoord.drill_response_times",
+        "scope": "exp_vanoord",
+        "label": "Tempos de resposta medidos (lancha/ambulância/hospital)",
+        "unit": "minutes",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_vanoord.inspections_done",
+        "scope": "exp_vanoord",
+        "label": "Inspeções realizadas (escritorio/veiculos/embarcações)",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_vanoord.nonconformities_closed",
+        "scope": "exp_vanoord",
+        "label": "Pendências/NCs tratadas",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_vanoord.incidents_investigated",
+        "scope": "exp_vanoord",
+        "label": "Incidentes investigados",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_vanoord.crew_changes",
+        "scope": "exp_vanoord",
+        "label": "Crew changes coordenados",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_vanoord.port_calls",
+        "scope": "exp_vanoord",
+        "label": "Port calls coordenados",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_vanoord.bunkering_ops",
+        "scope": "exp_vanoord",
+        "label": "Operações de bunkering",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_vanoord.reports_issued",
+        "scope": "exp_vanoord",
+        "label": "Relatórios emitidos (DPR/semanal/mensal)",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_ctank_analyst.campaigns",
+        "scope": "exp_ctank_analyst",
+        "label": "Campanhas offshore planejadas/acompanhadas",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_ctank_analyst.vessels_supported",
+        "scope": "exp_ctank_analyst",
+        "label": "FPSO/OSV apoiados",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_ctank_analyst.people_mobilized",
+        "scope": "exp_ctank_analyst",
+        "label": "Pessoas mobilizadas",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_ctank_analyst.cost_tracked",
+        "scope": "exp_ctank_analyst",
+        "label": "Custos/medições acompanhados",
+        "unit": "BRL",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_ctank_analyst.processes_mapped",
+        "scope": "exp_ctank_analyst",
+        "label": "Processos mapeados (ISO)",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_ctank_analyst.procedures_written",
+        "scope": "exp_ctank_analyst",
+        "label": "Procedimentos elaborados",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_ctank_analyst.iso_outcome",
+        "scope": "exp_ctank_analyst",
+        "label": "Resultado da certificação ISO 9001 (certificadora/data)",
+        "unit": "text",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_toolvox.trainees",
+        "scope": "exp_toolvox",
+        "label": "Profissionais treinados",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_toolvox.training_hours",
+        "scope": "exp_toolvox",
+        "label": "Horas de treinamento ministradas",
+        "unit": "hours",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "exp_toolvox.sops_translated",
+        "scope": "exp_toolvox",
+        "label": "SOPs traduzidos/interpretados",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "publication_book.adopting_institutions",
+        "scope": "publication_book",
+        "label": "Instituições que adotam (nomes)",
+        "unit": "list",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "proj_dismantle.budget_total_brl",
+        "scope": "proj_dismantle",
+        "label": "Orçamento total",
+        "unit": "BRL",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "proj_dismantle.revenue_total_brl",
+        "scope": "proj_dismantle",
+        "label": "Receita total",
+        "unit": "BRL",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "proj_dismantle.cost_total_brl",
+        "scope": "proj_dismantle",
+        "label": "Custo total",
+        "unit": "BRL",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "proj_dismantle.result_brl",
+        "scope": "proj_dismantle",
+        "label": "Resultado",
+        "unit": "BRL",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "proj_dismantle.team_size",
+        "scope": "proj_dismantle",
+        "label": "Tamanho da equipe",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "proj_dismantle.vendors_count",
+        "scope": "proj_dismantle",
+        "label": "Fornecedores contratados",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "proj_dismantle.artists_count",
+        "scope": "proj_dismantle",
+        "label": "Artistas",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "proj_dismantle.venue_capacity",
+        "scope": "proj_dismantle",
+        "label": "Capacidade do local",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "proj_apollo.repos_count",
+        "scope": "proj_apollo",
+        "label": "Repositórios",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "proj_apollo.custom_plugins_count",
+        "scope": "proj_apollo",
+        "label": "Plugins customizados",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "proj_apollo.active_users",
+        "scope": "proj_apollo",
+        "label": "Usuários ativos",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "proj_apollo.events_listed",
+        "scope": "proj_apollo",
+        "label": "Eventos listados",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "proj_apollo.monthly_visits",
+        "scope": "proj_apollo",
+        "label": "Visitas mensais",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "proj_apollo.launch_date",
+        "scope": "proj_apollo",
+        "label": "Data de lançamento",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "proj_apollo.team_size",
+        "scope": "proj_apollo",
+        "label": "Equipe",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "proj_sos.release_status",
+        "scope": "proj_sos",
+        "label": "Status de release",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "proj_sos.testers_or_users",
+        "scope": "proj_sos",
+        "label": "Testadores/usuários",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      },
+      {
+        "id": "proj_sos.test_suite_size",
+        "scope": "proj_sos",
+        "label": "Tamanho da suite de testes",
+        "unit": "count",
+        "evidence": "V",
+        "note": "Not documented in current source set; do not infer."
+      }
+    ],
+    "rule": "Nunca fabricar número. Métricas não documentadas ficam fora de CV."
+  }
+}

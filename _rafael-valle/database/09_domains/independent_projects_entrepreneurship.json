@@ -1,0 +1,56 @@
+{
+  "_part": {
+    "id": "09_domains/independent_projects_entrepreneurship",
+    "title": "Domínio: Projetos Independentes / Empreendedorismo",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "label_pt": "Projetos Independentes / Empreendedorismo",
+    "priority": 12,
+    "summary": "Dismantle (evento), Apollo::rio (plataforma), SOS Apollo (redução de danos), CV Builder Pro.",
+    "highlights_master_tree": {
+      "dismantle": [
+        "iniciação",
+        "conceito",
+        "branding",
+        "planejamento",
+        "orçamento",
+        "contratação",
+        "coordenação de artistas/equipe/fornecedores",
+        "produção",
+        "execução",
+        "controle financeiro",
+        "encerramento"
+      ]
+    },
+    "source_paths": [
+      "project_portfolio_tree.independent"
+    ],
+    "refs": {
+      "experiences": [
+        "exp_professional_development"
+      ],
+      "projects": [
+        "proj_dismantle",
+        "proj_apollo",
+        "proj_sos",
+        "proj_cv_builder"
+      ],
+      "vessels": [],
+      "software": [],
+      "certifications": [],
+      "education": [],
+      "stories": [],
+      "boundary_groups": [
+        "dismantle_figures"
+      ],
+      "volunteer": []
+    },
+    "fit_estimates": [],
+    "hard_gaps_or_boundaries": [],
+    "id": "independent_projects_entrepreneurship"
+  }
+}

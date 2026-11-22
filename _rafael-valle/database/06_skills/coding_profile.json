@@ -1,0 +1,27 @@
+{
+  "_part": {
+    "id": "06_skills/coding_profile",
+    "title": "Perfil de programação consolidado (linguagens, stack, evidência)",
+    "updated": "2026-11-19",
+    "sources": ["src_master_final_2026_10_21", "src_attachments_inventory_2026_10_22", "src_sos_registry", "src_workstation_scan_2026_11_19", "src_cv_sbm_modern_workplace_en", "src_cv_capco_conformidade_ii_pt_truthful"],
+    "notes": "Visão consolidada para o matcher e para CVs digitais. Nós atômicos originais em 06_skills/software/*.json. Nenhuma linguagem foi usada em emprego corporativo."
+  },
+  "data": {
+    "positioning": "Engenheiro que constrói os próprios produtos digitais (full-stack WordPress/PHP + JavaScript/TypeScript + Python de automação), com IA como multiplicador. Não é engenheiro de software sênior corporativo.",
+    "languages": [
+      {"id": "sw_php", "name": "PHP", "status": "personal-project", "evidence": ["U", "P", "O"], "where": ["Apollo::rio plugins/MU-plugins", "apollo-vagas (CPT, REST, admin, sync, testes)"]},
+      {"id": "sw_javascript", "name": "JavaScript", "status": "personal-project", "evidence": ["DP", "O"], "where": ["Apollo::rio front-end (GSAP, Lenis, Splide, jQuery)", "kanban.js (apollo-vagas)", "jobos.js / inbox-swiipe-row.js (web-vagas)", "rvalle-site (card-swap.js, scroll-expand.js, cursor.js)"]},
+      {"id": "sw_typescript", "name": "TypeScript / TSX", "status": "personal-project/developing", "evidence": ["U", "P", "O"], "where": ["web-vagas: load-jobs.ts, merge-jobs.ts, offer-page.ts, host.ts, forms-google.ts, rio.ts", "modernização do Apollo"]},
+      {"id": "sw_python", "name": "Python", "status": "personal-project/developing", "evidence": ["DP", "P"], "where": ["jobOS: run.py, score.py, triage.py, fontes.py, sources/*.py (Gupy, ATS, TOTVS, Adzuna, web), store.py (SQLite), sync.py, wordpress.py, autoapply.py, digest.py, bulletin.py, tests (test_triage.py, test_score.py)", "enviar_para_wordpress.py", "tools/truth_lint.py"]},
+      {"id": "sw_html", "name": "HTML", "status": "personal-project", "evidence": "DP"},
+      {"id": "sw_css", "name": "CSS", "status": "personal-project", "evidence": "DP", "where": ["design system dashboard.apollorio.css (~170 KB)", "kanban.css", "jobos.css"]},
+      {"id": "sw_sql", "name": "SQL", "status": "developing", "evidence": ["U", "P"], "where": ["SQLite do jobOS (jobs/events/runs)"], "cv_rule": "Descrever como em desenvolvimento."},
+      {"id": "sw_json", "name": "JSON / YAML (dados estruturados)", "status": "personal-project", "evidence": "DP", "where": ["registries SSOT", "este banco", "config/*.yml do jobOS"]},
+      {"id": "sw_powershell", "name": "PowerShell", "status": "personal-project", "evidence": "P", "where": ["agendamento Windows do jobOS"]}
+    ],
+    "platforms_frameworks": ["WordPress (plugins custom, MU-plugins, CPT, REST API, WooCommerce, EventON, Ultimate Member, wpDiscuz, BuddyForms, Elementor)", "PWA (Service Worker, Web Push/VAPID, manifest)", "WebSocket / SSE", "IndexedDB / localStorage", "GSAP (ScrollTrigger, Observer, Flip, SplitText, MotionPath, MorphSVG, Text)", "Lenis, Splide, SplitType, Remix Icon, jQuery", "Cloudflare, LiteSpeed, QUIC.cloud"],
+    "engineering_practices": ["Registry como SSOT com padrões de ID e invariantes (SOS Apollo)", "Codegen + lint de registry (npm run registry:check)", "Testes automatizados (PHP harness, Python tests)", "CI/cron em GitHub Actions", "Segurança web: CSP restritiva, Subresource Integrity, sem scripts de terceiros, privacy-first (sem PII, retenção 12h)", "Resiliência de scraping (preflight, probe, resilience.py)", "Design system reutilizável (core.js, dashboard.apollorio.css, script.theme.js)"],
+    "integrations": ["Gupy portal API", "ATS: Greenhouse, Lever, Ashby, SmartRecruiters, Recruitee, Workable, Personio, SuccessFactors (j2w), Workday, Oracle HCM, InHire, TOTVS", "Adzuna", "Google Forms", "WordPress REST"],
+    "years_note": "Uso intensivo desde Nov/2024 (projetos próprios). Antes: curso WebDesigner (Microlins, 2011) e concepção funcional (sem código) de app interno na C-Tank (2020-2021)."
+  }
+}

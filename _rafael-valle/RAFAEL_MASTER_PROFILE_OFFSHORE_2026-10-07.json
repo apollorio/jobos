@@ -1,0 +1,74 @@
+{
+  "profile": {
+    "name": "Rafael Perini Valle",
+    "base": "Rio de Janeiro – RJ, Brasil",
+    "professional_positioning": [
+      "Marine / Offshore Operations",
+      "Project Execution & Planning",
+      "Vessel–Shore Interface",
+      "HSEQ / Emergency Response",
+      "Logistics / Suppliers / Materials",
+      "Operational Performance & KPIs"
+    ]
+  },
+  "van_oord_additional_facts_confirmed_2026_10_07": {
+    "role": "Superintendente",
+    "additional_function": "Emergency Response Coordinator (ERC)",
+    "emergency_drills": [
+      "Coordenava simulados de resposta a emergência.",
+      "Media tempos de resposta de ambulância, hospital e lancha/embarcação até o atendimento.",
+      "Em geral utilizava um tripulante como vítima simulada.",
+      "Emitia relatório final classificando o resultado e registrando pontos de melhoria quando havia atraso em algum elo da resposta."
+    ],
+    "inspection_control": [
+      "Controlava relatórios e inspeções do projeto.",
+      "Escopo incluía escritório e veículos onshore, lanchas rápidas/voadeiras, rebocadores, embarcações de apoio e navios.",
+      "Identificava irregularidades e pendências e acompanhava sua tratativa.",
+      "Exemplo confirmado: rebocador/meio de apoio sem maca adequada para eventual remoção médica."
+    ],
+    "operational_control_examples": [
+      "Planejamento semanal de frota TSHD, WID e rebocadores em vários portos.",
+      "Alocação de embarcações e comparação de performance planejada versus realizada.",
+      "Controle por dados de ciclo, disponibilidade, downtime e frente parada, não por percepção subjetiva.",
+      "HSE operacional com IMO, SOLAS e NORMAM; coordenação de ERT/Medevac e registro formal das respostas."
+    ]
+  },
+  "ctank_confirmed_examples": [
+    "Suporte a campanhas de manutenção/limpeza em FPSO e OSV.",
+    "DPR/RDO e Petrobras Drake/SAP RT.",
+    "Interfaces com Shell, Transocean, Helix e ambiente Petrobras.",
+    "Mapeamento de processos, procedimentos e controle documental para preparação ISO 9001."
+  ],
+  "tools_positioning": {
+    "strong": [
+      "Excel Avançado",
+      "MS Project",
+      "Power BI",
+      "Drake",
+      "SAP RT"
+    ],
+    "do_not_sell_as_experience": [
+      "Primavera P6"
+    ],
+    "note": "Ferramentas devem aparecer como meios de controle e decisão, não como o produto principal da experiência."
+  },
+  "truth_boundaries_for_future_cvs": [
+    "Não afirmar ownership de certificação estatutária de navios sem evidência específica.",
+    "Não afirmar responsabilidade integral pelo sistema de manutenção preventiva da embarcação sem evidência específica.",
+    "Não afirmar 5 anos em cargo gerencial similar; há mais de 3 anos formais como Superintendente na Van Oord.",
+    "Não afirmar experiência prática em Primavera P6.",
+    "Não transformar preparação ISO 9001 em experiência como auditor ISO."
+  ],
+  "source_files_reviewed": [
+    "CV_ENGENHEIRO-DE-QUALIDADE_SUBSEA7_PT_2026-10-05(2).json",
+    "CV_SENIOR-OPERATIONS-ENGINEER_SBM-OFFSHORE_EN_FINAL_2026-09-30(2).json",
+    "CV_ENGENHEIRO-DE-GEST-O-DE-PROJETOS_PT_2026-10-06(1).json",
+    "CV_ANALISTA-DE-LOGISTICA_PT_2026-09-19(2).json",
+    "analisis(3).txt",
+    "CV_LINKEDIN-4458314279_PT_2026-09-19(2).json",
+    "260723_rafael-valle(3).json",
+    "CV_ENGENHEIRO-DE-SUPRIMENTOS-PROJETOS_PT_FINAL_2026-09-18(3).json",
+    "capacity(3).txt",
+    "CV_OFFSHORE-PROJECTS-OPERATIONS-ENGINEER_SHELL-FACILITIES-ENGINEER_EN_2026-09-19(2).json"
+  ]
+}

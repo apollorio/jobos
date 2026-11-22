@@ -1,0 +1,115 @@
+{
+  "_part": {
+    "id": "09_domains/project_management_project_controls",
+    "title": "Domínio: Gestão de Projetos / Project Controls",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "label_pt": "Gestão de Projetos / Project Controls",
+    "priority": 3,
+    "summary": "Superintendente de Projetos na Van Oord (13 fases de projeto, 10 códigos), MBA PMI/PMBOK, evidência PMP (586 dias verificados) e Dismantle como projeto independente.",
+    "highlights_master_tree": {
+      "education": [
+        "MBA Gestão de Projetos USP/ESALQ, 400h, PMI/PMBOK"
+      ],
+      "experience": [
+        "Escopo",
+        "Prazo",
+        "Custo",
+        "Riscos",
+        "Fornecedores",
+        "Stakeholders",
+        "Produção",
+        "KPIs",
+        "Mudanças e claims",
+        "Look-ahead",
+        "Relatórios",
+        "Medição",
+        "Closeout"
+      ],
+      "pmp_evidence": {
+        "verified_daily_records": 586,
+        "original_timesheet_X_marks": 566,
+        "additional_signed_days": 20,
+        "calendar_months_explicit_evidence": 32
+      }
+    },
+    "source_paths": [
+      "project_management_tree",
+      "experience_nodes.exp_vanoord.planning_controls",
+      "experience_nodes.exp_vanoord.documentation",
+      "project_portfolio_tree"
+    ],
+    "refs": {
+      "experiences": [
+        "exp_vanoord",
+        "exp_ctank_analyst",
+        "exp_professional_development"
+      ],
+      "projects": [
+        "vo_354264",
+        "vo_354261",
+        "vo_354012_2021",
+        "vo_354269",
+        "vo_354222_2022",
+        "vo_354285",
+        "vo_353190",
+        "vo_354222_2023",
+        "vo_354306",
+        "vo_354012_2023",
+        "vo_354449",
+        "vo_354222_2024",
+        "vo_354458",
+        "proj_dismantle"
+      ],
+      "vessels": [],
+      "software": [
+        "sw_ms_project",
+        "sw_excel",
+        "sw_powerpoint",
+        "sw_primavera_p6"
+      ],
+      "certifications": [
+        "ms_project_course",
+        "pcp_course"
+      ],
+      "education": [
+        "edu_mba_pm",
+        "edu_civil"
+      ],
+      "stories": [
+        "project_deviation",
+        "project_deviation_long"
+      ],
+      "boundary_groups": [
+        "planning",
+        "management_tenure"
+      ],
+      "volunteer": []
+    },
+    "fit_estimates": [
+      {
+        "item": "Stakeholders",
+        "est_pct": "95",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      },
+      {
+        "item": "Planejamento/organizacao",
+        "est_pct": "95",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      },
+      {
+        "item": "Projetos de transformacao/melhoria",
+        "est_pct": "85",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      }
+    ],
+    "hard_gaps_or_boundaries": [
+      "5 anos de gerência similar: não alegar (ver tenure)"
+    ],
+    "id": "project_management_project_controls"
+  }
+}

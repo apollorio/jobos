@@ -1,0 +1,124 @@
+{
+  "_part": {
+    "id": "03_education/volunteer_leadership",
+    "title": "Voluntariado e liderança estudantil",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723",
+      "src_career_db_v3_2026_03_10"
+    ]
+  },
+  "data": {
+    "nodes": {
+      "crea_jr_aracruz": {
+        "org": "Crea Jr-ES",
+        "role": "Coordenador Geral Campus Aracruz",
+        "period": "Out 2013 - Dez 2014",
+        "evidence": "D"
+      },
+      "crea_jr_vitoria": {
+        "org": "Crea Jr-ES",
+        "role": "Assessor de Eventos",
+        "period": "2015-2017",
+        "evidence": "D"
+      },
+      "fenec_sengtec": {
+        "org": "FENEC / SENGTEC",
+        "role": "Coordenador Geral SENGTEC + Assessor de Marketing FENEC",
+        "period": "2014",
+        "evidence": "D"
+      },
+      "abracou": {
+        "org": "ABRACOU / CONACON Brasil",
+        "role": "Coordenador de Marketing e Comunicação",
+        "period": "2016-2017",
+        "location": "Aracaju",
+        "evidence": "D"
+      },
+      "iaeste": {
+        "org": "IAESTE",
+        "role": "Voluntário Internacional — logística e integração de estagiários globais",
+        "period": "2013-2019",
+        "evidence": "D"
+      }
+    },
+    "historical_260723": [
+      {
+        "org": "Crea Jr-ES",
+        "role": {
+          "pt": "Coordenador Geral Campus Aracruz",
+          "en": "General Coordinator, Aracruz Campus"
+        },
+        "period": "Out 2013 – Dez 2014"
+      },
+      {
+        "org": "Crea Jr-ES",
+        "role": {
+          "pt": "Assessor de Eventos (Vitória)",
+          "en": "Events Advisor (Vitória)"
+        },
+        "period": "2015–2017"
+      },
+      {
+        "org": "FENEC / SENGTEC",
+        "role": {
+          "pt": "Coordenador Geral SENGTEC + Assessor de Marketing FENEC",
+          "en": "General Coordinator SENGTEC + Marketing Advisor FENEC"
+        },
+        "period": "2014",
+        "event": "II EREEC NNE"
+      },
+      {
+        "org": "ABRACOU / CONACON Brasil",
+        "role": {
+          "pt": "Coordenador de Marketing e Comunicação",
+          "en": "Marketing & Communications Coordinator"
+        },
+        "period": "2016–2017",
+        "location": "Aracaju"
+      },
+      {
+        "org": "IAESTE",
+        "role": {
+          "pt": "Voluntário Internacional (logística e integração de estagiários globais)",
+          "en": "International Volunteer (logistics and global intern integration)"
+        },
+        "period": "2013–2019",
+        "duration": "6+ anos",
+        "location": "Espírito Santo"
+      }
+    ],
+    "career_db_v3": [
+      {
+        "org": "Crea Jr-ES",
+        "role": "Coordenador Geral Campus Aracruz",
+        "period": "Out 2013 – Dez 2014"
+      },
+      {
+        "org": "Crea Jr-ES",
+        "role": "Assessor de Eventos (Vitória)",
+        "period": "2015–2017"
+      },
+      {
+        "org": "FENEC / SENGTEC",
+        "role": "Coordenador Geral SENGTEC + Assessor de Marketing FENEC",
+        "period": "2014",
+        "event": "II EREEC NNE"
+      },
+      {
+        "org": "ABRACOU / CONACON Brasil",
+        "role": "Coordenador de Marketing e Comunicação",
+        "period": "2016–2017",
+        "location": "Aracaju"
+      },
+      {
+        "org": "IAESTE",
+        "role": "Voluntário Internacional (logística e integração de estagiários globais)",
+        "period": "2013–2019",
+        "duration": "6+ anos",
+        "location": "Espírito Santo"
+      }
+    ]
+  }
+}

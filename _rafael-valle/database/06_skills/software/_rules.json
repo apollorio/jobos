@@ -1,0 +1,22 @@
+{
+  "_part": {
+    "id": "06_skills/software/_rules",
+    "title": "Regras de status de software",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "atomicity": "Cada software/sistema/linguagem é um nó individual.",
+    "status_values": [
+      "strong/proven",
+      "used/proven",
+      "developing",
+      "personal-project",
+      "listed-needs-context",
+      "do-not-claim"
+    ],
+    "cv_rule": "Somente strong/proven ou used/proven entram como experiência prática sem qualificador."
+  }
+}

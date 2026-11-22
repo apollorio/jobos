@@ -1,0 +1,2672 @@
+{
+  "_part": {
+    "id": "14_matching/concepts",
+    "title": "Léxico de requisitos (PT/EN) mapeado para o status real do Rafael",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723",
+      "src_jobos_profile_yml",
+      "src_chat_2026_11_19",
+      "src_workstation_scan_2026_11_19"
+    ],
+    "notes": "status: proven | adjacent | familiarity | personal_project | developing | renewable | trainable | unknown | gap | hard_gap. if_mandatory: ok | action (renovar/curso curto) | missing (gap real, penaliza) | blocker_if_explicit (bloqueia só com 'obrigatório/required' na frase) | blocker. group 'degree' tem regra especial: qualquer formação que ele tem (ou 'afins/related') na mesma frase satisfaz o requisito. Padrões normalizados (minúsculas, sem acento); 're:' = regex."
+  },
+  "data": {
+    "concepts": [
+      {
+        "id": "c_deg_engineering_generic",
+        "group": "degree",
+        "label": "Graduação em Engenharia (qualquer)",
+        "patterns": [
+          "formacao em engenharia",
+          "graduacao em engenharia",
+          "superior completo em engenharia",
+          "bacharel em engenharia",
+          "engineering degree",
+          "degree in engineering",
+          "bachelor in engineering",
+          "bachelor's degree in engineering",
+          "bsc in engineering",
+          "engenharias",
+          "re:(?:formacao|graduacao|ensino superior|curso superior|nivel superior|superior completo|bacharel\\w*|graduad\\w*)(?: completo| completa)?(?: em| de)? engenharia(?![ a-z]{0,3}(?:mecanica|eletrica|eletronica|quimica|de petroleo|de producao|de controle|civil|naval|oceanica|de seguranca))"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "03_education/degrees.json#edu_civil"
+        ]
+      },
+      {
+        "id": "c_deg_civil",
+        "group": "degree",
+        "label": "Engenharia Civil",
+        "patterns": [
+          "engenharia civil",
+          "civil engineering",
+          "engenheiro civil",
+          "civil engineer",
+          "re:(?:,|/|\\bou|\\be)\\s*civil\\b"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "03_education/degrees.json#edu_civil"
+        ]
+      },
+      {
+        "id": "c_deg_naval_offshore",
+        "group": "degree",
+        "label": "Engenharia Naval / Oceânica / Offshore",
+        "patterns": [
+          "engenharia naval",
+          "naval engineering",
+          "naval architecture",
+          "engenharia oceanica",
+          "ocean engineering",
+          "construcao naval",
+          "offshore engineering",
+          "marine engineering",
+          "re:(?:,|/|\\bou|\\be)\\s*(?:engenharia\\s+)?(?:naval|oceanica)\\b"
+        ],
+        "status": "adjacent",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "03_education/degrees.json#edu_naval"
+        ],
+        "note": "Pós-graduação lato sensu (UCP), não bacharelado."
+      },
+      {
+        "id": "c_deg_safety_eng",
+        "group": "degree",
+        "label": "Engenharia de Segurança do Trabalho",
+        "patterns": [
+          "engenharia de seguranca",
+          "engenheiro de seguranca",
+          "occupational safety engineering",
+          "safety engineering"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "03_education/degrees.json#edu_safety"
+        ],
+        "guardrail": "Datas exatas só pelo certificado (conflito entre fontes)."
+      },
+      {
+        "id": "c_deg_ports_technical",
+        "group": "degree",
+        "label": "Técnico em Portos / logística portuária",
+        "patterns": [
+          "tecnico em portos",
+          "logistica portuaria",
+          "port logistics"
+        ],
+        "status": "proven",
+        "weight": 1,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "03_education/degrees.json#edu_ports"
+        ]
+      },
+      {
+        "id": "c_deg_mba_postgrad",
+        "group": "degree",
+        "label": "MBA / pós-graduação / especialização",
+        "patterns": [
+          "mba",
+          "pos-graduacao",
+          "pos graduacao",
+          "especializacao",
+          "postgraduate",
+          "post-graduate",
+          "pos-graduado"
+        ],
+        "status": "proven",
+        "weight": 1,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "03_education/degrees.json#edu_mba_pm"
+        ]
+      },
+      {
+        "id": "c_deg_masters_phd",
+        "group": "degree",
+        "label": "Mestrado / doutorado (stricto sensu)",
+        "patterns": [
+          "mestrado",
+          "doutorado",
+          "master's degree",
+          "masters degree",
+          "msc",
+          "m.sc",
+          "phd",
+          "doctorate"
+        ],
+        "status": "gap",
+        "weight": 1,
+        "if_mandatory": "blocker"
+      },
+      {
+        "id": "c_deg_mechanical",
+        "group": "degree",
+        "label": "Engenharia Mecânica",
+        "patterns": [
+          "engenharia mecanica",
+          "mechanical engineering",
+          "engenheiro mecanico",
+          "re:(?:,|/|\\bou|\\be)\\s*mecanica\\b"
+        ],
+        "status": "gap",
+        "weight": 2,
+        "if_mandatory": "blocker"
+      },
+      {
+        "id": "c_deg_electrical",
+        "group": "degree",
+        "label": "Engenharia Elétrica / Eletrônica / Controle",
+        "patterns": [
+          "engenharia eletrica",
+          "electrical engineering",
+          "engenharia eletronica",
+          "engenharia de controle e automacao",
+          "control engineering",
+          "re:(?:,|/|\\bou|\\be)\\s*(?:eletrica|eletronica|controle e automacao)\\b"
+        ],
+        "status": "gap",
+        "weight": 2,
+        "if_mandatory": "blocker"
+      },
+      {
+        "id": "c_deg_chemical_petroleum",
+        "group": "degree",
+        "label": "Engenharia Química / de Petróleo / de Produção",
+        "patterns": [
+          "engenharia quimica",
+          "chemical engineering",
+          "engenharia de petroleo",
+          "petroleum engineering",
+          "engenharia de producao",
+          "production engineering",
+          "re:(?:,|/|\\bou|\\be)\\s*(?:quimica|de petroleo|de producao)\\b"
+        ],
+        "status": "gap",
+        "weight": 2,
+        "if_mandatory": "blocker"
+      },
+      {
+        "id": "c_deg_nautical_degree",
+        "group": "degree",
+        "label": "Ciências Náuticas / EFOMM / oficial de náutica ou máquinas",
+        "patterns": [
+          "ciencias nauticas",
+          "ciencias nautica",
+          "nautical science",
+          "nautical sciences",
+          "efomm",
+          "oficial de nautica",
+          "oficial de maquinas",
+          "oficial da marinha mercante",
+          "re:(?:,|/|\\bou|\\be)\\s*nauticas?\\b"
+        ],
+        "status": "hard_gap",
+        "weight": 3,
+        "if_mandatory": "blocker",
+        "guardrail": "11_truth/truth_boundaries.json#nautical_credentials"
+      },
+      {
+        "id": "c_nautical_license",
+        "group": "credential",
+        "label": "Master Mariner / CCL / Chief Mate / STCW nível gerencial",
+        "patterns": [
+          "master mariner",
+          "capitao de longo curso",
+          "ccl",
+          "ccb",
+          "chief mate",
+          "chief officer",
+          "stcw ii/2",
+          "stcw ii/1",
+          "stcw iii/2",
+          "stcw management level",
+          "management level stcw",
+          "carteira de oficial",
+          "certificate of competency",
+          "coc"
+        ],
+        "status": "hard_gap",
+        "weight": 3,
+        "if_mandatory": "blocker",
+        "guardrail": "11_truth/truth_boundaries.json#nautical_credentials"
+      },
+      {
+        "id": "c_deg_other_fields",
+        "group": "degree",
+        "label": "Formação fora da área (contábeis, direito, geologia, TI, administração, química)",
+        "patterns": [
+          "ciencias contabeis",
+          "direito",
+          "geologia",
+          "geofisica",
+          "ciencia da computacao",
+          "computer science",
+          "sistemas de informacao",
+          "administracao de empresas",
+          "quimica",
+          "biologia",
+          "farmacia",
+          "ciencias economicas"
+        ],
+        "status": "gap",
+        "weight": 1,
+        "if_mandatory": "blocker"
+      },
+      {
+        "id": "c_crea",
+        "group": "credential",
+        "label": "Registro ativo no CREA",
+        "patterns": [
+          "crea"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "01_identity/identity.json#documents.crea"
+        ],
+        "guardrail": "CREA ativo confirmado pelo Rafael (2026-11-19)."
+      },
+      {
+        "id": "c_tst_registration",
+        "group": "credential",
+        "label": "Registro de Técnico de Segurança do Trabalho (MTE)",
+        "patterns": [
+          "tecnico de seguranca do trabalho",
+          "registro de tecnico de seguranca",
+          "registro no mte",
+          "curso tecnico em seguranca"
+        ],
+        "status": "hard_gap",
+        "weight": 3,
+        "if_mandatory": "blocker",
+        "note": "Credencial diferente de Engenheiro de Segurança."
+      },
+      {
+        "id": "c_pmp",
+        "group": "credential",
+        "label": "Certificação PMP",
+        "patterns": [
+          "pmp",
+          "pmi-pmp",
+          "certificacao pmi"
+        ],
+        "status": "gap",
+        "weight": 2,
+        "if_mandatory": "blocker_if_explicit",
+        "guardrail": "Não alegar PMP; dizer 'MBA PMI/PMBOK; aplicação PMP em preparação (586 dias verificados)'.",
+        "action": "Concluir aplicação/exame PMP."
+      },
+      {
+        "id": "c_cbsp",
+        "group": "certificate",
+        "label": "CBSP / salvatagem",
+        "patterns": [
+          "cbsp",
+          "curso basico de seguranca de plataforma",
+          "salvatagem"
+        ],
+        "status": "renewable",
+        "weight": 2,
+        "if_mandatory": "action",
+        "action": "Reciclar CBSP (último válido Jan/2024).",
+        "evidence_refs": [
+          "03_education/certifications_training.json#cbsp"
+        ]
+      },
+      {
+        "id": "c_bosiet_huet",
+        "group": "certificate",
+        "label": "BOSIET / HUET / T-HUET / CA-EBS",
+        "patterns": [
+          "bosiet",
+          "huet",
+          "t-huet",
+          "thuet",
+          "ca-ebs",
+          "helicopter underwater escape",
+          "basic offshore safety induction",
+          "foet"
+        ],
+        "status": "renewable",
+        "weight": 2,
+        "if_mandatory": "action",
+        "action": "Reciclar BOSIET/HUET/T-HUET (vencidos 2022-2023).",
+        "evidence_refs": [
+          "03_education/certifications_training.json#bosiet"
+        ]
+      },
+      {
+        "id": "c_nr_expired",
+        "group": "certificate",
+        "label": "NR-33 / NR-35 / NR-17",
+        "patterns": [
+          "nr-33",
+          "nr 33",
+          "nr33",
+          "espaco confinado",
+          "espacos confinados",
+          "nr-35",
+          "nr 35",
+          "nr35",
+          "trabalho em altura",
+          "nr-17",
+          "nr 17",
+          "ergonomia"
+        ],
+        "status": "renewable",
+        "weight": 1,
+        "if_mandatory": "action",
+        "action": "Reciclagem rápida das NRs vencidas (2024)."
+      },
+      {
+        "id": "c_nr_valid",
+        "group": "certificate",
+        "label": "NR-30 / NR-34",
+        "patterns": [
+          "nr-30",
+          "nr 30",
+          "nr30",
+          "aquaviario",
+          "nr-34",
+          "nr 34",
+          "nr34",
+          "reparacao naval"
+        ],
+        "status": "proven",
+        "weight": 1,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_nr_not_held",
+        "group": "certificate",
+        "label": "Outras NRs (NR-10, NR-12, NR-13, NR-20, NR-37)",
+        "patterns": [
+          "nr-10",
+          "nr 10",
+          "nr10",
+          "nr-12",
+          "nr 12",
+          "nr-13",
+          "nr 13",
+          "nr-20",
+          "nr 20",
+          "nr-37",
+          "nr 37"
+        ],
+        "status": "trainable",
+        "weight": 1,
+        "if_mandatory": "action",
+        "action": "Curso NR específico."
+      },
+      {
+        "id": "c_stcw_basic_gwo",
+        "group": "certificate",
+        "label": "STCW básico / GWO",
+        "patterns": [
+          "stcw",
+          "basic safety training",
+          "gwo"
+        ],
+        "status": "trainable",
+        "weight": 1,
+        "if_mandatory": "action",
+        "action": "Curso STCW BST / GWO se a vaga for embarcada (learning_goals)."
+      },
+      {
+        "id": "c_lead_auditor",
+        "group": "credential",
+        "label": "Auditor Líder / auditor ISO certificado",
+        "patterns": [
+          "auditor lider",
+          "lead auditor",
+          "auditor iso",
+          "auditor certificado",
+          "auditor interno certificado",
+          "irca"
+        ],
+        "status": "gap",
+        "weight": 2,
+        "if_mandatory": "blocker_if_explicit",
+        "guardrail": "11_truth/truth_boundaries.json#quality"
+      },
+      {
+        "id": "c_six_sigma_lean_cert",
+        "group": "credential",
+        "label": "Six Sigma / Lean (belts)",
+        "patterns": [
+          "six sigma",
+          "green belt",
+          "black belt",
+          "yellow belt",
+          "lean six sigma"
+        ],
+        "status": "gap",
+        "weight": 1,
+        "if_mandatory": "missing"
+      },
+      {
+        "id": "c_driver_license",
+        "group": "credential",
+        "label": "CNH",
+        "patterns": [
+          "cnh",
+          "carteira de motorista",
+          "carteira nacional de habilitacao",
+          "driver's license",
+          "driving license"
+        ],
+        "status": "proven",
+        "weight": 1,
+        "if_mandatory": "ok",
+        "note": "Categoria B; CNH D/E = gap."
+      },
+      {
+        "id": "c_eu_right_to_work",
+        "group": "credential",
+        "label": "Direito de trabalho na UE / passaporte europeu",
+        "patterns": [
+          "right to work in the eu",
+          "eu passport",
+          "cidadania europeia",
+          "european citizenship",
+          "eu work permit"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "01_identity/identity.json#documents.eu_work_eligibility"
+        ]
+      },
+      {
+        "id": "c_english",
+        "group": "language",
+        "label": "Inglês fluente/avançado",
+        "patterns": [
+          "ingles",
+          "english"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "01_identity/languages.json#english"
+        ]
+      },
+      {
+        "id": "c_spanish",
+        "group": "language",
+        "label": "Espanhol",
+        "patterns": [
+          "espanhol",
+          "spanish"
+        ],
+        "status": "gap",
+        "weight": 1,
+        "if_mandatory": "missing"
+      },
+      {
+        "id": "c_italian",
+        "group": "language",
+        "label": "Italiano",
+        "patterns": [
+          "italiano",
+          "italian language"
+        ],
+        "status": "unknown",
+        "weight": 1,
+        "if_mandatory": "missing",
+        "note": "Passaporte italiano, nível não documentado."
+      },
+      {
+        "id": "c_other_languages",
+        "group": "language",
+        "label": "Outros idiomas (francês, alemão, norueguês, holandês, mandarim)",
+        "patterns": [
+          "frances",
+          "french",
+          "alemao",
+          "german language",
+          "noruegues",
+          "norwegian",
+          "holandes",
+          "dutch",
+          "mandarim",
+          "chinese"
+        ],
+        "status": "gap",
+        "weight": 1,
+        "if_mandatory": "missing"
+      },
+      {
+        "id": "c_marine_operations",
+        "group": "domain",
+        "label": "Operações marítimas / embarcações / frota",
+        "patterns": [
+          "operacoes maritimas",
+          "operacao maritima",
+          "marine operations",
+          "vessel operations",
+          "operacao de embarcacoes",
+          "operacoes de embarcacoes",
+          "operacoes navais",
+          "gestao de frota",
+          "fleet management",
+          "fleet operations",
+          "frota",
+          "embarcacoes",
+          "vessels",
+          "navios",
+          "rebocador",
+          "rebocadores",
+          "tug",
+          "tugs",
+          "osv",
+          "psv",
+          "ahts",
+          "apoio maritimo"
+        ],
+        "status": "proven",
+        "weight": 3,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "04_experience/exp_vanoord.json#marine_operations",
+          "09_domains/naval_marine_offshore.json"
+        ]
+      },
+      {
+        "id": "c_offshore",
+        "group": "domain",
+        "label": "Ambiente offshore",
+        "patterns": [
+          "offshore"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "14_matching/experience_years.json#offshore_marine"
+        ]
+      },
+      {
+        "id": "c_oil_gas",
+        "group": "domain",
+        "label": "Óleo & gás / upstream / E&P",
+        "patterns": [
+          "oleo e gas",
+          "oil and gas",
+          "oil & gas",
+          "o&g",
+          "petroleo",
+          "upstream",
+          "e&p",
+          "exploracao e producao",
+          "pre-sal",
+          "presal",
+          "pre-salt",
+          "petrobras"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "note": "2,5 anos diretos (Toolvox + C-Tank).",
+        "evidence_refs": [
+          "09_domains/oil_gas_offshore.json"
+        ]
+      },
+      {
+        "id": "c_fpso",
+        "group": "domain",
+        "label": "FPSO",
+        "patterns": [
+          "fpso",
+          "fpsos",
+          "fso",
+          "unidade de producao flutuante"
+        ],
+        "status": "adjacent",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "guardrail": "Suporte/campanhas de manutenção e limpeza em FPSO; NÃO operação de produção.",
+        "evidence_refs": [
+          "06_skills/vessels_assets.json#type_fpso"
+        ]
+      },
+      {
+        "id": "c_fpso_production_ops",
+        "group": "domain",
+        "label": "Operação de planta de produção / topside process operations",
+        "patterns": [
+          "operacao da planta",
+          "planta de processo",
+          "process plant",
+          "production operations",
+          "operacao de producao",
+          "topside operations",
+          "operador de producao",
+          "process operations",
+          "producao de oleo"
+        ],
+        "status": "hard_gap",
+        "weight": 2,
+        "if_mandatory": "missing",
+        "guardrail": "11_truth/truth_boundaries.json#fpso_production_and_commissioning"
+      },
+      {
+        "id": "c_drilling_environment",
+        "group": "domain",
+        "label": "Navios-sonda / perfuração (ambiente)",
+        "patterns": [
+          "navio-sonda",
+          "navio sonda",
+          "navios-sonda",
+          "drillship",
+          "drillships",
+          "sonda de perfuracao",
+          "unidades de perfuracao",
+          "drilling rig",
+          "sondas",
+          "perfuracao",
+          "drilling"
+        ],
+        "status": "adjacent",
+        "weight": 1,
+        "if_mandatory": "ok",
+        "note": "Instrutor embarcado NS-43/NS-51; não operação de perfuração."
+      },
+      {
+        "id": "c_wells_subsea_controls",
+        "group": "domain",
+        "label": "Engenharia de poços / completação / well control / subsea controls",
+        "patterns": [
+          "engenharia de pocos",
+          "well engineering",
+          "wells engineering",
+          "completacao",
+          "well control",
+          "intervencao em pocos",
+          "well intervention",
+          "subsea controls",
+          "arvore de natal",
+          "christmas tree",
+          "bop",
+          "well completion"
+        ],
+        "status": "hard_gap",
+        "weight": 3,
+        "if_mandatory": "blocker",
+        "guardrail": "11_truth/truth_boundaries.json#engineering_design"
+      },
+      {
+        "id": "c_subsea_general",
+        "group": "domain",
+        "label": "Subsea (geral)",
+        "patterns": [
+          "subsea",
+          "submarino",
+          "submarinos",
+          "umbilicais",
+          "risers",
+          "flowlines"
+        ],
+        "status": "familiarity",
+        "weight": 1,
+        "if_mandatory": "missing"
+      },
+      {
+        "id": "c_dredging",
+        "group": "domain",
+        "label": "Dragagem (TSHD/WID)",
+        "patterns": [
+          "dragagem",
+          "dredging",
+          "tshd",
+          "wid",
+          "hopper"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "note": "Empresas de dragagem são exclusão por preferência (10_career_strategy/preferences.json)."
+      },
+      {
+        "id": "c_port_operations",
+        "group": "domain",
+        "label": "Operações portuárias / terminais / atracação",
+        "patterns": [
+          "operacoes portuarias",
+          "operacao portuaria",
+          "port operations",
+          "terminal portuario",
+          "terminais",
+          "terminal",
+          "atracacao",
+          "desatracacao",
+          "berthing",
+          "unberthing",
+          "port calls",
+          "porto",
+          "portos",
+          "agencia maritima",
+          "agentes maritimos",
+          "shipping agent",
+          "praticagem",
+          "pilotage"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_shorebase_vessel_shore",
+        "group": "domain",
+        "label": "Shorebase / interface base-embarcação",
+        "patterns": [
+          "shorebase",
+          "shore base",
+          "base de apoio",
+          "base onshore",
+          "supply base",
+          "onshore base",
+          "vessel-shore",
+          "vessel shore",
+          "interface base",
+          "interface com embarcac",
+          "interface com as embarcac",
+          "interface bordo"
+        ],
+        "status": "proven",
+        "weight": 3,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "04_experience/exp_vanoord.json#vessel_shore"
+        ]
+      },
+      {
+        "id": "c_offshore_wind",
+        "group": "domain",
+        "label": "Eólica offshore / energias renováveis",
+        "patterns": [
+          "eolica offshore",
+          "offshore wind",
+          "eolica",
+          "wind farm",
+          "renovaveis",
+          "renewables"
+        ],
+        "status": "familiarity",
+        "weight": 1,
+        "if_mandatory": "missing"
+      },
+      {
+        "id": "c_epc_epci",
+        "group": "domain",
+        "label": "EPC / EPCI",
+        "patterns": [
+          "epc",
+          "epci",
+          "engineering procurement construction"
+        ],
+        "status": "adjacent",
+        "weight": 1,
+        "if_mandatory": "ok",
+        "note": "Ambiente EPCI/offshore ~70% (fit_estimates); sem papel EPCI formal."
+      },
+      {
+        "id": "c_topside",
+        "group": "domain",
+        "label": "Topside / módulos de processo / brownfield",
+        "patterns": [
+          "topside",
+          "topsides",
+          "modulos de processo",
+          "brownfield"
+        ],
+        "status": "familiarity",
+        "weight": 2,
+        "if_mandatory": "missing",
+        "note": "Suporte a campanhas FPSO; sem projetos de topside/brownfield."
+      },
+      {
+        "id": "c_planning_scheduling",
+        "group": "planning",
+        "label": "Planejamento e cronogramas",
+        "patterns": [
+          "planejamento",
+          "planning",
+          "cronograma",
+          "cronogramas",
+          "schedule",
+          "scheduling",
+          "programacao de",
+          "planejador",
+          "planner",
+          "plano de trabalho",
+          "plano semanal",
+          "baseline"
+        ],
+        "status": "proven",
+        "weight": 3,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "04_experience/exp_vanoord.json#planning_controls"
+        ]
+      },
+      {
+        "id": "c_project_controls",
+        "group": "planning",
+        "label": "Project controls / controle de projetos",
+        "patterns": [
+          "project controls",
+          "controle de projetos",
+          "controle de projeto",
+          "controles de projeto",
+          "acompanhamento fisico-financeiro",
+          "fisico-financeiro",
+          "physical-financial"
+        ],
+        "status": "proven",
+        "weight": 3,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_critical_path",
+        "group": "planning",
+        "label": "Caminho crítico / CPM",
+        "patterns": [
+          "caminho critico",
+          "critical path",
+          "cpm"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_s_curve_progress",
+        "group": "planning",
+        "label": "Curva S / avanço físico / progresso",
+        "patterns": [
+          "curva s",
+          "curvas s",
+          "s-curve",
+          "s-curves",
+          "s curve",
+          "avanco fisico",
+          "physical progress",
+          "progress tracking",
+          "acompanhamento de avanco",
+          "progresso"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_forecast_lookahead",
+        "group": "planning",
+        "label": "Forecast / look-ahead / planejado x realizado",
+        "patterns": [
+          "forecast",
+          "look-ahead",
+          "lookahead",
+          "look ahead",
+          "planejado x realizado",
+          "planejado versus realizado",
+          "plan vs actual",
+          "planned vs actual",
+          "recovery plan",
+          "plano de recuperacao"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_evm",
+        "group": "planning",
+        "label": "Earned Value (EVM)",
+        "patterns": [
+          "earned value",
+          "valor agregado",
+          "evm",
+          "spi",
+          "cpi"
+        ],
+        "status": "adjacent",
+        "weight": 1,
+        "if_mandatory": "missing",
+        "note": "Controle físico-financeiro sim; EVM formal não documentado."
+      },
+      {
+        "id": "c_measurement_billing",
+        "group": "planning",
+        "label": "Medições / boletins de medição",
+        "patterns": [
+          "medicao",
+          "medicoes",
+          "boletim de medicao",
+          "boletins de medicao",
+          "measurement",
+          "measurements"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "note": "Excluir 'medição fiscal' de petróleo (conceito separado)."
+      },
+      {
+        "id": "c_fiscal_metering",
+        "group": "domain",
+        "label": "Medição fiscal de petróleo/gás",
+        "patterns": [
+          "medicao fiscal",
+          "fiscal metering",
+          "sistema de medicao de vazao",
+          "metering"
+        ],
+        "status": "hard_gap",
+        "weight": 3,
+        "if_mandatory": "blocker"
+      },
+      {
+        "id": "c_cost_budget",
+        "group": "planning",
+        "label": "Custos / orçamento",
+        "patterns": [
+          "controle de custos",
+          "cost control",
+          "custos",
+          "costs",
+          "orcamento",
+          "orcamentos",
+          "budget",
+          "cost projection",
+          "estimativa de custos"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "note": "Acompanhamento/projeção de custos; valores não documentados."
+      },
+      {
+        "id": "c_kpi_reporting",
+        "group": "planning",
+        "label": "KPIs / indicadores / relatórios gerenciais (DPR/RDO)",
+        "patterns": [
+          "re:\\bkpis?\\b",
+          "indicadores",
+          "indicadores de desempenho",
+          "relatorios gerenciais",
+          "relatorio gerencial",
+          "reporting",
+          "reports",
+          "relatorios",
+          "dpr",
+          "rdo",
+          "relatorio diario",
+          "daily report",
+          "management reports",
+          "performance analysis",
+          "analise de desempenho"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_pcp",
+        "group": "planning",
+        "label": "PCP - planejamento e controle da produção",
+        "patterns": [
+          "pcp",
+          "planejamento e controle da producao",
+          "production planning and control"
+        ],
+        "status": "proven",
+        "weight": 1,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_project_management",
+        "group": "management",
+        "label": "Gestão de projetos (PMI/PMBOK)",
+        "patterns": [
+          "gestao de projetos",
+          "gerenciamento de projetos",
+          "gerencia de projetos",
+          "project management",
+          "pmbok",
+          "pmi",
+          "ciclo de vida do projeto",
+          "project lifecycle",
+          "gestao de portfolio",
+          "portfolio management"
+        ],
+        "status": "proven",
+        "weight": 3,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "03_education/degrees.json#edu_mba_pm",
+          "06_skills/project_management.json"
+        ]
+      },
+      {
+        "id": "c_stakeholder",
+        "group": "management",
+        "label": "Gestão de stakeholders / interfaces",
+        "patterns": [
+          "stakeholder",
+          "stakeholders",
+          "partes interessadas",
+          "gestao de interfaces",
+          "interfaces",
+          "interface com cliente",
+          "client interface",
+          "relacionamento com cliente",
+          "multidisciplinar",
+          "multidisciplinary"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_contracts_claims",
+        "group": "management",
+        "label": "Gestão/controle de contratos, claims, aditivos",
+        "patterns": [
+          "gestao de contratos",
+          "contract management",
+          "controle contratual",
+          "contratos",
+          "contracts",
+          "subcontratos",
+          "subcontracts",
+          "subcontract",
+          "claims",
+          "pleitos",
+          "aditivos",
+          "variation order",
+          "change order",
+          "gestao de mudancas",
+          "change management"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "note": "Nível de suporte/controle operacional, não advogado/gestor contratual jurídico."
+      },
+      {
+        "id": "c_suppliers_vendors",
+        "group": "management",
+        "label": "Fornecedores / prestadores / vendors",
+        "patterns": [
+          "fornecedores",
+          "fornecedor",
+          "suppliers",
+          "supplier",
+          "vendors",
+          "vendor",
+          "prestadores de servico",
+          "service providers",
+          "contratadas",
+          "contractors",
+          "terceiros"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_procurement_formal",
+        "group": "management",
+        "label": "Compras/suprimentos formal (RFQ, concorrência, sourcing)",
+        "patterns": [
+          "compras",
+          "procurement",
+          "suprimentos",
+          "strategic sourcing",
+          "rfq",
+          "rfp",
+          "concorrencia",
+          "cotacoes",
+          "bid evaluation",
+          "equalizacao de propostas",
+          "comparativo de propostas",
+          "requisicoes de compra",
+          "purchase requisition",
+          "purchase order",
+          "pedido de compra",
+          "expediting",
+          "diligenciamento"
+        ],
+        "status": "adjacent",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "note": "Comparativos de propostas e requisições na C-Tank/Van Oord; não comprador corporativo."
+      },
+      {
+        "id": "c_risk_management",
+        "group": "management",
+        "label": "Gestão/análise de riscos",
+        "patterns": [
+          "gestao de riscos",
+          "risk management",
+          "analise de riscos",
+          "analise de risco",
+          "risk analysis",
+          "risk assessment",
+          "matriz de risco",
+          "riscos",
+          "risks"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "note": "Riscos operacionais/HSE e de cronograma; não risco financeiro/crédito."
+      },
+      {
+        "id": "c_team_leadership",
+        "group": "management",
+        "label": "Liderança de equipes / gestão de pessoas",
+        "patterns": [
+          "lideranca de equipe",
+          "lideranca de equipes",
+          "gestao de equipes",
+          "gestao de pessoas",
+          "people management",
+          "team leadership",
+          "liderar equipes",
+          "liderar equipe",
+          "lead a team",
+          "leading teams",
+          "gestao de time",
+          "coordenacao de equipes"
+        ],
+        "status": "adjacent",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "note": "Liderança operacional/coordenação de equipes e terceiros; tamanho de equipe e gestão formal de desempenho não documentados."
+      },
+      {
+        "id": "c_people_mgmt_formal",
+        "group": "management",
+        "label": "Gestão formal de gestores / avaliação de desempenho / orçamento de área",
+        "patterns": [
+          "avaliacao de desempenho da equipe",
+          "avaliar o desempenho da equipe",
+          "avaliar o desempenho dos gerentes",
+          "avaliar o desempenho dos colaboradores",
+          "gerir gerentes",
+          "liderar gerentes",
+          "lead managers",
+          "direct reports",
+          "headcount",
+          "performance reviews"
+        ],
+        "status": "gap",
+        "weight": 1,
+        "if_mandatory": "missing"
+      },
+      {
+        "id": "c_negotiation",
+        "group": "management",
+        "label": "Negociação",
+        "patterns": [
+          "negociacao",
+          "negociar",
+          "negotiation",
+          "negotiate"
+        ],
+        "status": "proven",
+        "weight": 1,
+        "if_mandatory": "ok",
+        "note": "Negociação operacional (diesel, serviços, fornecedores)."
+      },
+      {
+        "id": "c_hse",
+        "group": "hseq",
+        "label": "HSE / HSSE / QHSE / SMS / segurança",
+        "patterns": [
+          "hse",
+          "hsse",
+          "qhse",
+          "hseq",
+          "sms",
+          "ssma",
+          "seguranca do trabalho",
+          "health and safety",
+          "seguranca operacional",
+          "safety",
+          "seguranca"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "04_experience/exp_vanoord.json#hseq",
+          "09_domains/hseq_emergency_response.json"
+        ]
+      },
+      {
+        "id": "c_emergency_response",
+        "group": "hseq",
+        "label": "Resposta a emergências / ERT / Medevac / simulados",
+        "patterns": [
+          "resposta a emergencia",
+          "resposta a emergencias",
+          "emergency response",
+          "emergency preparedness",
+          "plano de emergencia",
+          "plano de resposta",
+          "erc",
+          "ert",
+          "medevac",
+          "medevacs",
+          "simulado",
+          "simulados",
+          "drill",
+          "drills",
+          "brigada",
+          "crisis management",
+          "gestao de crise"
+        ],
+        "status": "proven",
+        "weight": 3,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "04_experience/exp_vanoord.json#erc"
+        ],
+        "safe_wording": "Emergency Response Coordinator: ran drills with simulated victim, measured boat/ambulance/hospital response, issued post-drill reports; 5+ real Medevacs."
+      },
+      {
+        "id": "c_incident_investigation",
+        "group": "hseq",
+        "label": "Investigação de incidentes / causa raiz / ações corretivas / NCs",
+        "patterns": [
+          "investigacao de incidentes",
+          "investigacao de acidentes",
+          "incident investigation",
+          "analise de causa raiz",
+          "causa raiz",
+          "root cause",
+          "rca",
+          "acoes corretivas",
+          "acao corretiva",
+          "corrective actions",
+          "corrective action",
+          "nao conformidades",
+          "nao conformidade",
+          "non-conformities",
+          "non-conformity",
+          "nonconformities",
+          "desvios",
+          "deviations",
+          "licoes aprendidas",
+          "lessons learned"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_safety_tools",
+        "group": "hseq",
+        "label": "LMRA / APR / Toolbox / DDS / permissão de trabalho",
+        "patterns": [
+          "lmra",
+          "analise preliminar de risco",
+          "toolbox",
+          "toolbox talk",
+          "dds",
+          "dialogo diario de seguranca",
+          "permissao de trabalho",
+          "permit to work",
+          "ptw",
+          "jsa",
+          "job safety analysis"
+        ],
+        "status": "proven",
+        "weight": 1,
+        "if_mandatory": "ok",
+        "note": "PT/PTW formal não documentado; LMRA/TBT sim."
+      },
+      {
+        "id": "c_inspections_audits_field",
+        "group": "hseq",
+        "label": "Inspeções de segurança / campo / meios de apoio",
+        "patterns": [
+          "inspecoes de seguranca",
+          "inspecao de seguranca",
+          "safety inspections",
+          "inspecoes",
+          "inspections",
+          "vistorias de seguranca",
+          "auditorias de campo",
+          "field audits"
+        ],
+        "status": "proven",
+        "weight": 1,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_maritime_regulation",
+        "group": "hseq",
+        "label": "IMO / ISM / SOLAS / MARPOL / NORMAM / NR",
+        "patterns": [
+          "imo",
+          "ism code",
+          "codigo ism",
+          "ism",
+          "solas",
+          "marpol",
+          "normam",
+          "normam-12",
+          "normam 12",
+          "stcw code",
+          "port state",
+          "capitania dos portos",
+          "marinha do brasil",
+          "dpc"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "guardrail": "Compliance operacional; não DPA/ISM auditor/flag-state owner.",
+        "evidence_refs": [
+          "06_skills/standards_regulatory.json#std_ism"
+        ]
+      },
+      {
+        "id": "c_simops_ntm_pilotage",
+        "group": "hseq",
+        "label": "SIMOPS / Aviso aos Navegantes / Isenção de Praticagem",
+        "patterns": [
+          "simops",
+          "operacoes simultaneas",
+          "simultaneous operations",
+          "aviso aos navegantes",
+          "notice to mariners",
+          "isencao de praticagem",
+          "pilotage exemption"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_anp_sgso",
+        "group": "hseq",
+        "label": "SGSO / SGIP / SGSS / ANP",
+        "patterns": [
+          "sgso",
+          "sgip",
+          "sgss",
+          "anp",
+          "resolucao anp",
+          "regime de seguranca operacional"
+        ],
+        "status": "adjacent",
+        "weight": 2,
+        "if_mandatory": "missing",
+        "guardrail": "Base ISM/IMO/NORMAM; ANP SGSO/SGIP/SGSS não operados diretamente."
+      },
+      {
+        "id": "c_iso_45001_14001",
+        "group": "hseq",
+        "label": "ISO 45001 / ISO 14001 / tri-norma",
+        "patterns": [
+          "iso 45001",
+          "iso 14001",
+          "ohsas",
+          "tri-norma",
+          "trinorma",
+          "sistema integrado de gestao",
+          "14001",
+          "45001",
+          "sgi"
+        ],
+        "status": "familiarity",
+        "weight": 1,
+        "if_mandatory": "missing"
+      },
+      {
+        "id": "c_environment_waste",
+        "group": "hseq",
+        "label": "Meio ambiente / resíduos / licenças (INEA/IBAMA)",
+        "patterns": [
+          "meio ambiente",
+          "environmental",
+          "gestao de residuos",
+          "waste management",
+          "residuos",
+          "waste",
+          "licenciamento ambiental",
+          "inea",
+          "ibama",
+          "esg",
+          "sustentabilidade",
+          "sustainability",
+          "emissoes",
+          "emissions"
+        ],
+        "status": "adjacent",
+        "weight": 1,
+        "if_mandatory": "ok",
+        "note": "Resíduos/MARPOL e interface INEA na Van Oord; sem gestão ambiental corporativa."
+      },
+      {
+        "id": "c_occupational_health",
+        "group": "hseq",
+        "label": "Saúde ocupacional / primeiros socorros",
+        "patterns": [
+          "saude ocupacional",
+          "occupational health",
+          "primeiros socorros",
+          "first aid",
+          "ergonomia"
+        ],
+        "status": "adjacent",
+        "weight": 1,
+        "if_mandatory": "ok",
+        "guardrail": "Não alegar qualificação médica."
+      },
+      {
+        "id": "c_quality_management",
+        "group": "quality",
+        "label": "Qualidade / SGQ / garantia da qualidade",
+        "patterns": [
+          "gestao da qualidade",
+          "quality management",
+          "sistema de gestao da qualidade",
+          "sgq",
+          "qms",
+          "garantia da qualidade",
+          "quality assurance",
+          "controle de qualidade",
+          "quality control",
+          "qa/qc",
+          "qualidade",
+          "quality"
+        ],
+        "status": "adjacent",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "09_domains/quality_management_systems.json"
+        ]
+      },
+      {
+        "id": "c_iso9001",
+        "group": "quality",
+        "label": "ISO 9001 / ISO 9000",
+        "patterns": [
+          "iso 9001",
+          "iso 9000",
+          "iso9001",
+          "iso 9001:2015",
+          "9001"
+        ],
+        "status": "adjacent",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "guardrail": "Preparação/readiness, mapeamento, procedimentos, controle documental; não auditor.",
+        "evidence_refs": [
+          "06_skills/standards_regulatory.json#std_iso9001"
+        ]
+      },
+      {
+        "id": "c_internal_audit",
+        "group": "quality",
+        "label": "Auditorias (participação/preparação)",
+        "patterns": [
+          "auditoria",
+          "auditorias",
+          "audit",
+          "audits",
+          "auditoria interna",
+          "internal audit"
+        ],
+        "status": "adjacent",
+        "weight": 1,
+        "if_mandatory": "ok",
+        "note": "Preparação e follow-up; auditor formal = gap."
+      },
+      {
+        "id": "c_process_mapping",
+        "group": "quality",
+        "label": "Mapeamento/padronização de processos e procedimentos",
+        "patterns": [
+          "mapeamento de processos",
+          "process mapping",
+          "bpmn",
+          "modelagem de processos",
+          "padronizacao",
+          "standardization",
+          "procedimentos",
+          "procedures",
+          "sops",
+          "fluxogramas",
+          "gestao de processos",
+          "process management",
+          "processos"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_continuous_improvement",
+        "group": "quality",
+        "label": "Melhoria contínua / PDCA / MASP",
+        "patterns": [
+          "melhoria continua",
+          "continuous improvement",
+          "pdca",
+          "masp",
+          "sdca",
+          "kaizen",
+          "lean",
+          "5s",
+          "otimizacao de processos",
+          "process improvement"
+        ],
+        "status": "adjacent",
+        "weight": 1,
+        "if_mandatory": "ok",
+        "note": "Aplicado informalmente; sem programa MASP/Lean certificado."
+      },
+      {
+        "id": "c_document_control",
+        "group": "quality",
+        "label": "Controle documental / gestão de documentos",
+        "patterns": [
+          "controle documental",
+          "controle de documentos",
+          "document control",
+          "gestao documental",
+          "gestao de documentos",
+          "document management",
+          "edms",
+          "rastreabilidade",
+          "traceability"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_compliance_governance",
+        "group": "quality",
+        "label": "Conformidade / compliance / governança / controles",
+        "patterns": [
+          "conformidade",
+          "compliance",
+          "governanca",
+          "governance",
+          "controles internos",
+          "internal controls",
+          "grc",
+          "regulatorio",
+          "regulatory"
+        ],
+        "status": "adjacent",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "note": "Compliance operacional/regulatório marítimo e Petrobras (Drake); não compliance financeiro/anticorrupção corporativo."
+      },
+      {
+        "id": "c_synergi_bms",
+        "group": "quality",
+        "label": "Synergi / BMS corporativo específico",
+        "patterns": [
+          "synergi",
+          "bms subsea7",
+          "intelex",
+          "enablon",
+          "sap ehs"
+        ],
+        "status": "gap",
+        "weight": 1,
+        "if_mandatory": "missing"
+      },
+      {
+        "id": "c_logistics_offshore",
+        "group": "logistics",
+        "label": "Logística offshore / materiais / suprimentos de embarcações",
+        "patterns": [
+          "logistica offshore",
+          "offshore logistics",
+          "logistica de materiais",
+          "materials logistics",
+          "logistica maritima",
+          "marine logistics",
+          "logistica",
+          "logistics",
+          "supply chain",
+          "cadeia de suprimentos",
+          "materiais",
+          "materials",
+          "almoxarifado",
+          "warehouse",
+          "transporte de cargas",
+          "movimentacao de cargas"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "09_domains/logistics_materials_suppliers.json"
+        ]
+      },
+      {
+        "id": "c_crew_pob",
+        "group": "logistics",
+        "label": "Crew change / POB / embarque / voos de helicóptero",
+        "patterns": [
+          "crew change",
+          "troca de turma",
+          "pob",
+          "persons on board",
+          "embarque de pessoal",
+          "logistica de pessoal",
+          "logistica de maritimos",
+          "programacao de embarque",
+          "helicoptero",
+          "voos offshore",
+          "crewing",
+          "credenciamento",
+          "matriz de qualificacao",
+          "qualification matrix"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_bunkering_mobilization",
+        "group": "logistics",
+        "label": "Bunkering / mobilização / desmobilização",
+        "patterns": [
+          "bunkering",
+          "abastecimento de combustivel",
+          "mobilizacao",
+          "desmobilizacao",
+          "mobilization",
+          "mobilisation",
+          "demobilization",
+          "port call"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_customs_foreign_trade",
+        "group": "logistics",
+        "label": "Aduana / comércio exterior",
+        "patterns": [
+          "aduaneir",
+          "customs",
+          "comex",
+          "comercio exterior",
+          "despacho aduaneiro",
+          "importacao",
+          "exportacao",
+          "repetro"
+        ],
+        "status": "familiarity",
+        "weight": 1,
+        "if_mandatory": "missing",
+        "note": "Legislação aduaneira estudada no Técnico em Portos."
+      },
+      {
+        "id": "c_maintenance_planning",
+        "group": "maintenance",
+        "label": "Manutenção (planejamento/prontidão/downtime)",
+        "patterns": [
+          "manutencao",
+          "maintenance",
+          "pcm",
+          "ppcm",
+          "planejamento de manutencao",
+          "maintenance planning",
+          "downtime",
+          "disponibilidade",
+          "availability",
+          "prontidao",
+          "readiness"
+        ],
+        "status": "adjacent",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "guardrail": "11_truth/truth_boundaries.json#vessel_technical_management"
+      },
+      {
+        "id": "c_pms_cmms",
+        "group": "maintenance",
+        "label": "PMS / CMMS / SAP PM / Maximo / AMOS",
+        "patterns": [
+          "pms",
+          "cmms",
+          "sap pm",
+          "maximo",
+          "amos",
+          "sistema de manutencao",
+          "maintenance management system",
+          "programa de manutencao"
+        ],
+        "status": "hard_gap",
+        "weight": 2,
+        "if_mandatory": "blocker_if_explicit",
+        "guardrail": "Não alegar PMS/CMMS/AMOS ownership."
+      },
+      {
+        "id": "c_reliability",
+        "group": "maintenance",
+        "label": "Confiabilidade / RCM / RBI / CBM / FMEA / análise de falha",
+        "patterns": [
+          "confiabilidade",
+          "reliability",
+          "rcm",
+          "rbi",
+          "cbm",
+          "fmea",
+          "fmeca",
+          "analise de falha",
+          "analise de falhas",
+          "failure analysis",
+          "corrosao",
+          "corrosion",
+          "integridade estrutural",
+          "integridade de ativos",
+          "asset integrity",
+          "integrity management"
+        ],
+        "status": "hard_gap",
+        "weight": 2,
+        "if_mandatory": "missing"
+      },
+      {
+        "id": "c_class_flag_statutory",
+        "group": "maintenance",
+        "label": "Classe / bandeira / certificados estatutários / dry-dock",
+        "patterns": [
+          "sociedade classificadora",
+          "classificadora",
+          "class society",
+          "dnv",
+          "bureau veritas",
+          "lloyd's register",
+          "certificados estatutarios",
+          "statutory certificates",
+          "flag state",
+          "bandeira",
+          "vistoria de classe",
+          "class survey",
+          "docagem",
+          "dry dock",
+          "drydock",
+          "dry-dock"
+        ],
+        "status": "hard_gap",
+        "weight": 2,
+        "if_mandatory": "missing",
+        "guardrail": "11_truth/truth_boundaries.json#vessel_technical_management"
+      },
+      {
+        "id": "c_shipyard_repairs",
+        "group": "maintenance",
+        "label": "Estaleiro / reparos navais (suporte)",
+        "patterns": [
+          "estaleiro",
+          "shipyard",
+          "reparo naval",
+          "reparos navais",
+          "ship repair"
+        ],
+        "status": "familiarity",
+        "weight": 1,
+        "if_mandatory": "missing",
+        "note": "Suporte a reparos em estaleiro de Utrecht (timesheet Mai-Jun/2024)."
+      },
+      {
+        "id": "c_deck_machinery_mech",
+        "group": "maintenance",
+        "label": "Mecânica / máquinas de convés / hidráulica / guindastes",
+        "patterns": [
+          "deck machinery",
+          "maquinas de convés",
+          "equipamentos de conves",
+          "guindaste",
+          "guindastes",
+          "crane",
+          "cranes",
+          "hidraulica",
+          "hydraulic",
+          "mecanica",
+          "mechanical",
+          "motores",
+          "engines"
+        ],
+        "status": "gap",
+        "weight": 1,
+        "if_mandatory": "missing",
+        "suppress_in_degree_sentence": true
+      },
+      {
+        "id": "c_electrical_instrumentation",
+        "group": "maintenance",
+        "label": "Elétrica / instrumentação / automação industrial",
+        "patterns": [
+          "eletrica",
+          "electrical",
+          "instrumentacao",
+          "instrumentation",
+          "automacao industrial",
+          "plc",
+          "clp",
+          "scada",
+          "sistemas eletricos"
+        ],
+        "status": "gap",
+        "weight": 2,
+        "if_mandatory": "missing",
+        "suppress_in_degree_sentence": true
+      },
+      {
+        "id": "c_turnaround_commissioning",
+        "group": "maintenance",
+        "label": "Paradas / turnaround / comissionamento / start-up",
+        "patterns": [
+          "parada programada",
+          "paradas programadas",
+          "turnaround",
+          "shutdown",
+          "comissionamento",
+          "commissioning",
+          "pre-comissionamento",
+          "start-up",
+          "startup de planta",
+          "descomissionamento",
+          "decommissioning"
+        ],
+        "status": "hard_gap",
+        "weight": 2,
+        "if_mandatory": "missing",
+        "guardrail": "11_truth/truth_boundaries.json#fpso_production_and_commissioning"
+      },
+      {
+        "id": "c_qaqc_inspection_ndt",
+        "group": "maintenance",
+        "label": "Inspeção de fabricação / soldagem / END / pintura",
+        "patterns": [
+          "inspecao de fabricacao",
+          "inspetor de fabricacao",
+          "ensaios nao destrutivos",
+          "ndt",
+          "ndt/ndi",
+          "soldagem",
+          "welding",
+          "inspetor de solda",
+          "pintura industrial",
+          "inspecao de equipamentos",
+          "equipment inspection",
+          "fbts",
+          "sns"
+        ],
+        "status": "hard_gap",
+        "weight": 2,
+        "if_mandatory": "blocker_if_explicit"
+      },
+      {
+        "id": "c_tanker_marine_assurance",
+        "group": "marine_assurance",
+        "label": "Tanker / offloading / COW / lastro / BWTS / ISGOTT / OCIMF-SIRE / vetting",
+        "patterns": [
+          "isgott",
+          "ocimf",
+          "sire",
+          "vetting",
+          "crude oil washing",
+          "cow",
+          "inertizacao",
+          "inerting",
+          "offloading",
+          "alivio",
+          "ballast water",
+          "agua de lastro",
+          "bwts",
+          "tanker",
+          "navio tanque",
+          "navios tanque",
+          "asog",
+          "cargo operations"
+        ],
+        "status": "hard_gap",
+        "weight": 3,
+        "if_mandatory": "blocker",
+        "guardrail": "11_truth/truth_boundaries.json#tanker_marine_assurance"
+      },
+      {
+        "id": "c_dynamic_positioning",
+        "group": "marine_assurance",
+        "label": "Posicionamento dinâmico (DP)",
+        "patterns": [
+          "posicionamento dinamico",
+          "dynamic positioning",
+          "dp operator",
+          "dpo",
+          "dp2",
+          "dp3",
+          "fmea de dp"
+        ],
+        "status": "hard_gap",
+        "weight": 2,
+        "if_mandatory": "blocker"
+      },
+      {
+        "id": "c_sea_time_officer",
+        "group": "marine_assurance",
+        "label": "Tempo de embarque como oficial / watchkeeping",
+        "patterns": [
+          "sea time",
+          "tempo de embarque como oficial",
+          "watchkeeping",
+          "experiencia embarcada como oficial",
+          "seagoing experience"
+        ],
+        "status": "hard_gap",
+        "weight": 2,
+        "if_mandatory": "blocker"
+      },
+      {
+        "id": "c_engineering_design",
+        "group": "design",
+        "label": "Projeto/design de engenharia (FEED, detalhamento, cálculo estrutural, FEA)",
+        "patterns": [
+          "projeto basico",
+          "projeto detalhado",
+          "detail design",
+          "detailed design",
+          "feed",
+          "pre-feed",
+          "basic design",
+          "memoria de calculo",
+          "calculo estrutural",
+          "structural analysis",
+          "elementos finitos",
+          "finite element",
+          "fea",
+          "engenharia de detalhamento"
+        ],
+        "status": "hard_gap",
+        "weight": 2,
+        "if_mandatory": "blocker_if_explicit",
+        "guardrail": "11_truth/truth_boundaries.json#engineering_design"
+      },
+      {
+        "id": "c_design_software",
+        "group": "design",
+        "label": "Software de engenharia (HYSYS, Ansys, Orcaflex, SolidWorks, Smart 3D/P&ID, Mathcad, SKM, PDMS/E3D, Navisworks)",
+        "patterns": [
+          "hysys",
+          "pro ii",
+          "unisim",
+          "ansys",
+          "orcaflex",
+          "solidworks",
+          "smart 3d",
+          "smartplant",
+          "smart p&id",
+          "mathcad",
+          "skm",
+          "pdms",
+          "e3d",
+          "navisworks",
+          "sacs",
+          "staad",
+          "caesar",
+          "tekla",
+          "inventor",
+          "revit"
+        ],
+        "status": "hard_gap",
+        "weight": 2,
+        "if_mandatory": "blocker",
+        "guardrail": "06_skills/software/explicit_non_experience.json"
+      },
+      {
+        "id": "c_cad_gis",
+        "group": "design",
+        "label": "AutoCAD / AVEVA / Petrel / GIS",
+        "patterns": [
+          "autocad",
+          "aveva",
+          "petrel",
+          "arcgis",
+          "qgis",
+          "microstation"
+        ],
+        "status": "gap",
+        "weight": 1,
+        "if_mandatory": "missing"
+      },
+      {
+        "id": "c_ms_project",
+        "group": "tools",
+        "label": "MS Project",
+        "patterns": [
+          "ms project",
+          "ms-project",
+          "msproject",
+          "microsoft project"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "06_skills/software/planning_project_controls.json#sw_ms_project"
+        ]
+      },
+      {
+        "id": "c_primavera_p6",
+        "group": "tools",
+        "label": "Primavera P6",
+        "patterns": [
+          "primavera",
+          "p6",
+          "oracle primavera"
+        ],
+        "status": "developing",
+        "weight": 3,
+        "if_mandatory": "blocker_if_explicit",
+        "guardrail": "Nunca vender P6 como experiência profissional; dizer 'em desenvolvimento'.",
+        "action": "Curso + certificado P6 (learning_goals)."
+      },
+      {
+        "id": "c_excel",
+        "group": "tools",
+        "label": "Excel avançado",
+        "patterns": [
+          "excel",
+          "excel avancado",
+          "advanced excel",
+          "planilhas",
+          "spreadsheets"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_power_bi_dashboards",
+        "group": "tools",
+        "label": "Power BI / dashboards / BI",
+        "patterns": [
+          "power bi",
+          "powerbi",
+          "dashboards",
+          "dashboard",
+          "business intelligence",
+          "bi",
+          "tableau",
+          "qlik",
+          "looker"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "note": "Power BI = used/proven; Tableau/Qlik não documentados (transferível)."
+      },
+      {
+        "id": "c_office",
+        "group": "tools",
+        "label": "Pacote Office (Word, PowerPoint, Outlook)",
+        "patterns": [
+          "pacote office",
+          "microsoft office",
+          "ms office",
+          "office 365",
+          "powerpoint",
+          "power point",
+          "outlook",
+          "microsoft word",
+          "ms word"
+        ],
+        "status": "proven",
+        "weight": 1,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_m365_workplace",
+        "group": "tools",
+        "label": "Microsoft 365 workplace (SharePoint, Teams, OneDrive)",
+        "patterns": [
+          "microsoft 365",
+          "m365",
+          "sharepoint",
+          "onedrive",
+          "viva",
+          "exchange online",
+          "microsoft teams"
+        ],
+        "status": "familiarity",
+        "weight": 1,
+        "if_mandatory": "missing",
+        "note": "Usuário de Office; administração M365 não documentada."
+      },
+      {
+        "id": "c_endpoint_it_admin",
+        "group": "tools",
+        "label": "Administração de TI / endpoint / redes (Intune, AD, Cisco)",
+        "patterns": [
+          "intune",
+          "active directory",
+          "azure ad",
+          "entra id",
+          "sccm",
+          "endpoint management",
+          "cisco",
+          "ccna",
+          "firewall",
+          "redes de computadores",
+          "network administration",
+          "servicenow"
+        ],
+        "status": "gap",
+        "weight": 2,
+        "if_mandatory": "missing"
+      },
+      {
+        "id": "c_power_platform",
+        "group": "tools",
+        "label": "Power Automate / Power Apps / low-code",
+        "patterns": [
+          "power automate",
+          "power apps",
+          "power platform",
+          "low-code",
+          "low code",
+          "no-code",
+          "rpa"
+        ],
+        "status": "familiarity",
+        "weight": 1,
+        "if_mandatory": "missing",
+        "note": "Automação de fluxos em projetos próprios (não Power Platform)."
+      },
+      {
+        "id": "c_sap_general",
+        "group": "tools",
+        "label": "SAP (geral)",
+        "patterns": [
+          "sap",
+          "sap mm",
+          "sap s/4",
+          "sap s4",
+          "erp"
+        ],
+        "status": "adjacent",
+        "weight": 1,
+        "if_mandatory": "missing",
+        "note": "Somente SAP RT (Petrobras)."
+      },
+      {
+        "id": "c_petrobras_systems",
+        "group": "tools",
+        "label": "Sistemas Petrobras (Drake, SAP RT, PHTD)",
+        "patterns": [
+          "drake",
+          "sap rt",
+          "phtd",
+          "sistemas petrobras",
+          "requisicao de transporte"
+        ],
+        "status": "proven",
+        "weight": 2,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "06_skills/software/corporate_operational_systems.json#sw_drake"
+        ]
+      },
+      {
+        "id": "c_sql",
+        "group": "tools",
+        "label": "SQL",
+        "patterns": [
+          "sql",
+          "mysql",
+          "postgresql",
+          "postgres",
+          "sqlite",
+          "banco de dados",
+          "database"
+        ],
+        "status": "developing",
+        "weight": 1,
+        "if_mandatory": "missing",
+        "guardrail": "SQL em desenvolvimento (SQLite em projetos próprios)."
+      },
+      {
+        "id": "c_python",
+        "group": "tools",
+        "label": "Python",
+        "patterns": [
+          "python",
+          "pandas"
+        ],
+        "status": "personal_project",
+        "weight": 1,
+        "if_mandatory": "ok",
+        "guardrail": "Python em projetos próprios (jobOS); não experiência corporativa."
+      },
+      {
+        "id": "c_web_dev",
+        "group": "tools",
+        "label": "Desenvolvimento web (HTML/CSS/JS/TS/PHP/WordPress)",
+        "patterns": [
+          "javascript",
+          "typescript",
+          "html",
+          "css",
+          "php",
+          "wordpress",
+          "front-end",
+          "frontend",
+          "back-end",
+          "backend",
+          "full stack",
+          "fullstack",
+          "desenvolvimento web",
+          "web development",
+          "react",
+          "node.js",
+          "nodejs"
+        ],
+        "status": "personal_project",
+        "weight": 1,
+        "if_mandatory": "ok",
+        "note": "React/Node não documentados como stack principal (JS/TS/PHP/WordPress sim).",
+        "guardrail": "Não posicionar como senior software engineer."
+      },
+      {
+        "id": "c_git_ci",
+        "group": "tools",
+        "label": "Git / GitHub / CI",
+        "patterns": [
+          "git",
+          "github",
+          "gitlab",
+          "ci/cd",
+          "github actions",
+          "versionamento"
+        ],
+        "status": "personal_project",
+        "weight": 1,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_apis_integrations",
+        "group": "tools",
+        "label": "APIs / integrações / REST / dados estruturados",
+        "patterns": [
+          "api",
+          "apis",
+          "integracoes",
+          "integrations",
+          "json",
+          "webhooks",
+          "rest api",
+          "restful"
+        ],
+        "status": "personal_project",
+        "weight": 1,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_ai_genai",
+        "group": "ai",
+        "label": "IA generativa / LLMs / ferramentas de IA",
+        "patterns": [
+          "inteligencia artificial",
+          "artificial intelligence",
+          "ia generativa",
+          "generative ai",
+          "genai",
+          "llm",
+          "llms",
+          "chatgpt",
+          "copilot",
+          "claude",
+          "gemini",
+          "prompt",
+          "prompts",
+          "agentes de ia",
+          "ai agents",
+          "ai-assisted",
+          "ai-enabled",
+          "ia"
+        ],
+        "status": "personal_project",
+        "weight": 1,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "07_ai/ai_profile.json"
+        ],
+        "guardrail": "07_ai/ai_profile.json#do_not_claim"
+      },
+      {
+        "id": "c_ml_data_science",
+        "group": "ai",
+        "label": "Machine learning / ciência de dados / modelagem estatística",
+        "patterns": [
+          "machine learning",
+          "aprendizado de maquina",
+          "data science",
+          "ciencia de dados",
+          "deep learning",
+          "modelos preditivos",
+          "predictive models",
+          "estatistica avancada",
+          "mlops"
+        ],
+        "status": "familiarity",
+        "weight": 1,
+        "if_mandatory": "missing"
+      },
+      {
+        "id": "c_agile",
+        "group": "tools",
+        "label": "Ágil (Scrum/Kanban/backlog/roadmap)",
+        "patterns": [
+          "agil",
+          "agile",
+          "scrum",
+          "kanban",
+          "backlog",
+          "sprint",
+          "sprints",
+          "roadmap",
+          "okr",
+          "okrs",
+          "jira"
+        ],
+        "status": "personal_project",
+        "weight": 1,
+        "if_mandatory": "ok",
+        "note": "Práticas iterativas/backlog/roadmap no Apollo; kanban próprio (apollo-vagas). Sem certificação Scrum."
+      },
+      {
+        "id": "c_digital_transformation",
+        "group": "ai",
+        "label": "Transformação digital / inovação / automação de processos",
+        "patterns": [
+          "transformacao digital",
+          "digital transformation",
+          "inovacao",
+          "innovation",
+          "digitalizacao",
+          "digitalization",
+          "digitalisation",
+          "automacao de processos",
+          "process automation",
+          "automacao",
+          "automation",
+          "adocao digital",
+          "digital adoption",
+          "experiencia do usuario",
+          "user experience",
+          "ux"
+        ],
+        "status": "personal_project",
+        "weight": 1,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "05_projects/proj_apollo.json",
+          "04_experience/exp_ctank_analyst.json#quality_process_improvement"
+        ]
+      },
+      {
+        "id": "c_training_instruction",
+        "group": "soft",
+        "label": "Treinamento / instrução / capacitação",
+        "patterns": [
+          "treinamento",
+          "treinamentos",
+          "training",
+          "instrutor",
+          "instructor",
+          "capacitacao",
+          "facilitacao",
+          "facilitation",
+          "onboarding",
+          "upskilling",
+          "multiplicador"
+        ],
+        "status": "proven",
+        "weight": 1,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "04_experience/exp_toolvox.json"
+        ]
+      },
+      {
+        "id": "c_technical_communication",
+        "group": "soft",
+        "label": "Comunicação técnica / redação / documentação",
+        "patterns": [
+          "comunicacao",
+          "communication",
+          "redacao tecnica",
+          "technical writing",
+          "documentacao tecnica",
+          "technical documentation",
+          "apresentacoes",
+          "presentations"
+        ],
+        "status": "proven",
+        "weight": 1,
+        "if_mandatory": "ok",
+        "evidence_refs": [
+          "03_education/publication.json"
+        ]
+      },
+      {
+        "id": "c_multicultural",
+        "group": "soft",
+        "label": "Ambiente multicultural / internacional",
+        "patterns": [
+          "multicultural",
+          "internacional",
+          "international",
+          "multinacional",
+          "multinational",
+          "global teams",
+          "equipes globais"
+        ],
+        "status": "proven",
+        "weight": 1,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_travel_availability",
+        "group": "soft",
+        "label": "Disponibilidade para viagens",
+        "patterns": [
+          "disponibilidade para viagens",
+          "disponibilidade para viajar",
+          "availability to travel",
+          "willing to travel",
+          "viagens"
+        ],
+        "status": "proven",
+        "weight": 1,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_offshore_rotation",
+        "group": "soft",
+        "label": "Regime de embarque / escala",
+        "patterns": [
+          "regime de embarque",
+          "embarcado",
+          "embarque",
+          "escala 14x14",
+          "14x14",
+          "28x28",
+          "14/14",
+          "rotation",
+          "rotational",
+          "offshore rotation"
+        ],
+        "status": "adjacent",
+        "weight": 1,
+        "if_mandatory": "action",
+        "action": "Embarque exige CBSP/HUET válidos; preferência atual é onshore (aceita se validado).",
+        "note": "Histórico embarcado na Toolvox (navios-sonda)."
+      },
+      {
+        "id": "c_problem_solving",
+        "group": "soft",
+        "label": "Resolução de problemas / análise crítica",
+        "patterns": [
+          "resolucao de problemas",
+          "problem solving",
+          "problem-solving",
+          "analise critica",
+          "pensamento analitico",
+          "analytical",
+          "analitico",
+          "proatividade",
+          "proactive"
+        ],
+        "status": "proven",
+        "weight": 1,
+        "if_mandatory": "ok"
+      },
+      {
+        "id": "c_graphic_design_tools",
+        "group": "tools",
+        "label": "Photoshop / CorelDRAW / design grafico",
+        "patterns": [
+          "photoshop",
+          "coreldraw",
+          "corel draw",
+          "illustrator",
+          "design grafico",
+          "graphic design",
+          "adobe creative",
+          "indesign",
+          "canva",
+          "figma"
+        ],
+        "status": "adjacent",
+        "weight": 1,
+        "if_mandatory": "ok",
+        "note": "Photoshop/CorelDRAW usados em estagio de marketing (Macrolub); Illustrator/Figma/InDesign nao documentados.",
+        "evidence_refs": [
+          "04_experience/exp_macrolub_internship.json"
+        ]
+      },
+      {
+        "id": "c_marketing_comms",
+        "group": "soft",
+        "label": "Marketing / campanhas / comunicacao visual",
+        "patterns": [
+          "marketing",
+          "campanhas",
+          "campaigns",
+          "comunicacao visual",
+          "branding",
+          "identidade visual",
+          "midias sociais",
+          "social media"
+        ],
+        "status": "adjacent",
+        "weight": 1,
+        "if_mandatory": "ok",
+        "note": "Estagio de marketing; branding do Dismantle; coordenacao de marketing/comunicacao voluntaria (ABRACOU).",
+        "evidence_refs": [
+          "04_experience/exp_macrolub_internship.json",
+          "05_projects/proj_dismantle.json"
+        ]
+      },
+      {
+        "id": "c_event_production",
+        "group": "soft",
+        "label": "Producao de eventos",
+        "patterns": [
+          "producao de eventos",
+          "event production",
+          "event management",
+          "gestao de eventos",
+          "organizacao de eventos"
+        ],
+        "status": "proven",
+        "weight": 1,
+        "if_mandatory": "ok",
+        "note": "Dismantle #1 (independente) + assessoria de eventos Crea Jr.",
+        "evidence_refs": [
+          "05_projects/proj_dismantle.json"
+        ]
+      }
+    ],
+    "degree_cues": [
+      "formacao",
+      "formado",
+      "graduacao",
+      "graduado",
+      "bacharel",
+      "bacharelado",
+      "superior completo",
+      "ensino superior",
+      "curso superior",
+      "nivel superior",
+      "degree",
+      "bachelor",
+      "diploma",
+      "mba",
+      "pos-graduacao",
+      "pos graduacao",
+      "especializacao",
+      "postgraduate",
+      "mestrado",
+      "master",
+      "engenharia",
+      "engineering"
+    ],
+    "degree_related_wildcards": [
+      "afins",
+      "afim",
+      "correlata",
+      "correlatas",
+      "correlato",
+      "correlatos",
+      "relacionadas",
+      "related",
+      "equivalente",
+      "equivalent",
+      "similar",
+      "outras engenharias",
+      "areas tecnicas",
+      "qualquer engenharia",
+      "any engineering"
+    ]
+  }
+}

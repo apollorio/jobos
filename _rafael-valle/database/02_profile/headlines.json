@@ -1,0 +1,138 @@
+{
+  "_part": {
+    "id": "02_profile/headlines",
+    "title": "Templates de headline por alvo",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "headline_templates": [
+      {
+        "id": "h_marine_ops_superintendent",
+        "target": "Marine / Offshore Operations Engineer - Superintendent - Vessel-Shore",
+        "headline_en": "MARINE & OFFSHORE OPERATIONS | SUPERINTENDENT - VESSEL-SHORE INTERFACE",
+        "lead_with": [
+          "exp_vanoord"
+        ],
+        "domains": [
+          "naval_marine_offshore",
+          "hseq_emergency_response"
+        ]
+      },
+      {
+        "id": "h_shorebase_ops_sbm",
+        "target": "Senior Operations Engineer (FPSO shorebase)",
+        "headline_en": "Offshore Operations - Shorebase Coordination - Operational Readiness - HSSE - Contractors & Vendors",
+        "summary_en": "Operations-focused engineer with 4+ years in offshore/marine execution, shorebase coordination and O&G support in Brazil, including 3y5m as Marine Operations Superintendent.",
+        "lead_with": [
+          "exp_vanoord",
+          "exp_ctank_analyst"
+        ],
+        "domains": [
+          "naval_marine_offshore",
+          "oil_gas_offshore",
+          "logistics_materials_suppliers"
+        ],
+        "note": "Abrir com operações, não com 'Civil Engineer'; formação Civil + Naval/Offshore + Segurança do Trabalho + MBA fica em Education."
+      },
+      {
+        "id": "h_deputy_vessel_superintendent",
+        "target": "Deputy Vessel Superintendent",
+        "headline_en": "VESSEL OPERATIONS & HSEQ | BASE-VESSEL INTERFACE - EMERGENCY RESPONSE - INSPECTIONS",
+        "lead_with": [
+          "exp_vanoord"
+        ],
+        "must_include": [
+          "ERC",
+          "emergency drills",
+          "5+ real Medevacs",
+          "vessel/support-craft inspections"
+        ],
+        "domains": [
+          "naval_marine_offshore",
+          "hseq_emergency_response"
+        ]
+      },
+      {
+        "id": "h_quality_offshore_prio",
+        "target": "Operational Quality / Management Systems (offshore)",
+        "headline_en": "OFFSHORE ENGINEER | OPERATIONAL QUALITY & MANAGEMENT SYSTEMS",
+        "subheadline_en": "Offshore Operations - QHSE - ISM - Process Improvement - Management Systems - KPIs & BI",
+        "lead_with": [
+          "exp_vanoord",
+          "exp_ctank_analyst"
+        ],
+        "domains": [
+          "quality_management_systems",
+          "hseq_emergency_response",
+          "planning_data_performance"
+        ]
+      },
+      {
+        "id": "h_quality_sr_subsea7",
+        "target": "Quality Engineer Sr (EPCI / QA governance)",
+        "headline_pt": "ENGENHEIRO DE QUALIDADE | OFFSHORE & SISTEMAS DE GESTÃO",
+        "lead_with": [
+          "exp_vanoord",
+          "exp_ctank_analyst"
+        ],
+        "domains": [
+          "quality_management_systems"
+        ],
+        "vocabulary": [
+          "Sistema de Gestão da Qualidade",
+          "gestão de desvios",
+          "causa raiz",
+          "ações corretivas",
+          "auditorias",
+          "indicadores",
+          "procedimentos",
+          "governança",
+          "melhoria contínua",
+          "stakeholders"
+        ]
+      },
+      {
+        "id": "h_planner_project_controls",
+        "target": "Planner Offshore / Planning & Project Controls",
+        "headline_en": "PLANNING & PROJECT CONTROLS | MARINE & OFFSHORE OPERATIONS",
+        "subheadline_en": "Look-ahead - Forecast - Plan vs Actual - S-Curves - KPIs - Recovery Planning",
+        "lead_with": [
+          "exp_vanoord"
+        ],
+        "domains": [
+          "project_management_project_controls",
+          "planning_data_performance"
+        ]
+      },
+      {
+        "id": "h_project_management_pmp",
+        "target": "Project Management / PMP track",
+        "headline_en": "PROJECT MANAGEMENT | MARINE PROJECT EXECUTION - SUPPLIERS - COST - RISK",
+        "lead_with": [
+          "exp_vanoord",
+          "proj_dismantle"
+        ],
+        "domains": [
+          "project_management_project_controls",
+          "commercial_contract_management"
+        ]
+      },
+      {
+        "id": "h_logistics_supply",
+        "target": "Logistics / Supply / Offshore readiness analyst",
+        "headline_pt": "LOGÍSTICA OFFSHORE & SUPRIMENTOS | PRONTIDÃO OPERACIONAL - FORNECEDORES - POB",
+        "lead_with": [
+          "exp_ctank_analyst",
+          "exp_vanoord"
+        ],
+        "domains": [
+          "logistics_materials_suppliers",
+          "oil_gas_offshore"
+        ]
+      }
+    ]
+  }
+}

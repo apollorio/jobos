@@ -1,0 +1,2171 @@
+{
+  "meta": {
+    "title": "Rafael Perini Valle — Ultra Modular Career Knowledge Graph",
+    "version": "2026-10-20.2",
+    "language": "pt-BR",
+    "architecture": "cellular / atomic-node / cross-linked tree",
+    "purpose": [
+      "Fonte única de verdade para CVs específicos por vaga.",
+      "Análise de fit por domínio, requisito, software, embarcação, cliente e senioridade.",
+      "Banco de evidências para entrevistas, LinkedIn, Gupy, cartas e aplicação PMP.",
+      "Separação explícita entre experiência comprovada, informação confirmada pelo usuário, desenvolvimento pessoal e lacunas.",
+      "Impedir keyword stuffing ou criação de experiência inexistente."
+    ],
+    "evidence_scale": {
+      "D": "Documentado em arquivos/CVs/contratos/job descriptions/timesheets/e-mails/relatórios analisados.",
+      "U": "Confirmado diretamente por Rafael em conversa.",
+      "DP": "Documentado + confirmado diretamente por Rafael.",
+      "P": "Projeto pessoal/independente confirmado.",
+      "V": "Requer validação adicional antes de usar como afirmação forte.",
+      "X": "Boundary: não alegar como experiência/credencial."
+    },
+    "important_interpretation_note": {
+      "STAR": "Nenhum software autônomo chamado 'STAR' foi encontrado nas fontes recuperadas. 'Amaralina Star' é o nome do navio-sonda NS-43. SAP RT é um sistema Petrobras separado e Drake é outro sistema separado. Se 'STAR' for um terceiro software específico, adicionar somente após Rafael confirmar o nome/função.",
+      "software_model": "Cada software/sistema/linguagem abaixo é um nó individual, com status, contexto, uso e limite de alegação."
+    },
+    "validation_stats": {
+      "top_level_modules": 22,
+      "software_atomic_nodes": 43,
+      "experience_nodes": 5,
+      "van_oord_project_nodes": 13,
+      "independent_project_nodes": 4,
+      "education_nodes": 5,
+      "training_certification_nodes": 13,
+      "truth_boundary_groups": 7
+    }
+  },
+  "identity": {
+    "full_name": "Rafael Perini Valle",
+    "professional_display": "Rafael Valle",
+    "location": "Rio de Janeiro - RJ, Brasil",
+    "secondary_base": "Vitória - ES, Brasil",
+    "nationalities": [
+      "Brasileira",
+      "Italiana"
+    ],
+    "passports": {
+      "brazilian": {
+        "status": "possui",
+        "validity_source": "arquivo histórico indica validade até 2027",
+        "evidence": "D"
+      },
+      "italian": {
+        "status": "possui",
+        "validity_source": "arquivo histórico indica validade até 2027",
+        "evidence": "D"
+      }
+    },
+    "driver_license": {
+      "value": "CNH B",
+      "evidence": "D"
+    },
+    "crea": {
+      "status": "ativo",
+      "evidence": "DP"
+    },
+    "languages": {
+      "portuguese": {
+        "level": "nativo",
+        "evidence": "D"
+      },
+      "english": {
+        "level": "fluente / avançado",
+        "contexts": [
+          "uso diário com equipes multinacionais offshore",
+          "comunicação com comandantes e equipes estrangeiras",
+          "treinamento técnico",
+          "SOPs, toolbox talks, rádio, passadiço e emergências",
+          "interface com clientes/fornecedores internacionais"
+        ],
+        "formal_training": [
+          "English for Business — NED Training Centre, Irlanda — Set/2015",
+          "General English — EC English Language Centres, Inglaterra — Ago/2014",
+          "Cambridge Exam — Jul/2016 (registro histórico indicava validade até Jul/2025)"
+        ],
+        "evidence": "D"
+      }
+    },
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/rpvalle",
+      "book": "https://livro.rvalle.com.br/",
+      "apollo": "https://apollo.rio.br/",
+      "dismantle": "https://dismantle.com.br/"
+    }
+  },
+  "career_summary": {
+    "canonical_one_liner": "Engenheiro com 3 anos e 5 meses como Superintendente na Van Oord, mais vivência offshore anterior em FPSO/OSV e navios-sonda, com forte experiência em vessel-shore interface, planejamento e controle operacional, HSEQ/ERC, logística, fornecedores, KPIs, custos e execução de projetos.",
+    "do_not_round_management_tenure_to": "5+ anos em gerência similar",
+    "career_domains_ranked": [
+      "Marine / Offshore Operations",
+      "Vessel-Shore Interface",
+      "Project Execution & Project Controls",
+      "Planning & Operational Performance",
+      "HSEQ / Emergency Response",
+      "Offshore Logistics / Materials / Suppliers",
+      "Operational Quality / Management Systems",
+      "Oil & Gas Offshore Support",
+      "Data / KPI / Reporting",
+      "Digital / Process Automation"
+    ]
+  },
+  "experience_nodes": {
+    "exp_vanoord": {
+      "company": "Van Oord",
+      "formal_role": "Superintendent 1 / Superintendente",
+      "cv_role_variants_allowed": [
+        "Superintendente de Operações Marítimas",
+        "Marine Operations Superintendent",
+        "Superintendente — Operações Marítimas & Vessel-Shore Interface",
+        "Superintendente — Planejamento Operacional & Performance"
+      ],
+      "business_area": "Projetos",
+      "company_context": "Infraestrutura marítima e dragagem",
+      "period": {
+        "start": "2021-07-12",
+        "end": "2024-11-01",
+        "display": "Jul 2021 - Nov 2024"
+      },
+      "duration": "3 anos e 5 meses",
+      "work_mode": "Onshore/on-site em múltiplos portos da costa brasileira, com interface constante com embarcações",
+      "direct_interfaces": [
+        "comandantes / Masters",
+        "equipes de bordo",
+        "QHSE",
+        "cliente",
+        "project management",
+        "Ship Management Department",
+        "diretoria internacional / matriz europeia",
+        "terminais",
+        "agentes marítimos",
+        "pilotos",
+        "fornecedores",
+        "prestadores locais",
+        "survey teams",
+        "equipes de mergulho"
+      ],
+      "formal_job_scope": [
+        "acompanhar e controlar andamento da execução dos projetos",
+        "cost projection / planning",
+        "contratação e gestão de fornecedores",
+        "liderança de equipes",
+        "monitoramento de produção e equipamentos",
+        "carga e passageiros",
+        "berthing/unberthing",
+        "documentação técnica",
+        "batimetria e produção",
+        "suprimentos/serviços para embarcações",
+        "purchase/service requests",
+        "logística"
+      ],
+      "marine_operations": [
+        "TSHD",
+        "WID",
+        "rebocadores",
+        "lanchas rápidas / voadeiras",
+        "embarcações de apoio",
+        "operações de dragagem",
+        "mobilização/desmobilização",
+        "atracação/desatracação",
+        "bunkering",
+        "crew change",
+        "waste handling",
+        "transportes de pessoas/materiais",
+        "port calls",
+        "SIMOPS dragagem + mergulho",
+        "Notice to Mariners",
+        "suporte à Pilotage Exemption"
+      ],
+      "vessel_shore": [
+        "ponto focal operacional base ↔ embarcação",
+        "contato diário com comandantes",
+        "alinhamento de prontidão",
+        "necessidades de materiais/serviços",
+        "restrições operacionais",
+        "coordenação com terminais/agentes",
+        "comunicação de desvios e ações"
+      ],
+      "planning_controls": [
+        "plano semanal",
+        "alocação de embarcação",
+        "janelas críticas",
+        "cronogramas físico-financeiros",
+        "critical path",
+        "look-ahead ~15 dias",
+        "forecast",
+        "planejado x realizado",
+        "progress tracking",
+        "recovery actions",
+        "medições",
+        "closeout / fechamento"
+      ],
+      "performance_kpis": [
+        "produção / volumes dragados",
+        "ciclo",
+        "disponibilidade",
+        "uptime/downtime",
+        "paradas não programadas",
+        "consumo / fuel burn",
+        "avanço físico",
+        "frente parada"
+      ],
+      "survey_and_data_validation": [
+        "batimetria",
+        "survey profiles",
+        "validação de dados de produção",
+        "solicitação de novos levantamentos quando necessário",
+        "checagem de calibração/qualidade de dados",
+        "distinção entre desvio real de produção e desvio de medição"
+      ],
+      "hseq": [
+        "procedimentos",
+        "análises de risco",
+        "LMRA",
+        "Toolbox Talks",
+        "incident investigation",
+        "corrective actions",
+        "non-conformities / conditions",
+        "IMO",
+        "ISM Code",
+        "SOLAS",
+        "MARPOL",
+        "NORMAM-12"
+      ],
+      "erc": {
+        "title": "Emergency Response Coordinator (ERC) / Emergency Coordinator",
+        "evidence": "U + supporting emergency-response history D",
+        "drills": [
+          "coordenava simulados de resposta",
+          "tripulante normalmente usado como vítima simulada",
+          "media resposta lancha/embarcação",
+          "media resposta ambulância",
+          "media resposta hospital/cadeia de atendimento",
+          "fechava report final",
+          "classificava resultado positivo/negativo",
+          "registrava atrasos/falhas",
+          "propunha pontos de melhoria"
+        ],
+        "real_response": [
+          "mais de 5 Medevacs reais",
+          "interface com comandante/QHSE/equipe de resposta/gestão"
+        ]
+      },
+      "inspections": {
+        "assets": [
+          "escritório onshore",
+          "veículos do projeto",
+          "lancha rápida",
+          "voadeira",
+          "rebocador",
+          "embarcações de apoio",
+          "navios"
+        ],
+        "activities": [
+          "controle de relatórios",
+          "inspeções",
+          "registro de irregularidades",
+          "follow-up de pendências",
+          "verificação de prontidão e segurança"
+        ],
+        "example": "meio/rebocador de apoio sem maca adequada para eventual remoção médica",
+        "evidence": "U"
+      },
+      "maintenance_repairs_readiness": [
+        "monitoramento de disponibilidade de meios/equipamentos",
+        "downtime",
+        "tratamento de pendências",
+        "coordenação de serviços/reparos que afetavam a continuidade",
+        "interface com fornecedores de serviços navais",
+        "materiais/suprimentos para prontidão"
+      ],
+      "commercial_contractual": [
+        "custos",
+        "medições",
+        "claims",
+        "change / scope changes",
+        "off-hire impacts",
+        "negociação operacional de diesel",
+        "supplier/service status",
+        "purchase/service requests"
+      ],
+      "documentation": [
+        "DPRs",
+        "relatórios semanais",
+        "relatórios mensais",
+        "MoM",
+        "action plans",
+        "handover",
+        "logfiles",
+        "S-curves",
+        "15-day programming",
+        "relatórios de produção",
+        "relatórios de inspeção",
+        "relatórios de drills"
+      ],
+      "key_documented_evidence": [
+        "Plough Installation Plan 35.4264 — BFT como originator",
+        "Porto Sudeste Monthly Report 35.4449 — BFT como VO Origin",
+        "Exporting plough logfile procedure",
+        "S-curves / weekly reports / 15-day look-ahead",
+        "signed timesheets and operational e-mails"
+      ],
+      "evidence": "DP"
+    },
+    "exp_ctank_analyst": {
+      "company": "C-Tank",
+      "role": "Analista de Operações",
+      "period": "Out 2020 - Jun 2021",
+      "environment": [
+        "manutenção e limpeza offshore",
+        "FPSOs",
+        "OSVs",
+        "embarcações offshore"
+      ],
+      "operations": [
+        "planejamento/supervisão de campanhas",
+        "definição de equipes",
+        "materiais especializados",
+        "EPIs/EPCs",
+        "mobilização",
+        "transporte terrestre/marítimo",
+        "acesso a bordo",
+        "prontidão",
+        "resíduos",
+        "fornecedores/armadores",
+        "interface em inglês"
+      ],
+      "reporting": [
+        "RDO",
+        "DPR",
+        "avanço físico",
+        "produtividade",
+        "desvios HSE"
+      ],
+      "contract_controls": [
+        "evidências",
+        "entregáveis",
+        "indicadores",
+        "validação de medições",
+        "custos",
+        "comparativos de propostas"
+      ],
+      "systems": [
+        "sw_drake",
+        "sw_sap_rt"
+      ],
+      "petrobras_processes": [
+        "formulários/documentos técnicos",
+        "certificados de tripulantes",
+        "matriz de qualificação/compliance",
+        "agendamento aéreo/logístico PHTD",
+        "POB"
+      ],
+      "clients": [
+        "Shell",
+        "Transocean",
+        "Helix",
+        "ambiente Petrobras"
+      ],
+      "quality_process_improvement": [
+        "mapeamento integral de processos internos",
+        "preparação para ISO 9000/9001 com auditor/consultor terceirizado",
+        "criação de processos documentais",
+        "controle de armazenamento/descarte documental",
+        "rastreabilidade",
+        "sistema de acesso documental para tripulantes",
+        "arquitetura funcional de app interno integrando almoxarifado, RH, financeiro, NF e documentação",
+        "controle de insumos de testes de COVID"
+      ],
+      "evidence": "D"
+    },
+    "exp_ctank_assistant": {
+      "company": "C-Tank",
+      "role": "Assistente de Operações Sênior",
+      "period": "Jul 2020 - Out 2020",
+      "activities": [
+        "apoio a operações portuárias/offshore",
+        "agendamentos logísticos",
+        "document control",
+        "mobilizações",
+        "DRAKE",
+        "protocolos/testagem COVID para embarques",
+        "Requisições de Transporte",
+        "Notas Fiscais",
+        "matriz de qualificação e credenciamento"
+      ],
+      "evidence": "D"
+    },
+    "exp_toolvox": {
+      "company": "Toolvox",
+      "role": "Instrutor de Idiomas Offshore / Ponte de Comunicação Técnica",
+      "period": "Dez 2018 - Mai 2020",
+      "duration": "1 ano e 6 meses",
+      "environment": "Navios-sonda de perfuração/intervenção em águas ultraprofundas no pré-sal",
+      "vessels": [
+        "vessel_amaralina_star",
+        "vessel_siem_helix_1"
+      ],
+      "activities": [
+        "treinamentos técnicos de inglês",
+        "reuniões e rotina HSE",
+        "tradução técnica de SOPs",
+        "toolbox talks",
+        "rádio",
+        "ordens de passadiço",
+        "alertas de emergência",
+        "mediação multicultural",
+        "mitigação de risco por falha de comunicação"
+      ],
+      "crew_context": [
+        "noruegueses",
+        "americanos",
+        "filipinos",
+        "brasileiros"
+      ],
+      "evidence": "D"
+    },
+    "exp_international_research": {
+      "role": "Estagiário de Engenharia / Pesquisa Internacional",
+      "entries": [
+        {
+          "institution": "NTUA — National Technical University of Athens",
+          "period": "Mai-Jul 2015",
+          "project": "MATCH — Material choice for seismic resistance structures",
+          "activities": [
+            "fadiga sísmica",
+            "modelagem preditiva",
+            "comportamento do aço sob estresse cíclico",
+            "uso de software avançado não nomeado na fonte"
+          ]
+        },
+        {
+          "institution": "BAM — Bundesanstalt für Materialforschung und Prüfung",
+          "period": "Jan-Mar 2018",
+          "project": "Pesquisa em cimento bio-baseado",
+          "activities": [
+            "experimentos small/large scale",
+            "mapeamento rigoroso de dados",
+            "sistemas de análise"
+          ]
+        }
+      ],
+      "evidence": "D"
+    }
+  },
+  "vessel_asset_tree": {
+    "vessel_types": [
+      {
+        "id": "type_tshd",
+        "name": "TSHD",
+        "context": "Van Oord",
+        "evidence": "D"
+      },
+      {
+        "id": "type_wid",
+        "name": "WID",
+        "context": "Van Oord",
+        "evidence": "D"
+      },
+      {
+        "id": "type_tug",
+        "name": "Rebocador / Tugboat",
+        "context": "Van Oord",
+        "evidence": "D"
+      },
+      {
+        "id": "type_fast_boat",
+        "name": "Lancha rápida / voadeira",
+        "context": "Van Oord support craft",
+        "evidence": "U"
+      },
+      {
+        "id": "type_osv",
+        "name": "OSV",
+        "context": "C-Tank",
+        "evidence": "D"
+      },
+      {
+        "id": "type_fpso",
+        "name": "FPSO",
+        "context": "C-Tank support/maintenance campaigns, não produção",
+        "evidence": "D"
+      },
+      {
+        "id": "type_drillship",
+        "name": "Drillship / Navio-sonda",
+        "context": "Toolvox",
+        "evidence": "D"
+      }
+    ],
+    "named_vessels": {
+      "vessel_amaralina_star": {
+        "name": "Amaralina Star",
+        "code": "NS-43",
+        "type": "Navio-sonda",
+        "context": "Toolvox / offshore technical English",
+        "important": "STAR aqui é parte do nome da embarcação, não software.",
+        "evidence": "D"
+      },
+      "vessel_siem_helix_1": {
+        "name": "Siem Helix 1",
+        "code": "NS-51",
+        "type": "Navio-sonda de intervenção",
+        "context": "Toolvox / offshore technical English",
+        "evidence": "D"
+      }
+    }
+  },
+  "software_systems_tree": {
+    "rules": {
+      "atomicity": "Cada software/sistema/linguagem é um nó individual.",
+      "status_values": [
+        "strong/proven",
+        "used/proven",
+        "developing",
+        "personal-project",
+        "listed-needs-context",
+        "do-not-claim"
+      ],
+      "cv_rule": "Somente strong/proven ou used/proven entram como experiência prática sem qualificador."
+    },
+    "corporate_operational_systems": {
+      "sw_drake": {
+        "name": "Drake",
+        "full_name": "Drake (Sapiensia / Petrobras)",
+        "type": "Sistema Petrobras de qualificação/compliance/logística/documentação",
+        "status": "strong/proven",
+        "employer": "C-Tank",
+        "period": "2020-2021",
+        "use_cases": [
+          "matriz de qualificação",
+          "credenciamento",
+          "compliance",
+          "formulários/documentos técnicos",
+          "upload/verificação de certificados",
+          "agendamento aéreo/logístico",
+          "timesheets",
+          "provisionamento logístico",
+          "POB"
+        ],
+        "related_processes": [
+          "PHTD",
+          "offshore mobilization",
+          "crew readiness"
+        ],
+        "evidence": "D",
+        "tags": [
+          "Petrobras",
+          "offshore",
+          "compliance",
+          "crewing",
+          "logistics",
+          "documents"
+        ]
+      },
+      "sw_sap_rt": {
+        "name": "SAP RT",
+        "full_name": "RT / SAP RT (Petrobras)",
+        "type": "Sistema Petrobras para requisição/gestão de transporte e logística",
+        "status": "strong/proven",
+        "employer": "C-Tank",
+        "period": "2020-2021",
+        "use_cases": [
+          "gestão de transportes de pessoal",
+          "requisições de transporte",
+          "PHTD",
+          "logística offshore"
+        ],
+        "evidence": "D",
+        "tags": [
+          "Petrobras",
+          "SAP",
+          "transport",
+          "PHTD",
+          "offshore logistics"
+        ]
+      },
+      "sw_bport": {
+        "name": "BPORT",
+        "type": "Sistema/plataforma marítima listado no banco histórico",
+        "status": "listed-needs-context",
+        "use_cases": [],
+        "note": "Consta na skills_matrix de arquivos históricos, mas o uso específico não foi detalhado nas fontes recuperadas. Validar antes de descrever funcionalidade.",
+        "evidence": "D/V",
+        "tags": [
+          "maritime system",
+          "verify-use-case"
+        ]
+      },
+      "sw_maritime_credentialing_generic": {
+        "name": "Sistemas de credenciamento marítimo",
+        "type": "Categoria genérica de sistemas",
+        "status": "used/proven",
+        "use_cases": [
+          "credenciamento",
+          "matriz de qualificação",
+          "documentação de pessoal"
+        ],
+        "note": "Usar como categoria; Drake é o sistema nominal comprovado.",
+        "evidence": "D"
+      }
+    },
+    "planning_project_controls": {
+      "sw_ms_project": {
+        "name": "Microsoft Project",
+        "aliases": [
+          "MS Project"
+        ],
+        "type": "Project scheduling / project controls",
+        "status": "strong/proven",
+        "level": "Avançado",
+        "training": "Udemy — Abr/2019",
+        "professional_use": [
+          "cronogramas",
+          "critical path",
+          "planejamento operacional",
+          "forecast",
+          "project controls",
+          "reporting"
+        ],
+        "employer": "Van Oord",
+        "evidence": "D"
+      },
+      "sw_primavera_p6": {
+        "name": "Oracle Primavera P6",
+        "type": "Project scheduling",
+        "status": "developing",
+        "level": "Em desenvolvimento",
+        "professional_use": [],
+        "cv_rule": "Nunca vender como experiência hands-on profissional.",
+        "evidence": "D"
+      }
+    },
+    "office_data_bi": {
+      "sw_excel": {
+        "name": "Microsoft Excel",
+        "type": "Spreadsheet / data analysis",
+        "status": "strong/proven",
+        "level": "Avançado",
+        "use_cases": [
+          "dashboards",
+          "KPIs",
+          "scorecards",
+          "BI",
+          "consolidação de dados",
+          "controles operacionais",
+          "reporting"
+        ],
+        "evidence": "D"
+      },
+      "sw_power_bi": {
+        "name": "Microsoft Power BI",
+        "type": "Business Intelligence / dashboards",
+        "status": "used/proven",
+        "use_cases": [
+          "dashboards",
+          "KPI visualization",
+          "análise/consolidação de dados"
+        ],
+        "evidence": "DP"
+      },
+      "sw_powerpoint": {
+        "name": "Microsoft PowerPoint",
+        "type": "Presentation / management reporting",
+        "status": "strong/proven",
+        "level": "Avançado",
+        "use_cases": [
+          "reportes gerenciais",
+          "apresentações corporativas"
+        ],
+        "evidence": "D"
+      }
+    },
+    "web_dev_and_automation": {
+      "sw_html": {
+        "name": "HTML",
+        "type": "Markup",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio",
+          "CV Builder Pro",
+          "web projects"
+        ],
+        "evidence": "DP"
+      },
+      "sw_css": {
+        "name": "CSS",
+        "type": "Styling",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio",
+          "CV Builder Pro",
+          "web projects"
+        ],
+        "evidence": "DP"
+      },
+      "sw_javascript": {
+        "name": "JavaScript",
+        "type": "Programming language",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio",
+          "CV Builder Pro",
+          "automation/web"
+        ],
+        "evidence": "DP"
+      },
+      "sw_typescript": {
+        "name": "TypeScript",
+        "type": "Programming language",
+        "status": "personal-project/developing",
+        "contexts": [
+          "Apollo::rio codebase modernization"
+        ],
+        "cv_rule": "Não posicionar como senior professional TypeScript engineer.",
+        "evidence": "U/P"
+      },
+      "sw_python": {
+        "name": "Python",
+        "type": "Programming language / data automation",
+        "status": "personal-project/developing",
+        "contexts": [
+          "dados",
+          "automação",
+          "web/software projects"
+        ],
+        "evidence": "DP"
+      },
+      "sw_php": {
+        "name": "PHP",
+        "type": "Programming language",
+        "status": "personal-project",
+        "contexts": [
+          "WordPress",
+          "Apollo::rio"
+        ],
+        "evidence": "U/P"
+      },
+      "sw_json": {
+        "name": "JSON",
+        "type": "Data format / structured data",
+        "status": "personal-project",
+        "contexts": [
+          "CV Builder",
+          "Apollo registry/data structures",
+          "career databases"
+        ],
+        "evidence": "DP"
+      },
+      "sw_sql": {
+        "name": "SQL",
+        "type": "Query language",
+        "status": "developing",
+        "contexts": [
+          "professional development",
+          "data"
+        ],
+        "cv_rule": "Descrever como desenvolvimento/aprendizado, não experiência corporativa.",
+        "evidence": "U"
+      },
+      "sw_wordpress": {
+        "name": "WordPress",
+        "type": "CMS / application platform",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio",
+          "custom plugins",
+          "MU-plugins"
+        ],
+        "evidence": "P"
+      },
+      "sw_github": {
+        "name": "GitHub",
+        "type": "Version control collaboration platform",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo repositories",
+          "code/versioning"
+        ],
+        "evidence": "P"
+      }
+    },
+    "apollo_specific_stack": {
+      "sw_jquery": {
+        "name": "jQuery",
+        "status": "personal-project",
+        "context": "Apollo::rio",
+        "evidence": "P"
+      },
+      "sw_gsap": {
+        "name": "GSAP",
+        "status": "personal-project",
+        "context": "Apollo::rio animations",
+        "evidence": "P"
+      },
+      "sw_lenis": {
+        "name": "Lenis",
+        "status": "personal-project",
+        "context": "Apollo::rio smooth scroll",
+        "evidence": "P"
+      },
+      "sw_splide": {
+        "name": "Splide",
+        "status": "personal-project",
+        "context": "Apollo::rio frontend",
+        "evidence": "P"
+      },
+      "sw_splittype": {
+        "name": "SplitType",
+        "status": "personal-project",
+        "context": "Apollo::rio frontend",
+        "evidence": "P"
+      },
+      "sw_cloudflare": {
+        "name": "Cloudflare",
+        "status": "personal-project",
+        "context": "Apollo::rio DNS/security/CDN",
+        "evidence": "P"
+      },
+      "sw_litespeed": {
+        "name": "LiteSpeed",
+        "status": "personal-project",
+        "context": "WordPress infrastructure",
+        "evidence": "P"
+      },
+      "sw_quic_cloud": {
+        "name": "QUIC.cloud",
+        "status": "personal-project",
+        "context": "WordPress infrastructure",
+        "evidence": "P"
+      },
+      "sw_woocommerce": {
+        "name": "WooCommerce",
+        "status": "personal-project",
+        "context": "Apollo ecosystem",
+        "evidence": "P"
+      },
+      "sw_eventon": {
+        "name": "EventON",
+        "status": "personal-project",
+        "context": "Apollo event system",
+        "evidence": "P"
+      },
+      "sw_ultimate_member": {
+        "name": "Ultimate Member",
+        "status": "personal-project",
+        "context": "Apollo users/membership",
+        "evidence": "P"
+      },
+      "sw_wpdiscuz": {
+        "name": "wpDiscuz",
+        "status": "personal-project",
+        "context": "Apollo community/comments",
+        "evidence": "P"
+      },
+      "sw_buddyforms": {
+        "name": "BuddyForms",
+        "status": "personal-project",
+        "context": "Apollo frontend submissions",
+        "evidence": "P"
+      }
+    },
+    "training_or_legacy_tools": {
+      "sw_webdesigner_course": {
+        "name": "WebDesigner",
+        "provider": "Microlins Franchising",
+        "date": "Fev/2011",
+        "type": "Curso/formação em ferramentas web",
+        "status": "historical-training",
+        "evidence": "D"
+      }
+    },
+    "explicit_non_experience": {
+      "sw_amos": {
+        "name": "AMOS",
+        "status": "do-not-claim",
+        "evidence": "X"
+      },
+      "sw_hysys": {
+        "name": "HYSYS",
+        "status": "do-not-claim",
+        "evidence": "X"
+      },
+      "sw_orcaflex": {
+        "name": "Orcaflex",
+        "status": "do-not-claim",
+        "evidence": "X"
+      },
+      "sw_ansys": {
+        "name": "Ansys",
+        "status": "do-not-claim",
+        "evidence": "X"
+      },
+      "sw_mathcad": {
+        "name": "Mathcad",
+        "status": "do-not-claim",
+        "evidence": "X"
+      },
+      "sw_solidworks": {
+        "name": "SolidWorks",
+        "status": "do-not-claim",
+        "evidence": "X"
+      },
+      "sw_smart_3d": {
+        "name": "Smart 3D",
+        "status": "do-not-claim",
+        "evidence": "X"
+      },
+      "sw_smart_pid": {
+        "name": "Smart P&ID",
+        "status": "do-not-claim",
+        "evidence": "X"
+      },
+      "sw_smart_plant_foundation": {
+        "name": "Smart Plant Foundation",
+        "status": "do-not-claim",
+        "evidence": "X"
+      },
+      "sw_skm": {
+        "name": "SKM Power Tools",
+        "status": "do-not-claim",
+        "evidence": "X"
+      }
+    }
+  },
+  "methodologies_processes_tree": {
+    "project_management": [
+      "PMI / PMBOK",
+      "project lifecycle",
+      "scope",
+      "schedule",
+      "cost",
+      "risk",
+      "stakeholders",
+      "procurement/suppliers",
+      "execution monitoring",
+      "closeout"
+    ],
+    "planning_controls": [
+      "PCP",
+      "critical path",
+      "look-ahead",
+      "forecast",
+      "S-curve",
+      "plan vs actual",
+      "recovery planning"
+    ],
+    "quality_process": [
+      "ISO 9000 / ISO 9001 preparation",
+      "process mapping",
+      "procedure writing",
+      "document control",
+      "standardization",
+      "traceability",
+      "audit readiness"
+    ],
+    "hseq": [
+      "LMRA",
+      "Toolbox Talk",
+      "risk analysis",
+      "incident investigation",
+      "corrective action",
+      "SIMOPS",
+      "emergency response drills"
+    ],
+    "reporting": [
+      "DPR",
+      "RDO",
+      "weekly report",
+      "monthly report",
+      "MoM",
+      "handover",
+      "management report"
+    ]
+  },
+  "oil_gas_tree": {
+    "direct_offshore_exposure": [
+      "FPSO support/maintenance campaigns",
+      "OSV support",
+      "ultra-deepwater drillships",
+      "Petrobras operational/logistics environment"
+    ],
+    "clients_contractors_exposure": [
+      "Shell",
+      "Transocean",
+      "Helix",
+      "Petrobras environment"
+    ],
+    "strengths": [
+      "mobilization/readiness",
+      "materials/logistics",
+      "DPR/RDO",
+      "Petrobras systems",
+      "POB",
+      "PHTD",
+      "offshore safety communication"
+    ],
+    "boundaries": [
+      "não operador de produção FPSO",
+      "não owner de COW/inerting/ballast/BWTS/offloading",
+      "não Master Mariner"
+    ]
+  },
+  "maintenance_repairs_tree": {
+    "corporate_experience": {
+      "C-Tank": [
+        "campanhas de manutenção e limpeza em FPSO/OSV",
+        "planejamento de equipes e materiais",
+        "readiness",
+        "monitoramento da execução",
+        "fornecedores",
+        "custos/medições"
+      ],
+      "Van Oord": [
+        "monitoramento de disponibilidade",
+        "downtime",
+        "pendências de embarcações/meios de apoio",
+        "serviços/reparos necessários para continuidade",
+        "inspeções",
+        "materiais e suprimentos"
+      ]
+    },
+    "boundaries": [
+      "não owner integral de PMS",
+      "não CMMS primary user",
+      "não dry dock manager",
+      "não Class/statutory certification owner"
+    ]
+  },
+  "project_management_tree": {
+    "formal_education": {
+      "degree": "MBA Gestão de Projetos",
+      "institution": "USP/ESALQ",
+      "workload": "400h",
+      "framework": "PMI/PMBOK",
+      "coverage": [
+        "concepção",
+        "planejamento",
+        "execução",
+        "controle",
+        "encerramento",
+        "portfolio control",
+        "feasibility",
+        "physical-financial schedules"
+      ]
+    },
+    "professional_application": [
+      "Van Oord projects",
+      "supplier coordination",
+      "costs",
+      "claims",
+      "schedule",
+      "risk",
+      "stakeholder interfaces",
+      "execution",
+      "reporting",
+      "measurement",
+      "closeout"
+    ],
+    "pmp_evidence": {
+      "verified_daily_records": 586,
+      "original_x_marks": 566,
+      "signed_timesheet_days_added": 20,
+      "calendar_months_with_direct_evidence": 32,
+      "rule": "não inventar datas ou sobreposição para atingir meses",
+      "mba_education": "400h oferece base forte para requisito educacional; manter certificado/histórico"
+    }
+  },
+  "quality_hseq_tree": {
+    "operational_quality": [
+      "desvios",
+      "não conformidades",
+      "incident investigation",
+      "corrective actions",
+      "KPIs",
+      "procedures",
+      "traceability",
+      "inspection follow-up"
+    ],
+    "management_systems": [
+      "ISO 9000/9001 preparation",
+      "process mapping",
+      "procedure development",
+      "document control",
+      "audit readiness"
+    ],
+    "emergency_response": [
+      "ERC",
+      "ERT",
+      "5+ real Medevacs",
+      "drills",
+      "response-time measurement",
+      "post-drill reporting",
+      "improvement actions"
+    ],
+    "regulatory": [
+      "IMO",
+      "ISM Code",
+      "SOLAS",
+      "MARPOL",
+      "NORMAM-12",
+      "NR-17",
+      "NR-30",
+      "NR-33",
+      "NR-34",
+      "NR-35"
+    ]
+  },
+  "education_tree": {
+    "edu_civil": {
+      "degree": "Bacharelado em Engenharia Civil",
+      "institution": "UNIVIX / Multivix",
+      "period": "2013-2018",
+      "focus": [
+        "cálculo estrutural",
+        "resistência dos materiais",
+        "mecânica dos fluidos",
+        "gestão de obras"
+      ],
+      "status": "concluído",
+      "evidence": "D"
+    },
+    "edu_ports": {
+      "degree": "Técnico em Portos",
+      "institution": "IFES",
+      "period": "2018-2019",
+      "focus": [
+        "operações logísticas portuárias",
+        "gestão de terminais",
+        "atracação",
+        "legislação alfandegária",
+        "cargo handling"
+      ],
+      "status": "concluído",
+      "evidence": "D"
+    },
+    "edu_mba_pm": {
+      "degree": "MBA em Gestão de Projetos",
+      "institution": "USP / ESALQ",
+      "period": "2019-2020",
+      "workload": "400h",
+      "status": "concluído",
+      "evidence": "D"
+    },
+    "edu_naval": {
+      "degree": "Pós-graduação em Engenharia de Construção Naval e Offshore",
+      "institution": "Universidade Católica de Petrópolis (UCP)",
+      "period": "2022-2023",
+      "status": "concluído",
+      "evidence": "D"
+    },
+    "edu_safety": {
+      "degree": "Pós-graduação em Engenharia de Segurança do Trabalho",
+      "institution": "Universidade Cruzeiro do Sul",
+      "period_source_1": "2024-2025 / conclusão Fev 2025 em master histórico",
+      "period_source_conflict": "Um perfil Gupy posterior mostrou datas diferentes; conferir certificado antes de candidatura final.",
+      "status": "concluído segundo master histórico",
+      "evidence": "D/V exact dates"
+    }
+  },
+  "certification_training_tree": {
+    "cbsp": {
+      "name": "CBSP",
+      "provider": "West Group Industrial Training",
+      "historical_period": "Jan 2019 - Jan 2024",
+      "current_safe_wording": "realizado; reciclagem pendente",
+      "evidence": "D"
+    },
+    "bosiet": {
+      "name": "BOSIET",
+      "historical_valid_until": "2023",
+      "scope": [
+        "firefighting",
+        "maritime first aid",
+        "survival protocols"
+      ],
+      "current_safe_wording": "realizado; reciclagem pendente",
+      "evidence": "D"
+    },
+    "huet": {
+      "name": "HUET",
+      "provider": "RelyOn Nutec",
+      "historical_valid_until": "2022",
+      "current_safe_wording": "realizado; reciclagem pendente",
+      "evidence": "D"
+    },
+    "thuet": {
+      "name": "T-HUET com CA-EBS",
+      "provider": "RelyOn Nutec",
+      "historical_valid_until": "2022",
+      "scope": "escape de aeronave submersa com sistema de respiração",
+      "current_safe_wording": "realizado; reciclagem pendente",
+      "evidence": "D"
+    },
+    "general_dredging": {
+      "name": "General Dredging Course",
+      "scope": "complexidades geotécnicas e equipamentos de dragagem oceânica",
+      "evidence": "D"
+    },
+    "nr17": {
+      "name": "NR-17",
+      "scope": "Ergonomia",
+      "historical_validity": "2024",
+      "evidence": "D"
+    },
+    "nr30": {
+      "name": "NR-30",
+      "scope": "Segurança e Saúde no Trabalho Aquaviário",
+      "status": "realizada",
+      "evidence": "D"
+    },
+    "nr33": {
+      "name": "NR-33",
+      "scope": "Espaços Confinados",
+      "provider": "C-Tank",
+      "hours": 40,
+      "historical_validity": "2024",
+      "evidence": "D"
+    },
+    "nr34": {
+      "name": "NR-34",
+      "scope": "Construção, Reparação e Desmonte Naval",
+      "provider": "C-Tank",
+      "evidence": "D"
+    },
+    "nr35": {
+      "name": "NR-35",
+      "scope": "Trabalho em Altura",
+      "historical_validity": "2024",
+      "evidence": "D"
+    },
+    "ms_project_course": {
+      "name": "MS Project",
+      "provider": "Udemy",
+      "date": "Abr/2019",
+      "evidence": "D"
+    },
+    "pcp_course": {
+      "name": "Planejamento e Controle da Produção",
+      "provider": "West Group",
+      "date": "Abr/2019",
+      "evidence": "D"
+    },
+    "webdesigner": {
+      "name": "WebDesigner",
+      "provider": "Microlins Franchising",
+      "date": "Fev/2011",
+      "evidence": "D"
+    }
+  },
+  "project_portfolio_tree": {
+    "van_oord_projects": {
+      "vo_354264": {
+        "code": "35.4264",
+        "name": "Ternium",
+        "period": "2021",
+        "evidence": [
+          "Plough Installation Plan",
+          "BFT originator"
+        ]
+      },
+      "vo_354261": {
+        "code": "35.4261",
+        "name": "Porto Sudeste",
+        "period": "2021"
+      },
+      "vo_354012_2021": {
+        "code": "35.4012",
+        "name": "Itajaí",
+        "period": "2021",
+        "note": "não fundir com fase 2023"
+      },
+      "vo_354269": {
+        "code": "35.4269",
+        "name": "Porto Vitória / CODESA",
+        "period": "2021-2022"
+      },
+      "vo_354222_2022": {
+        "code": "35.4222",
+        "name": "Porto do Açu",
+        "period": "2022"
+      },
+      "vo_354285": {
+        "code": "35.4285",
+        "name": "Vale TIG",
+        "period": "2022"
+      },
+      "vo_353190": {
+        "code": "35.3190",
+        "name": "Suape",
+        "period": "2022-2023"
+      },
+      "vo_354222_2023": {
+        "code": "35.4222",
+        "name": "Porto do Açu",
+        "period": "2023"
+      },
+      "vo_354306": {
+        "code": "35.4306",
+        "name": "SPA / Santos",
+        "period": "2023"
+      },
+      "vo_354012_2023": {
+        "code": "35.4012",
+        "name": "Itajaí SPI",
+        "period": "2023"
+      },
+      "vo_354449": {
+        "code": "35.4449",
+        "name": "Porto Sudeste PSB",
+        "period": "2023",
+        "evidence": [
+          "Monthly Report Oct/2023 — BFT origin"
+        ]
+      },
+      "vo_354222_2024": {
+        "code": "35.4222",
+        "name": "Porto do Açu",
+        "period": "2024"
+      },
+      "vo_354458": {
+        "code": "35.4458",
+        "name": "Rio Grande",
+        "period": "2024",
+        "evidence": [
+          "survey boat inspection",
+          "arrival instructions",
+          "signed timesheet"
+        ]
+      }
+    },
+    "independent": {
+      "proj_dismantle": {
+        "name": "DISMANTLE #1",
+        "type": "Projeto independente cultural/evento",
+        "concept_start": "2024-10-24",
+        "inpi": "2024-10-29",
+        "execution": "2025-04-12",
+        "venue": "Cais Imperatriz, Rio de Janeiro",
+        "roles": [
+          "creator",
+          "producer",
+          "project manager",
+          "investor",
+          "branding/graphics"
+        ],
+        "lifecycle": [
+          "initiation",
+          "planning",
+          "budget",
+          "procurement/contracts",
+          "team/vendor coordination",
+          "execution",
+          "financial control",
+          "closeout"
+        ],
+        "documented_results": {
+          "shotgun_sold": 165,
+          "shotgun_invitations": 250,
+          "registered_total": 415,
+          "door_entries_hoppin": 31,
+          "onsite_sales_brl": 21667,
+          "bar_sales_brl": 19652,
+          "bar_items": 1294,
+          "transactions": 755
+        },
+        "evidence": "DP"
+      },
+      "proj_apollo": {
+        "name": "Apollo::rio",
+        "type": "Projeto cultural e tecnológico / plataforma digital",
+        "roles": [
+          "founder/product owner independente",
+          "product architecture",
+          "UX/UI direction",
+          "WordPress architecture",
+          "development/automation"
+        ],
+        "domains": [
+          "events",
+          "community",
+          "producer tools",
+          "PWA",
+          "notifications",
+          "marketplace concepts",
+          "local guide"
+        ],
+        "evidence": "P"
+      },
+      "proj_sos": {
+        "name": "SOS Apollo",
+        "type": "Projeto social de redução de danos",
+        "architecture": [
+          "offline-first PWA",
+          "local deterministic policy engine",
+          "hard safety rules",
+          "privacy-first",
+          "sem login",
+          "sem generative AI no runtime crítico",
+          "emergency access"
+        ],
+        "professional_signal": [
+          "risk logic",
+          "safety-first product design",
+          "architecture",
+          "documentation",
+          "ethical development"
+        ],
+        "evidence": "P"
+      },
+      "proj_cv_builder": {
+        "name": "CV Builder Pro",
+        "type": "Ferramenta web autoral",
+        "features": [
+          "job-tailored CV generation",
+          "A4 pagination",
+          "multiple profiles",
+          "PDF/JSON export"
+        ],
+        "evidence": "D/P"
+      }
+    }
+  },
+  "publication_tree": {
+    "book": {
+      "title": "Inglês Técnico Portuário e Offshore — Guia prático para o profissional do setor",
+      "isbn": "978-65-00-04579-6",
+      "published": "10/09/2020",
+      "copies_sold": "3.000+",
+      "origin": "Vivência como instrutor nos navios-sonda NS-43 e NS-51",
+      "scope": "Comunicação sem ambiguidades em ambientes portuários/offshore e jargão naval",
+      "adoption_source_claim": "Arquivo histórico registra adoção em escolas técnicas, programas de qualificação e treinamentos corporativos portuários.",
+      "evidence": "D"
+    }
+  },
+  "volunteer_leadership_tree": {
+    "crea_jr_aracruz": {
+      "org": "Crea Jr-ES",
+      "role": "Coordenador Geral Campus Aracruz",
+      "period": "Out 2013 - Dez 2014",
+      "evidence": "D"
+    },
+    "crea_jr_vitoria": {
+      "org": "Crea Jr-ES",
+      "role": "Assessor de Eventos",
+      "period": "2015-2017",
+      "evidence": "D"
+    },
+    "fenec_sengtec": {
+      "org": "FENEC / SENGTEC",
+      "role": "Coordenador Geral SENGTEC + Assessor de Marketing FENEC",
+      "period": "2014",
+      "evidence": "D"
+    },
+    "abracou": {
+      "org": "ABRACOU / CONACON Brasil",
+      "role": "Coordenador de Marketing e Comunicação",
+      "period": "2016-2017",
+      "location": "Aracaju",
+      "evidence": "D"
+    },
+    "iaeste": {
+      "org": "IAESTE",
+      "role": "Voluntário Internacional — logística e integração de estagiários globais",
+      "period": "2013-2019",
+      "evidence": "D"
+    }
+  },
+  "stakeholder_client_tree": {
+    "companies_clients": [
+      "Van Oord",
+      "C-Tank",
+      "Shell",
+      "Transocean",
+      "Helix",
+      "Petrobras environment",
+      "Toolvox",
+      "Constellation-related drillship environment",
+      "Olygas / Cien / Helix context from source file"
+    ],
+    "stakeholder_types": [
+      "client",
+      "international management",
+      "vessel Master",
+      "shipboard crew",
+      "QHSE",
+      "Ship Management",
+      "terminal",
+      "shipping agent",
+      "pilot",
+      "supplier",
+      "service provider",
+      "survey team",
+      "diving team",
+      "regulatory / port interfaces"
+    ]
+  },
+  "interview_story_bank": {
+    "fleet_planning": "Na Van Oord eu planejava a operação de frota de TSHD, WID e rebocadores em vários portos. A saída era plano semanal, alocação de embarcação e KPI de performance contra o realizado.",
+    "deviation_control": "Controle era desvio: o que estava no plano, o que atrasou e o reporte para gestão. Não era feeling; era número de ciclo, disponibilidade, downtime e frente parada.",
+    "hseq": "HSE operacional: compliance IMO/SOLAS/NORMAM e coordenação de ERT/Medevac. O entregável era o protocolo executado, o registro e a ação, não uma frase genérica sobre segurança.",
+    "erc_drill": "Como ERC eu rodava drill com vítima simulada, media resposta da lancha/embarcação, ambulância e hospital e fechava o relatório com resultado, falhas e melhoria.",
+    "ctank": "Na C-Tank eu sustentava campanhas de manutenção/limpeza em FPSO/OSV com RDO/DPR e Drake/SAP RT, garantindo documentação, qualificação, POB, logística e prontidão.",
+    "tools": "Excel e MS Project eram meios para controle e decisão. Primavera P6 está em desenvolvimento e não deve ser vendido como experiência prática.",
+    "project_deviation": "Quando o avanço se afastava do planejado, eu validava produção, disponibilidade, paradas, consumo e survey/batimetria antes de mudar o cronograma. Se necessário solicitava novo survey/calibração, alinhava causa e ação e atualizava o look-ahead.",
+    "iso_process": "Na C-Tank mapeei processos e formalizei procedimentos/document control para preparação ISO. Na Van Oord usei a mesma lógica para reporting, KPIs, desvios e aprendizado entre projetos."
+  },
+  "role_fit_tree": {
+    "tier_A_natural_fit": [
+      "Marine Operations Engineer",
+      "Offshore Operations Engineer",
+      "Operations Engineer",
+      "Shorebase Operations",
+      "Vessel-Shore Interface",
+      "Project Operations Engineer",
+      "Planning Engineer / Project Controls",
+      "Offshore Logistics / Readiness",
+      "Operational Quality / QHSE Interface"
+    ],
+    "tier_B_defensible": [
+      "Deputy Vessel Superintendent quando licença marítima não for eliminatória",
+      "Fleet / Vessel Operations Analyst",
+      "Planner Offshore",
+      "Project Management Engineer",
+      "Operational Quality Engineer",
+      "Project Subcontracts / Supplier Interface"
+    ],
+    "tier_C_stretch": [
+      "Senior corporate QA governance",
+      "Fleet Supervisor com ownership de Class/Flag/PMS",
+      "Technical Vessel Superintendent clássico",
+      "Engineering Manager sem FEED/design específico"
+    ],
+    "tier_X_usually_reject_if_mandatory": [
+      "Master Mariner / Captain / Chief Mate",
+      "Marine Compliance Specialist exigindo Nautical Sciences + STCW management license",
+      "Structural/FEA design coordination",
+      "Subsea controls engineering",
+      "Process Engineering exigindo HYSYS/PRO II",
+      "FPSO production operator roles"
+    ]
+  },
+  "truth_boundaries": {
+    "nautical_credentials": [
+      "não possui Bacharelado em Ciências Náuticas",
+      "não possui Master Mariner",
+      "não possui CCL/CCB/Comandante",
+      "não possui STCW Management Level",
+      "não possui officer/watchkeeping sea time comprovado",
+      "não possui Barge Supervisor STCW/IMO A.891(21)"
+    ],
+    "tanker_marine_assurance": [
+      "não alegar COW",
+      "não alegar inerting/purging/venting",
+      "não alegar tanker offloading ownership",
+      "não alegar ballast management ownership",
+      "não alegar BWTS ownership",
+      "não alegar ISGOTT expert",
+      "não alegar OCIMF/SIRE ownership",
+      "não alegar ASOG ownership"
+    ],
+    "vessel_technical_management": [
+      "não alegar Class/statutory certificate ownership",
+      "não alegar Flag-state compliance ownership",
+      "não alegar dry-dock manager",
+      "não alegar full PMS ownership",
+      "não alegar fleet CMMS ownership",
+      "não alegar AMOS expertise"
+    ],
+    "engineering_design": [
+      "não alegar FEA specialist",
+      "não alegar Ansys/Orcaflex/Mathcad/SolidWorks expertise",
+      "não alegar HYSYS/process simulation",
+      "não alegar subsea controls engineering",
+      "não alegar pre-FEED/FEED Manager"
+    ],
+    "quality": [
+      "não alegar ISO auditor",
+      "não alegar Lead Auditor",
+      "não alegar 7 anos em Quality",
+      "não alegar Synergi",
+      "não alegar Subsea7 BMS"
+    ],
+    "planning": [
+      "não vender Primavera P6 como experiência profissional"
+    ],
+    "management_tenure": {
+      "wrong": "5+ anos em gerência similar",
+      "correct": "3 anos e 5 meses como Superintendente na Van Oord, mais vivência offshore anterior"
+    }
+  },
+  "source_registry": {
+    "src_master_260723": {
+      "name": "260723_rafael-valle.json",
+      "type": "historical master career file",
+      "used_for": [
+        "career history",
+        "education",
+        "certifications",
+        "software",
+        "skills",
+        "projects",
+        "volunteer work",
+        "publication"
+      ]
+    },
+    "src_career_db": {
+      "name": "rafael-perini-valle-career-database.json",
+      "used_for": [
+        "BPORT",
+        "skills matrix",
+        "ATS domain mapping"
+      ]
+    },
+    "src_marine_cv": {
+      "name": "Rafael-Perini-Valle-CV-MARINE-OPERATIONS-ENGINEER-OFFSHORE-OPERATIONS-SUPERINTENDENT-PT",
+      "used_for": [
+        "vessel exposure",
+        "systems/tools",
+        "offshore training"
+      ]
+    },
+    "src_user_confirmed_erc": {
+      "name": "Direct user confirmation",
+      "used_for": [
+        "ERC drills",
+        "inspection scope",
+        "support-vessel irregularities"
+      ]
+    },
+    "src_pmp_dossier": {
+      "name": "PMP evidence dossier / timesheets / e-mail evidence already analyzed",
+      "used_for": [
+        "project portfolio",
+        "586 verified daily records",
+        "project-code separation"
+      ]
+    },
+    "src_independent_projects": {
+      "name": "User-confirmed Apollo/Dismantle/SOS project records",
+      "used_for": [
+        "independent project tree",
+        "digital stack"
+      ]
+    }
+  },
+  "indexes": {
+    "software_index": {
+      "sw_drake": {
+        "name": "Drake",
+        "group": "corporate_operational_systems",
+        "status": "strong/proven",
+        "tags": [
+          "Petrobras",
+          "offshore",
+          "compliance",
+          "crewing",
+          "logistics",
+          "documents"
+        ],
+        "context": "C-Tank",
+        "evidence": "D"
+      },
+      "sw_sap_rt": {
+        "name": "SAP RT",
+        "group": "corporate_operational_systems",
+        "status": "strong/proven",
+        "tags": [
+          "Petrobras",
+          "SAP",
+          "transport",
+          "PHTD",
+          "offshore logistics"
+        ],
+        "context": "C-Tank",
+        "evidence": "D"
+      },
+      "sw_bport": {
+        "name": "BPORT",
+        "group": "corporate_operational_systems",
+        "status": "listed-needs-context",
+        "tags": [
+          "maritime system",
+          "verify-use-case"
+        ],
+        "context": null,
+        "evidence": "D/V"
+      },
+      "sw_maritime_credentialing_generic": {
+        "name": "Sistemas de credenciamento marítimo",
+        "group": "corporate_operational_systems",
+        "status": "used/proven",
+        "tags": [],
+        "context": null,
+        "evidence": "D"
+      },
+      "sw_ms_project": {
+        "name": "Microsoft Project",
+        "group": "planning_project_controls",
+        "status": "strong/proven",
+        "tags": [],
+        "context": "Van Oord",
+        "evidence": "D"
+      },
+      "sw_primavera_p6": {
+        "name": "Oracle Primavera P6",
+        "group": "planning_project_controls",
+        "status": "developing",
+        "tags": [],
+        "context": null,
+        "evidence": "D"
+      },
+      "sw_excel": {
+        "name": "Microsoft Excel",
+        "group": "office_data_bi",
+        "status": "strong/proven",
+        "tags": [],
+        "context": null,
+        "evidence": "D"
+      },
+      "sw_power_bi": {
+        "name": "Microsoft Power BI",
+        "group": "office_data_bi",
+        "status": "used/proven",
+        "tags": [],
+        "context": null,
+        "evidence": "DP"
+      },
+      "sw_powerpoint": {
+        "name": "Microsoft PowerPoint",
+        "group": "office_data_bi",
+        "status": "strong/proven",
+        "tags": [],
+        "context": null,
+        "evidence": "D"
+      },
+      "sw_html": {
+        "name": "HTML",
+        "group": "web_dev_and_automation",
+        "status": "personal-project",
+        "tags": [],
+        "context": [
+          "Apollo::rio",
+          "CV Builder Pro",
+          "web projects"
+        ],
+        "evidence": "DP"
+      },
+      "sw_css": {
+        "name": "CSS",
+        "group": "web_dev_and_automation",
+        "status": "personal-project",
+        "tags": [],
+        "context": [
+          "Apollo::rio",
+          "CV Builder Pro",
+          "web projects"
+        ],
+        "evidence": "DP"
+      },
+      "sw_javascript": {
+        "name": "JavaScript",
+        "group": "web_dev_and_automation",
+        "status": "personal-project",
+        "tags": [],
+        "context": [
+          "Apollo::rio",
+          "CV Builder Pro",
+          "automation/web"
+        ],
+        "evidence": "DP"
+      },
+      "sw_typescript": {
+        "name": "TypeScript",
+        "group": "web_dev_and_automation",
+        "status": "personal-project/developing",
+        "tags": [],
+        "context": [
+          "Apollo::rio codebase modernization"
+        ],
+        "evidence": "U/P"
+      },
+      "sw_python": {
+        "name": "Python",
+        "group": "web_dev_and_automation",
+        "status": "personal-project/developing",
+        "tags": [],
+        "context": [
+          "dados",
+          "automação",
+          "web/software projects"
+        ],
+        "evidence": "DP"
+      },
+      "sw_php": {
+        "name": "PHP",
+        "group": "web_dev_and_automation",
+        "status": "personal-project",
+        "tags": [],
+        "context": [
+          "WordPress",
+          "Apollo::rio"
+        ],
+        "evidence": "U/P"
+      },
+      "sw_json": {
+        "name": "JSON",
+        "group": "web_dev_and_automation",
+        "status": "personal-project",
+        "tags": [],
+        "context": [
+          "CV Builder",
+          "Apollo registry/data structures",
+          "career databases"
+        ],
+        "evidence": "DP"
+      },
+      "sw_sql": {
+        "name": "SQL",
+        "group": "web_dev_and_automation",
+        "status": "developing",
+        "tags": [],
+        "context": [
+          "professional development",
+          "data"
+        ],
+        "evidence": "U"
+      },
+      "sw_wordpress": {
+        "name": "WordPress",
+        "group": "web_dev_and_automation",
+        "status": "personal-project",
+        "tags": [],
+        "context": [
+          "Apollo::rio",
+          "custom plugins",
+          "MU-plugins"
+        ],
+        "evidence": "P"
+      },
+      "sw_github": {
+        "name": "GitHub",
+        "group": "web_dev_and_automation",
+        "status": "personal-project",
+        "tags": [],
+        "context": [
+          "Apollo repositories",
+          "code/versioning"
+        ],
+        "evidence": "P"
+      },
+      "sw_jquery": {
+        "name": "jQuery",
+        "group": "apollo_specific_stack",
+        "status": "personal-project",
+        "tags": [],
+        "context": "Apollo::rio",
+        "evidence": "P"
+      },
+      "sw_gsap": {
+        "name": "GSAP",
+        "group": "apollo_specific_stack",
+        "status": "personal-project",
+        "tags": [],
+        "context": "Apollo::rio animations",
+        "evidence": "P"
+      },
+      "sw_lenis": {
+        "name": "Lenis",
+        "group": "apollo_specific_stack",
+        "status": "personal-project",
+        "tags": [],
+        "context": "Apollo::rio smooth scroll",
+        "evidence": "P"
+      },
+      "sw_splide": {
+        "name": "Splide",
+        "group": "apollo_specific_stack",
+        "status": "personal-project",
+        "tags": [],
+        "context": "Apollo::rio frontend",
+        "evidence": "P"
+      },
+      "sw_splittype": {
+        "name": "SplitType",
+        "group": "apollo_specific_stack",
+        "status": "personal-project",
+        "tags": [],
+        "context": "Apollo::rio frontend",
+        "evidence": "P"
+      },
+      "sw_cloudflare": {
+        "name": "Cloudflare",
+        "group": "apollo_specific_stack",
+        "status": "personal-project",
+        "tags": [],
+        "context": "Apollo::rio DNS/security/CDN",
+        "evidence": "P"
+      },
+      "sw_litespeed": {
+        "name": "LiteSpeed",
+        "group": "apollo_specific_stack",
+        "status": "personal-project",
+        "tags": [],
+        "context": "WordPress infrastructure",
+        "evidence": "P"
+      },
+      "sw_quic_cloud": {
+        "name": "QUIC.cloud",
+        "group": "apollo_specific_stack",
+        "status": "personal-project",
+        "tags": [],
+        "context": "WordPress infrastructure",
+        "evidence": "P"
+      },
+      "sw_woocommerce": {
+        "name": "WooCommerce",
+        "group": "apollo_specific_stack",
+        "status": "personal-project",
+        "tags": [],
+        "context": "Apollo ecosystem",
+        "evidence": "P"
+      },
+      "sw_eventon": {
+        "name": "EventON",
+        "group": "apollo_specific_stack",
+        "status": "personal-project",
+        "tags": [],
+        "context": "Apollo event system",
+        "evidence": "P"
+      },
+      "sw_ultimate_member": {
+        "name": "Ultimate Member",
+        "group": "apollo_specific_stack",
+        "status": "personal-project",
+        "tags": [],
+        "context": "Apollo users/membership",
+        "evidence": "P"
+      },
+      "sw_wpdiscuz": {
+        "name": "wpDiscuz",
+        "group": "apollo_specific_stack",
+        "status": "personal-project",
+        "tags": [],
+        "context": "Apollo community/comments",
+        "evidence": "P"
+      },
+      "sw_buddyforms": {
+        "name": "BuddyForms",
+        "group": "apollo_specific_stack",
+        "status": "personal-project",
+        "tags": [],
+        "context": "Apollo frontend submissions",
+        "evidence": "P"
+      },
+      "sw_webdesigner_course": {
+        "name": "WebDesigner",
+        "group": "training_or_legacy_tools",
+        "status": "historical-training",
+        "tags": [],
+        "context": null,
+        "evidence": "D"
+      },
+      "sw_amos": {
+        "name": "AMOS",
+        "group": "explicit_non_experience",
+        "status": "do-not-claim",
+        "tags": [],
+        "context": null,
+        "evidence": "X"
+      },
+      "sw_hysys": {
+        "name": "HYSYS",
+        "group": "explicit_non_experience",
+        "status": "do-not-claim",
+        "tags": [],
+        "context": null,
+        "evidence": "X"
+      },
+      "sw_orcaflex": {
+        "name": "Orcaflex",
+        "group": "explicit_non_experience",
+        "status": "do-not-claim",
+        "tags": [],
+        "context": null,
+        "evidence": "X"
+      },
+      "sw_ansys": {
+        "name": "Ansys",
+        "group": "explicit_non_experience",
+        "status": "do-not-claim",
+        "tags": [],
+        "context": null,
+        "evidence": "X"
+      },
+      "sw_mathcad": {
+        "name": "Mathcad",
+        "group": "explicit_non_experience",
+        "status": "do-not-claim",
+        "tags": [],
+        "context": null,
+        "evidence": "X"
+      },
+      "sw_solidworks": {
+        "name": "SolidWorks",
+        "group": "explicit_non_experience",
+        "status": "do-not-claim",
+        "tags": [],
+        "context": null,
+        "evidence": "X"
+      },
+      "sw_smart_3d": {
+        "name": "Smart 3D",
+        "group": "explicit_non_experience",
+        "status": "do-not-claim",
+        "tags": [],
+        "context": null,
+        "evidence": "X"
+      },
+      "sw_smart_pid": {
+        "name": "Smart P&ID",
+        "group": "explicit_non_experience",
+        "status": "do-not-claim",
+        "tags": [],
+        "context": null,
+        "evidence": "X"
+      },
+      "sw_smart_plant_foundation": {
+        "name": "Smart Plant Foundation",
+        "group": "explicit_non_experience",
+        "status": "do-not-claim",
+        "tags": [],
+        "context": null,
+        "evidence": "X"
+      },
+      "sw_skm": {
+        "name": "SKM Power Tools",
+        "group": "explicit_non_experience",
+        "status": "do-not-claim",
+        "tags": [],
+        "context": null,
+        "evidence": "X"
+      }
+    },
+    "software_names_alphabetical": [
+      "AMOS",
+      "Ansys",
+      "BPORT",
+      "BuddyForms",
+      "Cloudflare",
+      "CSS",
+      "Drake",
+      "EventON",
+      "GitHub",
+      "GSAP",
+      "HTML",
+      "HYSYS",
+      "JavaScript",
+      "jQuery",
+      "JSON",
+      "Lenis",
+      "LiteSpeed",
+      "Mathcad",
+      "Microsoft Excel",
+      "Microsoft Power BI",
+      "Microsoft PowerPoint",
+      "Microsoft Project",
+      "Oracle Primavera P6",
+      "Orcaflex",
+      "PHP",
+      "Python",
+      "QUIC.cloud",
+      "SAP RT",
+      "Sistemas de credenciamento marítimo",
+      "SKM Power Tools",
+      "Smart 3D",
+      "Smart P&ID",
+      "Smart Plant Foundation",
+      "SolidWorks",
+      "Splide",
+      "SplitType",
+      "SQL",
+      "TypeScript",
+      "Ultimate Member",
+      "WebDesigner",
+      "WooCommerce",
+      "WordPress",
+      "wpDiscuz"
+    ],
+    "experience_index": {
+      "exp_vanoord": {
+        "company": "Van Oord",
+        "role": "Superintendent 1 / Superintendente",
+        "period": "Jul 2021 - Nov 2024"
+      },
+      "exp_ctank_analyst": {
+        "company": "C-Tank",
+        "role": "Analista de Operações",
+        "period": "Out 2020 - Jun 2021"
+      },
+      "exp_ctank_assistant": {
+        "company": "C-Tank",
+        "role": "Assistente de Operações Sênior",
+        "period": "Jul 2020 - Out 2020"
+      },
+      "exp_toolvox": {
+        "company": "Toolvox",
+        "role": "Instrutor de Idiomas Offshore / Ponte de Comunicação Técnica",
+        "period": "Dez 2018 - Mai 2020"
+      },
+      "exp_international_research": {
+        "company": null,
+        "role": "Estagiário de Engenharia / Pesquisa Internacional",
+        "period": null
+      }
+    },
+    "domain_to_experience": {
+      "marine_offshore": [
+        "exp_vanoord",
+        "exp_ctank_analyst",
+        "exp_ctank_assistant",
+        "exp_toolvox"
+      ],
+      "maintenance_repairs": [
+        "exp_ctank_analyst",
+        "exp_vanoord"
+      ],
+      "project_management": [
+        "exp_vanoord",
+        "proj_dismantle",
+        "proj_apollo"
+      ],
+      "oil_gas": [
+        "exp_ctank_analyst",
+        "exp_ctank_assistant",
+        "exp_toolvox"
+      ],
+      "hseq_emergency": [
+        "exp_vanoord",
+        "exp_toolvox"
+      ],
+      "quality_process": [
+        "exp_ctank_analyst",
+        "exp_vanoord"
+      ],
+      "logistics_materials": [
+        "exp_vanoord",
+        "exp_ctank_analyst",
+        "exp_ctank_assistant"
+      ],
+      "data_reporting": [
+        "exp_vanoord",
+        "exp_ctank_analyst",
+        "exp_international_research"
+      ],
+      "digital_automation": [
+        "proj_apollo",
+        "proj_sos",
+        "proj_cv_builder"
+      ]
+    }
+  }
+}

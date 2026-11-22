@@ -1,0 +1,160 @@
+{
+  "_part": {
+    "id": "12_cv_variants/sbm_senior-operations-engineer_en",
+    "title": "CV: SBM Offshore - Senior Operations Engineer (shorebase) (en)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_cv_sbm_senior_operations_engineer_en"
+    ]
+  },
+  "data": {
+    "target": {
+      "company": "SBM Offshore",
+      "role": "Senior Operations Engineer (shorebase)",
+      "job_ref": null,
+      "language": "en",
+      "date": "2026-09-30",
+      "archetype": "shorebase_operations",
+      "status": "final_preferred"
+    },
+    "cv": {
+      "name": "RAFAEL PERINI VALLE",
+      "subtitle": "SENIOR OPERATIONS ENGINEER",
+      "tagline": "Shorebase Operations · Offshore Support · HSSE · Operational Readiness · Contractors · KPIs & Data",
+      "contact": {
+        "location": "Rio de Janeiro – RJ, Brazil",
+        "email": "rafapevalle@gmail.com",
+        "phone": "+55 (21) 97955-4496",
+        "linkedin": "https://www.linkedin.com/in/rpvalle",
+        "linkedinLabel": "linkedin.com/in/rpvalle"
+      },
+      "sections": [
+        {
+          "title": "Professional Summary",
+          "type": "bullets",
+          "bullets": [
+            "Operations-focused engineer with 4+ years in offshore/marine execution, shorebase coordination and O&G support in Brazil, including 3y5m as Marine Operations Superintendent.",
+            "Hands-on coordination of daily operations across vessel and shore interfaces, integrating offshore teams, terminals, maritime agents, local suppliers, contractors, clients and international management.",
+            "Strong HSSE and operational-performance background: operational risk, emergency response, incident investigation, troubleshooting, corrective actions, readiness, production/availability/downtime/fuel KPIs and 15-day forecasting.",
+            "Petrobras operational environment exposure through Drake/SAP RT, offshore logistics and FPSO/OSV support; Advanced Excel, Power BI and active development in SQL, Python and automation for data-driven operations."
+          ]
+        },
+        {
+          "title": "Core Expertise",
+          "type": "text",
+          "content": "Shorebase Operations · Offshore / Onshore Interface · Daily Operations Coordination · Operational Readiness · Reliability & Operability · HSSE / QHSE · Operational Risk · Troubleshooting & Recovery Actions · Contractors / Vendors / Third Parties · Local Suppliers & Service Providers · Materials & Services Availability · Maintenance Campaigns · Mobilisation & Logistics · Inspections & Compliance · Operational Data / KPIs · Contract & Claims Interfaces · Stakeholder Management · Planning & Forecasting"
+        },
+        {
+          "title": "Professional Experience",
+          "type": "entries",
+          "lead": {
+            "title": "Professional Development & Independent Projects (Nov 2024–Present)",
+            "body": "Career-development period focused on data, digital tools and automation for operational decision-making: SQL, Python, HTML/CSS/JavaScript, structured data, dashboards and workflow automation. Completed postgraduate studies in Occupational Safety Engineering and remained active through independent digital and project-based work. Immediately available for full-time return."
+          },
+          "entries": [
+            {
+              "role": "Marine Operations Superintendent (Daily Operations, HSSE & Performance)",
+              "company": "Van Oord",
+              "location": "Rio de Janeiro / Brazilian coast",
+              "period": "Jul 2021 – Nov 2024",
+              "bullets": [
+                "Acted as the on-site operational focal point for daily marine execution across multiple Brazilian ports, coordinating vessel masters, shore teams, terminals, maritime agents, local suppliers, contractors, clients and project management.",
+                "Planned and controlled critical operating windows, mobilisations, berthing/unberthing, bunkering, crew change, waste handling and SIMOPS, resolving constraints to maintain safe and continuous operations.",
+                "Monitored production, vessel availability, downtime and fuel consumption; investigated operational deviations, validated survey/measurement inputs and drove corrective and recovery actions with vessel and project teams.",
+                "Led HSSE/QHSE operational controls including risk assessments, procedures, emergency response, 5+ real MEDEVAC cases, incident investigation, root-cause follow-up and corrective actions under NORMAM/IMO/ISM/SOLAS/MARPOL requirements.",
+                "Managed third-party and vendor interfaces for materials and services, operational support, measurements, costs and claims; maintained 15-day forecasts and management reporting for clients and international leadership."
+              ]
+            },
+            {
+              "role": "Operations Analyst (Offshore Operations, FPSO/OSV Support & Readiness)",
+              "company": "C-Tank",
+              "location": "Niterói – RJ, Brazil",
+              "period": "Oct 2020 – Jun 2021",
+              "bullets": [
+                "Planned and monitored offshore maintenance and cleaning campaigns supporting OSVs and FPSOs, coordinating crews, materials, deadlines, readiness and daily execution follow-up.",
+                "Coordinated contractors and operational interfaces for Shell, Transocean and Helix, supporting mobilisation, materials/services availability, deliverables, measurements, costs and contract control.",
+                "Worked with Petrobras Drake/SAP RT for personnel compliance and offshore logistics; supported POB, qualification/certification control, helicopter logistics and DPR/RDO reporting.",
+                "Mapped internal processes and helped build procedures and document controls for ISO 9000 implementation, strengthening operational standardisation and continuous improvement."
+              ]
+            },
+            {
+              "role": "Senior Operations Assistant",
+              "company": "C-Tank",
+              "location": "Niterói – RJ, Brazil",
+              "period": "Jul 2020 – Oct 2020",
+              "bullets": [
+                "Supported offshore and port operations through contractor mobilisation, transport requests, documentation, logistics control and Petrobras DRAKE credentialing for Tier-1 clients."
+              ]
+            },
+            {
+              "role": "Offshore Technical-English Instructor / Communication Bridge",
+              "company": "Toolvox",
+              "location": "Pre-salt drillships (NS-43, NS-51)",
+              "period": "Dec 2018 – May 2020",
+              "bullets": [
+                "Spent 18 months onboard ultra-deepwater pre-salt drillships, translating SOPs and supporting technical, safety and operational communication across multinational offshore teams."
+              ]
+            },
+            {
+              "role": "Engineering Research Intern (International)",
+              "company": "NTUA (Athens) & BAM (Berlin)",
+              "location": "",
+              "period": "2015 & 2018",
+              "bullets": [
+                "International engineering research involving structured data collection, technical analysis, testing support and multidisciplinary collaboration."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Education",
+          "type": "lines",
+          "lines": [
+            "Postgraduate: Occupational Safety Engineering, Cruzeiro do Sul (2024–2025)",
+            "Postgraduate: Naval & Offshore Construction Engineering, UCP (2022–2023)",
+            "MBA: Project Management (PMBOK), USP / ESALQ (2019–2020)",
+            "BSc: Civil Engineering, UNIVIX / Multivix (2013–2018)",
+            "Technical Degree: Ports, IFES (2018–2019)"
+          ]
+        },
+        {
+          "title": "Certifications & Training",
+          "type": "bullets",
+          "bullets": [
+            "MBA in Project Management (PMBOK), USP/ESALQ · Production Planning & Control (PCP), West Group.",
+            "MS Project training · Advanced Excel dashboards · Power BI.",
+            "Offshore safety training background: CBSP, BOSIET, HUET/T-HUET · NR-33/34/35/17/30 · General Dredging Course."
+          ]
+        },
+        {
+          "title": "Tools & Systems",
+          "type": "bullets",
+          "bullets": [
+            "Operations & Planning: MS Project, PCP, operational readiness, 15-day forecasting, KPI follow-up and management reporting",
+            "Data & BI: Advanced Excel, Power BI, dashboards, data consolidation, DPR/RDO",
+            "Data & Automation — active development: SQL, Python, JSON, workflow automation and structured-data handling",
+            "Petrobras Systems: Drake / SAP RT",
+            "Management Systems: PMBOK, process mapping, ISO 9000 implementation support",
+            "Digital Development: HTML, CSS, JavaScript"
+          ]
+        },
+        {
+          "title": "Publication",
+          "type": "text",
+          "content": "Author of \"Technical English for Ports & Offshore\" (ISBN 978-65-00-04579-6, 2020; 3,000+ copies sold)."
+        },
+        {
+          "title": "Additional Information",
+          "type": "bullets",
+          "bullets": [
+            "Active CREA registration; engineering background complemented by postgraduate studies in Naval & Offshore Construction and Occupational Safety.",
+            "Fluent Portuguese and English; 18 months onboard pre-salt drillships and daily technical communication with multinational offshore teams.",
+            "Strong Brazilian operating context with direct coordination of local suppliers, maritime agents, terminals and service providers across multiple ports.",
+            "Based in Rio de Janeiro; immediately available for shorebase, site, travel and offshore assignments.",
+            "Brazilian and Italian passports valid through 2027; Category B driver's license."
+          ]
+        }
+      ]
+    }
+  }
+}

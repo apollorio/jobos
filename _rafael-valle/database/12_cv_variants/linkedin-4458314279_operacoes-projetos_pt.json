@@ -1,0 +1,157 @@
+{
+  "_part": {
+    "id": "12_cv_variants/linkedin-4458314279_operacoes-projetos_pt",
+    "title": "CV: genérico - Engenheiro de Operações & Projetos (pt)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_cv_linkedin_4458314279_operacoes_projetos_pt"
+    ]
+  },
+  "data": {
+    "target": {
+      "company": null,
+      "role": "Engenheiro de Operações & Projetos",
+      "job_ref": "linkedin:4458314279",
+      "language": "pt",
+      "date": "2026-09-19",
+      "archetype": "offshore_operations_engineer",
+      "status": "final"
+    },
+    "cv": {
+      "name": "RAFAEL PERINI VALLE",
+      "subtitle": "ENGENHEIRO DE OPERAÇÕES & PROJETOS",
+      "tagline": "O&G · Offshore · Planejamento · Interfaces · Performance & Dados",
+      "contact": {
+        "location": "Rio de Janeiro – RJ, Brasil",
+        "email": "rafapevalle@gmail.com",
+        "phone": "+55 (21) 97955-4496",
+        "linkedin": "https://www.linkedin.com/in/rpvalle",
+        "linkedinLabel": "linkedin.com/in/rpvalle"
+      },
+      "sections": [
+        {
+          "title": "Resumo Profissional",
+          "type": "bullets",
+          "bullets": [
+            "Engenheiro de Operações & Projetos · Engenheiro Civil (CREA) · MBA em Gestão de Projetos · 4+ anos em O&G e offshore.",
+            "Planejamento e coordenação de operações marítimas, logística, fornecedores e interfaces técnicas em ambientes de alta criticidade.",
+            "Controle de prazos, custos, medições, KPIs, forecast e reportes gerenciais para clientes e diretoria internacional.",
+            "Excel Avançado, Power BI e Drake/SAP RT (Petrobras); desenvolvimento autônomo em HTML/CSS/JS e Python para dados e automação."
+          ]
+        },
+        {
+          "title": "Competências Principais",
+          "type": "text",
+          "content": "Operações Offshore & Marítimas · Gestão de Projetos · Planejamento & Controle · Interfaces Técnicas · Fornecedores & Contratos · Custos & Medições · KPIs & Forecast · Excel / Power BI · Drake/SAP RT · O&G"
+        },
+        {
+          "title": "Experiência Profissional",
+          "type": "entries",
+          "lead": {
+            "title": "Pausa de Carreira (2024–Presente)",
+            "body": "Período de apoio familiar, mantendo-me ativo com projetos web/software e iniciativas sociais. Atualmente com disponibilidade imediata para retorno integral."
+          },
+          "entries": [
+            {
+              "role": "Superintendente de Operações Marítimas (Planejamento & Performance)",
+              "company": "Van Oord",
+              "location": "Rio de Janeiro / costa brasileira",
+              "period": "Jul 2021 – Nov 2024",
+              "bullets": [
+                "Coordenei operações de TSHD, WID e rebocadores em múltiplos portos, integrando embarcações, terminais, fornecedores e cliente.",
+                "Planejei cronogramas, janelas críticas, logística de frota e SIMOPS, com análise de desvios e forecast em ciclos de 15 dias.",
+                "Controlei custos, medições, claims, suprimentos e serviços, acompanhando ações corretivas e restrições operacionais.",
+                "Consolidei KPIs de produção, disponibilidade, paradas e consumo em dashboards e reportes para cliente e diretoria.",
+                "Atuei com QHSE, análise de risco, investigação de incidentes e conformidade NORMAM-12/IMO/SOLAS/MARPOL."
+              ]
+            },
+            {
+              "role": "Analista de Operações (Planejamento Offshore)",
+              "company": "C-Tank",
+              "location": "Niterói – RJ",
+              "period": "Out 2020 – Jun 2021",
+              "bullets": [
+                "Planejei campanhas em OSVs/FPSOs, coordenando equipes, materiais, prazos, prontidão e logística offshore.",
+                "Apoiei controle contratual, entregáveis, medições, custos e interface com fornecedores e clientes internacionais.",
+                "Utilizei Drake/SAP RT (Petrobras), DPR/RDO, análise de dados e mapeamento de processos/ISO 9000."
+              ]
+            },
+            {
+              "role": "Assistente de Operações Sênior",
+              "company": "C-Tank",
+              "location": "Niterói – RJ",
+              "period": "Jul 2020 – Out 2020",
+              "bullets": [
+                "Atuei em operações portuárias e logística: mobilizações, transporte, notas fiscais e DRAKE para clientes Tier-1."
+              ]
+            },
+            {
+              "role": "Instrutor de Inglês Técnico Offshore",
+              "company": "Toolvox",
+              "location": "Offshore (NS-43, NS-51)",
+              "period": "Dez 2018 – Mai 2020",
+              "bullets": [
+                "Treinei inglês técnico e traduzi SOPs a bordo de navios-sonda, conectando equipes multinacionais em ambiente offshore."
+              ]
+            },
+            {
+              "role": "Estagiário de Engenharia (Pesquisa Internacional)",
+              "company": "NTUA (Athens) & BAM (Berlin)",
+              "location": "",
+              "period": "2015 & 2018",
+              "bullets": [
+                "NTUA e BAM: pesquisa internacional em engenharia, com coleta rigorosa, análise de dados e resolução técnica de problemas."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Formação Acadêmica",
+          "type": "lines",
+          "lines": [
+            "Pós-graduação: Engenharia de Segurança do Trabalho, Cruzeiro do Sul (2024–2025)",
+            "Pós-graduação: Engenharia de Construção Naval e Offshore, UCP (2022–2023)",
+            "MBA: Gestão de Projetos (PMBOK), USP / ESALQ (2019–2020)",
+            "Graduação: Engenharia Civil, UNIVIX / Multivix (2013–2018)",
+            "Técnico: Portos, IFES (2018–2019)"
+          ]
+        },
+        {
+          "title": "Certificações & Formação",
+          "type": "bullets",
+          "bullets": [
+            "MBA em Gestão de Projetos (PMBOK), USP/ESALQ · Planejamento e Controle da Produção (PCP), West Group.",
+            "MS Project · Dashboards em Excel Avançado e Power BI.",
+            "Segurança offshore: CBSP, BOSIET, HUET/T-HUET · NR-33/34/35/17/30 · General Dredging Course."
+          ]
+        },
+        {
+          "title": "Ferramentas & Sistemas",
+          "type": "bullets",
+          "bullets": [
+            "Planejamento & Controle: MS Project, PCP, forecast e KPIs",
+            "Dados & BI: Excel Avançado, Power BI, dashboards e consolidação de dados",
+            "Desenvolvimento: HTML, CSS, JavaScript, Python, JSON (autônomo)",
+            "Sistemas Petrobras: Drake / SAP RT",
+            "Metodologia: PMBOK, mapeamento de processos / ISO 9000"
+          ]
+        },
+        {
+          "title": "Publicação",
+          "type": "text",
+          "content": "Autor de \"Inglês Técnico Portuário e Offshore\" (ISBN 978-65-00-04579-6, 2020, com 3.000+ exemplares vendidos)."
+        },
+        {
+          "title": "Informações Adicionais",
+          "type": "bullets",
+          "bullets": [
+            "CREA ativo.",
+            "Inglês avançado; 18 meses embarcado em navios-sonda e experiência com equipes multinacionais.",
+            "CNH categoria B, passaportes brasileiro e italiano (2027); disponibilidade imediata para viagens.",
+            "Projetos de código, automação e produto digital em rvalle.com.br."
+          ]
+        }
+      ]
+    }
+  }
+}

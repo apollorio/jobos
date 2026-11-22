@@ -1,0 +1,532 @@
+{
+  "_part": {
+    "id": "05_projects/vanoord_portfolio",
+    "title": "Portfólio Van Oord (13 fases, 10 códigos, 9 sites)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_tree_v1_2026_10_20"
+    ]
+  },
+  "data": {
+    "phases": {
+      "vo_354264": {
+        "code": "35.4264",
+        "name": "Ternium",
+        "period": "2021",
+        "evidence": [
+          "Plough Installation Plan",
+          "BFT originator"
+        ],
+        "period_exact": {
+          "start": "2021-07-14",
+          "end": "2021-09-07",
+          "source": "master_tree_v1"
+        },
+        "site_key": "Ternium",
+        "employer": "Van Oord",
+        "domain_tags": [
+          "naval_marine_offshore",
+          "project_management_project_controls"
+        ],
+        "details_not_documented": [
+          "client",
+          "site_city_state",
+          "scope_type",
+          "vessels_used",
+          "my_role_in_project",
+          "deliverables",
+          "production_or_volume",
+          "notable_events",
+          "pmp_months_evidenced"
+        ]
+      },
+      "vo_354261": {
+        "code": "35.4261",
+        "name": "Porto Sudeste",
+        "period": "2021",
+        "period_exact": {
+          "start": "2021-10-09",
+          "end": "2021-11-20",
+          "source": "master_tree_v1"
+        },
+        "site_key": "Porto Sudeste",
+        "employer": "Van Oord",
+        "domain_tags": [
+          "naval_marine_offshore",
+          "project_management_project_controls"
+        ],
+        "details_not_documented": [
+          "client",
+          "site_city_state",
+          "scope_type",
+          "vessels_used",
+          "my_role_in_project",
+          "deliverables",
+          "production_or_volume",
+          "notable_events",
+          "pmp_months_evidenced"
+        ]
+      },
+      "vo_354012_2021": {
+        "code": "35.4012",
+        "name": "Itajaí",
+        "period": "2021",
+        "note": "não fundir com fase 2023",
+        "site_key": "Itajaí",
+        "employer": "Van Oord",
+        "domain_tags": [
+          "naval_marine_offshore",
+          "project_management_project_controls"
+        ],
+        "details_not_documented": [
+          "client",
+          "site_city_state",
+          "scope_type",
+          "vessels_used",
+          "my_role_in_project",
+          "deliverables",
+          "production_or_volume",
+          "notable_events",
+          "pmp_months_evidenced"
+        ]
+      },
+      "vo_354269": {
+        "code": "35.4269",
+        "name": "Porto Vitória / CODESA",
+        "period": "2021-2022",
+        "period_exact": {
+          "start": "2021-12-22",
+          "end": "2022-02-11",
+          "source": "master_tree_v1"
+        },
+        "site_key": "Porto Vitória / CODESA",
+        "employer": "Van Oord",
+        "domain_tags": [
+          "naval_marine_offshore",
+          "project_management_project_controls"
+        ],
+        "details_not_documented": [
+          "client",
+          "site_city_state",
+          "scope_type",
+          "vessels_used",
+          "my_role_in_project",
+          "deliverables",
+          "production_or_volume",
+          "notable_events",
+          "pmp_months_evidenced"
+        ]
+      },
+      "vo_354222_2022": {
+        "code": "35.4222",
+        "name": "Porto do Açu",
+        "period": "2022",
+        "site_key": "Porto do Açu",
+        "employer": "Van Oord",
+        "domain_tags": [
+          "naval_marine_offshore",
+          "project_management_project_controls"
+        ],
+        "details_not_documented": [
+          "client",
+          "site_city_state",
+          "scope_type",
+          "vessels_used",
+          "my_role_in_project",
+          "deliverables",
+          "production_or_volume",
+          "notable_events",
+          "pmp_months_evidenced"
+        ]
+      },
+      "vo_354285": {
+        "code": "35.4285",
+        "name": "Vale TIG",
+        "period": "2022",
+        "site_key": "Vale TIG",
+        "employer": "Van Oord",
+        "domain_tags": [
+          "naval_marine_offshore",
+          "project_management_project_controls"
+        ],
+        "details_not_documented": [
+          "client",
+          "site_city_state",
+          "scope_type",
+          "vessels_used",
+          "my_role_in_project",
+          "deliverables",
+          "production_or_volume",
+          "notable_events",
+          "pmp_months_evidenced"
+        ]
+      },
+      "vo_353190": {
+        "code": "35.3190",
+        "name": "Suape",
+        "period": "2022-2023",
+        "site_key": "Suape",
+        "employer": "Van Oord",
+        "domain_tags": [
+          "naval_marine_offshore",
+          "project_management_project_controls"
+        ],
+        "details_not_documented": [
+          "client",
+          "site_city_state",
+          "scope_type",
+          "vessels_used",
+          "my_role_in_project",
+          "deliverables",
+          "production_or_volume",
+          "notable_events",
+          "pmp_months_evidenced"
+        ]
+      },
+      "vo_354222_2023": {
+        "code": "35.4222",
+        "name": "Porto do Açu",
+        "period": "2023",
+        "site_key": "Porto do Açu",
+        "employer": "Van Oord",
+        "domain_tags": [
+          "naval_marine_offshore",
+          "project_management_project_controls"
+        ],
+        "details_not_documented": [
+          "client",
+          "site_city_state",
+          "scope_type",
+          "vessels_used",
+          "my_role_in_project",
+          "deliverables",
+          "production_or_volume",
+          "notable_events",
+          "pmp_months_evidenced"
+        ]
+      },
+      "vo_354306": {
+        "code": "35.4306",
+        "name": "SPA / Santos",
+        "period": "2023",
+        "site_key": "SPA / Santos",
+        "employer": "Van Oord",
+        "domain_tags": [
+          "naval_marine_offshore",
+          "project_management_project_controls"
+        ],
+        "details_not_documented": [
+          "client",
+          "site_city_state",
+          "scope_type",
+          "vessels_used",
+          "my_role_in_project",
+          "deliverables",
+          "production_or_volume",
+          "notable_events",
+          "pmp_months_evidenced"
+        ]
+      },
+      "vo_354012_2023": {
+        "code": "35.4012",
+        "name": "Itajaí SPI",
+        "period": "2023",
+        "site_key": "Itajaí",
+        "employer": "Van Oord",
+        "domain_tags": [
+          "naval_marine_offshore",
+          "project_management_project_controls"
+        ],
+        "details_not_documented": [
+          "client",
+          "site_city_state",
+          "scope_type",
+          "vessels_used",
+          "my_role_in_project",
+          "deliverables",
+          "production_or_volume",
+          "notable_events",
+          "pmp_months_evidenced"
+        ]
+      },
+      "vo_354449": {
+        "code": "35.4449",
+        "name": "Porto Sudeste PSB",
+        "period": "2023",
+        "evidence": [
+          "Monthly Report Oct/2023 — BFT origin"
+        ],
+        "period_exact": {
+          "start": "2023-09-19",
+          "end": "2023-11-17",
+          "source": "master_tree_v1"
+        },
+        "site_key": "Porto Sudeste",
+        "employer": "Van Oord",
+        "domain_tags": [
+          "naval_marine_offshore",
+          "project_management_project_controls"
+        ],
+        "details_not_documented": [
+          "client",
+          "site_city_state",
+          "scope_type",
+          "vessels_used",
+          "my_role_in_project",
+          "deliverables",
+          "production_or_volume",
+          "notable_events",
+          "pmp_months_evidenced"
+        ]
+      },
+      "vo_354222_2024": {
+        "code": "35.4222",
+        "name": "Porto do Açu",
+        "period": "2024",
+        "site_key": "Porto do Açu",
+        "employer": "Van Oord",
+        "domain_tags": [
+          "naval_marine_offshore",
+          "project_management_project_controls"
+        ],
+        "details_not_documented": [
+          "client",
+          "site_city_state",
+          "scope_type",
+          "vessels_used",
+          "my_role_in_project",
+          "deliverables",
+          "production_or_volume",
+          "notable_events",
+          "pmp_months_evidenced"
+        ]
+      },
+      "vo_354458": {
+        "code": "35.4458",
+        "name": "Rio Grande",
+        "period": "2024",
+        "evidence": [
+          "survey boat inspection",
+          "arrival instructions",
+          "signed timesheet"
+        ],
+        "site_key": "Rio Grande",
+        "employer": "Van Oord",
+        "domain_tags": [
+          "naval_marine_offshore",
+          "project_management_project_controls"
+        ],
+        "details_not_documented": [
+          "client",
+          "site_city_state",
+          "scope_type",
+          "vessels_used",
+          "my_role_in_project",
+          "deliverables",
+          "production_or_volume",
+          "notable_events",
+          "pmp_months_evidenced"
+        ]
+      }
+    },
+    "summary": {
+      "project_phase_nodes": 13,
+      "distinct_project_codes": 10,
+      "distinct_sites": 9,
+      "note": "Derivado da lista; mesmo código pode ter fases em anos diferentes (ex.: 35.4222 Açu 2022/2023/2024; 35.4012 Itajaí 2021/2023)."
+    },
+    "master_tree_v1": [
+      {
+        "code": "35.4264",
+        "project": "Ternium",
+        "period": "14 Jul - 07 Sep 2021"
+      },
+      {
+        "code": "35.4261",
+        "project": "Porto Sudeste",
+        "period": "09 Oct - 20 Nov 2021"
+      },
+      {
+        "code": "35.4012",
+        "project": "Itajaí",
+        "period": "2021"
+      },
+      {
+        "code": "35.4269",
+        "project": "Porto Vitória / CODESA",
+        "period": "22 Dec 2021 - 11 Feb 2022"
+      },
+      {
+        "code": "35.4222",
+        "project": "Porto do Açu",
+        "period": "2022 / 2023 / 2024"
+      },
+      {
+        "code": "35.4285",
+        "project": "Vale TIG",
+        "period": "2022"
+      },
+      {
+        "code": "35.3190",
+        "project": "Suape",
+        "period": "2022-2023"
+      },
+      {
+        "code": "35.4306",
+        "project": "SPA / Santos",
+        "period": "2023"
+      },
+      {
+        "code": "35.4012",
+        "project": "Itajaí SPI",
+        "period": "2023"
+      },
+      {
+        "code": "35.4449",
+        "project": "Porto Sudeste PSB",
+        "period": "19 Sep - 17 Nov 2023"
+      },
+      {
+        "code": "35.4458",
+        "project": "Rio Grande",
+        "period": "2024"
+      }
+    ],
+    "email_evidence_by_site": {
+      "Ternium_35.4264": [
+        {
+          "id": "17b0d88369922658",
+          "date": "2021-08-03",
+          "topic": "supplier onboarding / EPI store Itaguaí"
+        },
+        {
+          "id": "17b15dda5784121a",
+          "date": "2021-08-05",
+          "topic": "dump-box / disposal-area proposal to client"
+        },
+        {
+          "id": "17b3ef9d6e83b79e",
+          "date": "2021-08-13",
+          "topic": "buoy movements / captain communication"
+        },
+        {
+          "id": "17b82ca18970bbde",
+          "date": "2021-08-26",
+          "topic": "survey/bathymetry update / optional bunker"
+        }
+      ],
+      "Porto_Vitoria_35.4269": [
+        {
+          "id": "17dfba7fb86780c7",
+          "date": "2021-12-27",
+          "topic": "BM1 mobilisation measurement"
+        },
+        {
+          "id": "17e26ba6ffbe1b27",
+          "date": "2022-01-04",
+          "topic": "stores / garbage logistics"
+        },
+        {
+          "id": "17e4e68a4cee5782",
+          "date": "2022-01-12",
+          "topic": "waste / INEA"
+        },
+        {
+          "id": "17e979c57de645b5",
+          "date": "2022-01",
+          "topic": "site/vessel photos"
+        },
+        {
+          "id": "17e9755662a81bee",
+          "date": "2022-01",
+          "topic": "site/vessel photos"
+        },
+        {
+          "id": "17ee3a5ece7d6b28",
+          "date": "2022-02-11",
+          "topic": "project flight"
+        }
+      ],
+      "Acu_35.4222": [
+        {
+          "id": "186ec4a3d784e9ff",
+          "date": "2023-03-16",
+          "topic": "buoy movement plan"
+        },
+        {
+          "id": "18e0a7b6aa54fd7f",
+          "date": "2024-03-04",
+          "topic": "consolidated Terminal 01 manoeuvre planning meeting"
+        },
+        {
+          "id": "19003ba83ac4de75",
+          "date": "2024",
+          "topic": "signed May-Jun 2024 timesheet"
+        },
+        {
+          "id": "190035a079afbab9",
+          "date": "2024",
+          "topic": "May-Jun + Apr-May timesheets"
+        },
+        {
+          "id": "190806be1f7471eb",
+          "date": "2024-07",
+          "topic": "Açu/Lelystad certificates"
+        }
+      ],
+      "Itajai_35.4012": [
+        {
+          "id": "18a3c1ddbf2f16fd",
+          "date": "2023-08-07",
+          "topic": "handover; Operations Manual Rev1; supplier contacts"
+        }
+      ],
+      "Porto_Sudeste_35.4449": [
+        {
+          "id": "18b53fdd73a0f129",
+          "date": "2023-10-21",
+          "topic": "survey profiles"
+        },
+        {
+          "id": "18b1f3a0868c2ec7",
+          "date": "2023-10-11",
+          "topic": "bathymetry fuel station"
+        },
+        {
+          "id": "18ae7456decc4fd2",
+          "date": "2023-09-30",
+          "topic": "MEDEVAC drill HAM316 report"
+        },
+        {
+          "id": "18ae74868975ea56",
+          "date": "2023-09-30",
+          "topic": "forwarded MEDEVAC drill report"
+        }
+      ],
+      "Rio_Grande_35.4458": [
+        {
+          "id": "191582c59f5a25f8",
+          "date": "2024-08-15",
+          "topic": "survey boat GALERA DO MAR inspection / QHSE attachment"
+        },
+        {
+          "id": "1918fbbc00a2cce7",
+          "date": "2024-08-26",
+          "topic": "project flight 20/09"
+        },
+        {
+          "id": "191ccba545505611",
+          "date": "2024-09-07",
+          "topic": "vessel arrival instructions"
+        },
+        {
+          "id": "192fe026aee8f3b5",
+          "date": "2024-11-05",
+          "topic": "final Sep-Oct timesheet"
+        }
+      ]
+    },
+    "rule": "Código/nome/data/evidência são canônicos; não inferir cliente, volume ou embarcação ausentes."
+  }
+}

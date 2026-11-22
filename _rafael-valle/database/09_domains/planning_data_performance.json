@@ -1,0 +1,115 @@
+{
+  "_part": {
+    "id": "09_domains/planning_data_performance",
+    "title": "Domínio: Planejamento / Dados / Performance",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "label_pt": "Planejamento / Dados / Performance",
+    "priority": 4,
+    "summary": "Plano semanal, look-ahead 15 dias, forecast, S-curves, KPIs de produção/ciclo/disponibilidade/downtime/combustivel e validação por survey.",
+    "highlights_master_tree": {
+      "planning": [
+        "plano semanal",
+        "look-ahead 15 dias",
+        "forecast",
+        "MS Project",
+        "PCP",
+        "S-curves"
+      ],
+      "performance": [
+        "produção",
+        "cycle time",
+        "disponibilidade",
+        "downtime",
+        "fuel consumption",
+        "avanço físico",
+        "frente parada",
+        "plan vs actual"
+      ],
+      "reporting": [
+        "daily",
+        "weekly",
+        "monthly",
+        "DPR/RDO",
+        "handover",
+        "client reporting",
+        "management reporting"
+      ],
+      "data_validation": [
+        "survey",
+        "bathymetry",
+        "calibration checks"
+      ]
+    },
+    "source_paths": [
+      "experience_nodes.exp_vanoord.planning_controls",
+      "experience_nodes.exp_vanoord.performance_kpis",
+      "experience_nodes.exp_vanoord.survey_and_data_validation",
+      "experience_nodes.exp_vanoord.documentation"
+    ],
+    "refs": {
+      "experiences": [
+        "exp_vanoord",
+        "exp_ctank_analyst",
+        "exp_international_research"
+      ],
+      "projects": [
+        "vo_354264",
+        "vo_354261",
+        "vo_354012_2021",
+        "vo_354269",
+        "vo_354222_2022",
+        "vo_354285",
+        "vo_353190",
+        "vo_354222_2023",
+        "vo_354306",
+        "vo_354012_2023",
+        "vo_354449",
+        "vo_354222_2024",
+        "vo_354458"
+      ],
+      "vessels": [],
+      "software": [
+        "sw_ms_project",
+        "sw_excel",
+        "sw_power_bi",
+        "sw_powerpoint",
+        "sw_primavera_p6"
+      ],
+      "certifications": [
+        "ms_project_course",
+        "pcp_course"
+      ],
+      "education": [],
+      "stories": [
+        "fleet_planning",
+        "deviation_control",
+        "project_deviation",
+        "project_deviation_long",
+        "tools"
+      ],
+      "boundary_groups": [
+        "planning"
+      ],
+      "volunteer": []
+    },
+    "fit_estimates": [
+      {
+        "item": "Indicadores / análises criticas",
+        "est_pct": "95",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      },
+      {
+        "item": "Dashboards / BI",
+        "est_pct": "90",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      }
+    ],
+    "hard_gaps_or_boundaries": [],
+    "id": "planning_data_performance"
+  }
+}

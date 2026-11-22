@@ -1,0 +1,254 @@
+{
+  "_part": {
+    "id": "03_education/degrees",
+    "title": "Formação acadêmica (5 nós)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723",
+      "src_career_db_v3_2026_03_10",
+      "src_master_tree_v1_2026_10_20"
+    ]
+  },
+  "data": {
+    "order_for_cv": [
+      "edu_mba_pm",
+      "edu_naval",
+      "edu_safety",
+      "edu_civil",
+      "edu_ports"
+    ],
+    "framing_rule": "Civil + Naval/Offshore + Segurança do Trabalho + MBA Gestão de Projetos; não abrir o CV com 'Civil Engineer'.",
+    "nodes": {
+      "edu_civil": {
+        "degree": "Bacharelado em Engenharia Civil",
+        "institution": "UNIVIX / Multivix",
+        "period": "2013-2018",
+        "focus": [
+          "cálculo estrutural",
+          "resistência dos materiais",
+          "mecânica dos fluidos",
+          "gestão de obras"
+        ],
+        "status": "concluído",
+        "evidence": "D",
+        "cv_default": true,
+        "record_status": "canonical_known_record",
+        "historical_260723": {
+          "degree": {
+            "pt": "Graduação",
+            "en": "Bachelor's"
+          },
+          "field": {
+            "pt": "Engenharia Civil",
+            "en": "Civil Engineering"
+          },
+          "institution": "UNIVIX / Multivix",
+          "period": "2013–2018",
+          "status": {
+            "pt": "Concluída",
+            "en": "Completed"
+          },
+          "focus": {
+            "pt": "Cálculo estrutural, resistência dos materiais, mecânica dos fluidos, gestão de obras",
+            "en": "Structural analysis, strength of materials, fluid mechanics, construction management"
+          }
+        },
+        "career_db_v3": {
+          "degree": "Graduação",
+          "field": "Engenharia Civil",
+          "institution": "UNIVIX / Multivix",
+          "period": "2013–2018",
+          "status": "Concluída",
+          "focus": "Cálculo estrutural, resistência dos materiais, mecânica dos fluidos, gestão de obras"
+        }
+      },
+      "edu_ports": {
+        "degree": "Técnico em Portos",
+        "institution": "IFES",
+        "period": "2018-2019",
+        "focus": [
+          "operações logísticas portuárias",
+          "gestão de terminais",
+          "atracação",
+          "legislação alfandegária",
+          "cargo handling"
+        ],
+        "status": "concluído",
+        "evidence": "D",
+        "cv_default": true,
+        "record_status": "canonical_known_record",
+        "historical_260723": {
+          "degree": {
+            "pt": "Técnico",
+            "en": "Technical"
+          },
+          "field": "Portos",
+          "institution": "IFES",
+          "period": "2018–2019",
+          "status": {
+            "pt": "Concluído",
+            "en": "Completed"
+          },
+          "focus": {
+            "pt": "Operações logísticas portuárias, gestão de terminais, atracação, legislação alfandegária, cargo handling",
+            "en": "Port logistics operations, terminal management, berthing, customs law, cargo handling"
+          }
+        },
+        "career_db_v3": {
+          "degree": "Técnico",
+          "field": "Portos",
+          "institution": "IFES",
+          "period": "2018–2019",
+          "status": "Concluído",
+          "focus": "Operações logísticas portuárias, gestão de terminais, atracação, legislação alfandegária, cargo handling"
+        }
+      },
+      "edu_mba_pm": {
+        "degree": "MBA em Gestão de Projetos",
+        "institution": "USP / ESALQ",
+        "period": "2019-2020",
+        "workload": "400h",
+        "status": "concluído",
+        "evidence": "D",
+        "cv_default": true,
+        "record_status": "canonical_known_record",
+        "historical_260723": {
+          "degree": "MBA",
+          "field": {
+            "pt": "Gestão de Projetos",
+            "en": "Project Management"
+          },
+          "institution": "USP / ESALQ",
+          "period": "2019–2020",
+          "status": {
+            "pt": "Concluído",
+            "en": "Completed"
+          },
+          "focus": {
+            "pt": "PMBOK, controle de portfólios, análise de viabilidade, cronogramas físico-financeiros",
+            "en": "PMBOK, portfolio control, feasibility analysis, physical-financial schedules"
+          }
+        },
+        "career_db_v3": {
+          "degree": "MBA",
+          "field": "Gestão de Projetos",
+          "institution": "USP ESALQ",
+          "period": "2019–2020",
+          "status": "Concluído",
+          "focus": "PMBOK, controle de portfólios, análise de viabilidade, cronogramas físico-financeiros"
+        },
+        "coverage": [
+          "concepção",
+          "planejamento",
+          "execução",
+          "controle",
+          "encerramento",
+          "portfolio control",
+          "feasibility",
+          "physical-financial schedules"
+        ],
+        "framework": "PMI/PMBOK"
+      },
+      "edu_naval": {
+        "degree": "Pós-graduação em Engenharia de Construção Naval e Offshore",
+        "institution": "Universidade Católica de Petrópolis (UCP)",
+        "period": "2022-2023",
+        "status": "concluído",
+        "evidence": "D",
+        "cv_default": true,
+        "record_status": "canonical_known_record",
+        "historical_260723": {
+          "degree": {
+            "pt": "Pós-graduação",
+            "en": "Postgraduate"
+          },
+          "field": {
+            "pt": "Engenharia de Construção Naval e Offshore",
+            "en": "Naval & Offshore Construction Engineering"
+          },
+          "institution": "Universidade Católica de Petrópolis (UCP)",
+          "period": "2022–2023",
+          "status": {
+            "pt": "Concluída",
+            "en": "Completed"
+          }
+        },
+        "career_db_v3": {
+          "degree": "Pós-graduação",
+          "field": "Engenharia de Segurança do Trabalho",
+          "institution": "Universidade Cruzeiro do Sul",
+          "period": "2024–2025",
+          "status": "Concluída Fev 2025"
+        }
+      },
+      "edu_safety": {
+        "degree": "Pós-graduação em Engenharia de Segurança do Trabalho",
+        "institution": "Universidade Cruzeiro do Sul",
+        "period_source_1": "2024-2025 / conclusão Fev 2025 em master histórico",
+        "period_source_conflict": "Um perfil Gupy posterior mostrou datas diferentes; conferir certificado antes de candidatura final.",
+        "status": "concluído segundo master histórico",
+        "evidence": "D/V exact dates",
+        "cv_default": true,
+        "record_status": "canonical_known_record",
+        "exact_dates_rule": "Use certificate/transcript for exact dates because historical sources conflict.",
+        "historical_260723": {
+          "degree": {
+            "pt": "Pós-graduação",
+            "en": "Postgraduate"
+          },
+          "field": {
+            "pt": "Engenharia de Segurança do Trabalho",
+            "en": "Occupational Safety Engineering"
+          },
+          "institution": "Universidade Cruzeiro do Sul",
+          "period": "2024–2025",
+          "status": {
+            "pt": "Concluída (Fev 2025)",
+            "en": "Completed (Feb 2025)"
+          }
+        },
+        "career_db_v3": {
+          "degree": "Pós-graduação",
+          "field": "Engenharia de Segurança do Trabalho",
+          "institution": "Universidade Cruzeiro do Sul",
+          "period": "2024–2025",
+          "status": "Concluída Fev 2025"
+        }
+      }
+    },
+    "master_tree_v1": [
+      {
+        "credential": "Bacharelado em Engenharia Civil",
+        "institution": "UNIVIX / Multivix",
+        "period": "2013-2018",
+        "status": "Concluído"
+      },
+      {
+        "credential": "Técnico em Portos",
+        "institution": "IFES",
+        "period": "2018-2019",
+        "status": "Concluído"
+      },
+      {
+        "credential": "MBA em Gestão de Projetos",
+        "institution": "USP / ESALQ",
+        "period": "2019-2020",
+        "workload": "400 horas",
+        "framework": "PMI / PMBOK"
+      },
+      {
+        "credential": "Pós-graduação em Engenharia de Construção Naval e Offshore",
+        "institution": "UCP",
+        "period": "2022-2023",
+        "status": "Concluído"
+      },
+      {
+        "credential": "Pós-graduação em Engenharia de Segurança do Trabalho",
+        "institution": "Universidade Cruzeiro do Sul",
+        "period": "2024-2025",
+        "status": "Concluído conforme histórico consolidado; usar certificado para datas exatas"
+      }
+    ]
+  }
+}

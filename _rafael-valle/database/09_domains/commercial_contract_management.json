@@ -1,0 +1,67 @@
+{
+  "_part": {
+    "id": "09_domains/commercial_contract_management",
+    "title": "Domínio: Comercial / Contratos / Custos",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "label_pt": "Comercial / Contratos / Custos",
+    "priority": 9,
+    "summary": "Custos, medições, claims, mudanças de escopo, off-hire, negociação operacional de diesel, comparativo de propostas.",
+    "highlights_master_tree": [
+      "Escopo",
+      "Prazo",
+      "Custo",
+      "Riscos",
+      "Fornecedores",
+      "Stakeholders",
+      "Produção",
+      "KPIs",
+      "Mudanças e claims",
+      "Look-ahead",
+      "Relatórios",
+      "Medição",
+      "Closeout"
+    ],
+    "source_paths": [
+      "experience_nodes.exp_vanoord.commercial_contractual",
+      "experience_nodes.exp_ctank_analyst.contract_controls"
+    ],
+    "refs": {
+      "experiences": [
+        "exp_vanoord",
+        "exp_ctank_analyst"
+      ],
+      "projects": [
+        "vo_354264",
+        "vo_354261",
+        "vo_354012_2021",
+        "vo_354269",
+        "vo_354222_2022",
+        "vo_354285",
+        "vo_353190",
+        "vo_354222_2023",
+        "vo_354306",
+        "vo_354012_2023",
+        "vo_354449",
+        "vo_354222_2024",
+        "vo_354458"
+      ],
+      "vessels": [],
+      "software": [],
+      "certifications": [],
+      "education": [],
+      "stories": [],
+      "boundary_groups": [
+        "supplier_and_local_content_wording"
+      ],
+      "volunteer": []
+    },
+    "fit_estimates": [],
+    "hard_gaps_or_boundaries": [],
+    "id": "commercial_contract_management"
+  }
+}

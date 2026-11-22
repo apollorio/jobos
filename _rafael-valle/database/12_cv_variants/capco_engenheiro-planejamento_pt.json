@@ -1,0 +1,134 @@
+{
+  "_part": {
+    "id": "12_cv_variants/capco_engenheiro-planejamento_pt",
+    "title": "CV: Capco - Engenheiro de Planejamento (pt)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_cv_capco_engenheiro_planejamento_pt"
+    ]
+  },
+  "data": {
+    "target": {
+      "company": "Capco",
+      "role": "Engenheiro de Planejamento",
+      "job_ref": "linkedin:4479571515",
+      "language": "pt",
+      "date": null,
+      "archetype": "planning_project_controls",
+      "status": "final"
+    },
+    "cv": {
+      "name": "RAFAEL PERINI VALLE",
+      "subtitle": "ENGENHEIRO DE PLANEJAMENTO | PROCESSOS & DATA ANALYTICS",
+      "tagline": "Planejamento & Controle · Mapeamento de Processos · KPI · Dashboards · Power BI · Excel Avançado · Melhoria Contínua",
+      "contact": {
+        "location": "Rio de Janeiro – RJ, Brasil",
+        "email": "rafapevalle@gmail.com",
+        "phone": "+55 (21) 97955-4496",
+        "linkedin": "https://www.linkedin.com/in/rpvalle",
+        "linkedinLabel": "linkedin.com/in/rpvalle"
+      },
+      "target_job": {
+        "company": "Capco",
+        "title": "Engenheiro de Planejamento — Remoto — Rio de Janeiro",
+        "job_id": "4479571515",
+        "application_link": "https://www.linkedin.com/jobs/view/4479571515/"
+      },
+      "sections": [
+        {
+          "title": "Resumo Profissional",
+          "type": "bullets",
+          "bullets": [
+            "Engenheiro Civil com CREA ativo e experiência em planejamento e controle, análise de performance, mapeamento e melhoria de processos, KPIs, relatórios executivos e consolidação de dados em projetos marítimos/offshore.",
+            "Experiência com forecasts, look-aheads, desvios e projeções, procedimentos, fluxos operacionais e dashboards; MBA em Gestão de Projetos, Excel avançado, Power BI, MS Project e SQL em desenvolvimento."
+          ]
+        },
+        {
+          "title": "Competências-Chave",
+          "type": "text",
+          "content": "Planejamento & Controle · Mapeamento de Processos · Desenho de Fluxos · Procedimentos · Análise de KPI · Dashboards · Qualidade de Dados · Excel Avançado · Power BI · MS Project · Forecasting · Análise de Desvios · Tendências & Projeções · Gestão de Riscos · Requisitos & Soluções · Melhoria de Processos · Relatórios Executivos · Stakeholder Management · SQL em Desenvolvimento"
+        },
+        {
+          "title": "Experiência Profissional",
+          "type": "entries",
+          "lead": {
+            "title": "Superintendente 1 — Projetos, Planejamento & Performance | Van Oord (Jul 2021–Nov 2024)",
+            "body": "Planejou e controlou execução de projetos marítimos, acompanhando produtividade, disponibilidade, desvios, custos, riscos, forecasts e ações. Estruturou relatórios, indicadores e planos de curto prazo para apoiar clientes e gestão."
+          },
+          "entries": [
+            {
+              "role": "Superintendente 1 — Projetos & Operações Marítimas",
+              "company": "Van Oord",
+              "location": "Rio de Janeiro / costa brasileira",
+              "period": "Jul 2021 – Nov 2024",
+              "bullets": [
+                "Estruturou planos de execução e 15-day look-aheads, acompanhando progresso, recursos, logística, riscos e dependências.",
+                "Analisou KPIs e performance de ativos — produção, disponibilidade, downtime e consumo — identificando desvios, tendências e necessidades de recuperação.",
+                "Elaborou relatórios diários, semanais e mensais, forecasts e sínteses gerenciais para diferentes níveis de stakeholders.",
+                "Acompanhou custos, medições, fornecedores, mudanças e ações corretivas, apoiando decisões de planejamento e controle.",
+                "Padronizou fluxos de informação, procedimentos e formas de acompanhamento entre campo, embarcações e gestão."
+              ]
+            },
+            {
+              "role": "Analista de Operações — Processos & Dados",
+              "company": "C-Tank",
+              "location": "Niterói – RJ, Brasil",
+              "period": "Out 2020 – Jun 2021",
+              "bullets": [
+                "Mapeou e formalizou processos, procedimentos e controles documentais durante a preparação para ISO 9001.",
+                "Concebeu fluxo funcional integrando Almoxarifado, RH, Financeiro, faturamento e documentação operacional.",
+                "Produziu DPR/RDO, consolidou indicadores e coordenou dados, materiais, pessoas e fornecedores em campanhas FPSO/OSV.",
+                "Geriu informações no Petrobras Drake / SAP RT, incluindo requisitos, qualificação e prontidão operacional."
+              ]
+            },
+            {
+              "role": "Desenvolvimento Profissional & Projetos Independentes — Dados & Automação",
+              "company": "Independent",
+              "location": "Rio de Janeiro – RJ, Brasil",
+              "period": "Nov 2024 – Atual",
+              "bullets": [
+                "Aperfeiçoamento em Power BI, SQL/Python e automação, aplicando estruturação de dados, requisitos, fluxos, dashboards e melhoria iterativa no desenvolvimento do apollo::rio."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Formação",
+          "type": "lines",
+          "lines": [
+            "Pós-graduação: Engenharia de Segurança do Trabalho, Cruzeiro do Sul (2024–2025)",
+            "Pós-graduação: Engenharia de Construção Naval & Offshore, UCP (2022–2023)",
+            "MBA: Gestão de Projetos (PMBOK), USP / ESALQ (2019–2020)",
+            "Graduação: Engenharia Civil, UNIVIX / Multivix (2013–2018)",
+            "Técnico: Portos, IFES (2018–2019)"
+          ]
+        },
+        {
+          "title": "Ferramentas & Métodos",
+          "type": "bullets",
+          "bullets": [
+            "Planejamento: MS Project, 15-day look-ahead, forecasting, acompanhamento de progresso, desvios, riscos e planos de ação.",
+            "Analytics: Excel avançado, Power BI, KPI tracking, dashboards, consolidação e análise de dados.",
+            "Processos: mapeamento, fluxos, procedimentos, padronização, requisitos e melhoria contínua.",
+            "Tecnologia: Petrobras Drake / SAP RT; SQL e Python em desenvolvimento."
+          ]
+        },
+        {
+          "title": "Publicação",
+          "type": "text",
+          "content": "Autor de \"Inglês Técnico Portuário e Offshore\" (ISBN 978-65-00-04579-6, 2020; 3.000+ exemplares), demonstrando capacidade de pesquisa, estruturação de informação e comunicação técnica."
+        },
+        {
+          "title": "Informações Adicionais",
+          "type": "bullets",
+          "bullets": [
+            "Português nativo e inglês fluente; experiência com equipes multinacionais, clientes, fornecedores e gestão internacional.",
+            "CREA ativo; baseado no Rio de Janeiro.",
+            "Passaportes brasileiro e italiano válidos até 2027; CNH categoria B.",
+            "Disponibilidade para atuação remota e reuniões presenciais no Rio de Janeiro quando necessário."
+          ]
+        }
+      ]
+    }
+  }
+}

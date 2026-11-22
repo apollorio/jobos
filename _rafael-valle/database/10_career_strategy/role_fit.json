@@ -1,0 +1,114 @@
+{
+  "_part": {
+    "id": "10_career_strategy/role_fit",
+    "title": "Encaixe por tier de função + calibração",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_fit_analyses"
+    ]
+  },
+  "data": {
+    "tier_A_natural_fit": [
+      "Marine Operations Engineer",
+      "Offshore Operations Engineer",
+      "Operations Engineer",
+      "Shorebase Operations",
+      "Vessel-Shore Interface",
+      "Project Operations Engineer",
+      "Planning Engineer / Project Controls",
+      "Offshore Logistics / Readiness",
+      "Operational Quality / QHSE Interface"
+    ],
+    "tier_B_defensible": [
+      "Deputy Vessel Superintendent quando licença marítima não for eliminatória",
+      "Fleet / Vessel Operations Analyst",
+      "Planner Offshore",
+      "Project Management Engineer",
+      "Operational Quality Engineer",
+      "Project Subcontracts / Supplier Interface"
+    ],
+    "tier_C_stretch": [
+      "Senior corporate QA governance",
+      "Fleet Supervisor com ownership de Class/Flag/PMS",
+      "Technical Vessel Superintendent clássico",
+      "Engineering Manager sem FEED/design específico"
+    ],
+    "tier_X_usually_reject_if_mandatory": [
+      "Master Mariner / Captain / Chief Mate",
+      "Marine Compliance Specialist exigindo Nautical Sciences + STCW management license",
+      "Structural/FEA design coordination",
+      "Subsea controls engineering",
+      "Process Engineering exigindo HYSYS/PRO II",
+      "FPSO production operator roles"
+    ],
+    "fit_calibration": [
+      {
+        "role": "Marine Assurance / tanker (Master-level)",
+        "employer": "MODEC",
+        "est_fit_pct": "25-30",
+        "decision": "do not apply",
+        "eliminators": [
+          "Bacharelado em Ciências Náuticas",
+          "STCW Management Level / Master Mariner"
+        ],
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      },
+      {
+        "role": "Deputy Vessel Superintendent",
+        "employer": "Subsea7",
+        "est_fit_pct": "80",
+        "decision": "apply (CV Marine Operations + ERC + inspections)",
+        "gaps": [
+          "5 anos em gerência similar (tem ~3y3m-3y5m)",
+          "statutory certification / ownership PMS"
+        ],
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      },
+      {
+        "role": "Engenheiro(a) de Qualidade Sr",
+        "employer": "Subsea7",
+        "est_fit_pct": "62",
+        "decision": "apply as stretch (CV Quality/Management Systems)",
+        "gaps": [
+          "Synergi",
+          "BMS Subsea7",
+          "7 anos em Qualidade",
+          "Auditor Lider / tri-norma"
+        ],
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      },
+      {
+        "role": "Engenheiro(a) de Qualidade Offshore I",
+        "employer": "PRIO",
+        "est_fit_pct": "84",
+        "decision": "apply - high priority",
+        "gaps": [
+          "SGSO/SGIP/SGSS/ANP (~60)",
+          "PDCA/MASP/SDCA formal (~60-65)"
+        ],
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      },
+      {
+        "role": "Planner Offshore",
+        "employer": "MODEC",
+        "est_fit_pct": "82",
+        "decision": "apply",
+        "gaps": [],
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      },
+      {
+        "role": "Senior Operations Engineer (shorebase)",
+        "employer": "SBM Offshore",
+        "est_fit_pct": "UNKNOWN_NOT_DOCUMENTED",
+        "decision": "apply with tailored EN CV",
+        "gaps": [
+          "FPSO production",
+          "commissioning",
+          "process engineering"
+        ],
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      }
+    ]
+  }
+}

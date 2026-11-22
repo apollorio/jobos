@@ -1,0 +1,161 @@
+{
+  "_part": {
+    "id": "06_skills/software/corporate_operational_systems",
+    "title": "Software/sistemas: corporate_operational_systems",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723"
+    ]
+  },
+  "data": {
+    "nodes": {
+      "sw_drake": {
+        "name": "Drake",
+        "full_name": "Drake (Sapiensia / Petrobras)",
+        "type": "Sistema Petrobras de qualificação/compliance/logística/documentação",
+        "status": "strong/proven",
+        "employer": "C-Tank",
+        "period": "2020-2021",
+        "use_cases": [
+          "matriz de qualificação",
+          "credenciamento",
+          "compliance",
+          "formulários/documentos técnicos",
+          "upload/verificação de certificados",
+          "agendamento aéreo/logístico",
+          "timesheets",
+          "provisionamento logístico",
+          "POB"
+        ],
+        "related_processes": [
+          "PHTD",
+          "offshore mobilization",
+          "crew readiness"
+        ],
+        "evidence": "D",
+        "tags": [
+          "Petrobras",
+          "offshore",
+          "compliance",
+          "crewing",
+          "logistics",
+          "documents"
+        ],
+        "used_in": [
+          "exp_ctank_analyst",
+          "exp_ctank_assistant"
+        ],
+        "domain_tags": [
+          "oil_gas_offshore",
+          "logistics_materials_suppliers",
+          "quality_management_systems",
+          "planning_data_performance"
+        ],
+        "aliases": [
+          "Drake",
+          "DRAKE",
+          "Drake (Sapiensia/Petrobras)"
+        ],
+        "proficiency": "strong/proven professional use",
+        "cv_default": true
+      },
+      "sw_sap_rt": {
+        "name": "SAP RT",
+        "full_name": "RT / SAP RT (Petrobras)",
+        "type": "Sistema Petrobras para requisição/gestão de transporte e logística",
+        "status": "strong/proven",
+        "employer": "C-Tank",
+        "period": "2020-2021",
+        "use_cases": [
+          "gestão de transportes de pessoal",
+          "requisições de transporte",
+          "PHTD",
+          "logística offshore"
+        ],
+        "evidence": "D",
+        "tags": [
+          "Petrobras",
+          "SAP",
+          "transport",
+          "PHTD",
+          "offshore logistics"
+        ],
+        "used_in": [
+          "exp_ctank_analyst",
+          "exp_ctank_assistant"
+        ],
+        "domain_tags": [
+          "oil_gas_offshore",
+          "logistics_materials_suppliers"
+        ],
+        "aliases": [
+          "SAP RT",
+          "RT / SAP RT",
+          "Petrobras RT"
+        ],
+        "proficiency": "strong/proven professional use",
+        "cv_default": true
+      },
+      "sw_bport": {
+        "name": "BPORT",
+        "type": "Sistema/plataforma marítima listado no banco histórico",
+        "status": "listed-needs-context",
+        "use_cases": [],
+        "note": "Consta na skills_matrix de arquivos históricos, mas o uso específico não foi detalhado nas fontes recuperadas. Validar antes de descrever funcionalidade.",
+        "evidence": "D/V",
+        "tags": [
+          "maritime system",
+          "verify-use-case"
+        ],
+        "used_in": [],
+        "used_in_to_validate": [],
+        "domain_tags": [
+          "oil_gas_offshore",
+          "logistics_materials_suppliers"
+        ],
+        "cv_default": false,
+        "claim_rule": "Listed historically; use only as 'BPORT' unless exact functions are confirmed."
+      },
+      "sw_maritime_credentialing_generic": {
+        "name": "Sistemas de credenciamento marítimo",
+        "type": "Categoria genérica de sistemas",
+        "status": "used/proven",
+        "use_cases": [
+          "credenciamento",
+          "matriz de qualificação",
+          "documentação de pessoal"
+        ],
+        "note": "Usar como categoria; Drake é o sistema nominal comprovado.",
+        "evidence": "D",
+        "used_in": [
+          "exp_ctank_assistant",
+          "exp_ctank_analyst"
+        ],
+        "domain_tags": [
+          "oil_gas_offshore",
+          "logistics_materials_suppliers"
+        ]
+      },
+      "sw_star_user_mentioned": {
+        "name": "STAR",
+        "type": "Software/system explicitly mentioned by Rafael; exact product/function not yet documented in supplied sources",
+        "status": "user-mentioned-unverified",
+        "proficiency": "UNKNOWN_NOT_DOCUMENTED",
+        "used_in": [
+          "UNKNOWN_NOT_DOCUMENTED"
+        ],
+        "use_cases": [
+          "UNKNOWN_NOT_DOCUMENTED"
+        ],
+        "evidence": "U/V",
+        "domain_tags": [
+          "software_unverified"
+        ],
+        "cv_default": false,
+        "claim_rule": "Keep in master database but do not put on a CV until exact product name, employer/context and use are confirmed.",
+        "not_the_same_as": "Amaralina Star (NS-43), which is a drillship and has its own vessel node."
+      }
+    }
+  }
+}

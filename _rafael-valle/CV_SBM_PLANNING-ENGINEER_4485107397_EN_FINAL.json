@@ -1,0 +1,116 @@
+{
+  "name": "RAFAEL PERINI VALLE",
+  "subtitle": "PLANNING ENGINEER | PROJECT CONTROLS & OFFSHORE OPERATIONS",
+  "tagline": "Project Planning · Scheduling · Progress Control · Forecasting · KPIs · Risk Management · MS Project",
+  "contact": {
+    "location": "Rio de Janeiro – RJ, Brazil",
+    "email": "rafapevalle@gmail.com",
+    "phone": "+55 (21) 97955-4496",
+    "linkedin": "https://www.linkedin.com/in/rpvalle",
+    "linkedinLabel": "linkedin.com/in/rpvalle"
+  },
+  "target_job": {
+    "company": "SBM Offshore",
+    "title": "Planning Engineer",
+    "job_id": "4485107397",
+    "application_link": "https://www.linkedin.com/jobs/view/4485107397/"
+  },
+  "sections": [
+    {
+      "title": "Professional Summary",
+      "type": "bullets",
+      "bullets": [
+        "Engineer with 4+ years of project execution and marine/offshore operations experience, combining planning, progress control, forecasting, risk management, KPI analysis and multidisciplinary stakeholder coordination.",
+        "Hands-on experience with daily/weekly/monthly reporting, 15-day look-ahead planning, schedule and production follow-up, deviation analysis, corrective actions, measurements and cost control; MBA in Project Management, Advanced Excel, Power BI and MS Project."
+      ]
+    },
+    {
+      "title": "Core Expertise",
+      "type": "text",
+      "content": "Project Planning · Scheduling · Progress Monitoring · Look-Ahead Planning · Forecasting · Baseline & Deviation Follow-Up · Corrective Actions · KPI & Performance Reporting · Risk Management · Cost & Measurement Control · MS Project · Power BI · Advanced Excel · Stakeholder Management · Offshore Operations · QHSE · Multidisciplinary Coordination"
+    },
+    {
+      "title": "Professional Experience",
+      "type": "entries",
+      "lead": {
+        "title": "Superintendent 1 — Marine Projects & Operations | Van Oord (Jul 2021–Nov 2024)",
+        "body": "Monitored and controlled project execution across Brazilian ports, coordinating vessels, clients, terminals, suppliers and internal teams. Managed operational planning, 15-day look-aheads, progress follow-up, KPIs, forecasts, deviations, recovery actions, measurements, costs and project reporting."
+      },
+      "entries": [
+        {
+          "role": "Superintendent 1 — Marine Projects & Operations",
+          "company": "Van Oord",
+          "location": "Rio de Janeiro / Brazilian coast",
+          "period": "Jul 2021 – Nov 2024",
+          "bullets": [
+            "Developed and maintained operational plans and look-ahead schedules, aligning vessel availability, resources, logistics and project priorities.",
+            "Monitored progress against planned execution, identified deviations and coordinated corrective/recovery actions with project, vessel and support teams.",
+            "Prepared daily, weekly and monthly reports, forecasts and KPI analyses covering production, availability, downtime, fuel and operational performance.",
+            "Supported measurements, cost follow-up, claims/change interfaces, suppliers and project close-out activities.",
+            "Facilitated alignment with clients, captains, engineers, terminals, agents and multidisciplinary teams in international project environments."
+          ]
+        },
+        {
+          "role": "Operations Analyst — Offshore Support & Planning",
+          "company": "C-Tank",
+          "location": "Niterói – RJ, Brazil",
+          "period": "Oct 2020 – Jun 2021",
+          "bullets": [
+            "Planned and coordinated personnel, materials, suppliers and operational readiness for FPSO/OSV maintenance and cleaning campaigns.",
+            "Produced DPR/RDO reports, monitored deliverables and deviations, and maintained operational information in Petrobras Drake / SAP RT.",
+            "Mapped processes and created procedures and document-control practices during the company’s ISO 9001 preparation."
+          ]
+        },
+        {
+          "role": "Professional Development & Independent Digital Projects",
+          "company": "Independent",
+          "location": "Rio de Janeiro – RJ, Brazil",
+          "period": "Nov 2024 – Present",
+          "bullets": [
+            "Continued development in Power BI, structured data, SQL/Python and automation while managing roadmap, dependencies, risks and iterative delivery for apollo::rio.",
+            "Primavera P6 knowledge under development."
+          ]
+        },
+        {
+          "role": "Offshore Technical-English Instructor / Communication Bridge",
+          "company": "Toolvox",
+          "location": "Pre-salt drillships (NS-43, NS-51)",
+          "period": "Dec 2018 – May 2020",
+          "bullets": [
+            "Delivered technical training and translated SOPs for multinational offshore teams, strengthening technical communication and cross-functional coordination."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Education",
+      "type": "lines",
+      "lines": [
+        "Postgraduate: Occupational Safety Engineering, Cruzeiro do Sul (2024–2025)",
+        "Postgraduate: Naval & Offshore Construction Engineering, UCP (2022–2023)",
+        "MBA: Project Management (PMBOK), USP / ESALQ (2019–2020)",
+        "BSc: Civil Engineering, UNIVIX / Multivix (2013–2018)",
+        "Technical Degree: Ports, IFES (2018–2019)"
+      ]
+    },
+    {
+      "title": "Tools & Methods",
+      "type": "bullets",
+      "bullets": [
+        "Planning & Controls: MS Project, 15-day look-ahead, forecasting, schedule/progress follow-up, KPI tracking and corrective-action management.",
+        "Analytics: Advanced Excel, Power BI, structured data, performance analysis and management reporting.",
+        "Project Management: PMBOK, risk/dependency management, stakeholder alignment, suppliers, measurements and project close-out.",
+        "Systems: Petrobras Drake / SAP RT; Primavera P6 under development."
+      ]
+    },
+    {
+      "title": "Additional Information",
+      "type": "bullets",
+      "bullets": [
+        "Fluent Portuguese and English; extensive experience with multinational teams and international management.",
+        "Active CREA registration; based in Rio de Janeiro.",
+        "Brazilian and Italian passports valid through 2027; Category B driver's license."
+      ]
+    }
+  ]
+}

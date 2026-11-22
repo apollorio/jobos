@@ -1,0 +1,169 @@
+{
+  "_part": {
+    "id": "06_skills/software/architecture_concepts_and_patterns",
+    "title": "Software/sistemas: architecture_concepts_and_patterns",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723"
+    ]
+  },
+  "data": {
+    "nodes": {
+      "sw_pwa": {
+        "name": "PWA (Progressive Web App)",
+        "type": "Architecture",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio",
+          "SOS Apollo (offline-first)"
+        ],
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo",
+          "proj_sos"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_web_push": {
+        "name": "Web Push",
+        "type": "Architecture",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio notifications"
+        ],
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_service_worker": {
+        "name": "Service Worker",
+        "type": "Architecture",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio",
+          "SOS Apollo"
+        ],
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo",
+          "proj_sos"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_rest_api": {
+        "name": "REST / data flows (WordPress REST)",
+        "type": "Architecture",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio"
+        ],
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_mu_plugins": {
+        "name": "MU-plugins (WordPress must-use)",
+        "type": "Architecture",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio"
+        ],
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_custom_wp_plugins": {
+        "name": "Custom WordPress plugins",
+        "type": "Architecture",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio"
+        ],
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_design_system_core_js": {
+        "name": "Design system / core.js",
+        "type": "Architecture",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio front-end"
+        ],
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_registry_ssot": {
+        "name": "Registry as SSOT (single source of truth)",
+        "type": "Architecture",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio data structures"
+        ],
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_ai_assisted_dev_governance": {
+        "name": "AI-assisted development governance",
+        "type": "Practice",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio"
+        ],
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_local_policy_engine": {
+        "name": "Deterministic local policy engine (event > state > hard safety rules > risk/band > policy > skill/card)",
+        "type": "Architecture",
+        "status": "personal-project",
+        "contexts": [
+          "SOS Apollo"
+        ],
+        "evidence": "P",
+        "used_in": [
+          "proj_sos"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      }
+    }
+  }
+}

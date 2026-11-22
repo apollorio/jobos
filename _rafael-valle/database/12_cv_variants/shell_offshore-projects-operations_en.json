@@ -1,0 +1,158 @@
+{
+  "_part": {
+    "id": "12_cv_variants/shell_offshore-projects-operations_en",
+    "title": "CV: Shell - Offshore Projects & Operations Engineer (Facilities Engineer) (en)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_cv_shell_offshore_projects_operations_en"
+    ]
+  },
+  "data": {
+    "target": {
+      "company": "Shell",
+      "role": "Offshore Projects & Operations Engineer (Facilities Engineer)",
+      "job_ref": null,
+      "language": "en",
+      "date": "2026-09-19",
+      "archetype": "offshore_operations_engineer",
+      "status": "final"
+    },
+    "cv": {
+      "name": "RAFAEL PERINI VALLE",
+      "subtitle": "OFFSHORE PROJECTS & OPERATIONS ENGINEER",
+      "tagline": "Project Execution · Operational Readiness · FPSO/OSV Support · HSSE · Stakeholder Integration",
+      "contact": {
+        "location": "Rio de Janeiro – RJ, Brazil",
+        "email": "rafapevalle@gmail.com",
+        "phone": "+55 (21) 97955-4496",
+        "linkedin": "https://www.linkedin.com/in/rpvalle",
+        "linkedinLabel": "linkedin.com/in/rpvalle"
+      },
+      "sections": [
+        {
+          "title": "Professional Summary",
+          "type": "bullets",
+          "bullets": [
+            "Civil Engineer (CREA) · MBA in Project Management (PMBOK) · 4+ years in offshore/marine operations, project execution and operational support in Brazil.",
+            "3y5m as Marine Operations Superintendent, integrating projects and operations across multiple ports with multidisciplinary teams, suppliers, clients and international management.",
+            "Deepwater/offshore exposure: 18 months onboard pre-salt drillships plus OSV/FPSO support; fluent Portuguese and English in multicultural environments.",
+            "Strong HSSE and continuous-improvement background: risk assessment, incident investigation, corrective actions, KPIs, forecasting and operational readiness."
+          ]
+        },
+        {
+          "title": "Core Expertise",
+          "type": "text",
+          "content": "Offshore Project Execution · Operations / Project Integration · Operational Readiness · Risk & Recovery Actions · Multidisciplinary Stakeholders · FPSO/OSV Support · HSSE · Incident Investigation · Continuous Improvement · KPIs & Forecasting · PMBOK · MS Project / Power BI"
+        },
+        {
+          "title": "Professional Experience",
+          "type": "entries",
+          "lead": {
+            "title": "Career Break (2024–Present)",
+            "body": "Family-support period while remaining professionally active through web/software and community projects. Immediately available for full-time return."
+          },
+          "entries": [
+            {
+              "role": "Marine Operations Superintendent (Project Execution & Performance)",
+              "company": "Van Oord",
+              "location": "Rio de Janeiro / Brazilian coast",
+              "period": "Jul 2021 – Nov 2024",
+              "bullets": [
+                "Coordinated marine project execution across multiple Brazilian ports, integrating vessels, terminals, suppliers, clients and international management.",
+                "Planned critical operating windows, mobilisations and SIMOPS; identified risks and deviations and supported mitigation, recovery and corrective actions.",
+                "Managed scope interfaces, services, measurements, costs and claims while supporting safe and reliable operational readiness.",
+                "Worked with QHSE on risk assessments, procedures, incident investigations and corrective actions under NORMAM/IMO/SOLAS/MARPOL requirements.",
+                "Consolidated production, availability, downtime and fuel KPIs into forecasts and management reports for clients and global leadership."
+              ]
+            },
+            {
+              "role": "Operations Analyst (Offshore Planning & Project Support)",
+              "company": "C-Tank",
+              "location": "Niterói – RJ, Brazil",
+              "period": "Oct 2020 – Jun 2021",
+              "bullets": [
+                "Planned offshore maintenance/cleaning campaigns supporting OSVs and FPSOs: crews, materials, deadlines, readiness and daily execution follow-up.",
+                "Coordinated contractors and operational interfaces for Shell, Transocean and Helix; supported deliverables, measurements, costs and contract control.",
+                "Used Petrobras Drake/SAP RT for compliance and logistics; produced DPR/RDO reporting and supported operational data consolidation.",
+                "Mapped internal processes and supported ISO 9000 implementation, strengthening management systems and continuous improvement."
+              ]
+            },
+            {
+              "role": "Senior Operations Assistant",
+              "company": "C-Tank",
+              "location": "Niterói – RJ, Brazil",
+              "period": "Jul 2020 – Oct 2020",
+              "bullets": [
+                "Supported offshore and port operations, contractor mobilisation, transport requests, documentation and DRAKE credentialing for Tier-1 clients."
+              ]
+            },
+            {
+              "role": "Offshore Technical-English Instructor / Communication Bridge",
+              "company": "Toolvox",
+              "location": "Pre-salt drillships (NS-43, NS-51)",
+              "period": "Dec 2018 – May 2020",
+              "bullets": [
+                "Spent 18 months onboard ultra-deepwater drillships, translating SOPs and technical communication across multinational offshore teams."
+              ]
+            },
+            {
+              "role": "Engineering Research Intern (International)",
+              "company": "NTUA (Athens) & BAM (Berlin)",
+              "location": "",
+              "period": "2015 & 2018",
+              "bullets": [
+                "International engineering research with rigorous data collection, technical analysis and multidisciplinary collaboration."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Education",
+          "type": "lines",
+          "lines": [
+            "Postgraduate: Occupational Safety Engineering, Cruzeiro do Sul (2024–2025)",
+            "Postgraduate: Naval & Offshore Construction Engineering, UCP (2022–2023)",
+            "MBA: Project Management (PMBOK), USP / ESALQ (2019–2020)",
+            "BSc: Civil Engineering, UNIVIX / Multivix (2013–2018)",
+            "Technical Degree: Ports, IFES (2018–2019)"
+          ]
+        },
+        {
+          "title": "Certifications & Training",
+          "type": "bullets",
+          "bullets": [
+            "MBA in Project Management (PMBOK), USP/ESALQ · Production Planning & Control (PCP), West Group.",
+            "MS Project training · Advanced Excel dashboards · Power BI.",
+            "Offshore safety: CBSP, BOSIET, HUET/T-HUET · NR-33/34/35/17/30 · General Dredging Course."
+          ]
+        },
+        {
+          "title": "Tools & Systems",
+          "type": "bullets",
+          "bullets": [
+            "Project & Operations Control: MS Project, PCP, forecasting, KPIs",
+            "Data & BI: Advanced Excel, Power BI, dashboards and operational reporting",
+            "Petrobras Systems: Drake / SAP RT",
+            "Digital: HTML, CSS, JavaScript, Python, JSON (autonomous development)",
+            "Methods: PMBOK, process mapping, ISO 9000 support"
+          ]
+        },
+        {
+          "title": "Publication",
+          "type": "text",
+          "content": "Author of \"Technical English for Ports & Offshore\" (ISBN 978-65-00-04579-6, 2020; 3,000+ copies sold)."
+        },
+        {
+          "title": "Additional Information",
+          "type": "bullets",
+          "bullets": [
+            "Active CREA registration; Brazilian citizen with unrestricted authorization to work in Brazil.",
+            "Fluent Portuguese and English; daily technical communication with multinational offshore teams.",
+            "Based in Rio de Janeiro; immediately available, including travel to sites and offshore operations.",
+            "Brazilian and Italian passports valid through 2027; Category B driver's license."
+          ]
+        }
+      ]
+    }
+  }
+}

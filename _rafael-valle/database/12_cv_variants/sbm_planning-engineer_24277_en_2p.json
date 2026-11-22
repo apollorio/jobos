@@ -1,0 +1,169 @@
+{
+  "_part": {
+    "id": "12_cv_variants/sbm_planning-engineer_24277_en_2p",
+    "title": "CV: SBM Offshore - Planning Engineer (en)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_cv_sbm_planning_engineer_24277_en_2p"
+    ]
+  },
+  "data": {
+    "target": {
+      "company": "SBM Offshore",
+      "role": "Planning Engineer",
+      "job_ref": "sbm:24277",
+      "language": "en",
+      "date": "2026-11-01",
+      "archetype": "planning_project_controls",
+      "status": "final_preferred"
+    },
+    "cv": {
+      "name": "RAFAEL PERINI VALLE",
+      "subtitle": "PLANNING ENGINEER | PROJECT CONTROLS | OFFSHORE & OIL & GAS",
+      "tagline": "MS Project · Schedule Control · Critical Path · Progress · Forecast · S-Curves · KPIs · Risk & Deviation Follow-up",
+      "contact": {
+        "location": "Rio de Janeiro – RJ, Brazil",
+        "email": "rafapevalle@gmail.com",
+        "phone": "+55 (21) 97955-4496",
+        "linkedin": "https://www.linkedin.com/in/rpvalle",
+        "linkedinLabel": "linkedin.com/in/rpvalle"
+      },
+      "sections": [
+        {
+          "title": "Professional Summary",
+          "type": "bullets",
+          "bullets": [
+            "Civil Engineer with active CREA registration and an MBA in Project Management from USP/ESALQ (400h, PMI/PMBOK-based), with 3+ years supporting planning, monitoring and control of marine projects at Van Oord, plus previous offshore Oil & Gas experience.",
+            "Hands-on experience with project schedules, critical path, milestones, physical and physical-financial progress, plan-versus-actual analysis, 15-day look-ahead, forecast, S-curves, costs, measurements, claims, KPIs and management reporting.",
+            "Advanced Microsoft Project and Excel, with Power BI for dashboards and performance analysis; Primavera P6 currently under development.",
+            "Strong multidisciplinary interface across project management, engineering/survey, vessel teams, QHSE, clients, suppliers and service providers, with focus on schedule deviations, corrective actions, risk follow-up and execution alignment."
+          ]
+        },
+        {
+          "title": "Professional Experience",
+          "type": "entries",
+          "lead": {
+            "title": "Professional Development & Independent Projects | Nov 2024–Present",
+            "body": "Professional development focused on Occupational Safety Engineering, data analysis, dashboards, automation and process structuring. Immediately available for a full-time return to Planning / Project Controls."
+          },
+          "entries": [
+            {
+              "role": "Superintendent | Planning & Project Controls",
+              "company": "Van Oord",
+              "location": "Rio de Janeiro / Brazilian coast",
+              "period": "Jul 2021 – Nov 2024",
+              "bullets": [
+                "Developed and maintained project schedules using PCP and Microsoft Project, controlling sequencing, key durations, critical path, milestones and short-term execution priorities across multiple marine projects.",
+                "Monitored planned versus actual performance through production, vessel availability, downtime, fuel consumption and physical progress, identifying deviations and supporting corrective actions and recovery planning.",
+                "Updated short-term forecasts and approximately 15-day look-aheads, consolidating operational constraints, priorities, resources and impacts on project execution.",
+                "Prepared and followed daily, weekly and monthly progress reports, S-curves, KPIs and performance metrics for clients, project management and international leadership.",
+                "Supported cost, measurement, change and claims follow-up, correlating execution progress, operational constraints and schedule/cost impacts.",
+                "Facilitated planning and progress alignment with clients, vessel teams, engineering/survey, QHSE, suppliers and service providers, ensuring action follow-up and resolution of schedule-impacting issues."
+              ]
+            },
+            {
+              "role": "Operations Analyst | Offshore Planning & Project Support",
+              "company": "C-Tank",
+              "location": "Niterói – RJ, Brazil",
+              "period": "Oct 2020 – Jun 2021",
+              "bullets": [
+                "Planned and monitored offshore maintenance and cleaning campaigns supporting FPSOs and OSVs, coordinating teams, materials, suppliers, documentation, logistics and operational readiness.",
+                "Tracked execution through DPR/RDO, indicators, progress and pending actions, addressing personnel, material, access and logistics constraints that could affect delivery.",
+                "Supported deliverables, measurement and cost control, contractor interfaces and Petrobras processes through Drake and SAP RT / PHTD."
+              ]
+            },
+            {
+              "role": "Senior Operations Assistant",
+              "company": "C-Tank",
+              "location": "Niterói – RJ, Brazil",
+              "period": "Jul 2020 – Oct 2020",
+              "bullets": [
+                "Supported offshore mobilisation, transport requests, documentation, Petrobras DRAKE credentialing and operational readiness."
+              ]
+            },
+            {
+              "role": "Offshore Technical English Instructor",
+              "company": "Toolvox",
+              "location": "Ultra-deepwater pre-salt drillships NS-43 & NS-51",
+              "period": "Dec 2018 – May 2020",
+              "bullets": [
+                "Supported multinational offshore teams through technical-English training, SOP translation and operational/emergency communication in a high-risk drilling environment."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Education",
+          "type": "lines",
+          "lines": [
+            "MBA — Project Management, USP / ESALQ | 2019–2020 | 400h | PMI/PMBOK-based",
+            "Postgraduate — Naval & Offshore Construction Engineering, UCP | 2022–2023",
+            "Postgraduate — Occupational Safety Engineering, Universidade Cruzeiro do Sul | Completed",
+            "BSc — Civil Engineering, UNIVIX / Multivix | 2013–2018",
+            "Technical Degree — Ports, IFES | 2018–2019"
+          ]
+        },
+        {
+          "title": "Planning Tools & Systems",
+          "type": "bullets",
+          "bullets": [
+            "Microsoft Project — Advanced | scheduling, critical path, milestones, forecast and progress control.",
+            "Microsoft Excel — Advanced | project controls, KPIs, data consolidation and reporting.",
+            "Power BI — dashboards, KPI visualisation and performance analysis.",
+            "Primavera P6 — currently developing knowledge; not presented as consolidated professional experience.",
+            "PCP — Production Planning & Control | programming, monitoring and execution control.",
+            "Petrobras Drake / SAP RT — offshore mobilisation, qualification, documentation and logistics processes."
+          ]
+        },
+        {
+          "title": "Additional Information",
+          "type": "bullets",
+          "bullets": [
+            "Active CREA registration.",
+            "Fluent Portuguese and English, used professionally with multinational offshore teams, clients and international management.",
+            "Based in Rio de Janeiro; immediately available for hybrid/on-site work, travel and project/site assignments.",
+            "Brazilian and Italian passports · Category B driver's licence."
+          ]
+        }
+      ],
+      "application_notes": {
+        "target": "SBM Offshore — Planning Engineer — Req Id 24277",
+        "language": "English",
+        "page_target": "Maximum 2 pages in the current CV renderer.",
+        "positioning_ratio": {
+          "planning_project_controls": "70%",
+          "offshore_oil_gas": "20%",
+          "operations_execution": "10%"
+        },
+        "supported_keywords_used": [
+          "project schedules",
+          "critical path",
+          "milestones",
+          "physical progress",
+          "physical-financial progress",
+          "plan versus actual",
+          "forecast",
+          "look-ahead",
+          "S-curves",
+          "KPIs",
+          "project data analysis",
+          "risk follow-up",
+          "corrective actions",
+          "progress reports",
+          "supplier interfaces",
+          "Oil & Gas",
+          "MS Project",
+          "Primavera P6"
+        ],
+        "truth_boundaries": [
+          "Do not claim formal Earned Value Management / EVM, CPI or SPI unless separately evidenced.",
+          "Do not claim professional Primavera P6 proficiency; current status is developing.",
+          "Do not claim construction/commissioning ownership.",
+          "Do not claim Systems Engineering experience as a formal discipline.",
+          "Do not claim FPSO production operations; C-Tank exposure was offshore support / maintenance campaigns.",
+          "Do not claim PMP certification."
+        ]
+      }
+    }
+  }
+}

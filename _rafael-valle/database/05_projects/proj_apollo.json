@@ -1,0 +1,128 @@
+{
+  "_part": {
+    "id": "05_projects/proj_apollo",
+    "title": "Apollo::rio - plataforma digital de cultura do Rio",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723",
+      "src_master_tree_v1_2026_10_20",
+      "src_workstation_scan_2026_11_19"
+    ]
+  },
+  "data": {
+    "name": "Apollo::rio",
+    "type": "Projeto cultural e tecnológico / plataforma digital",
+    "roles": [
+      "founder/product owner independente",
+      "product architecture",
+      "UX/UI direction",
+      "WordPress architecture",
+      "development/automation"
+    ],
+    "domains": [
+      "events",
+      "community",
+      "producer tools",
+      "PWA",
+      "notifications",
+      "marketplace concepts",
+      "local guide"
+    ],
+    "evidence": "P",
+    "technical_scope": [
+      "WordPress",
+      "PHP",
+      "HTML/CSS/JavaScript",
+      "TypeScript",
+      "custom plugins",
+      "MU-plugins",
+      "REST/data flows",
+      "PWA",
+      "Web Push",
+      "Service Worker",
+      "GitHub repositories",
+      "registry as SSOT",
+      "AI-assisted development governance",
+      "design system / core.js",
+      "data structures",
+      "front-end product design"
+    ],
+    "type_master_tree": "Plataforma digital/hub de eventos e cultura do Rio",
+    "fields_to_fill": {
+      "repos_count": "UNKNOWN_NOT_DOCUMENTED",
+      "custom_plugins_count": "UNKNOWN_NOT_DOCUMENTED",
+      "active_users": "UNKNOWN_NOT_DOCUMENTED",
+      "events_listed": "UNKNOWN_NOT_DOCUMENTED",
+      "monthly_visits": "UNKNOWN_NOT_DOCUMENTED",
+      "launch_date": "UNKNOWN_NOT_DOCUMENTED",
+      "team_size": "UNKNOWN_NOT_DOCUMENTED"
+    },
+    "domain_tags": [
+      "digital_data_technology",
+      "independent_projects_entrepreneurship"
+    ],
+    "source_refs": [
+      "src_independent_projects"
+    ],
+    "historical_260723": {
+      "name": "Apollo::rio",
+      "type": {
+        "pt": "Projeto cultural e tecnológico voluntário (sem fins lucrativos)",
+        "en": "Volunteer cultural & technology project (non-profit)"
+      },
+      "url": "https://apollo.rio.br/",
+      "description": {
+        "pt": "Rede colaborativa de cultura e eventos que une DJs, produtores e espaços em uma plataforma viva com foco em apoio mútuo, inovação e leveza. Atuo com planejamento, coordenação multidisciplinar e melhoria contínua de processos, e desenvolvo o plugin WordPress do projeto.",
+        "en": "A collaborative culture-and-events network connecting DJs, producers and venues in a living platform focused on mutual support, innovation and lightness. I contribute planning, multidisciplinary coordination and continuous process improvement, and develop the project's WordPress plugin."
+      }
+    },
+    "master_tree_v1": {
+      "role": [
+        "Founder / product owner independente",
+        "Product architecture",
+        "UX/UI direction",
+        "WordPress architecture",
+        "Development / automation"
+      ],
+      "type": "Plataforma digital/hub de eventos e cultura do Rio",
+      "technical_scope": [
+        "WordPress",
+        "PHP",
+        "HTML/CSS/JavaScript",
+        "TypeScript",
+        "custom plugins",
+        "MU-plugins",
+        "REST/data flows",
+        "PWA",
+        "Web Push",
+        "Service Worker",
+        "GitHub repositories",
+        "registry as SSOT",
+        "AI-assisted development governance",
+        "design system / core.js",
+        "data structures",
+        "front-end product design"
+      ]
+    },
+    "cv_framing_2026_11": {
+      "title": "Founder & Digital Product Developer - apollo::rio (Nov 2024-Present)",
+      "body_en": "Designed and developed an independent digital platform for Rio de Janeiro's cultural and creative ecosystem. Own the product roadmap and delivery across UX/UI, web architecture, WordPress-based services, APIs, structured data, automation, user flows, access roles, documentation and continuous improvement.",
+      "source": "src_cv_sbm_modern_workplace_en"
+    },
+    "workstation_evidence": {
+      "evidence": "O",
+      "observed": "D:\\dev contém _apollo.rio.br, _library apollo, backup LocalWP e ~30 lotes de sincronização de plugins Apollo (core, events, login, push, maps, SEO, social, statistics, templates, journal-news, hub, event importer, Elementor/Elementor Pro, co-author, MU-plugin, DJ interface).",
+      "source": "src_workstation_scan_2026_11_19"
+    },
+    "metrics_refs": [
+      "proj_apollo.repos_count",
+      "proj_apollo.custom_plugins_count",
+      "proj_apollo.active_users",
+      "proj_apollo.events_listed",
+      "proj_apollo.monthly_visits",
+      "proj_apollo.launch_date",
+      "proj_apollo.team_size"
+    ]
+  }
+}

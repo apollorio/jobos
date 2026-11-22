@@ -1,0 +1,113 @@
+{
+  "_part": {
+    "id": "04_experience/exp_ctank_assistant",
+    "title": "Experiência: C-Tank",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723",
+      "src_career_db_v3_2026_03_10",
+      "src_master_tree_v1_2026_10_20"
+    ]
+  },
+  "data": {
+    "company": "C-Tank",
+    "role": "Assistente de Operações Sênior",
+    "period": "Jul 2020 - Out 2020",
+    "activities": [
+      "apoio a operações portuárias/offshore",
+      "agendamentos logísticos",
+      "document control",
+      "mobilizações",
+      "DRAKE",
+      "protocolos/testagem COVID para embarques",
+      "Requisições de Transporte",
+      "Notas Fiscais",
+      "matriz de qualificação e credenciamento"
+    ],
+    "evidence": "D",
+    "details_master_tree": [
+      "Suporte a operações portuárias e offshore",
+      "Mobilização de pessoas e materiais",
+      "Requisições de transporte",
+      "Documentação operacional",
+      "Credenciamento Petrobras DRAKE",
+      "Controle de prontidão operacional"
+    ],
+    "domain_tags": [
+      "oil_gas_offshore",
+      "logistics_materials_suppliers"
+    ],
+    "software_refs": [
+      "sw_drake",
+      "sw_sap_rt"
+    ],
+    "source_refs": [
+      "src_master_260723",
+      "src_master_career_tree_v1"
+    ],
+    "id": "exp_ctank_assistant",
+    "period_iso": {
+      "start": "2020-07",
+      "end": "2020-10"
+    },
+    "narrative_260723_first_person_pt_en": {
+      "order": 3,
+      "role": {
+        "pt": "Assistente de Operações Sênior",
+        "en": "Senior Operations Assistant"
+      },
+      "company": "C-Tank",
+      "location": {
+        "pt": "Niterói, Brasil",
+        "en": "Niterói, Brazil"
+      },
+      "period": "Jul 2020 – Out 2020",
+      "duration": "3 meses",
+      "bullets": {
+        "pt": [
+          "Dei suporte ao planejamento e à execução de operações portuárias e offshore, incluindo agendamentos logísticos, controle de documentação e organização de mobilizações.",
+          "Atualizei dados e controles em plataformas de gestão (DRAKE) para clientes como Shell, Transocean e Helix.",
+          "Implementei e controlei protocolos de testagem e rastreabilidade de COVID-19 para embarques offshore, assegurando continuidade operacional e compliance.",
+          "Gerenciei o agendamento logístico e emiti Requisições de Transporte (RT) e Notas Fiscais.",
+          "Controlei o credenciamento e a matriz de qualificação de trabalhadores no sistema DRAKE."
+        ],
+        "en": [
+          "Supported planning and execution of port and offshore operations, including logistics scheduling, documentation control and mobilization organization.",
+          "Updated data and controls in management platforms (DRAKE) for clients such as Shell, Transocean and Helix.",
+          "Implemented and controlled COVID-19 testing and traceability protocols for offshore embarkations, ensuring operational continuity and compliance.",
+          "Managed logistics scheduling and issued Transport Requisitions (RT) and Invoices.",
+          "Controlled worker credentialing and the qualification matrix in the DRAKE system."
+        ]
+      }
+    },
+    "narrative_career_db_v3": {
+      "order": 3,
+      "role": "Assistente de Operações Sênior",
+      "company": "C-Tank",
+      "location": "Niterói, Brasil",
+      "period": "Jul 2020 – Out 2020",
+      "duration": "3 meses",
+      "responsibilities": [
+        "Suporte ao planejamento e execução de operações portuárias e offshore, incluindo agendamentos logísticos, controle de documentação e organização de mobilizações.",
+        "Atualização de dados e controles em plataformas de gestão (DRAKE) para clientes como SHELL, TRANSOCEAN e HELIX.",
+        "Implementação e controle de protocolos de testagem e rastreabilidade de COVID-19 para embarques offshore, assegurando continuidade operacional e compliance.",
+        "Gerenciamento de agendamento logístico, emissão de Requisições de Transporte (RT) e Notas Fiscais.",
+        "Controle de credenciamento e matriz de qualificação de trabalhadores no sistema DRAKE."
+      ]
+    },
+    "master_tree_v1_timeline": {
+      "organization": "C-Tank",
+      "role": "Assistente de Operações Sênior",
+      "period": "Jul 2020 - Out 2020",
+      "details": [
+        "Suporte a operações portuárias e offshore",
+        "Mobilização de pessoas e materiais",
+        "Requisições de transporte",
+        "Documentação operacional",
+        "Credenciamento Petrobras DRAKE",
+        "Controle de prontidão operacional"
+      ]
+    }
+  }
+}

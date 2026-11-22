@@ -1,0 +1,159 @@
+{
+  "_part": {
+    "id": "12_cv_variants/sbm_modern-workplace_24160_en_compact",
+    "title": "CV: SBM Offshore - Modern Workplace Specialist (en)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_cv_sbm_modern_workplace_24160_en_compact"
+    ]
+  },
+  "data": {
+    "target": {
+      "company": "SBM Offshore",
+      "role": "Modern Workplace Specialist",
+      "job_ref": "sbm:24160",
+      "language": "en",
+      "date": null,
+      "archetype": "digital_workplace_transformation",
+      "status": "compact_variant"
+    },
+    "cv": {
+      "name": "RAFAEL PERINI VALLE",
+      "subtitle": "MODERN WORKPLACE & DIGITAL TRANSFORMATION SPECIALIST",
+      "tagline": "Digital Employee Experience · Digital Adoption & Change · Automation · Project Management · Analytics · AI-Enabled Workflows",
+      "contact": {
+        "location": "Rio de Janeiro – RJ, Brazil",
+        "email": "rafapevalle@gmail.com",
+        "phone": "+55 (21) 97955-4496",
+        "linkedin": "https://www.linkedin.com/in/rpvalle",
+        "linkedinLabel": "linkedin.com/in/rpvalle"
+      },
+      "sections": [
+        {
+          "title": "Professional Summary",
+          "type": "bullets",
+          "bullets": [
+            "Digital transformation & project professional with 4+ years in multinational environments, focused on DEX, digital adoption, automation, analytics and stakeholder delivery.",
+            "Founder/developer of apollo::rio: roadmap, UX, self-service, APIs, governance and AI-enabled workflows. MBA Project Management · Advanced English · Excel/Power BI/MS Project."
+          ]
+        },
+        {
+          "title": "Core Expertise",
+          "type": "text",
+          "content": "Modern Workplace · Digital Employee Experience (DEX) · Digital Transformation · Digital Adoption · Change Management & Enablement · User-Centred Design · Digital Literacy & Upskilling · Product Roadmap · Project Management · Initiative Prioritisation · Workflow Automation · AI-Enabled Assistance · Low-Code / CMS Ecosystems · Self-Service & Citizen-Development Concepts · Learning Materials & User Guides · Analytics & KPI Reporting · Governance, Risk & Control · Business Partnering · Stakeholder Management · Vendor Coordination · Negotiation · Continuous Improvement"
+        },
+        {
+          "title": "Professional Experience",
+          "type": "entries",
+          "lead": {
+            "title": "Founder & Digital Product Developer — apollo::rio (Nov 2024–Present)",
+            "body": "Designed and developed a user-centred digital platform for Rio de Janeiro’s cultural and creative ecosystem, owning product roadmap and delivery across digital experience, user journeys, onboarding and self-service flows, UX/UI, WordPress/CMS services, APIs, structured data, automation, role-based access, documentation and iterative releases. Built integrated workflows for event discovery, user services and community features; evaluated technology options, dependencies, implementation effort, risks and value trade-offs; and applied privacy-by-design, accessibility, mobile-first and AI-assisted development principles to improve usability, autonomy and operational efficiency."
+          },
+          "entries": [
+            {
+              "role": "Marine Operations Superintendent (Projects, Performance & Stakeholder Coordination)",
+              "company": "Van Oord",
+              "location": "Rio de Janeiro / Brazilian coast",
+              "period": "Jul 2021 – Nov 2024",
+              "bullets": [
+                "Managed multi-stakeholder project execution across vessels, clients, terminals, suppliers, contractors and international management, coordinating resources, priorities, dependencies, risks and operational deliverables.",
+                "Acted as a business-facing bridge between field teams and management, translating operational needs into practical plans, procedures, decisions and follow-up actions across distributed multinational teams.",
+                "Produced management reports, forecasts and KPI analyses covering production, availability, downtime, fuel, costs and operational deviations, supporting data-driven decisions and recovery actions.",
+                "Supported change implementation through procedures, briefings, alignment meetings, lessons learned, corrective actions and continuous-improvement initiatives, strengthening readiness and adoption of new ways of working.",
+                "Coordinated vendors and service providers, supported negotiations and monitored delivery quality, schedule, interfaces and operational requirements."
+              ]
+            },
+            {
+              "role": "Operations Analyst (Process Improvement, Digital Workflows & Offshore Support)",
+              "company": "C-Tank",
+              "location": "Niterói – RJ, Brazil",
+              "period": "Oct 2020 – Jun 2021",
+              "bullets": [
+                "Mapped and formalised internal processes, created procedures and document-control practices, and supported the company’s preparation for ISO 9001 implementation, improving standardisation, traceability and readiness for external review.",
+                "Conceived the functional architecture of an internal operational-integration solution connecting Warehouse, HR, Finance, invoicing and operational documentation, simplifying access to information and reducing workflow fragmentation.",
+                "Managed operational information and compliance workflows in Petrobras Drake / SAP RT, including documentation, qualification matrices, personnel readiness and logistics data.",
+                "Produced DPR/RDO reports, monitored indicators, deliverables and deviations, and coordinated crews, materials, suppliers and offshore-service readiness for FPSO/OSV campaigns."
+              ]
+            },
+            {
+              "role": "Senior Operations Assistant",
+              "company": "C-Tank",
+              "location": "Niterói – RJ, Brazil",
+              "period": "Jul 2020 – Oct 2020",
+              "bullets": [
+                "Supported digital records, logistics workflows, documentation control and operational mobilisation for offshore clients, including qualification and credentialing data in Petrobras systems."
+              ]
+            },
+            {
+              "role": "Offshore Technical-English Instructor / Communication Bridge",
+              "company": "Toolvox",
+              "location": "Pre-salt drillships (NS-43, NS-51)",
+              "period": "Dec 2018 – May 2020",
+              "bullets": [
+                "Delivered structured training to multinational offshore teams, translating SOPs and creating practical learning materials for operational, safety and emergency communication.",
+                "Supported end users through direct instruction, coaching and contextual learning, adapting content to different proficiency levels and reinforcing confidence, autonomy and adoption."
+              ]
+            },
+            {
+              "role": "Engineering Research Intern (International)",
+              "company": "NTUA (Athens) & BAM (Berlin)",
+              "location": "",
+              "period": "2015 & 2018",
+              "bullets": [
+                "International engineering research involving structured data collection, technical analysis, testing support and multidisciplinary collaboration."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Digital Product & Technology",
+          "type": "bullets",
+          "bullets": [
+            "Digital Workplace & Experience: user journeys, onboarding, self-service, role-based experiences, accessibility, content architecture, communities and iterative user-centred improvement.",
+            "Development & Low-Code/CMS: WordPress, Elementor, HTML, CSS, JavaScript, PHP, JSON, TypeScript/TSX and Python; REST/API integrations and structured-data workflows.",
+            "Automation & AI: workflow automation, rule-based processes, AI-assisted development, structured prompts and integration concepts for AI-enabled user assistance.",
+            "Technology Assessment: practical evaluation of tools and architectures based on usability, integration, maintainability, risk, implementation effort and value.",
+            "Microsoft & Analytics: Advanced Excel, PowerPoint, MS Project and Power BI; KPI dashboards, management reporting and structured operational data."
+          ]
+        },
+        {
+          "title": "Education",
+          "type": "lines",
+          "lines": [
+            "Postgraduate: Occupational Safety Engineering, Cruzeiro do Sul (2024–2025)",
+            "Postgraduate: Naval & Offshore Construction Engineering, UCP (2022–2023)",
+            "MBA: Project Management (PMBOK), USP / ESALQ (2019–2020)",
+            "BSc: Civil Engineering, UNIVIX / Multivix (2013–2018)",
+            "Technical Degree: Ports, IFES (2018–2019)"
+          ]
+        },
+        {
+          "title": "Tools & Methods",
+          "type": "bullets",
+          "bullets": [
+            "Project Management: PMBOK, MS Project, roadmap planning, initiative scoping, resource/dependency tracking, risk management, stakeholder alignment and action plans",
+            "Change & Adoption: readiness support, communication, briefings, training, onboarding, learning materials, user guidance, feedback loops and post-implementation improvement",
+            "Digital Workplace: DEX principles, self-service, digital literacy, governed workflows, communities, low-code/CMS concepts and AI-enabled assistance",
+            "Analytics & Reporting: Advanced Excel, Power BI, KPI tracking, performance analysis, data consolidation and management reporting",
+            "Governance, Risk & Control: role-based access concepts, privacy-by-design, process standardisation, document control, ISO 9001 implementation support and operational risk management"
+          ]
+        },
+        {
+          "title": "Publication",
+          "type": "text",
+          "content": "Author of \"Technical English for Ports & Offshore\" (ISBN 978-65-00-04579-6, 2020; 3,000+ copies sold), demonstrating technical communication, knowledge structuring and learning-content development."
+        },
+        {
+          "title": "Additional Information",
+          "type": "bullets",
+          "bullets": [
+            "Fluent Portuguese and English; extensive experience communicating with multinational teams and international management.",
+            "Strong combination of technology, project delivery, process improvement, training, stakeholder engagement and user-centred digital thinking.",
+            "Based in Rio de Janeiro and immediately available for full-time opportunities.",
+            "Brazilian and Italian passports valid through 2027; Category B driver's license."
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "_part": {
+    "id": "09_domains/naval_marine_offshore",
+    "title": "Domínio: Naval / Marítimo / Offshore",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "label_pt": "Naval / Marítimo / Offshore",
+    "priority": 1,
+    "summary": "Operação marítima real: TSHD, WID, rebocadores, lanchas, OSV/FPSO (suporte), navios-sonda; interface base-embarcação e comandantes.",
+    "highlights_master_tree": {
+      "vessels": [
+        "TSHD",
+        "WID",
+        "rebocadores",
+        "lanchas rápidas / voadeiras",
+        "embarcações de apoio",
+        "OSVs",
+        "FPSOs em campanhas de suporte/manutenção",
+        "navios-sonda NS-43 e NS-51"
+      ],
+      "activities": [
+        "vessel-shore interface",
+        "contato com comandantes",
+        "port calls",
+        "berthing/unberthing",
+        "bunkering",
+        "crew changes",
+        "mobilização/desmobilização",
+        "transporte de pessoas e materiais",
+        "waste management",
+        "agentes marítimos",
+        "terminais",
+        "pilotos",
+        "prontidão operacional",
+        "SIMOPS",
+        "inspeções de meios de apoio"
+      ],
+      "frameworks": [
+        "IMO",
+        "ISM Code",
+        "SOLAS",
+        "MARPOL",
+        "NORMAM / NORMAM-12"
+      ]
+    },
+    "source_paths": [
+      "experience_nodes.exp_vanoord.marine_operations",
+      "experience_nodes.exp_vanoord.vessel_shore",
+      "experience_nodes.exp_vanoord.inspections",
+      "experience_nodes.exp_ctank_analyst.operations",
+      "experience_nodes.exp_toolvox.activities",
+      "vessel_asset_tree"
+    ],
+    "refs": {
+      "experiences": [
+        "exp_vanoord",
+        "exp_ctank_analyst",
+        "exp_ctank_assistant",
+        "exp_toolvox"
+      ],
+      "projects": [
+        "vo_354264",
+        "vo_354261",
+        "vo_354012_2021",
+        "vo_354269",
+        "vo_354222_2022",
+        "vo_354285",
+        "vo_353190",
+        "vo_354222_2023",
+        "vo_354306",
+        "vo_354012_2023",
+        "vo_354449",
+        "vo_354222_2024",
+        "vo_354458"
+      ],
+      "vessels": [
+        "type_tshd",
+        "type_wid",
+        "type_tug",
+        "type_fast_boat",
+        "type_osv",
+        "type_fpso",
+        "type_drillship",
+        "vessel_amaralina_star",
+        "vessel_siem_helix_1"
+      ],
+      "software": [],
+      "certifications": [
+        "cbsp",
+        "bosiet",
+        "huet",
+        "thuet",
+        "nr30",
+        "nr34",
+        "general_dredging"
+      ],
+      "education": [
+        "edu_ports",
+        "edu_naval"
+      ],
+      "stories": [
+        "fleet_planning",
+        "deviation_control",
+        "hseq"
+      ],
+      "boundary_groups": [
+        "nautical_credentials",
+        "tanker_marine_assurance"
+      ],
+      "volunteer": []
+    },
+    "fit_estimates": [
+      {
+        "item": "Operações marítimas/offshore",
+        "est_pct": "85",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      },
+      {
+        "item": "Interface terminal/navio/fornecedor",
+        "est_pct": "90",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      },
+      {
+        "item": "MARPOL/SOLAS/SIMOPS",
+        "est_pct": "80",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      },
+      {
+        "item": "Tanker/offloading/COW/ballast",
+        "est_pct": "10-20",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      }
+    ],
+    "hard_gaps_or_boundaries": [
+      "Ciências Náuticas (0)",
+      "STCW Management / Master Mariner (0)"
+    ],
+    "id": "naval_marine_offshore"
+  }
+}

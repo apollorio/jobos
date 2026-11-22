@@ -1,0 +1,221 @@
+{
+  "_part": {
+    "id": "05_projects/proj_dismantle",
+    "title": "DISMANTLE #1 - evento cultural independente",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723",
+      "src_master_tree_v1_2026_10_20"
+    ]
+  },
+  "data": {
+    "name": "DISMANTLE #1",
+    "type": "Projeto independente cultural/evento",
+    "concept_start": "2024-10-24",
+    "inpi": "2024-10-29",
+    "execution": "2025-04-12",
+    "venue": "Cais Imperatriz, Rio de Janeiro",
+    "roles": [
+      "creator",
+      "producer",
+      "project manager",
+      "investor",
+      "branding/graphics"
+    ],
+    "lifecycle": [
+      "initiation",
+      "planning",
+      "budget",
+      "procurement/contracts",
+      "team/vendor coordination",
+      "execution",
+      "financial control",
+      "closeout"
+    ],
+    "documented_results": {
+      "shotgun_sold": 165,
+      "shotgun_invitations": 250,
+      "registered_total": 415,
+      "door_entries_hoppin": 31,
+      "onsite_sales_brl": 21667,
+      "bar_sales_brl": 19652,
+      "bar_items": 1294,
+      "transactions": 755
+    },
+    "evidence": "DP",
+    "event_date": "2025-04-12",
+    "calendar_span": {
+      "from": "2024-10-24",
+      "to": "2025-04-12",
+      "days": 170
+    },
+    "lifecycle_master_tree": [
+      "iniciação",
+      "conceito",
+      "branding",
+      "planejamento",
+      "orçamento",
+      "contratação",
+      "coordenação de artistas/equipe/fornecedores",
+      "produção",
+      "execução",
+      "controle financeiro",
+      "encerramento"
+    ],
+    "documentation_caution": "Público total real não documentado alem de: Shotgun 165 vendidos + 250 convites = 415 registrados; Hoppin 31 entradas na porta. Não extrapolar.",
+    "pmp_use": "Complementar; contar apenas meses sem sobreposicao com outros projetos.",
+    "fields_to_fill": {
+      "budget_total_brl": "UNKNOWN_NOT_DOCUMENTED",
+      "revenue_total_brl": "UNKNOWN_NOT_DOCUMENTED",
+      "cost_total_brl": "UNKNOWN_NOT_DOCUMENTED",
+      "result_brl": "UNKNOWN_NOT_DOCUMENTED",
+      "team_size": "UNKNOWN_NOT_DOCUMENTED",
+      "vendors_count": "UNKNOWN_NOT_DOCUMENTED",
+      "artists_count": "UNKNOWN_NOT_DOCUMENTED",
+      "venue_capacity": "UNKNOWN_NOT_DOCUMENTED"
+    },
+    "domain_tags": [
+      "independent_projects_entrepreneurship",
+      "project_management_project_controls"
+    ],
+    "source_refs": [
+      "src_independent_projects",
+      "src_pmp_dossier"
+    ],
+    "staff_range": {
+      "min": 25,
+      "max": 33,
+      "evidence": "U"
+    },
+    "financial_result_estimate_brl": {
+      "min_loss": -25000,
+      "max_loss": -24000,
+      "evidence": "U"
+    },
+    "lineup_documented_names": [
+      "MARTA SUPERNOVA",
+      "MAU LOPES",
+      "BIDA SARÔ",
+      "Marilds",
+      "BRUNOSSA"
+    ],
+    "ticketing_platform": "Shotgun",
+    "onsite_platform": "Hoppin",
+    "attendance_rule": "Use 415 registered participants as documented. Do not infer total attendance from incompatible counters.",
+    "historical_260723": {
+      "name": "Dismantle.art",
+      "type": {
+        "pt": "Iniciativa cultural/tecnológica voluntária (sem fins lucrativos)",
+        "en": "Volunteer cultural/technology initiative (non-profit)"
+      },
+      "url": "https://dismantle.com.br/",
+      "description": {
+        "pt": "Iniciativa cultural e tecnológica na qual colaboro com planejamento, coordenação multidisciplinar e melhoria contínua de processos.",
+        "en": "A cultural and technology initiative where I contribute planning, multidisciplinary coordination and continuous process improvement."
+      }
+    },
+    "master_tree_v1": {
+      "role": [
+        "Criador",
+        "Produtor",
+        "Gestor",
+        "Investidor",
+        "Branding/graphics",
+        "Planejamento e execução"
+      ],
+      "concept_start": "2024-10-24",
+      "inpi_action": "2024-10-29",
+      "event_date": "2025-04-12",
+      "venue": "Cais Imperatriz, Rio de Janeiro",
+      "project_management_elements": [
+        "iniciação",
+        "conceito",
+        "branding",
+        "planejamento",
+        "orçamento",
+        "contratação",
+        "coordenação de artistas/equipe/fornecedores",
+        "produção",
+        "execução",
+        "controle financeiro",
+        "encerramento"
+      ],
+      "documented_results": {
+        "shotgun_tickets_sold": 165,
+        "shotgun_invitations": 250,
+        "registered_participants_total": 415,
+        "door_entries_hoppin": 31,
+        "onsite_sales_brl": 21667,
+        "bar_items": 1294,
+        "transactions": 755,
+        "bar_sales_brl": 19652
+      }
+    },
+    "evidence_documents": [
+      {
+        "name": "D#1 - Planejamento Geral.pdf",
+        "facts": [
+          "concept/name documented 24/10/2024",
+          "planning/line-up/timetable",
+          "event 12/04/2025"
+        ]
+      },
+      {
+        "name": "Registro nominal INPI - Dismantle.pdf",
+        "facts": [
+          "Rafael as applicant",
+          "class 41 event/DJ/entertainment"
+        ]
+      },
+      {
+        "name": "signed artist/supplier contracts",
+        "facts": [
+          "Rafael as contracting party",
+          "scope/payment/obligations"
+        ]
+      },
+      {
+        "name": "Shotgun invoice",
+        "facts": [
+          "165 sold tickets",
+          "250 invitations",
+          "415 registered participants",
+          "R$8,225.98 online ticket revenue"
+        ]
+      },
+      {
+        "name": "Hoppin report",
+        "facts": [
+          "31 door entries",
+          "R$21,667 on-site sales",
+          "1,294 bar items"
+        ]
+      }
+    ],
+    "metrics_refs": [
+      "proj_dismantle.shotgun_sold",
+      "proj_dismantle.shotgun_invitations",
+      "proj_dismantle.registered_total",
+      "proj_dismantle.door_entries_hoppin",
+      "proj_dismantle.onsite_sales_brl",
+      "proj_dismantle.bar_sales_brl",
+      "proj_dismantle.bar_items",
+      "proj_dismantle.transactions",
+      "proj_dismantle.budget_total_brl",
+      "proj_dismantle.revenue_total_brl",
+      "proj_dismantle.cost_total_brl",
+      "proj_dismantle.result_brl",
+      "proj_dismantle.team_size",
+      "proj_dismantle.vendors_count",
+      "proj_dismantle.artists_count",
+      "proj_dismantle.venue_capacity"
+    ],
+    "user_statement_2026_11_19": {
+      "text": "Realizei uma festa no Rio sozinho: investimento, planejamento e gestao do projeto por mim, como head (Dismantle).",
+      "interpretation": "Lideranca integral (iniciativa, investimento proprio, planejamento, contratacao e execucao) com equipe contratada de 25-33 pessoas (U).",
+      "evidence": "U",
+      "cv_wording": "Created, funded, planned and led end-to-end an independent cultural event (initiation to closeout); 415 registered participants (165 Shotgun + 250 invitations)."
+    }
+  }
+}

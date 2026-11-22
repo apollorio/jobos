@@ -1,0 +1,1405 @@
+{
+  "_part": {
+    "id": "index",
+    "title": "RAFAEL PERINI VALLE - BIBLE DATABASE (índice)",
+    "updated": "2026-11-19",
+    "sources": [
+      "all"
+    ]
+  },
+  "data": {
+    "name": "rafael-perini-valle-bible",
+    "version": "2026-11-19.1",
+    "subject": "Rafael Perini Valle",
+    "purpose": [
+      "Fonte única de verdade (SSOT) sobre formação, experiência, projetos, skills, programação e IA",
+      "Verificação automática de compatibilidade de vagas (tools/match.mjs)",
+      "Geração de CVs/cartas sem inventar fatos (respeitar 11_truth/)"
+    ],
+    "how_to_use": {
+      "check_job": "node tools/match.mjs --file vaga.txt --format text   (exit 0 = compatible)",
+      "check_job_json": "node tools/match.mjs --json vaga.json            (saída JSON com \"compatible\": true|false)",
+      "batch": "node tools/match.mjs --batch ../vagas-latest.json   |   node tools/match.mjs --batch-db",
+      "rebuild_index_and_bundle": "node tools/build.mjs",
+      "edit_rule": "Edite as partes; rode tools/build.mjs; nunca edite _bundle/ à mão.",
+      "llm_rule": "Para usar com IA, envie _bundle/rafael-bible.full.json + instrução: só afirmar o que estiver em proven/used, respeitar 11_truth/truth_boundaries."
+    },
+    "evidence_scale": {
+      "D": "Documentado em arquivos/CVs/contratos/job descriptions/timesheets/e-mails/relatórios analisados.",
+      "U": "Confirmado diretamente por Rafael em conversa.",
+      "DP": "Documentado + confirmado diretamente por Rafael.",
+      "P": "Projeto pessoal/independente confirmado.",
+      "V": "Requer validação adicional antes de usar como afirmação forte.",
+      "X": "Boundary: não alegar como experiência/credencial.",
+      "O": "Observado diretamente na estação de trabalho do Rafael (ferramenta instalada / pasta de projeto existente). Prova exposição/uso pessoal, não proficiência profissional.",
+      "C": "Conhecimento declarado pelo Rafael no chat (2026-11-19); tratar como U para conhecimento, não como experiência corporativa."
+    },
+    "load_order": [
+      "00_meta",
+      "01_identity",
+      "02_profile",
+      "03_education",
+      "04_experience",
+      "05_projects",
+      "06_skills",
+      "07_ai",
+      "08_dev_environment",
+      "09_domains",
+      "10_career_strategy",
+      "11_truth",
+      "12_cv_variants",
+      "13_applications",
+      "14_matching"
+    ],
+    "folders": {
+      "00_meta": {
+        "description": "Fontes, schema/escala de evidência, fila de validação",
+        "parts": [
+          {
+            "id": "00_meta/legacy_extras",
+            "file": "00_meta/legacy_extras.json",
+            "title": "Conteudo de proveniencia/legado dos masters (completa a auditoria)",
+            "bytes": 43874,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_offshore_profile_2026_10_07",
+              "src_master_tree_v1_2026_10_20",
+              "src_master_260723",
+              "src_career_db_v3_2026_03_10"
+            ]
+          },
+          {
+            "id": "00_meta/schema",
+            "file": "00_meta/schema.json",
+            "title": "Convenções, escala de evidência e status",
+            "bytes": 23984,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_kg_v3_2026_10_20",
+              "src_ultra_v2_2026_10_20",
+              "src_master_tree_v1_2026_10_20",
+              "src_master_260723",
+              "src_career_db_v3_2026_03_10"
+            ]
+          },
+          {
+            "id": "00_meta/sources",
+            "file": "00_meta/sources.json",
+            "title": "Registro de fontes (34 arquivos + fontes complementares)",
+            "bytes": 15316,
+            "sources": [
+              "all"
+            ]
+          },
+          {
+            "id": "00_meta/validation_queue",
+            "file": "00_meta/validation_queue.json",
+            "title": "Fila de validação (pendências a confirmar)",
+            "bytes": 3686,
+            "sources": [
+              "src_kg_v3_2026_10_20",
+              "src_master_final_2026_10_21",
+              "src_jobos_profile_yml",
+              "src_workstation_scan_2026_11_19"
+            ]
+          }
+        ]
+      },
+      "01_identity": {
+        "description": "Identidade, documentos, contatos, idiomas",
+        "parts": [
+          {
+            "id": "01_identity/contacts",
+            "file": "01_identity/contacts.json",
+            "title": "Contatos e presença online",
+            "bytes": 1892,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723",
+              "src_jobos_profile_yml"
+            ]
+          },
+          {
+            "id": "01_identity/identity",
+            "file": "01_identity/identity.json",
+            "title": "Identidade e documentos",
+            "bytes": 2402,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723",
+              "src_career_db_v3_2026_03_10",
+              "src_jobos_profile_yml"
+            ]
+          },
+          {
+            "id": "01_identity/languages",
+            "file": "01_identity/languages.json",
+            "title": "Idiomas",
+            "bytes": 2338,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723",
+              "src_jobos_profile_yml"
+            ]
+          }
+        ]
+      },
+      "02_profile": {
+        "description": "Resumo, headlines, redação segura, soft skills, recomendações, background criativo",
+        "parts": [
+          {
+            "id": "02_profile/author_page_livro",
+            "file": "02_profile/author_page_livro.json",
+            "title": "Pagina do autor - livro.rvalle.com.br/autor/ (texto publico)",
+            "bytes": 2621,
+            "sources": [
+              "src_chat_2026_11_19_audit"
+            ]
+          },
+          {
+            "id": "02_profile/creative_background",
+            "file": "02_profile/creative_background.json",
+            "title": "Background criativo / eventos (DJ Valle)",
+            "bytes": 662,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "02_profile/endorsements",
+            "file": "02_profile/endorsements.json",
+            "title": "Recomendações recebidas (LinkedIn)",
+            "bytes": 1485,
+            "sources": [
+              "src_master_260723",
+              "src_career_db_v3_2026_03_10"
+            ]
+          },
+          {
+            "id": "02_profile/headlines",
+            "file": "02_profile/headlines.json",
+            "title": "Templates de headline por alvo",
+            "bytes": 4609,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "02_profile/safe_wording",
+            "file": "02_profile/safe_wording.json",
+            "title": "Banco de redação segura + blocos de carta",
+            "bytes": 4878,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_offshore_profile_2026_10_07",
+              "src_master_260723"
+            ]
+          },
+          {
+            "id": "02_profile/soft_skills",
+            "file": "02_profile/soft_skills.json",
+            "title": "Soft skills",
+            "bytes": 1663,
+            "sources": [
+              "src_master_260723",
+              "src_career_db_v3_2026_03_10"
+            ]
+          },
+          {
+            "id": "02_profile/summary",
+            "file": "02_profile/summary.json",
+            "title": "Resumo, identidade profissional e diferenciais",
+            "bytes": 5595,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723",
+              "src_career_db_v3_2026_03_10",
+              "src_offshore_profile_2026_10_07",
+              "src_master_tree_v1_2026_10_20",
+              "src_jobos_profile_yml"
+            ]
+          }
+        ]
+      },
+      "03_education": {
+        "description": "Formação, certificações/treinamentos, livro, voluntariado",
+        "parts": [
+          {
+            "id": "03_education/certifications_training",
+            "file": "03_education/certifications_training.json",
+            "title": "Certificações e treinamentos (13 nós + idiomas)",
+            "bytes": 11818,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723",
+              "src_career_db_v3_2026_03_10",
+              "src_master_tree_v1_2026_10_20",
+              "src_jobos_profile_yml"
+            ]
+          },
+          {
+            "id": "03_education/degrees",
+            "file": "03_education/degrees.json",
+            "title": "Formação acadêmica (5 nós)",
+            "bytes": 8621,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723",
+              "src_career_db_v3_2026_03_10",
+              "src_master_tree_v1_2026_10_20"
+            ]
+          },
+          {
+            "id": "03_education/publication",
+            "file": "03_education/publication.json",
+            "title": "Publicação: livro técnico",
+            "bytes": 4047,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723",
+              "src_career_db_v3_2026_03_10",
+              "src_master_tree_v1_2026_10_20"
+            ]
+          },
+          {
+            "id": "03_education/volunteer_leadership",
+            "file": "03_education/volunteer_leadership.json",
+            "title": "Voluntariado e liderança estudantil",
+            "bytes": 3536,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723",
+              "src_career_db_v3_2026_03_10"
+            ]
+          }
+        ]
+      },
+      "04_experience": {
+        "description": "Uma parte por experiência + timeline + banco de bullets",
+        "parts": [
+          {
+            "id": "04_experience/_timeline",
+            "file": "04_experience/_timeline.json",
+            "title": "Linha do tempo (mais recente primeiro)",
+            "bytes": 2849,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "04_experience/cv_bullet_bank",
+            "file": "04_experience/cv_bullet_bank.json",
+            "title": "Banco de bullets validados para CV (PT/EN)",
+            "bytes": 11079,
+            "sources": [
+              "src_master_260723"
+            ]
+          },
+          {
+            "id": "04_experience/exp_ctank_analyst",
+            "file": "04_experience/exp_ctank_analyst.json",
+            "title": "Experiência: C-Tank",
+            "bytes": 13095,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723",
+              "src_career_db_v3_2026_03_10",
+              "src_master_tree_v1_2026_10_20",
+              "src_offshore_profile_2026_10_07"
+            ]
+          },
+          {
+            "id": "04_experience/exp_ctank_assistant",
+            "file": "04_experience/exp_ctank_assistant.json",
+            "title": "Experiência: C-Tank",
+            "bytes": 4643,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723",
+              "src_career_db_v3_2026_03_10",
+              "src_master_tree_v1_2026_10_20"
+            ]
+          },
+          {
+            "id": "04_experience/exp_international_research",
+            "file": "04_experience/exp_international_research.json",
+            "title": "Experiência: Estagiário de Engenharia / Pesquisa Internacional",
+            "bytes": 5381,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723",
+              "src_career_db_v3_2026_03_10",
+              "src_master_tree_v1_2026_10_20"
+            ]
+          },
+          {
+            "id": "04_experience/exp_macrolub_internship",
+            "file": "04_experience/exp_macrolub_internship.json",
+            "title": "Estagio de Marketing - Macrolub (Aracruz-ES)",
+            "bytes": 1575,
+            "sources": [
+              "src_chat_2026_11_19_audit"
+            ]
+          },
+          {
+            "id": "04_experience/exp_professional_development",
+            "file": "04_experience/exp_professional_development.json",
+            "title": "Experiência: Desenvolvimento Profissional & Projetos Independentes",
+            "bytes": 6754,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723",
+              "src_career_db_v3_2026_03_10",
+              "src_master_tree_v1_2026_10_20"
+            ]
+          },
+          {
+            "id": "04_experience/exp_toolvox",
+            "file": "04_experience/exp_toolvox.json",
+            "title": "Experiência: Toolvox",
+            "bytes": 7462,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723",
+              "src_career_db_v3_2026_03_10",
+              "src_master_tree_v1_2026_10_20"
+            ]
+          },
+          {
+            "id": "04_experience/exp_vanoord",
+            "file": "04_experience/exp_vanoord.json",
+            "title": "Experiência: Van Oord",
+            "bytes": 32048,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723",
+              "src_career_db_v3_2026_03_10",
+              "src_master_tree_v1_2026_10_20",
+              "src_offshore_profile_2026_10_07"
+            ]
+          }
+        ]
+      },
+      "05_projects": {
+        "description": "Portfólio Van Oord + projetos independentes (Apollo, SOS, Dismantle, CV Builder, jobOS, sites)",
+        "parts": [
+          {
+            "id": "05_projects/proj_apollo",
+            "file": "05_projects/proj_apollo.json",
+            "title": "Apollo::rio - plataforma digital de cultura do Rio",
+            "bytes": 4701,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723",
+              "src_master_tree_v1_2026_10_20",
+              "src_workstation_scan_2026_11_19"
+            ]
+          },
+          {
+            "id": "05_projects/proj_cv_builder",
+            "file": "05_projects/proj_cv_builder.json",
+            "title": "CV Builder Pro - gerador de CVs por vaga",
+            "bytes": 1547,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723",
+              "src_jobos_profile_yml"
+            ]
+          },
+          {
+            "id": "05_projects/proj_dismantle",
+            "file": "05_projects/proj_dismantle.json",
+            "title": "DISMANTLE #1 - evento cultural independente",
+            "bytes": 6839,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723",
+              "src_master_tree_v1_2026_10_20"
+            ]
+          },
+          {
+            "id": "05_projects/proj_jobos",
+            "file": "05_projects/proj_jobos.json",
+            "title": "jobOS + apollo-vagas + web-vagas - sistema pessoal de busca de vagas",
+            "bytes": 3398,
+            "sources": [
+              "src_attachments_inventory_2026_10_22",
+              "src_jobos_vagas_2026_08_26",
+              "src_jobos_export_2026_08_26",
+              "src_jobos_strategies",
+              "src_jobos_profile_yml",
+              "src_jobos_fixture_jobs"
+            ]
+          },
+          {
+            "id": "05_projects/proj_sos_apollo",
+            "file": "05_projects/proj_sos_apollo.json",
+            "title": "SOS Apollo - runtime de redução de danos offline-first",
+            "bytes": 12132,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_tree_v1_2026_10_20",
+              "src_sos_registry"
+            ]
+          },
+          {
+            "id": "05_projects/proj_sos_apollo_registry_full",
+            "file": "05_projects/proj_sos_apollo_registry_full.json",
+            "title": "SOS Apollo - registry.json completo (SSOT, sem perdas)",
+            "bytes": 84676,
+            "sources": [
+              "src_sos_registry"
+            ]
+          },
+          {
+            "id": "05_projects/proj_web_portfolio",
+            "file": "05_projects/proj_web_portfolio.json",
+            "title": "Portfólio web pessoal (rvalle.com.br e subdomínios)",
+            "bytes": 1727,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723",
+              "src_workstation_scan_2026_11_19"
+            ]
+          },
+          {
+            "id": "05_projects/vanoord_portfolio",
+            "file": "05_projects/vanoord_portfolio.json",
+            "title": "Portfólio Van Oord (13 fases, 10 códigos, 9 sites)",
+            "bytes": 14268,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_tree_v1_2026_10_20"
+            ]
+          }
+        ]
+      },
+      "06_skills": {
+        "description": "Software atômico, programação, normas, embarcações, árvores de conhecimento",
+        "parts": [
+          {
+            "id": "06_skills/coding_profile",
+            "file": "06_skills/coding_profile.json",
+            "title": "Perfil de programação consolidado (linguagens, stack, evidência)",
+            "bytes": 4107,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_attachments_inventory_2026_10_22",
+              "src_sos_registry",
+              "src_workstation_scan_2026_11_19",
+              "src_cv_sbm_modern_workplace_en",
+              "src_cv_capco_conformidade_ii_pt_truthful"
+            ]
+          },
+          {
+            "id": "06_skills/hard_skills",
+            "file": "06_skills/hard_skills.json",
+            "title": "Hard skills (matriz bilíngue)",
+            "bytes": 4712,
+            "sources": [
+              "src_master_260723",
+              "src_career_db_v3_2026_03_10"
+            ]
+          },
+          {
+            "id": "06_skills/maintenance_repairs",
+            "file": "06_skills/maintenance_repairs.json",
+            "title": "Manutenção / reparos / prontidão",
+            "bytes": 941,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "06_skills/methodologies",
+            "file": "06_skills/methodologies.json",
+            "title": "Metodologias e processos",
+            "bytes": 1189,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "06_skills/oil_gas",
+            "file": "06_skills/oil_gas.json",
+            "title": "Óleo & Gás offshore",
+            "bytes": 866,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "06_skills/project_management",
+            "file": "06_skills/project_management.json",
+            "title": "Gestão de projetos",
+            "bytes": 1242,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "06_skills/quality_hseq",
+            "file": "06_skills/quality_hseq.json",
+            "title": "Qualidade / HSEQ",
+            "bytes": 974,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "06_skills/software/_rules",
+            "file": "06_skills/software/_rules.json",
+            "title": "Regras de status de software",
+            "bytes": 561,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "06_skills/software/additional_atomic_tools",
+            "file": "06_skills/software/additional_atomic_tools.json",
+            "title": "Software/sistemas: additional_atomic_tools",
+            "bytes": 6174,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723"
+            ]
+          },
+          {
+            "id": "06_skills/software/apollo_specific_stack",
+            "file": "06_skills/software/apollo_specific_stack.json",
+            "title": "Software/sistemas: apollo_specific_stack",
+            "bytes": 4129,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723"
+            ]
+          },
+          {
+            "id": "06_skills/software/architecture_concepts_and_patterns",
+            "file": "06_skills/software/architecture_concepts_and_patterns.json",
+            "title": "Software/sistemas: architecture_concepts_and_patterns",
+            "bytes": 4156,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723"
+            ]
+          },
+          {
+            "id": "06_skills/software/corporate_operational_systems",
+            "file": "06_skills/software/corporate_operational_systems.json",
+            "title": "Software/sistemas: corporate_operational_systems",
+            "bytes": 4959,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723"
+            ]
+          },
+          {
+            "id": "06_skills/software/design_graphics",
+            "file": "06_skills/software/design_graphics.json",
+            "title": "Software de design grafico",
+            "bytes": 1421,
+            "sources": [
+              "src_chat_2026_11_19_audit"
+            ]
+          },
+          {
+            "id": "06_skills/software/explicit_non_experience",
+            "file": "06_skills/software/explicit_non_experience.json",
+            "title": "Software/sistemas: explicit_non_experience",
+            "bytes": 1983,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723"
+            ]
+          },
+          {
+            "id": "06_skills/software/office_data_bi",
+            "file": "06_skills/software/office_data_bi.json",
+            "title": "Software/sistemas: office_data_bi",
+            "bytes": 2371,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723"
+            ]
+          },
+          {
+            "id": "06_skills/software/planning_project_controls",
+            "file": "06_skills/software/planning_project_controls.json",
+            "title": "Software/sistemas: planning_project_controls",
+            "bytes": 1541,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723"
+            ]
+          },
+          {
+            "id": "06_skills/software/training_or_legacy_tools",
+            "file": "06_skills/software/training_or_legacy_tools.json",
+            "title": "Software/sistemas: training_or_legacy_tools",
+            "bytes": 651,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723"
+            ]
+          },
+          {
+            "id": "06_skills/software/web_dev_and_automation",
+            "file": "06_skills/software/web_dev_and_automation.json",
+            "title": "Software/sistemas: web_dev_and_automation",
+            "bytes": 4544,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723"
+            ]
+          },
+          {
+            "id": "06_skills/standards_regulatory",
+            "file": "06_skills/standards_regulatory.json",
+            "title": "Normas e regulamentos (13 nós)",
+            "bytes": 5443,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "06_skills/vessels_assets",
+            "file": "06_skills/vessels_assets.json",
+            "title": "Embarcações e ativos",
+            "bytes": 2278,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          }
+        ]
+      },
+      "07_ai": {
+        "description": "Ferramentas de IA, panorama de modelos, comparativos, perfil de IA",
+        "parts": [
+          {
+            "id": "07_ai/ai_coding_tools",
+            "file": "07_ai/ai_coding_tools.json",
+            "title": "Ferramentas de IA para desenvolvimento - uso, evidência e domínio",
+            "bytes": 10068,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_chat_2026_11_19",
+              "src_workstation_scan_2026_11_19",
+              "src_attachments_inventory_2026_10_22"
+            ]
+          },
+          {
+            "id": "07_ai/ai_models_landscape",
+            "file": "07_ai/ai_models_landscape.json",
+            "title": "Panorama de modelos de IA (famílias, uso típico, onde rodam)",
+            "bytes": 3005,
+            "sources": [
+              "src_chat_2026_11_19"
+            ]
+          },
+          {
+            "id": "07_ai/ai_profile",
+            "file": "07_ai/ai_profile.json",
+            "title": "Perfil de IA - práticas, evidências e como posicionar",
+            "bytes": 4265,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_chat_2026_11_19",
+              "src_workstation_scan_2026_11_19",
+              "src_attachments_inventory_2026_10_22",
+              "src_sos_registry",
+              "src_cv_sbm_modern_workplace_en"
+            ]
+          },
+          {
+            "id": "07_ai/ai_tools_comparison",
+            "file": "07_ai/ai_tools_comparison.json",
+            "title": "Comparativos: Cursor vs Windsurf, Cline vs Continue, agentes CLI, local vs nuvem",
+            "bytes": 3669,
+            "sources": [
+              "src_chat_2026_11_19",
+              "src_workstation_scan_2026_11_19"
+            ]
+          }
+        ]
+      },
+      "08_dev_environment": {
+        "description": "Toolchain observado na estação",
+        "parts": [
+          {
+            "id": "08_dev_environment/workstation_toolchain",
+            "file": "08_dev_environment/workstation_toolchain.json",
+            "title": "Ambiente de desenvolvimento observado (toolchain da estação)",
+            "bytes": 3144,
+            "sources": [
+              "src_workstation_scan_2026_11_19"
+            ]
+          }
+        ]
+      },
+      "09_domains": {
+        "description": "13 domínios de carreira com refs cruzadas",
+        "parts": [
+          {
+            "id": "09_domains/_stakeholders_clients",
+            "file": "09_domains/_stakeholders_clients.json",
+            "title": "Stakeholders e clientes",
+            "bytes": 835,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "09_domains/commercial_contract_management",
+            "file": "09_domains/commercial_contract_management.json",
+            "title": "Domínio: Comercial / Contratos / Custos",
+            "bytes": 1632,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "09_domains/digital_data_technology",
+            "file": "09_domains/digital_data_technology.json",
+            "title": "Domínio: Digital / Dados / Tecnologia",
+            "bytes": 2531,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "09_domains/hseq_emergency_response",
+            "file": "09_domains/hseq_emergency_response.json",
+            "title": "Domínio: HSEQ / Resposta a Emergência",
+            "bytes": 2746,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "09_domains/independent_projects_entrepreneurship",
+            "file": "09_domains/independent_projects_entrepreneurship.json",
+            "title": "Domínio: Projetos Independentes / Empreendedorismo",
+            "bytes": 1406,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "09_domains/logistics_materials_suppliers",
+            "file": "09_domains/logistics_materials_suppliers.json",
+            "title": "Domínio: Logística / Materiais / Fornecedores",
+            "bytes": 2221,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "09_domains/maintenance_repairs_asset_readiness",
+            "file": "09_domains/maintenance_repairs_asset_readiness.json",
+            "title": "Domínio: Manutenção / Reparos / Prontidão de ativos",
+            "bytes": 2495,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "09_domains/naval_marine_offshore",
+            "file": "09_domains/naval_marine_offshore.json",
+            "title": "Domínio: Naval / Marítimo / Offshore",
+            "bytes": 3790,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "09_domains/oil_gas_offshore",
+            "file": "09_domains/oil_gas_offshore.json",
+            "title": "Domínio: Oil & Gas Offshore",
+            "bytes": 2201,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "09_domains/planning_data_performance",
+            "file": "09_domains/planning_data_performance.json",
+            "title": "Domínio: Planejamento / Dados / Performance",
+            "bytes": 2881,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "09_domains/project_management_project_controls",
+            "file": "09_domains/project_management_project_controls.json",
+            "title": "Domínio: Gestão de Projetos / Project Controls",
+            "bytes": 3053,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "09_domains/quality_management_systems",
+            "file": "09_domains/quality_management_systems.json",
+            "title": "Domínio: Qualidade / Sistemas de Gestão",
+            "bytes": 3257,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "09_domains/research_and_academic",
+            "file": "09_domains/research_and_academic.json",
+            "title": "Domínio: Pesquisa / Formação Academica",
+            "bytes": 1061,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "09_domains/training_communication_leadership",
+            "file": "09_domains/training_communication_leadership.json",
+            "title": "Domínio: Treinamento / Comunicação / Liderança",
+            "bytes": 1986,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          }
+        ]
+      },
+      "10_career_strategy": {
+        "description": "Preferências, encaixe por tier, alvos de mercado, histórias, perfis de CV",
+        "parts": [
+          {
+            "id": "10_career_strategy/cv_customization_guide",
+            "file": "10_career_strategy/cv_customization_guide.json",
+            "title": "Guia de customização de CV por foco",
+            "bytes": 1620,
+            "sources": [
+              "src_career_db_v3_2026_03_10"
+            ]
+          },
+          {
+            "id": "10_career_strategy/cv_profiles_260723",
+            "file": "10_career_strategy/cv_profiles_260723.json",
+            "title": "5 perfis de CV (management/planning/operations/hsse/innovation)",
+            "bytes": 22017,
+            "sources": [
+              "src_master_260723"
+            ]
+          },
+          {
+            "id": "10_career_strategy/interview_story_bank",
+            "file": "10_career_strategy/interview_story_bank.json",
+            "title": "Banco de histórias para entrevista",
+            "bytes": 6302,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_tree_v1_2026_10_20"
+            ]
+          },
+          {
+            "id": "10_career_strategy/preferences",
+            "file": "10_career_strategy/preferences.json",
+            "title": "Preferências e restrições de busca (usadas pelo matcher)",
+            "bytes": 4796,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_kg_v3_2026_10_20",
+              "src_jobos_profile_yml",
+              "src_jobos_vagas_2026_08_26",
+              "src_attachments_inventory_2026_10_22"
+            ]
+          },
+          {
+            "id": "10_career_strategy/role_fit",
+            "file": "10_career_strategy/role_fit.json",
+            "title": "Encaixe por tier de função + calibração",
+            "bytes": 3875,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_fit_analyses"
+            ]
+          },
+          {
+            "id": "10_career_strategy/targets_market",
+            "file": "10_career_strategy/targets_market.json",
+            "title": "Mercado-alvo, empresas, funções e palavras-chave ATS",
+            "bytes": 4167,
+            "sources": [
+              "src_master_260723",
+              "src_career_db_v3_2026_03_10",
+              "src_jobos_profile_yml"
+            ]
+          }
+        ]
+      },
+      "11_truth": {
+        "description": "Limites de verdade, lacunas, métricas, evidências",
+        "parts": [
+          {
+            "id": "11_truth/evidence_catalog",
+            "file": "11_truth/evidence_catalog.json",
+            "title": "Catálogo de evidências documentais",
+            "bytes": 7499,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "11_truth/known_unknowns",
+            "file": "11_truth/known_unknowns.json",
+            "title": "Lacunas e conflitos conhecidos",
+            "bytes": 3003,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "11_truth/metrics_register",
+            "file": "11_truth/metrics_register.json",
+            "title": "Registro de métricas (67; documentadas x não documentadas)",
+            "bytes": 18390,
+            "sources": [
+              "src_master_final_2026_10_21"
+            ]
+          },
+          {
+            "id": "11_truth/truth_boundaries",
+            "file": "11_truth/truth_boundaries.json",
+            "title": "Limites de verdade - o que NÃO alegar",
+            "bytes": 7234,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_tree_v1_2026_10_20",
+              "src_offshore_profile_2026_10_07",
+              "src_jobos_profile_yml"
+            ]
+          }
+        ]
+      },
+      "12_cv_variants": {
+        "description": "18 CVs adaptados (cópia sem perdas)",
+        "parts": [
+          {
+            "id": "12_cv_variants/_index",
+            "file": "12_cv_variants/_index.json",
+            "title": "Índice dos 18 CVs adaptados",
+            "bytes": 10791,
+            "sources": [
+              "src_cv_*"
+            ]
+          },
+          {
+            "id": "12_cv_variants/analista-logistica_pt",
+            "file": "12_cv_variants/analista-logistica_pt.json",
+            "title": "CV: genérico - Analista de Logística (pt)",
+            "bytes": 7780,
+            "sources": [
+              "src_cv_analista_logistica_pt"
+            ]
+          },
+          {
+            "id": "12_cv_variants/capco_conformidade-ii_pt_truthful",
+            "file": "12_cv_variants/capco_conformidade-ii_pt_truthful.json",
+            "title": "CV: Capco - Consultor Especialista em Conformidade II (pt)",
+            "bytes": 10598,
+            "sources": [
+              "src_cv_capco_conformidade_ii_pt_truthful"
+            ]
+          },
+          {
+            "id": "12_cv_variants/capco_consultor-conformidade-ii_pt",
+            "file": "12_cv_variants/capco_consultor-conformidade-ii_pt.json",
+            "title": "CV: Capco - Consultor Especialista em Conformidade II (pt)",
+            "bytes": 10837,
+            "sources": [
+              "src_cv_capco_consultor_conformidade_ii_pt"
+            ]
+          },
+          {
+            "id": "12_cv_variants/capco_engenheiro-planejamento_pt",
+            "file": "12_cv_variants/capco_engenheiro-planejamento_pt.json",
+            "title": "CV: Capco - Engenheiro de Planejamento (pt)",
+            "bytes": 7258,
+            "sources": [
+              "src_cv_capco_engenheiro_planejamento_pt"
+            ]
+          },
+          {
+            "id": "12_cv_variants/deloitte_business-agility_pt",
+            "file": "12_cv_variants/deloitte_business-agility_pt.json",
+            "title": "CV: Deloitte - Analista de Negócios - Business Agility (pt)",
+            "bytes": 7230,
+            "sources": [
+              "src_cv_deloitte_business_agility_pt"
+            ]
+          },
+          {
+            "id": "12_cv_variants/engenheiro-gestao-projetos_pt",
+            "file": "12_cv_variants/engenheiro-gestao-projetos_pt.json",
+            "title": "CV: genérico - Engenheiro de Gestão de Projetos (pt)",
+            "bytes": 7907,
+            "sources": [
+              "src_cv_engenheiro_gestao_projetos_pt"
+            ]
+          },
+          {
+            "id": "12_cv_variants/engenheiro-inovacao-processos-digitais_pt",
+            "file": "12_cv_variants/engenheiro-inovacao-processos-digitais_pt.json",
+            "title": "CV: genérico - Engenheiro de Inovação & Processos Digitais (pt)",
+            "bytes": 7399,
+            "sources": [
+              "src_cv_engenheiro_inovacao_processos_digitais_pt"
+            ]
+          },
+          {
+            "id": "12_cv_variants/engenheiro-suprimentos-projetos_pt",
+            "file": "12_cv_variants/engenheiro-suprimentos-projetos_pt.json",
+            "title": "CV: genérico - Engenheiro de Suprimentos & Projetos (pt)",
+            "bytes": 7263,
+            "sources": [
+              "src_cv_engenheiro_suprimentos_projetos_pt"
+            ]
+          },
+          {
+            "id": "12_cv_variants/linkedin-4458314279_operacoes-projetos_pt",
+            "file": "12_cv_variants/linkedin-4458314279_operacoes-projetos_pt.json",
+            "title": "CV: genérico - Engenheiro de Operações & Projetos (pt)",
+            "bytes": 7544,
+            "sources": [
+              "src_cv_linkedin_4458314279_operacoes_projetos_pt"
+            ]
+          },
+          {
+            "id": "12_cv_variants/sbm_modern-workplace_24160_en_compact",
+            "file": "12_cv_variants/sbm_modern-workplace_24160_en_compact.json",
+            "title": "CV: SBM Offshore - Modern Workplace Specialist (en)",
+            "bytes": 10950,
+            "sources": [
+              "src_cv_sbm_modern_workplace_24160_en_compact"
+            ]
+          },
+          {
+            "id": "12_cv_variants/sbm_modern-workplace_en",
+            "file": "12_cv_variants/sbm_modern-workplace_en.json",
+            "title": "CV: SBM Offshore - Modern Workplace Specialist (en)",
+            "bytes": 10693,
+            "sources": [
+              "src_cv_sbm_modern_workplace_en"
+            ]
+          },
+          {
+            "id": "12_cv_variants/sbm_planning-engineer_24277_en_2p",
+            "file": "12_cv_variants/sbm_planning-engineer_24277_en_2p.json",
+            "title": "CV: SBM Offshore - Planning Engineer (en)",
+            "bytes": 9164,
+            "sources": [
+              "src_cv_sbm_planning_engineer_24277_en_2p"
+            ]
+          },
+          {
+            "id": "12_cv_variants/sbm_planning-engineer_4485107397_en",
+            "file": "12_cv_variants/sbm_planning-engineer_4485107397_en.json",
+            "title": "CV: SBM Offshore - Planning Engineer (en)",
+            "bytes": 7335,
+            "sources": [
+              "src_cv_sbm_planning_engineer_4485107397_en"
+            ]
+          },
+          {
+            "id": "12_cv_variants/sbm_project-subcontracts_en",
+            "file": "12_cv_variants/sbm_project-subcontracts_en.json",
+            "title": "CV: SBM Offshore - Project Subcontracts Engineer (en)",
+            "bytes": 9653,
+            "sources": [
+              "src_cv_sbm_project_subcontracts_en"
+            ]
+          },
+          {
+            "id": "12_cv_variants/sbm_senior-operations-engineer_en",
+            "file": "12_cv_variants/sbm_senior-operations-engineer_en.json",
+            "title": "CV: SBM Offshore - Senior Operations Engineer (shorebase) (en)",
+            "bytes": 10031,
+            "sources": [
+              "src_cv_sbm_senior_operations_engineer_en"
+            ]
+          },
+          {
+            "id": "12_cv_variants/shell_offshore-projects-operations_en",
+            "file": "12_cv_variants/shell_offshore-projects-operations_en.json",
+            "title": "CV: Shell - Offshore Projects & Operations Engineer (Facilities Engineer) (en)",
+            "bytes": 8228,
+            "sources": [
+              "src_cv_shell_offshore_projects_operations_en"
+            ]
+          },
+          {
+            "id": "12_cv_variants/subsea7_deputy-vessel-superintendent_pt",
+            "file": "12_cv_variants/subsea7_deputy-vessel-superintendent_pt.json",
+            "title": "CV: Subsea7 - Deputy Vessel Superintendent (pt)",
+            "bytes": 9674,
+            "sources": [
+              "src_cv_subsea7_deputy_vessel_superintendent_pt"
+            ]
+          },
+          {
+            "id": "12_cv_variants/wood_technical-engineering-manager-subsea_en",
+            "file": "12_cv_variants/wood_technical-engineering-manager-subsea_en.json",
+            "title": "CV: Wood - Technical Engineering Manager (Subsea) (en)",
+            "bytes": 10714,
+            "sources": [
+              "src_cv_wood_technical_engineering_manager_subsea_en"
+            ]
+          }
+        ]
+      },
+      "13_applications": {
+        "description": "Vagas rastreadas, descrições, boards, estatísticas do jobOS",
+        "parts": [
+          {
+            "id": "13_applications/attachments_inventory",
+            "file": "13_applications/attachments_inventory.json",
+            "title": "Inventário de anexos (código do jobOS / apollo-vagas / web-vagas)",
+            "bytes": 30722,
+            "sources": [
+              "src_attachments_inventory_2026_10_22"
+            ]
+          },
+          {
+            "id": "13_applications/company_boards",
+            "file": "13_applications/company_boards.json",
+            "title": "Empresas monitoradas e estratégia de coleta",
+            "bytes": 7103,
+            "sources": [
+              "src_attachments_inventory_2026_10_22",
+              "src_jobos_strategies"
+            ]
+          },
+          {
+            "id": "13_applications/descriptions/bram-offshore",
+            "file": "13_applications/descriptions/bram-offshore.json",
+            "title": "Descrições de vagas: Bram Offshore",
+            "bytes": 47306,
+            "sources": [
+              "src_jobos_vagas_2026_08_26"
+            ]
+          },
+          {
+            "id": "13_applications/descriptions/brava-energia",
+            "file": "13_applications/descriptions/brava-energia.json",
+            "title": "Descrições de vagas: Brava Energia",
+            "bytes": 19173,
+            "sources": [
+              "src_jobos_vagas_2026_08_26"
+            ]
+          },
+          {
+            "id": "13_applications/descriptions/capco",
+            "file": "13_applications/descriptions/capco.json",
+            "title": "Descrições de vagas: Capco",
+            "bytes": 8955,
+            "sources": [
+              "src_jobos_vagas_2026_08_26"
+            ]
+          },
+          {
+            "id": "13_applications/descriptions/dof",
+            "file": "13_applications/descriptions/dof.json",
+            "title": "Descrições de vagas: DOF",
+            "bytes": 25294,
+            "sources": [
+              "src_jobos_vagas_2026_08_26"
+            ]
+          },
+          {
+            "id": "13_applications/descriptions/instituto-d-or-de-pesquisa-e-ensino",
+            "file": "13_applications/descriptions/instituto-d-or-de-pesquisa-e-ensino.json",
+            "title": "Descrições de vagas: Instituto D'Or de Pesquisa e Ensino",
+            "bytes": 2440,
+            "sources": [
+              "src_jobos_vagas_2026_08_26"
+            ]
+          },
+          {
+            "id": "13_applications/descriptions/modec",
+            "file": "13_applications/descriptions/modec.json",
+            "title": "Descrições de vagas: MODEC",
+            "bytes": 21463,
+            "sources": [
+              "src_jobos_vagas_2026_08_26"
+            ]
+          },
+          {
+            "id": "13_applications/descriptions/norsul",
+            "file": "13_applications/descriptions/norsul.json",
+            "title": "Descrições de vagas: NORSUL",
+            "bytes": 8557,
+            "sources": [
+              "src_jobos_vagas_2026_08_26"
+            ]
+          },
+          {
+            "id": "13_applications/descriptions/oceanpact",
+            "file": "13_applications/descriptions/oceanpact.json",
+            "title": "Descrições de vagas: OceanPact",
+            "bytes": 16646,
+            "sources": [
+              "src_jobos_vagas_2026_08_26"
+            ]
+          },
+          {
+            "id": "13_applications/descriptions/prio",
+            "file": "13_applications/descriptions/prio.json",
+            "title": "Descrições de vagas: PRIO",
+            "bytes": 17144,
+            "sources": [
+              "src_jobos_vagas_2026_08_26"
+            ]
+          },
+          {
+            "id": "13_applications/descriptions/sbm-offshore",
+            "file": "13_applications/descriptions/sbm-offshore.json",
+            "title": "Descrições de vagas: SBM Offshore",
+            "bytes": 34079,
+            "sources": [
+              "src_jobos_vagas_2026_08_26"
+            ]
+          },
+          {
+            "id": "13_applications/descriptions/shell",
+            "file": "13_applications/descriptions/shell.json",
+            "title": "Descrições de vagas: Shell",
+            "bytes": 394,
+            "sources": [
+              "src_jobos_vagas_2026_08_26"
+            ]
+          },
+          {
+            "id": "13_applications/descriptions/subsea7",
+            "file": "13_applications/descriptions/subsea7.json",
+            "title": "Descrições de vagas: Subsea7",
+            "bytes": 17363,
+            "sources": [
+              "src_jobos_vagas_2026_08_26"
+            ]
+          },
+          {
+            "id": "13_applications/descriptions/transocean",
+            "file": "13_applications/descriptions/transocean.json",
+            "title": "Descrições de vagas: Transocean",
+            "bytes": 423,
+            "sources": [
+              "src_jobos_vagas_2026_08_26"
+            ]
+          },
+          {
+            "id": "13_applications/descriptions/yinson",
+            "file": "13_applications/descriptions/yinson.json",
+            "title": "Descrições de vagas: Yinson",
+            "bytes": 10496,
+            "sources": [
+              "src_jobos_vagas_2026_08_26"
+            ]
+          },
+          {
+            "id": "13_applications/jobs_fixture",
+            "file": "13_applications/jobs_fixture.json",
+            "title": "Fixture de teste (5 vagas)",
+            "bytes": 3437,
+            "sources": [
+              "src_jobos_fixture_jobs"
+            ]
+          },
+          {
+            "id": "13_applications/pipeline_stats",
+            "file": "13_applications/pipeline_stats.json",
+            "title": "Estatísticas do pipeline de vagas",
+            "bytes": 2739,
+            "sources": [
+              "src_jobos_export_2026_08_26",
+              "src_attachments_inventory_2026_10_22"
+            ]
+          },
+          {
+            "id": "13_applications/vacancies_index",
+            "file": "13_applications/vacancies_index.json",
+            "title": "65 vagas rastreadas pelo jobOS (metadados, estágio, triagem)",
+            "bytes": 48772,
+            "sources": [
+              "src_jobos_vagas_2026_08_26"
+            ]
+          }
+        ]
+      },
+      "14_matching": {
+        "description": "Motor de compatibilidade: config, léxico, arquétipos, anos por domínio",
+        "parts": [
+          {
+            "id": "14_matching/archetypes",
+            "file": "14_matching/archetypes.json",
+            "title": "Arquétipos de função: tier de encaixe, CV recomendado, headline e histórias",
+            "bytes": 15173,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_jobos_vagas_2026_08_26",
+              "src_jobos_profile_yml"
+            ]
+          },
+          {
+            "id": "14_matching/concepts",
+            "file": "14_matching/concepts.json",
+            "title": "Léxico de requisitos (PT/EN) mapeado para o status real do Rafael",
+            "bytes": 74158,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_master_260723",
+              "src_jobos_profile_yml",
+              "src_chat_2026_11_19",
+              "src_workstation_scan_2026_11_19"
+            ]
+          },
+          {
+            "id": "14_matching/engine_config",
+            "file": "14_matching/engine_config.json",
+            "title": "Configuração do motor de compatibilidade (pesos, limiares, marcadores)",
+            "bytes": 5857,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_jobos_profile_yml"
+            ]
+          },
+          {
+            "id": "14_matching/experience_years",
+            "file": "14_matching/experience_years.json",
+            "title": "Anos de experiência por domínio (para requisitos 'X anos')",
+            "bytes": 3870,
+            "sources": [
+              "src_master_final_2026_10_21",
+              "src_jobos_profile_yml"
+            ]
+          }
+        ]
+      }
+    },
+    "stats": {
+      "parts": 126,
+      "bytes": 1139205,
+      "experiences": 7,
+      "software_nodes": 81,
+      "domains": 13,
+      "cv_variants": 18,
+      "vacancies_tracked": 65,
+      "matcher_concepts": 130,
+      "matcher_archetypes": 32,
+      "known_ids": 196
+    },
+    "validation": {
+      "errors": [],
+      "warnings": [],
+      "checked_at": "2026-11-19"
+    }
+  }
+}

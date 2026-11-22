@@ -1,0 +1,58 @@
+{
+  "_part": {
+    "id": "06_skills/software/planning_project_controls",
+    "title": "Software/sistemas: planning_project_controls",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723"
+    ]
+  },
+  "data": {
+    "nodes": {
+      "sw_ms_project": {
+        "name": "Microsoft Project",
+        "aliases": [
+          "MS Project"
+        ],
+        "type": "Project scheduling / project controls",
+        "status": "strong/proven",
+        "level": "Avançado",
+        "training": "Udemy — Abr/2019",
+        "professional_use": [
+          "cronogramas",
+          "critical path",
+          "planejamento operacional",
+          "forecast",
+          "project controls",
+          "reporting"
+        ],
+        "employer": "Van Oord",
+        "evidence": "D",
+        "used_in": [
+          "exp_vanoord"
+        ],
+        "domain_tags": [
+          "project_management_project_controls",
+          "planning_data_performance"
+        ],
+        "cv_default": true
+      },
+      "sw_primavera_p6": {
+        "name": "Oracle Primavera P6",
+        "type": "Project scheduling",
+        "status": "developing",
+        "level": "Em desenvolvimento",
+        "professional_use": [],
+        "cv_rule": "Nunca vender como experiência hands-on profissional.",
+        "evidence": "D",
+        "used_in": [],
+        "domain_tags": [
+          "project_management_project_controls",
+          "planning_data_performance"
+        ],
+        "cv_default": false
+      }
+    }
+  }
+}

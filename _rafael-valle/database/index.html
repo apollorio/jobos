@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Rafael Perini Valle — Database</title>
+<link rel="preconnect" href="https://cdn.apollo.rio.br" crossorigin>
+<script>window.apolloIconConfig=window.apolloIconConfig||{};</script>
+<script src="https://cdn.apollo.rio.br/v1.0.1/core.js?v=1.x.1" fetchpriority="high"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+/* Fallback tokens (core.js overrides/provides the real ones) */
+:root{--s-2:.5rem;--s-3:.75rem;--s-4:1rem;--r:14px;--r-pill:100px;--ff-mono:ui-monospace,Consolas,monospace}
+body.ax-body{
+  --bg:#fff;--card:#fcfcfc;--card-hover:#f6f6f6;--txt:rgba(5,5,5,.88);--muted:rgba(5,5,5,.45);
+  --line:rgba(5,5,5,.08);--accent:rgb(255,152,32);
+  margin:0;background:var(--bg)!important;color:var(--txt);
+  font-family:"Space Grotesk",system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.5;
+}
+@media (prefers-color-scheme:dark){body.ax-body{--bg:#0d0d0d;--card:#151515;--card-hover:#1c1c1c;--txt:rgba(255,255,255,.88);--muted:rgba(255,255,255,.45);--line:rgba(255,255,255,.1)}}
+.wrap{max-width:1100px;margin:0 auto;padding:var(--s-4)}
+h1{font-size:1.4rem;font-weight:600;margin:.4rem 0 .2rem;letter-spacing:-.03em}
+.sub{margin:0;color:var(--muted)}
+.bar{position:sticky;top:0;z-index:50;background:var(--bg);padding:var(--s-3) 0;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:var(--s-2);align-items:center}
+.bar input[type=search]{flex:1 1 220px;min-width:0;padding:.55rem .9rem;border:1px solid var(--line);border-radius:var(--r-pill);background:var(--card);color:var(--txt);font:inherit}
+.b{font:inherit;cursor:pointer;padding:.5rem .95rem;border-radius:var(--r-pill);border:1px solid var(--line);background:var(--card);color:var(--txt)}
+.b:hover{background:var(--card-hover)}
+.b.p{background:var(--txt);color:var(--bg);border-color:transparent}
+.b.a{background:var(--accent);color:#050505;border-color:transparent}
+.b:disabled{opacity:.4;cursor:default}
+.cnt{color:var(--muted);white-space:nowrap}
+.grp{margin:var(--s-4) 0 var(--s-2);display:flex;gap:var(--s-2);align-items:center;font-weight:600;text-transform:uppercase;font-size:.75rem;letter-spacing:.08em;color:var(--muted)}
+.grp .b{padding:.15rem .6rem;font-size:.75rem;text-transform:none;letter-spacing:0}
+.part{border:1px solid var(--line);border-radius:var(--r);background:var(--card);margin-bottom:var(--s-2);overflow:hidden}
+.part.is-active{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.ph{display:flex;gap:var(--s-2);align-items:center;padding:.6rem .85rem;cursor:pointer;user-select:none}
+.ph:hover{background:var(--card-hover)}
+.ph .chk{width:1.1rem;height:1.1rem;border:1.5px solid var(--muted);border-radius:4px;flex:none;display:grid;place-items:center;font-size:.75rem;line-height:1}
+.part.is-active .chk{background:var(--accent);border-color:var(--accent);color:#050505}
+.part.is-active .chk::after{content:"✓"}
+.pt{flex:1;min-width:0}
+.pt strong{font-weight:500}
+.pt small{display:block;color:var(--muted);font-family:var(--ff-mono);font-size:.72rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pb{display:none;border-top:1px solid var(--line);padding:.6rem .85rem}
+.part.open .pb{display:block}
+.pb pre{margin:0;white-space:pre-wrap;word-break:break-word;font-family:var(--ff-mono);font-size:.78rem;line-height:1.55;max-height:70vh;overflow:auto;user-select:text}
+.acts{display:flex;gap:var(--s-2);margin-bottom:var(--s-2)}
+.acts .b{padding:.25rem .7rem;font-size:.8rem}
+#toast{position:fixed;left:50%;bottom:1.5rem;transform:translateX(-50%);background:var(--txt);color:var(--bg);padding:.5rem 1rem;border-radius:var(--r-pill);opacity:0;pointer-events:none;transition:opacity .2s;z-index:99}
+#toast.on{opacity:1}
+.err{padding:var(--s-4);border:1px solid #e53935;border-radius:var(--r);color:#e53935}
+</style>
+</head>
+<body class="ax-body">
+<div class="wrap">
+  <h1>Rafael Perini Valle — Database</h1>
+  <p class="sub" id="meta">Carregando…</p>
+
+  <div class="bar">
+    <input type="search" id="q" placeholder="Filtrar partes (título, id, conteúdo)…" aria-label="Filtrar">
+    <select id="fmt" class="b" aria-label="Formato"><option value="md">Markdown</option><option value="json">JSON</option></select>
+    <button class="b" id="all">Selecionar visíveis</button>
+    <button class="b" id="none">Limpar</button>
+    <button class="b" id="exp">Expandir/Recolher</button>
+    <span class="cnt" id="cnt">0 selecionadas</span>
+    <button class="b a" id="copy" disabled>Copiar seleção</button>
+    <button class="b p" id="dl" disabled>Baixar .md</button>
+  </div>
+
+  <div id="list"></div>
+</div>
+<div id="toast"></div>
+
+<script>
+(() => {
+  const BUNDLE = '_bundle/rafael-bible.full.json';
+  const $ = s => document.querySelector(s);
+  const state = { parts: [], sel: new Set(), fmt: 'md', expanded: false };
+  const cache = new Map();
+
+  const toast = t => { const e = $('#toast'); e.textContent = t; e.classList.add('on'); clearTimeout(toast.t); toast.t = setTimeout(() => e.classList.remove('on'), 1600); };
+
+  // JSON -> Markdown
+  const scalar = v => v === null ? '_null_' : typeof v === 'string' ? v : String(v);
+  function md(v, ind = 0) {
+    const pad = '  '.repeat(ind);
+    if (v === null || typeof v !== 'object') return pad + '- ' + scalar(v).replace(/\n/g, '\n' + pad + '  ') + '\n';
+    let out = '';
+    if (Array.isArray(v)) {
+      for (const x of v) {
+        if (x !== null && typeof x === 'object') {
+          const flat = Array.isArray(x) ? false : Object.values(x).every(y => y === null || typeof y !== 'object');
+          if (flat) out += pad + '- ' + Object.entries(x).map(([k, y]) => `**${k}**: ${scalar(y)}`).join(' · ') + '\n';
+          else out += pad + '-\n' + md(x, ind + 1);
+        } else out += md(x, ind);
+      }
+      return out;
+    }
+    for (const [k, x] of Object.entries(v)) {
+      if (x !== null && typeof x === 'object') {
+        if (!Object.keys(x).length) out += `${pad}- **${k}**: _(vazio)_\n`;
+        else out += `${pad}- **${k}**:\n` + md(x, ind + 1);
+      } else out += `${pad}- **${k}**: ${scalar(x).replace(/\n/g, '\n' + pad + '  ')}\n`;
+    }
+    return out;
+  }
+  const partMd = p => {
+    const m = p._part || {};
+    let h = `## ${m.title || m.id}\n\n\`${m.id}\`${m.updated ? ' · atualizado ' + m.updated : ''}\n`;
+    if (m.notes) h += `\n> ${m.notes}\n`;
+    return h + '\n' + md(p.data) + '\n';
+  };
+  const render = p => {
+    const k = p._part.id + '|' + state.fmt;
+    if (!cache.has(k)) cache.set(k, state.fmt === 'json' ? JSON.stringify(p, null, 2) : partMd(p));
+    return cache.get(k);
+  };
+
+  function row(p) {
+    const m = p._part, el = document.createElement('div');
+    el.className = 'part'; el.dataset.id = m.id;
+    el.innerHTML = `<div class="ph"><span class="chk"></span><div class="pt"><strong></strong><small></small></div><button class="b" data-a="open">Ver</button></div>
+      <div class="pb"><div class="acts"><button class="b" data-a="cp">Copiar esta parte</button></div><pre></pre></div>`;
+    el.querySelector('strong').textContent = m.title || m.id;
+    el.querySelector('small').textContent = m.id;
+    p._el = el;
+    return el;
+  }
+  function fill(el, p) { const pre = el.querySelector('pre'); pre.textContent = render(p); }
+
+  function build() {
+    const list = $('#list'); list.innerHTML = '';
+    const groups = {};
+    state.parts.forEach(p => { const g = p._part.id.split('/')[0]; (groups[g] ||= []).push(p); });
+    for (const g of Object.keys(groups).sort()) {
+      const h = document.createElement('div'); h.className = 'grp'; h.dataset.g = g;
+      h.innerHTML = `<span>${g}</span><button class="b" data-g="${g}">Selecionar pasta</button>`;
+      list.appendChild(h);
+      groups[g].forEach(p => list.appendChild(row(p)));
+    }
+    sync();
+  }
+
+  function visible() { return state.parts.filter(p => p._el && !p._el.hidden); }
+  function sync() {
+    state.parts.forEach(p => p._el.classList.toggle('is-active', state.sel.has(p._part.id)));
+    const n = state.sel.size;
+    $('#cnt').textContent = `${n} selecionada${n === 1 ? '' : 's'}`;
+    $('#copy').disabled = $('#dl').disabled = !n;
+  }
+  const selected = () => state.parts.filter(p => state.sel.has(p._part.id));
+  const header = () => `# ${state.subject || 'Rafael Perini Valle'} — Database\n\n_Exportado em ${new Date().toISOString().slice(0, 10)} · ${state.sel.size} parte(s)_\n\n`;
+  const finalText = () => state.fmt === 'json'
+    ? JSON.stringify(Object.fromEntries(selected().map(p => [p._part.id, p])), null, 2)
+    : header() + selected().map(partMd).join('\n---\n\n');
+
+  async function copy(text) {
+    try { await navigator.clipboard.writeText(text); }
+    catch { const t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); }
+    toast('Copiado');
+  }
+
+  $('#list').addEventListener('click', e => {
+    const el = e.target.closest('.part'), g = e.target.closest('[data-g]');
+    if (g && g.tagName === 'BUTTON') {
+      state.parts.filter(p => p._part.id.startsWith(g.dataset.g + '/') && !p._el.hidden).forEach(p => state.sel.add(p._part.id));
+      return sync();
+    }
+    if (!el) return;
+    const p = state.parts.find(x => x._part.id === el.dataset.id);
+    const a = e.target.closest('[data-a]')?.dataset.a;
+    if (e.target.closest('pre')) return;           // allow native text selection
+    if (a === 'cp') return copy(render(p));
+    if (a === 'open') { el.classList.toggle('open'); if (el.classList.contains('open')) fill(el, p); return; }
+    if (e.target.closest('.pb')) return;
+    state.sel.has(p._part.id) ? state.sel.delete(p._part.id) : state.sel.add(p._part.id);
+    sync();
+  });
+
+  $('#copy').onclick = () => copy(finalText());
+  $('#dl').onclick = () => {
+    const ext = state.fmt === 'json' ? 'json' : 'md';
+    const b = new Blob([finalText()], { type: 'text/plain;charset=utf-8' });
+    const a = document.createElement('a'); a.href = URL.createObjectURL(b);
+    a.download = `rafael-valle-database-${new Date().toISOString().slice(0, 10)}.${ext}`; a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  };
+  $('#all').onclick = () => { visible().forEach(p => state.sel.add(p._part.id)); sync(); };
+  $('#none').onclick = () => { state.sel.clear(); sync(); };
+  $('#exp').onclick = () => {
+    state.expanded = !state.expanded;
+    visible().forEach(p => { p._el.classList.toggle('open', state.expanded); if (state.expanded) fill(p._el, p); });
+  };
+  $('#fmt').onchange = e => {
+    state.fmt = e.target.value; $('#dl').textContent = state.fmt === 'json' ? 'Baixar .json' : 'Baixar .md';
+    state.parts.forEach(p => p._el.classList.contains('open') && fill(p._el, p));
+  };
+  $('#q').oninput = e => {
+    const q = e.target.value.trim().toLowerCase();
+    state.parts.forEach(p => {
+      p._hay ||= (p._part.id + ' ' + (p._part.title || '') + ' ' + JSON.stringify(p.data)).toLowerCase();
+      p._el.hidden = !!q && !p._hay.includes(q);
+    });
+    document.querySelectorAll('.grp').forEach(h => {
+      h.hidden = !state.parts.some(p => p._part.id.startsWith(h.dataset.g + '/') && !p._el.hidden);
+    });
+  };
+
+  fetch(BUNDLE).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(b => {
+    state.subject = b.index?.subject;
+    state.parts = Object.values(b.parts).sort((a, b) => a._part.id.localeCompare(b._part.id));
+    $('#meta').textContent = `${state.parts.length} partes · versão ${b.index?.version || ''} · clique numa parte para selecionar, "Ver" para abrir`;
+    build();
+  }).catch(err => {
+    $('#meta').textContent = '';
+    $('#list').innerHTML = `<div class="err">Não foi possível carregar ${BUNDLE} (${err.message}). Abra via http(s), não file://.</div>`;
+  });
+})();
+</script>
+</body>
+</html>

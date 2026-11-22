@@ -1,0 +1,163 @@
+{
+  "_part": {
+    "id": "06_skills/standards_regulatory",
+    "title": "Normas e regulamentos (13 nós)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "nodes": [
+      {
+        "id": "std_ism",
+        "name": "ISM Code",
+        "status": "applied-operationally",
+        "est_pct": "90",
+        "evidence": "DP",
+        "safe_wording": "Operational compliance with ISM Code, IMO, SOLAS, MARPOL and NORMAM-12 in marine project operations.",
+        "do_not_claim": [
+          "DPA/designated person ownership",
+          "ISM auditor"
+        ]
+      },
+      {
+        "id": "std_imo_solas_marpol",
+        "name": "IMO / SOLAS / MARPOL",
+        "status": "applied-operationally",
+        "est_pct": "80",
+        "evidence": "DP",
+        "safe_wording": "Operational application of SOLAS/MARPOL requirements (waste management, safety, emergency preparedness).",
+        "do_not_claim": [
+          "flag-state/class compliance ownership"
+        ]
+      },
+      {
+        "id": "std_normam12",
+        "name": "NORMAM-12",
+        "status": "applied-operationally",
+        "est_pct": "UNKNOWN_NOT_DOCUMENTED",
+        "evidence": "DP",
+        "safe_wording": "Operational compliance with NORMAM-12 in port/dredging operations.",
+        "do_not_claim": []
+      },
+      {
+        "id": "std_iso9001",
+        "name": "ISO 9001 / ISO 9000",
+        "status": "supported-readiness",
+        "est_pct": "70",
+        "evidence": "D",
+        "safe_wording": "Supported management-system readiness, process mapping, procedure development, document control and audit preparation (C-Tank).",
+        "do_not_claim": [
+          "conducted ISO audits",
+          "ISO auditor",
+          "Lead Auditor"
+        ]
+      },
+      {
+        "id": "std_iso14001_45001",
+        "name": "ISO 14001 / ISO 45001",
+        "status": "no-formal-experience",
+        "est_pct": "20-30",
+        "evidence": "X",
+        "safe_wording": "Familiarity through HSEQ practice (Occupational Safety Engineering postgraduate); no formal management-system experience.",
+        "do_not_claim": [
+          "ISO 14001/45001 formal implementation or auditing",
+          "tri-norma auditor"
+        ]
+      },
+      {
+        "id": "std_internal_audit",
+        "name": "Formal internal audit",
+        "status": "partial",
+        "est_pct": "45",
+        "evidence": "V",
+        "safe_wording": "Inspections, non-conformity follow-up and audit-preparation evidence; not a formal internal auditor.",
+        "do_not_claim": [
+          "formal internal auditor",
+          "Lead Auditor"
+        ]
+      },
+      {
+        "id": "std_sgso_sgip_sgss_anp",
+        "name": "SGSO / SGIP / SGSS / ANP regulation",
+        "status": "adjacent-only",
+        "est_pct": "50-60",
+        "evidence": "V",
+        "safe_wording": "Base in ISM/IMO/SOLAS/MARPOL/NORMAM and offshore QHSE; ANP SGSO/SGIP/SGSS not directly operated.",
+        "do_not_claim": [
+          "domain of SGSO/SGIP/SGSS/ANP without direct role"
+        ]
+      },
+      {
+        "id": "std_pdca_masp_sdca",
+        "name": "PDCA / MASP / SDCA",
+        "status": "applied-informally",
+        "est_pct": "60-65",
+        "evidence": "V",
+        "safe_wording": "Corrective-action and continuous-improvement cycles applied to deviations and standardization (not branded MASP/SDCA programs).",
+        "do_not_claim": [
+          "certified MASP/Lean/Six Sigma practitioner"
+        ]
+      },
+      {
+        "id": "std_pmbok",
+        "name": "PMI / PMBOK",
+        "status": "education+applied",
+        "est_pct": "UNKNOWN_NOT_DOCUMENTED",
+        "evidence": "D",
+        "safe_wording": "MBA Project Management (USP/ESALQ, 400h, PMI/PMBOK) applied in Van Oord projects and Dismantle.",
+        "do_not_claim": [
+          "PMP certified (application in preparation)"
+        ]
+      },
+      {
+        "id": "std_nrs",
+        "name": "NR-17 / NR-30 / NR-33 / NR-34 / NR-35",
+        "status": "trained",
+        "est_pct": "UNKNOWN_NOT_DOCUMENTED",
+        "evidence": "D",
+        "safe_wording": "Training completed; check validity dates before stating as current.",
+        "do_not_claim": []
+      },
+      {
+        "id": "std_offshore_survival",
+        "name": "CBSP / BOSIET / HUET / T-HUET",
+        "status": "completed-renewal-pending",
+        "est_pct": "UNKNOWN_NOT_DOCUMENTED",
+        "evidence": "D",
+        "safe_wording": "Completed; renewal pending.",
+        "do_not_claim": [
+          "current validity"
+        ]
+      },
+      {
+        "id": "std_isgott_ocimf",
+        "name": "ISGOTT / OCIMF-SIRE / ASOG",
+        "status": "do-not-claim",
+        "est_pct": "10-20",
+        "evidence": "X",
+        "safe_wording": "UNKNOWN_NOT_DOCUMENTED",
+        "do_not_claim": [
+          "ISGOTT expert",
+          "OCIMF/SIRE ownership",
+          "ASOG ownership"
+        ]
+      },
+      {
+        "id": "std_class_cmms",
+        "name": "Class / statutory / CMMS / reliability (RBI-RCM-CBM)",
+        "status": "do-not-claim",
+        "est_pct": "20-25",
+        "evidence": "X",
+        "safe_wording": "Monitored readiness, availability and downtime; coordinated repairs/services affecting operations.",
+        "do_not_claim": [
+          "class/statutory certificate owner",
+          "full PMS owner",
+          "fleet CMMS owner",
+          "dry-dock manager"
+        ]
+      }
+    ]
+  }
+}

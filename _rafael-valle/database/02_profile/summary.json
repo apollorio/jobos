@@ -1,0 +1,99 @@
+{
+  "_part": {
+    "id": "02_profile/summary",
+    "title": "Resumo, identidade profissional e diferenciais",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723",
+      "src_career_db_v3_2026_03_10",
+      "src_offshore_profile_2026_10_07",
+      "src_master_tree_v1_2026_10_20",
+      "src_jobos_profile_yml"
+    ]
+  },
+  "data": {
+    "canonical_one_liner": "Engenheiro com 3 anos e 5 meses como Superintendente na Van Oord, mais vivência offshore anterior em FPSO/OSV e navios-sonda, com forte experiência em vessel-shore interface, planejamento e controle operacional, HSEQ/ERC, logística, fornecedores, KPIs, custos e execução de projetos.",
+    "one_sentence_master_tree": "Engenheiro com 3 anos e 5 meses como Superintendente na Van Oord, experiência offshore anterior em FPSO/OSV e navios-sonda, forte interface base–embarcação, planejamento de operações, HSEQ/ERC, fornecedores, KPIs, custos e execução de projetos.",
+    "core_identity_historical": {
+      "pt": "Sou Engenheiro de Planejamento e Operações Offshore, especializado em projetos marítimos, operações portuárias, engenharia de métodos e performance. Atuo como Coordenador de Emergências (ERT), com gestão real de Medevacs. Sou autor de um livro técnico de referência do setor e atuo como ponte de comunicação técnico-linguística entre equipes internacionais e brasileiras, com domínio consolidado dos sistemas de gestão documental da Petrobras (Drake/RT).",
+      "en": "I am a Planning & Offshore Operations Engineer, specialized in marine projects, port operations, methods engineering and performance. I serve as an Emergency Response Coordinator (ERT), with real Medevac management experience. I am the author of an industry-reference technical book and act as a technical-linguistic communication bridge between international and Brazilian teams, with solid command of Petrobras' document management systems (Drake/RT)."
+    },
+    "core_identity_career_db": "Engenheiro de Planejamento e Operações Offshore com especialização em projetos marítimos, operações portuárias, engenharia de métodos e performance. Coordenador de Emergências (ERT) com gestão real de Medevacs. Autor de livro técnico do setor. Ponte de comunicação técnico-linguística entre equipes internacionais e brasileiras. Domínio nativo de sistemas de gestão documental Petrobras (Drake/RT).",
+    "headline_jobos": {
+      "pt": "Engenheiro de Planejamento e Operações Offshore",
+      "en": "Planning & Offshore Operations Engineer"
+    },
+    "professional_positioning": {
+      "core_identity": [
+        "Marine / Offshore Operations Engineer",
+        "Marine Operations Superintendent",
+        "Vessel-Shore Operations",
+        "Project Execution & Project Controls",
+        "Operational HSEQ / Emergency Response",
+        "Offshore Planning & Readiness"
+      ],
+      "secondary_identity": [
+        "Project Management",
+        "Operational Quality / Management Systems",
+        "Logistics / Suppliers / Materials",
+        "Data / KPI / Reporting",
+        "Process Improvement",
+        "Independent Digital Product Development"
+      ]
+    },
+    "positioning_offshore_profile_2026_10_07": {
+      "name": "Rafael Perini Valle",
+      "base": "Rio de Janeiro – RJ, Brasil",
+      "professional_positioning": [
+        "Marine / Offshore Operations",
+        "Project Execution & Planning",
+        "Vessel–Shore Interface",
+        "HSEQ / Emergency Response",
+        "Logistics / Suppliers / Materials",
+        "Operational Performance & KPIs"
+      ]
+    },
+    "career_domains_ranked": [
+      "Marine / Offshore Operations",
+      "Vessel-Shore Interface",
+      "Project Execution & Project Controls",
+      "Planning & Operational Performance",
+      "HSEQ / Emergency Response",
+      "Offshore Logistics / Materials / Suppliers",
+      "Operational Quality / Management Systems",
+      "Oil & Gas Offshore Support",
+      "Data / KPI / Reporting",
+      "Digital / Process Automation"
+    ],
+    "differentiators": [
+      "Operação marítima real + project controls + HSEQ/ERC + comunicação técnica",
+      "Experiência tanto em campo/embarcação quanto em reporting, custos e gestão",
+      "Inglês fluente e experiência multicultural",
+      "Autor de livro técnico marítimo/offshore",
+      "Capacidade de transformar operação em processo, dado, procedimento e melhoria",
+      "Tecnologia e automação como complemento à engenharia"
+    ],
+    "industries": [
+      "Oil & Gas",
+      "Offshore Operations",
+      "Maritime",
+      "Dredging",
+      "Port Logistics",
+      "Process Management",
+      "Energy"
+    ],
+    "career_story": {
+      "one_sentence": "Engenheiro com 3 anos e 5 meses como Superintendente na Van Oord, experiência offshore anterior em FPSO/OSV e navios-sonda, forte interface base–embarcação, planejamento de operações, HSEQ/ERC, fornecedores, KPIs, custos e execução de projetos.",
+      "differentiators": [
+        "Operação marítima real + project controls + HSEQ/ERC + comunicação técnica",
+        "Experiência tanto em campo/embarcação quanto em reporting, custos e gestão",
+        "Inglês fluente e experiência multicultural",
+        "Autor de livro técnico marítimo/offshore",
+        "Capacidade de transformar operação em processo, dado, procedimento e melhoria",
+        "Tecnologia e automação como complemento à engenharia"
+      ]
+    },
+    "do_not_round_management_tenure_to": "5+ anos em gerência similar"
+  }
+}

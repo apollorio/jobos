@@ -1,0 +1,85 @@
+{
+  "_part": {
+    "id": "06_skills/software/explicit_non_experience",
+    "title": "Software/sistemas: explicit_non_experience",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723"
+    ]
+  },
+  "data": {
+    "nodes": {
+      "sw_amos": {
+        "name": "AMOS",
+        "status": "do-not-claim",
+        "evidence": "X",
+        "used_in": [],
+        "domain_tags": []
+      },
+      "sw_hysys": {
+        "name": "HYSYS",
+        "status": "do-not-claim",
+        "evidence": "X",
+        "used_in": [],
+        "domain_tags": []
+      },
+      "sw_orcaflex": {
+        "name": "Orcaflex",
+        "status": "do-not-claim",
+        "evidence": "X",
+        "used_in": [],
+        "domain_tags": []
+      },
+      "sw_ansys": {
+        "name": "Ansys",
+        "status": "do-not-claim",
+        "evidence": "X",
+        "used_in": [],
+        "domain_tags": []
+      },
+      "sw_mathcad": {
+        "name": "Mathcad",
+        "status": "do-not-claim",
+        "evidence": "X",
+        "used_in": [],
+        "domain_tags": []
+      },
+      "sw_solidworks": {
+        "name": "SolidWorks",
+        "status": "do-not-claim",
+        "evidence": "X",
+        "used_in": [],
+        "domain_tags": []
+      },
+      "sw_smart_3d": {
+        "name": "Smart 3D",
+        "status": "do-not-claim",
+        "evidence": "X",
+        "used_in": [],
+        "domain_tags": []
+      },
+      "sw_smart_pid": {
+        "name": "Smart P&ID",
+        "status": "do-not-claim",
+        "evidence": "X",
+        "used_in": [],
+        "domain_tags": []
+      },
+      "sw_smart_plant_foundation": {
+        "name": "Smart Plant Foundation",
+        "status": "do-not-claim",
+        "evidence": "X",
+        "used_in": [],
+        "domain_tags": []
+      },
+      "sw_skm": {
+        "name": "SKM Power Tools",
+        "status": "do-not-claim",
+        "evidence": "X",
+        "used_in": [],
+        "domain_tags": []
+      }
+    }
+  }
+}

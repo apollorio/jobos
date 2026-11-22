@@ -1,0 +1,140 @@
+{
+  "name": "RAFAEL PERINI VALLE",
+  "subtitle": "DIGITAL TRANSFORMATION & MODERN WORKPLACE SPECIALIST",
+  "tagline": "Digital Adoption · Automation · User Experience · Project Management · Analytics · AI-Enabled Workflows",
+  "contact": {
+    "location": "Rio de Janeiro – RJ, Brazil",
+    "email": "rafapevalle@gmail.com",
+    "phone": "+55 (21) 97955-4496",
+    "linkedin": "https://www.linkedin.com/in/rpvalle",
+    "linkedinLabel": "linkedin.com/in/rpvalle"
+  },
+  "sections": [
+    {
+      "title": "Professional Summary",
+      "type": "bullets",
+      "bullets": [
+        "Digital transformation and project professional combining hands-on product development with 4+ years of complex project and operations coordination in multinational environments.",
+        "Founder and developer of apollo::rio, an independent digital platform for Rio de Janeiro’s culture and creative ecosystem, responsible for product roadmap, UX/UI, web development, automation, integrations, governance and continuous improvement.",
+        "Strong background in stakeholder engagement, process mapping, reporting, training and adoption: from ISO 9001 process formalisation at C-Tank to technical instruction for multinational offshore teams and project coordination at Van Oord.",
+        "Advanced English, MBA in Project Management, Advanced Excel and Power BI, with active hands-on development in JavaScript, Python, JSON, APIs, workflow automation and AI-assisted digital solutions."
+      ]
+    },
+    {
+      "title": "Core Expertise",
+      "type": "text",
+      "content": "Digital Transformation · Digital Adoption · User Experience · Product Roadmap · Project Management · Change & Adoption Support · Workflow Automation · AI-Enabled Assistance · Low-Code / CMS Ecosystems · Process Mapping · Digital Governance · Stakeholder Management · Training & Upskilling · User Guides & Documentation · Analytics & KPI Reporting · Continuous Improvement · Vendor Coordination · Risk & Dependency Management"
+    },
+    {
+      "title": "Professional Experience",
+      "type": "entries",
+      "lead": {
+        "title": "Founder & Digital Product Developer — apollo::rio (Nov 2024–Present)",
+        "body": "Designed and developed an independent digital platform for Rio de Janeiro’s cultural and creative ecosystem. Own the product roadmap and delivery across UX/UI, web architecture, WordPress-based services, APIs, structured data, automation, user flows, access roles, documentation and continuous improvement. Built integrations and workflows for event discovery, user services, community features and operational automation, applying privacy-by-design, accessibility, mobile-first principles and AI-assisted development."
+      },
+      "entries": [
+        {
+          "role": "Marine Operations Superintendent (Projects, Performance & Stakeholder Coordination)",
+          "company": "Van Oord",
+          "location": "Rio de Janeiro / Brazilian coast",
+          "period": "Jul 2021 – Nov 2024",
+          "bullets": [
+            "Managed multi-stakeholder project execution across vessels, clients, terminals, suppliers, contractors and international management, coordinating priorities, dependencies, risks and operational deliverables.",
+            "Produced management reports, forecasts, KPI tracking and performance analyses covering production, availability, downtime, fuel, costs and operational deviations.",
+            "Standardised reporting, procedures, action tracking and information flows across projects, improving visibility, traceability and decision-making between field and management teams.",
+            "Supported change implementation through procedures, briefings, alignment meetings, lessons learned, corrective actions and continuous-improvement initiatives in multicultural environments.",
+            "Coordinated vendors and service providers and translated operational requirements into practical execution plans, maintaining clear communication across technical and non-technical stakeholders."
+          ]
+        },
+        {
+          "role": "Operations Analyst (Process Improvement, Digital Workflows & Offshore Support)",
+          "company": "C-Tank",
+          "location": "Niterói – RJ, Brazil",
+          "period": "Oct 2020 – Jun 2021",
+          "bullets": [
+            "Mapped and formalised internal processes, created procedures and document-control practices, and supported the company’s preparation for ISO 9001 implementation with external audit/consulting support.",
+            "Conceived the functional architecture of an internal operational-integration solution connecting Warehouse, HR, Finance, invoicing and operational documentation, simplifying access to critical information and workflows.",
+            "Managed operational information and compliance workflows in Petrobras Drake / SAP RT, including documentation, qualification matrices, personnel readiness and logistics data.",
+            "Produced DPR/RDO reports, monitored execution, indicators, deliverables and deviations, and coordinated crews, materials, suppliers and offshore-service readiness for FPSO/OSV campaigns."
+          ]
+        },
+        {
+          "role": "Senior Operations Assistant",
+          "company": "C-Tank",
+          "location": "Niterói – RJ, Brazil",
+          "period": "Jul 2020 – Oct 2020",
+          "bullets": [
+            "Supported digital records, logistics workflows, documentation control and operational mobilisation for offshore clients, including qualification and credentialing data in Petrobras systems."
+          ]
+        },
+        {
+          "role": "Offshore Technical-English Instructor / Communication Bridge",
+          "company": "Toolvox",
+          "location": "Pre-salt drillships (NS-43, NS-51)",
+          "period": "Dec 2018 – May 2020",
+          "bullets": [
+            "Delivered technical training to multinational offshore teams, translating SOPs and creating practical learning support for operational, safety and emergency communication.",
+            "Helped users adopt technical terminology and procedures through direct instruction, coaching and contextual learning in high-risk, multicultural environments."
+          ]
+        },
+        {
+          "role": "Engineering Research Intern (International)",
+          "company": "NTUA (Athens) & BAM (Berlin)",
+          "location": "",
+          "period": "2015 & 2018",
+          "bullets": [
+            "International engineering research involving structured data collection, technical analysis, testing support and multidisciplinary collaboration."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Digital Product & Technology",
+      "type": "bullets",
+      "bullets": [
+        "Product & UX: user journeys, mobile-first interfaces, accessibility, role-based experiences, content architecture and iterative product improvement.",
+        "Development: HTML, CSS, JavaScript, PHP, JSON and active development in TypeScript / TSX and Python.",
+        "Platforms & Integration: WordPress, Elementor, REST/API integrations, PWA concepts, Web Push, WebSocket/SSE and structured-data workflows.",
+        "Automation & AI: workflow automation, rule-based processes, AI-assisted development, structured prompts and integration concepts for intelligent user services.",
+        "Data & Reporting: Advanced Excel, Power BI, KPI dashboards, structured operational data and management reporting."
+      ]
+    },
+    {
+      "title": "Education",
+      "type": "lines",
+      "lines": [
+        "Postgraduate: Occupational Safety Engineering, Cruzeiro do Sul (2024–2025)",
+        "Postgraduate: Naval & Offshore Construction Engineering, UCP (2022–2023)",
+        "MBA: Project Management (PMBOK), USP / ESALQ (2019–2020)",
+        "BSc: Civil Engineering, UNIVIX / Multivix (2013–2018)",
+        "Technical Degree: Ports, IFES (2018–2019)"
+      ]
+    },
+    {
+      "title": "Tools & Methods",
+      "type": "bullets",
+      "bullets": [
+        "Project & Change: PMBOK, MS Project, roadmap planning, risk/dependency tracking, stakeholder alignment, action plans and continuous improvement",
+        "Digital Workplace / Adoption: user-centred design, documentation, training, onboarding flows, self-service concepts, communities and digital-literacy support",
+        "Data & Analytics: Advanced Excel, Power BI, KPI reporting, data consolidation and structured-data handling",
+        "Development & Automation: JavaScript, PHP, HTML/CSS, JSON, Python, TypeScript/TSX (active development), APIs and workflow automation",
+        "Enterprise / Operations Systems: Petrobras Drake / SAP RT; process mapping and ISO 9001 implementation support"
+      ]
+    },
+    {
+      "title": "Publication",
+      "type": "text",
+      "content": "Author of \"Technical English for Ports & Offshore\" (ISBN 978-65-00-04579-6, 2020; 3,000+ copies sold), demonstrating technical communication, knowledge structuring and learning-content development."
+    },
+    {
+      "title": "Additional Information",
+      "type": "bullets",
+      "bullets": [
+        "Fluent Portuguese and English; extensive experience communicating with multinational teams and international management.",
+        "Strong combination of technology, project delivery, process improvement, training and stakeholder-facing experience.",
+        "Based in Rio de Janeiro and immediately available for full-time opportunities.",
+        "Brazilian and Italian passports valid through 2027; Category B driver's license."
+      ]
+    }
+  ]
+}

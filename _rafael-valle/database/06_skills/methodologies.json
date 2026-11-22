@@ -1,0 +1,60 @@
+{
+  "_part": {
+    "id": "06_skills/methodologies",
+    "title": "Metodologias e processos",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "project_management": [
+      "PMI / PMBOK",
+      "project lifecycle",
+      "scope",
+      "schedule",
+      "cost",
+      "risk",
+      "stakeholders",
+      "procurement/suppliers",
+      "execution monitoring",
+      "closeout"
+    ],
+    "planning_controls": [
+      "PCP",
+      "critical path",
+      "look-ahead",
+      "forecast",
+      "S-curve",
+      "plan vs actual",
+      "recovery planning"
+    ],
+    "quality_process": [
+      "ISO 9000 / ISO 9001 preparation",
+      "process mapping",
+      "procedure writing",
+      "document control",
+      "standardization",
+      "traceability",
+      "audit readiness"
+    ],
+    "hseq": [
+      "LMRA",
+      "Toolbox Talk",
+      "risk analysis",
+      "incident investigation",
+      "corrective action",
+      "SIMOPS",
+      "emergency response drills"
+    ],
+    "reporting": [
+      "DPR",
+      "RDO",
+      "weekly report",
+      "monthly report",
+      "MoM",
+      "handover",
+      "management report"
+    ]
+  }
+}

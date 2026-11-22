@@ -207,7 +207,7 @@ function Open-Panel {
     if ($browser) {
         Start-Process -FilePath $browser -ArgumentList @("--app=$Url")
         Write-Host "Aberto como aplicativo: $Url"
-        Write-Host "Fechar a janela do aplicativo não encerra o servidor. O servidor continua na janela minimizada."
+        Write-Host 'Fechar a janela do aplicativo não encerra o servidor. O servidor continua na janela "JOBOS servidor".'
         return
     }
     Start-Process -FilePath $Url
@@ -288,11 +288,18 @@ function Invoke-Main {
         }
 
         $saved = Set-EngineEnv -EngineRoot $engineRoot
-        $serveArgs = @('-m', 'jobos', 'serve', '--host', '127.0.0.1', '--port', [string]$tcpPort)
-        $quoted = @($serveArgs | ForEach-Object { Format-NativeArg -Value $_ })
 
-        Write-Host 'Iniciando o servidor em uma janela minimizada...'
-        $proc = Start-Process -FilePath $py -ArgumentList $quoted -WorkingDirectory $engineRoot -WindowStyle Minimized -PassThru
+        Write-Host 'Iniciando o servidor na janela minimizada "JOBOS servidor"...'
+        # cmd /s /k mantém o título visível. Fechar essa janela encerra o Python.
+        $pyQuoted = Format-NativeArg -Value $py
+        $serveCmd = "title JOBOS servidor & $pyQuoted -m jobos serve --host 127.0.0.1 --port $tcpPort"
+        $psi = New-Object System.Diagnostics.ProcessStartInfo
+        $psi.FileName = $env:ComSpec
+        $psi.Arguments = '/s /k "' + $serveCmd + '"'
+        $psi.WorkingDirectory = $engineRoot
+        $psi.UseShellExecute = $true
+        $psi.WindowStyle = [System.Diagnostics.ProcessWindowStyle]::Minimized
+        $proc = [System.Diagnostics.Process]::Start($psi)
 
         $ready = $false
         $deadline = (Get-Date).AddSeconds(20)
@@ -305,7 +312,7 @@ function Invoke-Main {
         if ($ready) {
             Write-Host ''
             Write-Host "Painel no ar: $url"
-            Write-Host ('Processo iniciado: PID {0}. Para encerrar o servidor, feche a janela minimizada.' -f $proc.Id)
+            Write-Host ('Processo iniciado: PID {0}. Para encerrar o servidor, feche a janela "JOBOS servidor".' -f $proc.Id)
             Write-Host ('Se precisar localizar o dono da porta: (Get-NetTCPConnection -LocalPort {0} -State Listen).OwningProcess' -f $tcpPort)
             Open-Panel -Url $url -BrowserTab:$Browser -Quiet:$NoBrowser
             $script:ExitCode = 0

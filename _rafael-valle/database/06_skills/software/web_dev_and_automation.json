@@ -1,0 +1,186 @@
+{
+  "_part": {
+    "id": "06_skills/software/web_dev_and_automation",
+    "title": "Software/sistemas: web_dev_and_automation",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723"
+    ]
+  },
+  "data": {
+    "nodes": {
+      "sw_html": {
+        "name": "HTML",
+        "type": "Markup",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio",
+          "CV Builder Pro",
+          "web projects"
+        ],
+        "evidence": "DP",
+        "used_in": [
+          "proj_apollo",
+          "proj_cv_builder"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_css": {
+        "name": "CSS",
+        "type": "Styling",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio",
+          "CV Builder Pro",
+          "web projects"
+        ],
+        "evidence": "DP",
+        "used_in": [
+          "proj_apollo",
+          "proj_cv_builder"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_javascript": {
+        "name": "JavaScript",
+        "type": "Programming language",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio",
+          "CV Builder Pro",
+          "automation/web"
+        ],
+        "evidence": "DP",
+        "used_in": [
+          "proj_apollo",
+          "proj_cv_builder"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_typescript": {
+        "name": "TypeScript",
+        "type": "Programming language",
+        "status": "personal-project/developing",
+        "contexts": [
+          "Apollo::rio codebase modernization"
+        ],
+        "cv_rule": "Não posicionar como senior professional TypeScript engineer.",
+        "evidence": "U/P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_python": {
+        "name": "Python",
+        "type": "Programming language / data automation",
+        "status": "personal-project/developing",
+        "contexts": [
+          "dados",
+          "automação",
+          "web/software projects"
+        ],
+        "evidence": "DP",
+        "used_in": [
+          "exp_professional_development"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_php": {
+        "name": "PHP",
+        "type": "Programming language",
+        "status": "personal-project",
+        "contexts": [
+          "WordPress",
+          "Apollo::rio"
+        ],
+        "evidence": "U/P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_json": {
+        "name": "JSON",
+        "type": "Data format / structured data",
+        "status": "personal-project",
+        "contexts": [
+          "CV Builder",
+          "Apollo registry/data structures",
+          "career databases"
+        ],
+        "evidence": "DP",
+        "used_in": [
+          "proj_cv_builder",
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_sql": {
+        "name": "SQL",
+        "type": "Query language",
+        "status": "developing",
+        "contexts": [
+          "professional development",
+          "data"
+        ],
+        "cv_rule": "Descrever como desenvolvimento/aprendizado, não experiência corporativa.",
+        "evidence": "U",
+        "used_in": [
+          "exp_professional_development"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_wordpress": {
+        "name": "WordPress",
+        "type": "CMS / application platform",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo::rio",
+          "custom plugins",
+          "MU-plugins"
+        ],
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_github": {
+        "name": "GitHub",
+        "type": "Version control collaboration platform",
+        "status": "personal-project",
+        "contexts": [
+          "Apollo repositories",
+          "code/versioning"
+        ],
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "_part": {
+    "id": "04_experience/_timeline",
+    "title": "Linha do tempo (mais recente primeiro)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "timeline": [
+      {
+        "id": "exp_professional_development",
+        "company": "Desenvolvimento Profissional & Projetos Independentes",
+        "role": null,
+        "period": "Nov 2024 - presente",
+        "period_iso": {
+          "start": "2024-11",
+          "end": "present"
+        },
+        "file": "04_experience/exp_professional_development.json",
+        "counts_as_professional_experience": false
+      },
+      {
+        "id": "exp_vanoord",
+        "company": "Van Oord",
+        "role": "Superintendent 1 / Superintendente",
+        "period": "Jul 2021 - Nov 2024",
+        "period_iso": {
+          "start": "2021-07-12",
+          "end": "2024-11-01"
+        },
+        "file": "04_experience/exp_vanoord.json",
+        "counts_as_professional_experience": true
+      },
+      {
+        "id": "exp_ctank_analyst",
+        "company": "C-Tank",
+        "role": "Analista de Operações",
+        "period": "Out 2020 - Jun 2021",
+        "period_iso": {
+          "start": "2020-10",
+          "end": "2021-06"
+        },
+        "file": "04_experience/exp_ctank_analyst.json",
+        "counts_as_professional_experience": true
+      },
+      {
+        "id": "exp_ctank_assistant",
+        "company": "C-Tank",
+        "role": "Assistente de Operações Sênior",
+        "period": "Jul 2020 - Out 2020",
+        "period_iso": {
+          "start": "2020-07",
+          "end": "2020-10"
+        },
+        "file": "04_experience/exp_ctank_assistant.json",
+        "counts_as_professional_experience": true
+      },
+      {
+        "id": "exp_toolvox",
+        "company": "Toolvox",
+        "role": "Instrutor de Idiomas Offshore / Ponte de Comunicação Técnica",
+        "period": "Dez 2018 - Mai 2020",
+        "period_iso": {
+          "start": "2018-12",
+          "end": "2020-05"
+        },
+        "file": "04_experience/exp_toolvox.json",
+        "counts_as_professional_experience": true
+      },
+      {
+        "id": "exp_international_research",
+        "company": "NTUA / BAM",
+        "role": "Estagiário de Engenharia / Pesquisa Internacional",
+        "period": "2015 / 2018",
+        "period_iso": {
+          "start": "2015-05",
+          "end": "2018-03"
+        },
+        "file": "04_experience/exp_international_research.json",
+        "counts_as_professional_experience": false
+      },
+      {
+        "id": "exp_macrolub_internship",
+        "company": "Macrolub",
+        "role": "Estagiario de Marketing",
+        "period": "UNKNOWN_NOT_DOCUMENTED",
+        "file": "04_experience/exp_macrolub_internship.json",
+        "counts_as_professional_experience": false
+      }
+    ]
+  }
+}

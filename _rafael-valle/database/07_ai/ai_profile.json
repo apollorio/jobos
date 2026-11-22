@@ -1,0 +1,28 @@
+{
+  "_part": {
+    "id": "07_ai/ai_profile",
+    "title": "Perfil de IA - práticas, evidências e como posicionar",
+    "updated": "2026-11-19",
+    "sources": ["src_master_final_2026_10_21", "src_chat_2026_11_19", "src_workstation_scan_2026_11_19", "src_attachments_inventory_2026_10_22", "src_sos_registry", "src_cv_sbm_modern_workplace_en"],
+    "notes": "Resumo executivo do 07_ai. Detalhes: ai_coding_tools.json, ai_models_landscape.json, ai_tools_comparison.json."
+  },
+  "data": {
+    "summary_pt": "Usuário avançado de desenvolvimento assistido por IA: constrói e mantém produtos próprios (Apollo::rio, SOS Apollo, jobOS, CV Builder Pro) com Cursor, Claude Code, Codex, Cline e Continue, conhece o panorama de modelos (fechados e open-weight) e roda LLMs locais com Ollama. Aplica governança: SSOT/registry, regras de projeto, linter de verdade e motores determinísticos onde segurança importa.",
+    "summary_en": "Advanced AI-assisted builder: ships independent products (Apollo::rio, SOS Apollo, jobOS, CV Builder Pro) with Cursor, Claude Code, Codex, Cline and Continue; fluent in the closed and open-weight model landscape and runs local LLMs via Ollama. Applies governance: registry/SSOT, project rule files, truth-linting and deterministic engines where safety matters.",
+    "practices": {
+      "sw_ai_assisted_dev_governance": {"name": "Governança de desenvolvimento assistido por IA", "status": "personal-project", "evidence": "P", "contexts": ["Apollo::rio: registry como SSOT, design system core.js", "jobOS: profile.yml como camada de verdade + tools/truth_lint.py"]},
+      "sw_truth_lint": {"name": "Truth linter anti-alucinação para CVs/cartas gerados", "status": "personal-project", "evidence": "P", "detail": "Falha (exit 1) se o texto gerado tiver número, tecnologia, certificação, empresa/cargo ou superlativo sem evidência no perfil. Whitelist, não blacklist.", "used_in": ["proj_jobos"]},
+      "sw_local_policy_engine": {"name": "Motor de políticas determinístico sem IA generativa no runtime crítico", "status": "personal-project", "evidence": "P", "used_in": ["proj_sos"]},
+      "sw_prompt_engineering": {"name": "Prompts estruturados / engenharia de contexto", "status": "personal-project", "evidence": ["U", "D"], "detail": "Bases JSON canônicas (este banco), regras de verdade, templates de CV por vaga; citado no CV Modern Workplace (Nov/2026)."},
+      "sw_ai_job_matching": {"name": "Triagem/score de vagas automatizado e consciente de verdade", "status": "personal-project", "evidence": "P", "used_in": ["proj_jobos"], "detail": "DISCOVER > DEDUPE > SCORE > DECIDE > DIGEST > TRACK > LEARN; este banco + tools/match.mjs é a evolução."},
+      "sw_mcp": {"name": "MCP (Model Context Protocol)", "status": "known/used-via-tools", "evidence": "C", "detail": "Conectores de ferramentas para agentes (Claude Code, Cursor, Cline)."},
+      "sw_local_llm_ops": {"name": "LLMs locais (Ollama) como backend de Continue/Cline", "status": "personal-project/workflow", "evidence": ["C", "O"]}
+    },
+    "where_to_use_on_cv": {
+      "strong_fit_roles": ["Modern Workplace / Digital Workplace", "Transformação digital / inovação em O&G", "Processos digitais / automação", "Analista de negócios / business agility", "Project controls com automação de relatórios"],
+      "phrasing_en": ["AI-assisted development and agentic coding workflows (Cursor, Claude Code, Codex, Cline, Continue)", "Local LLM tooling (Ollama) and model selection for cost, privacy and quality", "Truth-safe automation: structured data as single source of truth, rule files and validation linters"],
+      "phrasing_pt": ["Desenvolvimento assistido por IA e fluxos com agentes de código (Cursor, Claude Code, Codex, Cline, Continue)", "LLMs locais (Ollama) e escolha de modelos por custo, privacidade e qualidade", "Automação segura: dados estruturados como fonte única de verdade, arquivos de regras e linters de validação"]
+    },
+    "do_not_claim": ["AI/ML Engineer ou Data Scientist profissional", "Treinamento ou fine-tuning de modelos em produção", "MLOps / deploy de modelos em escala", "Experiência corporativa com IA (todo o uso é em projetos próprios)", "Certificações de IA (nenhuma documentada)"]
+  }
+}

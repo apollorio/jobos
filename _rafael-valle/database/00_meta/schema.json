@@ -1,0 +1,415 @@
+{
+  "_part": {
+    "id": "00_meta/schema",
+    "title": "Convenções, escala de evidência e status",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_kg_v3_2026_10_20",
+      "src_ultra_v2_2026_10_20",
+      "src_master_tree_v1_2026_10_20",
+      "src_master_260723",
+      "src_career_db_v3_2026_03_10"
+    ]
+  },
+  "data": {
+    "envelope": {
+      "_part": "metadados da parte (id, título, data, fontes)",
+      "data": "conteúdo"
+    },
+    "evidence_scale": {
+      "D": "Documentado em arquivos/CVs/contratos/job descriptions/timesheets/e-mails/relatórios analisados.",
+      "U": "Confirmado diretamente por Rafael em conversa.",
+      "DP": "Documentado + confirmado diretamente por Rafael.",
+      "P": "Projeto pessoal/independente confirmado.",
+      "V": "Requer validação adicional antes de usar como afirmação forte.",
+      "X": "Boundary: não alegar como experiência/credencial.",
+      "O": "Observado diretamente na estação de trabalho do Rafael (ferramenta instalada / pasta de projeto existente). Prova exposição/uso pessoal, não proficiência profissional.",
+      "C": "Conhecimento declarado pelo Rafael no chat (2026-11-19); tratar como U para conhecimento, não como experiência corporativa."
+    },
+    "software_status_values": [
+      "strong/proven",
+      "used/proven",
+      "developing",
+      "personal-project",
+      "listed-needs-context",
+      "do-not-claim",
+      "personal-project/workflow",
+      "user-mentioned-unverified",
+      "historical-training",
+      "used/proven independent-project",
+      "installed-observed"
+    ],
+    "software_cv_rule": "Somente strong/proven ou used/proven entram como experiência prática sem qualificador.",
+    "design_rules": [
+      "Cada software/sistema/conceito é um nó atômico em software_systems_tree com status, used_in e domain_tags.",
+      "domain_tree referência por ID e source_paths; não duplicar texto.",
+      "Valores null/UNKNOWN_NOT_DOCUMENTED nunca entram em CV até serem preenchidos e validados.",
+      "Qualquer afirmação deve respeitar truth_boundaries e standards_and_regulatory_coverage.",
+      "Pipeline de vagas e networking ficam em arquivo separado."
+    ],
+    "interpretation_notes": {
+      "STAR": "Nenhum software autônomo chamado 'STAR' foi encontrado nas fontes recuperadas. 'Amaralina Star' é o nome do navio-sonda NS-43. SAP RT é um sistema Petrobras separado e Drake é outro sistema separado. Se 'STAR' for um terceiro software específico, adicionar somente após Rafael confirmar o nome/função.",
+      "software_model": "Cada software/sistema/linguagem abaixo é um nó individual, com status, contexto, uso e limite de alegação."
+    },
+    "completeness_declaration": {
+      "scope": "100% of the currently known, supplied, recovered and user-confirmed education/career information available in the three attached master JSON files plus confirmed facts from the working career dossier.",
+      "meaning_of_100_percent": "All known facts are represented. Facts that are genuinely unknown or not documented are explicitly represented as UNKNOWN_NOT_DOCUMENTED instead of being guessed.",
+      "no_fabrication": true,
+      "no_null_placeholders": true,
+      "no_to_fill_placeholders": true,
+      "safe_for_future_cv_generation": true,
+      "default_rule": "A future CV may select/reorder facts, but must never upgrade UNKNOWN_NOT_DOCUMENTED, developing, adjacent-only, personal-project, historical-training or do-not-claim into proven professional experience."
+    },
+    "id_conventions": {
+      "experience": "exp_*",
+      "education": "edu_*",
+      "software": "sw_*",
+      "project_vanoord": "vo_<code>[_<year>]",
+      "project_independent": "proj_*",
+      "vessel": "type_* | vessel_*",
+      "domain": "snake_case (09_domains)",
+      "standard": "std_*",
+      "metric": "<scope>.<name>",
+      "concept (matcher)": "c_*",
+      "archetype": "arch_*"
+    },
+    "language": "Chaves em inglês; conteúdo PT-BR e/ou EN conforme a fonte. Campos *_pt / *_en ou {pt,en} quando bilíngue.",
+    "history_meta": {
+      "master_final": {
+        "title": "RAFAEL PERINI VALLE — MASTER CAREER DATABASE / KNOWLEDGE GRAPH — FINAL",
+        "version": "2026-10-21.100",
+        "language": "pt-BR (CV-facing fields in EN where noted)",
+        "architecture": "cellular / atomic nodes / cross-linked knowledge graph / evidence-aware / no silent inference",
+        "merged_from": [
+          "RAFAEL_PERINI_VALLE_MASTER_CAREER_TREE_2026-10-20.json",
+          "2-RAFAEL_PERINI_VALLE_ULTRA_CAREER_KNOWLEDGE_GRAPH_2026-10-20.json"
+        ],
+        "purpose": [
+          "Fonte única de verdade para CVs específicos por vaga.",
+          "Análise de fit por domínio, requisito, software, embarcação, cliente e senioridade.",
+          "Banco de evidências para entrevistas, LinkedIn, Gupy, cartas e aplicação PMP.",
+          "Separação explícita entre experiência comprovada, informação confirmada pelo usuário, desenvolvimento pessoal e lacunas.",
+          "Impedir keyword stuffing ou criação de experiência inexistente.",
+          "Fonte-mestra para gerar CVs específicos por vaga sem inventar experiência.",
+          "Base estruturada para análise de fit, entrevistas, LinkedIn, Gupy, cartas e PMP.",
+          "Separar experiência real por domínio: naval/marítimo, manutenção, projetos, O&G, HSEQ, qualidade, logística, dados, tecnologia e projetos independentes.",
+          "Registrar também limites explícitos do que NÃO deve ser alegado."
+        ],
+        "evidence_scale": {
+          "D": "Documentado em arquivos/CVs/contratos/job descriptions/timesheets/e-mails/relatórios analisados.",
+          "U": "Confirmado diretamente por Rafael em conversa.",
+          "DP": "Documentado + confirmado diretamente por Rafael.",
+          "P": "Projeto pessoal/independente confirmado.",
+          "V": "Requer validação adicional antes de usar como afirmação forte.",
+          "X": "Boundary: não alegar como experiência/credencial."
+        },
+        "interpretation_notes": {
+          "STAR": "Nenhum software autônomo chamado 'STAR' foi encontrado nas fontes recuperadas. 'Amaralina Star' é o nome do navio-sonda NS-43. SAP RT é um sistema Petrobras separado e Drake é outro sistema separado. Se 'STAR' for um terceiro software específico, adicionar somente após Rafael confirmar o nome/função.",
+          "software_model": "Cada software/sistema/linguagem abaixo é um nó individual, com status, contexto, uso e limite de alegação."
+        },
+        "design_rules": [
+          "Cada software/sistema/conceito é um nó atômico em software_systems_tree com status, used_in e domain_tags.",
+          "domain_tree referência por ID e source_paths; não duplicar texto.",
+          "Valores null/UNKNOWN_NOT_DOCUMENTED nunca entram em CV até serem preenchidos e validados.",
+          "Qualquer afirmação deve respeitar truth_boundaries e standards_and_regulatory_coverage.",
+          "Pipeline de vagas e networking ficam em arquivo separado."
+        ],
+        "changelog_vs_v2": [
+          "Adicionado exp_professional_development (Nov 2024 - presente).",
+          "Adicionada árvore domain_tree (13 domínios) com refs por ID e source_paths.",
+          "Reincorporado do master tree: atividades navais, trilhas de domínio, venue da Dismantle, escopo técnico do Apollo, características do SOS.",
+          "Software: +10 nós de arquitetura/padrões; used_in e domain_tags em todos os nos.",
+          "Projetos: details_to_fill por projeto; períodos exatos onde conhecidos.",
+          "Novo: metrics_register, standards_and_regulatory_coverage, positioning_layer, mobility_and_preferences, validation_queue.",
+          "Flag de tenure (contrato 3y3m20d vs 3y5m) em exp_vanoord.tenure.",
+          "truth_boundaries ampliado (regulatório, FPSO produção, local content, digital, Dismantle)."
+        ],
+        "validation_stats": {
+          "top_level_modules": 28,
+          "domain_nodes": 13,
+          "experience_nodes": 6,
+          "van_oord_project_nodes": 13,
+          "independent_project_nodes": 4,
+          "software_atomic_nodes_total": 53,
+          "software_nodes_do_not_claim": 10,
+          "software_nodes_not_marked_do_not_claim": 43,
+          "software_nodes_strong_or_used_proven": 7,
+          "education_nodes": 5,
+          "training_certification_nodes": 13,
+          "truth_boundary_groups": 12,
+          "standards_nodes": 13,
+          "headline_templates": 8,
+          "safe_wording_items": 11,
+          "metrics_total": 67,
+          "metrics_documented": 15,
+          "metrics_to_fill": 52,
+          "validation_queue_items": 16,
+          "reference_integrity": "all IDs and source_paths resolved"
+        },
+        "status": "CANONICAL_MASTER_FINAL",
+        "completeness_declaration": {
+          "scope": "100% of the currently known, supplied, recovered and user-confirmed education/career information available in the three attached master JSON files plus confirmed facts from the working career dossier.",
+          "meaning_of_100_percent": "All known facts are represented. Facts that are genuinely unknown or not documented are explicitly represented as UNKNOWN_NOT_DOCUMENTED instead of being guessed.",
+          "no_fabrication": true,
+          "no_null_placeholders": true,
+          "no_to_fill_placeholders": true,
+          "safe_for_future_cv_generation": true,
+          "default_rule": "A future CV may select/reorder facts, but must never upgrade UNKNOWN_NOT_DOCUMENTED, developing, adjacent-only, personal-project, historical-training or do-not-claim into proven professional experience."
+        },
+        "canonical_priority": [
+          "formal/documented evidence",
+          "user-confirmed factual corrections/additions",
+          "current canonical wording",
+          "historical master files",
+          "inference only when explicitly labeled; never as a factual CV claim"
+        ],
+        "source_files": [
+          {
+            "id": "ultra_v2",
+            "filename": "2-RAFAEL_PERINI_VALLE_ULTRA_CAREER_KNOWLEDGE_GRAPH_2026-10-20.json",
+            "sha256": "ce657460ae5f58c9da15dfc534439800d4e0e16acce9c87534d89f2542829033",
+            "size_bytes": 63413,
+            "root_modules": [
+              "meta",
+              "identity",
+              "career_summary",
+              "experience_nodes",
+              "vessel_asset_tree",
+              "software_systems_tree",
+              "methodologies_processes_tree",
+              "oil_gas_tree",
+              "maintenance_repairs_tree",
+              "project_management_tree",
+              "quality_hseq_tree",
+              "education_tree",
+              "certification_training_tree",
+              "project_portfolio_tree",
+              "publication_tree",
+              "volunteer_leadership_tree",
+              "stakeholder_client_tree",
+              "interview_story_bank",
+              "role_fit_tree",
+              "truth_boundaries",
+              "source_registry",
+              "indexes"
+            ]
+          },
+          {
+            "id": "v3_final",
+            "filename": "RAFAEL_PERINI_VALLE_CAREER_KNOWLEDGE_GRAPH_v3_FINAL_2026-10-20(1).json",
+            "sha256": "61b89459874a28c676c48c95ee3c4eec25d2e6aa1a34a1461f8e133e5d245c35",
+            "size_bytes": 177449,
+            "root_modules": [
+              "meta",
+              "identity",
+              "career_summary",
+              "domain_tree",
+              "experience_nodes",
+              "project_portfolio_tree",
+              "vessel_asset_tree",
+              "software_systems_tree",
+              "methodologies_processes_tree",
+              "oil_gas_tree",
+              "maintenance_repairs_tree",
+              "project_management_tree",
+              "quality_hseq_tree",
+              "standards_and_regulatory_coverage",
+              "education_tree",
+              "certification_training_tree",
+              "publication_tree",
+              "volunteer_leadership_tree",
+              "stakeholder_client_tree",
+              "interview_story_bank",
+              "positioning_layer",
+              "role_fit_tree",
+              "truth_boundaries",
+              "metrics_register",
+              "mobility_and_preferences",
+              "validation_queue",
+              "source_registry",
+              "indexes"
+            ]
+          },
+          {
+            "id": "master_v1",
+            "filename": "RAFAEL_PERINI_VALLE_MASTER_CAREER_TREE_2026-10-20(1).json",
+            "sha256": "b698a03941ec9ebc5e3373976a4198c853b8d10a628defce0bb3fe00fd70afaa",
+            "size_bytes": 25673,
+            "root_modules": [
+              "schema",
+              "identity",
+              "professional_positioning",
+              "career_timeline",
+              "domain_tree",
+              "van_oord_project_portfolio",
+              "education",
+              "training_certifications",
+              "publication",
+              "independent_projects",
+              "interview_evidence_bank",
+              "truth_boundaries_do_not_claim",
+              "career_story"
+            ]
+          }
+        ],
+        "final_validation": {
+          "json_valid": true,
+          "null_values": 0,
+          "TO_FILL_values": 0,
+          "software_atomic_nodes": 71,
+          "experience_nodes": 6,
+          "education_nodes": 5,
+          "training_certification_nodes": 13,
+          "van_oord_project_phase_nodes": 13,
+          "independent_project_nodes": 4,
+          "standards_regulatory_nodes": 13,
+          "metrics_nodes": 67,
+          "truth_boundary_groups": 15,
+          "known_unknowns_explicitly_recorded": 7
+        }
+      },
+      "kg_v3": {
+        "title": "Rafael Perini Valle - Career Knowledge Graph v3 (FINAL, merged)",
+        "version": "2026-10-20.3",
+        "language": "pt-BR (CV-facing fields in EN where noted)",
+        "architecture": "cellular / atomic nodes / ID-referenced domain tree (domain_tree holds IDs + source_paths, not copies)",
+        "merged_from": [
+          "RAFAEL_PERINI_VALLE_MASTER_CAREER_TREE_2026-10-20.json",
+          "2-RAFAEL_PERINI_VALLE_ULTRA_CAREER_KNOWLEDGE_GRAPH_2026-10-20.json"
+        ],
+        "purpose": [
+          "Fonte única de verdade para CVs específicos por vaga.",
+          "Análise de fit por domínio, requisito, software, embarcação, cliente e senioridade.",
+          "Banco de evidências para entrevistas, LinkedIn, Gupy, cartas e aplicação PMP.",
+          "Separação explícita entre experiência comprovada, informação confirmada pelo usuário, desenvolvimento pessoal e lacunas.",
+          "Impedir keyword stuffing ou criação de experiência inexistente.",
+          "Fonte-mestra para gerar CVs específicos por vaga sem inventar experiência.",
+          "Base estruturada para análise de fit, entrevistas, LinkedIn, Gupy, cartas e PMP.",
+          "Separar experiência real por domínio: naval/marítimo, manutenção, projetos, O&G, HSEQ, qualidade, logística, dados, tecnologia e projetos independentes.",
+          "Registrar também limites explícitos do que NÃO deve ser alegado."
+        ],
+        "evidence_scale": {
+          "D": "Documentado em arquivos/CVs/contratos/job descriptions/timesheets/e-mails/relatórios analisados.",
+          "U": "Confirmado diretamente por Rafael em conversa.",
+          "DP": "Documentado + confirmado diretamente por Rafael.",
+          "P": "Projeto pessoal/independente confirmado.",
+          "V": "Requer validação adicional antes de usar como afirmação forte.",
+          "X": "Boundary: não alegar como experiência/credencial."
+        },
+        "interpretation_notes": {
+          "STAR": "Nenhum software autônomo chamado 'STAR' foi encontrado nas fontes recuperadas. 'Amaralina Star' é o nome do navio-sonda NS-43. SAP RT é um sistema Petrobras separado e Drake é outro sistema separado. Se 'STAR' for um terceiro software específico, adicionar somente após Rafael confirmar o nome/função.",
+          "software_model": "Cada software/sistema/linguagem abaixo é um nó individual, com status, contexto, uso e limite de alegação."
+        },
+        "design_rules": [
+          "Cada software/sistema/conceito é um nó atômico em software_systems_tree com status, used_in e domain_tags.",
+          "domain_tree referência por ID e source_paths; não duplicar texto.",
+          "Valores null/TO_FILL nunca entram em CV até serem preenchidos e validados.",
+          "Qualquer afirmação deve respeitar truth_boundaries e standards_and_regulatory_coverage.",
+          "Pipeline de vagas e networking ficam em arquivo separado."
+        ],
+        "changelog_vs_v2": [
+          "Adicionado exp_professional_development (Nov 2024 - presente).",
+          "Adicionada árvore domain_tree (13 domínios) com refs por ID e source_paths.",
+          "Reincorporado do master tree: atividades navais, trilhas de domínio, venue da Dismantle, escopo técnico do Apollo, características do SOS.",
+          "Software: +10 nós de arquitetura/padrões; used_in e domain_tags em todos os nos.",
+          "Projetos: details_to_fill por projeto; períodos exatos onde conhecidos.",
+          "Novo: metrics_register, standards_and_regulatory_coverage, positioning_layer, mobility_and_preferences, validation_queue.",
+          "Flag de tenure (contrato 3y3m20d vs 3y5m) em exp_vanoord.tenure.",
+          "truth_boundaries ampliado (regulatório, FPSO produção, local content, digital, Dismantle)."
+        ],
+        "validation_stats": {
+          "top_level_modules": 28,
+          "domain_nodes": 13,
+          "experience_nodes": 6,
+          "van_oord_project_nodes": 13,
+          "independent_project_nodes": 4,
+          "software_atomic_nodes_total": 53,
+          "software_nodes_do_not_claim": 10,
+          "software_nodes_not_marked_do_not_claim": 43,
+          "software_nodes_strong_or_used_proven": 7,
+          "education_nodes": 5,
+          "training_certification_nodes": 13,
+          "truth_boundary_groups": 12,
+          "standards_nodes": 13,
+          "headline_templates": 8,
+          "safe_wording_items": 11,
+          "metrics_total": 67,
+          "metrics_documented": 15,
+          "metrics_to_fill": 52,
+          "validation_queue_items": 16,
+          "reference_integrity": "all IDs and source_paths resolved"
+        }
+      },
+      "ultra_v2": {
+        "title": "Rafael Perini Valle — Ultra Modular Career Knowledge Graph",
+        "version": "2026-10-20.2",
+        "language": "pt-BR",
+        "architecture": "cellular / atomic-node / cross-linked tree",
+        "purpose": [
+          "Fonte única de verdade para CVs específicos por vaga.",
+          "Análise de fit por domínio, requisito, software, embarcação, cliente e senioridade.",
+          "Banco de evidências para entrevistas, LinkedIn, Gupy, cartas e aplicação PMP.",
+          "Separação explícita entre experiência comprovada, informação confirmada pelo usuário, desenvolvimento pessoal e lacunas.",
+          "Impedir keyword stuffing ou criação de experiência inexistente."
+        ],
+        "evidence_scale": {
+          "D": "Documentado em arquivos/CVs/contratos/job descriptions/timesheets/e-mails/relatórios analisados.",
+          "U": "Confirmado diretamente por Rafael em conversa.",
+          "DP": "Documentado + confirmado diretamente por Rafael.",
+          "P": "Projeto pessoal/independente confirmado.",
+          "V": "Requer validação adicional antes de usar como afirmação forte.",
+          "X": "Boundary: não alegar como experiência/credencial."
+        },
+        "important_interpretation_note": {
+          "STAR": "Nenhum software autônomo chamado 'STAR' foi encontrado nas fontes recuperadas. 'Amaralina Star' é o nome do navio-sonda NS-43. SAP RT é um sistema Petrobras separado e Drake é outro sistema separado. Se 'STAR' for um terceiro software específico, adicionar somente após Rafael confirmar o nome/função.",
+          "software_model": "Cada software/sistema/linguagem abaixo é um nó individual, com status, contexto, uso e limite de alegação."
+        },
+        "validation_stats": {
+          "top_level_modules": 22,
+          "software_atomic_nodes": 43,
+          "experience_nodes": 5,
+          "van_oord_project_nodes": 13,
+          "independent_project_nodes": 4,
+          "education_nodes": 5,
+          "training_certification_nodes": 13,
+          "truth_boundary_groups": 7
+        }
+      },
+      "master_tree_v1_schema": {
+        "name": "Rafael Perini Valle Career Master Tree",
+        "version": "2026-10-20.1",
+        "language": "pt-BR",
+        "purpose": [
+          "Fonte-mestra para gerar CVs específicos por vaga sem inventar experiência.",
+          "Base estruturada para análise de fit, entrevistas, LinkedIn, Gupy, cartas e PMP.",
+          "Separar experiência real por domínio: naval/marítimo, manutenção, projetos, O&G, HSEQ, qualidade, logística, dados, tecnologia e projetos independentes.",
+          "Registrar também limites explícitos do que NÃO deve ser alegado."
+        ]
+      },
+      "master_260723": {
+        "file": "260723_rafael-valle.json",
+        "version": "1.0",
+        "generated": "2026-07-23",
+        "purpose": "Base de carreira rica e detalhada de Rafael Perini Valle — fonte única de verdade para geração de CV, personalização por vaga (ATS) e apoio à recolocação profissional.",
+        "language_note": "Todos os textos narrativos de CV (bullets de experiência, resumos, identidade) estão em PORTUGUÊS na PRIMEIRA PESSOA, conforme instrução obrigatória do usuário. Verbos como 'Coordenei', 'Desenvolvi e controlei', 'Monitorei', 'Acompanhei', 'Apoiei', 'Planejei', 'Mapeei', 'Estruturei', 'Concebi', 'Contribuí' substituem qualquer forma neutra/terceira pessoa. Versões em inglês (en) acompanham no estilo padrão de CV internacional (particípio passado com sujeito implícito 'I').",
+        "sources_of_truth": [
+          "Arquivo anexado pelo usuário: 'rafael-perini-valle-career-database (1).json' (dossiê de carreira completo, versão 3.0) — fonte primária dos fatos profissionais.",
+          "Site do livro: https://livro.rvalle.com.br/ (home) — fatos sobre a publicação, impacto e projetos citados pelo próprio autor.",
+          "Página do autor: https://livro.rvalle.com.br/rafael/ — biografia, projetos (Apollo::rio, Dismantle.art), números de impacto do livro.",
+          "Texto de CV em primeira pessoa já revisado e aprovado nesta mesma sessão de trabalho (cv-data.js / app.js do CV digital)."
+        ],
+        "sources_attempted_and_unavailable": [
+          "LinkedIn (https://www.linkedin.com/in/rpvalle/): o conteúdo do perfil é renderizado via JavaScript e/ou requer login; a extensão Claude in Chrome não estava conectada nesta sessão para renderizar a página. NENHUM dado do LinkedIn foi inventado — os únicos fatos de LinkedIn aqui presentes (URL do perfil, 12.000+ seguidores, existência de artigos publicados, recomendações recebidas) já constavam no dossiê fornecido pelo próprio usuário, não de scraping."
+        ],
+        "integrity_statement": "Nenhuma empresa, cargo, certificação, métrica, ferramenta ou conquista foi inventada. Todo o conteúdo abaixo deriva das fontes listadas acima; reformulações limitam-se a: (1) conversão de voz para primeira pessoa, (2) tradução PT↔EN, (3) organização estrutural em JSON."
+      },
+      "career_db_v3": {
+        "version": "3.0",
+        "created": "2026-03-10",
+        "purpose": "Comprehensive career database for CV generation, ATS optimization, and professional consulting",
+        "author_system": "CV Builder Pro — compiled from dossiê, CVs, and professional narrative"
+      }
+    }
+  }
+}

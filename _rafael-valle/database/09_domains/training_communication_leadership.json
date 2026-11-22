@@ -1,0 +1,67 @@
+{
+  "_part": {
+    "id": "09_domains/training_communication_leadership",
+    "title": "Domínio: Treinamento / Comunicação / Liderança",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "label_pt": "Treinamento / Comunicação / Liderança",
+    "priority": 10,
+    "summary": "Instrutor de inglês técnico offshore, autor de livro técnico, liderança operacional, comunicação com comandantes e equipes multinacionais, liderança voluntaria.",
+    "highlights_master_tree": {
+      "experience": [
+        "Instrutor de inglês técnico marítimo/offshore",
+        "Treinamento de equipes multinacionais",
+        "SOP translation",
+        "Toolbox / bridge / radio / emergency communication",
+        "Liderança operacional",
+        "Coordenação de equipes e terceiros",
+        "Comunicação com comandantes",
+        "Alinhamentos com clientes e gestão"
+      ]
+    },
+    "source_paths": [
+      "experience_nodes.exp_toolvox",
+      "publication_tree.book",
+      "volunteer_leadership_tree",
+      "identity.languages"
+    ],
+    "refs": {
+      "experiences": [
+        "exp_toolvox",
+        "exp_vanoord"
+      ],
+      "projects": [],
+      "vessels": [],
+      "software": [],
+      "certifications": [],
+      "education": [],
+      "stories": [],
+      "boundary_groups": [],
+      "volunteer": [
+        "crea_jr_aracruz",
+        "crea_jr_vitoria",
+        "fenec_sengtec",
+        "abracou",
+        "iaeste"
+      ]
+    },
+    "fit_estimates": [
+      {
+        "item": "Inglês",
+        "est_pct": "100",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      },
+      {
+        "item": "Comunicação operação <-> escritorio",
+        "est_pct": "95",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      }
+    ],
+    "hard_gaps_or_boundaries": [],
+    "id": "training_communication_leadership"
+  }
+}

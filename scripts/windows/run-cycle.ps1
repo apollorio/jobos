@@ -41,7 +41,9 @@ param(
 
     [switch]$DryRun,
 
-    [switch]$NoNotify
+    [switch]$NoNotify,
+
+    [switch]$ProbeExitCode
 )
 
 Set-StrictMode -Version 1.0
@@ -68,6 +70,28 @@ function Resolve-EngineRoot {
         throw "Raiz inválida (faltam pyproject.toml e src\jobos): $resolved"
     }
     return $resolved
+}
+
+function Resolve-AppExitCode {
+    # WaitForExit(ms) no PowerShell 5.1 devolve o controle com ExitCode ainda nulo
+    # quando a saída está redirecionada. A segunda espera e o Refresh preenchem o código.
+    # Se o handle continuar vazio, vale o "código=N" impresso pelo app. Nulo não vira 3 aqui.
+    param(
+        $Process,
+        [bool]$Finished,
+        [string[]]$TextLines
+    )
+    $code = $null
+    if ($Finished -and $null -ne $Process) {
+        try { $null = $Process.WaitForExit() } catch { }
+        try { $Process.Refresh() } catch { }
+        if ($null -ne $Process.ExitCode) { $code = [int]$Process.ExitCode }
+    }
+    if ($null -eq $code -and $TextLines) {
+        $match = [regex]::Match(($TextLines -join "`n"), 'c[oó]digo=(\d+)')
+        if ($match.Success) { $code = [int]$match.Groups[1].Value }
+    }
+    return $code
 }
 
 function Format-NativeArg {
@@ -243,9 +267,12 @@ function Invoke-Main {
 
         $sw = [System.Diagnostics.Stopwatch]::StartNew()
         $code = $null
+        $finished = $false
         try {
             $proc = Start-Process -FilePath $py -ArgumentList $quoted -WorkingDirectory $engineRoot `
                 -NoNewWindow -PassThru -RedirectStandardOutput $tmpOut -RedirectStandardError $tmpErr
+            # Sem este handle, o PowerShell 5.1 perde ExitCode depois que o processo termina.
+            try { $null = $proc.Handle } catch { }
             $finished = $proc.WaitForExit([int]($limitMin * 60 * 1000))
             if (-not $finished) {
                 Write-Log ("[PRAZO] o ciclo passou de {0} min. Encerrando o processo antes do limite do Agendador." -f $limitMin)
@@ -254,7 +281,7 @@ function Invoke-Main {
                 $code = 2
             }
             else {
-                $code = $proc.ExitCode
+                $code = $null
             }
         }
         catch {
@@ -284,6 +311,9 @@ function Invoke-Main {
         }
         Add-LogLines -Lines $logLines.ToArray()
 
+        if ($finished) {
+            $code = Resolve-AppExitCode -Process $proc -Finished $true -TextLines @($outLines + $errLines)
+        }
         if ($null -eq $code) {
             Write-Log '[ERRO] não foi possível obter o código de saída do app; assumindo 3.'
             $code = 3
@@ -303,5 +333,41 @@ function Invoke-Main {
     }
 }
 
+function Invoke-ExitCodeProbe {
+    # Mesmo lançamento do ciclo: saída em arquivo e WaitForExit com prazo.
+    # O texto mente (código=9) e o processo sai 2. O wrapper tem de guardar 2.
+    $engineRoot = Resolve-EngineRoot -Candidate $Root
+    $py = Join-Path $engineRoot '.venv\Scripts\python.exe'
+    if (-not (Test-Path -LiteralPath $py -PathType Leaf)) {
+        Write-Err "ERRO: Python do app ausente: $py"
+        exit 5
+    }
+    $id = [guid]::NewGuid().ToString('N')
+    $tmpOut = Join-Path ([System.IO.Path]::GetTempPath()) "jobos-probe-$id.out"
+    $tmpErr = Join-Path ([System.IO.Path]::GetTempPath()) "jobos-probe-$id.err"
+    $probePy = Join-Path ([System.IO.Path]::GetTempPath()) "jobos-probe-$id.py"
+    Set-Content -LiteralPath $probePy -Encoding ASCII -Value "print('codigo=9')`r`nraise SystemExit(2)`r`n"
+    $proc = Start-Process -FilePath $py -ArgumentList @($probePy) `
+        -WorkingDirectory $engineRoot -NoNewWindow -PassThru -RedirectStandardOutput $tmpOut -RedirectStandardError $tmpErr
+    try { $null = $proc.Handle } catch { }
+    $finished = $proc.WaitForExit(20000)
+    $outLines = @()
+    $errLines = @()
+    if (Test-Path -LiteralPath $tmpOut) { $outLines = @(Get-Content -LiteralPath $tmpOut -Encoding UTF8 -ErrorAction SilentlyContinue) }
+    if (Test-Path -LiteralPath $tmpErr) { $errLines = @(Get-Content -LiteralPath $tmpErr -Encoding UTF8 -ErrorAction SilentlyContinue) }
+    Remove-Item -LiteralPath $tmpOut, $tmpErr, $probePy -Force -ErrorAction SilentlyContinue
+    $code = $null
+    if ($finished) {
+        $code = Resolve-AppExitCode -Process $proc -Finished $true -TextLines @($outLines + $errLines)
+    }
+    if ($null -eq $code) {
+        Write-Err 'probe sem codigo'
+        exit 3
+    }
+    Write-Output "probe_exit $code"
+    exit ([int]$code)
+}
+
+if ($ProbeExitCode) { Invoke-ExitCodeProbe }
 Invoke-Main
 exit $script:ExitCode

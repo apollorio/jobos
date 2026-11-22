@@ -1,0 +1,27 @@
+{
+  "_part": {
+    "id": "06_skills/software/training_or_legacy_tools",
+    "title": "Software/sistemas: training_or_legacy_tools",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723"
+    ]
+  },
+  "data": {
+    "nodes": {
+      "sw_webdesigner_course": {
+        "name": "WebDesigner",
+        "provider": "Microlins Franchising",
+        "date": "Fev/2011",
+        "type": "Curso/formação em ferramentas web",
+        "status": "historical-training",
+        "evidence": "D",
+        "used_in": [],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      }
+    }
+  }
+}

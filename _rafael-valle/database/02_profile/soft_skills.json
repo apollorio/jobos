@@ -1,0 +1,51 @@
+{
+  "_part": {
+    "id": "02_profile/soft_skills",
+    "title": "Soft skills",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_260723",
+      "src_career_db_v3_2026_03_10"
+    ]
+  },
+  "data": {
+    "soft_skills": [
+      {
+        "pt": "Adaptabilidade extrema (geográfica e multicultural)",
+        "en": "Extreme adaptability (geographic and multicultural)"
+      },
+      {
+        "pt": "Comunicação ativa sob pressão",
+        "en": "Active communication under pressure"
+      },
+      {
+        "pt": "Integração de equipes multiculturais (português/inglês técnico)",
+        "en": "Multicultural team integration (Portuguese/technical English)"
+      },
+      {
+        "pt": "Liderança por iniciativa",
+        "en": "Leadership by initiative"
+      },
+      {
+        "pt": "Resolução de problemas em ambientes de alta criticidade",
+        "en": "Problem-solving in high-criticality environments"
+      },
+      {
+        "pt": "Pensamento estratégico",
+        "en": "Strategic thinking"
+      },
+      {
+        "pt": "Gestão de stakeholders (cliente, diretoria, reguladores, fornecedores)",
+        "en": "Stakeholder management (client, management, regulators, suppliers)"
+      },
+      {
+        "pt": "Comunicação escrita e didática (autor de livro técnico com 3.000+ exemplares vendidos)",
+        "en": "Written and didactic communication (author of a technical book with 3,000+ copies sold)"
+      },
+      {
+        "pt": "Construção de marca pessoal e comunidade (12.000+ seguidores no LinkedIn)",
+        "en": "Personal branding and community building (12,000+ LinkedIn followers)"
+      }
+    ]
+  }
+}

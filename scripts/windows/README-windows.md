@@ -83,9 +83,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\windows\start-das
 - Porta padrão: `server.port` do `config\app.yaml` (8776).
 - Se a porta já responder `/api/health` com `jobos-local`, abre a janela e sai com 0. Não inicia outro servidor.
 - Se a porta estiver em uso por outro processo, mostra nome e PID e sai com 5, sem encerrar nada.
-- Sobe `python -m jobos serve --host 127.0.0.1 --port <porta>` em janela minimizada, espera até 20 s por
+- Sobe `python -m jobos serve --host 127.0.0.1 --port <porta>` na janela minimizada `JOBOS servidor`, espera até 20 s por
   `/api/health` e abre `http://127.0.0.1:<porta>/painel/` com Edge ou Chrome `--app`.
-  Fechar a janela do aplicativo não encerra o servidor. Fechar a janela minimizada encerra.
+  Fechar a janela do aplicativo não encerra o servidor. Fechar a janela `JOBOS servidor` encerra.
 
 ## install-schedule.ps1: registrar o Agendador
 

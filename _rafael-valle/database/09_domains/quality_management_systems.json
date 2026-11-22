@@ -1,0 +1,108 @@
+{
+  "_part": {
+    "id": "09_domains/quality_management_systems",
+    "title": "Domínio: Qualidade / Sistemas de Gestão",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "label_pt": "Qualidade / Sistemas de Gestão",
+    "priority": 7,
+    "summary": "Preparação ISO 9001 na C-Tank (mapeamento, procedimentos, controle documental) e padronização de planejamento/reporting/KPIs na Van Oord.",
+    "highlights_master_tree": {
+      "ctank": [
+        "Preparação para ISO 9001",
+        "Mapeamento de processos",
+        "Formalização de processos",
+        "Elaboração de procedimentos",
+        "Controle documental",
+        "Armazenamento e descarte documental",
+        "Padronização",
+        "Rastreabilidade",
+        "Preparação de evidências para auditoria"
+      ],
+      "van_oord": [
+        "Padronização de planejamento",
+        "Reporting",
+        "KPIs",
+        "Controle de produção",
+        "Acompanhamento de desvios",
+        "Aprendizado entre projetos"
+      ]
+    },
+    "source_paths": [
+      "quality_hseq_tree.management_systems",
+      "quality_hseq_tree.operational_quality",
+      "experience_nodes.exp_ctank_analyst.quality_process_improvement",
+      "standards_and_regulatory_coverage"
+    ],
+    "refs": {
+      "experiences": [
+        "exp_ctank_analyst",
+        "exp_vanoord"
+      ],
+      "projects": [],
+      "vessels": [],
+      "software": [
+        "sw_excel",
+        "sw_power_bi"
+      ],
+      "certifications": [],
+      "education": [],
+      "stories": [
+        "iso_process",
+        "iso_process_long"
+      ],
+      "boundary_groups": [
+        "quality",
+        "regulatory_and_management_systems"
+      ],
+      "volunteer": []
+    },
+    "fit_estimates": [
+      {
+        "item": "ISO 9001 / sistema de gestão",
+        "est_pct": "70",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      },
+      {
+        "item": "Desvios / ações corretivas",
+        "est_pct": "90",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      },
+      {
+        "item": "Melhoria contínua / padronização",
+        "est_pct": "90",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      },
+      {
+        "item": "Auditoria interna formal",
+        "est_pct": "45",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      },
+      {
+        "item": "Auditor lider / ISO 14001 / 45001",
+        "est_pct": "20-30",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      },
+      {
+        "item": "QA dentro de projetos",
+        "est_pct": "50-60",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      },
+      {
+        "item": "Synergi / BMS Subsea7",
+        "est_pct": "0-10",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      }
+    ],
+    "hard_gaps_or_boundaries": [
+      "não ISO auditor",
+      "não Lead Auditor",
+      "não 7 anos em Qualidade"
+    ],
+    "id": "quality_management_systems"
+  }
+}

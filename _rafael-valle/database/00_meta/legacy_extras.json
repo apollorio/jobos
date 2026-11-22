@@ -1,0 +1,1517 @@
+{
+  "_part": {
+    "id": "00_meta/legacy_extras",
+    "title": "Conteudo de proveniencia/legado dos masters (completa a auditoria)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_offshore_profile_2026_10_07",
+      "src_master_tree_v1_2026_10_20",
+      "src_master_260723",
+      "src_career_db_v3_2026_03_10"
+    ]
+  },
+  "data": {
+    "master_source_registry": {
+      "src_master_260723": {
+        "name": "260723_rafael-valle.json",
+        "type": "historical master career file",
+        "used_for": [
+          "career history",
+          "education",
+          "certifications",
+          "software",
+          "skills",
+          "projects",
+          "volunteer work",
+          "publication"
+        ]
+      },
+      "src_career_db": {
+        "name": "rafael-perini-valle-career-database.json",
+        "used_for": [
+          "BPORT",
+          "skills matrix",
+          "ATS domain mapping"
+        ]
+      },
+      "src_marine_cv": {
+        "name": "Rafael-Perini-Valle-CV-MARINE-OPERATIONS-ENGINEER-OFFSHORE-OPERATIONS-SUPERINTENDENT-PT",
+        "used_for": [
+          "vessel exposure",
+          "systems/tools",
+          "offshore training"
+        ]
+      },
+      "src_user_confirmed_erc": {
+        "name": "Direct user confirmation",
+        "used_for": [
+          "ERC drills",
+          "inspection scope",
+          "support-vessel irregularities"
+        ]
+      },
+      "src_pmp_dossier": {
+        "name": "PMP evidence dossier / timesheets / e-mail evidence already analyzed",
+        "used_for": [
+          "project portfolio",
+          "586 verified daily records",
+          "project-code separation"
+        ]
+      },
+      "src_independent_projects": {
+        "name": "User-confirmed Apollo/Dismantle/SOS project records",
+        "used_for": [
+          "independent project tree",
+          "digital stack"
+        ]
+      },
+      "src_master_career_tree_v1": {
+        "name": "RAFAEL_PERINI_VALLE_MASTER_CAREER_TREE_2026-10-20.json",
+        "used_for": [
+          "career timeline",
+          "domain trees",
+          "independent project details",
+          "Apollo technical scope"
+        ]
+      },
+      "src_ultra_graph_v2": {
+        "name": "2-RAFAEL_PERINI_VALLE_ULTRA_CAREER_KNOWLEDGE_GRAPH_2026-10-20.json",
+        "used_for": [
+          "atomic nodes",
+          "software tree",
+          "truth boundaries",
+          "evidence scale"
+        ]
+      },
+      "src_fit_analyses": {
+        "name": "Job-fit analyses in conversation (Subsea7, PRIO, MODEC, SBM)",
+        "used_for": [
+          "fit_calibration",
+          "positioning_layer"
+        ],
+        "note": "estimates, not evidence"
+      }
+    },
+    "master_mobility_original": {
+      "primary_base": "Rio de Janeiro - RJ",
+      "secondary_base": "Vitória - ES",
+      "availability": "immediate",
+      "travel_willingness": "yes — historical CV states openness to travel/site/vessel visits",
+      "offshore_rotation_willingness": "historical CV indicates openness; current default career positioning prioritizes shore-based/onshore roles unless the vacancy requires occasional embarkation",
+      "relocation": "mobility available; exact relocation constraints not specifically documented",
+      "employment_regime_clt_pj": "UNKNOWN_NOT_DOCUMENTED",
+      "salary_expectation": "UNKNOWN_NOT_DOCUMENTED",
+      "notice_period": "immediate / no current formal employer documented",
+      "drivers_license": "CNH B",
+      "passports": [
+        "Brazilian",
+        "Italian"
+      ]
+    },
+    "master_indexes": {
+      "software_index": {
+        "sw_drake": {
+          "name": "Drake",
+          "group": "corporate_operational_systems",
+          "status": "strong/proven",
+          "cv_default": true,
+          "used_in": [
+            "exp_ctank_analyst",
+            "exp_ctank_assistant"
+          ],
+          "domain_tags": [
+            "oil_gas_offshore",
+            "logistics_materials_suppliers",
+            "quality_management_systems",
+            "planning_data_performance"
+          ],
+          "evidence": "D"
+        },
+        "sw_sap_rt": {
+          "name": "SAP RT",
+          "group": "corporate_operational_systems",
+          "status": "strong/proven",
+          "cv_default": true,
+          "used_in": [
+            "exp_ctank_analyst",
+            "exp_ctank_assistant"
+          ],
+          "domain_tags": [
+            "oil_gas_offshore",
+            "logistics_materials_suppliers"
+          ],
+          "evidence": "D"
+        },
+        "sw_bport": {
+          "name": "BPORT",
+          "group": "corporate_operational_systems",
+          "status": "listed-needs-context",
+          "cv_default": false,
+          "used_in": [],
+          "domain_tags": [
+            "oil_gas_offshore",
+            "logistics_materials_suppliers"
+          ],
+          "evidence": "D/V"
+        },
+        "sw_maritime_credentialing_generic": {
+          "name": "Sistemas de credenciamento marítimo",
+          "group": "corporate_operational_systems",
+          "status": "used/proven",
+          "cv_default": false,
+          "used_in": [
+            "exp_ctank_assistant",
+            "exp_ctank_analyst"
+          ],
+          "domain_tags": [
+            "oil_gas_offshore",
+            "logistics_materials_suppliers"
+          ],
+          "evidence": "D"
+        },
+        "sw_star_user_mentioned": {
+          "name": "STAR",
+          "group": "corporate_operational_systems",
+          "status": "user-mentioned-unverified",
+          "cv_default": false,
+          "used_in": [
+            "UNKNOWN_NOT_DOCUMENTED"
+          ],
+          "domain_tags": [
+            "software_unverified"
+          ],
+          "evidence": "U/V"
+        },
+        "sw_ms_project": {
+          "name": "Microsoft Project",
+          "group": "planning_project_controls",
+          "status": "strong/proven",
+          "cv_default": true,
+          "used_in": [
+            "exp_vanoord"
+          ],
+          "domain_tags": [
+            "project_management_project_controls",
+            "planning_data_performance"
+          ],
+          "evidence": "D"
+        },
+        "sw_primavera_p6": {
+          "name": "Oracle Primavera P6",
+          "group": "planning_project_controls",
+          "status": "developing",
+          "cv_default": false,
+          "used_in": [],
+          "domain_tags": [
+            "project_management_project_controls",
+            "planning_data_performance"
+          ],
+          "evidence": "D"
+        },
+        "sw_excel": {
+          "name": "Microsoft Excel",
+          "group": "office_data_bi",
+          "status": "strong/proven",
+          "cv_default": true,
+          "used_in": [
+            "exp_vanoord",
+            "exp_ctank_analyst",
+            "independent projects"
+          ],
+          "domain_tags": [
+            "planning_data_performance",
+            "quality_management_systems"
+          ],
+          "evidence": "D"
+        },
+        "sw_power_bi": {
+          "name": "Microsoft Power BI",
+          "group": "office_data_bi",
+          "status": "used/proven",
+          "cv_default": true,
+          "used_in": [
+            "career data/BI work and CV evidence; exact employer-specific use is not uniquely documented"
+          ],
+          "domain_tags": [
+            "planning_data_performance",
+            "quality_management_systems"
+          ],
+          "evidence": "DP"
+        },
+        "sw_powerpoint": {
+          "name": "Microsoft PowerPoint",
+          "group": "office_data_bi",
+          "status": "strong/proven",
+          "cv_default": true,
+          "used_in": [
+            "exp_vanoord — management/client reporting"
+          ],
+          "domain_tags": [
+            "planning_data_performance",
+            "quality_management_systems"
+          ],
+          "evidence": "D"
+        },
+        "sw_html": {
+          "name": "HTML",
+          "group": "web_dev_and_automation",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo",
+            "proj_cv_builder"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "DP"
+        },
+        "sw_css": {
+          "name": "CSS",
+          "group": "web_dev_and_automation",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo",
+            "proj_cv_builder"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "DP"
+        },
+        "sw_javascript": {
+          "name": "JavaScript",
+          "group": "web_dev_and_automation",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo",
+            "proj_cv_builder"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "DP"
+        },
+        "sw_typescript": {
+          "name": "TypeScript",
+          "group": "web_dev_and_automation",
+          "status": "personal-project/developing",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "U/P"
+        },
+        "sw_python": {
+          "name": "Python",
+          "group": "web_dev_and_automation",
+          "status": "personal-project/developing",
+          "cv_default": false,
+          "used_in": [
+            "exp_professional_development"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "DP"
+        },
+        "sw_php": {
+          "name": "PHP",
+          "group": "web_dev_and_automation",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "U/P"
+        },
+        "sw_json": {
+          "name": "JSON",
+          "group": "web_dev_and_automation",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_cv_builder",
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "DP"
+        },
+        "sw_sql": {
+          "name": "SQL",
+          "group": "web_dev_and_automation",
+          "status": "developing",
+          "cv_default": false,
+          "used_in": [
+            "exp_professional_development"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "U"
+        },
+        "sw_wordpress": {
+          "name": "WordPress",
+          "group": "web_dev_and_automation",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_github": {
+          "name": "GitHub",
+          "group": "web_dev_and_automation",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_jquery": {
+          "name": "jQuery",
+          "group": "apollo_specific_stack",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_gsap": {
+          "name": "GSAP",
+          "group": "apollo_specific_stack",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_lenis": {
+          "name": "Lenis",
+          "group": "apollo_specific_stack",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_splide": {
+          "name": "Splide",
+          "group": "apollo_specific_stack",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_splittype": {
+          "name": "SplitType",
+          "group": "apollo_specific_stack",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_cloudflare": {
+          "name": "Cloudflare",
+          "group": "apollo_specific_stack",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_litespeed": {
+          "name": "LiteSpeed",
+          "group": "apollo_specific_stack",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_quic_cloud": {
+          "name": "QUIC.cloud",
+          "group": "apollo_specific_stack",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_woocommerce": {
+          "name": "WooCommerce",
+          "group": "apollo_specific_stack",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_eventon": {
+          "name": "EventON",
+          "group": "apollo_specific_stack",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_ultimate_member": {
+          "name": "Ultimate Member",
+          "group": "apollo_specific_stack",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_wpdiscuz": {
+          "name": "wpDiscuz",
+          "group": "apollo_specific_stack",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_buddyforms": {
+          "name": "BuddyForms",
+          "group": "apollo_specific_stack",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_webdesigner_course": {
+          "name": "WebDesigner",
+          "group": "training_or_legacy_tools",
+          "status": "historical-training",
+          "cv_default": false,
+          "used_in": [],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "D"
+        },
+        "sw_amos": {
+          "name": "AMOS",
+          "group": "explicit_non_experience",
+          "status": "do-not-claim",
+          "cv_default": false,
+          "used_in": [],
+          "domain_tags": [],
+          "evidence": "X"
+        },
+        "sw_hysys": {
+          "name": "HYSYS",
+          "group": "explicit_non_experience",
+          "status": "do-not-claim",
+          "cv_default": false,
+          "used_in": [],
+          "domain_tags": [],
+          "evidence": "X"
+        },
+        "sw_orcaflex": {
+          "name": "Orcaflex",
+          "group": "explicit_non_experience",
+          "status": "do-not-claim",
+          "cv_default": false,
+          "used_in": [],
+          "domain_tags": [],
+          "evidence": "X"
+        },
+        "sw_ansys": {
+          "name": "Ansys",
+          "group": "explicit_non_experience",
+          "status": "do-not-claim",
+          "cv_default": false,
+          "used_in": [],
+          "domain_tags": [],
+          "evidence": "X"
+        },
+        "sw_mathcad": {
+          "name": "Mathcad",
+          "group": "explicit_non_experience",
+          "status": "do-not-claim",
+          "cv_default": false,
+          "used_in": [],
+          "domain_tags": [],
+          "evidence": "X"
+        },
+        "sw_solidworks": {
+          "name": "SolidWorks",
+          "group": "explicit_non_experience",
+          "status": "do-not-claim",
+          "cv_default": false,
+          "used_in": [],
+          "domain_tags": [],
+          "evidence": "X"
+        },
+        "sw_smart_3d": {
+          "name": "Smart 3D",
+          "group": "explicit_non_experience",
+          "status": "do-not-claim",
+          "cv_default": false,
+          "used_in": [],
+          "domain_tags": [],
+          "evidence": "X"
+        },
+        "sw_smart_pid": {
+          "name": "Smart P&ID",
+          "group": "explicit_non_experience",
+          "status": "do-not-claim",
+          "cv_default": false,
+          "used_in": [],
+          "domain_tags": [],
+          "evidence": "X"
+        },
+        "sw_smart_plant_foundation": {
+          "name": "Smart Plant Foundation",
+          "group": "explicit_non_experience",
+          "status": "do-not-claim",
+          "cv_default": false,
+          "used_in": [],
+          "domain_tags": [],
+          "evidence": "X"
+        },
+        "sw_skm": {
+          "name": "SKM Power Tools",
+          "group": "explicit_non_experience",
+          "status": "do-not-claim",
+          "cv_default": false,
+          "used_in": [],
+          "domain_tags": [],
+          "evidence": "X"
+        },
+        "sw_pwa": {
+          "name": "PWA (Progressive Web App)",
+          "group": "architecture_concepts_and_patterns",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo",
+            "proj_sos"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_web_push": {
+          "name": "Web Push",
+          "group": "architecture_concepts_and_patterns",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_service_worker": {
+          "name": "Service Worker",
+          "group": "architecture_concepts_and_patterns",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo",
+            "proj_sos"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_rest_api": {
+          "name": "REST / data flows (WordPress REST)",
+          "group": "architecture_concepts_and_patterns",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_mu_plugins": {
+          "name": "MU-plugins (WordPress must-use)",
+          "group": "architecture_concepts_and_patterns",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_custom_wp_plugins": {
+          "name": "Custom WordPress plugins",
+          "group": "architecture_concepts_and_patterns",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_design_system_core_js": {
+          "name": "Design system / core.js",
+          "group": "architecture_concepts_and_patterns",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_registry_ssot": {
+          "name": "Registry as SSOT (single source of truth)",
+          "group": "architecture_concepts_and_patterns",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_ai_assisted_dev_governance": {
+          "name": "AI-assisted development governance",
+          "group": "architecture_concepts_and_patterns",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_local_policy_engine": {
+          "name": "Deterministic local policy engine (event > state > hard safety rules > risk/band > policy > skill/card)",
+          "group": "architecture_concepts_and_patterns",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_sos"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_websocket": {
+          "name": "WebSocket",
+          "group": "additional_atomic_tools",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_sse": {
+          "name": "Server-Sent Events (SSE)",
+          "group": "additional_atomic_tools",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_vapid": {
+          "name": "VAPID / Web Push authentication",
+          "group": "additional_atomic_tools",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo",
+            "proj_sos"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_localstorage": {
+          "name": "Web Storage / localStorage",
+          "group": "additional_atomic_tools",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_remix_icons": {
+          "name": "Remix Icon",
+          "group": "additional_atomic_tools",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_gsap_scrolltrigger": {
+          "name": "GSAP ScrollTrigger",
+          "group": "additional_atomic_tools",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_gsap_observer": {
+          "name": "GSAP Observer",
+          "group": "additional_atomic_tools",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_gsap_flip": {
+          "name": "GSAP Flip",
+          "group": "additional_atomic_tools",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_gsap_splittext": {
+          "name": "GSAP SplitText",
+          "group": "additional_atomic_tools",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_gsap_motionpath": {
+          "name": "GSAP MotionPathPlugin",
+          "group": "additional_atomic_tools",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_gsap_morphsvg": {
+          "name": "GSAP MorphSVGPlugin",
+          "group": "additional_atomic_tools",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_gsap_textplugin": {
+          "name": "GSAP TextPlugin",
+          "group": "additional_atomic_tools",
+          "status": "personal-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "P"
+        },
+        "sw_shotgun": {
+          "name": "Shotgun",
+          "group": "additional_atomic_tools",
+          "status": "used/proven independent-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_dismantle"
+          ],
+          "domain_tags": [
+            "independent_projects",
+            "event_operations"
+          ],
+          "evidence": "D"
+        },
+        "sw_hoppin": {
+          "name": "Hoppin",
+          "group": "additional_atomic_tools",
+          "status": "used/proven independent-project",
+          "cv_default": false,
+          "used_in": [
+            "proj_dismantle"
+          ],
+          "domain_tags": [
+            "independent_projects",
+            "event_operations"
+          ],
+          "evidence": "D"
+        },
+        "sw_cursor": {
+          "name": "Cursor",
+          "group": "ai_development_tools",
+          "status": "personal-project/workflow",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "U"
+        },
+        "sw_claude_code": {
+          "name": "Claude Code",
+          "group": "ai_development_tools",
+          "status": "personal-project/workflow",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "U"
+        },
+        "sw_codex": {
+          "name": "Codex / ChatGPT coding workflow",
+          "group": "ai_development_tools",
+          "status": "personal-project/workflow",
+          "cv_default": false,
+          "used_in": [
+            "proj_apollo"
+          ],
+          "domain_tags": [
+            "digital_data_technology"
+          ],
+          "evidence": "U"
+        }
+      },
+      "software_names_alphabetical": [
+        "AI-assisted development governance",
+        "AMOS",
+        "Ansys",
+        "BPORT",
+        "BuddyForms",
+        "Claude Code",
+        "Cloudflare",
+        "Codex / ChatGPT coding workflow",
+        "CSS",
+        "Cursor",
+        "Custom WordPress plugins",
+        "Design system / core.js",
+        "Deterministic local policy engine (event > state > hard safety rules > risk/band > policy > skill/card)",
+        "Drake",
+        "EventON",
+        "GitHub",
+        "GSAP",
+        "GSAP Flip",
+        "GSAP MorphSVGPlugin",
+        "GSAP MotionPathPlugin",
+        "GSAP Observer",
+        "GSAP ScrollTrigger",
+        "GSAP SplitText",
+        "GSAP TextPlugin",
+        "Hoppin",
+        "HTML",
+        "HYSYS",
+        "JavaScript",
+        "jQuery",
+        "JSON",
+        "Lenis",
+        "LiteSpeed",
+        "Mathcad",
+        "Microsoft Excel",
+        "Microsoft Power BI",
+        "Microsoft PowerPoint",
+        "Microsoft Project",
+        "MU-plugins (WordPress must-use)",
+        "Oracle Primavera P6",
+        "Orcaflex",
+        "PHP",
+        "PWA (Progressive Web App)",
+        "Python",
+        "QUIC.cloud",
+        "Registry as SSOT (single source of truth)",
+        "Remix Icon",
+        "REST / data flows (WordPress REST)",
+        "SAP RT",
+        "Server-Sent Events (SSE)",
+        "Service Worker",
+        "Shotgun",
+        "Sistemas de credenciamento marítimo",
+        "SKM Power Tools",
+        "Smart 3D",
+        "Smart P&ID",
+        "Smart Plant Foundation",
+        "SolidWorks",
+        "Splide",
+        "SplitType",
+        "SQL",
+        "STAR",
+        "TypeScript",
+        "Ultimate Member",
+        "VAPID / Web Push authentication",
+        "Web Push",
+        "Web Storage / localStorage",
+        "WebDesigner",
+        "WebSocket",
+        "WooCommerce",
+        "WordPress",
+        "wpDiscuz"
+      ],
+      "software_by_domain": {
+        "oil_gas_offshore": [
+          "sw_drake",
+          "sw_sap_rt",
+          "sw_bport",
+          "sw_maritime_credentialing_generic"
+        ],
+        "logistics_materials_suppliers": [
+          "sw_drake",
+          "sw_sap_rt",
+          "sw_bport",
+          "sw_maritime_credentialing_generic"
+        ],
+        "project_management_project_controls": [
+          "sw_ms_project",
+          "sw_primavera_p6"
+        ],
+        "planning_data_performance": [
+          "sw_ms_project",
+          "sw_primavera_p6",
+          "sw_excel",
+          "sw_power_bi",
+          "sw_powerpoint"
+        ],
+        "quality_management_systems": [
+          "sw_excel",
+          "sw_power_bi",
+          "sw_powerpoint"
+        ],
+        "digital_data_technology": [
+          "sw_html",
+          "sw_css",
+          "sw_javascript",
+          "sw_typescript",
+          "sw_python",
+          "sw_php",
+          "sw_json",
+          "sw_sql",
+          "sw_wordpress",
+          "sw_github",
+          "sw_jquery",
+          "sw_gsap",
+          "sw_lenis",
+          "sw_splide",
+          "sw_splittype",
+          "sw_cloudflare",
+          "sw_litespeed",
+          "sw_quic_cloud",
+          "sw_woocommerce",
+          "sw_eventon",
+          "sw_ultimate_member",
+          "sw_wpdiscuz",
+          "sw_buddyforms",
+          "sw_webdesigner_course",
+          "sw_pwa",
+          "sw_web_push",
+          "sw_service_worker",
+          "sw_rest_api",
+          "sw_mu_plugins",
+          "sw_custom_wp_plugins",
+          "sw_design_system_core_js",
+          "sw_registry_ssot",
+          "sw_ai_assisted_dev_governance",
+          "sw_local_policy_engine"
+        ]
+      },
+      "experience_index": {
+        "exp_vanoord": {
+          "company": "Van Oord",
+          "role": "Superintendent 1 / Superintendente",
+          "period": {
+            "start": "2021-07-12",
+            "end": "2024-11-01",
+            "display": "Jul 2021 - Nov 2024"
+          },
+          "domain_tags": [
+            "naval_marine_offshore",
+            "project_management_project_controls",
+            "planning_data_performance",
+            "hseq_emergency_response",
+            "maintenance_repairs_asset_readiness",
+            "logistics_materials_suppliers",
+            "commercial_contract_management",
+            "quality_management_systems"
+          ]
+        },
+        "exp_ctank_analyst": {
+          "company": "C-Tank",
+          "role": "Analista de Operações",
+          "period": "Out 2020 - Jun 2021",
+          "domain_tags": [
+            "oil_gas_offshore",
+            "maintenance_repairs_asset_readiness",
+            "logistics_materials_suppliers",
+            "quality_management_systems",
+            "project_management_project_controls",
+            "commercial_contract_management"
+          ]
+        },
+        "exp_ctank_assistant": {
+          "company": "C-Tank",
+          "role": "Assistente de Operações Sênior",
+          "period": "Jul 2020 - Out 2020",
+          "domain_tags": [
+            "oil_gas_offshore",
+            "logistics_materials_suppliers"
+          ]
+        },
+        "exp_toolvox": {
+          "company": "Toolvox",
+          "role": "Instrutor de Inglês Técnico Offshore / Ponte de Comunicação Técnica",
+          "period": "Dez 2018 - Mai 2020",
+          "domain_tags": [
+            "training_communication_leadership",
+            "naval_marine_offshore",
+            "oil_gas_offshore",
+            "hseq_emergency_response"
+          ]
+        },
+        "exp_international_research": {
+          "company": "Independent/Multiple",
+          "role": "Estagiário de Engenharia / Pesquisa Internacional",
+          "period": "UNKNOWN_NOT_DOCUMENTED",
+          "domain_tags": [
+            "research_and_academic",
+            "planning_data_performance"
+          ]
+        },
+        "exp_professional_development": {
+          "company": "Independent/Multiple",
+          "role": "UNKNOWN_NOT_DOCUMENTED",
+          "period": {
+            "start": "2024-11",
+            "end": "present",
+            "display": "Nov 2024 - presente"
+          },
+          "domain_tags": [
+            "digital_data_technology",
+            "independent_projects_entrepreneurship",
+            "project_management_project_controls"
+          ]
+        }
+      },
+      "domain_to_experience": {
+        "naval_marine_offshore": [
+          "exp_vanoord",
+          "exp_ctank_analyst",
+          "exp_ctank_assistant",
+          "exp_toolvox"
+        ],
+        "maintenance_repairs_asset_readiness": [
+          "exp_vanoord",
+          "exp_ctank_analyst"
+        ],
+        "project_management_project_controls": [
+          "exp_vanoord",
+          "exp_ctank_analyst",
+          "exp_professional_development"
+        ],
+        "planning_data_performance": [
+          "exp_vanoord",
+          "exp_ctank_analyst",
+          "exp_international_research"
+        ],
+        "oil_gas_offshore": [
+          "exp_ctank_analyst",
+          "exp_ctank_assistant",
+          "exp_toolvox"
+        ],
+        "hseq_emergency_response": [
+          "exp_vanoord",
+          "exp_toolvox"
+        ],
+        "quality_management_systems": [
+          "exp_ctank_analyst",
+          "exp_vanoord"
+        ],
+        "logistics_materials_suppliers": [
+          "exp_vanoord",
+          "exp_ctank_analyst",
+          "exp_ctank_assistant"
+        ],
+        "commercial_contract_management": [
+          "exp_vanoord",
+          "exp_ctank_analyst"
+        ],
+        "training_communication_leadership": [
+          "exp_toolvox",
+          "exp_vanoord"
+        ],
+        "digital_data_technology": [
+          "exp_professional_development"
+        ],
+        "independent_projects_entrepreneurship": [
+          "exp_professional_development"
+        ],
+        "research_and_academic": [
+          "exp_international_research"
+        ]
+      },
+      "software_by_status": {
+        "strong/proven": [
+          "sw_drake",
+          "sw_sap_rt",
+          "sw_ms_project",
+          "sw_excel",
+          "sw_powerpoint"
+        ],
+        "listed-needs-context": [
+          "sw_bport"
+        ],
+        "used/proven": [
+          "sw_maritime_credentialing_generic",
+          "sw_power_bi"
+        ],
+        "user-mentioned-unverified": [
+          "sw_star_user_mentioned"
+        ],
+        "developing": [
+          "sw_primavera_p6",
+          "sw_sql"
+        ],
+        "personal-project": [
+          "sw_html",
+          "sw_css",
+          "sw_javascript",
+          "sw_php",
+          "sw_json",
+          "sw_wordpress",
+          "sw_github",
+          "sw_jquery",
+          "sw_gsap",
+          "sw_lenis",
+          "sw_splide",
+          "sw_splittype",
+          "sw_cloudflare",
+          "sw_litespeed",
+          "sw_quic_cloud",
+          "sw_woocommerce",
+          "sw_eventon",
+          "sw_ultimate_member",
+          "sw_wpdiscuz",
+          "sw_buddyforms",
+          "sw_pwa",
+          "sw_web_push",
+          "sw_service_worker",
+          "sw_rest_api",
+          "sw_mu_plugins",
+          "sw_custom_wp_plugins",
+          "sw_design_system_core_js",
+          "sw_registry_ssot",
+          "sw_ai_assisted_dev_governance",
+          "sw_local_policy_engine",
+          "sw_websocket",
+          "sw_sse",
+          "sw_vapid",
+          "sw_localstorage",
+          "sw_remix_icons",
+          "sw_gsap_scrolltrigger",
+          "sw_gsap_observer",
+          "sw_gsap_flip",
+          "sw_gsap_splittext",
+          "sw_gsap_motionpath",
+          "sw_gsap_morphsvg",
+          "sw_gsap_textplugin"
+        ],
+        "personal-project/developing": [
+          "sw_typescript",
+          "sw_python"
+        ],
+        "historical-training": [
+          "sw_webdesigner_course"
+        ],
+        "do-not-claim": [
+          "sw_amos",
+          "sw_hysys",
+          "sw_orcaflex",
+          "sw_ansys",
+          "sw_mathcad",
+          "sw_solidworks",
+          "sw_smart_3d",
+          "sw_smart_pid",
+          "sw_smart_plant_foundation",
+          "sw_skm"
+        ],
+        "used/proven independent-project": [
+          "sw_shotgun",
+          "sw_hoppin"
+        ],
+        "personal-project/workflow": [
+          "sw_cursor",
+          "sw_claude_code",
+          "sw_codex"
+        ]
+      },
+      "education_index": {
+        "edu_civil": {
+          "degree": "Bacharelado em Engenharia Civil",
+          "institution": "UNIVIX / Multivix",
+          "status": "concluído"
+        },
+        "edu_ports": {
+          "degree": "Técnico em Portos",
+          "institution": "IFES",
+          "status": "concluído"
+        },
+        "edu_mba_pm": {
+          "degree": "MBA em Gestão de Projetos",
+          "institution": "USP / ESALQ",
+          "status": "concluído"
+        },
+        "edu_naval": {
+          "degree": "Pós-graduação em Engenharia de Construção Naval e Offshore",
+          "institution": "Universidade Católica de Petrópolis (UCP)",
+          "status": "concluído"
+        },
+        "edu_safety": {
+          "degree": "Pós-graduação em Engenharia de Segurança do Trabalho",
+          "institution": "Universidade Cruzeiro do Sul",
+          "status": "concluído segundo master histórico"
+        }
+      }
+    },
+    "master_ai_dev_tools_original": {
+      "sw_cursor": {
+        "name": "Cursor",
+        "type": "AI-assisted IDE",
+        "status": "personal-project/workflow",
+        "contexts": [
+          "Apollo::rio development"
+        ],
+        "used_in": [
+          "proj_apollo"
+        ],
+        "evidence": "U",
+        "cv_default": false,
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_claude_code": {
+        "name": "Claude Code",
+        "type": "AI coding agent/IDE workflow",
+        "status": "personal-project/workflow",
+        "contexts": [
+          "Apollo::rio development"
+        ],
+        "used_in": [
+          "proj_apollo"
+        ],
+        "evidence": "U",
+        "cv_default": false,
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_codex": {
+        "name": "Codex / ChatGPT coding workflow",
+        "type": "AI-assisted coding workflow",
+        "status": "personal-project/workflow",
+        "contexts": [
+          "Apollo::rio development"
+        ],
+        "used_in": [
+          "proj_apollo"
+        ],
+        "evidence": "U",
+        "cv_default": false,
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      }
+    },
+    "offshore_profile_source_files_reviewed": [
+      "CV_ENGENHEIRO-DE-QUALIDADE_SUBSEA7_PT_2026-10-05(2).json",
+      "CV_SENIOR-OPERATIONS-ENGINEER_SBM-OFFSHORE_EN_FINAL_2026-09-30(2).json",
+      "CV_ENGENHEIRO-DE-GEST-O-DE-PROJETOS_PT_2026-10-06(1).json",
+      "CV_ANALISTA-DE-LOGISTICA_PT_2026-09-19(2).json",
+      "analisis(3).txt",
+      "CV_LINKEDIN-4458314279_PT_2026-09-19(2).json",
+      "260723_rafael-valle(3).json",
+      "CV_ENGENHEIRO-DE-SUPRIMENTOS-PROJETOS_PT_FINAL_2026-09-18(3).json",
+      "capacity(3).txt",
+      "CV_OFFSHORE-PROJECTS-OPERATIONS-ENGINEER_SHELL-FACILITIES-ENGINEER_EN_2026-09-19(2).json"
+    ],
+    "offshore_profile_positioning": {
+      "name": "Rafael Perini Valle",
+      "base": "Rio de Janeiro – RJ, Brasil",
+      "professional_positioning": [
+        "Marine / Offshore Operations",
+        "Project Execution & Planning",
+        "Vessel–Shore Interface",
+        "HSEQ / Emergency Response",
+        "Logistics / Suppliers / Materials",
+        "Operational Performance & KPIs"
+      ]
+    },
+    "master_tree_v1_identity": {
+      "full_name": "Rafael Perini Valle",
+      "professional_name": "Rafael Valle",
+      "location": "Rio de Janeiro - RJ, Brasil",
+      "origin": "Espírito Santo, Brasil",
+      "nationalities_passports": [
+        "Brasil",
+        "Itália"
+      ],
+      "drivers_license": "CNH categoria B",
+      "crea": "Ativo",
+      "languages": {
+        "portuguese": "Nativo",
+        "english": "Fluente/avançado com uso profissional em operações offshore, equipes multiculturais, gestão internacional, treinamento e documentação técnica"
+      }
+    },
+    "master_260723_book_project_stub": {
+      "name": "Inglês Técnico Portuário e Offshore (livro)",
+      "type": {
+        "pt": "Publicação técnica autoral",
+        "en": "Self-authored technical publication"
+      },
+      "url": "https://livro.rvalle.com.br/",
+      "description": {
+        "pt": "Ver seção 'publication' para detalhes completos.",
+        "en": "See 'publication' section for full detail."
+      }
+    },
+    "career_db_v3_secondary_base": "Vitória, ES (mobilidade)"
+  }
+}

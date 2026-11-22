@@ -1,0 +1,259 @@
+{
+  "_part": {
+    "id": "07_ai/ai_coding_tools",
+    "title": "Ferramentas de IA para desenvolvimento - uso, evidência e domínio",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_chat_2026_11_19",
+      "src_workstation_scan_2026_11_19",
+      "src_attachments_inventory_2026_10_22"
+    ],
+    "notes": "Evidência: U = confirmado pelo Rafael; O = observado instalado na estação; C = conhecimento declarado no chat; P = usado em projeto pessoal. Nenhuma destas ferramentas foi usada em emprego corporativo - status 'personal-project/workflow'."
+  },
+  "data": {
+    "claim_rule": "Em CV: 'AI-assisted development and agentic coding workflows (Cursor, Claude Code, Codex, Cline, Continue, local LLMs via Ollama) applied to independent products (Apollo::rio, SOS Apollo, jobOS, CV Builder Pro)'. Nunca: 'AI/ML Engineer', 'MLOps', 'treinamento/fine-tuning de modelos em produção'.",
+    "nodes": {
+      "sw_cursor": {
+        "name": "Cursor",
+        "vendor": "Anysphere",
+        "type": "AI-first IDE (fork do VS Code)",
+        "status": "personal-project/workflow",
+        "evidence": [
+          "U",
+          "O"
+        ],
+        "observed": "Instalado (C:\\Users\\User\\AppData\\Local\\Programs\\cursor) com extensões: Continue, Cline, Intelephense (PHP), Tailwind CSS, ESLint, Prettier, GitLens, Python/Pyright, Remote-SSH, YAML, Vercel, Xdebug, WordPress hooks, Live Server; pasta D:\\dev\\_dev web\\_rvalle-site\\cursor e cursor.js no site.",
+        "used_in": [
+          "proj_apollo",
+          "proj_rvalle_sites"
+        ],
+        "known_features": [
+          "Tab (autocomplete de próxima edição)",
+          "Chat e Agent (antigo Composer) com edição multi-arquivo",
+          "Inline edit (Ctrl+K)",
+          "Rules de projeto (.cursor/rules, legado .cursorrules)",
+          "Indexação do codebase e @-mentions (@files, @docs, @web)",
+          "Seletor de modelos (Claude, GPT, Gemini etc.) e chave própria",
+          "MCP servers",
+          "Background agents / revisão de PR"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_windsurf": {
+        "name": "Windsurf",
+        "vendor": "Codeium (adquirida pela Cognition em 2025)",
+        "type": "AI-first IDE (fork do VS Code)",
+        "status": "known/compared",
+        "evidence": [
+          "C"
+        ],
+        "observed": "Não instalado atualmente na estação.",
+        "known_features": [
+          "Cascade (agente com modos Write/Chat)",
+          "Memories e Rules (.windsurfrules / regras globais)",
+          "Tab/Supercomplete",
+          "MCP",
+          "Previews e deploy de apps"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_vscode": {
+        "name": "Visual Studio Code",
+        "vendor": "Microsoft",
+        "type": "Editor/IDE base",
+        "status": "personal-project/daily-driver",
+        "evidence": [
+          "O"
+        ],
+        "observed": "Instalado; ~60 extensões: Claude Code (anthropic.claude-code), Cline (saoudrizwan.claude-dev), Continue, DeepSeek chat, Python/Pylance/Debugpy/Black/Ruff, PHP Intelephense/PHPStan/PHPUnit/PHP CS Fixer/Xdebug/Composer/Profiler, WordPress hooks/toolbox/debug, LocalWP shells/assistant, ESLint, Prettier, GitLens, GitHub Actions, GitHub PRs, Remote Repositories/Containers, PowerShell, MySQL, FTP-simple, Java pack, Markdown, Live Server, Edge DevTools, pt-BR language pack.",
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_claude_code": {
+        "name": "Claude Code",
+        "vendor": "Anthropic",
+        "type": "Agente de código (CLI, extensão de IDE e app desktop)",
+        "status": "personal-project/workflow",
+        "evidence": [
+          "U",
+          "O"
+        ],
+        "observed": "Extensão VS Code anthropic.claude-code instalada; pasta ~/.claude; app desktop em uso (esta própria sessão).",
+        "used_in": [
+          "proj_apollo",
+          "proj_jobos",
+          "proj_sos"
+        ],
+        "known_features": [
+          "CLAUDE.md (memória de projeto)",
+          "Plan mode",
+          "Slash commands e skills",
+          "Subagents",
+          "Hooks",
+          "MCP",
+          "Permissões/aprovação de comandos",
+          "Integração Git/GitHub (PRs)"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_codex": {
+        "name": "OpenAI Codex / ChatGPT coding workflow",
+        "vendor": "OpenAI",
+        "type": "Agente de código (CLI/IDE/cloud) + ChatGPT",
+        "status": "personal-project/workflow",
+        "evidence": [
+          "U",
+          "O"
+        ],
+        "observed": "Pasta ~/.codex com config.toml, plugins, code-review-plugin, histórico e memórias; arquivo chatgpt.html / 'chatgpt - Copia.html' no projeto rvalle-site.",
+        "used_in": [
+          "proj_apollo",
+          "proj_rvalle_sites"
+        ],
+        "known_features": [
+          "Codex CLI (agente de terminal)",
+          "AGENTS.md como regras de projeto",
+          "config.toml (modelo, sandbox, aprovação)",
+          "Revisão de código"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_cline": {
+        "name": "Cline",
+        "vendor": "Open source (publisher saoudrizwan; antigo 'Claude Dev')",
+        "type": "Agente autônomo de código como extensão VS Code/Cursor",
+        "status": "personal-project/workflow",
+        "evidence": [
+          "C",
+          "O"
+        ],
+        "observed": "Extensão saoudrizwan.claude-dev instalada no VS Code e no Cursor; pasta ~/.cline/data.",
+        "known_features": [
+          "Modos Plan / Act",
+          "Aprovação humana para cada edição e comando de terminal",
+          "Checkpoints/restauração",
+          "Uso de navegador",
+          "Marketplace MCP",
+          "Traga sua chave: Anthropic, OpenAI, OpenRouter, Gemini, DeepSeek, Ollama/LM Studio locais",
+          ".clinerules e padrão 'memory bank'",
+          "Forks conhecidos: Roo Code, Kilo Code"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_continue": {
+        "name": "Continue",
+        "vendor": "Open source (continue.dev)",
+        "type": "Assistente de código open-source (VS Code / JetBrains)",
+        "status": "personal-project/workflow",
+        "evidence": [
+          "C",
+          "O"
+        ],
+        "observed": "Extensão continue.continue instalada no VS Code e no Cursor; ~/.continue/config.yaml ('Main Config').",
+        "known_features": [
+          "Chat, autocomplete (tab), edit e agent",
+          "config.yaml com papéis de modelo (chat, autocomplete, embed, rerank)",
+          "Modelos locais via Ollama ou APIs na nuvem",
+          "Context providers (@codebase, @docs, @file)",
+          "Continue Hub (assistants/blocks compartilhados)"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_ollama": {
+        "name": "Ollama",
+        "vendor": "Ollama (open source)",
+        "type": "Runtime local de LLMs open-weight",
+        "status": "personal-project/workflow",
+        "evidence": [
+          "C",
+          "O"
+        ],
+        "observed": "Instalado (AppData\\Local\\Programs\\Ollama no PATH); pasta ~/.ollama.",
+        "known_features": [
+          "CLI: ollama pull / run / list / ps / serve / create",
+          "API REST local + endpoint compatível OpenAI (/v1)",
+          "Modelfile (FROM, PARAMETER, SYSTEM, TEMPLATE)",
+          "Modelos GGUF quantizados - tamanho limitado pela VRAM/RAM",
+          "Backend local para Continue e Cline (privacidade, custo zero por token, offline)"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ],
+        "rule": "Não registrar nomes de modelos do Ollama (pedido do Rafael)."
+      },
+      "sw_grok": {
+        "name": "Grok (xAI)",
+        "vendor": "xAI",
+        "type": "LLM / assistente + CLI",
+        "status": "personal-project/workflow",
+        "evidence": [
+          "O"
+        ],
+        "observed": "'Grok Bot' em AppData\\Local\\Programs e ~/.grok/bin no PATH; logo-grok.svg usado no app web-vagas.",
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_deepseek_vscode": {
+        "name": "DeepSeek chat no VS Code",
+        "vendor": "DeepSeek (extensão de terceiros laurent00tt.deepseek-v4-vscode-chat)",
+        "type": "Chat de código com modelos DeepSeek",
+        "status": "installed-observed",
+        "evidence": [
+          "O"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_github_ai_ecosystem": {
+        "name": "GitHub (Actions, PRs, CLI, Desktop)",
+        "vendor": "GitHub",
+        "type": "Versionamento + CI",
+        "status": "personal-project",
+        "evidence": [
+          "P",
+          "O"
+        ],
+        "observed": "GitHub CLI e GitHub Desktop no PATH; extensões GitHub Actions e Pull Requests; workflow .github/workflows/jobos.yml com 4 crons (discovery, priority_alert, digest, weekly) em ubuntu-latest + Python 3.12.",
+        "used_in": [
+          "proj_jobos",
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      }
+    },
+    "landscape_known_not_necessarily_used": {
+      "evidence": "C",
+      "items": [
+        "GitHub Copilot (completions, chat, agent mode, coding agent)",
+        "Aider (pair programmer de terminal, git-aware)",
+        "Roo Code / Kilo Code (forks do Cline)",
+        "Gemini CLI",
+        "Zed (editor com IA)",
+        "JetBrains AI Assistant / Junie",
+        "Amazon Q Developer / Kiro",
+        "Devin (Cognition)",
+        "Replit Agent, Bolt.new, Lovable, v0 (geração de apps/UI)",
+        "LM Studio (runtime local alternativo ao Ollama)",
+        "OpenRouter (roteador multi-modelo por API)"
+      ]
+    }
+  }
+}

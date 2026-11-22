@@ -1,0 +1,108 @@
+{
+  "_part": {
+    "id": "09_domains/digital_data_technology",
+    "title": "Domínio: Digital / Dados / Tecnologia",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "label_pt": "Digital / Dados / Tecnologia",
+    "priority": 11,
+    "summary": "Excel/Power BI/MS Project (corporativo) + stack autoral Apollo::rio (WordPress, PHP, JS/TS, PWA) + SQL/Python em desenvolvimento.",
+    "highlights_master_tree": {
+      "strong_tools": [
+        "Excel Avançado",
+        "Power BI",
+        "MS Project",
+        "PCP",
+        "Petrobras Drake",
+        "SAP RT"
+      ],
+      "complementary": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "JSON",
+        "PHP",
+        "SQL",
+        "WordPress",
+        "GitHub",
+        "automação",
+        "dashboards"
+      ]
+    },
+    "source_paths": [
+      "software_systems_tree",
+      "project_portfolio_tree.independent",
+      "experience_nodes.exp_professional_development"
+    ],
+    "refs": {
+      "experiences": [
+        "exp_professional_development"
+      ],
+      "projects": [
+        "proj_apollo",
+        "proj_sos",
+        "proj_cv_builder"
+      ],
+      "vessels": [],
+      "software": [
+        "sw_excel",
+        "sw_power_bi",
+        "sw_ms_project",
+        "sw_html",
+        "sw_css",
+        "sw_javascript",
+        "sw_typescript",
+        "sw_python",
+        "sw_php",
+        "sw_json",
+        "sw_sql",
+        "sw_wordpress",
+        "sw_github",
+        "sw_jquery",
+        "sw_gsap",
+        "sw_lenis",
+        "sw_splide",
+        "sw_splittype",
+        "sw_cloudflare",
+        "sw_litespeed",
+        "sw_quic_cloud",
+        "sw_woocommerce",
+        "sw_eventon",
+        "sw_ultimate_member",
+        "sw_wpdiscuz",
+        "sw_buddyforms",
+        "sw_webdesigner_course",
+        "sw_pwa",
+        "sw_web_push",
+        "sw_service_worker",
+        "sw_rest_api",
+        "sw_mu_plugins",
+        "sw_custom_wp_plugins",
+        "sw_design_system_core_js",
+        "sw_registry_ssot",
+        "sw_ai_assisted_dev_governance",
+        "sw_local_policy_engine",
+        "sw_sql",
+        "sw_python"
+      ],
+      "certifications": [
+        "webdesigner"
+      ],
+      "education": [],
+      "stories": [],
+      "boundary_groups": [
+        "digital_skills_positioning"
+      ],
+      "volunteer": []
+    },
+    "fit_estimates": [],
+    "hard_gaps_or_boundaries": [],
+    "id": "digital_data_technology"
+  }
+}

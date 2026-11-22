@@ -1,0 +1,171 @@
+{
+  "_part": {
+    "id": "06_skills/software/apollo_specific_stack",
+    "title": "Software/sistemas: apollo_specific_stack",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723"
+    ]
+  },
+  "data": {
+    "nodes": {
+      "sw_jquery": {
+        "name": "jQuery",
+        "status": "personal-project",
+        "context": "Apollo::rio",
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_gsap": {
+        "name": "GSAP",
+        "status": "personal-project",
+        "context": "Apollo::rio animations",
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_lenis": {
+        "name": "Lenis",
+        "status": "personal-project",
+        "context": "Apollo::rio smooth scroll",
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_splide": {
+        "name": "Splide",
+        "status": "personal-project",
+        "context": "Apollo::rio frontend",
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_splittype": {
+        "name": "SplitType",
+        "status": "personal-project",
+        "context": "Apollo::rio frontend",
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_cloudflare": {
+        "name": "Cloudflare",
+        "status": "personal-project",
+        "context": "Apollo::rio DNS/security/CDN",
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_litespeed": {
+        "name": "LiteSpeed",
+        "status": "personal-project",
+        "context": "WordPress infrastructure",
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_quic_cloud": {
+        "name": "QUIC.cloud",
+        "status": "personal-project",
+        "context": "WordPress infrastructure",
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_woocommerce": {
+        "name": "WooCommerce",
+        "status": "personal-project",
+        "context": "Apollo ecosystem",
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_eventon": {
+        "name": "EventON",
+        "status": "personal-project",
+        "context": "Apollo event system",
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_ultimate_member": {
+        "name": "Ultimate Member",
+        "status": "personal-project",
+        "context": "Apollo users/membership",
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_wpdiscuz": {
+        "name": "wpDiscuz",
+        "status": "personal-project",
+        "context": "Apollo community/comments",
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      },
+      "sw_buddyforms": {
+        "name": "BuddyForms",
+        "status": "personal-project",
+        "context": "Apollo frontend submissions",
+        "evidence": "P",
+        "used_in": [
+          "proj_apollo"
+        ],
+        "domain_tags": [
+          "digital_data_technology"
+        ]
+      }
+    }
+  }
+}

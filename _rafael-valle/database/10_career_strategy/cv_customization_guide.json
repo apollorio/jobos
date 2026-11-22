@@ -1,0 +1,61 @@
+{
+  "_part": {
+    "id": "10_career_strategy/cv_customization_guide",
+    "title": "Guia de customização de CV por foco",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_career_db_v3_2026_03_10"
+    ]
+  },
+  "data": {
+    "for_operations_marine": {
+      "emphasize": [
+        "Van Oord superintendência",
+        "ERT/Medevac",
+        "NORMAM-12/IMO/SOLAS",
+        "logística naval",
+        "SIMOPS"
+      ],
+      "objective": "Engenheiro / Coordenador de Operações Marítimas"
+    },
+    "for_planning_controls": {
+      "emphasize": [
+        "Cronogramas MS Project",
+        "KPIs e DPRs",
+        "caminho crítico",
+        "forecast",
+        "controle contratual"
+      ],
+      "objective": "Especialista em Planejamento e Controle de Projetos (EPC/FPSO)"
+    },
+    "for_methods_performance": {
+      "emphasize": [
+        "KPIs produção/disponibilidade/consumo",
+        "análise de desvios",
+        "bancos de dados operacionais",
+        "melhoria contínua"
+      ],
+      "objective": "Engenheiro de Métodos e Performance"
+    },
+    "for_hsse": {
+      "emphasize": [
+        "ERT/Medevac",
+        "investigação de incidentes",
+        "análises de risco",
+        "NRs",
+        "QHSE procedures"
+      ],
+      "objective": "Coordenador HSSE / Emergency Response"
+    },
+    "for_innovation_digital": {
+      "emphasize": [
+        "App de integração operacional",
+        "ISO 9000",
+        "mapeamento de processos",
+        "transformação digital",
+        "Drake/RT"
+      ],
+      "objective": "Especialista em Inovação e Transformação Digital"
+    }
+  }
+}

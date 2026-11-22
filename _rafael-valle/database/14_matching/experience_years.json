@@ -1,0 +1,47 @@
+{
+  "_part": {
+    "id": "14_matching/experience_years",
+    "title": "Anos de experiência por domínio (para requisitos 'X anos')",
+    "updated": "2026-11-19",
+    "sources": ["src_master_final_2026_10_21", "src_jobos_profile_yml"],
+    "notes": "Calculado a partir dos períodos em 04_experience. Último vínculo terminou em 01/11/2024. Estágios/pesquisa (NTUA/BAM) e projetos independentes NÃO contam como experiência profissional."
+  },
+  "data": {
+    "as_of_last_role_end": "2024-11-01",
+    "months_by_role": {"exp_toolvox": 18, "exp_ctank_assistant": 3, "exp_ctank_analyst": 9, "exp_vanoord": 40.6},
+    "years": {
+      "total_professional": {"core": 5.9, "note": "Dez/2018 - Nov/2024"},
+      "offshore_marine": {"core": 5.9, "note": "navios-sonda (Toolvox) + FPSO/OSV (C-Tank) + operações marítimas (Van Oord)"},
+      "maritime_naval": {"core": 5.9},
+      "oil_gas": {"core": 2.5, "adjacent": 5.9, "note": "O&G direto = Toolvox + C-Tank; Van Oord é dragagem/portos"},
+      "operations": {"core": 4.4, "note": "C-Tank + Van Oord"},
+      "planning_project_controls": {"core": 4.1, "note": "C-Tank analista + Van Oord"},
+      "project_management": {"core": 3.4, "adjacent": 4.1, "note": "Van Oord (Superintendente de Projetos); Dismantle é independente"},
+      "management_leadership": {"core": 3.4, "note": "Superintendente Van Oord; tamanho de equipe não documentado"},
+      "hseq_emergency": {"core": 3.4, "adjacent": 4.9, "note": "ERC Van Oord; comunicação de segurança na Toolvox = adjacente"},
+      "logistics_supply": {"core": 4.4},
+      "contracts_procurement": {"core": 4.1, "note": "suporte a contratos, medições, claims, fornecedores"},
+      "quality_management_systems": {"core": 0.75, "adjacent": 4.1, "note": "ISO 9001 prep na C-Tank; qualidade operacional na Van Oord"},
+      "maintenance": {"core": 0.75, "adjacent": 4.1, "note": "campanhas de manutenção C-Tank; prontidão/downtime Van Oord; sem ownership de PMS"},
+      "training_instruction": {"core": 1.5},
+      "digital_software": {"core": 0, "personal_projects": 2.0, "note": "Sem experiência corporativa em software; projetos próprios desde Nov/2024"},
+      "engineering_since_graduation": {"core": 5.9, "graduated": 2018}
+    },
+    "domain_keywords": {
+      "planning_project_controls": ["planejamento", "planning", "planner", "project controls", "controle de projetos", "cronograma", "scheduling", "programacao"],
+      "project_management": ["gestao de projetos", "gerenciamento de projetos", "project management", "gerencia de projetos", "projetos"],
+      "management_leadership": ["gestao de equipes", "lideranca", "gestao de pessoas", "cargo de gestao", "gerencia", "coordenacao", "supervisao", "management role", "leadership", "people management", "managerial", "gestor"],
+      "oil_gas": ["oleo e gas", "oil and gas", "o&g", "petroleo", "upstream", "e&p", "fpso", "oil & gas"],
+      "offshore_marine": ["offshore", "embarcad", "maritim", "naval", "marine", "vessel", "navio", "embarcacao"],
+      "operations": ["operacoes", "operations", "operacional"],
+      "hseq_emergency": ["hse", "hsse", "qhse", "sms", "seguranca", "safety", "emergencia"],
+      "logistics_supply": ["logistica", "logistics", "supply", "materiais"],
+      "contracts_procurement": ["contratos", "contracts", "suprimentos", "compras", "procurement", "subcontract"],
+      "quality_management_systems": ["qualidade", "quality", "sistema de gestao", "auditoria"],
+      "maintenance": ["manutencao", "maintenance", "pcm"],
+      "digital_software": ["desenvolvimento de software", "software development", "programacao", "ti ", " it ", "dados", "data"],
+      "training_instruction": ["treinamento", "training", "instrutor", "docencia"]
+    },
+    "tolerance": {"ok_if_required_le": "core + 0.5", "soft_gap_if_required_le": "core + 1.5", "else": "hard_years_gap"}
+  }
+}

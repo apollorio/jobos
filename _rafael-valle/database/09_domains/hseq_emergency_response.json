@@ -1,0 +1,103 @@
+{
+  "_part": {
+    "id": "09_domains/hseq_emergency_response",
+    "title": "Domínio: HSEQ / Resposta a Emergência",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "label_pt": "HSEQ / Resposta a Emergência",
+    "priority": 6,
+    "summary": "ERC na Van Oord: simulados com vitima simulada, medição de tempo de resposta, 5+ Medevacs reais, inspeções de meios e investigacao de incidentes.",
+    "highlights_master_tree": {
+      "experience": [
+        "Emergency Response Coordinator (ERC)",
+        "ERT",
+        "Mais de 5 Medevacs reais",
+        "Simulados de emergência",
+        "Medição de tempo de resposta ambulância/hospital/lancha",
+        "Relatório pós-drill",
+        "Inspeções de escritório, veículos, lanchas, rebocadores, apoio e navios",
+        "Incident investigation",
+        "Corrective actions",
+        "LMRA",
+        "Toolbox Talks",
+        "SIMOPS",
+        "IMO / ISM / SOLAS / MARPOL / NORMAM"
+      ]
+    },
+    "source_paths": [
+      "quality_hseq_tree.emergency_response",
+      "experience_nodes.exp_vanoord.erc",
+      "experience_nodes.exp_vanoord.hseq",
+      "experience_nodes.exp_vanoord.inspections"
+    ],
+    "refs": {
+      "experiences": [
+        "exp_vanoord",
+        "exp_toolvox"
+      ],
+      "projects": [
+        "vo_354264",
+        "vo_354261",
+        "vo_354012_2021",
+        "vo_354269",
+        "vo_354222_2022",
+        "vo_354285",
+        "vo_353190",
+        "vo_354222_2023",
+        "vo_354306",
+        "vo_354012_2023",
+        "vo_354449",
+        "vo_354222_2024",
+        "vo_354458",
+        "proj_sos"
+      ],
+      "vessels": [],
+      "software": [],
+      "certifications": [
+        "cbsp",
+        "bosiet",
+        "huet",
+        "thuet",
+        "nr17",
+        "nr30",
+        "nr33",
+        "nr34",
+        "nr35"
+      ],
+      "education": [
+        "edu_safety"
+      ],
+      "stories": [
+        "hseq",
+        "erc_drill"
+      ],
+      "boundary_groups": [
+        "regulatory_and_management_systems"
+      ],
+      "volunteer": []
+    },
+    "fit_estimates": [
+      {
+        "item": "HSEQ / emergência / drills",
+        "est_pct": "90",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      },
+      {
+        "item": "ISM Code",
+        "est_pct": "90",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      },
+      {
+        "item": "Investigacao de incidentes",
+        "est_pct": "85",
+        "basis": "prior fit analyses (assistant estimate, calibration only - not evidence)"
+      }
+    ],
+    "hard_gaps_or_boundaries": [],
+    "id": "hseq_emergency_response"
+  }
+}

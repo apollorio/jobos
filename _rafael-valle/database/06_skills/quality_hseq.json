@@ -1,0 +1,50 @@
+{
+  "_part": {
+    "id": "06_skills/quality_hseq",
+    "title": "Qualidade / HSEQ",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "operational_quality": [
+      "desvios",
+      "não conformidades",
+      "incident investigation",
+      "corrective actions",
+      "KPIs",
+      "procedures",
+      "traceability",
+      "inspection follow-up"
+    ],
+    "management_systems": [
+      "ISO 9000/9001 preparation",
+      "process mapping",
+      "procedure development",
+      "document control",
+      "audit readiness"
+    ],
+    "emergency_response": [
+      "ERC",
+      "ERT",
+      "5+ real Medevacs",
+      "drills",
+      "response-time measurement",
+      "post-drill reporting",
+      "improvement actions"
+    ],
+    "regulatory": [
+      "IMO",
+      "ISM Code",
+      "SOLAS",
+      "MARPOL",
+      "NORMAM-12",
+      "NR-17",
+      "NR-30",
+      "NR-33",
+      "NR-34",
+      "NR-35"
+    ]
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "_part": {
+    "id": "06_skills/hard_skills",
+    "title": "Hard skills (matriz bilíngue)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_260723",
+      "src_career_db_v3_2026_03_10"
+    ]
+  },
+  "data": {
+    "hard_skills": [
+      {
+        "pt": "Planejamento operacional e controle de performance (onshore/offshore)",
+        "en": "Operational planning and performance control (onshore/offshore)"
+      },
+      {
+        "pt": "Cronogramas físico-financeiros e caminho crítico (MS Project / PCP)",
+        "en": "Physical-financial schedules and critical path (MS Project / PCP)"
+      },
+      {
+        "pt": "Engenharia de Métodos e Performance (KPIs, DPR/RDO, batimetria, consumo)",
+        "en": "Methods & Performance Engineering (KPIs, DPR/RDO, bathymetry, consumption)"
+      },
+      {
+        "pt": "Coordenação de Resposta a Emergências (ERT / Medevac — 5+ reais)",
+        "en": "Emergency Response Coordination (ERT / Medevac — 5+ real cases)"
+      },
+      {
+        "pt": "Logística naval de alta complexidade (shorebase logistics, bunkering, crew change)",
+        "en": "High-complexity marine logistics (shorebase logistics, bunkering, crew change)"
+      },
+      {
+        "pt": "Gestão de operações marítimas (TSHD, WID, rebocadores, drillships, FPSOs)",
+        "en": "Marine operations management (TSHD, WID, tugboats, drillships, FPSOs)"
+      },
+      {
+        "pt": "Conformidade regulatória (NORMAM-12, IMO/SOLAS/MARPOL, NRs)",
+        "en": "Regulatory compliance (NORMAM-12, IMO/SOLAS/MARPOL, NRs)"
+      },
+      {
+        "pt": "Gestão documental Petrobras (Drake / SAP RT)",
+        "en": "Petrobras document management (Drake / SAP RT)"
+      },
+      {
+        "pt": "Planejamento de SIMOPS (dragagem + mergulho simultâneos)",
+        "en": "SIMOPS planning (simultaneous dredging + diving)"
+      },
+      {
+        "pt": "Aviso aos Navegantes / Notice to Mariners",
+        "en": "Notice to Mariners"
+      },
+      {
+        "pt": "Isenção de Praticagem / Pilotage Exemption",
+        "en": "Pilotage Exemption"
+      },
+      {
+        "pt": "Controle contratual (evidências, claims, medições, custos)",
+        "en": "Contract control (evidence, claims, measurements, costs)"
+      },
+      {
+        "pt": "Mapeamento de processos / ISO 9000",
+        "en": "Process mapping / ISO 9000"
+      },
+      {
+        "pt": "Transformação digital (concepção de aplicativo de integração operacional)",
+        "en": "Digital transformation (concept design of an operational-integration app)"
+      }
+    ],
+    "tools_listed_historically": [
+      "MS Project",
+      "Primavera P6 (em desenvolvimento)",
+      "Excel avançado",
+      "PowerPoint",
+      "Drake (Petrobras)",
+      "SAP RT (Petrobras)",
+      "BPORT",
+      "Sistemas de credenciamento marítimo",
+      "HTML, CSS, JavaScript, Python (desenvolvimento web autônomo)"
+    ],
+    "career_db_v3": {
+      "hard_skills": [
+        "Planejamento operacional e controle de performance (onshore/offshore)",
+        "Cronogramas físico-financeiros e caminho crítico (MS Project / PCP)",
+        "Engenharia de Métodos e Performance (KPIs, DPR/RDO, batimetria, consumo)",
+        "Emergency Response Coordination (ERT / Medevac — 5+ reais)",
+        "Logística naval de alta complexidade (shorebase logistics, bunkering, crew change)",
+        "Gestão de operações marítimas (TSHD, WID, rebocadores, drillships, FPSOs)",
+        "Conformidade regulatória (NORMAM-12, IMO/SOLAS/MARPOL, NRs)",
+        "Gestão documental Petrobras (Drake / SAP RT)",
+        "SIMOPS planning (dragagem + mergulho simultâneos)",
+        "Aviso aos Navegantes / Notice to Mariners",
+        "Isenção de Praticagem / Pilotage Exemption",
+        "Controle contratual (evidências, claims, medições, custos)",
+        "Mapeamento de processos / ISO 9000",
+        "Transformação digital (arquitetura de aplicativo de integração operacional)"
+      ],
+      "soft_skills": [
+        "Adaptabilidade extrema (geográfica e multicultural)",
+        "Comunicação ativa sob pressão",
+        "Integração de equipes multiculturais (português/inglês técnico)",
+        "Liderança por iniciativa",
+        "Problem-solving em ambientes de alta criticidade",
+        "Pensamento estratégico",
+        "Gestão de stakeholders (cliente, diretoria, reguladores, fornecedores)"
+      ],
+      "tools": [
+        "MS Project",
+        "Primavera P6 (em desenvolvimento)",
+        "Excel avançado",
+        "PowerPoint",
+        "Drake (Petrobras)",
+        "SAP RT (Petrobras)",
+        "BPORT",
+        "sistemas de credenciamento marítimo"
+      ]
+    }
+  }
+}

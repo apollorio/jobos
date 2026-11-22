@@ -1,0 +1,355 @@
+{
+  "meta": {
+    "version": "3.0",
+    "created": "2026-03-10",
+    "purpose": "Comprehensive career database for CV generation, ATS optimization, and professional consulting",
+    "author_system": "CV Builder Pro — compiled from dossiê, CVs, and professional narrative"
+  },
+
+  "profile": {
+    "full_name": "Rafael Perini Valle",
+    "preferred_display": "RAFAEL PERINI VALLE",
+    "location": "Copacabana, Rio de Janeiro – RJ, Brasil",
+    "secondary_base": "Vitória, ES (mobilidade)",
+    "email": "rafapevalle@gmail.com",
+    "phone": "+55 (21) 97955-4496",
+    "nationality": ["Brasileiro", "Italiano"],
+    "passports": {
+      "brazilian": { "valid_until": "2027" },
+      "italian": { "valid_until": "2027" }
+    },
+    "drivers_license": "CNH Categoria B",
+    "covid_vaccination": "Completa (incluindo reforços)",
+    "languages": {
+      "portuguese": "Nativo",
+      "english": {
+        "level": "Fluente",
+        "context": "Uso diário com equipes multinacionais em ambiente offshore; apto a avaliação/teste",
+        "certifications": [
+          { "name": "English for Business (EfB)", "institution": "NED Training Centre, Irlanda", "date": "Setembro 2015" },
+          { "name": "General English", "institution": "EC English Language Centres, Inglaterra", "date": "Agosto 2014" },
+          { "name": "Cambridge Exam", "institution": "Cambridge University Press", "date": "Julho 2016", "valid_until": "Julho 2025" }
+        ]
+      }
+    },
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/rpvalle",
+      "book": "https://livro.rvalle.com.br/",
+      "dossier_pdf": "https://cv.rvalle.com.br/Analise-de-Capacidade-Profissional_Rafael-Perini-Valle.pdf"
+    },
+    "linkedin_followers": "12.000+",
+    "industries": ["Oil & Gas", "Offshore Operations", "Maritime", "Dredging", "Port Logistics", "Process Management", "Energy"],
+    "core_identity": "Engenheiro de Planejamento e Operações Offshore com especialização em projetos marítimos, operações portuárias, engenharia de métodos e performance. Coordenador de Emergências (ERT) com gestão real de Medevacs. Autor de livro técnico do setor. Ponte de comunicação técnico-linguística entre equipes internacionais e brasileiras. Domínio nativo de sistemas de gestão documental Petrobras (Drake/RT)."
+  },
+
+  "career_history": [
+    {
+      "order": 1,
+      "role": "Superintendente de Operações Marítimas (Planejamento Operacional & Controle de Performance)",
+      "company": "Van Oord",
+      "company_type": "Multinacional holandesa — infraestrutura marítima e dragagem",
+      "location": "Onshore, Brasil (múltiplos portos costa brasileira)",
+      "period": "Jul 2021 – Nov 2024",
+      "duration": "3 anos e 5 meses",
+      "environment": "Projetos de dragagem — TSHD, WID, rebocadores",
+      "direct_report_to": "Diretoria internacional (matriz europeia)",
+      "responsibilities": [
+        "Coordenação e suporte técnico a operações de embarcações (TSHD, WID e rebocadores), garantindo alinhamento de escopo, prazo, segurança e restrições operacionais em múltiplos portos do Brasil.",
+        "Elaboração e acompanhamento de planos operacionais e janelas críticas (atracação, recebimento de carga, embarque de pessoal, mobilizações), com interface contínua entre embarcações, terminais, fornecedores e cliente.",
+        "Controle de progresso e performance por meio de indicadores (produção, disponibilidade, paradas e consumo), análise de desvios e suporte a ações de recuperação, com reportes semanais/mensais e forecast.",
+        "Gestão do fluxo de informações e registros do projeto: relatórios técnicos, MoM, planos de ação, status de suprimentos/serviços e rastreabilidade de eventos relevantes (não conformidades, mudanças e evidências para claims).",
+        "Atuação ativa em conjunto com a equipe de QHSE na elaboração/revisão de procedimentos, análises de risco, investigações de incidentes e acompanhamento de ações corretivas, assegurando aderência a padrões IMO/SOLAS/MARPOL/NORMAM.",
+        "Consolidação de cronogramas físico-financeiros, caminho crítico e análise de desvios para reporte ao cliente e gestão interna usando MS Project e PCP.",
+        "Coordenação de logística da frota: janelas de atracação, suprimentos, bunkering, resíduos, crew change e serviços de apoio, em interface com agentes marítimos, terminais e fornecedores.",
+        "Manutenção de bancos de dados operacionais (DPRs, batimetrias, volumes dragados, paradas, não conformidades).",
+        "Emissão de Aviso aos Navegantes (Notice to Mariners) para operações de dragagem e mergulho.",
+        "Planejamento de SIMOPS (Operações Simultâneas) com navios de dragagem e equipes de mergulho.",
+        "Suporte técnico/burocrático para obtenção de Isenção de Praticagem (Pilotage Exemption)."
+      ],
+      "emergency_response": {
+        "role": "Emergency Coordinator / Emergency Response Team (ERT)",
+        "details": [
+          "Coordenador de Emergência designado para os projetos.",
+          "Membro ativo do Emergency Response Team (ERT).",
+          "Coordenação de mais de 5 operações reais de Medevac.",
+          "Acompanhamento médico e follow-up de lesões a bordo."
+        ]
+      },
+      "kpi_management": {
+        "indicators": ["Produção (volumes dragados/batimetria)", "Disponibilidade (uptime vs downtime)", "Consumo (taxa de queima combustível)", "Paradas não programadas"],
+        "reporting_cycle": "Diário, semanal e mensal + forecast em ciclos de 15 dias",
+        "audience": "Cliente, diretoria internacional, Ship Management Department"
+      },
+      "logistics_network": {
+        "description": "Conhecimento extenso de fornecedores ao longo de toda a costa brasileira",
+        "scope": ["Terminais portuários", "Agências marítimas", "Fornecedores de serviços navais", "Fornecedores de bunkering"],
+        "relationships": "Relacionamento estabelecido com múltiplos portos e terminais brasileiros"
+      },
+      "regulatory_compliance": ["NORMAM-12", "IMO/ISM Code", "SOLAS", "MARPOL"],
+      "key_achievement": "Responsável pela investigação de incidentes a bordo em conjunto com QHSE e pela estruturação de solução corporativa inovadora para melhoria de processos logísticos, com aprovação explícita da diretoria global pelo impacto financeiro e organizacional.",
+      "tools": ["MS Project", "Excel avançado (dashboards/KPIs)", "PowerPoint (reportes gerenciais)"]
+    },
+    {
+      "order": 2,
+      "role": "Analista de Operações Pleno (Planejamento & Acompanhamento Offshore)",
+      "company": "C-Tank",
+      "location": "Niterói, Brasil",
+      "period": "Out 2020 – Jun 2021",
+      "duration": "9 meses",
+      "environment": "Manutenção e limpeza de embarcações offshore, OSVs e FPSOs",
+      "responsibilities": [
+        "Planejamento e supervisão de operações de manutenção e limpeza de embarcações offshore e apoio a FPSOs, desde a definição de equipes e materiais até o acompanhamento técnico da execução.",
+        "Coordenação de mobilização de pessoal e materiais, controle de prazos e prontidão (materiais, resíduos, transporte e acessos), com interface com clientes e fornecedores internacionais.",
+        "Elaboração de Relatórios Diários de Operação (RDO/DPR), consolidação de avanço físico, produtividade e desvios de HSE.",
+        "Suporte ao controle contratual: organização de evidências, controle de entregáveis, acompanhamento de indicadores e suporte à validação de medições e custos.",
+        "Coordenação logística end-to-end: equipes, materiais especializados, EPIs/EPCs, transporte terrestre/marítimo, acesso a bordo.",
+        "Interface com fornecedores e armadores internacionais (em inglês).",
+        "Gestão de contratos offshore e comparativos de propostas."
+      ],
+      "process_innovations": [
+        "Responsável pelo mapeamento completo dos processos internos da empresa.",
+        "Atuação na implementação da certificação ISO 9000 com auditor/consultor terceirizado.",
+        "Responsável pela criação de processos de documentação internos.",
+        "Gestão e implementação de controle de insumos de testes de COVID.",
+        "Responsável pelo desenvolvimento de sistema de acesso documental para tripulantes (2 cliques do RH)."
+      ],
+      "digital_transformation": {
+        "project": "Aplicativo interno de integração operacional",
+        "role_in_project": "Responsável pela concepção do projeto, arquitetura de processo e liderança funcional da iniciativa (sem atuação em codificação)",
+        "integrated_areas": ["Almoxarifado", "RH", "Financeiro", "Emissão de Notas Fiscais", "Documentação operacional"],
+        "result": "Integração de workflows operacionais com acesso em dois cliques"
+      },
+      "compliance_systems": {
+        "platforms": ["Drake (Petrobras)", "RT / SAP RT (Petrobras)"],
+        "responsibilities_drake_rt": [
+          "Gestão autônoma e completa dos sistemas Drake e RT da Petrobras.",
+          "Preenchimento de formulários e documentos técnicos.",
+          "Anexação e verificação de certificados válidos para tripulantes.",
+          "Matriz de qualificação de compliance.",
+          "Agendamento aéreo e logístico (PHTD).",
+          "Manutenção de documentação atualizada e vinculada (POB — Persons On Board)."
+        ]
+      },
+      "clients_served": ["SHELL", "TRANSOCEAN", "HELIX"]
+    },
+    {
+      "order": 3,
+      "role": "Assistente de Operações Sênior",
+      "company": "C-Tank",
+      "location": "Niterói, Brasil",
+      "period": "Jul 2020 – Out 2020",
+      "duration": "3 meses",
+      "responsibilities": [
+        "Suporte ao planejamento e execução de operações portuárias e offshore, incluindo agendamentos logísticos, controle de documentação e organização de mobilizações.",
+        "Atualização de dados e controles em plataformas de gestão (DRAKE) para clientes como SHELL, TRANSOCEAN e HELIX.",
+        "Implementação e controle de protocolos de testagem e rastreabilidade de COVID-19 para embarques offshore, assegurando continuidade operacional e compliance.",
+        "Gerenciamento de agendamento logístico, emissão de Requisições de Transporte (RT) e Notas Fiscais.",
+        "Controle de credenciamento e matriz de qualificação de trabalhadores no sistema DRAKE."
+      ]
+    },
+    {
+      "order": 4,
+      "role": "Desenvolvimento Profissional & Projetos Autorais",
+      "company": "Autônomo",
+      "location": "Rio de Janeiro, Brasil",
+      "period": "Jan 2025 – presente",
+      "responsibilities": [
+        "Foco no aprofundamento em Project Controls, planejamento e gestão em contextos colaborativos.",
+        "Atuação com foco na estruturação de entregáveis, status reporting e organização de informações para stakeholders.",
+        "Responsável pelo planejamento, coordenação multidisciplinar e melhoria contínua de processos em projetos culturais e tecnológicos sem fins lucrativos (Apollo::rio e DSMTl.).",
+        "Responsável pela estruturação da plataforma web CV Builder Pro para otimização de candidaturas."
+      ]
+    },
+    {
+      "order": 5,
+      "role": "Instrutor de Idiomas Offshore / Ponte de Comunicação Técnica",
+      "company": "Toolvox",
+      "location": "Offshore, Brasil",
+      "period": "Dez 2018 – Mai 2020",
+      "duration": "1 ano e 6 meses",
+      "environment": "Navios-sonda de perfuração e intervenção em águas ultraprofundas (pré-sal)",
+      "vessels": [
+        { "name": "Amaralina Star", "code": "NS-43", "type": "Navio-sonda" },
+        { "name": "Siem Helix 1", "code": "NS-51", "type": "Navio-sonda de intervenção" }
+      ],
+      "operators_related": ["Constellation", "Olygas", "Cien / Helix"],
+      "responsibilities": [
+        "Responsável por treinamentos técnicos de inglês focados em comunicação operacional, reuniões e rotina de HSE em ambiente multinacional.",
+        "Responsável pela tradução técnica de SOPs (Standard Operating Procedures) e pelo apoio a briefings de segurança (toolbox talks).",
+        "Atuação na facilitação de comunicação via rádio, ordens de passadiço e alertas de emergência.",
+        "Responsável pela mediação cultural e pelo fortalecimento da ponte de comunicação entre tripulações estrangeiras (noruegueses, americanos e filipinos) e brasileiras.",
+        "Atuação como elemento de segurança — mitigação de riscos de acidentes por falha de comunicação."
+      ],
+      "strategic_impact": "Garantir compreensão integral de diretrizes de segurança entre equipes multinacionais, mitigando risco de acidentes fatais ou catástrofes ambientais."
+    },
+    {
+      "order": 6,
+      "role": "Estagiário de Engenharia (Pesquisa Internacional)",
+      "company": "NTUA (Atenas, Grécia) & BAM (Berlim, Alemanha)",
+      "period": "2015 & 2018",
+      "details": [
+        {
+          "institution": "National Technical University of Athens (NTUA)",
+          "location": "Atenas, Grécia",
+          "period": "Mai–Jul 2015",
+          "project": "MATCH — Material choice for seismic resistance structures",
+          "focus": "Avaliação de materiais sob fadiga sísmica, softwares avançados e modelagem preditiva de comportamento de aço sob estresse cíclico."
+        },
+        {
+          "institution": "Bundesanstalt für Materialforschung und Prüfung (BAM)",
+          "location": "Berlim, Alemanha",
+          "period": "Jan–Mar 2018",
+          "project": "Pesquisa em cimento bio-baseado",
+          "focus": "Experimentos de comportamento de concreto (pequena a larga escala), mapeamento rigoroso de dados e sistemas de análise."
+        }
+      ]
+    }
+  ],
+
+  "education": [
+    { "degree": "Pós-graduação", "field": "Engenharia de Segurança do Trabalho", "institution": "Universidade Cruzeiro do Sul", "period": "2024–2025", "status": "Concluída Fev 2025" },
+    { "degree": "Pós-graduação", "field": "Engenharia de Construção Naval e Offshore", "institution": "Universidade Católica de Petrópolis (UCP)", "period": "2022–2023", "status": "Concluída" },
+    { "degree": "MBA", "field": "Gestão de Projetos", "institution": "USP ESALQ", "period": "2019–2020", "status": "Concluído", "focus": "PMBOK, controle de portfólios, análise de viabilidade, cronogramas físico-financeiros" },
+    { "degree": "Graduação", "field": "Engenharia Civil", "institution": "UNIVIX / Multivix", "period": "2013–2018", "status": "Concluída", "focus": "Cálculo estrutural, resistência dos materiais, mecânica dos fluidos, gestão de obras" },
+    { "degree": "Técnico", "field": "Portos", "institution": "IFES", "period": "2018–2019", "status": "Concluído", "focus": "Operações logísticas portuárias, gestão de terminais, atracação, legislação alfandegária, cargo handling" }
+  ],
+
+  "certifications_and_trainings": {
+    "offshore_survival_and_safety": [
+      { "name": "CBSP (Curso Básico de Segurança de Plataforma / Salvatagem)", "provider": "West Group Industrial Training", "period": "Jan 2019 – Jan 2024" },
+      { "name": "BOSIET (Basic Offshore Safety Induction and Emergency Training)", "valid_until": "2023", "scope": "Combate a incêndios, primeiros socorros marítimos, protocolos de sobrevivência" },
+      { "name": "HUET (Helicopter Underwater Escape Training)", "provider": "RelyOn Nutec", "valid_until": "2022" },
+      { "name": "T-HUET (Tropical HUET) com CA-EBS", "provider": "RelyOn Nutec", "valid_until": "2022", "scope": "Escape de aeronave submersa com sistema de respiração de ar comprimido" },
+      { "name": "General Dredging Course", "scope": "Complexidades geotécnicas e equipamentos pesados de dragagem oceânica" }
+    ],
+    "regulatory_nrs": [
+      { "name": "NR-17 (Ergonomia)", "valid_until": "2024" },
+      { "name": "NR-30 (Segurança e Saúde no Trabalho Aquaviário)", "status": "Realizada" },
+      { "name": "NR-33 (Espaços Confinados)", "provider": "C-Tank", "hours": 40, "valid_until": "2024" },
+      { "name": "NR-34 (Construção, Reparação e Desmonte Naval)", "provider": "C-Tank" },
+      { "name": "NR-35 (Trabalho em Altura)", "valid_until": "2024" }
+    ],
+    "recycling_note": "Maioria das NRs necessita apenas reciclagem rápida (quick refresh) para revalidação.",
+    "tools_and_software": [
+      { "name": "MS Project", "provider": "Udemy", "date": "Abril 2019", "level": "Avançado" },
+      { "name": "Primavera P6", "level": "Em desenvolvimento" },
+      { "name": "Excel Avançado", "level": "Avançado — dashboards, KPIs, scorecards, BI" },
+      { "name": "PowerPoint", "level": "Avançado — reportes gerenciais e apresentações corporativas" },
+      { "name": "Planejamento e Controle da Produção (PCP)", "provider": "West Group", "date": "Abril 2019" }
+    ],
+    "systems_petrobras": [
+      { "name": "Drake (Sapiensia/Petrobras)", "scope": "Matriz de qualificação, compliance, agendamento aéreo, timesheets, provisionamento logístico, POB" },
+      { "name": "SAP RT (Petrobras)", "scope": "Gestão de transportes pessoal PHTD, logística offshore" }
+    ],
+    "other": [
+      { "name": "WebDesigner", "provider": "Microlins Franchising", "date": "Fev 2011" }
+    ]
+  },
+
+  "publication": {
+    "type": "Livro técnico",
+    "title": "Inglês Técnico Portuário e Offshore — Guia prático para o profissional do setor",
+    "author": "Rafael Perini Valle",
+    "isbn": "978-65-00-04579-6",
+    "published": "10 de Setembro de 2020",
+    "url": "https://livro.rvalle.com.br/",
+    "copies_sold": "3.000+",
+    "impact_years": "2020–2025",
+    "adoption": "Adotado em escolas técnicas navais e treinamentos corporativos",
+    "origin": "Extraído da vivência como instrutor nos navios-sonda NS-43 e NS-51",
+    "scope": "Comunicação livre de ambiguidades em ambientes portuários e offshore; jargão naval aplicável",
+    "linkedin_articles": ["Emergências & Treinamentos", "Profissões / Funções Offshore em Inglês"]
+  },
+
+  "volunteer_and_leadership": [
+    { "org": "Crea Jr-ES", "role": "Coordenador Geral Campus Aracruz", "period": "Out 2013 – Dez 2014" },
+    { "org": "Crea Jr-ES", "role": "Assessor de Eventos (Vitória)", "period": "2015–2017" },
+    { "org": "FENEC / SENGTEC", "role": "Coordenador Geral SENGTEC + Assessor de Marketing FENEC", "period": "2014", "event": "II EREEC NNE" },
+    { "org": "ABRACOU / CONACON Brasil", "role": "Coordenador de Marketing e Comunicação", "period": "2016–2017", "location": "Aracaju" },
+    { "org": "IAESTE", "role": "Voluntário Internacional (logística e integração de estagiários globais)", "period": "2013–2019", "duration": "6+ anos", "location": "Espírito Santo" }
+  ],
+
+  "endorsements": [
+    { "from": "Iara Cecutte Parmagnani", "context": "Comissionamento de projetos de dragagem", "highlights": "Problem-solving, proatividade, espírito colaborativo" },
+    { "from": "Claudia Sousa", "context": "Gestora", "highlights": "Colaborador indispensável, empático, eficiente sob pressão contratual, liderança carismática" }
+  ],
+
+  "skills_matrix": {
+    "hard_skills": [
+      "Planejamento operacional e controle de performance (onshore/offshore)",
+      "Cronogramas físico-financeiros e caminho crítico (MS Project / PCP)",
+      "Engenharia de Métodos e Performance (KPIs, DPR/RDO, batimetria, consumo)",
+      "Emergency Response Coordination (ERT / Medevac — 5+ reais)",
+      "Logística naval de alta complexidade (shorebase logistics, bunkering, crew change)",
+      "Gestão de operações marítimas (TSHD, WID, rebocadores, drillships, FPSOs)",
+      "Conformidade regulatória (NORMAM-12, IMO/SOLAS/MARPOL, NRs)",
+      "Gestão documental Petrobras (Drake / SAP RT)",
+      "SIMOPS planning (dragagem + mergulho simultâneos)",
+      "Aviso aos Navegantes / Notice to Mariners",
+      "Isenção de Praticagem / Pilotage Exemption",
+      "Controle contratual (evidências, claims, medições, custos)",
+      "Mapeamento de processos / ISO 9000",
+      "Transformação digital (arquitetura de aplicativo de integração operacional)"
+    ],
+    "soft_skills": [
+      "Adaptabilidade extrema (geográfica e multicultural)",
+      "Comunicação ativa sob pressão",
+      "Integração de equipes multiculturais (português/inglês técnico)",
+      "Liderança por iniciativa",
+      "Problem-solving em ambientes de alta criticidade",
+      "Pensamento estratégico",
+      "Gestão de stakeholders (cliente, diretoria, reguladores, fornecedores)"
+    ],
+    "tools": ["MS Project", "Primavera P6 (em desenvolvimento)", "Excel avançado", "PowerPoint", "Drake (Petrobras)", "SAP RT (Petrobras)", "BPORT", "sistemas de credenciamento marítimo"]
+  },
+
+  "market_alignment_2025_2026": {
+    "context": "Plano Petrobras 2025-2029: ~US$ 111 bilhões em CAPEX. Novas FPSOs (MODEC, SBM Offshore). Digitalização de ativos. Demanda por Engenheiros de Métodos e Performance.",
+    "target_companies": ["Petrobras", "PRIO (PetroRio)", "SBM Offshore", "TotalEnergies", "MODEC", "Van Oord", "Subsea7", "Saipem", "Technip FMC", "DOF"],
+    "target_roles": [
+      "Operations Engineer / Coordinator",
+      "Planning Engineer (EPC/FPSO)",
+      "Marine Operations Specialist",
+      "Methods & Performance Engineer",
+      "Interface Engineer",
+      "Emergency Response / HSSE Coordinator",
+      "Offshore Logistics Coordinator",
+      "Project Controls Specialist"
+    ],
+    "ats_keywords": [
+      "offshore operations", "marine operations", "FPSO", "EPC", "project controls",
+      "planning engineer", "KPI", "DPR", "HSE", "HSSE", "QHSE",
+      "NORMAM-12", "IMO", "SOLAS", "MARPOL", "NR-33", "NR-35",
+      "MS Project", "Primavera P6", "Drake", "SAP",
+      "crew change", "bunkering", "shorebase logistics",
+      "English fluent", "multicultural", "emergency response", "ERT", "medevac",
+      "process improvement", "digital transformation", "ISO 9000",
+      "TSHD", "WID", "drillship", "dredging", "batimetria",
+      "caminho crítico", "cronograma físico-financeiro",
+      "Notice to Mariners", "Pilotage Exemption", "SIMOPS"
+    ]
+  },
+
+  "cv_customization_guide": {
+    "for_operations_marine": {
+      "emphasize": ["Van Oord superintendência", "ERT/Medevac", "NORMAM-12/IMO/SOLAS", "logística naval", "SIMOPS"],
+      "objective": "Engenheiro / Coordenador de Operações Marítimas"
+    },
+    "for_planning_controls": {
+      "emphasize": ["Cronogramas MS Project", "KPIs e DPRs", "caminho crítico", "forecast", "controle contratual"],
+      "objective": "Especialista em Planejamento e Controle de Projetos (EPC/FPSO)"
+    },
+    "for_methods_performance": {
+      "emphasize": ["KPIs produção/disponibilidade/consumo", "análise de desvios", "bancos de dados operacionais", "melhoria contínua"],
+      "objective": "Engenheiro de Métodos e Performance"
+    },
+    "for_hsse": {
+      "emphasize": ["ERT/Medevac", "investigação de incidentes", "análises de risco", "NRs", "QHSE procedures"],
+      "objective": "Coordenador HSSE / Emergency Response"
+    },
+    "for_innovation_digital": {
+      "emphasize": ["App de integração operacional", "ISO 9000", "mapeamento de processos", "transformação digital", "Drake/RT"],
+      "objective": "Especialista em Inovação e Transformação Digital"
+    }
+  }
+}

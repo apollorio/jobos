@@ -1,0 +1,250 @@
+{
+  "_part": {
+    "id": "14_matching/engine_config",
+    "title": "Configuração do motor de compatibilidade (pesos, limiares, marcadores)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_jobos_profile_yml"
+    ],
+    "notes": "Lido por tools/match.mjs. Ajuste pesos/limiares aqui, não no código."
+  },
+  "data": {
+    "status_scores": {
+      "proven": 1.0,
+      "adjacent": 0.6,
+      "familiarity": 0.3,
+      "personal_project": 0.55,
+      "developing": 0.25,
+      "renewable": 0.5,
+      "trainable": 0.2,
+      "unknown": 0.2,
+      "gap": 0.0,
+      "hard_gap": 0.0
+    },
+    "level_weights": {
+      "mandatory": 1.6,
+      "duty": 1.0,
+      "mentioned": 0.8,
+      "desirable": 0.6
+    },
+    "score_weights": {
+      "archetype": 0.4,
+      "coverage": 0.38,
+      "location": 0.1,
+      "industry": 0.12
+    },
+    "neutral_coverage_when_no_concepts": 0.5,
+    "penalties": {
+      "missing_mandatory_each": 7,
+      "missing_mandatory_cap": 28,
+      "years_soft_gap": 4,
+      "years_hard_gap_desirable": 6,
+      "years_hard_gap_mandatory": 12,
+      "years_cap": 24,
+      "entry_level": 22,
+      "too_senior": 10,
+      "renewable_mandatory_each": 3,
+      "developing_mandatory_each": 6,
+      "hard_gap_duty_each": 4,
+      "hard_gap_duty_cap": 12
+    },
+    "bonuses": {
+      "dream_company": 4,
+      "priority_company": 2
+    },
+    "thresholds": {
+      "compatible_min_score": 65,
+      "apply_priority_min_score": 78,
+      "stretch_min_score": 50,
+      "tier_C_min_score": 75,
+      "dream_company_priority_min_score": 70,
+      "apply_priority_min_industry": 75
+    },
+    "blocking": {
+      "hard_gap_mandatory_blocks": true,
+      "renewable_mandatory_blocks": false,
+      "developing_mandatory_blocks_if_concept_flag": true,
+      "tiers_never_compatible": [
+        "X",
+        "OUT"
+      ],
+      "years_gap_blocker": 3,
+      "entry_level_is_preference_fail": true
+    },
+    "section_markers": {
+      "mandatory": [
+        "requisitos obrigatorios",
+        "requisitos",
+        "pre-requisitos",
+        "pre requisitos",
+        "qualificacoes",
+        "requirements",
+        "required qualifications",
+        "minimum qualifications",
+        "basic qualifications",
+        "qualifications",
+        "must have",
+        "o que buscamos",
+        "o que esperamos",
+        "o que voce precisa",
+        "perfil desejado",
+        "perfil",
+        "formacao",
+        "who you are",
+        "what you bring",
+        "what we are looking for",
+        "experience required"
+      ],
+      "desirable": [
+        "desejavel",
+        "desejaveis",
+        "diferencial",
+        "diferenciais",
+        "sera um diferencial",
+        "nice to have",
+        "preferred qualifications",
+        "preferred",
+        "preferable",
+        "it would be great",
+        "bonus points",
+        "plus",
+        "desired"
+      ],
+      "duty": [
+        "responsabilidades",
+        "atividades",
+        "atribuicoes",
+        "principais atividades",
+        "o que voce vai fazer",
+        "desafios",
+        "responsibilities",
+        "key responsibilities",
+        "duties",
+        "your role",
+        "the role",
+        "what you will do",
+        "job description",
+        "descricao da vaga"
+      ],
+      "noise": [
+        "beneficios",
+        "benefits",
+        "sobre a empresa",
+        "sobre nos",
+        "about us",
+        "who we are",
+        "quem somos",
+        "etapas do processo",
+        "diversidade",
+        "equal opportunity",
+        "we offer",
+        "o que oferecemos"
+      ]
+    },
+    "inline_markers": {
+      "mandatory": [
+        "obrigatorio",
+        "obrigatoria",
+        "necessario",
+        "necessaria",
+        "imprescindivel",
+        "indispensavel",
+        "exigido",
+        "exigida",
+        "essencial",
+        "required",
+        "mandatory",
+        "must",
+        "minimo de",
+        "minimum of",
+        "at least",
+        "valido",
+        "valida",
+        "vigente",
+        "dominio de",
+        "dominio do",
+        "dominio da",
+        "dominio em",
+        "proficiencia em",
+        "proficient in",
+        "proficiency in"
+      ],
+      "desirable": [
+        "desejavel",
+        "diferencial",
+        "preferencialmente",
+        "preferably",
+        "preferred",
+        "nice to have",
+        "is a plus",
+        "sera um plus",
+        "e um plus"
+      ]
+    },
+    "language_detection": {
+      "en_words": [
+        " the ",
+        " and ",
+        " with ",
+        " experience ",
+        " you ",
+        " our ",
+        " will ",
+        " skills ",
+        " years "
+      ],
+      "pt_words": [
+        " de ",
+        " e ",
+        " com ",
+        " experiencia ",
+        " voce ",
+        " para ",
+        " em ",
+        " anos ",
+        " conhecimento "
+      ]
+    },
+    "exit_codes": {
+      "compatible": 0,
+      "not_compatible": 1,
+      "error": 3
+    },
+    "industry": {
+      "core_concepts": [
+        "c_offshore",
+        "c_oil_gas",
+        "c_fpso",
+        "c_marine_operations",
+        "c_port_operations",
+        "c_shorebase_vessel_shore",
+        "c_drilling_environment",
+        "c_subsea_general",
+        "c_dredging",
+        "c_tanker_marine_assurance",
+        "c_dynamic_positioning",
+        "c_topside"
+      ],
+      "adjacent_concepts": [
+        "c_epc_epci",
+        "c_offshore_wind",
+        "c_maritime_regulation",
+        "c_environment_waste",
+        "c_crew_pob",
+        "c_bunkering_mobilization"
+      ],
+      "scores": {
+        "priority_company": 100,
+        "core": 100,
+        "adjacent": 75,
+        "none": 45
+      }
+    },
+    "confidence": {
+      "high_min_body_concepts": 8,
+      "medium_min_body_concepts": 3,
+      "low_confidence_blend_to_neutral": 0.5
+    }
+  }
+}

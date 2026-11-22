@@ -1,0 +1,160 @@
+{
+  "_part": {
+    "id": "04_experience/exp_professional_development",
+    "title": "Experiência: Desenvolvimento Profissional & Projetos Independentes",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723",
+      "src_career_db_v3_2026_03_10",
+      "src_master_tree_v1_2026_10_20"
+    ]
+  },
+  "data": {
+    "organization": "Desenvolvimento Profissional & Projetos Independentes",
+    "preferred_cv_label_en": "Professional Development & Independent Projects",
+    "framing_rule": "Nunca rotular como 'career break' passivo; apresentar como aprendizado ativo e projetos entregues.",
+    "period": {
+      "start": "2024-11",
+      "end": "present",
+      "display": "Nov 2024 - presente"
+    },
+    "status": "ongoing",
+    "details": [
+      "Engenharia de Segurança do Trabalho",
+      "Análise de dados",
+      "Dashboards",
+      "Automação",
+      "SQL e Python em desenvolvimento",
+      "Documentação e estruturação de processos",
+      "Desenvolvimento web e produto digital",
+      "Projetos Apollo::rio e Dismantle"
+    ],
+    "learning_tracks": [
+      "Pós-graduação em Engenharia de Segurança do Trabalho (Universidade Cruzeiro do Sul)",
+      "SQL (em desenvolvimento)",
+      "Python (dados/automação)",
+      "Dashboards / Power BI / Excel",
+      "Estruturas de dados (JSON, registries)",
+      "Desenvolvimento web / WordPress / produto digital",
+      "Automação e documentação de processos"
+    ],
+    "projects": [
+      "proj_apollo",
+      "proj_dismantle",
+      "proj_sos",
+      "proj_cv_builder"
+    ],
+    "domain_tags": [
+      "digital_data_technology",
+      "independent_projects_entrepreneurship",
+      "project_management_project_controls"
+    ],
+    "software_refs": [
+      "sw_python",
+      "sw_sql",
+      "sw_wordpress",
+      "sw_github",
+      "sw_javascript",
+      "sw_typescript",
+      "sw_php"
+    ],
+    "software_refs_to_validate": [
+      "sw_power_bi"
+    ],
+    "evidence": "DP",
+    "source_refs": [
+      "src_master_career_tree_v1",
+      "src_independent_projects"
+    ],
+    "id": "exp_professional_development",
+    "period_iso": {
+      "start": "2024-11",
+      "end": "present"
+    },
+    "narrative_260723_first_person_pt_en": {
+      "order": 4,
+      "role": {
+        "pt": "Desenvolvimento Profissional & Projetos Autorais",
+        "en": "Professional Development & Independent Projects"
+      },
+      "company": {
+        "pt": "Autônomo",
+        "en": "Independent"
+      },
+      "location": {
+        "pt": "Rio de Janeiro, Brasil",
+        "en": "Rio de Janeiro, Brazil"
+      },
+      "period": "Jan 2025 – presente",
+      "bullets": {
+        "pt": [
+          "Aprofundei-me em Project Controls, planejamento e gestão em contextos colaborativos.",
+          "Estruturei entregáveis, status reporting e organização de informações para stakeholders.",
+          "Planejei, coordenei de forma multidisciplinar e melhorei continuamente processos em projetos culturais e tecnológicos sem fins lucrativos (Apollo::rio e Dismantle.art).",
+          "Estruturei a plataforma web CV Builder Pro, para otimização de candidaturas."
+        ],
+        "en": [
+          "Deepened my expertise in Project Controls, planning and management in collaborative contexts.",
+          "Structured deliverables, status reporting and stakeholder information organization.",
+          "Planned, multidisciplinarily coordinated and continuously improved processes in non-profit cultural and technology projects (Apollo::rio and Dismantle.art).",
+          "Structured the CV Builder Pro web platform, to optimize job applications."
+        ]
+      },
+      "note": {
+        "pt": "Este é o período de pausa de carreira dedicado ao apoio à família (2024–presente), durante o qual me mantive profissionalmente ativo — ver 'projects_and_initiatives' abaixo para detalhes de cada iniciativa.",
+        "en": "This is the career-break period dedicated to supporting my family (2024–present), during which I remained professionally active — see 'projects_and_initiatives' below for details on each initiative."
+      }
+    },
+    "narrative_career_db_v3": {
+      "order": 4,
+      "role": "Desenvolvimento Profissional & Projetos Autorais",
+      "company": "Autônomo",
+      "location": "Rio de Janeiro, Brasil",
+      "period": "Jan 2025 – presente",
+      "responsibilities": [
+        "Foco no aprofundamento em Project Controls, planejamento e gestão em contextos colaborativos.",
+        "Atuação com foco na estruturação de entregáveis, status reporting e organização de informações para stakeholders.",
+        "Responsável pelo planejamento, coordenação multidisciplinar e melhoria contínua de processos em projetos culturais e tecnológicos sem fins lucrativos (Apollo::rio e DSMTl.).",
+        "Responsável pela estruturação da plataforma web CV Builder Pro para otimização de candidaturas."
+      ]
+    },
+    "master_tree_v1_timeline": {
+      "organization": "Desenvolvimento Profissional & Projetos Independentes",
+      "period": "Nov 2024 - Presente",
+      "details": [
+        "Engenharia de Segurança do Trabalho",
+        "Análise de dados",
+        "Dashboards",
+        "Automação",
+        "SQL e Python em desenvolvimento",
+        "Documentação e estruturação de processos",
+        "Desenvolvimento web e produto digital",
+        "Projetos Apollo::rio e Dismantle"
+      ]
+    },
+    "career_reentry": {
+      "period": "Nov 2024 - presente",
+      "canonical_label": "Desenvolvimento Profissional & Projetos Independentes",
+      "focus": [
+        "Occupational Safety Engineering completion/development period",
+        "data analysis and dashboards",
+        "automation",
+        "SQL/Python development",
+        "web/software projects",
+        "Apollo::rio",
+        "SOS Apollo",
+        "Dismantle",
+        "CV Builder"
+      ],
+      "rule": "Do not frame as passive unemployment in CV. Do not transform independent projects into corporate employment."
+    },
+    "private_context": {
+      "value": {
+        "pt": "Este é o período de pausa de carreira dedicado ao apoio à família (2024–presente), durante o qual me mantive profissionalmente ativo — ver 'projects_and_initiatives' abaixo para detalhes de cada iniciativa.",
+        "en": "This is the career-break period dedicated to supporting my family (2024–present), during which I remained professionally active — see 'projects_and_initiatives' below for details on each initiative."
+      },
+      "rule": "Contexto pessoal. Não usar em CV; nunca enquadrar como 'career break' passivo. Usar label 'Professional Development & Independent Projects'."
+    }
+  }
+}

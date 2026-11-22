@@ -1,0 +1,50 @@
+{
+  "_part": {
+    "id": "01_identity/contacts",
+    "title": "Contatos e presença online",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21",
+      "src_master_260723",
+      "src_jobos_profile_yml"
+    ]
+  },
+  "data": {
+    "emails": [
+      {
+        "value": "rafapevalle@gmail.com",
+        "use": "e-mail usado em todos os CVs e no jobOS",
+        "evidence": "D"
+      },
+      {
+        "value": "rafael@rvalle.com.br",
+        "use": "e-mail do domínio pessoal rvalle.com.br",
+        "evidence": "D"
+      }
+    ],
+    "phone": {
+      "value": "+55 (21) 97955-4496",
+      "evidence": "D"
+    },
+    "websites": {
+      "main": "https://rvalle.com.br",
+      "cv_builder": "https://cv.rvalle.com.br/v2",
+      "cv_public": "https://cv.rvalle.com.br/v2/",
+      "book": "https://livro.rvalle.com.br/",
+      "book_author_page": "https://livro.rvalle.com.br/rafael/",
+      "capability_dossier_pdf": "https://cv.rvalle.com.br/Analise-de-Capacidade-Profissional_Rafael-Perini-Valle.pdf",
+      "apollo": "https://apollo.rio.br/",
+      "dismantle": "https://dismantle.com.br/"
+    },
+    "linkedin": {
+      "url": "https://www.linkedin.com/in/rpvalle",
+      "label": "linkedin.com/in/rpvalle",
+      "followers": "12.000+",
+      "articles": [
+        "Emergências & Treinamentos",
+        "Profissões / Funções Offshore em Inglês"
+      ],
+      "note": "LinkedIn (https://www.linkedin.com/in/rpvalle/): o conteúdo do perfil é renderizado via JavaScript e/ou requer login; a extensão Claude in Chrome não estava conectada nesta sessão para renderizar a página. NENHUM dado do LinkedIn foi inventado — os únicos fatos de LinkedIn aqui presentes (URL do perfil, 12.000+ seguidores, existência de artigos publicados, recomendações recebidas) já constavam no dossiê fornecido pelo próprio usuário, não de scraping."
+    }
+  }
+}

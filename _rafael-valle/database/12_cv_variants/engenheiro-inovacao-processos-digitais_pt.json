@@ -1,0 +1,157 @@
+{
+  "_part": {
+    "id": "12_cv_variants/engenheiro-inovacao-processos-digitais_pt",
+    "title": "CV: genérico - Engenheiro de Inovação & Processos Digitais (pt)",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_cv_engenheiro_inovacao_processos_digitais_pt"
+    ]
+  },
+  "data": {
+    "target": {
+      "company": null,
+      "role": "Engenheiro de Inovação & Processos Digitais",
+      "job_ref": null,
+      "language": "pt",
+      "date": "2026-09-18",
+      "archetype": "digital_innovation_process",
+      "status": "final"
+    },
+    "cv": {
+      "name": "RAFAEL PERINI VALLE",
+      "subtitle": "ENGENHEIRO DE INOVAÇÃO & PROCESSOS DIGITAIS",
+      "tagline": "Desenvolvimento Web · Análise de Dados · Automação de Processos · ISO 9000",
+      "contact": {
+        "location": "Rio de Janeiro – RJ, Brasil",
+        "email": "rafapevalle@gmail.com",
+        "phone": "+55 (21) 97955-4496",
+        "linkedin": "https://www.linkedin.com/in/rpvalle",
+        "linkedinLabel": "linkedin.com/in/rpvalle"
+      },
+      "sections": [
+        {
+          "title": "Resumo Profissional",
+          "type": "bullets",
+          "bullets": [
+            "Engenheiro de Inovação & Processos Digitais · Engenheiro Civil (CREA) · 4+ anos unindo operações e dados.",
+            "Desenvolvimento web full-stack autônomo (HTML/CSS/JS, Python); ferramentas de dados, dashboards de KPIs e automação de fluxos.",
+            "Mapeamento de processos e ISO 9000; concepção e liderança funcional de aplicativo de integração operacional.",
+            "Análise de dados (Excel Avançado, Power BI); Drake/SAP RT; base sólida em controle de projetos."
+          ]
+        },
+        {
+          "title": "Competências Principais",
+          "type": "text",
+          "content": "Desenvolvimento Web (HTML/CSS/JS, Python) · Análise de Dados · Automação de Processos · ISO 9000 · Mapeamento de Processos · Excel Avançado / Power BI · JSON · Drake/SAP RT · Controle de Projetos"
+        },
+        {
+          "title": "Experiência Profissional",
+          "type": "entries",
+          "lead": {
+            "title": "Pausa de Carreira (2024–Presente)",
+            "body": "Período dedicado ao apoio à minha família, mantendo-me profissionalmente ativo: desenvolvi projetos web e de software (HTML, PHP, JavaScript, Python) e atuei em projetos sociais e comunitários no Rio de Janeiro. Agora totalmente disponível para retornar ao trabalho em tempo integral."
+          },
+          "entries": [
+            {
+              "role": "Superintendente de Operações Marítimas (Planejamento & Performance)",
+              "company": "Van Oord",
+              "location": "Rio de Janeiro / costa brasileira",
+              "period": "Jul 2021 – Nov 2024",
+              "bullets": [
+                "Coordenação técnica de embarcações TSHD, WID e rebocadores em múltiplos portos brasileiros.",
+                "Planejamento operacional, caminho crítico, análise de desvios e forecast (PCP / MS Project).",
+                "KPIs: produção (batimetria), disponibilidade e consumo. Dashboards e relatórios (DPR).",
+                "Coordenador de Emergências (ERT): 5+ Medevacs reais; investigação de incidentes (QHSE).",
+                "Logística de frota: atracação, bunkering, crew change, SIMOPS. NORMAM-12/IMO/SOLAS/MARPOL."
+              ]
+            },
+            {
+              "role": "Analista de Operações (Planejamento Offshore)",
+              "company": "C-Tank",
+              "location": "Niterói – RJ",
+              "period": "Oct 2020 – Jun 2021",
+              "bullets": [
+                "Planejamento de manutenção/limpeza em navios offshore e FPSOs; DPR/RDO e controle contratual.",
+                "Drake/SAP RT (Petrobras) para compliance e agendamento PHTD; mapeamento de processos e ISO 9000.",
+                "Concepção de plataforma digital integrando almoxarifado, RH, financeiro e documentação."
+              ]
+            },
+            {
+              "role": "Assistente de Operações Sênior",
+              "company": "C-Tank",
+              "location": "Niterói – RJ",
+              "period": "Jul 2020 – Oct 2020",
+              "bullets": [
+                "Suporte a operações portuárias; credenciamento DRAKE para Shell, Transocean, Helix; agendamento logístico e notas fiscais."
+              ]
+            },
+            {
+              "role": "Instrutor de Inglês Técnico Offshore",
+              "company": "Toolvox",
+              "location": "Offshore (NS-43, NS-51)",
+              "period": "Dec 2018 – May 2020",
+              "bullets": [
+                "Treinamento de inglês técnico, tradução de SOPs e ponte de comunicação entre equipes multinacionais."
+              ]
+            },
+            {
+              "role": "Estagiário de Engenharia (Pesquisa Internacional)",
+              "company": "NTUA (Athens) & BAM (Berlin)",
+              "location": "",
+              "period": "2015 & 2018",
+              "bullets": [
+                "NTUA: fadiga sísmica (projeto MATCH). BAM: cimento bio-baseado, com coleta e análise rigorosa de dados."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Formação Acadêmica",
+          "type": "lines",
+          "lines": [
+            "Pós-graduação: Engenharia de Segurança do Trabalho, Cruzeiro do Sul (2024–2025)",
+            "Pós-graduação: Engenharia de Construção Naval e Offshore, UCP (2022–2023)",
+            "MBA: Gestão de Projetos (PMBOK), USP / ESALQ (2019–2020)",
+            "Graduação: Engenharia Civil, UNIVIX / Multivix (2013–2018)",
+            "Técnico: Portos, IFES (2018–2019)"
+          ]
+        },
+        {
+          "title": "Certificações & Formação",
+          "type": "bullets",
+          "bullets": [
+            "MBA em Gestão de Projetos (PMBOK), USP/ESALQ · Planejamento e Controle da Produção (PCP), West Group.",
+            "Curso de MS Project (Udemy, 2019) · Dashboards em Excel Avançado e Power BI.",
+            "Segurança offshore: CBSP, BOSIET, HUET/T-HUET (RelyOn Nutec) · NR-33/34/35/17/30 · General Dredging Course."
+          ]
+        },
+        {
+          "title": "Ferramentas & Sistemas",
+          "type": "bullets",
+          "bullets": [
+            "Planejamento & Controle: MS Project (conhecimento)",
+            "Dados & BI: Excel Avançado (dashboards, KPIs), Power BI",
+            "Desenvolvimento: HTML, CSS, JavaScript, Python (full-stack, autônomo)",
+            "Sistemas: Drake / SAP RT (Petrobras)",
+            "Metodologia: PMBOK, PCP"
+          ]
+        },
+        {
+          "title": "Publicação",
+          "type": "text",
+          "content": "Autor de \"Inglês Técnico Portuário e Offshore\" (ISBN 978-65-00-04579-6, 2020, com 3.000+ exemplares vendidos)."
+        },
+        {
+          "title": "Informações Adicionais",
+          "type": "bullets",
+          "bullets": [
+            "CREA ativo.",
+            "Inglês avançado; autor do guia técnico de inglês para o setor offshore e portuário.",
+            "CNH categoria B, com passaportes brasileiro e italiano (2027).",
+            "Baseado no Rio de Janeiro, disponibilidade imediata, incluindo viagens para visitar outros sites."
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "_part": {
+    "id": "11_truth/known_unknowns",
+    "title": "Lacunas e conflitos conhecidos",
+    "updated": "2026-11-19",
+    "sources": [
+      "src_master_final_2026_10_21"
+    ]
+  },
+  "data": {
+    "items": [
+      {
+        "id": "unknown_star",
+        "topic": "STAR software/system",
+        "status": "USER_MENTIONED_NOT_YET_IDENTIFIED",
+        "known": "Rafael explicitly referenced STAR as a software he expected in the database.",
+        "unknown": "Exact product name, employer/context, functions and proficiency.",
+        "rule": "Keep atomic node, do not expose in CV until clarified."
+      },
+      {
+        "id": "unknown_bport",
+        "topic": "BPORT",
+        "status": "HISTORICALLY_LISTED_CONTEXT_INCOMPLETE",
+        "known": "Appears in historical skills database.",
+        "unknown": "Exact functions performed.",
+        "rule": "Do not invent use cases."
+      },
+      {
+        "id": "conflict_safety_postgrad_dates",
+        "topic": "Occupational Safety Engineering dates",
+        "status": "SOURCE_CONFLICT",
+        "known": "Career master records completion; different Gupy/profile versions carried inconsistent dates.",
+        "canonical_safe_claim": "Postgraduate degree in Occupational Safety Engineering — completed.",
+        "rule": "Use exact dates only from certificate/transcript."
+      },
+      {
+        "id": "historical_offshore_cert_validity",
+        "topic": "CBSP/BOSIET/HUET/T-HUET validity",
+        "status": "HISTORICAL_TRAINING_EXPIRED_OR_RENEWAL_PENDING",
+        "canonical_safe_claim": "Completed; renewal/recycling pending.",
+        "rule": "Never state current validity unless renewed evidence is supplied."
+      },
+      {
+        "id": "project_specific_unknowns",
+        "topic": "Some per-project Van Oord fields",
+        "status": "NOT_DOCUMENTED_IN_CURRENT_SOURCE_SET",
+        "examples": [
+          "exact client on every phase",
+          "production volumes on every phase",
+          "vessel name on every phase"
+        ],
+        "rule": "Project code/name/date/evidence stays canonical; do not infer missing project-specific values."
+      },
+      {
+        "id": "quantitative_metrics_not_recorded",
+        "topic": "Counts/values not documented",
+        "status": "UNKNOWN_NOT_DOCUMENTED",
+        "examples": [
+          "number of drills",
+          "number of inspections",
+          "team size at Van Oord",
+          "total suppliers",
+          "total port calls",
+          "budget values"
+        ],
+        "rule": "Keep qualitative experience; never fabricate a number."
+      },
+      {
+        "id": "digital_skill_numeric_levels",
+        "topic": "Numeric self-rating for Python/SQL/TypeScript/Power BI",
+        "status": "NOT_NEEDED_FOR_CANONICAL_DATABASE",
+        "canonical": {
+          "Power BI": "used/proven",
+          "Python": "personal-project/developing",
+          "SQL": "developing",
+          "TypeScript": "personal-project/developing"
+        }
+      }
+    ]
+  }
+}
